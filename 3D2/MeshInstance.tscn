@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.44385, 1 )
+colors = PoolColorArray( 0.0156863, 0.0588235, 0.356863, 1, 1, 1, 1, 1, 0, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="Gradient" id=3]
+offsets = PoolRealArray( 0, 0.390374, 0.513369, 1 )
+colors = PoolColorArray( 0.831373, 0.152941, 0.152941, 1, 0.480392, 0.480392, 0.480392, 1, 0.941176, 0.941176, 0.941176, 1, 0.713726, 0.466667, 0.466667, 1 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+width = 2042
+
+[sub_resource type="SpatialMaterial" id=5]
+albedo_texture = SubResource( 2 )
+metallic = 1.0
+metallic_texture = SubResource( 4 )
+metallic_texture_channel = 1
+
+[sub_resource type="SphereMesh" id=6]
+
+[node name="MeshInstance" type="MeshInstance"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.249301, 0 )
+material_override = SubResource( 5 )
+cast_shadow = 2
+extra_cull_margin = 146.7
+use_in_baked_light = true
+lod_min_distance = 8989.0
+lod_min_hysteresis = 16238.0
+lod_max_distance = 12469.0
+lod_max_hysteresis = 17688.0
+mesh = SubResource( 6 )
+material/0 = null

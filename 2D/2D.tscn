@@ -1,0 +1,546 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://Sprite3.png" type="Texture" id=1]
+[ext_resource path="res://Sprite1.png" type="Texture" id=2]
+[ext_resource path="res://2D/Area2D.gd" type="Script" id=3]
+[ext_resource path="res://Sprite4.png" type="Texture" id=4]
+[ext_resource path="res://Sprite2.png" type="Texture" id=5]
+[ext_resource path="res://2D/RigidBody2D.gd" type="Script" id=6]
+[ext_resource path="res://2D/KinematicBody2D.gd" type="Script" id=7]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 5 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 15.0
+
+[sub_resource type="LineShape2D" id=3]
+normal = Vector2( 0.115, -0.279 )
+
+[sub_resource type="CanvasItemMaterial" id=4]
+render_priority = 12
+light_mode = 1
+
+[sub_resource type="SpatialMaterial" id=5]
+next_pass = SubResource( 4 )
+ao_enabled = true
+ao_light_affect = 0.0
+ao_on_uv2 = false
+ao_texture_channel = 0
+depth_enabled = true
+depth_scale = 0.05
+depth_deep_parallax = false
+depth_flip_tangent = false
+depth_flip_binormal = false
+subsurf_scatter_enabled = true
+subsurf_scatter_strength = 0.0
+transmission_enabled = true
+transmission = Color( 0, 0, 0, 1 )
+refraction_enabled = true
+refraction_scale = 0.05
+refraction_texture_channel = 0
+detail_enabled = true
+detail_blend_mode = 0
+detail_uv_layer = 0
+uv2_scale = Vector3( 1, 2.34, 1 )
+proximity_fade_enable = true
+proximity_fade_distance = 1.0
+
+[sub_resource type="SpatialMaterial" id=6]
+next_pass = SubResource( 5 )
+flags_transparent = true
+flags_use_shadow_to_opacity = true
+flags_unshaded = true
+flags_vertex_lighting = true
+flags_no_depth_test = true
+flags_use_point_size = true
+flags_world_triplanar = true
+flags_fixed_size = true
+
+[sub_resource type="CanvasItemMaterial" id=7]
+render_priority = 14
+next_pass = SubResource( 6 )
+light_mode = 1
+particles_animation = true
+particles_anim_h_frames = 9
+particles_anim_v_frames = 8
+particles_anim_loop = true
+
+[sub_resource type="CircleShape2D" id=8]
+
+[sub_resource type="RayShape2D" id=9]
+
+[sub_resource type="PhysicsMaterial" id=10]
+friction = 7.55
+rough = true
+bounce = -4.26
+absorbent = true
+
+[sub_resource type="ConcavePolygonShape2D" id=11]
+segments = PoolVector2Array( 7.9, -21.46, -1.92, 17.32, 29.46, 7.09, -5.31, 4.28 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 14.0017, 15.7142 )
+
+[sub_resource type="PhysicsMaterial" id=13]
+friction = 2.89
+rough = true
+bounce = 1.05
+absorbent = true
+
+[sub_resource type="ConvexPolygonShape2D" id=14]
+points = PoolVector2Array( -29.03, 0.03, 12.79, 29.66, 16.16, -29.04 )
+
+[sub_resource type="SegmentShape2D" id=15]
+b = Vector2( -2.29837, 14.9533 )
+
+[sub_resource type="AudioStreamGenerator" id=16]
+
+[sub_resource type="Curve" id=17]
+min_value = -181.55
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.518724, 85.36 ), -626.645, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=18]
+min_value = -200.0
+max_value = 200.0
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.584258, 166.32 ), 2871.18, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=19]
+max_value = 100.0
+_data = [ Vector2( 0.518724, 79.26 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Curve" id=20]
+_data = [ Vector2( 0.172329, 0.148 ), 0.0, 0.0, 0, 0, Vector2( 0.766818, 0.4736 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=21]
+offsets = PoolRealArray( 0, 0.13089, 0.361257, 0.638743, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.229277, 0.229277, 0.229277, 1, 0.494378, 0.494378, 0.494378, 1, 0.837696, 0.837696, 0.837696, 1, 1, 1, 1, 1 )
+
+[sub_resource type="Curve" id=22]
+min_value = -1.0
+_data = [ Vector2( 0.448509, -0.1584 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="OccluderPolygon2D" id=23]
+cull_mode = 1
+polygon = PoolVector2Array( -97.8674, 37.4674, 59.032, 24.413, -26.3689, -51.1114 )
+
+[sub_resource type="CapsuleMesh" id=24]
+
+[sub_resource type="NavigationPolygon" id=25]
+vertices = PoolVector2Array( 247.838, 65.9317, 376.785, -218.867, 183.044, 222.062, 221.894, -31.8228, -621.985, -100.284, -35.7504, -389.225, -87.526, -242.249, -50.9847, 102.995, -65.8101, -52.6709, 82.8328, -414.278, 84.7596, -19.3139 )
+polygons = [ PoolIntArray( 0, 1, 2 ), PoolIntArray( 1, 0, 3 ), PoolIntArray( 4, 5, 6 ), PoolIntArray( 7, 0, 2 ), PoolIntArray( 7, 2, 4 ), PoolIntArray( 7, 4, 6, 8 ), PoolIntArray( 6, 9, 1, 3, 10, 8 ) ]
+outlines = [ PoolVector2Array( -50.9847, 102.995, 247.838, 65.9317, 221.894, -31.8228, 84.7596, -19.3139, -65.8101, -52.6709 ), PoolVector2Array( -35.7504, -389.225, -621.985, -100.284, 183.044, 222.062, 376.785, -218.867, 82.8328, -414.278, -87.526, -242.249 ) ]
+
+[sub_resource type="ParticlesMaterial" id=26]
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity = 310.34
+angular_velocity = 0.000168972
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="Curve2D" id=27]
+bake_interval = 7.2
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 26.8185, 280.325, 0, 0, 0, 0, 764.622, 58.1903, 0, 0, 0, 0, 1074.02, 48.6702, 0, 0, 0, 0, 518.688, 672.233, 0, 0, 0, 0, 69.6587, 431.059, 0, 0, 0, 0, 26.8185, 280.325 )
+}
+
+[sub_resource type="ConvexPolygonShape2D" id=28]
+points = PoolVector2Array( 32, 32, 20, 32, 20, 23, 32, 23 )
+
+[sub_resource type="TileSet" id=29]
+0/name = "Sprite1.png 0"
+0/texture = ExtResource( 2 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 19, 10, 42, 39 )
+0/tile_mode = 1
+0/autotile/bitmask_mode = 0
+0/autotile/bitmask_flags = [ Vector2( 0, 0 ), 256, Vector2( 0, 1 ), 5, Vector2( 1, 0 ), 64 ]
+0/autotile/icon_coordinate = Vector2( 0, 0 )
+0/autotile/tile_size = Vector2( 32, 32 )
+0/autotile/spacing = 0
+0/autotile/occluder_map = [  ]
+0/autotile/navpoly_map = [  ]
+0/autotile/priority_map = [  ]
+0/autotile/z_index_map = [ Vector3( 0, 0, 16 ) ]
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 28 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="BitMap" id=30]
+data = {
+"data": PoolByteArray(  ),
+"size": Vector2( 0, 0 )
+}
+
+[sub_resource type="CircleShape2D" id=31]
+radius = 1.0
+
+[sub_resource type="AtlasTexture" id=32]
+
+[sub_resource type="CurveTexture" id=33]
+
+[sub_resource type="Gradient" id=34]
+
+[sub_resource type="GradientTexture" id=35]
+gradient = SubResource( 34 )
+
+[sub_resource type="AnimatedTexture" id=36]
+flags = 23
+frames = 4
+fps = 9.5
+frame_0/texture = ExtResource( 2 )
+frame_1/texture = ExtResource( 1 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 5 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 4 )
+frame_3/delay_sec = 0.0
+
+[sub_resource type="LargeTexture" id=37]
+
+[sub_resource type="CubeMesh" id=38]
+
+[sub_resource type="MeshTexture" id=39]
+mesh = SubResource( 38 )
+base_texture = ExtResource( 4 )
+
+[sub_resource type="OpenSimplexNoise" id=40]
+seed = 28
+octaves = 6
+period = 0.1
+persistence = 0.121
+lacunarity = 1.5
+
+[sub_resource type="NoiseTexture" id=41]
+noise = SubResource( 40 )
+
+[sub_resource type="Gradient" id=42]
+
+[sub_resource type="GradientTexture" id=43]
+gradient = SubResource( 42 )
+width = 2009
+
+[sub_resource type="ProxyTexture" id=44]
+flags = 23
+base = ExtResource( 1 )
+
+[sub_resource type="StreamTexture" id=45]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Node2D"]
+position = Vector2( 32, 29 )
+scale = Vector2( 1.48742, 1.22464 )
+frames = SubResource( 1 )
+frame = 1
+playing = true
+offset = Vector2( 1.88, 5.34 )
+flip_h = true
+flip_v = true
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+position = Vector2( 32, 91 )
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Node2D/Area2D"]
+position = Vector2( 86, -58 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource( 3 )
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="Node2D"]
+light_mask = 6401
+material = SubResource( 7 )
+position = Vector2( 30, 155 )
+z_index = -1
+input_pickable = true
+collision/safe_margin = 13.69
+motion/sync_to_physics = true
+script = ExtResource( 7 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D/KinematicBody2D"]
+position = Vector2( 0, 1 )
+texture = ExtResource( 1 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/KinematicBody2D"]
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/KinematicBody2D"]
+shape = SubResource( 9 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Node2D"]
+position = Vector2( 30, 222 )
+mass = 0.19
+physics_material_override = SubResource( 10 )
+script = ExtResource( 6 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D/RigidBody2D"]
+position = Vector2( 1, -3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/RigidBody2D"]
+shape = SubResource( 11 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/RigidBody2D"]
+shape = SubResource( 12 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Node2D"]
+position = Vector2( 33, 284 )
+physics_material_override = SubResource( 13 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D/StaticBody2D"]
+position = Vector2( 0, -2 )
+texture = ExtResource( 5 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource( 14 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Node2D/StaticBody2D"]
+shape = SubResource( 15 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Node2D"]
+stream = SubResource( 16 )
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="Node2D"]
+position = Vector2( 127.877, 127.063 )
+
+[node name="Skeleton2D" type="Skeleton2D" parent="Node2D"]
+
+[node name="Bone2D" type="Bone2D" parent="Node2D/Skeleton2D"]
+position = Vector2( 65.3646, 6.12647 )
+rest = Transform2D( 1, 0, 0, 1, 89.6188, 23.9415 )
+default_length = 23.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="Node2D"]
+position = Vector2( 491.295, 286.849 )
+amount = 40
+lifetime = 1.51
+draw_order = 1
+texture = ExtResource( 2 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+spread = 180.0
+flatness = 0.14
+gravity = Vector2( 0, 4.34 )
+initial_velocity = 26.97
+angular_velocity = -183.08
+angular_velocity_random = 0.59
+radial_accel_curve = SubResource( 17 )
+tangential_accel = 8.85
+tangential_accel_random = 1.0
+tangential_accel_curve = SubResource( 18 )
+damping = 62.83
+damping_curve = SubResource( 19 )
+angle_random = 0.65
+scale_amount = 0.0
+scale_amount_random = 0.28
+scale_amount_curve = SubResource( 20 )
+color_ramp = SubResource( 21 )
+hue_variation_random = 1.0
+hue_variation_curve = SubResource( 22 )
+
+[node name="Camera2D" type="Camera2D" parent="Node2D"]
+offset = Vector2( 0, 0.19 )
+rotating = true
+limit_smoothed = true
+smoothing_enabled = true
+offset_h = -1.0
+drag_margin_top = 1.0
+editor_draw_limits = true
+editor_draw_drag_margin = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="Node2D"]
+color = Color( 0.882353, 0.772549, 0.772549, 1 )
+
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="Node2D"]
+position = Vector2( 857.542, 106.879 )
+node_a = NodePath("../RigidBody2D")
+node_b = NodePath("../StaticBody2D")
+length = 53.0
+rest_length = 11.0
+
+[node name="GrooveJoint2D" type="GrooveJoint2D" parent="Node2D"]
+node_a = NodePath("../KinematicBody2D")
+node_b = NodePath("../RigidBody2D")
+length = 53.0
+initial_offset = 29.0
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Node2D"]
+node_a = NodePath("../KinematicBody2D")
+node_b = NodePath("../Area2D")
+bias = 0.09
+softness = 5.5
+
+[node name="Light2D" type="Light2D" parent="Node2D"]
+position = Vector2( 677.301, 422.774 )
+scale = Vector2( 1.87678, 1.37792 )
+texture = ExtResource( 2 )
+texture_scale = 7.79
+range_height = 2048.0
+range_z_min = -1036
+range_z_max = 1015
+range_layer_min = -8
+range_layer_max = 9
+shadow_enabled = true
+shadow_buffer_size = 2042
+shadow_gradient_length = 773.0
+shadow_filter = 1
+shadow_filter_smooth = 24.0
+shadow_item_cull_mask = 33
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D"]
+position = Vector2( 235.229, 432.66 )
+occluder = SubResource( 23 )
+
+[node name="Line2D" type="Line2D" parent="Node2D"]
+position = Vector2( 287.867, 166.793 )
+points = PoolVector2Array( 350.225, 99.2887, 99.1509, 55.342, 276.562, 225.304, 122.749, 230.863, 96.8052, 149.324 )
+texture_mode = 270806240
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D"]
+position = Vector2( 151.976, 319.216 )
+mesh = SubResource( 24 )
+texture = ExtResource( 4 )
+normal_map = ExtResource( 5 )
+
+[node name="Navigation2D" type="Navigation2D" parent="Node2D"]
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Node2D/Navigation2D"]
+position = Vector2( 660.927, 485.065 )
+navpoly = SubResource( 25 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Node2D"]
+rotation = -1.53414
+transform = Transform2D( 0.0366439, -0.999328, 0.999328, 0.0366439, 0, 0 )
+scroll_offset = Vector2( 1.99, 0.46 )
+scroll_base_offset = Vector2( 0, 0.61 )
+scroll_base_scale = Vector2( 1.96, 1 )
+scroll_limit_begin = Vector2( 0.54, 1 )
+scroll_limit_end = Vector2( 0.9, 0.58 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
+
+[node name="Sprite3" type="Sprite" parent="Node2D/ParallaxBackground"]
+position = Vector2( 467.646, 511.699 )
+texture = ExtResource( 1 )
+
+[node name="Particles2D" type="Particles2D" parent="Node2D"]
+position = Vector2( 774, 324 )
+amount = 14
+lifetime = 4.15
+process_material = SubResource( 26 )
+texture = ExtResource( 2 )
+
+[node name="Path2D" type="Path2D" parent="Node2D"]
+curve = SubResource( 27 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Node2D/Path2D"]
+position = Vector2( 26.8185, 280.325 )
+rotation = -0.292446
+
+[node name="Position2D" type="Position2D" parent="Node2D"]
+position = Vector2( 307, 335 )
+
+[node name="RayCast2D" type="RayCast2D" parent="Node2D"]
+position = Vector2( 47, 488 )
+enabled = true
+cast_to = Vector2( 0, 63.85 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="Node2D"]
+position = Vector2( 118, 33 )
+remote_path = NodePath("../Area2D/Sprite")
+
+[node name="TileMap" type="TileMap" parent="Node2D"]
+position = Vector2( 118, 33 )
+tile_set = SubResource( 29 )
+format = 1
+tile_data = PoolIntArray( 65538, 0, 0, 65539, 0, 0, 65552, 0, 0, 131075, 0, 0, 131076, 0, 0, 196612, 0, 0, 196613, 0, 0, 262157, 0, 0, 262158, 0, 0, 262159, 0, 0, 393222, 0, 0, 458758, 0, 0, 458759, 0, 0, 524293, 0, 0, 524294, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="Node2D"]
+position = Vector2( 962.643, 212.191 )
+normal = ExtResource( 2 )
+pressed = ExtResource( 5 )
+bitmask = SubResource( 30 )
+shape = SubResource( 31 )
+passby_press = true
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Node2D"]
+position = Vector2( 139, 407 )
+
+[node name="YSort" type="YSort" parent="Node2D"]
+position = Vector2( 214.215, 215.844 )
+
+[node name="Sprite1" type="Sprite" parent="Node2D/YSort"]
+position = Vector2( 24.1735, 47.0309 )
+texture = ExtResource( 2 )
+
+[node name="Sprite3" type="Sprite" parent="Node2D/YSort"]
+position = Vector2( 219.655, 17.7087 )
+texture = ExtResource( 1 )
+
+[node name="Sprite2" type="Sprite" parent="Node2D/YSort"]
+position = Vector2( 406.991, 145.586 )
+texture = ExtResource( 5 )
+region_enabled = true
+region_rect = Rect2( 0, 5.96, 0, 0 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 414, 116 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = SubResource( 32 )
+
+[node name="Sprite3" type="Sprite" parent="."]
+position = Vector2( 227.369, 604.211 )
+scale = Vector2( 0.11287, 175.737 )
+texture = SubResource( 33 )
+
+[node name="Sprite4" type="Sprite" parent="."]
+position = Vector2( 759.416, 249.265 )
+scale = Vector2( 0.107961, 150.227 )
+texture = SubResource( 35 )
+
+[node name="Sprite2" type="Sprite" parent="."]
+position = Vector2( 256.842, 635.79 )
+texture = SubResource( 36 )
+
+[node name="Sprite5" type="Sprite" parent="."]
+texture = SubResource( 37 )
+
+[node name="Sprite6" type="Sprite" parent="."]
+texture = SubResource( 39 )
+
+[node name="Sprite7" type="Sprite" parent="."]
+position = Vector2( 1017.93, 400.477 )
+texture = SubResource( 41 )
+normal_map = SubResource( 43 )
+
+[node name="Sprite8" type="Sprite" parent="."]
+texture = SubResource( 44 )
+
+[node name="Sprite9" type="Sprite" parent="."]
+texture = SubResource( 45 )
+
+[node name="Zażółć gęślą jaźń" type="Node2D" parent="."]

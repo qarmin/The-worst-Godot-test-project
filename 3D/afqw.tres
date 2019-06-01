@@ -1,0 +1,65 @@
+[gd_resource type="SpatialMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://Sprite2.png" type="Texture" id=1]
+[ext_resource path="res://Sprite3.png" type="Texture" id=2]
+[ext_resource path="res://Sprite4.png" type="Texture" id=3]
+[ext_resource path="res://Sprite1.png" type="Texture" id=4]
+
+[resource]
+render_priority = 9
+flags_transparent = true
+flags_use_shadow_to_opacity = true
+flags_unshaded = true
+flags_vertex_lighting = true
+flags_no_depth_test = true
+flags_use_point_size = true
+flags_world_triplanar = true
+flags_fixed_size = true
+flags_albedo_tex_force_srgb = true
+flags_do_not_receive_shadows = true
+flags_disable_ambient_light = true
+flags_ensure_correct_normals = true
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+params_diffuse_mode = 4
+params_specular_mode = 3
+params_blend_mode = 2
+params_cull_mode = 2
+params_depth_draw_mode = 2
+params_line_width = 72.0
+params_point_size = 84.0
+params_billboard_mode = 2
+params_billboard_keep_scale = true
+params_grow = true
+params_grow_amount = 5.5
+albedo_color = Color( 0.533333, 0.34902, 0.34902, 1 )
+albedo_texture = ExtResource( 4 )
+depth_enabled = true
+depth_scale = 7.7
+depth_deep_parallax = true
+depth_min_layers = 3
+depth_max_layers = 31
+depth_flip_tangent = false
+depth_flip_binormal = true
+depth_texture = ExtResource( 1 )
+refraction_enabled = true
+refraction_scale = 0.05
+refraction_texture = ExtResource( 2 )
+refraction_texture_channel = 3
+detail_enabled = true
+detail_mask = ExtResource( 3 )
+detail_blend_mode = 3
+detail_uv_layer = 1
+detail_albedo = ExtResource( 3 )
+detail_normal = ExtResource( 4 )
+uv1_scale = Vector3( 3.89, 2.82, 2.21 )
+uv1_offset = Vector3( 0.51, 1.08, -0.46 )
+uv1_triplanar = true
+uv1_triplanar_sharpness = 0.31864
+uv2_scale = Vector3( 1.31, 1.13, 1.05 )
+uv2_offset = Vector3( 0.06, 0.11, 0 )
+uv2_triplanar = true
+uv2_triplanar_sharpness = 7.46427
+distance_fade_mode = 3
+distance_fade_min_distance = 83.0
+distance_fade_max_distance = 295.0
