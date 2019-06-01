@@ -1,12 +1,19 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://2DALL/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
+[ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
 [ext_resource path="res://2DALL/2DALL.gd" type="Script" id=4]
 [ext_resource path="res://Sprite2.png" type="Texture" id=5]
 [ext_resource path="res://Sprite1.png" type="Texture" id=6]
 [ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
+[ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
 [ext_resource path="res://Sprite3.png" type="Texture" id=9]
+[ext_resource path="res://Sprite4.png" type="Texture" id=10]
+[ext_resource path="res://2DALL/AudioStreamPlayer2D.gd" type="Script" id=11]
+[ext_resource path="res://2DALL/BackBufferCopy.gd" type="Script" id=12]
+[ext_resource path="res://2DALL/Skeleton2D.gd" type="Script" id=13]
+[ext_resource path="res://2DALL/CPUParticles2D.gd" type="Script" id=14]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -37,6 +44,9 @@ extents = Vector2( 10.79, 10 )
 [sub_resource type="SegmentShape2D" id=9]
 a = Vector2( 7.41, 0 )
 
+[sub_resource type="AudioStreamSample" id=10]
+loop_mode = 1
+
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -44,7 +54,7 @@ script = ExtResource( 4 )
 position = Vector2( 32, 29 )
 scale = Vector2( 1.48742, 1.22464 )
 frames = SubResource( 1 )
-frame = 2
+frame = 1
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true
@@ -78,6 +88,10 @@ shape = SubResource( 8 )
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 9 )
 
+[node name="Sprite2" type="Sprite" parent="Area2D"]
+position = Vector2( 34.25, 171.65 )
+texture = ExtResource( 5 )
+
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
@@ -100,7 +114,105 @@ shape = SubResource( 6 )
 shape = SubResource( 7 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="KinematicBody2D"]
+position = Vector2( 0, 3 )
 shape = SubResource( 8 )
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="KinematicBody2D"]
 shape = SubResource( 9 )
+
+[node name="Sprite1" type="Sprite" parent="KinematicBody2D"]
+position = Vector2( 33.3, 107.05 )
+texture = ExtResource( 6 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="Sprite3" type="Sprite" parent="RigidBody2D"]
+position = Vector2( 35.2, 236.25 )
+texture = ExtResource( 9 )
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 9 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 2 )
+
+[node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 6 )
+
+[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 7 )
+
+[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 8 )
+
+[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource( 9 )
+
+[node name="Sprite4" type="Sprite" parent="StaticBody2D"]
+position = Vector2( 32.35, 301.8 )
+texture = ExtResource( 10 )
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = SubResource( 10 )
+script = ExtResource( 11 )
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+script = ExtResource( 12 )
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Bone2D2" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+
+[node name="Bone2D3" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+default_length = 29.0
+
+[node name="Bone2D4" type="Bone2D" parent="Skeleton2D"]
+rest = Transform2D( 1, 0, 0, 1, 0, 0 )
+default_length = 34.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2( 664.461, 348.954 )
+emitting = false
+lifetime = 5.9
+one_shot = true
+script = ExtResource( 14 )

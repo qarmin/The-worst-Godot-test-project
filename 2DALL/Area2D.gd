@@ -18,10 +18,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		for i in get_children():
-			i.set_disabled(bool(randi()%2))
-			i.set_shape(i.get_shape())
-			i.set_one_way_collision(bool(randi()%2))
-			i.set_one_way_collision_margin(randf() * 50)
+			if i.get_name().begins_with("Collision"):
+				i.set_disabled(bool(randi()%2))
+				i.set_shape(i.get_shape())
+				i.set_one_way_collision(bool(randi()%2))
+				i.set_one_way_collision_margin(randf() * 50)
 		
 		set_space_override_mode(get_space_override_mode())
 		set_gravity_is_point(bool(randi()%2))
@@ -37,7 +38,7 @@ func _process(delta) -> void:
 		set_collision_mask(randi()%4096)
 		set_audio_bus_override(bool(randi()%2))
 		set_audio_bus_name(str(bool(randi()%2)))
-		var qq : String
+		var qq : String = ""
 		qq += str(get_collision_layer_bit(randi()%20))
 		qq += str(get_collision_mask_bit(randi()%20))
 		if monitoring:
