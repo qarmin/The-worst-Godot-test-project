@@ -1,10 +1,12 @@
 extends CPUParticles2D
 
 var counter : float
-const C_COUNTER : Vector2 = Vector2(0.5,1.0)
+var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	if !is_visible():
+		queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
@@ -18,7 +20,9 @@ func _process(delta) -> void:
 		
 		set_emitting(bool(randi()%2))
 		if randi() % 3 == 0: # Changing amount of partices also reset it 
-			set_amount(randi()%500)
+			set_amount(randi()%40+10)
+		if randi() % 4 == 0:
+			restart()
 		set_lifetime(randf() * 10 + 5)
 		set_one_shot(bool(randi()%2))
 		set_pre_process_time(randf() * 50)
@@ -57,30 +61,30 @@ func _process(delta) -> void:
 		set("linear_accel_curve", Curve)
 		set("radial_accel", randf()*5)
 		set("radial_accel_random", randf())
-		set("radial_accel_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("radial_accel_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("tangential_accel", randf()*5)
 		set("tangential_accel_random", randf())
-		set("tangential_accel_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("tangential_accel_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("damping", randf()*5)
 		set("damping_random", randf())
-		set("damping_curve", load("res://Curve" + str(randi()%2 + 1) + ".tres"))
+		set("damping_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("angle", randf()*5)
 		set("angle_random", randf())
-		set("angle_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("angle_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("scale_amount", randf())
-		set("scale_amount_random", randf())
-		set("scale_amount_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("scale_amount_random", randf()/10)
+		set("scale_amount_curve", load("res://Curve3.tres"))
 		set("color", Color(randf(),randf(),randf(),randf()))
 		set("color_ramp", load("res://Gradient1.tres"))
 		set("hue_variation", randf()*5)
 		set("hue_variation_random", randf())
-		set("hue_variation_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("hue_variation_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("anim_speed", randf()*5)
 		set("anim_speed_random", randf())
-		set("anim_speed_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("anim_speed_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 		set("anim_offset", randf()*5)
 		set("anim_offset_random", randf())
-		set("anim_offset_curve", load("res://Curve" + str(randi()%2) + ".tres"))
+		set("anim_offset_curve", load("res://Curve" + str(randi()%2+1) + ".tres"))
 
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	
