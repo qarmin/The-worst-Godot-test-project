@@ -20,16 +20,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		
-		set_texture(
-		set_texture_pressed(
-		set_bitmask(
-		set_shape(
-		set_shape_centered(
-		set_shape_visible(
-		set_passby_press(
-		set_action(
-		set_visibility_mode(
-		is_pressed() 
+		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture_pressed(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		# TODO Bitmap
+		set_bitmask(BitMap.new())
+		set_shape(CircleShape2D.new())
+		set_shape_centered(bool(randi()%2))
+		set_shape_visible(bool(randi()%2))
+		set_passby_press(bool(randi()%2))
+		set_action(str(randi()%2412))
+		set_visibility_mode(randi()%2)
+		var qq : String = ""
+		qq += str(is_pressed())
+		qq =qq
 		
 		
 		

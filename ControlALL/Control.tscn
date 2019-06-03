@@ -7,16 +7,16 @@
 [ext_resource path="res://Control/Container.gd" type="Script" id=5]
 [ext_resource path="res://Control/Control.gd" type="Script" id=6]
 
-[sub_resource type="ShaderMaterial" id=5]
+[sub_resource type="ShaderMaterial" id=1]
 
-[sub_resource type="Theme" id=6]
+[sub_resource type="Theme" id=2]
 MarginContainer/constants/margin_bottom = 0
 MarginContainer/constants/margin_left = 0
 MarginContainer/constants/margin_right = 0
 MarginContainer/constants/margin_top = 0
 MarginContainer/icons/dgas = null
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=3]
 content_margin_left = 4.0
 content_margin_right = 3.0
 content_margin_top = 7.0
@@ -36,14 +36,14 @@ shadow_size = 7
 shadow_offset = Vector2( 0.22, -0.47 )
 anti_aliasing_size = 5
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id=4]
 
-[sub_resource type="StyleBoxLine" id=9]
+[sub_resource type="StyleBoxLine" id=5]
 content_margin_left = 4.0
 content_margin_top = 6.0
 vertical = true
 
-[sub_resource type="StyleBoxTexture" id=10]
+[sub_resource type="StyleBoxTexture" id=6]
 content_margin_right = 4.0
 texture = ExtResource( 2 )
 normal_map = ExtResource( 1 )
@@ -55,50 +55,51 @@ margin_bottom = 13.0
 axis_stretch_horizontal = 1
 modulate_color = Color( 0.396078, 0.152941, 0.152941, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=7]
 content_margin_right = 22.0
 
-[sub_resource type="DynamicFontData" id=12]
+[sub_resource type="DynamicFontData" id=8]
 hinting = 0
 
-[sub_resource type="DynamicFont" id=13]
+[sub_resource type="DynamicFont" id=9]
 size = 24
 outline_color = Color( 0.34668, 0.200424, 0.200424, 1 )
 use_mipmaps = true
 use_filter = true
 extra_spacing_top = 4
-font_data = SubResource( 12 )
+font_data = SubResource( 8 )
 
-[sub_resource type="InputEventJoypadButton" id=14]
+[sub_resource type="InputEventJoypadButton" id=10]
 device = 2
 button_index = 7
 pressure = -0.4
 pressed = true
 
-[sub_resource type="ShortCut" id=15]
-shortcut = SubResource( 14 )
+[sub_resource type="ShortCut" id=11]
+shortcut = SubResource( 10 )
 
-[sub_resource type="ButtonGroup" id=16]
+[sub_resource type="ButtonGroup" id=12]
 
-[sub_resource type="NoiseTexture" id=1]
+[sub_resource type="NoiseTexture" id=13]
 width = 128
 height = 128
 seamless = true
 as_normalmap = true
 
-[sub_resource type="BitMap" id=2]
+[sub_resource type="BitMap" id=14]
 data = {
 "data": PoolByteArray(  ),
 "size": Vector2( 0, 0 )
 }
 
-[sub_resource type="Theme" id=3]
+[sub_resource type="Theme" id=15]
 
-[sub_resource type="StyleBoxEmpty" id=4]
+[sub_resource type="StyleBoxEmpty" id=16]
 
 [node name="Control" type="GridContainer"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_right = 342.0
 margin_bottom = 558.0
 columns = 12
 script = ExtResource( 6 )
@@ -107,59 +108,74 @@ __meta__ = {
 }
 
 [node name="Popup" type="Popup" parent="."]
-margin_right = 275.0
-margin_bottom = 70.0
+visible = true
+margin_right = 115.0
+margin_bottom = 130.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="WindowDialog" type="WindowDialog" parent="."]
-margin_right = 48.0
+visible = true
+margin_left = 119.0
+margin_right = 326.0
 margin_bottom = 130.0
 window_title = "fasfqwfqwf"
 resizable = true
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
-margin_right = 83.0
+visible = true
+margin_left = 330.0
+margin_right = 431.0
 margin_bottom = 130.0
 window_title = "Alert!saf"
 resizable = true
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
-margin_right = 290.0
+visible = true
+margin_left = 435.0
+margin_right = 627.0
 margin_bottom = 130.0
 window_title = "Pleaseasfasf Confirm..."
 resizable = true
 dialog_text = "asfasf"
 
 [node name="FileDialog" type="FileDialog" parent="."]
-margin_right = 275.0
+visible = true
+margin_left = 631.0
+margin_right = 838.0
 margin_bottom = 130.0
 window_title = "Open a File"
 mode = 0
 show_hidden_files = true
 
 [node name="PopupDialog" type="PopupDialog" parent="."]
-margin_left = 279.0
-margin_right = 320.0
+visible = true
+margin_left = 842.0
+margin_right = 850.0
 margin_bottom = 130.0
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
-margin_right = 76.0
-margin_bottom = 24.0
+visible = true
+margin_left = 854.0
+margin_right = 874.0
+margin_bottom = 130.0
 
 [node name="PopupPanel" type="PopupPanel" parent="."]
-margin_right = 290.0
-margin_bottom = 40.0
+visible = true
+margin_left = 878.0
+margin_right = 1168.0
+margin_bottom = 130.0
 
 [node name="Button" type="Button" parent="."]
 self_modulate = Color( 0.654902, 1, 1, 1 )
 show_behind_parent = true
 light_mask = 1048575
-material = SubResource( 5 )
+material = SubResource( 1 )
 use_parent_material = true
-margin_right = 88.0
-margin_bottom = 436.0
+margin_left = 1172.0
+margin_right = 1290.0
+margin_bottom = 130.0
 hint_tooltip = "wfsafawgfwa"
 focus_neighbour_left = NodePath("../PopupPanel")
 focus_neighbour_top = NodePath("../CheckButton")
@@ -168,13 +184,13 @@ focus_neighbour_bottom = NodePath("../CenterContainer")
 focus_next = NodePath("../TextureButton")
 focus_previous = NodePath("../ColorPickerButton")
 focus_mode = 1
-theme = SubResource( 6 )
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/focus = SubResource( 9 )
-custom_styles/disabled = SubResource( 10 )
-custom_styles/normal = SubResource( 11 )
-custom_fonts/font = SubResource( 13 )
+theme = SubResource( 2 )
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/focus = SubResource( 5 )
+custom_styles/disabled = SubResource( 6 )
+custom_styles/normal = SubResource( 7 )
+custom_fonts/font = SubResource( 9 )
 custom_colors/font_color_disabled = Color( 0.439216, 0.231373, 0.231373, 1 )
 custom_colors/font_color = Color( 0.556863, 0.243137, 0.243137, 1 )
 custom_colors/font_color_hover = Color( 0.603922, 0.270588, 0.270588, 1 )
@@ -183,8 +199,8 @@ custom_constants/hseparation = 32
 toggle_mode = true
 pressed = true
 keep_pressed_outside = true
-shortcut = SubResource( 15 )
-group = SubResource( 16 )
+shortcut = SubResource( 11 )
+group = SubResource( 12 )
 text = "asfww"
 icon = ExtResource( 2 )
 flat = true
@@ -192,50 +208,52 @@ clip_text = true
 align = 0
 
 [node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 92.0
-margin_right = 188.0
-margin_bottom = 436.0
+margin_left = 1294.0
+margin_right = 1390.0
+margin_bottom = 130.0
 text = "dgaaasg"
 icon = ExtResource( 3 )
 flat = true
 clip_text = true
 
 [node name="CheckButton" type="CheckButton" parent="."]
-margin_left = 192.0
-margin_right = 340.0
-margin_bottom = 436.0
+margin_left = 1394.0
+margin_right = 1542.0
+margin_bottom = 130.0
 text = "wafaf"
 icon = ExtResource( 1 )
 flat = true
 clip_text = true
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
-margin_left = 344.0
-margin_right = 420.0
-margin_bottom = 436.0
+margin_left = 1546.0
+margin_right = 1622.0
+margin_bottom = 130.0
 icon = ExtResource( 1 )
 flat = true
 clip_text = true
 
 [node name="MenuButton" type="MenuButton" parent="."]
-margin_left = 424.0
-margin_right = 539.0
-margin_bottom = 436.0
+margin_top = 134.0
+margin_right = 115.0
+margin_bottom = 570.0
 text = "asfasf"
 icon = ExtResource( 3 )
 switch_on_hover = true
 
 [node name="OptionButton" type="OptionButton" parent="."]
-margin_left = 543.0
-margin_right = 750.0
-margin_bottom = 436.0
+margin_left = 119.0
+margin_top = 134.0
+margin_right = 326.0
+margin_bottom = 570.0
 text = "asfwq"
-icon = SubResource( 1 )
+icon = SubResource( 13 )
 
 [node name="ToolButton" type="ToolButton" parent="."]
-margin_left = 754.0
-margin_right = 833.0
-margin_bottom = 436.0
+margin_left = 330.0
+margin_top = 134.0
+margin_right = 431.0
+margin_bottom = 570.0
 text = "asfa"
 icon = ExtResource( 1 )
 clip_text = true
@@ -244,9 +262,10 @@ __meta__ = {
 }
 
 [node name="LinkButton" type="LinkButton" parent="."]
-margin_left = 837.0
-margin_right = 887.0
-margin_bottom = 436.0
+margin_left = 435.0
+margin_top = 134.0
+margin_right = 627.0
+margin_bottom = 570.0
 disabled = true
 text = "asfasfas"
 __meta__ = {
@@ -254,15 +273,16 @@ __meta__ = {
 }
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 891.0
-margin_right = 894.0
-margin_bottom = 436.0
+margin_left = 631.0
+margin_top = 134.0
+margin_right = 838.0
+margin_bottom = 570.0
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 1 )
 texture_hover = ExtResource( 3 )
 texture_disabled = ExtResource( 4 )
 texture_focused = ExtResource( 1 )
-texture_click_mask = SubResource( 2 )
+texture_click_mask = SubResource( 14 )
 expand = true
 stretch_mode = 2
 __meta__ = {
@@ -270,27 +290,30 @@ __meta__ = {
 }
 
 [node name="Container" type="Container" parent="."]
-margin_left = 898.0
-margin_right = 906.0
-margin_bottom = 436.0
+margin_left = 842.0
+margin_top = 134.0
+margin_right = 850.0
+margin_bottom = 570.0
 script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_left = 910.0
-margin_right = 911.0
-margin_bottom = 436.0
+margin_left = 854.0
+margin_top = 134.0
+margin_right = 874.0
+margin_bottom = 570.0
 use_top_left = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ColorPicker" type="ColorPicker" parent="."]
-margin_left = 915.0
-margin_right = 1205.0
-margin_bottom = 436.0
+margin_left = 878.0
+margin_top = 134.0
+margin_right = 1168.0
+margin_bottom = 570.0
 color = Color( 0.580392, 0.301961, 0.301961, 1 )
 raw_mode = true
 deferred_mode = true
@@ -300,28 +323,29 @@ __meta__ = {
 }
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]
-margin_top = 440.0
-margin_right = 88.0
-margin_bottom = 476.0
+margin_left = 1172.0
+margin_top = 134.0
+margin_right = 1290.0
+margin_bottom = 570.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 92.0
-margin_top = 440.0
-margin_right = 188.0
-margin_bottom = 476.0
+margin_left = 1294.0
+margin_top = 134.0
+margin_right = 1390.0
+margin_bottom = 570.0
 alignment = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="GraphNode" type="GraphNode" parent="."]
-margin_left = 192.0
-margin_top = 440.0
-margin_right = 340.0
-margin_bottom = 476.0
+margin_left = 1394.0
+margin_top = 134.0
+margin_right = 1542.0
+margin_bottom = 570.0
 title = "tags"
 show_close = true
 resizable = true
@@ -332,91 +356,90 @@ __meta__ = {
 }
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 344.0
-margin_top = 440.0
-margin_right = 420.0
-margin_bottom = 476.0
+margin_left = 1546.0
+margin_top = 134.0
+margin_right = 1622.0
+margin_bottom = 570.0
 columns = 22
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HSplitContainer" type="HSplitContainer" parent="."]
-margin_left = 424.0
-margin_top = 440.0
-margin_right = 539.0
-margin_bottom = 476.0
+margin_top = 574.0
+margin_right = 115.0
+margin_bottom = 610.0
 split_offset = 19
 collapsed = true
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
-margin_left = 543.0
-margin_top = 440.0
-margin_right = 750.0
-margin_bottom = 476.0
+margin_left = 119.0
+margin_top = 574.0
+margin_right = 326.0
+margin_bottom = 610.0
 split_offset = 9
 collapsed = true
 dragger_visibility = 2
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 754.0
-margin_top = 440.0
-margin_right = 833.0
-margin_bottom = 476.0
+margin_left = 330.0
+margin_top = 574.0
+margin_right = 431.0
+margin_bottom = 610.0
 custom_constants/margin_right = 9
 custom_constants/margin_top = 5
 custom_constants/margin_left = 8
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 837.0
-margin_top = 440.0
-margin_right = 887.0
-margin_bottom = 476.0
-theme = SubResource( 3 )
-custom_styles/panel = SubResource( 4 )
+margin_left = 435.0
+margin_top = 574.0
+margin_right = 627.0
+margin_bottom = 610.0
+theme = SubResource( 15 )
+custom_styles/panel = SubResource( 16 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 891.0
-margin_top = 440.0
-margin_right = 894.0
-margin_bottom = 476.0
-scroll_horizontal = 8
+margin_left = 631.0
+margin_top = 574.0
+margin_right = 838.0
+margin_bottom = 610.0
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 898.0
-margin_top = 440.0
-margin_right = 906.0
-margin_bottom = 476.0
+margin_left = 842.0
+margin_top = 574.0
+margin_right = 850.0
+margin_bottom = 610.0
 tab_align = 0
 drag_to_rearrange_enabled = true
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_left = 910.0
-margin_top = 440.0
-margin_right = 911.0
-margin_bottom = 476.0
+margin_left = 854.0
+margin_top = 574.0
+margin_right = 874.0
+margin_bottom = 610.0
 stretch = true
 stretch_shrink = 18
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 915.0
-margin_top = 440.0
-margin_right = 1205.0
-margin_bottom = 476.0
+margin_left = 878.0
+margin_top = 574.0
+margin_right = 1168.0
+margin_bottom = 610.0
 color = Color( 0.388235, 0.196078, 0.196078, 1 )
 
 [node name="GraphEdit" type="GraphEdit" parent="."]
-margin_top = 480.0
-margin_right = 88.0
-margin_bottom = 504.0
+margin_left = 1172.0
+margin_top = 574.0
+margin_right = 1290.0
+margin_bottom = 610.0
 right_disconnects = true
 scroll_offset = Vector2( -66, -19.42 )
 
 [node name="HScrollBar" type="HScrollBar" parent="."]
-margin_left = 92.0
-margin_top = 480.0
-margin_right = 188.0
-margin_bottom = 492.0
+margin_left = 1294.0
+margin_top = 574.0
+margin_right = 1390.0
+margin_bottom = 586.0
 min_value = 1.8
 max_value = 101.32
 step = -4.95
@@ -425,52 +448,51 @@ value = 1.8
 custom_step = -0.49
 
 [node name="VScrollBar" type="VScrollBar" parent="."]
-margin_left = 192.0
-margin_top = 480.0
-margin_right = 204.0
-margin_bottom = 504.0
+margin_left = 1394.0
+margin_top = 574.0
+margin_right = 1406.0
+margin_bottom = 610.0
 custom_step = 3.4
 
 [node name="HSlider" type="HSlider" parent="."]
-margin_left = 344.0
-margin_top = 480.0
-margin_right = 420.0
-margin_bottom = 496.0
+margin_left = 1546.0
+margin_top = 574.0
+margin_right = 1622.0
+margin_bottom = 590.0
 tick_count = 28
 ticks_on_borders = true
 
 [node name="VSlider" type="VSlider" parent="."]
-margin_left = 424.0
-margin_top = 480.0
-margin_right = 440.0
-margin_bottom = 504.0
+margin_top = 614.0
+margin_right = 16.0
+margin_bottom = 638.0
 focus_mode = 0
 tick_count = 6
 focus_mode = 0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_left = 543.0
-margin_top = 480.0
-margin_right = 750.0
-margin_bottom = 494.0
+margin_left = 119.0
+margin_top = 614.0
+margin_right = 326.0
+margin_bottom = 628.0
 min_value = 2.97
 max_value = 103.15
 value = 3.02
 
 [node name="SpinBox" type="SpinBox" parent="."]
-margin_left = 754.0
-margin_top = 480.0
-margin_right = 833.0
-margin_bottom = 504.0
+margin_left = 330.0
+margin_top = 614.0
+margin_right = 431.0
+margin_bottom = 638.0
 align = 1
 prefix = "asgasgasg"
 suffix = "as"
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_left = 837.0
-margin_top = 480.0
-margin_right = 887.0
-margin_bottom = 504.0
+margin_left = 435.0
+margin_top = 614.0
+margin_right = 627.0
+margin_bottom = 638.0
 texture_under = ExtResource( 1 )
 texture_over = ExtResource( 2 )
 texture_progress = ExtResource( 3 )
@@ -481,22 +503,22 @@ stretch_margin_right = 8
 stretch_margin_bottom = 11
 
 [node name="HSeparator" type="HSeparator" parent="."]
-margin_left = 891.0
-margin_top = 480.0
-margin_right = 894.0
-margin_bottom = 504.0
+margin_left = 631.0
+margin_top = 614.0
+margin_right = 838.0
+margin_bottom = 638.0
 
 [node name="VSeparator" type="VSeparator" parent="."]
-margin_left = 898.0
-margin_top = 480.0
-margin_right = 906.0
-margin_bottom = 504.0
+margin_left = 842.0
+margin_top = 614.0
+margin_right = 850.0
+margin_bottom = 638.0
 
 [node name="Label" type="Label" parent="."]
-margin_left = 910.0
-margin_top = 485.0
-margin_right = 911.0
-margin_bottom = 499.0
+margin_left = 854.0
+margin_top = 625.0
+margin_right = 874.0
+margin_bottom = 626.0
 text = "tqwtafawfawf"
 align = 1
 valign = 2
@@ -511,19 +533,20 @@ __meta__ = {
 }
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_left = 915.0
-margin_top = 480.0
-margin_right = 1205.0
-margin_bottom = 504.0
+margin_left = 878.0
+margin_top = 614.0
+margin_right = 1168.0
+margin_bottom = 638.0
 max_columns = 21
 same_column_width = true
 icon_scale = 2.47
 fixed_icon_size = Vector2( 1.12, 1.45 )
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_top = 508.0
-margin_right = 88.0
-margin_bottom = 532.0
+margin_left = 1172.0
+margin_top = 614.0
+margin_right = 1290.0
+margin_bottom = 638.0
 text = "fhdrhdsgsd"
 align = 2
 secret = true
@@ -535,10 +558,10 @@ caret_blink = true
 caret_blink_speed = 2.15
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_left = 92.0
-margin_top = 508.0
-margin_right = 188.0
-margin_bottom = 532.0
+margin_left = 1294.0
+margin_top = 614.0
+margin_right = 1390.0
+margin_bottom = 638.0
 texture = ExtResource( 1 )
 region_rect = Rect2( 18, 15.3107, 42, 30.6893 )
 patch_margin_left = 9
@@ -548,23 +571,22 @@ patch_margin_bottom = 7
 axis_stretch_horizontal = 1
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 192.0
-margin_top = 508.0
-margin_right = 340.0
-margin_bottom = 532.0
+margin_left = 1394.0
+margin_top = 614.0
+margin_right = 1542.0
+margin_bottom = 638.0
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-margin_left = 344.0
-margin_top = 508.0
-margin_right = 420.0
-margin_bottom = 532.0
+margin_left = 1546.0
+margin_top = 614.0
+margin_right = 1622.0
+margin_bottom = 638.0
 border_color = Color( 0.317647, 0.164706, 0.164706, 1 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 424.0
-margin_top = 508.0
-margin_right = 539.0
-margin_bottom = 532.0
+margin_top = 642.0
+margin_right = 115.0
+margin_bottom = 666.0
 focus_mode = 2
 bbcode_text = "afafqaw"
 text = "afafqaw"
@@ -573,16 +595,16 @@ selection_enabled = true
 override_selected_font_color = true
 
 [node name="Tabs" type="Tabs" parent="."]
-margin_left = 543.0
-margin_top = 508.0
-margin_right = 750.0
-margin_bottom = 532.0
+margin_left = 119.0
+margin_top = 642.0
+margin_right = 326.0
+margin_bottom = 666.0
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 754.0
-margin_top = 508.0
-margin_right = 833.0
-margin_bottom = 532.0
+margin_left = 330.0
+margin_top = 642.0
+margin_right = 431.0
+margin_bottom = 666.0
 text = "fafas"
 readonly = true
 highlight_current_line = true
@@ -603,10 +625,10 @@ caret_blink = true
 caret_blink_speed = 0.1
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_left = 837.0
-margin_top = 508.0
-margin_right = 887.0
-margin_bottom = 532.0
+margin_left = 435.0
+margin_top = 642.0
+margin_right = 627.0
+margin_bottom = 666.0
 texture = ExtResource( 3 )
 expand = true
 stretch_mode = 4
@@ -614,10 +636,10 @@ flip_h = true
 flip_v = true
 
 [node name="Tree" type="Tree" parent="."]
-margin_left = 891.0
-margin_top = 508.0
-margin_right = 894.0
-margin_bottom = 532.0
+margin_left = 631.0
+margin_top = 642.0
+margin_right = 838.0
+margin_bottom = 666.0
 columns = 18
 allow_reselect = true
 allow_rmb_select = true
@@ -627,7 +649,7 @@ drop_mode_flags = 3
 select_mode = 1
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_left = 898.0
-margin_top = 508.0
-margin_right = 906.0
-margin_bottom = 532.0
+margin_left = 842.0
+margin_top = 642.0
+margin_right = 850.0
+margin_bottom = 666.0

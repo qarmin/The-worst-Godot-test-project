@@ -19,7 +19,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		set_length(randf() * 50)
 		set_initial_offset(randf() * 50)
-		set_bias(randf() * 50)
+		set_bias(randf() * 0.8)
 		set_exclude_nodes_from_collision(bool(randi()%2))
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

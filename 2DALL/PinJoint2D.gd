@@ -17,8 +17,8 @@ func _process(delta) -> void:
 	#  randi()%50
 	
 	if counter <= 0:
-		set_softness(randf() *  50)
-		set_bias(randf() * 50)
+		set_softness(randf() *  10)
+		set_bias(randf() * 0.8)
 		set_exclude_nodes_from_collision(bool(randi()%2))
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

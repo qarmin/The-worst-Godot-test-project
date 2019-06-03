@@ -21,10 +21,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		set_emitting(bool(randi()%2))
 		if randi()%7 == 0:
-			set_amount(randi()%15 + 10)
+			set_amount(randi()%15 + 40)
 		set_lifetime(randf() * 50)
 		set_one_shot(bool(randi()%2))
-		set_pre_process_time(randf() * 50)
+		set_pre_process_time(randf() * 5)
 		set_speed_scale(randf() * 4)
 		set_explosiveness_ratio(randf())
 		set_randomness_ratio(randf())
@@ -61,8 +61,9 @@ func _process(delta) -> void:
 		#Bug FLAG_DISABLE_Z doesn't exists
 		pm.set_flag(2,bool(randi()%2))#pm.FLAG_DISABLE_Z,bool(randi()%2))
 		
-		for j in range(12):
-			pm.set_param(j,randf() * 50)
+		#Setting last PARAM_ANIM_OFFSET (11) cause GLES 3 error
+		for j in range(11): # range(12):
+			pm.set_param(j,randf() * 2)
 			pm.set_param_randomness(j,randf())
 			pm.set_param_texture(j,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		

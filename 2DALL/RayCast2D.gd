@@ -8,7 +8,7 @@ func _ready():
 	if !is_visible():
 		queue_free()
 
-func _process(delta) -> void:
+func _process_physics(delta) -> void:
 	counter -= delta
 	
 	#  Vector2(randf() * 50,randf() * 50))
@@ -26,9 +26,9 @@ func _process(delta) -> void:
 		set_collision_mask(randi()%4095)
 		set_collide_with_areas(bool(randi()%2))
 		set_collide_with_bodies(bool(randi()%2))
-		add_exception(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1))
+		#add_exception(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1))
 		#add_exception_rid()
-		force_raycast_update()
+		#force_raycast_update()
 		var qq : String = ""
 		qq += str(get_collider())
 		qq += str(get_collider_shape())
@@ -39,5 +39,7 @@ func _process(delta) -> void:
 		#remove_exception(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1))
 		#remove_exception_rid(RID(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1)))
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
+		
+		qq = qq
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
