@@ -1,4 +1,4 @@
-extends Node2D
+extends VisibilityEnabler2D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -19,7 +19,8 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
-		
+		for i in range(6):
+			set_enabler(i,bool(randi()%2))
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

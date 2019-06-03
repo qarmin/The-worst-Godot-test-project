@@ -1,0 +1,51 @@
+extends Polygon2D
+
+var counter : float
+var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+
+func _ready():
+	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	if !is_visible():
+		queue_free()
+
+func _process(delta) -> void:
+	counter -= delta
+	
+	#  Vector2(randf() * 50,randf() * 50))
+	#  randf() * 50)
+	#  bool(randi()%2))
+	#  randi()%50)
+	#  Color(randf(),randf(),randf(),randf()))
+	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+	
+	if counter <= 0:
+		set_color(Color(randf(),randf(),randf(),randf()))
+		set_offset(Vector2(randf() * 50,randf() * 50))
+		set_antialiased(bool(randi()%2))
+		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture_offset(Vector2(randf() * 50,randf() * 50))
+		set_texture_scale(Vector2(randf() * 50,randf() * 50))
+		set_texture_rotation_degrees(randi()%50)
+		#set_texture_rotation_degrees(
+		#set_skeleton(get_skeleton())
+		set_invert(bool(randi()%2))
+		set_invert_border(randf() * 50)
+		#set_polygon(
+		#set_uv(
+		#set_vertex_colors(
+		#set_polygons(
+		#_set_bones(get_bones)
+		set_internal_vertex_count(randi()%50)
+		#add_bone(
+		#erase_bone(0)
+		clear_bones()
+		var qq : String = ""
+		qq += str(get_bone_count())
+		#qq += str(get_bone_path(0))
+		#qq += str(get_bone_weights(0))
+		#qq += str(set_bone_path())
+		#qq += str(set_bone_weights(0,[2.4,2.52,125.16]))
+		qq = qq
+		
+		
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

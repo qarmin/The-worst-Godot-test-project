@@ -1,4 +1,4 @@
-extends Node2D
+extends Position2D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)

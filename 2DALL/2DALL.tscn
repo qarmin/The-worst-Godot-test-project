@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://2DALL/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
@@ -22,6 +22,21 @@
 [ext_resource path="res://2DALL/Light2D.gd" type="Script" id=20]
 [ext_resource path="res://2DALL/LightOccluder2D.gd" type="Script" id=21]
 [ext_resource path="res://2DALL/Line2D.gd" type="Script" id=22]
+[ext_resource path="res://2DALL/MeshInstance2D.gd" type="Script" id=23]
+[ext_resource path="res://2DALL/Navigation2D.gd" type="Script" id=24]
+[ext_resource path="res://2DALL/ParallaxBackground.gd" type="Script" id=25]
+[ext_resource path="res://2DALL/Particles2D.gd" type="Script" id=26]
+[ext_resource path="res://2DALL/Path2D.gd" type="Script" id=27]
+[ext_resource path="res://2DALL/Polygon2D.gd" type="Script" id=28]
+[ext_resource path="res://2DALL/Position2D.gd" type="Script" id=29]
+[ext_resource path="res://2DALL/RayCast2D.gd" type="Script" id=30]
+[ext_resource path="res://2DALL/RemoteTransform2D.gd" type="Script" id=31]
+[ext_resource path="res://2DALL/Sprite.gd" type="Script" id=32]
+[ext_resource path="res://2DALL/TileMap.gd" type="Script" id=33]
+[ext_resource path="res://2DALL/VisibilityNotifier2D.gd" type="Script" id=34]
+[ext_resource path="res://2DALL/TouchScreenButton.gd" type="Script" id=35]
+[ext_resource path="res://2DALL/VisibilityEnabler2D.gd" type="Script" id=36]
+[ext_resource path="res://2DALL/YSort.gd" type="Script" id=37]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Node2D
@@ -69,6 +84,25 @@ loop_mode = 1
 [sub_resource type="OccluderPolygon2D" id=13]
 polygon = PoolVector2Array( -1.10529, 7.89474, 138.895, 45.7895, -101.105, 208.947, -186.368, 85.7895, 5.21051, -43.6842 )
 
+[sub_resource type="CylinderMesh" id=14]
+
+[sub_resource type="NavigationPolygon" id=15]
+vertices = PoolVector2Array( 296.65, 558.363, 590.582, 134.8, 991.535, 303.622, 782.014, 568.914 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( 296.65, 558.363, 590.582, 134.8, 991.535, 303.622, 782.014, 568.914 ) ]
+
+[sub_resource type="ParticlesMaterial" id=16]
+flag_disable_z = true
+gravity = Vector3( 0, 98, 0 )
+angular_velocity = 0.000168972
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[sub_resource type="Curve2D" id=17]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 600.13, 43.3051, 0, 0, 0, 0, 300.135, 362.781, 0, 0, 0, 0, 705.323, 520.571, 0, 0, 0, 0, 1046.23, 234.211, 0, 0, 0, 0, 810.516, 74.4735, 0, 0, 0, 0, 652.727, 304.34, 0, 0, 0, 0, 658.571, 132.914, 0, 0, 0, 0, 600.13, 43.3051 )
+}
+
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -76,9 +110,8 @@ script = ExtResource( 4 )
 script = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Node2D"]
-position = Vector2( 32, 29 )
-scale = Vector2( 1.48742, 1.22464 )
 frames = SubResource( 2 )
+frame = 2
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true
@@ -309,6 +342,8 @@ position = Vector2( 169.5, 200.5 )
 texture = ExtResource( 5 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="Node2D"]
+node_a = NodePath("../KinematicBody2D")
+node_b = NodePath("../Area2D")
 script = ExtResource( 19 )
 
 [node name="Light2D" type="Light2D" parent="Node2D"]
@@ -318,10 +353,77 @@ texture = ExtResource( 9 )
 energy = 0.11
 script = ExtResource( 20 )
 
-[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-position = Vector2( 189.425, 50.4153 )
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Node2D"]
+position = Vector2( 201.113, 134.18 )
 occluder = SubResource( 13 )
 script = ExtResource( 21 )
 
-[node name="Line2D" type="Line2D" parent="."]
+[node name="Line2D" type="Line2D" parent="Node2D"]
+texture_mode = 273590176
 script = ExtResource( 22 )
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="Node2D"]
+visible = false
+mesh = SubResource( 14 )
+script = ExtResource( 23 )
+
+[node name="Navigation2D" type="Navigation2D" parent="Node2D"]
+script = ExtResource( 24 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Node2D/Navigation2D"]
+navpoly = SubResource( 15 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Node2D"]
+script = ExtResource( 25 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Node2D/ParallaxBackground"]
+
+[node name="Particles2D" type="Particles2D" parent="Node2D"]
+position = Vector2( 637.003, 381.812 )
+process_material = SubResource( 16 )
+script = ExtResource( 26 )
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 17 )
+script = ExtResource( 27 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2( 600.13, 43.3051 )
+rotation = 2.32475
+
+[node name="Sprite3" type="Sprite" parent="Path2D/PathFollow2D"]
+position = Vector2( -5.70514, 16.0328 )
+texture = ExtResource( 9 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+skeleton = NodePath("../Node2D/Skeleton2D")
+script = ExtResource( 28 )
+
+[node name="Position2D" type="Position2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+script = ExtResource( 30 )
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+remote_path = NodePath("../Node2D/AnimatedSprite")
+script = ExtResource( 31 )
+
+[node name="Sprite" type="Sprite" parent="."]
+script = ExtResource( 32 )
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 1
+script = ExtResource( 33 )
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+script = ExtResource( 35 )
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+script = ExtResource( 34 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+script = ExtResource( 36 )
+
+[node name="YSort" type="YSort" parent="."]
+script = ExtResource( 37 )

@@ -1,4 +1,4 @@
-extends Node2D
+extends MeshInstance2D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -19,7 +19,6 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
-		
-		
-		
+		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

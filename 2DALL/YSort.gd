@@ -1,4 +1,4 @@
-extends Node2D
+extends YSort
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -19,7 +19,7 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
-		
+		set_sort_enabled(bool(randi()%2))
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

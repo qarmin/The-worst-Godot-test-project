@@ -1,4 +1,4 @@
-extends Node2D
+extends Sprite
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -19,7 +19,20 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
-		
+		set_texture(
+		set_normal_map(
+		set_centered(
+		set_offset(
+		set_flip_h(
+		set_flip_v(
+		set_vframes(
+		set_hframes(
+		set_frame(
+		set_region(
+		set_region_rect(
+		set_region_filter_clip(
+		get_rect()
+		is_pixel_opaque(
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
