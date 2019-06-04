@@ -3,16 +3,16 @@
 importer="texture"
 type="StreamTexture"
 path.s3tc="res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.s3tc.stex"
-path.etc2="res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.etc2.stex"
+path.etc="res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.etc.stex"
 metadata={
-"imported_formats": [ "s3tc", "etc2" ],
+"imported_formats": [ "s3tc", "etc" ],
 "vram_texture": true
 }
 
 [deps]
 
 source_file="res://Sprite4.png"
-dest_files=[ "res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.s3tc.stex", "res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.etc2.stex" ]
+dest_files=[ "res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.s3tc.stex", "res://.import/Sprite4.png-ba4be9167783c0121b2f377cf21b39ce.etc.stex" ]
 
 [params]
 
