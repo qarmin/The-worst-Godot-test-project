@@ -22,11 +22,11 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		
+		var qq : String = ""
 		set_select_mode(randi()%2)
 		set_allow_reselect(bool(randi()%2))
 		set_allow_rmb_select(bool(randi()%2))
-		set_max_text_lines(randi()%50)
+		set_max_text_lines(randi()%50 + 10)
 		set_auto_height(bool(randi()%2))
 		set_max_columns(randi()%50)
 		set_same_column_width(bool(randi()%2))
@@ -37,24 +37,24 @@ func _process(delta) -> void:
 		add_icon_item(load("res://Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 		add_item(str(randi()%50),load("res://Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 		ensure_current_is_visible()
-		get_item_at_position(Vector2(randf() * 50,randf() * 50),bool(randi()%2))
-		get_item_count()
-		get_item_custom_bg_color(0)
-		get_item_custom_fg_color(0)
-		get_item_icon(0)
-		get_item_icon_modulate(0)
-		get_item_icon_region(0)
-		get_item_metadata(0)
-		get_item_text(0)
-		get_item_tooltip(0)
-		get_selected_items()
-		get_v_scroll()
-		is_anything_selected()
-		is_item_disabled(0)
-		is_item_icon_transposed(0)
-		is_item_selectable(0)
-		is_item_tooltip_enabled(0)
-		is_selected(0)
+		qq += str(get_item_at_position(Vector2(randf() * 50,randf() * 50),bool(randi()%2)))
+		qq += str(get_item_count())
+		qq += str(get_item_custom_bg_color(0))
+		qq += str(get_item_custom_fg_color(0))
+		qq += str(get_item_icon(0))
+		qq += str(get_item_icon_modulate(0))
+		qq += str(get_item_icon_region(0))
+		qq += str(get_item_metadata(0))
+		qq += str(get_item_text(0))
+		qq += str(get_item_tooltip(0))
+		qq += str(get_selected_items())
+		qq += str(get_v_scroll())
+		qq += str(is_anything_selected())
+		qq += str(is_item_disabled(0))
+		qq += str(is_item_icon_transposed(0))
+		qq += str(is_item_selectable(0))
+		qq += str(is_item_tooltip_enabled(0))
+		qq += str(is_selected(0))
 		move_item(0,1)
 		remove_item(0)
 		select(0,bool(randi()%2))
@@ -74,7 +74,8 @@ func _process(delta) -> void:
 		unselect(0)
 		unselect_all()
 		clear()
-
+		
+		qq = qq
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

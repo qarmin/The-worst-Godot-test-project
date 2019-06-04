@@ -23,7 +23,7 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		set_stretch(bool(randi()%2))
-		set_stretch_shrink(randi()%50)
+		set_stretch_shrink(randi()%50 + 5)
 		
 		
 		

@@ -22,7 +22,7 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		
+		set_border_color(Color(randf(),randf(),randf(),randf()))
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

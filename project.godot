@@ -23,8 +23,17 @@ config/icon="res://icon.png"
 
 Autoload="*res://Autoload.gd"
 
+[compression]
+
+formats/zstd/long_distance_matching=true
+formats/zstd/compression_level=22
+formats/zstd/window_log_size=30
+formats/zlib/compression_level=9
+formats/gzip/compression_level=9
+
 [debug]
 
+settings/fps/force_fps=120
 settings/stdout/verbose_stdout=true
 
 [display]
@@ -32,14 +41,57 @@ settings/stdout/verbose_stdout=true
 window/size/width=1280
 window/size/height=720
 window/per_pixel_transparency/allowed=true
+window/per_pixel_transparency/enabled=true
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor]
+
+convert_text_resources_to_binary_on_export=true
+
+[gui]
+
+timers/incremental_search_max_interval_msec=1938
+timers/text_edit_idle_detect_sec=4.4
+common/swap_ok_cancel=true
+timers/tooltip_delay_sec=0.09
+common/snap_controls_to_pixels=false
 
 [input_devices]
 
 pointing/emulate_touch_from_mouse=true
 
+[logging]
+
+file_logging/enable_file_logging=true
+file_logging/max_log_files=30
+
+[memory]
+
+limits/multithreaded_server/rid_pool_prealloc=100
+limits/message_queue/max_size_kb=4096
+
+[node]
+
+name_num_separator=1
+name_casing=1
+
 [physics]
 
 2d/thread_model=2
+2d/sleep_threshold_linear=1.94
+2d/sleep_threshold_angular=0.23
+2d/time_before_sleep=0.35
+2d/cell_size=125
+2d/large_object_surface_threshold_in_cells=509
+2d/default_gravity=99
+2d/default_gravity_vector=Vector2( 0.18, 1.64 )
+2d/default_linear_damp=0.21
+2d/default_angular_damp=2
+3d/default_gravity=9.92
+3d/default_gravity_vector=Vector3( -0.23, -1.13, 0.34 )
+3d/default_linear_damp=0.16
+3d/default_angular_damp=0.18
 
 [rendering]
 
@@ -47,4 +99,15 @@ quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
+quality/shading/force_vertex_shading=true
+quality/shading/force_lambert_over_burley=true
+quality/shading/force_blinn_over_ggx=true
+quality/filters/use_nearest_mipmap_filter=true
+limits/buffers/canvas_polygon_buffer_size_kb=2048
+limits/buffers/canvas_polygon_index_buffer_size_kb=2048
+limits/buffers/immediate_buffer_size_kb=8192
+quality/reflections/atlas_size=399
+quality/reflections/atlas_subdiv=11
+quality/filters/msaa=4
+quality/depth/hdr.mobile=true
 environment/default_environment="res://default_env.tres"

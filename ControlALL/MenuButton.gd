@@ -26,5 +26,7 @@ func _process(delta) -> void:
 		var qq : String = ""
 		qq += str(get_popup())
 		set_disable_shortcuts(bool(randi()%2))
+		qq = qq
+		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

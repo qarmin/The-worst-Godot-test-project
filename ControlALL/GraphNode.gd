@@ -33,7 +33,7 @@ func _process(delta) -> void:
 		set_slot(0, bool(randi()%2), 0, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi()%3, Color(randf(),randf(),randf(),randf()), load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		clear_slot(0)
 		clear_all_slots()
-		qq += str(get_connection_input_color(0))
+		#qq += str(get_connection_input_color(0))
 #		get_connection_input_count()
 #		get_connection_input_position(
 #		get_connection_input_type(
