@@ -1,4 +1,4 @@
-extends Container
+extends SpinBox
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -22,7 +22,13 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		queue_sort()
-		fit_child_in_rect($Control, Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+		set_align(randi()%4)
+		set_editable(bool(randi()%2))
+		set_prefix(str(randi()%50))
+		set_suffix(str(randi()%50))
+		var qq : String = ""
+		qq += str(get_line_edit())
+		qq = qq
+		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

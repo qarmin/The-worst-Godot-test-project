@@ -1,4 +1,4 @@
-extends Container
+extends RichTextLabel
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -22,7 +22,7 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		queue_sort()
-		fit_child_in_rect($Control, Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+		
+		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

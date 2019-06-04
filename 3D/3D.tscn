@@ -162,7 +162,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.99818, 0.435284, -2.26146 )
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Spatial"]
 transform = Transform( 9.79863, 0, 0, 0, 9.79863, 0, 0, 0, 9.79863, 0, 2.31645, -9.68281 )
 frames = SubResource( 1 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="Sprite3D" type="Sprite3D" parent="Spatial"]
@@ -176,7 +176,6 @@ emission_shape = 1
 emission_sphere_radius = 1.0
 spread = 108.87
 initial_velocity = 11.75
-angular_velocity = 0.0
 
 [node name="CSGBox" type="CSGBox" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6756, 5.69441, 0 )

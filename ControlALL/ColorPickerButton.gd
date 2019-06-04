@@ -1,4 +1,4 @@
-extends Container
+extends ColorPickerButton
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -22,7 +22,10 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		queue_sort()
-		fit_child_in_rect($Control, Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
-		
+		set_pick_color(Color(randf(),randf(),randf(),randf()))
+		set_edit_alpha(bool(randi()%2))
+		var qq : String = ""
+		qq += str(get_picker())
+		qq += str(get_popup())
+		qq = qq
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
