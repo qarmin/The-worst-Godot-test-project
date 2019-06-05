@@ -35,6 +35,7 @@ formats/gzip/compression_level=9
 
 settings/fps/force_fps=120
 settings/stdout/verbose_stdout=true
+gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
 

@@ -5,8 +5,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	if !is_visible():
-		queue_free()
+
 
 func _process(delta) -> void:
 	counter -= delta
@@ -46,20 +45,20 @@ func _process(delta) -> void:
 		qq += str(get_visible_line_count())
 		newline()
 		qq += str(parse_bbcode("\n\n\nafafas"))
-		pop()
+		#pop()
 		push_align(randi()%4)
-		push_cell()
+		#push_cell()
 		push_color(Color(randf(),randf(),randf(),randf()))
 		push_font(load("res://DynamicFont1.tres"))
 		push_indent(randi()%6)
 		push_list(randi()%3)
 		push_meta(get_parent())
 		push_strikethrough()
-		push_table(randi()%2)
-		push_underline()
+		push_table(randi()%2 + 4)
+		#push_underline()
 		scroll_to_line(1)
 		qq += str(remove_line(0))
-		set_table_column_expand(randi()%2, bool(randi()%2), randi()%4)
+		#set_table_column_expand(randi()%2, bool(randi()%2), randi()%4)
 		
 		qq = qq
 		

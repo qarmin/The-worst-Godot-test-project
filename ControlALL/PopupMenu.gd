@@ -5,8 +5,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	if !is_visible():
-		queue_free()
+
 
 func _process(delta) -> void:
 	counter -= delta
@@ -30,10 +29,10 @@ func _process(delta) -> void:
 		set_submenu_popup_delay(randf() / 5.0)
 		add_check_item(str(randi()%50000), -1, randi()%50)
 		add_check_shortcut(ShortCut.new(), -1, bool(randi()%2))
-		add_icon_check_item(Texture.new(), str(randi()%50000), -1, randi()%50)
-		add_icon_check_shortcut(Texture.new(), ShortCut.new(), -1, randi()%50)
-		add_icon_item(Texture.new(), str(randi()%50000), -1, randi()%50)
-		add_icon_shortcut(Texture.new(), ShortCut.new(), -1, randi()%50)
+		add_icon_check_item(load("res://Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), -1, randi()%50)
+		add_icon_check_shortcut(load("res://Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), -1, randi()%50)
+		add_icon_item(load("res://Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), -1, randi()%50)
+		add_icon_shortcut(load("res://Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), -1, randi()%50)
 		add_item(str(randi()%50000), -1, randi()%50)
 		add_radio_check_item(str(randi()%50000), -1, randi()%50)
 		add_radio_check_shortcut(ShortCut.new(), -1, bool(randi()%2))
