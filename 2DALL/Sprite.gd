@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,6 +21,8 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_centered(bool(randi()%2))
@@ -31,9 +35,5 @@ func _process(delta) -> void:
 		set_region(bool(randi()%2))
 		set_region_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_region_filter_clip(bool(randi()%2))
-		var qq : String = ""
 		qq += str(get_rect())
 		qq += str(is_pixel_opaque(Vector2(randf() * 15,randf() * 15)))
-		qq = qq
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

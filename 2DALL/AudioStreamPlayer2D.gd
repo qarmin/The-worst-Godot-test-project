@@ -11,6 +11,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	position.x += (int(right) * 2 - 1) * delta * 100
 	if position.x > 1280:
@@ -24,6 +26,8 @@ func _process(delta) -> void:
 	#  randi()%50
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_stream(get_stream())
 		set_volume_db(randf() * 50)
 		set_pitch_scale(randf() * 50)
@@ -35,14 +39,25 @@ func _process(delta) -> void:
 		set_bus(get_bus())
 		set_area_mask(randi()%50)
 		play()
-		seek(0.1)
+		seek(randf() * 50)
 		stop()
 		
-		var qq : String = ""
 		qq += str(get_playback_position())
 		qq += str(get_stream_playback())
-		qq = qq
 		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	
+		
+		if Autoload.WRONG_BUGS:
+			set_stream(AudioStream.new())
+			set_volume_db(randf() * 1000 - 500)
+			set_pitch_scale(randf() * 1000 - 500)
+			_set_playing(bool(randi()%2))
+			set_autoplay(bool(randi()%2))
+			set_stream_paused(bool(randi()%2))
+			set_max_distance(randf() * 1000 - 500)
+			set_attenuation(randf() * 1000 - 500)
+			set_bus("ŹĆŻΩŒÓ")
+			set_area_mask(randi() % 1000 - 500)
+			play()
+			seek(randf() * 1000 - 500)
+			stop()
 	

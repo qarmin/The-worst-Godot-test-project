@@ -2,7 +2,6 @@ extends StaticBody2D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-var right = false
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
@@ -11,13 +10,17 @@ func _ready():
 
 func _physics_process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 
-	if position.x > 1280:
-		right = false
-	elif position.x < 0:
-		right = true
+#  Vector2(randf() * 50,randf() * 50)
+#  randf() * 50
+#  bool(randi()%2)
+#  randi()%50
 
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		for i in get_children():
 			if i.get_name().begins_with("Collision"):
 				i.set_disabled(bool(randi()%2))
@@ -30,10 +33,17 @@ func _physics_process(delta) -> void:
 		set_friction(randf())
 		set_bounce(randf())
 		set_physics_material_override(get_physics_material_override())
-
-#  Vector2(randf() * 50,randf() * 50)
-#  randf() * 50
-#  bool(randi()%2)
-#  randi()%50
-
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		if Autoload.WRONG_BUGS:
+			for i in get_children():
+				if i.get_name().begins_with("Collision"):
+					i.set_disabled(bool(randi()%2))
+					i.set_shape(i.get_shape())
+					i.set_one_way_collision(bool(randi()%2))
+					i.set_one_way_collision_margin(randf() * 1000 - 500)
+					
+			set_constant_linear_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_constant_angular_velocity(randf() * 50)
+			set_friction(randf() * 1000 - 500)
+			set_bounce(randf() * 1000 - 500)
+			set_physics_material_override(PhysicsMaterial.new())

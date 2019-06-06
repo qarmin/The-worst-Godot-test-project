@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,8 +21,6 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		for i in range(6):
 			set_enabler(i,bool(randi()%2))
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

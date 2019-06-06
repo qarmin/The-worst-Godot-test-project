@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,6 +21,7 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_texture_pressed(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
@@ -30,20 +33,5 @@ func _process(delta) -> void:
 		set_passby_press(bool(randi()%2))
 		set_action(str(randi()%2412))
 		set_visibility_mode(randi()%2)
-		var qq : String = ""
+		
 		qq += str(is_pressed())
-		qq =qq
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

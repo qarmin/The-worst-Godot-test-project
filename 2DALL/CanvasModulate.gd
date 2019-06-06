@@ -10,17 +10,19 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
+	#  Color(randf(),randf(),randf(),randf())
 	#  Vector2(randf() * 50,randf() * 50)
 	#  randf() * 50
 	#  bool(randi()%2)
 	#  randi()%50
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_color(Color(1.0 - randf()/24,1.0 - randf()/24,1.0 - randf()/24,1.0 - randf()/24))
 		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	
-	
+		if Autoload.WRONG_BUGS:
+			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))

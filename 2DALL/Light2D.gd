@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -17,6 +19,8 @@ func _process(delta) -> void:
 	#  randi()%50)
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_enabled(bool(randi()%2))
 		set_editor_only(bool(randi()%2))
 		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
@@ -38,6 +42,23 @@ func _process(delta) -> void:
 		set_item_shadow_cull_mask(randi()%6)
 		
 		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	
-	
+		if Autoload.WRONG_BUGS:
+			set_enabled(bool(randi()%2))
+			set_editor_only(bool(randi()%2))
+			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_texture_scale(randf() * 1000 - 500)
+			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_energy(randf() * 1000 - 500)
+			set_mode(randi() % 1000 - 500)
+			set_height(randf() * 1000 - 500)
+			set_z_range_min(randi() % 1000 - 500)
+			set_z_range_max(randi() % 1000 - 500)
+			set_layer_range_min(randi() % 1000 - 500)
+			set_layer_range_max(randi() % 1000 - 500)
+			set_item_cull_mask(randi() % 1000 - 500)
+			set_shadow_enabled(bool(randi()%2))
+			set_shadow_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_shadow_buffer_size(randi() % 1000 - 500)
+			set_shadow_smooth(randi() % 1000 - 500)
+			set_item_shadow_cull_mask(randi() % 1000000 - 500000)

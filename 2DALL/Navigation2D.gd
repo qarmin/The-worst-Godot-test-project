@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,7 +21,8 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		qq += str(get_closest_point(Vector2(randf() * 1500,randf() * 1500)))
 		qq += str(get_closest_point_owner(Vector2(randf() * 1500,randf() * 1500)))
 		var navpol : NavigationPolygon = NavigationPolygon.new()
@@ -35,15 +38,9 @@ func _process(delta) -> void:
 		qq += str(navpol.get_polygon(0))
 		qq += str(navpol.get_polygon_count())
 		qq += str(navpol.get_vertices())
-		qq = qq
 		#navpol.make_polygons_from_outlines()
 		navpol.set_outline(0,PoolVector2Array([Vector2(randf() * 50,randf() * 50),-Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * -50)]))
 		navpol.set_vertices(PoolVector2Array([Vector2(randf() * 50,randf() * 50),-Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * -50)]))
 		
 		#navpoly_remove(navpoly_add(navpol,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50 + 100,randf() * 50 + 100),Vector2(randf() * 50 - 50,randf() * 50 + 500))))
 		navpoly_set_transform(1,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
-		
-		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

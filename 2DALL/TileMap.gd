@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,6 +21,8 @@ func _process(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		clear()
 		fix_invalid_tiles()
 		set_mode(randi()%3)
@@ -36,7 +40,7 @@ func _process(delta) -> void:
 		set_collision_layer(randi()%20)
 		set_collision_mask(randi()%20)
 		set_occluder_light_mask(randi()%20)
-		var qq : String = ""
+		
 		qq += str(get_cell(randi()%4,randi()%4))
 		qq += str(get_cell_autotile_coord(randi()%4,randi()%4))
 		qq += str(get_cellv(Vector2(randf() * 50,randf() * 50)))
@@ -57,10 +61,3 @@ func _process(delta) -> void:
 		#update_bitmask_region(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50))
 		update_dirty_quadrants()
 		qq += str(world_to_map(Vector2(randf() * 50,randf() * 50)))
-		qq = qq
-		
-		
-		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

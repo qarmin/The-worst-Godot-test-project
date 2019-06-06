@@ -10,6 +10,8 @@ func _ready():
 
 func _process_physics(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -19,6 +21,8 @@ func _process_physics(delta) -> void:
 	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		clear_exceptions()
 		set_enabled(bool(randi()%2))
 		set_exclude_parent_body(bool(randi()%2))
@@ -29,7 +33,6 @@ func _process_physics(delta) -> void:
 		#add_exception(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1))
 		#add_exception_rid()
 		#force_raycast_update()
-		var qq : String = ""
 		qq += str(get_collider())
 		qq += str(get_collider_shape())
 		qq += str(get_collision_mask_bit(randi()%20))
@@ -39,7 +42,3 @@ func _process_physics(delta) -> void:
 		#remove_exception(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1))
 		#remove_exception_rid(RID(get_tree().get_root().get_child(get_child_count() - 1).get_child(randi() % get_child_count() - 1)))
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
-		
-		qq = qq
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

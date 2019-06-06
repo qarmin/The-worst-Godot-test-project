@@ -1,5 +1,7 @@
 extends Node
 
+const WRONG_BUGS : bool = true
+
 func _ready() -> void:
 	pass
 func _process(_delta: float) -> void:

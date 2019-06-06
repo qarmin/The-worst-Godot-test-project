@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50)
 	#  randf() * 50
@@ -17,7 +19,8 @@ func _process(delta) -> void:
 	#  randi()%50
 	
 	if counter <= 0:
-		#Maybe bug, set_offset doesn't exists
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_offset(Vector2(randf() * 50,randf() * 50))
 		set_anchor_mode(randi()%2)
 		set_rotating(bool(randi()%2))
@@ -45,15 +48,42 @@ func _process(delta) -> void:
 		set_limit_drawing_enabled(bool(randi()%2))
 		set_margin_drawing_enabled(bool(randi()%2))
 		align()
-		var qq : String = ""
 		qq += str(get_camera_position())
 		qq += str(get_camera_screen_center())
-		qq = qq
 		make_current()
 		clear_current()
 		reset_smoothing()
 		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	
-	
+		if Autoload.WRONG_BUGS:
+			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_anchor_mode(randi() % 1000 - 500)
+			set_rotating(bool(randi()%2))
+			_set_current(bool(randi()%2))
+			set_zoom(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			if get_custom_viewport():
+				set_custom_viewport(Viewport.new())
+			set_process_mode(randi() % 1000 - 500)
+			set("limit_left",randi() % 1000 - 500)
+			set("limit_top",randi() % 1000 - 500)
+			set("limit_right",randi() % 1000 - 500)
+			set("limit_bottom",randi() % 1000 - 500)
+			set_limit_smoothing_enabled(bool(randi()%2))
+			set_h_drag_enabled(bool(randi()%2))
+			set_v_drag_enabled(bool(randi()%2))
+			set_enable_follow_smoothing(bool(randi()%2))
+			set_follow_smoothing(randf() * 1000 - 500)
+			set_v_offset(randf() * 1000 - 500)
+			set_h_offset(randf() * 1000 - 500)
+			set("drag_margin_left",randi() % 1000 - 500)
+			set("drag_margin_top",randi() % 1000 - 500)
+			set("drag_margin_right",randi() % 1000 - 500)
+			set("drag_margin_bottom",randi() % 1000 - 500)
+			set_screen_drawing_enabled(bool(randi()%2))
+			set_limit_drawing_enabled(bool(randi()%2))
+			set_margin_drawing_enabled(bool(randi()%2))
+			align()
+			qq += str(get_camera_position())
+			qq += str(get_camera_screen_center())
+			make_current()
+			clear_current()
+			reset_smoothing()
