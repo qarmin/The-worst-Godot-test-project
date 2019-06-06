@@ -22,6 +22,12 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		
+		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_expand(bool(randi()%2))
+		set_stretch_mode(randi()%8)
+		set_flip_h(bool(randi()%2))
+		set_flip_v(bool(randi()%2))
+		
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

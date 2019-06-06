@@ -21,7 +21,25 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
+		var qq : String = ""
 		
+		set_audio_track(randi()%50)
+		#set_stream(VideoStream.new()) # TODO
+		set_volume_db(randf() * 50)
+		set_volume(randf() * 50)
+		set_autoplay(bool(randi()%2))
+		set_paused(bool(randi()%2))
+		set_expand(bool(randi()%2))
+		set_buffering_msec(randi()%50)
+		set_stream_position(randf() * 50)
+		set_bus(str(randf() * 50))
 		
+		qq += str(get_stream_name())
+		qq += str(get_video_texture())
+		qq += str(is_playing())
+		play()
+		stop()
+		
+		qq = qq
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
