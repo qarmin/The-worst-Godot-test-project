@@ -19,3 +19,5 @@ func _process(delta) -> void:
 		queue_sort()
 		
 		counter = randf() * (TIME_TO_ACTIVATE.y - TIME_TO_ACTIVATE.x) + TIME_TO_ACTIVATE.x
+
+

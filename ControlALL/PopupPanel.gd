@@ -24,4 +24,9 @@ func _process(delta) -> void:
 		
 		
 		
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		show()
+		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+

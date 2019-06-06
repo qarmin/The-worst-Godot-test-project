@@ -28,5 +28,12 @@ func _process(delta) -> void:
 		set_clip_text(bool(randi()%2))
 		set_text_align(randi()%3)
 		
+		emit_signal("button_down")
+		emit_signal("button_up")
+		emit_signal("pressed")
+		emit_signal("toggled",bool(randi() %2))
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+
+func _on_Button_button_down():
+	pass # Replace with function body.

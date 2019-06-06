@@ -1,11 +1,12 @@
-extends TextureButton
+extends ARVROrigin
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+	if !is_visible():
+		queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
@@ -21,18 +22,13 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		
-		set_normal_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_pressed_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_hover_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_disabled_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_focused_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		#set_click_mask(BitMap.new())
-		set_expand(bool(randi()%2))
-		set_stretch_mode(randi()%7)
+		var qq : String = ""
+		set_world_scale(bool(randi()%2))
 		
 		
 		
 		
 		
+		
+		qq=qq
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

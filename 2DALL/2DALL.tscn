@@ -111,6 +111,7 @@ script = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 2 )
+frame = 2
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true

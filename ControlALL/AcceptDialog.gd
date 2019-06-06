@@ -33,6 +33,13 @@ func _process(delta) -> void:
 		#register_text_enter(
 		
 		
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		
+		emit_signal("confirmed")
+		emit_signal("custom_action","af")
+		
+		#show()# Prevent too much button cancel
 		
 		
 		

@@ -38,6 +38,17 @@ func _process(delta) -> void:
 		invalidate()
 		qq = qq
 		
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		
+		emit_signal("dir_selected","res://")
+		emit_signal("file_selected","res://")
+		emit_signal("files_selected","res://")
+		show()
 		
 		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+

@@ -27,3 +27,7 @@ func _process(delta) -> void:
 		qq += str(get_close_button())
 		qq = qq
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		show()

@@ -78,4 +78,13 @@ func _process(delta) -> void:
 		
 		qq = qq
 		
+		emit_signal("about_to_show")
+		emit_signal("popup_hide")
+		
+		emit_signal("id_focused",0)
+		emit_signal("id_pressed",0)
+		emit_signal("index_pressed",0)
+		show()
+		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+
