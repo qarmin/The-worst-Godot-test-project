@@ -68,7 +68,7 @@ func _process(delta) -> void:
 		#qq += str(get_selection_text())
 		#qq += str(get_selection_to_column())
 		#qq += str(get_selection_to_line())
-		qq += str(get_word_under_cursor())
+		#qq += str(get_word_under_cursor())
 		qq += str(has_keyword_color("sfafq"))
 		insert_text_at_cursor(str(randf()))
 		qq += str(is_folded(randi() % get_line_count()))
