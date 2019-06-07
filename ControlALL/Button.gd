@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -22,18 +24,23 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		set_text(str(randi()%50000))
 		set_button_icon(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_flat(bool(randi()%2))
 		set_clip_text(bool(randi()%2))
 		set_text_align(randi()%3)
 		
+		
+		if Autoload.WRONG_BUGS:
+			set_text(str(randi()%50000))
+			set_button_icon(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_flat(bool(randi()%2))
+			set_clip_text(bool(randi()%2))
+			set_text_align(randi() % 1000 - 500)
+		
 		emit_signal("button_down")
 		emit_signal("button_up")
 		emit_signal("pressed")
 		emit_signal("toggled",bool(randi() %2))
 		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
-func _on_Button_button_down():
-	pass # Replace with function body.

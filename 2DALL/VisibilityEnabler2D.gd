@@ -22,5 +22,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		for i in range(6):
 			set_enabler(i,bool(randi()%2))
+			
+			
+		if Autoload.WRONG_BUGS:
+			for i in range(6):
+				set_enabler(i,bool(randi()%2))

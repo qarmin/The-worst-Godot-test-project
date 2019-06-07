@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -21,7 +23,8 @@ func _process(delta) -> void:
 	#  qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_text(str(randi()%50))
 		set_hide_on_ok(bool(randi()%2))
 		qq += str(add_button(str(randi()%50), bool(randi()%2)))
@@ -29,7 +32,6 @@ func _process(delta) -> void:
 		qq += str(get_label())
 		qq += str(get_ok())
 		hide() # Prevent too much button cancel
-		qq = qq
 		#register_text_enter(
 		
 		
@@ -41,6 +43,19 @@ func _process(delta) -> void:
 		
 		#show()# Prevent too much button cancel
 		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if Autoload.WRONG_BUGS:
+			set_text(str(randi() % 1000 - 500))
+			set_hide_on_ok(bool(randi()%2))
+			qq += str(add_button(str(randi() % 1000 - 500), bool(randi()%2)))
+			qq += str(add_cancel(str(randi() % 1000 - 500)))
+			qq += str(get_label())
+			qq += str(get_ok())
+			hide() # Prevent too much button cancel
+			#register_text_enter(
+			
+			
+			emit_signal("about_to_show")
+			emit_signal("popup_hide")
+			
+			emit_signal("confirmed")
+			emit_signal("custom_action","af")

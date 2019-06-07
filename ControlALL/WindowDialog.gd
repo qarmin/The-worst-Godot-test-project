@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 	#  Vector2(randf() * 50,randf() * 50))
 	#  randf() * 50)
@@ -21,13 +23,18 @@ func _process(delta) -> void:
 	#  qq = qq
 	
 	if counter <= 0:
-		set_title(str(randi()%50000))
-		set_resizable(randf() * 50)
-		var qq : String = ""
-		qq += str(get_close_button())
-		qq = qq
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		set_title(str(randi()%50000))
+		set_resizable(bool(randi() % 2))
+		qq += str(get_close_button())
 
+		if Autoload.WRONG_BUGS:
+			set_title(str(randi()%50000))
+			set_resizable(bool(randi() % 2))
+			qq += str(get_close_button())
+			
+			
 		emit_signal("about_to_show")
 		emit_signal("popup_hide")
 		show()

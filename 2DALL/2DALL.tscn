@@ -98,9 +98,7 @@ _data = {
 script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-visible = false
 frames = SubResource( 1 )
-frame = 2
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true
@@ -108,7 +106,6 @@ flip_v = true
 script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -140,7 +137,6 @@ position = Vector2( 34.25, 171.65 )
 texture = ExtResource( 5 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-visible = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="KinematicBody2D"]
@@ -173,7 +169,6 @@ position = Vector2( 33.3, 107.05 )
 texture = ExtResource( 6 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-visible = false
 script = ExtResource( 8 )
 
 [node name="Sprite3" type="Sprite" parent="RigidBody2D"]
@@ -205,7 +200,6 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]
@@ -237,16 +231,13 @@ position = Vector2( 32.35, 301.8 )
 texture = ExtResource( 10 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 stream = SubResource( 10 )
 script = ExtResource( 11 )
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-visible = false
 script = ExtResource( 12 )
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
-visible = false
 script = ExtResource( 13 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
@@ -264,7 +255,6 @@ rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 default_length = 34.0
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-visible = false
 position = Vector2( 664.461, 348.954 )
 emitting = false
 lifetime = 5.9
@@ -272,16 +262,13 @@ one_shot = true
 script = ExtResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 offset = Vector2( 1.32, 0.36 )
 script = ExtResource( 15 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 script = ExtResource( 16 )
 
 [node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
-visible = false
 node_a = NodePath("RigidBody2D")
 node_b = NodePath("RigidBody2D2")
 stiffness = 0.1
@@ -310,7 +297,6 @@ position = Vector2( 169.5, 200.5 )
 texture = ExtResource( 5 )
 
 [node name="GrooveJoint2D" type="GrooveJoint2D" parent="."]
-visible = false
 node_a = NodePath("RigidBody2D4")
 node_b = NodePath("RigidBody2D3")
 script = ExtResource( 18 )
@@ -340,7 +326,6 @@ position = Vector2( 169.5, 200.5 )
 texture = ExtResource( 5 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
-visible = false
 node_a = NodePath("../KinematicBody2D")
 node_b = NodePath("../Area2D")
 bias = 0.9
@@ -348,7 +333,6 @@ softness = 7.2
 script = ExtResource( 19 )
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
 position = Vector2( 268.81, 173.176 )
 scale = Vector2( 7.84, 6.05 )
 texture = ExtResource( 9 )
@@ -356,7 +340,6 @@ energy = 0.11
 script = ExtResource( 20 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
 position = Vector2( 201.113, 134.18 )
 occluder = SubResource( 12 )
 script = ExtResource( 21 )

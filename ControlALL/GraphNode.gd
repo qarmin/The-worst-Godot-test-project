@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,7 +23,8 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_title(str(randi()%50))
 		set_offset(Vector2(randf() * 50,randf() * 50))
 		set_show_close_button(bool(randi()%2))
@@ -48,11 +51,28 @@ func _process(delta) -> void:
 #		is_slot_enabled_right(
 		
 		
-		
-		
-		qq = qq
-		
-		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if Autoload.WRONG_BUGS:
+			set_title(str(randi() % 1000 - 500))
+			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_show_close_button(bool(randi()%2))
+			set_resizable(bool(randi()%2))
+			set_selected(bool(randi()%2))
+			set_comment(bool(randi()%2))
+			set_overlay(randi() % 1000 - 500)
+			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), bool(randi()%2), randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), load("res://Sprite" + str(randi() % 1000 - 500) + ".png"), load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))#Not in position
+			clear_slot(randi() % 1000 - 500)
+			clear_all_slots()
+			qq += str(get_connection_input_color(randi() % 1000 - 500))
+			get_connection_input_count()
+			get_connection_input_position(randi() % 1000 - 500)
+			get_connection_input_type(randi() % 1000 - 500)
+			get_connection_output_color(randi() % 1000 - 500)
+			get_connection_output_count()
+			get_connection_output_position(randi() % 1000 - 500)
+			get_connection_output_type(randi() % 1000 - 500)
+			get_slot_color_left(randi() % 1000 - 500)
+			get_slot_color_right(randi() % 1000 - 500)
+			get_slot_type_left(randi() % 1000 - 500)
+			get_slot_type_right(randi() % 1000 - 500)
+			is_slot_enabled_left(randi() % 1000 - 500)
+			is_slot_enabled_right(randi() % 1000 - 500)

@@ -63,7 +63,7 @@ func _process(delta) -> void:
 			
 		if Autoload.WRONG_BUGS:
 			if randi() % 3 == 0: # Changing amount of partices also reset it 
-				set_amount(randi() % 1000 - 500)
+				set_amount(randi() % 300 - 150)
 			if randi() % 4 == 0:
 				restart()
 			set_lifetime(randf() * 1000 - 500)

@@ -24,3 +24,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_sort_enabled(bool(randi()%2))
+		
+		
+		if Autoload.WRONG_BUGS:
+			set_sort_enabled(bool(randi()%2))

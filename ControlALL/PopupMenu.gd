@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,7 +23,8 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		clear()
 		set_hide_on_item_selection(bool(randi()%2))
 		set_hide_on_checkable_item_selection(bool(randi()%2))
@@ -76,7 +79,70 @@ func _process(delta) -> void:
 		toggle_item_checked(0)
 		toggle_item_multistate(0)
 		
-		qq = qq
+
+		if Autoload.WRONG_BUGS:
+			clear()
+			set_hide_on_item_selection(bool(randi()%2))
+			set_hide_on_checkable_item_selection(bool(randi()%2))
+			set_hide_on_state_item_selection(bool(randi()%2))
+			set_submenu_popup_delay(randf() * 1000 - 500)
+			add_check_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_check_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+			add_icon_check_item(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"), str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_icon_check_shortcut(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"), ShortCut.new(), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_icon_item(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"), str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_icon_shortcut(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"), ShortCut.new(), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_radio_check_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+			add_radio_check_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+			add_separator(str(randi()%50000))
+			add_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+			add_submenu_item(str(randi()%50000),str(randi()%50000))
+			qq += str(get_item_accelerator(randi() % 1000 - 500))
+			qq += str(get_item_count())
+			qq += str(get_item_icon(randi() % 1000 - 500))
+			qq += str(get_item_id(randi() % 1000 - 500))
+			qq += str(get_item_index(randi() % 1000 - 500))
+			qq += str(get_item_metadata(randi() % 1000 - 500))
+			qq += str(get_item_shortcut(randi() % 1000 - 500))
+			qq += str(get_item_submenu(randi() % 1000 - 500))
+			qq += str(get_item_text(randi() % 1000 - 500))
+			qq += str(get_item_tooltip(randi() % 1000 - 500))
+			qq += str(is_hide_on_window_lose_focus())
+			qq += str(is_item_checkable(randi() % 1000 - 500))
+			qq += str(is_item_checked(randi() % 1000 - 500))
+			qq += str(is_item_disabled(randi() % 1000 - 500))
+			qq += str(is_item_radio_checkable(randi() % 1000 - 500))
+			qq += str(is_item_separator(randi() % 1000 - 500))
+			qq += str(is_item_shortcut_disabled(randi() % 1000 - 500))
+			remove_item(randi() % 1000 - 500)
+			set_hide_on_window_lose_focus(bool(randi()%2))
+			set_item_accelerator(randi() % 1000 - 500,randi() % 1000 - 500)
+			set_item_as_checkable(randi() % 1000 - 500,bool(randi()%2))
+			set_item_as_radio_checkable(randi() % 1000 - 500,bool(randi()%2))
+			set_item_as_separator(randi() % 1000 - 500,bool(randi()%2))
+			set_item_checked(randi() % 1000 - 500,bool(randi()%2))
+			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+			set_item_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
+			set_item_metadata(randi() % 1000 - 500,PoolByteArray([12,55,1,5,12,5215,215]))
+			set_item_multistate(randi() % 1000 - 500,randi() % 1000 - 500)
+			set_item_shortcut(randi() % 1000 - 500, ShortCut.new(), bool(randi()%2))
+			set_item_shortcut_disabled(randi() % 1000 - 500,bool(randi()%2))
+			set_item_submenu(randi() % 1000 - 500,str(randi()%50000))
+			set_item_text(randi() % 1000 - 500,str(randi()%50000))
+			set_item_tooltip(randi() % 1000 - 500,str(randi()%50000))
+			toggle_item_checked(randi() % 1000 - 500)
+			toggle_item_multistate(randi() % 1000 - 500)
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		
 		emit_signal("about_to_show")
 		emit_signal("popup_hide")
@@ -86,5 +152,4 @@ func _process(delta) -> void:
 		emit_signal("index_pressed",0)
 		show()
 		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 

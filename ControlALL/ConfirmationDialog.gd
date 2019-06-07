@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,18 +23,23 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
-		qq += str(get_cancel())
-		qq = qq
-		
-		
-		emit_signal("about_to_show")
-		emit_signal("popup_hide")
-		
-		emit_signal("confirmed")
-		emit_signal("custom_action","af")
-		
-		show()
-		
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+		qq += str(get_cancel())
+		
+		if Autoload.WRONG_BUGS:
+			qq += str(get_cancel())
+			
+			
+			
+			
+			
+			
+			
+			
+			emit_signal("about_to_show")
+			emit_signal("popup_hide")
+			
+			emit_signal("confirmed")
+			emit_signal("custom_action","af")
+			
+			show()

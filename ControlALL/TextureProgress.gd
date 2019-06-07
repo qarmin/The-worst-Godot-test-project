@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,6 +23,8 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_under_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_over_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		set_progress_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
@@ -37,4 +41,20 @@ func _process(delta) -> void:
 		set("stretch_margin_right",randi()%50)
 		set("stretch_margin_bottom",randi()%50)
 		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		if Autoload.WRONG_BUGS:
+			set_under_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
+			set_over_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
+			set_progress_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
+			set_fill_mode(randi() % 1000 - 500)
+			set_tint_under(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_tint_over(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_tint_progress(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_radial_initial_angle(randf() * 1000 - 500)
+			set_fill_degrees(randf() * 1000 - 500)
+			set_radial_center_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_nine_patch_stretch(bool(randi()%2))
+			set("stretch_margin_left",randi() % 1000 - 500)
+			set("stretch_margin_top",randi() % 1000 - 500)
+			set("stretch_margin_right",randi() % 1000 - 5000)
+			set("stretch_margin_bottom",randi() % 1000 - 500)

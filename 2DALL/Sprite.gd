@@ -37,3 +37,20 @@ func _process(delta) -> void:
 		set_region_filter_clip(bool(randi()%2))
 		qq += str(get_rect())
 		qq += str(is_pixel_opaque(Vector2(randf() * 15,randf() * 15)))
+		
+		
+		if Autoload.WRONG_BUGS:
+			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_normal_map(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_centered(bool(randi()%2))
+			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_flip_h(bool(randi()%2))
+			set_flip_v(bool(randi()%2))
+			set_vframes(randi() % 1000 - 500)
+			set_hframes(randi() % 1000 - 500)
+			set_frame(randi() % 1000 - 500)
+			set_region(bool(randi()%2))
+			set_region_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			set_region_filter_clip(bool(randi()%2))
+			qq += str(get_rect())
+			qq += str(is_pixel_opaque(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

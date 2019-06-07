@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,7 +23,7 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_text("asfasf\nafq" + str(randf() * 50) + "sgerafsaqw")
 		set_readonly(bool(randi()%2))
@@ -87,9 +89,3 @@ func _process(delta) -> void:
 		undo()
 		#unfold_line(get_line_count())
 		unhide_all_lines()
-		
-		qq = qq
-		
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

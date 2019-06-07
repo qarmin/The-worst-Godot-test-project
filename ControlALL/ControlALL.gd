@@ -10,14 +10,3 @@ func _ready() -> void:
 			i.show()
 			i.C_COUNTER = TIME_TO_ACTIVATE
 	counter = randf() * (TIME_TO_ACTIVATE.y - TIME_TO_ACTIVATE.x) + TIME_TO_ACTIVATE.x
-
-
-func _process(delta) -> void:
-	counter -= delta
-	
-	if counter <= 0:
-		queue_sort()
-		
-		counter = randf() * (TIME_TO_ACTIVATE.y - TIME_TO_ACTIVATE.x) + TIME_TO_ACTIVATE.x
-
-

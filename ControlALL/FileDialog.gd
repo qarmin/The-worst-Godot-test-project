@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,7 +23,8 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_mode_overrides_title(bool(randi()%2))
 		set_mode(randi()%5)
 		set_access(randi()%3)
@@ -36,7 +39,30 @@ func _process(delta) -> void:
 		qq += str(get_line_edit())
 		qq += str(get_vbox())
 		invalidate()
-		qq = qq
+		
+		
+		if Autoload.WRONG_BUGS:
+			set_mode_overrides_title(bool(randi()%2))
+			set_mode(randi() % 1000 - 500)
+			set_access(randi() % 1000 - 500)
+			set_filters(PoolStringArray(["*.pqfqwfng ; PNG Imagesqwfqw","*.gqwfqwfd ; GD Script"]))
+			set_show_hidden_files(bool(randi()%2))
+			set_current_dir("res://" + str(randi() % 1000 - 500))
+			set_current_file("res://" + str(randi() % 1000 - 500))
+			set_current_path("res://" + str(randi() % 1000 - 500))
+			clear_filters()
+			add_filter("*.pnqwfg ; PNG Images")
+			deselect_items()
+			qq += str(get_line_edit())
+			qq += str(get_vbox())
+			invalidate()
+		
+		
+		
+		
+		
+		
+		
 		
 		emit_signal("about_to_show")
 		emit_signal("popup_hide")
@@ -48,7 +74,3 @@ func _process(delta) -> void:
 		emit_signal("file_selected","res://")
 		emit_signal("files_selected","res://")
 		show()
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-

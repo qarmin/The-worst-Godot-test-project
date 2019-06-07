@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,13 +23,17 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_align(randi()%4)
 		set_editable(bool(randi()%2))
 		set_prefix(str(randi()%50))
 		set_suffix(str(randi()%50))
-		var qq : String = ""
 		qq += str(get_line_edit())
-		qq = qq
-		
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+
+		if Autoload.WRONG_BUGS:
+			set_align(randi() % 1000 - 500)
+			set_editable(bool(randi()%2))
+			set_prefix(str(randi() % 1000 - 500))
+			set_suffix(str(randi() % 1000 - 500))
+			qq += str(get_line_edit())

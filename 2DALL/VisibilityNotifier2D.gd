@@ -25,3 +25,8 @@ func _process(delta) -> void:
 		
 		set_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		qq += str(is_on_screen())
+		
+		
+		if Autoload.WRONG_BUGS:
+			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			qq += str(is_on_screen())

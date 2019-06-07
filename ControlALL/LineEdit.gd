@@ -9,6 +9,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq = qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -21,7 +23,7 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_text(str(randf()))
 		set_align(randi()%4)
@@ -48,6 +50,28 @@ func _process(delta) -> void:
 		
 		clear()
 		
-		qq = qq
-		
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if Autoload.WRONG_BUGS:
+			set_text(str(randf()))
+			set_align(randi() % 1000 - 500)
+			set_max_length(randi() % 1000 - 500)
+			set_editable(bool(randi()%2))
+			set_secret(bool(randi()%2))
+			set_secret_character(str(randi()%10))
+			set_expand_to_text_length(bool(randi()%2))
+			set_focus_mode(randi() % 1000 - 500)
+			set_context_menu_enabled(bool(randi()%2))
+			set_clear_button_enabled(bool(randi()%2))
+			set_placeholder(str(randf()))
+			set_placeholder_alpha(randf() * 1000 - 500)
+			cursor_set_blink_enabled(bool(randi()%2))
+			cursor_set_blink_speed(randf() * 1000 - 500)
+			set_cursor_position(randi() % 1000 - 500)
+			
+			append_at_cursor(str(randf()))
+			deselect()
+			qq += str(get_menu())
+			qq += str(menu_option(randi() % 1000 - 500))
+			select(randi() % 1000 - 500,randi() % 1000 - 500)
+			select_all()
+			
+			clear()
