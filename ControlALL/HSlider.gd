@@ -25,5 +25,19 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		## Slider
+		set_editable(bool(randi() % 2))
+		set_scrollable(bool(randi() % 2))
+		set_ticks(randi() % 50)
+		set_ticks_on_borders(bool(randi() % 2))
+		set_focus_mode(randi() % (FOCUS_ALL + 1))
+		
 		if Autoload.WRONG_BUGS:
-			pass
+			
+			
+			## Slider
+			set_editable(bool(randi() % 2))
+			set_scrollable(bool(randi() % 2))
+			set_ticks(randi() % 1000 - 500)
+			set_ticks_on_borders(bool(randi() % 2))
+			set_focus_mode(randi() % 1000 - 500)

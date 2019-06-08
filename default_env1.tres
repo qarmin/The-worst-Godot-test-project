@@ -1,0 +1,79 @@
+[gd_resource type="Environment" load_steps=4 format=2]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 0, 0.156701, 0.237113, 0.346392, 0.418557, 0.472165, 0.484536, 0.525773, 0.552577, 0.593814, 0.676289, 0.808247, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 0.368729, 0.368729, 0.368729, 1, 0.606235, 0.606235, 0.606235, 1, 0.323926, 0.323926, 0.323926, 1, 0.498159, 0.498159, 0.498159, 1, 0.548454, 0.548454, 0.548454, 1, 0.79569, 0.79569, 0.79569, 1, 0.536659, 0.536659, 0.536659, 1, 0.388641, 0.388641, 0.388641, 1, 0.421729, 0.421729, 0.421729, 1, 0.675994, 0.675994, 0.675994, 1, 0.648993, 0.648993, 0.648993, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+
+[sub_resource type="ProceduralSky" id=3]
+
+[resource]
+background_mode = 1
+background_sky = SubResource( 3 )
+background_color = Color( 0.462745, 0.2, 0.2, 1 )
+background_energy = 11.0
+ambient_light_color = Color( 0.584314, 0.133333, 0.133333, 1 )
+ambient_light_energy = 7.4
+ambient_light_sky_contribution = 0.8
+fog_enabled = true
+fog_color = Color( 0.286275, 0.4, 0.509804, 1 )
+fog_sun_color = Color( 0.435294, 0.360784, 0.219608, 1 )
+fog_sun_amount = 0.77
+fog_depth_begin = 112.0
+fog_depth_end = 109.0
+fog_depth_curve = 4.14106
+fog_transmit_enabled = true
+fog_transmit_curve = -2.0
+fog_height_enabled = true
+fog_height_min = 1038.2
+fog_height_max = -755.0
+fog_height_curve = 6.49801
+tonemap_mode = 1
+tonemap_exposure = 3.87
+tonemap_white = 12.8
+auto_exposure_enabled = true
+auto_exposure_scale = 9.19
+auto_exposure_min_luma = 4.35
+auto_exposure_max_luma = 6.2
+auto_exposure_speed = 3.1
+ss_reflections_enabled = true
+ss_reflections_max_steps = 44
+ss_reflections_fade_in = 0.197926
+ss_reflections_fade_out = 0.277392
+ssao_enabled = true
+ssao_radius = 32.7
+ssao_intensity = 73.0
+ssao_radius2 = 87.0
+ssao_intensity2 = 77.0
+ssao_bias = 0.54
+ssao_light_affect = 1.0
+ssao_ao_channel_affect = 1.0
+ssao_quality = 0
+ssao_blur = 2
+ssao_edge_sharpness = 11.5
+dof_blur_far_enabled = true
+dof_blur_far_distance = 15.7
+dof_blur_far_transition = 0.3
+dof_blur_far_amount = 0.0
+dof_blur_far_quality = 0
+dof_blur_near_enabled = true
+dof_blur_near_distance = 5.1
+dof_blur_near_transition = 0.29
+dof_blur_near_amount = 0.0
+dof_blur_near_quality = 0
+glow_enabled = true
+glow_intensity = 0.0
+glow_strength = 0.0
+glow_bloom = 1.0
+glow_blend_mode = 1
+glow_hdr_threshold = 4.0
+glow_hdr_luminance_cap = 7.2
+glow_hdr_scale = 0.0
+glow_bicubic_upscale = true
+adjustment_enabled = true
+adjustment_brightness = 1.71
+adjustment_contrast = 0.01
+adjustment_saturation = 4.4
+adjustment_color_correction = SubResource( 2 )

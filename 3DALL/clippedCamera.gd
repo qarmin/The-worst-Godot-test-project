@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq=qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		Vector3(randf() * 50,randf() * 50,randf() * 50))
@@ -23,7 +25,6 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
 		
 		set_margin(randf() * 50)
 		set_process_mode(randi() % 2)
@@ -39,5 +40,3 @@ func _process(delta) -> void:
 		#remove_exception_rid(RID(DynamicFont.new()))
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
 		
-		qq=qq
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x

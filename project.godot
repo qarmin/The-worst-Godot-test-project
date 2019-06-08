@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ControlALL/ControlALL.tscn"
+run/main_scene="res://3DALL/3DALL.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -76,7 +76,6 @@ limits/message_queue/max_size_kb=4096
 [node]
 
 name_num_separator=1
-name_casing=1
 
 [physics]
 

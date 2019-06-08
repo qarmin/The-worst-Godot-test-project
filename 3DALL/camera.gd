@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq=qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		Vector3(randf() * 50,randf() * 50,randf() * 50))
@@ -23,7 +25,6 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
 		
 		set_keep_aspect_mode(randi()%2)
 		set_cull_mask(randi()%20)
@@ -57,7 +58,4 @@ func _process(delta) -> void:
 		qq += str(unproject_position(Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		
 		
-		
-		
-		qq=qq
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	

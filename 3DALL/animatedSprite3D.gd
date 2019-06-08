@@ -1,4 +1,4 @@
-extends InterpolatedCamera
+extends AnimatedSprite3D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -16,8 +16,14 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_target_path("Roman")
-		set_speed(randf() * 50)
-		set_interpolation_enabled(bool(randi()%2))
-		set_target(get_parent())
+		var SF : SpriteFrames = SpriteFrames.new()
+		for i in range(4):
+			SF.add_frame("default",load("res://Sprite" + str(i + 1) + ".png"),-1)
 		
+		set_sprite_frames(SF)
+		set_animation("default")
+		set_frame(bool(randi()%2))
+		_set_playing(bool(randi()%2))
+		qq += str(is_playing())
+		play("default")
+		stop()

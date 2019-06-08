@@ -36,19 +36,19 @@ func _process(delta) -> void:
 		clear_slot(0)
 		clear_all_slots()
 		#qq += str(get_connection_input_color(0))
-#		get_connection_input_count()
-#		get_connection_input_position(
-#		get_connection_input_type(
-#		get_connection_output_color(
-#		get_connection_output_count()
-#		get_connection_output_position(
-#		get_connection_output_type(
-#		get_slot_color_left(
-#		get_slot_color_right(
-#		get_slot_type_left(
-#		get_slot_type_right(
-#		is_slot_enabled_left(
-#		is_slot_enabled_right(
+#		qq += str(get_connection_input_count()
+#		qq += str(get_connection_input_position(
+#		qq += str(get_connection_input_type(
+#		qq += str(get_connection_output_color(
+#		qq += str(get_connection_output_count()
+#		qq += str(get_connection_output_position(
+#		qq += str(get_connection_output_type(
+#		qq += str(get_slot_color_left(
+#		qq += str(get_slot_color_right(
+#		qq += str(get_slot_type_left(
+#		qq += str(get_slot_type_right(
+#		qq += str(is_slot_enabled_left(
+#		qq += str(is_slot_enabled_right(
 		
 		
 		if Autoload.WRONG_BUGS:
@@ -63,16 +63,16 @@ func _process(delta) -> void:
 			clear_slot(randi() % 1000 - 500)
 			clear_all_slots()
 			qq += str(get_connection_input_color(randi() % 1000 - 500))
-			get_connection_input_count()
-			get_connection_input_position(randi() % 1000 - 500)
-			get_connection_input_type(randi() % 1000 - 500)
-			get_connection_output_color(randi() % 1000 - 500)
-			get_connection_output_count()
-			get_connection_output_position(randi() % 1000 - 500)
-			get_connection_output_type(randi() % 1000 - 500)
-			get_slot_color_left(randi() % 1000 - 500)
-			get_slot_color_right(randi() % 1000 - 500)
-			get_slot_type_left(randi() % 1000 - 500)
-			get_slot_type_right(randi() % 1000 - 500)
-			is_slot_enabled_left(randi() % 1000 - 500)
-			is_slot_enabled_right(randi() % 1000 - 500)
+			qq += str(get_connection_input_count())
+			qq += str(get_connection_input_position(randi() % 1000 - 500))
+			qq += str(get_connection_input_type(randi() % 1000 - 500))
+			qq += str(get_connection_output_color(randi() % 1000 - 500))
+			qq += str(get_connection_output_count())
+			qq += str(get_connection_output_position(randi() % 1000 - 500))
+			qq += str(get_connection_output_type(randi() % 1000 - 500))
+			qq += str(get_slot_color_left(randi() % 1000 - 500))
+			qq += str(get_slot_color_right(randi() % 1000 - 500))
+			qq += str(get_slot_type_left(randi() % 1000 - 500))
+			qq += str(get_slot_type_right(randi() % 1000 - 500))
+			qq += str(is_slot_enabled_left(randi() % 1000 - 500))
+			qq += str(is_slot_enabled_right(randi() % 1000 - 500))

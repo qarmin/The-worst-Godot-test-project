@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/aRVROrigin.gd" type="Script" id=2]
@@ -8,30 +8,60 @@
 [ext_resource path="res://3DALL/camera.gd" type="Script" id=6]
 [ext_resource path="res://3DALL/clippedCamera.gd" type="Script" id=7]
 [ext_resource path="res://3DALL/interpolatedCamera.gd" type="Script" id=8]
+[ext_resource path="res://Sprite4.png" type="Texture" id=9]
+[ext_resource path="res://Sprite2.png" type="Texture" id=10]
+[ext_resource path="res://Sprite3.png" type="Texture" id=11]
+[ext_resource path="res://Sprite1.png" type="Texture" id=12]
+[ext_resource path="res://3DALL/animatedSprite3D.gd" type="Script" id=13]
+[ext_resource path="res://3DALL/sprite3D.gd" type="Script" id=14]
+[ext_resource path="res://3DALL/cPUParticles.gd" type="Script" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="3DALL" type="Spatial"]
 script = ExtResource( 1 )
 
-[node name="aRVROrigin" type="ARVROrigin" parent="."]
+[node name="ARVROrigin" type="ARVROrigin" parent="."]
 script = ExtResource( 2 )
 
-[node name="aRVRCamera" type="ARVRCamera" parent="aRVROrigin"]
+[node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
+transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.8471, 5.29913 )
 script = ExtResource( 4 )
 
-[node name="aRVRAnchor" type="ARVRAnchor" parent="aRVROrigin"]
+[node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
 anchor_id = 1
 script = ExtResource( 5 )
 
-[node name="aRVRController" type="ARVRController" parent="aRVROrigin"]
+[node name="ARVRController" type="ARVRController" parent="ARVROrigin"]
 controller_id = 1
 script = ExtResource( 3 )
 
-[node name="camera" type="Camera" parent="."]
+[node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4, 5.52605 )
 script = ExtResource( 6 )
 
-[node name="clippedCamera" type="ClippedCamera" parent="."]
+[node name="ClippedCamera" type="ClippedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.67803, 7.35442 )
+fov = 103.32
 script = ExtResource( 7 )
 
-[node name="interpolatedCamera" type="InterpolatedCamera" parent="."]
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307571, 6.51298 )
 script = ExtResource( 8 )
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+frames = SubResource( 1 )
+script = ExtResource( 13 )
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+script = ExtResource( 14 )
+
+[node name="CPUParticles_ALL" type="CPUParticles" parent="."]
+angular_velocity = 4.56529e-41
+script = ExtResource( 15 )

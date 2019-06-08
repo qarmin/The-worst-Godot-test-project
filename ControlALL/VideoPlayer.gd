@@ -41,3 +41,22 @@ func _process(delta) -> void:
 		qq += str(is_playing())
 		play()
 		stop()
+		
+		if Autoload.WRONG_BUGS:
+			set_audio_track(randi() % 1000 - 500)
+			set_stream(VideoStream.new()) # TODO
+			set_volume_db(randf() * 1000 - 500)
+			set_volume(randf() * 1000 - 500)
+			set_autoplay(bool(randi()%2))
+			set_paused(bool(randi()%2))
+			set_expand(bool(randi()%2))
+			set_buffering_msec(randi() % 1000 - 500)
+			set_stream_position(randf() * 1000 - 500)
+			set_bus(str(randf() * 1000 - 500))
+			
+			qq += str(get_stream_name())
+			qq += str(get_video_texture())
+			qq += str(is_playing())
+			play()
+			stop()
+		

@@ -64,7 +64,7 @@ grow_vertical = 2
 columns = 16
 script = ExtResource( 7 )
 __meta__ = {
-"_edit_use_anchors_": false
+"_edit_use_anchors_": true
 }
 
 [node name="Popup" type="Popup" parent="."]
@@ -121,7 +121,7 @@ margin_right = 931.0
 margin_bottom = 130.0
 script = ExtResource( 10 )
 
-[node name="Button" type="Button" parent="."]
+[node name="Button_ALL" type="Button" parent="."]
 margin_left = 935.0
 margin_right = 947.0
 margin_bottom = 130.0
@@ -292,7 +292,7 @@ margin_bottom = 596.0
 scroll_offset = Vector2( 0, -24 )
 script = ExtResource( 38 )
 
-[node name="HScrollBar" type="HScrollBar" parent="."]
+[node name="HScrollBar_R_SB" type="HScrollBar" parent="."]
 margin_top = 600.0
 margin_right = 12.0
 margin_bottom = 612.0
@@ -305,7 +305,7 @@ margin_right = 28.0
 margin_bottom = 624.0
 script = ExtResource( 40 )
 
-[node name="HSlider" type="HSlider" parent="."]
+[node name="HSlider_Sl" type="HSlider" parent="."]
 margin_left = 68.0
 margin_top = 600.0
 margin_right = 358.0
@@ -340,7 +340,7 @@ margin_right = 931.0
 margin_bottom = 624.0
 script = ExtResource( 41 )
 
-[node name="HSeparator" type="HSeparator" parent="."]
+[node name="HSeparator_Se" type="HSeparator" parent="."]
 margin_left = 935.0
 margin_top = 600.0
 margin_right = 947.0

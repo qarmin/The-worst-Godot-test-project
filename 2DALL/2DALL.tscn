@@ -97,7 +97,7 @@ _data = {
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 playing = true
 offset = Vector2( 1.88, 5.34 )
@@ -136,35 +136,35 @@ shape = SubResource( 9 )
 position = Vector2( 34.25, 171.65 )
 texture = ExtResource( 5 )
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="."]
+[node name="KinematicBody2D_CO_PB" type="KinematicBody2D" parent="."]
 script = ExtResource( 2 )
 
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 2 )
 
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 4 )
 
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 5 )
 
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 6 )
 
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 7 )
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 position = Vector2( 0, 3 )
 shape = SubResource( 8 )
 
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="KinematicBody2D"]
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 shape = SubResource( 9 )
 
-[node name="Sprite1" type="Sprite" parent="KinematicBody2D"]
+[node name="Sprite1" type="Sprite" parent="KinematicBody2D_CO_PB"]
 position = Vector2( 33.3, 107.05 )
 texture = ExtResource( 6 )
 
@@ -268,31 +268,31 @@ script = ExtResource( 15 )
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 script = ExtResource( 16 )
 
-[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
+[node name="DampedSpringJoint2D_J" type="DampedSpringJoint2D" parent="."]
 node_a = NodePath("RigidBody2D")
 node_b = NodePath("RigidBody2D2")
 stiffness = 0.1
 script = ExtResource( 17 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="DampedSpringJoint2D"]
+[node name="RigidBody2D" type="RigidBody2D" parent="DampedSpringJoint2D_J"]
 mass = 0.559184
 linear_velocity = Vector2( 13.7, 0 )
 applied_force = Vector2( 18.14, -1.17 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D_J/RigidBody2D"]
 shape = SubResource( 11 )
 
-[node name="Sprite3" type="Sprite" parent="DampedSpringJoint2D/RigidBody2D"]
+[node name="Sprite3" type="Sprite" parent="DampedSpringJoint2D_J/RigidBody2D"]
 position = Vector2( 73.5, 224.5 )
 texture = ExtResource( 9 )
 
-[node name="RigidBody2D2" type="RigidBody2D" parent="DampedSpringJoint2D"]
+[node name="RigidBody2D2" type="RigidBody2D" parent="DampedSpringJoint2D_J"]
 gravity_scale = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D/RigidBody2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D_J/RigidBody2D2"]
 shape = SubResource( 11 )
 
-[node name="Sprite2" type="Sprite" parent="DampedSpringJoint2D/RigidBody2D2"]
+[node name="Sprite2" type="Sprite" parent="DampedSpringJoint2D_J/RigidBody2D2"]
 position = Vector2( 169.5, 200.5 )
 texture = ExtResource( 5 )
 

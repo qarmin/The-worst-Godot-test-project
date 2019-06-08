@@ -64,7 +64,7 @@ func _process(delta) -> void:
 			qq += str(get_tab_disabled(randi() % 1000 - 500))
 			qq += str(get_tab_icon(randi() % 1000 - 500))
 			qq += str(get_tab_offset())
-			qq += str(get_tab_rect(randi() % 1000 - 500))
+			#qq += str(get_tab_rect(randi() % 1000 - 500))
 			qq += str(get_tab_title(randi() % 1000 - 500))
 			qq += str(get_tabs_rearrange_group())
 			

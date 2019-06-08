@@ -10,6 +10,8 @@ func _ready():
 
 func _process(delta) -> void:
 	counter -= delta
+	var qq : String = ""
+	qq=qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -22,13 +24,7 @@ func _process(delta) -> void:
 #		qq = qq
 	
 	if counter <= 0:
-		var qq : String = ""
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
 		set_world_scale(bool(randi()%2))
 		
-		
-		
-		
-		
-		
-		qq=qq
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
