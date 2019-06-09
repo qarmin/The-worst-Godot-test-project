@@ -8,6 +8,9 @@ func _ready():
 	if !is_visible():
 		queue_free()
 
+func empty():
+	pass
+
 func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
@@ -232,25 +235,25 @@ func _process(delta) -> void:
 		#set_process(bool(randi()%2))
 		set_process_input(bool(randi()%2))
 		set_process_internal(bool(randi()%2))
-		set_process_priority(randi()%50)
+		#set_process_priority(randi()%50) Bug
 		set_process_unhandled_input(bool(randi()%2))
 		set_process_unhandled_key_input(bool(randi()%2))
 		set_scene_instance_load_placeholder(bool(randi()%2))
 		
 		
 		#Object
-		_get("astaf")
-		_get_property_list()
-		_init()
-		_notification(randi()%50)
-		_set("SAasa",TextEdit.new())
-		_to_string()
+		#_get("astaf")
+		#_get_property_list()
+		#_init()
+		#_notification(randi()%50)
+		#_set("SAasa",TextEdit.new())
+		#_to_string()
 		
 		add_user_signal("asfqfq")
 		
-		call("afqwfasf")
-		call_deferred("fasfqwfa")
-		callv("asfafaf",[12,125])
+		call("empty")
+		call_deferred("empty")
+		callv("empty",[12,125])
 		
 		can_translate_messages()
 		connect("script_changed",self,"get",["asfa"],randi() % 15) # ConnectFlags
