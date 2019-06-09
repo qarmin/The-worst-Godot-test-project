@@ -136,47 +136,54 @@ func _process(delta) -> void:
 		set_filename(str("asfafqwa") + str(randi() % 2541252))
 		set_owner(self)
 		get_multiplayer()
-		set_custom_multiplayer(
-		_exit_tree()
-		_enter_tree()
-		_get_configuration_warning()
-		_input(
+		set_custom_multiplayer(MultiplayerAPI.new())
+		
+		#_exit_tree()
+		#_enter_tree()
+		#_get_configuration_warning()
+		#_input(InputEvent.new())
 		#_physics_process(0.0)
 		#_process(0.0)
 		#_ready()
-		_unhandled_input(
-		_unhandled_key_input(
-		add_child(
-		add_child_below_node(
-		add_to_group(
+		#_unhandled_input(InputEvent.new())
+		#_unhandled_key_input(InputEventKey.new())
+		
+		add_child(TextureButton.new(),bool(randi()%2))
+		add_child_below_node(TextureButton.new(),get_parent(),bool(randi()%2))
+		add_to_group("asfqwtg",bool(randi()%2))
+		
 		can_process()
-		duplicate(
-		find_node(
-		find_parent(
-		get_child(
+		duplicate(randi() % 15) # DuplicateFlags
+		
+		find_node("asfqgwq",bool(randi()%2),bool(randi()%2))
+		find_parent("fqwfqwgf a")
+		
+		get_child(randi() % get_child_count())
 		get_child_count()
 		get_children()
 		get_groups()
 		get_index()
 		get_network_master()
-		get_node(
-		get_node_and_resource(
-		get_node_or_null(
+		get_node(NodePath("awgagfa"))
+		get_node_and_resource(NodePath("awgagfa"))
+		get_node_or_null(NodePath("awgagfa"))
 		get_parent()
 		get_path()
-		get_path_to(
+		get_path_to(self)
 		get_physics_process_delta_time()
 		get_position_in_parent()
 		get_process_delta_time()
 		get_scene_instance_load_placeholder()
 		get_tree()
 		get_viewport()
-		has_node(
-		has_node_and_resource(
-		is_a_parent_of(
+		
+		has_node(NodePath("awgagfa"))
+		has_node_and_resource(NodePath("awgagfa"))
+		
+		is_a_parent_of(self)
 		is_displayed_folded()
-		is_greater_than(
-		is_in_group(
+		is_greater_than(get_parent())
+		is_in_group("asfafqaw")
 		is_inside_tree()
 		is_network_master()
 		is_physics_processing()
@@ -186,86 +193,106 @@ func _process(delta) -> void:
 		is_processing_internal()
 		is_processing_unhandled_input()
 		is_processing_unhandled_key_input()
-		move_child(
+		
+		move_child(get_child(randi() % get_child_count()),randi() % get_child_count())
+		
 		print_stray_nodes()
 		print_tree()
 		print_tree_pretty()
-		propagate_call(
-		propagate_notification(
+		
+		propagate_call("asfafqwtgq",[],bool(randi()%2))
+		propagate_notification(randi() % 1013)
+		
 		#queue_free()
 		raise()
-		remove_and_skip() ## ?
-		remove_child(
-		remove_from_group(
-		replace_by(
-		request_ready()
-		rpc(
-		rpc_config(
-		rpc_id(
-		rpc_unreliable(
-		rpc_unreliable_id(
-		rset(
-		rset_config(
-		rset_id(
-		rset_unreliable(
-		rset_unreliable_id(
-		set_display_folded(
-		set_network_master(
-		set_physics_process(
-		set_physics_process_internal(
-		#set_process(
-		set_process_input(
-		set_process_internal(
-		set_process_priority(
-		set_process_unhandled_input(
-		set_process_unhandled_key_input(
-		set_scene_instance_load_placeholder(
 		
-		_get(
+		remove_and_skip() ## ?
+		remove_child(get_child(randi() % get_child_count()))
+		remove_from_group("asfqwgqwgf")
+		
+		replace_by(get_parent(),bool(randi()%2))
+		request_ready()
+		
+		rpc("asfqwgag")
+		rpc_config("agfqwege",randi() % (MultiplayerAPI.RPC_MODE_PUPPETSYNC + 1))
+		rpc_id(randi()%50,"asfqwqt")
+		rpc_unreliable("asfqwgtq")
+		rpc_unreliable_id(randi()%50,"asfqwfqw")
+		
+		rset("afqwfasf", TextEdit.new())
+		rset_config("agfqwege",randi() % (MultiplayerAPI.RPC_MODE_PUPPETSYNC + 1))
+		rset_id(randi()%50,"faqawfwqa",TextEdit.new())
+		rset_unreliable("asfqwgtq", TextureButton.new())
+		rset_unreliable_id(randi()%50,"asfqwfqw",TextEdit.new())
+		
+		set_display_folded(bool(randi()%2))
+		set_network_master(randi()%50,bool(randi()%2))
+		set_physics_process(bool(randi()%2))
+		set_physics_process_internal(bool(randi()%2))
+		#set_process(bool(randi()%2))
+		set_process_input(bool(randi()%2))
+		set_process_internal(bool(randi()%2))
+		set_process_priority(randi()%50)
+		set_process_unhandled_input(bool(randi()%2))
+		set_process_unhandled_key_input(bool(randi()%2))
+		set_scene_instance_load_placeholder(bool(randi()%2))
+		
+		
+		#Object
+		_get("astaf")
 		_get_property_list()
 		_init()
-		_notification( 
-		_set(
+		_notification(randi()%50)
+		_set("SAasa",TextEdit.new())
 		_to_string()
-		add_user_signal(
-		call(
-		call_deferred(
-		callv(
+		
+		add_user_signal("asfqfq")
+		
+		call("afqwfasf")
+		call_deferred("fasfqwfa")
+		callv("asfafaf",[12,125])
+		
 		can_translate_messages()
-		connect(
-		disconnect(
-		emit_signal(
+		connect("script_changed",self,"get",["asfa"],randi() % 15) # ConnectFlags
+		disconnect("script_changed",self,"get")
+		emit_signal("script_changed")
 		#free()
-		get(
+		
+		get("afasfq")
 		get_class()
 		get_incoming_connections()
-		get_indexed(
+		get_indexed("asfafqw")
 		get_instance_id()
-		get_meta(
+		get_meta("asfqwfag")
 		get_meta_list()
 		get_method_list()
 		get_property_list()
 		get_script()
-		get_signal_connection_list(
+		get_signal_connection_list("script_changed")
 		get_signal_list()
-		has_meta(
-		has_method(
-		has_user_signal(
+		
+		has_meta("asfasfas")
+		has_method("asfasfas")
+		has_user_signal("asfasfas")
+		
 		is_blocking_signals()
-		is_class(
-		is_connected(
+		is_class("asfasfas")
+		is_connected("script_changed",self,"get")
 		is_queued_for_deletion()
-		notification(
+		
+		notification(randi()%1000,bool(randi()%2))
 		property_list_changed_notify()
-		remove_meta(
-		set(
-		set_block_signals(
-		set_deferred(
-		set_indexed(
-		set_message_translation(
-		set_meta(
-		set_script(
+		remove_meta("afqwqwr")
+		
+		set("qfafafdc",TextEdit.new())
+		set_block_signals(bool(randi()%2))
+		set_deferred("asfqwfq",TextEdit.new())
+		set_indexed("asfqwfqw",TextEdit.new())
+		set_message_translation(bool(randi()%2))
+		set_meta("fsafasfwqa", TextEdit.new())
+		set_script(Reference.new())
+		
 		to_string()
-		tr(
+		tr("asfqwfqwt        ")
 		
 		

@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/aRVROrigin.gd" type="Script" id=2]
@@ -23,6 +23,8 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 } ]
+
+[sub_resource type="CubeMesh" id=2]
 
 [node name="3DALL" type="Spatial"]
 script = ExtResource( 1 )
@@ -63,5 +65,6 @@ script = ExtResource( 13 )
 script = ExtResource( 14 )
 
 [node name="CPUParticles_ALL" type="CPUParticles" parent="."]
+mesh = SubResource( 2 )
 angular_velocity = 4.56529e-41
 script = ExtResource( 15 )
