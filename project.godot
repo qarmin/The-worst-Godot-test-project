@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://3DALL/3DALL.tscn"
+run/main_scene="res://2DALL/2DALL.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -98,7 +98,6 @@ name_num_separator=1
 
 threads/thread_model=2
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
 quality/shading/force_vertex_shading=true
 quality/shading/force_lambert_over_burley=true
 quality/shading/force_blinn_over_ggx=true

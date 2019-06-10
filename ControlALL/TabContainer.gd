@@ -25,7 +25,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_popup(PopupMenu.new())
+		var popup_menu_temp : PopupMenu = PopupMenu.new()
+		
+		set_popup(popup_menu_temp)
 		#set_tab_disabled(0,bool(randi()%2))
 		#set_tab_icon(0,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		#set_tab_title(0,str(randi()%50))
@@ -48,7 +50,7 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			set_popup(PopupMenu.new())
+			set_popup(popup_menu_temp)
 			set_tab_disabled(randi() % 1000 - 500,bool(randi()%2))
 			set_tab_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
 			set_tab_title(randi() % 1000 - 500,str(randi() % 1000 - 500))
@@ -68,3 +70,5 @@ func _process(delta) -> void:
 			set_current_tab(randi() % 1000 - 500)
 			set_tabs_visible(bool(randi()%2))
 			set_drag_to_rearrange_enabled(bool(randi()%2))
+			
+		popup_menu_temp.queue_free()

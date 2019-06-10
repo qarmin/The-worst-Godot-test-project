@@ -25,6 +25,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		var popup_temp : Popup = Popup.new()
+		
 		set_select_mode(randi()%2)
 		set_allow_reselect(bool(randi()%2))
 		set_allow_rmb_select(bool(randi()%2))
@@ -67,7 +69,7 @@ func _process(delta) -> void:
 		set_item_icon_modulate(0,Color(randf(),randf(),randf(),randf()))
 		set_item_icon_region(0,Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_item_icon_transposed(0,bool(randi()%2))
-		set_item_metadata(0,Popup.new())
+		set_item_metadata(0,popup_temp)
 		set_item_selectable(0,bool(randi()%2))
 		set_item_text(0,str(bool(randi()%2)))
 		set_item_tooltip(0,str(bool(randi()%2)))
@@ -120,7 +122,7 @@ func _process(delta) -> void:
 			set_item_icon_modulate(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
 			set_item_icon_region(randi() % 1000 - 500,Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
 			set_item_icon_transposed(randi() % 1000 - 500,bool(randi()%2))
-			set_item_metadata(randi() % 1000 - 500,Popup.new())
+			set_item_metadata(randi() % 1000 - 500,popup_temp)
 			set_item_selectable(randi() % 1000 - 500,bool(randi()%2))
 			set_item_text(randi() % 1000 - 500,str(bool(randi()%2)))
 			set_item_tooltip(randi() % 1000 - 500,str(bool(randi()%2)))
@@ -129,3 +131,7 @@ func _process(delta) -> void:
 			unselect(randi() % 1000 - 500)
 			unselect_all()
 			clear()
+			
+			
+			
+		popup_temp.queue_free()

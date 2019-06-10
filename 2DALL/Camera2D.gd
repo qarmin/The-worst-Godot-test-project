@@ -21,6 +21,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		var viewport_temp : Viewport = Viewport.new()
+		
 		set_offset(Vector2(randf() * 50,randf() * 50))
 		set_anchor_mode(randi()%2)
 		set_rotating(bool(randi()%2))
@@ -61,7 +63,7 @@ func _process(delta) -> void:
 			_set_current(bool(randi()%2))
 			set_zoom(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			if get_custom_viewport():
-				set_custom_viewport(Viewport.new())
+				set_custom_viewport(viewport_temp)
 			set_process_mode(randi() % 1000 - 500)
 			set("limit_left",randi() % 1000 - 500)
 			set("limit_top",randi() % 1000 - 500)
@@ -87,3 +89,5 @@ func _process(delta) -> void:
 			make_current()
 			clear_current()
 			reset_smoothing()
+			
+		viewport_temp.queue_free()
