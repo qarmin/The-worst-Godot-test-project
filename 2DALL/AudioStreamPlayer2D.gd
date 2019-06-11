@@ -28,7 +28,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_stream(AudioStream.new())
+		#set_stream(AudioStream.new())
 		set_volume_db(randf() * 50)
 		set_pitch_scale(randf() * 50)
 		_set_playing(bool(randi()%2))

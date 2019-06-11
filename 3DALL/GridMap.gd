@@ -16,7 +16,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_theme(MeshLibrary.new())
+		#set_theme(MeshLibrary.new())
 		set_mesh_library(MeshLibrary.new())
 		set_cell_size(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		set_octant_size(randi()%50)
@@ -30,25 +30,25 @@ func _process(delta) -> void:
 		clear()
 		clear_baked_meshes()
 		
-		get_bake_mesh_instance(randi()%50)
-		get_bake_meshes()
-		get_cell_item(randi()%50,randi()%50,randi()%50)
-		get_cell_item_orientation(randi()%50,randi()%50,randi()%50)
-		get_collision_layer_bit(randi()%20)
-		get_collision_mask_bit(randi()%20)
-		get_meshes()
-		get_used_cells()
+		#qq += str(get_bake_mesh_instance(randi()%50))
+		qq += str(get_bake_meshes())
+		qq += str(get_cell_item(randi()%50,randi()%50,randi()%50))
+		qq += str(get_cell_item_orientation(randi()%50,randi()%50,randi()%50))
+		qq += str(get_collision_layer_bit(randi()%20))
+		qq += str(get_collision_mask_bit(randi()%20))
+		qq += str(get_meshes())
+		qq += str(get_used_cells())
 		
 		make_baked_meshes(bool(randi()%2), randf() * 50)
-		map_to_world(randi()%50,randi()%50,randi()%50)
+		qq += str(map_to_world(randi()%50,randi()%50,randi()%50))
 		resource_changed(CubeMesh.new())
 		
-		set_cell_item(randi()%50,randi()%50,randi()%50,randi()%50,randi()%50)
+		#set_cell_item(randi()%50,randi()%50,randi()%50,randi()%50,randi()%50)
 		for i in range(3):
 			set_clip(bool(randi()%2),bool(randi()%2),randi()%50, i)
 		set_collision_layer_bit(randi()%20,bool(randi()%2))
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
 		
-		world_to_map(Vector3(randf() * 50,randf() * 50,randf() * 50))
+		qq += str(world_to_map(Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		
 		
