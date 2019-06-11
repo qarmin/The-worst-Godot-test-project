@@ -1,0 +1,74 @@
+extends AudioStreamPlayer3D
+
+var counter : float
+var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+
+func _ready():
+	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	if !is_visible():
+		queue_free()
+
+func _process(delta) -> void:
+	counter -= delta
+	var qq : String = ""
+	qq=qq
+	
+	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		#set_stream(AudioStream.new())
+		set_attenuation_model(randi() % 4) # AttenuationModel
+		set_unit_db(randf() * 50)
+		set_unit_size(randf() * 50)
+		set_max_db(randf() * 50)
+		set_pitch_scale(randf() * 50)
+		_set_playing(bool(randi()%2))
+		set_autoplay(bool(randi()%2))
+		set_stream_paused(bool(randi()%2))
+		set_max_distance(randf() * 50)
+		set_out_of_range_mode(randi() % 2) #OutOfRangeMode
+		set_bus(get_bus())
+		set_area_mask(randi()%50)
+		set_emission_angle_enabled(bool(randi()%2))
+		set_emission_angle(randf() * 50)
+		set_emission_angle_filter_attenuation_db(randf() * 50)
+		set_attenuation_filter_cutoff_hz(randf() * 50)
+		set_attenuation_filter_db(randf() * 50)
+		set_doppler_tracking(randi() % 3) # DopplerTracking
+		
+		qq += str(get_playback_position())
+		qq += str(get_stream_playback())
+		play()
+		seek(randf() * 50)
+		stop()
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

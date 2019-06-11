@@ -8,7 +8,7 @@ func _ready():
 	if !is_visible():
 		queue_free()
 
-func _process(delta) -> void:
+func _physics_process(delta):
 	counter -= delta
 	var qq : String = ""
 	qq=qq
@@ -29,8 +29,8 @@ func _process(delta) -> void:
 		qq += str(is_on_floor())
 		
 		qq += str(Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2),bool(randi()%2),bool(randi()%2))
-		qq += str(move_and_slide(Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
-		qq += str(move_and_slide_with_snap(Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
+		#qq += str(move_and_slide(Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
+		#qq += str(move_and_slide_with_snap(Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
 
 		qq += str(test_move( Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)), Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2)))
 		
@@ -63,14 +63,14 @@ func _process(delta) -> void:
 		qq += str(is_shape_owner_disabled(0))
 		#remove_shape_owner(0)
 		
-		qq += str(shape_find_owner(0))
+		#qq += str(shape_find_owner(0))
 		#shape_owner_add_shape(0,Shape2D.new())
 		#shape_owner_clear_shapes(0)
 		qq += str(shape_owner_get_owner(0))
-		qq += str(shape_owner_get_shape(0,0))
+		#qq += str(shape_owner_get_shape(0,0))
 		qq += str(shape_owner_get_shape_count(0))
-		qq += str(shape_owner_get_shape_index(0,0))
+		#qq += str(shape_owner_get_shape_index(0,0))
 		qq += str(shape_owner_get_transform(0))
-		shape_owner_remove_shape(0,0)
+		#shape_owner_remove_shape(0,0)
 		shape_owner_set_disabled(0,bool(randi()%2))
 		shape_owner_set_transform(0, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))

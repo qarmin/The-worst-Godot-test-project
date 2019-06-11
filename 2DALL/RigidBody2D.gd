@@ -29,7 +29,7 @@ func _physics_process(delta) -> void:
 		set_weight(randf() * 50)
 		#Deprecated set_friction(randf())
 		#Deprecated set_bounce(randf())
-		set_physics_material_override(get_physics_material_override())
+		set_physics_material_override(PhysicsMaterial.new())
 		set_gravity_scale(randf() * 50)
 		set_use_custom_integrator(bool(randi()%2))
 		set_continuous_collision_detection_mode(randi()%3)

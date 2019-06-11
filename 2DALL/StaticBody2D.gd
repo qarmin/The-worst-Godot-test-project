@@ -32,7 +32,7 @@ func _physics_process(delta) -> void:
 		set_constant_angular_velocity(randf() * 50)
 		#Deprecated set_friction(randf())
 		#Deprecated set_bounce(randf())
-		set_physics_material_override(get_physics_material_override())
+		set_physics_material_override(PhysicsMaterial.new())
 		
 		if Autoload.WRONG_BUGS:
 			for i in get_children():
