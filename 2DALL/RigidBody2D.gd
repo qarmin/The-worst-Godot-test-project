@@ -27,8 +27,8 @@ func _physics_process(delta) -> void:
 		set_mass(randf() * 50)
 		set_inertia(randf() * 50)
 		set_weight(randf() * 50)
-		set_friction(randf())
-		set_bounce(randf())
+		#Deprecated set_friction(randf())
+		#Deprecated set_bounce(randf())
 		set_physics_material_override(get_physics_material_override())
 		set_gravity_scale(randf() * 50)
 		set_use_custom_integrator(bool(randi()%2))
@@ -56,7 +56,7 @@ func _physics_process(delta) -> void:
 		set_axis_velocity(Vector2(randf() * 50,randf() * 50))
 		if contact_monitor:
 			qq += str(get_colliding_bodies())
-		qq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
+		#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
 		
 		
 		## With Errors
@@ -98,4 +98,4 @@ func _physics_process(delta) -> void:
 			apply_torque_impulse(randf() * 1000 - 500)
 	
 			set_axis_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			qq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

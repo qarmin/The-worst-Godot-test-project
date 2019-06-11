@@ -252,8 +252,8 @@ func _process(delta) -> void:
 		set_process_input(bool(randi()%2))
 		set_process_internal(bool(randi()%2))
 		###set_process_priority(randi()%50)
-		set_process_unhandled_input(bool(randi()%2))
-		set_process_unhandled_key_input(bool(randi()%2))
+		#set_process_unhandled_input(bool(randi()%2))
+		#set_process_unhandled_key_input(bool(randi()%2))
 		set_scene_instance_load_placeholder(bool(randi()%2))
 		
 		

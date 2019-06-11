@@ -99,7 +99,6 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 1
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true
@@ -139,7 +138,6 @@ position = Vector2( 34.25, 171.65 )
 texture = ExtResource( 5 )
 
 [node name="KinematicBody2D_CO_PB" type="KinematicBody2D" parent="."]
-visible = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
@@ -172,7 +170,6 @@ position = Vector2( 33.3, 107.05 )
 texture = ExtResource( 6 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-visible = false
 script = ExtResource( 8 )
 
 [node name="Sprite3" type="Sprite" parent="RigidBody2D"]
@@ -204,7 +201,6 @@ shape = SubResource( 8 )
 shape = SubResource( 9 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="StaticBody2D"]

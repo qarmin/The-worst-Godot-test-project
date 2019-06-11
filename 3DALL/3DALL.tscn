@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=55 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -16,6 +16,31 @@
 [ext_resource path="res://3DALL/Sprite3D.gd" type="Script" id=14]
 [ext_resource path="res://3DALL/CPUParticles.gd" type="Script" id=15]
 [ext_resource path="res://3DALL/AAAAAAAAAAAAA.gd" type="Script" id=16]
+[ext_resource path="res://3DALL/CSGBox_CSGS_CSGP.gd" type="Script" id=17]
+[ext_resource path="res://3DALL/CSGCylinder.gd" type="Script" id=18]
+[ext_resource path="res://3DALL/CSGSphere.gd" type="Script" id=19]
+[ext_resource path="res://3DALL/CSGTorus.gd" type="Script" id=20]
+[ext_resource path="res://3DALL/CSGMesh.gd" type="Script" id=21]
+[ext_resource path="res://3DALL/CSGPolygon.gd" type="Script" id=22]
+[ext_resource path="res://3DALL/CSGCombiner.gd" type="Script" id=23]
+[ext_resource path="res://3DALL/ImmediateGeometry.gd" type="Script" id=24]
+[ext_resource path="res://3DALL/Particles.gd" type="Script" id=25]
+[ext_resource path="res://3DALL/MeshInstance.gd" type="Script" id=26]
+[ext_resource path="res://3DALL/MultiMeshInstance.gd" type="Script" id=27]
+[ext_resource path="res://3DALL/SoftBody.gd" type="Script" id=28]
+[ext_resource path="res://3DALL/BakedLightmap.gd" type="Script" id=29]
+[ext_resource path="res://3DALL/DirectionalLight.gd" type="Script" id=30]
+[ext_resource path="res://3DALL/OmniLight.gd" type="Script" id=31]
+[ext_resource path="res://3DALL/SpotLight.gd" type="Script" id=32]
+[ext_resource path="res://3DALL/GIProbe.gd" type="Script" id=33]
+[ext_resource path="res://3DALL/RootMotionView.gd" type="Script" id=34]
+[ext_resource path="res://3DALL/ReflectionProbe.gd" type="Script" id=35]
+[ext_resource path="res://3DALL/Spatial.gd" type="Script" id=36]
+[ext_resource path="res://3DALL/Area.gd" type="Script" id=37]
+[ext_resource path="res://3DALL/PhysicalBone.gd" type="Script" id=38]
+[ext_resource path="res://3DALL/RigidBody.gd" type="Script" id=39]
+[ext_resource path="res://3DALL/KinematicBody.gd" type="Script" id=40]
+[ext_resource path="res://3DALL/VehicleBody.gd" type="Script" id=41]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -27,6 +52,30 @@ animations = [ {
 
 [sub_resource type="CubeMesh" id=2]
 
+[sub_resource type="SpatialMaterial" id=3]
+
+[sub_resource type="CubeMesh" id=4]
+
+[sub_resource type="SpatialMaterial" id=5]
+
+[sub_resource type="SpatialMaterial" id=6]
+
+[sub_resource type="SpatialMaterial" id=7]
+
+[sub_resource type="SpatialMaterial" id=8]
+
+[sub_resource type="QuadMesh" id=9]
+
+[sub_resource type="CubeMesh" id=10]
+
+[sub_resource type="ParticlesMaterial" id=11]
+angular_velocity = 2.36936e-38
+
+[sub_resource type="CubeMesh" id=12]
+
+[sub_resource type="BoxShape" id=13]
+extents = Vector3( 1, 26.5038, 3.22286 )
+
 [node name="3DALL" type="Spatial"]
 script = ExtResource( 1 )
 
@@ -35,42 +84,167 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
 current = true
 script = ExtResource( 16 )
 
-[node name="ARVROrigin" type="ARVROrigin" parent="."]
+[node name="Spatial" type="Spatial" parent="."]
+script = ExtResource( 36 )
+
+[node name="ARVROrigin" type="ARVROrigin" parent="Spatial"]
 script = ExtResource( 2 )
 
-[node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
+[node name="ARVRCamera" type="ARVRCamera" parent="Spatial/ARVROrigin"]
 transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.8471, 5.29913 )
 script = ExtResource( 4 )
 
-[node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
+[node name="ARVRAnchor" type="ARVRAnchor" parent="Spatial/ARVROrigin"]
 anchor_id = 1
 script = ExtResource( 5 )
 
-[node name="ARVRController" type="ARVRController" parent="ARVROrigin"]
+[node name="ARVRController" type="ARVRController" parent="Spatial/ARVROrigin"]
 controller_id = 1
 script = ExtResource( 3 )
 
-[node name="Camera" type="Camera" parent="."]
+[node name="Camera" type="Camera" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 0, 4, 5.52605 )
 script = ExtResource( 6 )
 
-[node name="ClippedCamera" type="ClippedCamera" parent="."]
+[node name="ClippedCamera" type="ClippedCamera" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.67803, 7.35442 )
 fov = 103.32
 script = ExtResource( 7 )
 
-[node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
+[node name="InterpolatedCamera" type="InterpolatedCamera" parent="Spatial"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307571, 6.51298 )
 script = ExtResource( 8 )
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="Spatial"]
 frames = SubResource( 1 )
 script = ExtResource( 13 )
 
-[node name="Sprite3D_SB" type="Sprite3D" parent="."]
+[node name="Sprite3D_SB" type="Sprite3D" parent="Spatial"]
 script = ExtResource( 14 )
 
-[node name="CPUParticles_ALL" type="CPUParticles" parent="."]
+[node name="CPUParticles_ALL" type="CPUParticles" parent="Spatial"]
 mesh = SubResource( 2 )
 angular_velocity = 4.56529e-41
 script = ExtResource( 15 )
+
+[node name="CSGBox_CSGS_CSGP" type="CSGBox" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+material = SubResource( 3 )
+script = ExtResource( 17 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+script = ExtResource( 18 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+mesh = SubResource( 4 )
+script = ExtResource( 21 )
+
+[node name="CSGPolygon" type="CSGPolygon" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+polygon = PoolVector2Array( -2.92544, 3.2285, -2.25508, 2.48623, -5.52979, 1.01652, -5.59535, 3.52259, -3.08895, 4.10458, -1.5495, 3.31535 )
+material = SubResource( 5 )
+script = ExtResource( 22 )
+
+[node name="CSGSphere" type="CSGSphere" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+material = SubResource( 6 )
+script = ExtResource( 19 )
+
+[node name="CSGTorus" type="CSGTorus" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
+material = SubResource( 7 )
+script = ExtResource( 20 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -23.8362 )
+operation = 1
+script = ExtResource( 23 )
+
+[node name="ImmediateGeometry" type="ImmediateGeometry" parent="Spatial"]
+material_override = SubResource( 8 )
+script = ExtResource( 24 )
+
+[node name="MeshInstance" type="MeshInstance" parent="Spatial"]
+mesh = SubResource( 9 )
+material/0 = null
+script = ExtResource( 26 )
+
+[node name="SoftBody" type="SoftBody" parent="Spatial"]
+transform = Transform( 0.579041, 0.815298, 0, -0.815298, 0.579041, 0, 0, 0, 1, -0.624185, 0.384725, -5.91273 )
+mesh = SubResource( 10 )
+material/0 = null
+parent_collision_ignore = NodePath("..")
+script = ExtResource( 28 )
+
+[node name="MultiMeshInstance" type="MultiMeshInstance" parent="Spatial"]
+script = ExtResource( 27 )
+
+[node name="Particles" type="Particles" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67796, -20.5468 )
+visibility_aabb = AABB( -11.0782, -6.47799, -3.54041, 22.1564, 12.956, 7.08083 )
+process_material = SubResource( 11 )
+draw_pass_1 = SubResource( 12 )
+script = ExtResource( 25 )
+
+[node name="BakedLightmap" type="BakedLightmap" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
+script = ExtResource( 29 )
+
+[node name="DirectionalLight_LI" type="DirectionalLight" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300249, 10.0456, -36.4106 )
+script = ExtResource( 30 )
+
+[node name="OmniLight" type="OmniLight" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72183, -43.0131 )
+script = ExtResource( 31 )
+
+[node name="SpotLight" type="SpotLight" parent="Spatial"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
+script = ExtResource( 32 )
+
+[node name="GIProbe" type="GIProbe" parent="."]
+script = ExtResource( 33 )
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+script = ExtResource( 35 )
+
+[node name="RootMotionView" type="RootMotionView" parent="."]
+script = ExtResource( 34 )
+
+[node name="Area" type="Area" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0577, 0, -49.5921 )
+script = ExtResource( 37 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4649, 3.87396, -64.5134 )
+shape = SubResource( 13 )
+
+[node name="KinematicBody" type="KinematicBody" parent="."]
+script = ExtResource( 40 )
+
+[node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
+shape = SubResource( 13 )
+
+[node name="PhysicalBone" type="PhysicalBone" parent="."]
+script = ExtResource( 38 )
+
+[node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
+shape = SubResource( 13 )
+
+[node name="RigidBody" type="RigidBody" parent="."]
+script = ExtResource( 39 )
+
+[node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
+shape = SubResource( 13 )
+
+[node name="VehicleBody" type="VehicleBody" parent="."]
+script = ExtResource( 41 )
+
+[node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
+shape = SubResource( 13 )

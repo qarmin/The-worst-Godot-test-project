@@ -30,8 +30,8 @@ func _physics_process(delta) -> void:
 
 		set_constant_linear_velocity(Vector2(randf() * 50,randf() * 50))
 		set_constant_angular_velocity(randf() * 50)
-		set_friction(randf())
-		set_bounce(randf())
+		#Deprecated set_friction(randf())
+		#Deprecated set_bounce(randf())
 		set_physics_material_override(get_physics_material_override())
 		
 		if Autoload.WRONG_BUGS:

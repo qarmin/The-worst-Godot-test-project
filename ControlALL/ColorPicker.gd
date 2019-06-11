@@ -34,6 +34,12 @@ func _process(delta) -> void:
 		add_preset(Color(randf(),randf(),randf(),randf()))
 		qq += str(erase_preset(get_presets()[0]))
 		
+		# BoxContainer
+		
+		set_alignment(randi() % 3)
+		
+		add_spacer(bool(randi()%2))
+		
 		if Autoload.WRONG_BUGS:
 			set_pick_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			set_edit_alpha(bool(randi()%2))

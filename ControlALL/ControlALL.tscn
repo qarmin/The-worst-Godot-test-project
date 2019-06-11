@@ -192,7 +192,7 @@ margin_right = 64.0
 margin_bottom = 596.0
 script = ExtResource( 25 )
 
-[node name="ColorPicker" type="ColorPicker" parent="."]
+[node name="ColorPicker_BC" type="ColorPicker" parent="."]
 margin_left = 68.0
 margin_top = 134.0
 margin_right = 358.0
@@ -228,7 +228,7 @@ margin_right = 931.0
 margin_bottom = 596.0
 script = ExtResource( 28 )
 
-[node name="HSplitContainer" type="HSplitContainer" parent="."]
+[node name="HSplitContainer_SC" type="HSplitContainer" parent="."]
 margin_left = 935.0
 margin_top = 134.0
 margin_right = 947.0
@@ -340,7 +340,7 @@ margin_right = 931.0
 margin_bottom = 624.0
 script = ExtResource( 41 )
 
-[node name="HSeparator_Se" type="HSeparator" parent="."]
+[node name="HSeparator_SE" type="HSeparator" parent="."]
 margin_left = 935.0
 margin_top = 600.0
 margin_right = 947.0

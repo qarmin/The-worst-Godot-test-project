@@ -1,16 +1,17 @@
-extends HSplitContainer
+extends Spatial
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+	if !is_visible():
+		queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
-	qq = qq
+	qq=qq
 	
 #		Vector2(randf() * 50,randf() * 50))
 #		randf() * 50)
@@ -25,14 +26,3 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		# SplitContainer
-		
-		set_split_offset(randi()%50)
-		set_collapsed(bool(randi()%2))
-		set_dragger_visibility(randi() % 3)
-		clamp_split_offset()
-		
-		
-		
-		if Autoload.WRONG_BUGS:
-			pass
