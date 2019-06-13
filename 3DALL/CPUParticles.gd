@@ -300,7 +300,10 @@ func _process(delta) -> void:
 		qq += str(is_connected("script_changed",self,"get"))
 		qq += str(is_queued_for_deletion())
 
-		notification(randi()%1000,bool(randi()%2))
+		#Better not
+		for i in range(1000):
+			notification(i,bool(randi()%2))
+		###notification(randi()%1000,bool(randi()%2))
 		property_list_changed_notify()
 		remove_meta("afqwqwr")
 
