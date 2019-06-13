@@ -12,12 +12,7 @@ func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
 	qq = qq
-	
-	#  Vector2(randf() * 50,randf() * 50))
-	#  randf() * 50)
-	#  bool(randi()%2))
-	#  randi()%50)
-	
+		
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		

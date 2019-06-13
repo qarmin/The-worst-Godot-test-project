@@ -42,3 +42,29 @@ func _process(delta) -> void:
 		set_collision_mask_bit(randi() % 20,bool(randi()%2))
 		
 		
+		if Autoload.WRONG_BUGS:
+		
+			set_width(randf() * 1000 - 500)
+			set_height(randf() * 1000 - 500)
+			set_depth(randf() * 1000 - 500)
+			set_material(SpatialMaterial.new())
+			
+			# CSGPrimivive
+			set_invert_faces(bool(randi()%2))
+			
+			# CSGShape
+			set_operation(randi() % 1000000 - 500000) # OPERATION
+			set_snap(randf() * 1000 - 500)
+			set_calculate_tangents(bool(randi()%2))
+			set_use_collision(bool(randi()%2))
+			set_collision_layer(randi() % 1000000 - 500000)
+			set_collision_mask(randi() % 1000000 - 500000)
+			
+			qq += str(get_collision_layer_bit(randi() % 1000000 - 500000))
+			qq += str(get_collision_mask_bit(randi() % 1000000 - 500000))
+			qq += str(get_meshes())
+			
+			qq += str(is_root_shape())
+			
+			set_collision_layer_bit(randi() % 1000000 - 500000,bool(randi()%2))
+			set_collision_mask_bit(randi() % 1000000 - 500000,bool(randi()%2))

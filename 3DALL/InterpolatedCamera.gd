@@ -21,3 +21,9 @@ func _process(delta) -> void:
 		set_interpolation_enabled(bool(randi()%2))
 		set_target(get_parent())
 		
+
+		if Autoload.WRONG_BUGS:
+			set_target_path("Romanagasgfg")
+			set_speed(randf() * 1000 - 500)
+			set_interpolation_enabled(bool(randi()%2))
+			set_target(self)

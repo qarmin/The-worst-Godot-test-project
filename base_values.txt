@@ -1,0 +1,23 @@
+randi() % 1000 - 500
+randi() % 1000000 - 500000
+randf() * 1000 - 500
+Vector2(randf() * 1000 - 500, randf() * 1000 - 500)
+Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)
+Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+
+Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
+Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+Vector2(randf() * 50,randf() * 50))
+Vector3(randf() * 50,randf() * 50,randf() * 50))
+PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50)])
+PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
+randf() * 50)
+bool(randi()%2))
+randi()%50)
+Color(randf(),randf(),randf(),randf()))
+load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+var qq : String = ""
+qq += str(
+qq = qq
+
+get_parent().get_child(randi() % get_parent().get_child_count())

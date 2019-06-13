@@ -39,12 +39,6 @@ func _process(delta) -> void:
 		qq += str(get_item_rect())
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
+		if Autoload.WRONG_BUGS:
+			pass

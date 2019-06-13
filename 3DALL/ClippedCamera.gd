@@ -13,17 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq=qq
 	
-#		Vector2(randf() * 50,randf() * 50))
-#		Vector3(randf() * 50,randf() * 50,randf() * 50))
-#		randf() * 50)
-#		bool(randi()%2))
-#		randi()%50)
-#		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-#		var qq : String = ""
-#		qq += str(
-#		qq = qq
-	
 	if counter <= 0:
 		
 		set_margin(randf() * 50)
@@ -40,3 +29,17 @@ func _process(delta) -> void:
 		#remove_exception_rid(RID(DynamicFont.new()))
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
 		
+		if Autoload.WRONG_BUGS:
+			set_margin(randf() * 1000 - 500)
+			set_process_mode(randi() % 2)
+			set_collision_mask(randi() % 409600)
+			set_clip_to_areas(bool(randi()%2))
+			set_clip_to_bodies(bool(randi()%2))
+			
+			add_exception(get_parent())
+			add_exception_rid(RID())
+			clear_exceptions()
+			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
+			remove_exception(get_parent())
+			remove_exception_rid(RID())
+			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))

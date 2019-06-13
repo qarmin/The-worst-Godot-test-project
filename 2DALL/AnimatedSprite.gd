@@ -14,13 +14,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	#  Vector2(randf() * 50,randf() * 50))
-	#  randf() * 50)
-	#  bool(randi()%2))
-	#  randi()%50)
-	#  Color(randf(),randf(),randf(),randf()))
-	#  load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-	
 	position.x += (int(right) * 2 - 1) * delta * 100
 	if position.x > 1280:
 		right = false

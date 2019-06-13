@@ -19,5 +19,6 @@ func _process(delta) -> void:
 		#set_mesh(ArrayMesh.new())
 		set_material(SpatialMaterial.new())
 		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set_mesh(ArrayMesh.new())
+			set_material(SpatialMaterial.new())

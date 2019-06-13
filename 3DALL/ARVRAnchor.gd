@@ -13,16 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq=qq
 	
-#		Vector2(randf() * 50,randf() * 50))
-#		randf() * 50)
-#		bool(randi()%2))
-#		randi()%50)
-#		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-#		var qq : String = ""
-#		qq += str(
-#		qq = qq
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -32,3 +22,11 @@ func _process(delta) -> void:
 		qq += str(get_mesh())
 		qq += str(get_plane())
 		qq += str(get_size())
+		
+		if Autoload.WRONG_BUGS:
+			set_anchor_id(randi() % 1000 - 500)
+			qq += str(get_anchor_name())
+			qq += str(get_is_active())
+			qq += str(get_mesh())
+			qq += str(get_plane())
+			qq += str(get_size())
