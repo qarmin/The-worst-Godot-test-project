@@ -19,9 +19,9 @@ func _process(delta) -> void:
 		set_one_shot(bool(randi()%2))
 		set_autostart(bool(randi()%2))
 		set_paused(bool(randi()%2))
-		get_time_left()
+		qq += str(get_time_left())
 		
-		is_stopped()
+		qq += str(is_stopped())
 		start(randf() * 50)
 		stop()
 		

@@ -10,10 +10,10 @@ func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
 	qq=qq
-	
+
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+
 		set_use_arvr(bool(randi()%2))
 		set_size(Vector2(randf() * 50,randf() * 50))
 		set_use_own_world(bool(randi()%2))
@@ -39,46 +39,47 @@ func _process(delta) -> void:
 		set_shadow_atlas_size(randi()%50)
 		for i in range(4):
 			set_shadow_atlas_quadrant_subdiv(i,randi()% SHADOW_ATLAS_QUADRANT_SUBDIV_MAX)
-		
+
 		set_canvas_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_global_canvas_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
-		
-		find_world()
-		find_world_2d()
-		
-		get_camera()
-		get_final_transform()
-		get_modal_stack_top()
-		get_mouse_position()
-		get_render_info(randi() % RENDER_INFO_MAX)
-		get_size_override()
-		get_texture()
-		get_viewport_rid()
-		get_visible_rect()
-		
+
+		qq += str(find_world())
+		qq += str(find_world_2d())
+
+		qq += str(get_camera())
+		qq += str(get_final_transform())
+		qq += str(get_modal_stack_top())
+		#qq += str(get_mouse_position())
+		qq += str(get_render_info(randi() % RENDER_INFO_MAX))
+		qq += str(get_size_override())
+		qq += str(get_texture())
+		qq += str(get_viewport_rid())
+		qq += str(get_visible_rect())
+
 		gui_get_drag_data()
-		gui_has_modal_stack()
-		gui_is_dragging()
-		
+		qq += str(gui_has_modal_stack())
+		qq += str(gui_is_dragging())
+
 		#input(InputEvent.new())
-		
-		is_input_handled()
-		is_size_override_enabled()
-		is_size_override_stretch_enabled()
-		
-		set_attach_to_screen_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+
+		qq += str(is_input_handled())
+		qq += str(is_size_override_enabled())
+		qq += str(is_size_override_stretch_enabled())
+
+		#set_attach_to_screen_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_input_as_handled()
-		set_size_override(bool(randi()%2),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50))
+		#set_size_override(bool(randi()%2),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50))
 		set_size_override_stretch(bool(randi()%2))
-		
-		unhandled_input(InputEvent.new())
+
+		#unhandled_input(InputEvent.new())
 		update_worlds()
-		warp_mouse(Vector2(randf() * 50,randf() * 50))
-		
-		
-		
-		
-		
-		
-		
-		
+		# This move mouse and is irritating
+		#warp_mouse(Vector2(randf() * 50,randf() * 50))
+
+
+
+
+
+
+
+

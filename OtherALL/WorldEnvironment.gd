@@ -14,4 +14,4 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_environment(load("default_env" + str(randi() % 2)+".tres"))
+		#set_environment(load("default_env" + str(randi() % 2)+".tres"))

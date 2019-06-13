@@ -15,13 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_tree_root(AnimationNode.new())
-		set_animation_player(".")
+		set_animation_player("../AnimationPlayer")
 		set_active(bool(randi()%2))
 		set_process_mode(randi() % 3) #AnimationProcessMode
 		set_root_motion_track(".")
 		
-		advance(randf() * 50)
-		get_root_motion_transform()
+		#advance(randf() * 50)
+		qq += str(get_root_motion_transform())
 		rename_parameter(".",".")
 		
 		

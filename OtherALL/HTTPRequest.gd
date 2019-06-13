@@ -21,13 +21,13 @@ func _process(delta) -> void:
 		set_body_size_limit(randi()%50)
 		set_max_redirects(randi()%50)
 		
-		cancel_request()
+		#BUG cancel_request()
 		
-		get_body_size()
-		get_downloaded_bytes()
-		get_http_client_status()
+		qq += str(get_body_size())
+		qq += str(get_downloaded_bytes())
+		qq += str(get_http_client_status())
 		
-		request("http://rfasfqw.sfasfasfasfa.asps/asfasfasa/fs", PoolStringArray(["asfasfqwfanfauisf","asfasfiasbfaus","asfqwfasf"]),bool(randi()%2), randi() % HTTPClient.METHOD_MAX, "asfwfafsafs")
+		#qq += str(request("http://rfasfqw.sfasfasfasfa.asps/asfasfasa/fs", PoolStringArray(["asfasfqwfanfauisf","asfasfiasbfaus","asfqwfasf"]),bool(randi()%2), randi() % HTTPClient.METHOD_MAX, "asfwfafsafs"))
 		
 		
 		

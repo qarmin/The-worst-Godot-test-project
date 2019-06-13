@@ -25,8 +25,8 @@ func _process(delta) -> void:
 		set_min_distance(randf() * 50)
 		set_max_iterations(randi()%50)
 		
-		get_parent_skeleton()
-		is_running()
+		qq += str(get_parent_skeleton())
+		qq += str(is_running())
 		start(bool(randi()%2))
 		stop()
 		

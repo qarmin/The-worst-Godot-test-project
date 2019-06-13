@@ -41,13 +41,13 @@ func _process(delta) -> void:
 		qq += str(resume_all())
 		set_active(bool(randi()%2))
 		qq += str(start())
-		stop(get_parent(), "asfasfasf")
-		stop_all()
+		qq += str(stop(get_parent(), "asfasfasf"))
+		qq += str(stop_all())
 #		TODO BECAUSE I'M LAZY
 #		targeting_method(
 #		targeting_property(
 		
-		tell()
+		qq += str(tell())
 		
 		
 		
