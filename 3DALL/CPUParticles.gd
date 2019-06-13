@@ -422,132 +422,134 @@ func _process(delta) -> void:
 			set_ignore_transform_notification(bool(randi()%2))
 			set_notify_local_transform(bool(randi()%2))
 			set_notify_transform(bool(randi()%2))
-#
-#			show()
-#
-#			qq += str(to_global(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-#			qq += str(to_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-#
-#			translate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			translate_object_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#
-#			update_gizmo()
-#
-#			#Node
-#			set_pause_mode(randi() % (PAUSE_MODE_PROCESS + 1))
-#			set_name(str("asfafqwa") + str(randi() % 2541252))
-#			set_filename(str("asfafqwa") + str(randi() % 2541252))
-#			set_owner(get_parent())
-#			qq += str(get_multiplayer())
-#			set_custom_multiplayer(MultiplayerAPI.new())
-#
-#			###_exit_tree()
-#			###_enter_tree()
-#			###qq += str(_get_configuration_warning())
-#			###_input(InputEvent.new())
-#			###_physics_process(0.0)
-#			###_process(0.0)
-#			###_ready()
-#			###_unhandled_input(InputEvent.new())
-#			###_unhandled_key_input(InputEventKey.new())
-#			for _i in range(10):
-#				if get_child_count() > 3:
-#					break 
-#				add_child(TextureButton.new(),bool(randi()%2))
-#			add_child_below_node(get_child(randi() % 1000 - 500),get_child(randi() % 1000 - 500),bool(randi()%2))
-#			add_to_group("asfqwtg",bool(randi()%2))
-#
-#			qq += str(can_process())
-#			qq += str(duplicate(randi() % 1000 - 500)) # DuplicateFlags
-#
-#			qq += str(find_node("asfqgwq",bool(randi()%2),bool(randi()%2)))
-#			qq += str(find_parent("fqwfqwgf a"))
-#
-#			qq += str(get_child(randi() % 1000 - 500))
-#			qq += str(get_child_count())
-#			qq += str(get_children())
-#			qq += str(get_groups())
-#			qq += str(get_index())
-#			qq += str(get_network_master())
-#			qq += str(get_node(NodePath("./CPUParticasfasfales_ALL")))
-#			qq += str(get_node_and_resource(NodePath("./CPUPartasfasfasficles_ALL")))
-#			qq += str(get_node_or_null(NodePath("./CPUPaasfasfacles_ALL")))
-#			qq += str(get_parent())
-#			qq += str(get_path())
-#			qq += str(get_path_to(get_parent()))
-#			qq += str(get_physics_process_delta_time())
-#			qq += str(get_position_in_parent())
-#			qq += str(get_process_delta_time())
-#			qq += str(get_scene_instance_load_placeholder())
-#			qq += str(get_tree())
-#			qq += str(get_viewport())
-#
-#			qq += str(has_node(NodePath("awgasfafaagfa")))
-#			qq += str(has_node_and_resource(NodePath("awgfasfasfagfa")))
-#
-#			qq += str(is_a_parent_of(self))
-#			qq += str(is_displayed_folded())
-#			qq += str(is_greater_than(get_parent()))
-#			qq += str(is_in_group("asfafqaw"))
-#			qq += str(is_inside_tree())
-#			qq += str(is_network_master())
-#			qq += str(is_physics_processing())
-#			qq += str(is_physics_processing_internal())
-#			qq += str(is_processing())
-#			qq += str(is_processing_input())
-#			qq += str(is_processing_internal())
-#			qq += str(is_processing_unhandled_input())
-#			qq += str(is_processing_unhandled_key_input())
+
+			show()
+
+			qq += str(to_global(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			qq += str(to_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+
+			translate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			translate_object_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+
+			update_gizmo()
+
+			#Node
+			set_pause_mode(randi() % (PAUSE_MODE_PROCESS + 1))
+			set_name(str("asfafqwa") + str(randi() % 2541252))
+			set_filename(str("asfafqwa") + str(randi() % 2541252))
+			set_owner(get_parent())
+			qq += str(get_multiplayer())
+			set_custom_multiplayer(MultiplayerAPI.new())
+
+			###_exit_tree()
+			###_enter_tree()
+			###qq += str(_get_configuration_warning())
+			###_input(InputEvent.new())
+			###_physics_process(0.0)
+			###_process(0.0)
+			###_ready()
+			###_unhandled_input(InputEvent.new())
+			###_unhandled_key_input(InputEventKey.new())
+			for _i in range(10):
+				if get_child_count() > 3:
+					break 
+				add_child(TextureButton.new(),bool(randi()%2))
+			add_child_below_node(get_child(randi() % 1000 - 500),get_child(randi() % 1000 - 500),bool(randi()%2))
+			add_to_group("asfqwtg",bool(randi()%2))
+
+			qq += str(can_process())
+			var nooo : Node = duplicate(randi() % 1000 - 500) # DuplicateFlags
+			if nooo != null:
+				nooo.queue_free()
+
+			qq += str(find_node("asfqgwq",bool(randi()%2),bool(randi()%2)))
+			qq += str(find_parent("fqwfqwgf a"))
+
+			qq += str(get_child(randi() % 1000 - 500))
+			qq += str(get_child_count())
+			qq += str(get_children())
+			qq += str(get_groups())
+			qq += str(get_index())
+			qq += str(get_network_master())
+			qq += str(get_node(NodePath("./CPUParticasfasfales_ALL")))
+			qq += str(get_node_and_resource(NodePath("./CPUPartasfasfasficles_ALL")))
+			qq += str(get_node_or_null(NodePath("./CPUPaasfasfacles_ALL")))
+			qq += str(get_parent())
+			qq += str(get_path())
+			qq += str(get_path_to(get_parent()))
+			qq += str(get_physics_process_delta_time())
+			qq += str(get_position_in_parent())
+			qq += str(get_process_delta_time())
+			qq += str(get_scene_instance_load_placeholder())
+			qq += str(get_tree())
+			qq += str(get_viewport())
+
+			qq += str(has_node(NodePath("awgasfafaagfa")))
+			qq += str(has_node_and_resource(NodePath("awgfasfasfagfa")))
+
+			qq += str(is_a_parent_of(self))
+			qq += str(is_displayed_folded())
+			qq += str(is_greater_than(get_parent()))
+			qq += str(is_in_group("asfafqaw"))
+			qq += str(is_inside_tree())
+			qq += str(is_network_master())
+			qq += str(is_physics_processing())
+			qq += str(is_physics_processing_internal())
+			qq += str(is_processing())
+			qq += str(is_processing_input())
+			qq += str(is_processing_internal())
+			qq += str(is_processing_unhandled_input())
+			qq += str(is_processing_unhandled_key_input())
 #
 #			move_child(get_child(randi() % 1000 - 500),randi() % 1000 - 500)
-#
-#			#This only spam output
-#			###print_stray_nodes()
-#			###print_tree()
-#			###print_tree_pretty()
-#
-#			propagate_call("asfafqwtgq",["asfqwag"],bool(randi()%2))
-#			propagate_notification(randi() % 1000 - 500)
-#
-#			###queue_free()
-#			raise()
-#
-#			###remove_and_skip() ## ?
-#			var cn = randi() % 1000 - 500
-#			child_number = get_child(cn)
-#			if cn >= 0 && cn < get_child_count():
-#				remove_child(child_number)
-#				child_number.queue_free()
-#			remove_from_group("asfqwtg")
-#
-#			replace_by(get_child(randi() % 1000 - 500),bool(randi()%2))
-#			request_ready()
-#
-#			qq += str(rpc("asfqwgag"))
-#			rpc_config("agfqwege",randi() % 1000 - 500)
-#			qq += str(rpc_id(randi() % 1000 - 500,"asfqwqt"))
-#			qq += str(rpc_unreliable("asfqwgtq"))
-#			qq += str(rpc_unreliable_id(randi() % 1000 - 500,"asfqwfqw"))
-#
-#			rset("afqwfasf", TextEdit.new())
-#			rset_config("agfqwege",randi() % 1000 - 500)
-#			rset_id(randi() % 1000 - 500, "faqawfwqa",TextEdit.new())
-#			rset_unreliable("asfqwgtq", TextureButton.new())
-#			rset_unreliable_id(randi() % 1000 - 500,"asfqwfqw",TextEdit.new())
-#
-#			set_display_folded(bool(randi()%2))
-#			set_network_master(randi() % 1000 - 500,bool(randi()%2))
-#			set_physics_process(bool(randi()%2))
-#			set_physics_process_internal(bool(randi()%2))
-#			###set_process(bool(randi()%2))
-#			set_process_input(bool(randi()%2))
-#			set_process_internal(bool(randi()%2))
-#			###set_process_priority(randi() % 1000 - 500)
-#			set_process_unhandled_input(bool(randi()%2))
-#			set_process_unhandled_key_input(bool(randi()%2))
-#			set_scene_instance_load_placeholder(bool(randi()%2))
-#
-#
+
+			#This only spam output
+			###print_stray_nodes()
+			###print_tree()
+			###print_tree_pretty()
+
+			propagate_call("asfafqwtgq",["asfqwag"],bool(randi()%2))
+			propagate_notification(randi() % 1000 - 500)
+
+			###queue_free()
+			raise()
+
+			###remove_and_skip() ## ?
+			var cn = randi() % 1000 - 500
+			child_number = get_child(cn)
+			if cn >= 0 && cn < get_child_count():
+				remove_child(child_number)
+				child_number.queue_free()
+			remove_from_group("asfqwtg")
+
+			replace_by(get_child(randi() % 1000 - 500),bool(randi()%2))
+			request_ready()
+
+			qq += str(rpc("asfqwgag"))
+			rpc_config("agfqwege",randi() % 1000 - 500)
+			qq += str(rpc_id(randi() % 1000 - 500,"asfqwqt"))
+			qq += str(rpc_unreliable("asfqwgtq"))
+			qq += str(rpc_unreliable_id(randi() % 1000 - 500,"asfqwfqw"))
+
+			rset("afqwfasf", CubeMesh.new())
+			rset_config("agfqwege",randi() % 1000 - 500)
+			rset_id(randi() % 1000 - 500, "faqawfwqa",CubeMesh.new())
+			rset_unreliable("asfqwgtq", CubeMesh.new())
+			rset_unreliable_id(randi() % 1000 - 500,"asfqwfqw",CubeMesh.new())
+
+			set_display_folded(bool(randi()%2))
+			set_network_master(randi() % 1000 - 500,bool(randi()%2))
+			set_physics_process(bool(randi()%2))
+			set_physics_process_internal(bool(randi()%2))
+			###set_process(bool(randi()%2))
+			set_process_input(bool(randi()%2))
+			set_process_internal(bool(randi()%2))
+			###set_process_priority(randi() % 1000 - 500)
+			set_process_unhandled_input(bool(randi()%2))
+			set_process_unhandled_key_input(bool(randi()%2))
+			set_scene_instance_load_placeholder(bool(randi()%2))
+
+
 			#Object
 			###qq += str(_get("astaf"))
 			###qq += str(_get_property_list())
@@ -557,17 +559,17 @@ func _process(delta) -> void:
 			###qq += str(_to_string())
 			
 			add_user_signal("asfqasffq" + str(counter_temp))
-	
+
 			qq += str(call("empty"))
 			qq += str(call_deferred("empty"))
 			qq += str(callv("empty2",[randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500]))
-	
+
 			qq += str(can_translate_messages())
 			qq += str(connect("script_changed",self,"get",["emfafpty"],randi() % 1000 - 500)) # ConnectFlags
 			disconnect("script_c1251hanged",self,"get")
 			qq += str(emit_signal("script_ch125anged"))
 			###free()
-	
+
 			qq += str(get("afasfq"))
 			qq += str(get_class())
 			qq += str(get_incoming_connections())
@@ -581,17 +583,18 @@ func _process(delta) -> void:
 			qq += str(get_script())
 			qq += str(get_signal_connection_list("script_changed"))
 			qq += str(get_signal_list())
-	
+
 			qq += str(has_meta("asfasfas"))
 			qq += str(has_method("asfasfas"))
 			qq += str(has_user_signal("asfasfas"))
-	
+
 			qq += str(is_blocking_signals())
 			qq += str(is_class("asfasfas"))
 			qq += str(is_connected("script_changed",self,"get"))
 			qq += str(is_queued_for_deletion())
-	
-			notification(randi()%1000,bool(randi()%2))
+
+			#Better do not touch this
+			###notification(randi()%1000,bool(randi()%2))
 			property_list_changed_notify()
 			remove_meta("afqwqwasfaar")
 	

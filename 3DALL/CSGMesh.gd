@@ -16,9 +16,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		#set_mesh(ArrayMesh.new())
+		#set_mesh(CubeMesh.new())
 		set_material(SpatialMaterial.new())
 		
 		if Autoload.WRONG_BUGS:
-			set_mesh(ArrayMesh.new())
+			set_mesh(CubeMesh.new())
 			set_material(SpatialMaterial.new())
