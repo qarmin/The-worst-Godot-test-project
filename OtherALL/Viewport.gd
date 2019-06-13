@@ -60,7 +60,7 @@ func _process(delta) -> void:
 		gui_has_modal_stack()
 		gui_is_dragging()
 		
-		input(InputEvent.new())
+		#input(InputEvent.new())
 		
 		is_input_handled()
 		is_size_override_enabled()
