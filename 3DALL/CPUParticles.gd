@@ -317,111 +317,111 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-#			set_emitting(bool(randi()%2))
-#			set_amount(randi() % 50 - 500)
-#			set_lifetime(randf() * 1000 - 500)
-#			set_one_shot(bool(randi()%2))
-#			set_pre_process_time(randf() * 1000 - 500)
-#			set_speed_scale(randf() * 1000 - 500)
-#			set_explosiveness_ratio(randf())
-#			set_randomness_ratio(randf())
-#			set_fixed_fps(randi() % 1000 - 500)
-#			set_fractional_delta(bool(randi()%2))
-#			set_use_local_coordinates(bool(randi()%2))
-#			set_draw_order(randi() % 1000 - 500)
-#			set_mesh(Mesh.new())
-#			set_emission_shape(randi() % 1000 - 500)
-#			set_emission_sphere_radius(randf() * 1000 - 500)
-#			set_emission_box_extents(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			set_emission_points(PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
-#			set_emission_normals(PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
-#			set_emission_colors([Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)])
-#
-#			for i in range(FLAG_MAX):
-#				set_particle_flag(i,bool(randi()%2))
-#			set_spread(randf() * 1000 - 500)
-#			set_flatness(randf() * 1000 - 500)
-#			set_gravity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#
-#			for i in range(PARAM_MAX):
-#				set_param(i,randf() * 1000 - 500)
-#				set_param_curve(i,load("res://Curve" + str(randi()%3+1) + ".tres"))
-#				set_param_randomness(i,randf() * 1000 - 500)
-#
-#			particles = Particles.new()
-#			convert_from_particles(particles)
-#			particles.queue_free()
-#			if randi() % 5 == 0:
-#				restart()
-#
-#			##GeometryInstance
-#			set_material_override(SpatialMaterial.new())
-#			set_cast_shadows_setting(randi() % (SHADOW_CASTING_SETTING_SHADOWS_ONLY + 1))
-#			set_extra_cull_margin(randf() * 1000 - 500)
-#			for i in range(FLAG_MAX):
-#				set_flag(i,bool(randi()%2))
-#			set_lod_min_distance(randf() * 1000 - 500)
-#			set_lod_min_hysteresis(randf() * 1000 - 500)
-#			set_lod_max_distance(randf() * 1000 - 500)
-#			set_lod_max_hysteresis(randf() * 1000 - 500)
-#			set_custom_aabb(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-#
-#			##VisualInstance
-#			set_layer_mask(randi() % 1000000)
-#			qq += str(get_aabb())
-#			qq += str(get_base())
-#			qq += str(get_instance())
-#			qq += str(get_layer_mask_bit(randi() % 1000 - 500))
-#			qq += str(get_transformed_aabb())
-#			set_base(RID())
-#			set_layer_mask_bit(randi() % 1000 - 500,bool(randi()%2))
-#
-#			##Spatial
-#			set_global_transform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-#			set_translation(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			set_rotation_degrees(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			set_rotation(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			set_scale(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			set_transform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-#			set_visible(bool(randi()%2))
-#			set_gizmo(SpatialGizmo.new())
-#
-#			force_update_transform()
-#
-#			qq += str(get_parent_spatial())
-#			qq += str(get_world())
-#
-#			global_rotate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500)
-#			global_scale(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			global_translate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#
-#			hide()
-#
-#			qq += str(is_local_transform_notification_enabled())
-#			qq += str(is_scale_disabled())
-#			qq += str(is_set_as_toplevel())
-#			qq += str(is_transform_notification_enabled())
-#			qq += str(is_visible_in_tree())
-#
-#			look_at(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215))
-#			look_at_from_position(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215))
-#
-#			orthonormalize()
-#
-#			rotate(Vector3(randf() * 1000 - 500 + 150,randf() * 1000 - 500 + 100,randf() * 1000 - 500 + 15),randf() * 1000 - 500 + 10)
-#			rotate_object_local(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),randf() * 1000 - 500)
-#			rotate_x(randf() * 1000 - 500)
-#			rotate_y(randf() * 1000 - 500)
-#			rotate_z(randf() * 1000 - 500)
-#
-#			scale_object_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#
-#			set_as_toplevel(bool(randi()%2))
-#			set_disable_scale(bool(randi()%2))
-#			set_identity()
-#			set_ignore_transform_notification(bool(randi()%2))
-#			set_notify_local_transform(bool(randi()%2))
-#			set_notify_transform(bool(randi()%2))
+			set_emitting(bool(randi()%2))
+			set_amount(randi() % 50 - 500)
+			set_lifetime(randf() * 1000 - 500)
+			set_one_shot(bool(randi()%2))
+			set_pre_process_time(randf() * 1000 - 500)
+			set_speed_scale(randf() * 1000 - 500)
+			set_explosiveness_ratio(randf())
+			set_randomness_ratio(randf())
+			set_fixed_fps(randi() % 1000 - 500)
+			set_fractional_delta(bool(randi()%2))
+			set_use_local_coordinates(bool(randi()%2))
+			set_draw_order(randi() % 1000 - 500)
+			set_mesh(Mesh.new())
+			set_emission_shape(randi() % 1000 - 500)
+			set_emission_sphere_radius(randf() * 1000 - 500)
+			set_emission_box_extents(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_emission_points(PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
+			set_emission_normals(PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
+			set_emission_colors([Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)])
+
+			for i in range(FLAG_MAX):
+				set_particle_flag(i,bool(randi()%2))
+			set_spread(randf() * 1000 - 500)
+			set_flatness(randf() * 1000 - 500)
+			set_gravity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+
+			for i in range(PARAM_MAX):
+				set_param(i,randf() * 1000 - 500)
+				set_param_curve(i,load("res://Curve" + str(randi()%3+1) + ".tres"))
+				set_param_randomness(i,randf() * 1000 - 500)
+
+			particles = Particles.new()
+			convert_from_particles(particles)
+			particles.queue_free()
+			if randi() % 5 == 0:
+				restart()
+
+			##GeometryInstance
+			set_material_override(SpatialMaterial.new())
+			set_cast_shadows_setting(randi() % (SHADOW_CASTING_SETTING_SHADOWS_ONLY + 1))
+			set_extra_cull_margin(randf() * 1000 - 500)
+			for i in range(FLAG_MAX):
+				set_flag(i,bool(randi()%2))
+			set_lod_min_distance(randf() * 1000 - 500)
+			set_lod_min_hysteresis(randf() * 1000 - 500)
+			set_lod_max_distance(randf() * 1000 - 500)
+			set_lod_max_hysteresis(randf() * 1000 - 500)
+			set_custom_aabb(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+
+			##VisualInstance
+			set_layer_mask(randi() % 1000000)
+			qq += str(get_aabb())
+			qq += str(get_base())
+			qq += str(get_instance())
+			qq += str(get_layer_mask_bit(randi() % 1000 - 500))
+			qq += str(get_transformed_aabb())
+			set_base(RID())
+			set_layer_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+
+			##Spatial
+			set_global_transform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			set_translation(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_rotation_degrees(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_rotation(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_scale(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_transform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			set_visible(bool(randi()%2))
+			set_gizmo(SpatialGizmo.new())
+
+			force_update_transform()
+
+			qq += str(get_parent_spatial())
+			qq += str(get_world())
+
+			global_rotate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500)
+			global_scale(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			global_translate(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+
+			hide()
+
+			qq += str(is_local_transform_notification_enabled())
+			qq += str(is_scale_disabled())
+			qq += str(is_set_as_toplevel())
+			qq += str(is_transform_notification_enabled())
+			qq += str(is_visible_in_tree())
+
+			look_at(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215))
+			look_at_from_position(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215))
+
+			orthonormalize()
+
+			rotate(Vector3(randf() * 1000 - 500 + 150,randf() * 1000 - 500 + 100,randf() * 1000 - 500 + 15),randf() * 1000 - 500 + 10)
+			rotate_object_local(Vector3(randf() * 1000 - 500 + 4,randf() * 1000 - 500 + 45,randf() * 1000 - 500 + 215),randf() * 1000 - 500)
+			rotate_x(randf() * 1000 - 500)
+			rotate_y(randf() * 1000 - 500)
+			rotate_z(randf() * 1000 - 500)
+
+			scale_object_local(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+
+			set_as_toplevel(bool(randi()%2))
+			set_disable_scale(bool(randi()%2))
+			set_identity()
+			set_ignore_transform_notification(bool(randi()%2))
+			set_notify_local_transform(bool(randi()%2))
+			set_notify_transform(bool(randi()%2))
 #
 #			show()
 #
