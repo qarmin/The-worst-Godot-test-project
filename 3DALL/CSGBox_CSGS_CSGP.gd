@@ -43,17 +43,16 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-		
-			set_width(randf() * 1000 - 500)
-			set_height(randf() * 1000 - 500)
-			set_depth(randf() * 1000 - 500)
+			set_width(randf() * 100 - 50)
+			set_height(randf() * 100 - 50)
+			set_depth(randf() * 100 - 50)
 			set_material(SpatialMaterial.new())
 			
 			# CSGPrimivive
 			set_invert_faces(bool(randi()%2))
 			
 			# CSGShape
-			set_operation(randi() % 1000000 - 500000) # OPERATION
+			set_operation(randi() % 100 - 50) # OPERATION
 			set_snap(randf() * 1000 - 500)
 			set_calculate_tangents(bool(randi()%2))
 			set_use_collision(bool(randi()%2))

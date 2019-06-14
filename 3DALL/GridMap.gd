@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		#set_theme(MeshLibrary.new())
 		set_mesh_library(MeshLibrary.new())
 		set_cell_size(Vector3(randf() * 50 + 1,randf() * 50 + 1,randf() * 50 + 1))
-		set_octant_size(randi()%50)
+		#BUG set_octant_size(randi()%50)
 		set_center_x(bool(randi()%2))
 		set_center_y(bool(randi()%2))
 		set_center_z(bool(randi()%2))
@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		qq += str(map_to_world(randi()%50,randi()%50,randi()%50))
 		resource_changed(CubeMesh.new())
 		
-		#set_cell_item(randi()%50,randi()%50,randi()%50,randi()%50,randi()%50)
+		#BUG set_cell_item(randi()%50,randi()%50,randi()%50,randi()%50,randi()%50)
 		for i in range(3):
 			set_clip(bool(randi()%2),bool(randi()%2),randi()%50, i)
 		set_collision_layer_bit(randi()%20,bool(randi()%2))

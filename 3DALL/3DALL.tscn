@@ -109,7 +109,6 @@ _data = {
 script = ExtResource( 1 )
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
-visible = false
 script = ExtResource( 2 )
 
 [node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
@@ -214,7 +213,6 @@ parent_collision_ignore = NodePath("..")
 script = ExtResource( 28 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-visible = false
 script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]

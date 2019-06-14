@@ -37,7 +37,7 @@ func _process(delta) -> void:
 			set_depth(randf() * 1000 - 500)
 			set_spin_degrees(randf() * 1000 - 500)
 			set_spin_sides(randi() % 1000 - 500)
-			set_path_node(".")
+			set_path_node(".hityuf")
 			set_path_interval(randf() * 1000 - 500)
 			set_path_rotation(randi() % 1000 - 500) # PathRotation
 			set_path_local(bool(randi()%2))

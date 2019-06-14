@@ -27,7 +27,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_inner_radius(randf() * 1000 - 500)
 			set_outer_radius(randf() * 1000 - 500)
-			set_sides(randi() % 1000 - 500)
-			set_ring_sides(randi() % 1000 - 500)
+			set_sides(randi() % 10 - 5)
+			set_ring_sides(randi() % 10 - 5)
 			set_smooth_faces(bool(randi()%2))
 			set_material(SpatialMaterial.new())
