@@ -38,7 +38,25 @@ func _process(delta) -> void:
 		qq += str(generate_triangle_mesh())
 		qq += str(get_item_rect())
 		
-		
-	
 		if Autoload.WRONG_BUGS:
-			pass
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_vframes(randi() % 1000 - 500)
+			set_hframes(randi() % 1000 - 500)
+			set_frame(randi() % 1000 - 500)
+			set_region(bool(randi()%2))
+			set_region_rect(Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			
+			#SPRITE BASED
+			set_centered(bool(randi()%2))
+			set_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			set_flip_h(bool(randi()%2))
+			set_flip_v(bool(randi()%2))
+			set_modulate(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_opacity(randf() * 1000 - 500)
+			set_pixel_size(randf() * 1000 - 500)
+			set_axis(randi() % 1000 - 500)
+			for i in range(FLAG_MAX):
+				set_draw_flag(i,bool(randi()%2))
+			set_alpha_cut_mode(randi() % 1000 - 500)
+			qq += str(generate_triangle_mesh())
+			qq += str(get_item_rect())

@@ -23,10 +23,9 @@ func _process(delta) -> void:
 		set_smooth_faces(bool(randi()%2))
 		set_material(SpatialMaterial.new())
 		
-		
-		
-		
-		
-		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set_radius(randf() * 1000 - 500)
+			set_radial_segments(randi() % 1000 - 500)
+			set_rings(randi() % 1000 - 500)
+			set_smooth_faces(bool(randi()%2))
+			set_material(SpatialMaterial.new())

@@ -30,6 +30,20 @@ func _process(delta) -> void:
 		###qq += str(bake(self,bool(randi()%2)))
 		###debug_bake()
 		
+		if Autoload.WRONG_BUGS:
+			set_bake_cell_size(randf() * 1000 - 500)
+			set_bake_quality(randi() % 1000 - 500) #BakeQuality
+			set_bake_mode(randi() % 1000 - 500) #BakeMode
+			set_propagation(randf() * 1000 - 500)
+			set_energy(randf() * 1000 - 500)
+			set_hdr(bool(randi()%2))
+			set_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
+			set_capture_cell_size(randf() * 1000 - 500)
+			set_image_path("res://qqq.png")
+			set_light_data(BakedLightmapData.new())
+		
+			###qq += str(bake(self,bool(randi()%2)))
+			###debug_bake()
 		
 		
 		

@@ -21,13 +21,8 @@ func _process(delta) -> void:
 		qq += str(is_current())
 		make_current()
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		if Autoload.WRONG_BUGS:
+			clear_current()
+			qq += str(get_listener_transform())
+			qq += str(is_current())
+			make_current()

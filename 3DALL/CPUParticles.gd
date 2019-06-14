@@ -301,8 +301,6 @@ func _process(delta) -> void:
 		qq += str(is_queued_for_deletion())
 
 		#Better not
-		for i in range(1000):
-			notification(i,bool(randi()%2))
 		###notification(randi()%1000,bool(randi()%2))
 		property_list_changed_notify()
 		remove_meta("afqwqwr")
@@ -503,8 +501,8 @@ func _process(delta) -> void:
 			qq += str(is_processing_internal())
 			qq += str(is_processing_unhandled_input())
 			qq += str(is_processing_unhandled_key_input())
-#
-#			move_child(get_child(randi() % 1000 - 500),randi() % 1000 - 500)
+
+			move_child(get_child(randi() % 1000 - 500),randi() % 1000 - 500)
 
 			#This only spam output
 			###print_stray_nodes()
@@ -597,6 +595,10 @@ func _process(delta) -> void:
 			qq += str(is_queued_for_deletion())
 
 			#Better do not touch this
+			#for i in range(2000):
+			#	print(i)
+			#	if (i != 10)&&(i != 11)&&(i != 41):
+			#		notification(i,bool(randi()%2))
 			###notification(randi()%1000,bool(randi()%2))
 			property_list_changed_notify()
 			remove_meta("afqwqwasfaar")

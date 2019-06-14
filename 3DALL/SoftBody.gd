@@ -42,14 +42,29 @@ func _process(delta) -> void:
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
 		set_ray_pickable(bool(randi()%2))
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set_collision_layer(randi() % 1000 - 500)
+			set_collision_mask(randi() % 1000 - 500)
+			set_parent_collision_ignore(".asfasfa")
+			set_simulation_precision(randi() % 1000 - 500)
+			set_total_mass(randf() * 1000 - 500)
+			set_linear_stiffness(randf() * 1000 - 500)
+			set_areaAngular_stiffness(randf() * 1000 - 500)
+			set_volume_stiffness(randf() * 1000 - 500)
+			set_pressure_coefficient(randf() * 1000 - 500)
+			set_damping_coefficient(randf() * 1000 - 500)
+			set_drag_coefficient(randf() * 1000 - 500)
+			set_pose_matching_coefficient(randf() * 1000 - 500)
+			
+			add_collision_exception_with(self)
+			
+			qq += str(get_collision_exceptions())
+			qq += str(get_collision_layer_bit(randi() % 1000 - 500))
+			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
+			
+			qq += str(is_ray_pickable())
+			remove_collision_exception_with(get_parent())
+			
+			set_collision_layer_bit(randi() % 1000 - 500,bool(randi()%2))
+			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+			set_ray_pickable(bool(randi()%2))

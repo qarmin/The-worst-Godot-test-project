@@ -12,12 +12,7 @@ func _physics_process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
 	qq = qq
-
-
-
-
-
-
+	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -33,3 +28,17 @@ func _physics_process(delta) -> void:
 		set_physics_material_override(PhysicsMaterial.new())
 		set_constant_linear_velocity(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		set_constant_angular_velocity(Vector3(randf() * 50,randf() * 50,randf() * 50))
+		
+		if Autoload.WRONG_BUGS:
+			for i in get_children():
+				if i.get_name().begins_with("Collision"):
+					i.set_shape(BoxShape.new())
+					i.set_disabled(bool(randi()%2))
+					i.make_convex_from_brothers()
+					i.resource_changed(BoxShape.new())
+	
+			#Deprecated set_friction(randf())
+			#Deprecated set_bounce(randf())
+			set_physics_material_override(PhysicsMaterial.new())
+			set_constant_linear_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_constant_angular_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))

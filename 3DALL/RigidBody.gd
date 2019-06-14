@@ -56,3 +56,45 @@ func _physics_process(delta) -> void:
 		if contact_monitor:
 			qq += str(get_colliding_bodies())
 		#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
+		
+		if Autoload.WRONG_BUGS:
+			for i in get_children():
+				if i.get_name().begins_with("Collision"):
+					i.set_shape(BoxShape.new())
+					i.set_disabled(bool(randi()%2))
+					i.make_convex_from_brothers()
+					i.resource_changed(BoxShape.new())
+	
+			set_mode(randi() % 1000 - 500)
+			set_mass(randf() * 1000 - 500)
+			set_weight(randf() * 1000 - 500)
+			#Deprecated set_friction(randf())
+			#Deprecated set_bounce(randf())
+			set_physics_material_override(PhysicsMaterial.new())
+			set_gravity_scale(randf() * 1000 - 500)
+			set_use_custom_integrator(bool(randi()%2))
+			set_use_continuous_collision_detection(bool(randi()%2))
+			set_max_contacts_reported(randi() % 1000 - 500)
+			set_contact_monitor(bool(randi()%2))
+			set_sleeping(bool(randi()%2))
+			set_can_sleep(bool(randi()%2))
+			for i in range(3): # 3 Axis
+				set_axis_lock(i,bool(randi()%2))
+			set_linear_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_linear_damp(randf() * 1000 - 500)
+			set_angular_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_angular_damp(randf() * 1000 - 500)
+	
+			#_integrate_forces()
+	
+			add_central_force(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			add_force(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			add_torque(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			apply_central_impulse(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			apply_impulse(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			apply_torque_impulse(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+	
+			set_axis_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			if contact_monitor:
+				qq += str(get_colliding_bodies())
+			#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))

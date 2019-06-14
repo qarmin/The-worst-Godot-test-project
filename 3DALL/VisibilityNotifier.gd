@@ -19,5 +19,6 @@ func _process(delta) -> void:
 		set_aabb(AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		qq += str(is_on_screen())
 		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set_aabb(AABB(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500),Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
+			qq += str(is_on_screen())

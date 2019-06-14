@@ -17,3 +17,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_bone_name(str(randi() % 1000000))
+
+		if Autoload.WRONG_BUGS:
+			set_bone_name(str(randi() % 1000000))

@@ -38,3 +38,27 @@ func _process(delta) -> void:
 #		MM.set_instance_transform_2d(0,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		
 		set_multimesh(MM)
+
+		if Autoload.WRONG_BUGS:
+			MM = MultiMesh.new()
+			
+			MM.set_color_format(randi() % 1000 - 500)
+			MM.set_transform_format(randi() % 1000 - 500)
+			MM.set_custom_data_format(randi() % 1000 - 500)
+			MM.set_instance_count(randi() % 1000 - 500)
+			MM.set_visible_instance_count(randi() % 1000 - 500)
+			MM.set_mesh(CubeMesh.new())
+			
+			qq += str(MM.get_aabb())
+			qq += str(MM.get_instance_color(randi() % 1000 - 500))
+			qq += str(MM.get_instance_custom_data(randi() % 1000 - 500))
+			qq += str(MM.get_instance_transform(randi() % 1000 - 500))
+			qq += str(MM.get_instance_transform_2d(randi() % 1000 - 500))
+	
+			MM.set_as_bulk_array(PoolRealArray([randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500]))
+			MM.set_instance_color(randi() % 1000 - 500,Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			MM.set_instance_custom_data(randi() % 1000 - 500,Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			MM.set_instance_transform(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			MM.set_instance_transform_2d(randi() % 1000 - 500,Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			
+			set_multimesh(MM)

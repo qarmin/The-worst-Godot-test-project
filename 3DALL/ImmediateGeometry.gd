@@ -28,3 +28,14 @@ func _process(delta) -> void:
 #		set_uv2(Vector2(randf() * 50,randf() * 50))
 		
 		
+#		if Autoload.WRONG_BUGS:
+#			add_sphere(randi() % 1000 - 500,randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2))
+#			add_vertex(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			begin(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#			clear()
+#			end()
+#			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_normal(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_tangent(Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_uv(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_uv2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

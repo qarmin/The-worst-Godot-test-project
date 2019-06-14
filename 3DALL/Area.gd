@@ -53,3 +53,42 @@ func _process(delta) -> void:
 		
 		set_collision_layer_bit(randi()%20,randi()%2000)
 		set_collision_mask_bit(randi()%20,randi()%2000)
+		
+		if Autoload.WRONG_BUGS:
+			for i in get_children():
+				if i.get_name().begins_with("Collision"):
+					i.set_shape(BoxShape.new())
+					i.set_disabled(bool(randi()%2))
+					i.make_convex_from_brothers()
+					i.resource_changed(BoxShape.new())
+			
+			set_space_override_mode(randi() % 1000 - 500)
+			set_gravity_is_point(bool(randi()%2))
+			set_gravity_distance_scale(randf() * 1000 - 500)
+			set_gravity_vector(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
+			set_gravity(randf() * 1000 - 500)
+			set_linear_damp(randf() * 1000 - 500) 
+			set_angular_damp(randf() * 1000 - 500)
+			set_priority(randf() * 1000 - 500) 
+			set_monitoring(bool(randi()%2))
+			set_monitorable(bool(randi()%2))
+			set_collision_layer(randi() % 1000 - 500)
+			set_collision_mask(randi() % 1000 - 500)
+			set_audio_bus_override(bool(randi()%2))
+			set_audio_bus(str(bool(randi()%2)))
+			set_use_reverb_bus(bool(randi()%2))
+			set_reverb_bus(str(bool(randi()%2)))
+			set_reverb_amount(randf() * 1000 - 500) 
+			set_reverb_uniformity(randf() * 1000 - 500) 
+			
+			
+			qq += str(get_collision_layer_bit(randi()%20))
+			qq += str(get_collision_mask_bit(randi()%20))
+			if monitoring:
+				qq += str(get_overlapping_areas())
+				qq += str(get_overlapping_bodies())
+			qq += str(overlaps_area(self))
+			qq += str(overlaps_body(self))
+			
+			set_collision_layer_bit(randi()%20,randi()%2000)
+			set_collision_mask_bit(randi()%20,randi()%2000)

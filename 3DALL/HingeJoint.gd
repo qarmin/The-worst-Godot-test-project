@@ -29,3 +29,15 @@ func _process(delta) -> void:
 		
 		
 		
+		if Autoload.WRONG_BUGS:
+		
+			set("params/bias",randf() * 1000 - 500)
+			set("angular_limit/enable",bool(randi()%2))
+			set("angular_limit/upper",randf() * 1000 - 500)
+			set("angular_limit/lower",randf() * 1000 - 500)
+			set("angular_limit/bias",randf() * 1000 - 500)
+			set("angular_limit/softness",randf() * 1000 - 500)
+			set("angular_limit/relaxation",randf() * 1000 - 500)
+			set("motor/enable",bool(randi()%2))
+			set("motor/target_velocity",randf() * 1000 - 500)
+			set("motor/max_impulse",randf() * 1000 - 500)

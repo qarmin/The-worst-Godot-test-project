@@ -26,3 +26,13 @@ func _process(delta) -> void:
 		qq += str(get_surface_material_count())
 		set_surface_material(0, SpatialMaterial.new())
 		
+		if Autoload.WRONG_BUGS:
+			set_mesh(CubeMesh.new())
+			set_skeleton_path(".")
+			
+			create_convex_collision()
+			create_debug_tangents()
+			create_trimesh_collision()
+			qq += str(get_surface_material(randi() % 1000 - 500))
+			qq += str(get_surface_material_count())
+			set_surface_material(randi() % 1000 - 500, SpatialMaterial.new())

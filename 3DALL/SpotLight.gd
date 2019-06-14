@@ -22,7 +22,8 @@ func _process(delta) -> void:
 		set("spot_angle_attenuation",randf() * 50)
 		
 		
-		
-		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set("spot_range",randf() * 1000 - 500)
+			set("spot_attenuation",randf() * 1000 - 500)
+			set("spot_angle",randf() * 1000 - 500)
+			set("spot_angle_attenuation",randf() * 1000 - 500)

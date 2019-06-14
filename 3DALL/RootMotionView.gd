@@ -23,13 +23,9 @@ func _process(delta) -> void:
 		set_zero_y(bool(randi()%2))
 		
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		if Autoload.WRONG_BUGS:
+			set_animation_path("fawfasfaw.")
+			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_cell_size(randf() * 1000 - 500)
+			set_radius(randf() * 1000 - 500)
+			set_zero_y(bool(randi()%2))

@@ -147,6 +147,7 @@ visible = false
 script = ExtResource( 14 )
 
 [node name="CPUParticles_ALL" type="CPUParticles" parent="."]
+visible = false
 mesh = SubResource( 2 )
 angular_velocity = 4.56529e-41
 script = ExtResource( 15 )

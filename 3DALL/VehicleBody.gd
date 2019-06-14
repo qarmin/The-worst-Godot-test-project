@@ -37,3 +37,26 @@ func _physics_process(delta) -> void:
 				i.get_rpm()
 				i.get_skidinfo()
 				i.is_in_contact()
+				
+		if Autoload.WRONG_BUGS:
+			set_engine_force(randf() * 1000 - 500)
+			set_brake(randf() * 1000 - 500)
+			set_steering(randf() * 1000 - 500)
+			
+			for i in get_children():
+				if i.get_name().begins_with("VehicleWheel"):
+					i.set_use_as_traction(bool(randi()%2))
+					i.set_use_as_steering(bool(randi()%2))
+					i.set_roll_influence(randf() * 1000 - 500)
+					i.set_radius(randf() * 1000 - 500)
+					i.set_suspension_rest_length(randf() * 1000 - 500)
+					i.set_friction_slip(randf() * 1000 - 500)
+					i.set_suspension_travel(randf() * 1000 - 500)
+					i.set_suspension_stiffness(randf() * 1000 - 500)
+					i.set_suspension_max_force(randf() * 1000 - 500)
+					i.set_damping_compression(randf() * 1000 - 500)
+					i.set_damping_relaxation(randf() * 1000 - 500)
+					
+					i.get_rpm()
+					i.get_skidinfo()
+					i.is_in_contact()

@@ -19,3 +19,8 @@ func _process(delta) -> void:
 		set("params/bias",randf() * 50)
 		set("params/damping",randf() * 50)
 		set("params/impulse_clamp",randf() * 50)
+
+		if Autoload.WRONG_BUGS:
+			set("params/bias",randf() * 1000 - 500)
+			set("params/damping",randf() * 1000 - 500)
+			set("params/impulse_clamp",randf() * 1000 - 500)

@@ -198,6 +198,7 @@ margin_top = 134.0
 margin_right = 358.0
 margin_bottom = 596.0
 alignment = 1
+raw_mode = true
 script = ExtResource( 24 )
 
 [node name="HBoxContainer" type="HBoxContainer" parent="."]

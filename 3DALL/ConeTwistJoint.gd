@@ -27,3 +27,16 @@ func _process(delta) -> void:
 		set_solver_priority(randi()%50)
 		set_exclude_nodes_from_collision(bool(randi()%2))
 		
+
+		if Autoload.WRONG_BUGS:
+
+			_set_swing_span(randf() * 1000 - 500)
+			_set_twist_span(randf() * 1000 - 500)
+			for i in range(PARAM_MAX):
+				set_param(i, randf() * 1000 - 500)
+			
+			#Joint
+			set_node_a("qwfq")
+			set_node_b(".safa")
+			set_solver_priority(randi() % 1000 - 500)
+			set_exclude_nodes_from_collision(bool(randi()%2))
