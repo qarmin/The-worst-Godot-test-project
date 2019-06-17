@@ -55,7 +55,7 @@ func _physics_process(delta) -> void:
 		set_axis_velocity(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		if contact_monitor:
 			qq += str(get_colliding_bodies())
-		#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
+		#BUGqq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
 		
 		if Autoload.WRONG_BUGS:
 			for i in get_children():
@@ -97,4 +97,4 @@ func _physics_process(delta) -> void:
 			set_axis_velocity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			if contact_monitor:
 				qq += str(get_colliding_bodies())
-			#BBBBBBBBBBBBBBBBBBBBBBBBBBBqq += str(test_motion(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			#BUGqq += str(test_motion(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))

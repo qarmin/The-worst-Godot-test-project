@@ -24,9 +24,13 @@ func _process(delta) -> void:
 		qq += str(get_root_motion_transform())
 		rename_parameter(".",".")
 		
-		
-		
-		
-
-
-
+		if Autoload.WRONG_BUGS:
+			set_tree_root(AnimationNode.new())
+			set_animation_player("../AnimafqwfPlayer")
+			set_active(bool(randi()%2))
+			set_process_mode(randi() % 1000 - 500) #AnimationProcessMode
+			set_root_motion_track(".afs/aw")
+			
+			advance(randf() * 1000 - 500)
+			qq += str(get_root_motion_transform())
+			rename_parameter(".fqwq","qwtqwt.")

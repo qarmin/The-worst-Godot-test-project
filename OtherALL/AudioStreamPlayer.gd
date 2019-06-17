@@ -30,3 +30,21 @@ func _process(delta) -> void:
 		play()
 		seek(randf() * 50)
 		stop()
+		
+		if Autoload.WRONG_BUGS:
+			set_stream(AudioStream.new())
+			set_volume_db(randf() * 1000 - 500)
+			set_pitch_scale(randf() * 1000 - 500)
+			_set_playing(bool(randi()%2))
+			set_autoplay(bool(randi()%2))
+			set_stream_paused(bool(randi()%2))
+			set_mix_target(randi() % 1000 - 500)# MixTarget
+			set_bus("asfqwfafasfa")
+			
+			
+			qq += str(get_playback_position())
+			qq += str(get_stream_playback())
+			
+			play()
+			seek(randf() * 1000 - 500)
+			stop()

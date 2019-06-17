@@ -1,0 +1,147 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Resources/GDScript.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Resources.gd" type="Script" id=2]
+[ext_resource path="res://Resources/GlobalScope.gd" type="Script" id=3]
+[ext_resource path="res://Resources/ARVRInterface.gd" type="Script" id=4]
+[ext_resource path="res://Resources/Reference.gd" type="Script" id=5]
+[ext_resource path="res://Resources/ARVRInterfaceGDNative.gd" type="Script" id=6]
+[ext_resource path="res://Resources/Resource.gd" type="Script" id=7]
+[ext_resource path="res://Resources/AStar.gd" type="Script" id=8]
+[ext_resource path="res://Resources/MobileVRInterface.gd" type="Script" id=9]
+
+[node name="Resources" type="Node"]
+script = ExtResource( 2 )
+
+[node name="GDScript" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+
+[node name="GlobalScope" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 3 )
+
+[node name="Reference" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 5 )
+
+[node name="ARVRInterface_CANT" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 4 )
+
+[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 6 )
+
+[node name="MobileVRInterface" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 9 )
+
+[node name="AStar" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="Resource" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 7 )
+
+[node name="Texture" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimatedTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="AtlasTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="CameraTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="CurveTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="GradientTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="ImageTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="LargeTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="MeshTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="NoiseTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="ProxyTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="StreamTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="ViewportTexture" type="Node2D" parent="."]
+visible = false
+
+[node name="Animation" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNode" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeAdd2" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeAdd3" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationRootNode" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeAnimation" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendTree" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendOneShot" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendOutput" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendTimeScale" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendTimeSeek" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendTransition" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="."]
+visible = false
+
+[node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="."]
+visible = false
+
+[node name="Mesh" type="Node2D" parent="."]
+visible = false
+
+[node name="ArrayMesh" type="Node2D" parent="."]
+visible = false

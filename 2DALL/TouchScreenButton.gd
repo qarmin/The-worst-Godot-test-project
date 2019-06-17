@@ -30,12 +30,11 @@ func _process(delta) -> void:
 		
 		qq += str(is_pressed())
 		
-		
 		if Autoload.WRONG_BUGS:
 			counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
-			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_texture_pressed(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture_pressed(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			# TODO Bitmap
 			set_bitmask(BitMap.new())
 			set_shape(CircleShape2D.new())

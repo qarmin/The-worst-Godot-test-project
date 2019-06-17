@@ -35,11 +35,11 @@ func _process(delta) -> void:
 		set_stretch_mode(randi()%7)
 		
 		if Autoload.WRONG_BUGS:
-			set_normal_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_pressed_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_hover_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_disabled_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_focused_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_normal_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_pressed_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_hover_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_disabled_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_focused_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_click_mask(BitMap.new())
 			set_expand(bool(randi()%2))
 			set_stretch_mode(randi() % 1000 - 500)

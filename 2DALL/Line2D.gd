@@ -40,7 +40,7 @@ func _process(delta) -> void:
 			set_width(randf() * 1000 - 500)
 			set_default_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			set_gradient(load("res://Gradient" + str(randi() % 1000 - 500) + ".tres"))
-			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_mode(randi() % 1000 - 500)
 			set_joint_mode(randi() % 1000 - 500)
 			set_begin_cap_mode(randi() % 1000 - 500)

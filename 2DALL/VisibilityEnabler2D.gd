@@ -19,7 +19,6 @@ func _process(delta) -> void:
 		for i in range(6):
 			set_enabler(i,bool(randi()%2))
 			
-			
 		if Autoload.WRONG_BUGS:
 			for i in range(6):
 				set_enabler(i,bool(randi()%2))

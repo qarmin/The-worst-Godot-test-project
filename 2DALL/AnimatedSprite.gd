@@ -138,3 +138,91 @@ func _process(delta) -> void:
 			set_flip_v(bool(randi()%2))
 			stop()
 			play("qwtdfaf", bool(randi()%2))
+		
+			## Node2D
+			set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			set_rotation(randf() * 1000 - 500)
+			set_rotation_degrees(randf() * 1000 - 500)
+			set_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			set_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			set_global_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			set_global_rotation(randf() * 1000 - 500)
+			set_global_rotation_degrees(randf() * 1000 - 500)
+			set_global_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			set_global_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			set_z_index(randi() % 1000 - 500)
+			set_z_as_relative(bool(randi()%2))
+			apply_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			qq += str(get_angle_to(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			qq += str(get_relative_transform_to_parent(get_parent()))
+			global_translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			look_at(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			move_local_x(randf() * 1000 - 500,bool(randi()%2))
+			move_local_y(randf() * 1000 - 500,bool(randi()%2))
+			rotate(randf() * 1000 - 500)
+			qq += str(to_global(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			qq += str(to_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			
+			# Canvas Item
+			set_visible(bool(randi()%2))
+			set_modulate(Color(randf(),randf(),randf(),randf()))
+			set_self_modulate(Color(randf(),randf(),randf(),randf()))
+			set_draw_behind_parent(bool(randi()%2))
+			_set_on_top(bool(randi()%2))
+			set_light_mask(randi() % 1000 - 500)
+			set_material(SpatialMaterial.new())
+			set_use_parent_material(bool(randi()%2))
+			
+			###_draw()
+			#draw_char(load("res://DynamicFont1.tres"),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),"Q","D",Color(randf(),randf(),randf(),randf()))
+			#draw_circle(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500,Color(randf(),randf(),randf(),randf()))
+			#draw_colored_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]),load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+			#draw_line(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500), Color(randf(),randf(),randf(),randf()))
+	#		draw_mesh(
+	#		draw_multiline(
+	#		draw_multiline_colors(
+	#		draw_multimesh(
+	#		draw_polygon(
+	#		draw_polyline(
+	#		draw_polyline_colors(
+	#		draw_primitive(
+	#		draw_rect(
+	#		draw_set_transform(
+	#		draw_set_transform_matrix(
+	#		draw_string(
+	#		draw_style_box(
+	#		draw_texture(
+	#		draw_texture_rect(
+	#		draw_texture_rect_region(
+			
+			force_update_transform()
+			
+			qq += str(get_canvas())
+			qq += str(get_canvas_item())
+			qq += str(get_canvas_transform())
+			qq += str(get_global_mouse_position())
+			qq += str(get_global_transform())
+			qq += str(get_global_transform_with_canvas())
+			qq += str(get_local_mouse_position())
+			qq += str(get_transform())
+			qq += str(get_viewport_rect())
+			qq += str(get_viewport_transform())
+			qq += str(get_world_2d())
+			
+			hide()
+			
+			qq += str(is_local_transform_notification_enabled())
+			qq += str(is_set_as_toplevel())
+			qq += str(is_transform_notification_enabled())
+			qq += str(is_visible_in_tree())
+			
+			qq += str(make_canvas_position_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			#make_input_local(InputEvent.new())
+			
+			set_as_toplevel(bool(randi()%2))
+			set_notify_local_transform(bool(randi()%2))
+			set_notify_transform(bool(randi()%2))
+			
+			show()
+			update()

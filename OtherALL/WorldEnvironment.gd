@@ -15,3 +15,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		#set_environment(load("default_env" + str(randi() % 2)+".tres"))
+		
+		if Autoload.WRONG_BUGS:
+			set_environment(load("res://default_env" + str(randi() % 2)+".tres"))

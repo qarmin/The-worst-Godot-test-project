@@ -13,7 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -21,5 +20,5 @@ func _process(delta) -> void:
 		set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
-			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_normal_map(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))

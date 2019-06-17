@@ -54,7 +54,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			
 			set_text(str(randi()%50000))
-			set_button_icon(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_button_icon(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_flat(bool(randi()%2))
 			set_clip_text(bool(randi()%2))
 			set_text_align(randi() % 1000 - 500)

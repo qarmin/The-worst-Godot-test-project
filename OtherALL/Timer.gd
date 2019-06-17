@@ -25,4 +25,14 @@ func _process(delta) -> void:
 		start(randf() * 50)
 		stop()
 		
-		
+		if Autoload.WRONG_BUGS:
+			set_timer_process_mode(randi() % 1000 - 500) #TimerProcessMode
+			set_wait_time(randf() * 1000 - 500)
+			set_one_shot(bool(randi()%2))
+			set_autostart(bool(randi()%2))
+			set_paused(bool(randi()%2))
+			qq += str(get_time_left())
+			
+			qq += str(is_stopped())
+			start(randf() * 1000 - 500)
+			stop()

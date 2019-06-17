@@ -13,12 +13,10 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_sort_enabled(bool(randi()%2))
-		
 		
 		if Autoload.WRONG_BUGS:
 			set_sort_enabled(bool(randi()%2))

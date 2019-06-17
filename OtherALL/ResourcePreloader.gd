@@ -16,9 +16,19 @@ func _process(delta) -> void:
 		
 		add_resource("qq", ImageTexture.new())
 		
-		#qq += str(get_resource(qq))
+		#qq += str(get_resource("qq"))
 		qq += str(get_resource_list())
 		
 		qq += str(has_resource("qq"))
 		rename_resource("qq","dd")
 		remove_resource("dd") ## Zmiana kolejności
+		
+		if Autoload.WRONG_BUGS:
+			add_resource("qq", ImageTexture.new())
+			
+			qq += str(get_resource("qq"))
+			qq += str(get_resource_list())
+			
+			qq += str(has_resource("qasfq"))
+			rename_resource("qasq","asfd")
+			remove_resource("ddaf") ## Zmiana kolejności

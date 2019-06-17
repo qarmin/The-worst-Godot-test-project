@@ -90,8 +90,8 @@ func _process(delta) -> void:
 			set_gravity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set("local_coords", bool(randi()%2))
 			set("draw_order", randi() % 1000 - 500)
-			set("texture", (load("res://Sprite" + str(randi() % 1000 - 500) + ".png")))
-			set("normalmap", (load("res://Sprite" + str(randi() % 1000 - 500) + ".png")))
+			set("texture", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+			set("normalmap", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
 			set("emission_shape", randi() % 1000 - 500)
 			set("flag_align_y", bool(randi()%2))
 			

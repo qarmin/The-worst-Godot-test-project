@@ -51,7 +51,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			clear()
 			_select_int(randi() % 1000 - 500)
-			add_icon_item(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"),str(randi() % 1000 - 500))
+			add_icon_item(load("res://Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % 1000 - 500))
 			add_item(str(randi() % 1000 - 500))
 			qq += str(get_item_count())
 			qq += str(get_item_icon(randi() % 1000 - 500))
@@ -65,7 +65,7 @@ func _process(delta) -> void:
 			qq += str(is_item_disabled(randi() % 1000 - 500))
 			select(randi() % 1000 - 500)
 			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
-			set_item_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_item_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
 			set_item_metadata(randi() % 1000 - 500,randi() % 1000 - 500)
 			set_item_text(randi() % 1000 - 500,str(randi() % 1000 - 500))

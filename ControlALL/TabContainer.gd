@@ -52,7 +52,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_popup(popup_menu_temp)
 			set_tab_disabled(randi() % 1000 - 500,bool(randi()%2))
-			set_tab_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_tab_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_tab_title(randi() % 1000 - 500,str(randi() % 1000 - 500))
 			set_tabs_rearrange_group(0)
 			

@@ -122,97 +122,82 @@ script = ExtResource( 5 )
 script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-visible = false
 script = ExtResource( 6 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.67803, 7.35442 )
-visible = false
 fov = 103.32
 script = ExtResource( 7 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307571, 6.51298 )
-visible = false
 script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-visible = false
 frames = SubResource( 1 )
 script = ExtResource( 13 )
 
 [node name="Sprite3D_SB" type="Sprite3D" parent="."]
-visible = false
 script = ExtResource( 14 )
 
 [node name="CPUParticles_ALL" type="CPUParticles" parent="."]
-visible = false
 mesh = SubResource( 2 )
 angular_velocity = 4.56529e-41
 script = ExtResource( 15 )
 
 [node name="CSGBox_CSGS_CSGP" type="CSGBox" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 material = SubResource( 3 )
 script = ExtResource( 17 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 script = ExtResource( 18 )
 
 [node name="CSGMesh" type="CSGMesh" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 mesh = SubResource( 4 )
 script = ExtResource( 21 )
 
 [node name="CSGPolygon" type="CSGPolygon" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 polygon = PoolVector2Array( -2.92544, 3.2285, -2.25508, 2.48623, -5.52979, 1.01652, -5.59535, 3.52259, -3.08895, 4.10458, -1.5495, 3.31535 )
 material = SubResource( 5 )
 script = ExtResource( 22 )
 
 [node name="CSGSphere" type="CSGSphere" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 material = SubResource( 6 )
 script = ExtResource( 19 )
 
 [node name="CSGTorus" type="CSGTorus" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -36.5457 )
-visible = false
 material = SubResource( 7 )
 script = ExtResource( 20 )
 
 [node name="CSGCombiner" type="CSGCombiner" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.991237, 0, -23.8362 )
-visible = false
 operation = 1
 script = ExtResource( 23 )
 
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
-visible = false
 material_override = SubResource( 8 )
 script = ExtResource( 24 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-visible = false
 mesh = SubResource( 9 )
 material/0 = null
 script = ExtResource( 26 )
 
 [node name="SoftBody" type="SoftBody" parent="."]
 transform = Transform( 0.579041, 0.815298, 0, -0.815298, 0.579041, 0, 0, 0, 1, -0.624185, 0.384725, -5.91273 )
-visible = false
 mesh = SubResource( 10 )
 material/0 = null
 parent_collision_ignore = NodePath("..")
 script = ExtResource( 28 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
+visible = false
 script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
@@ -225,34 +210,27 @@ script = ExtResource( 25 )
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
-visible = false
 script = ExtResource( 29 )
 
 [node name="DirectionalLight_LI" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300249, 10.0456, -36.4106 )
-visible = false
 script = ExtResource( 30 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72183, -43.0131 )
-visible = false
 script = ExtResource( 31 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
-visible = false
 script = ExtResource( 32 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
-visible = false
 script = ExtResource( 33 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-visible = false
 script = ExtResource( 35 )
 
 [node name="RootMotionView" type="RootMotionView" parent="."]
-visible = false
 script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
@@ -313,45 +291,37 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-visible = false
 script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
-visible = false
 script = ExtResource( 44 )
 
 [node name="ConeTwistJoint" type="ConeTwistJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/VehicleBody")
 script = ExtResource( 47 )
 
 [node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/PhysicalBone")
 script = ExtResource( 46 )
 
 [node name="HingeJoint" type="HingeJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/PhysicalBone")
 script = ExtResource( 45 )
 
 [node name="PinJoint" type="PinJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Spatial/Area")
 nodes/node_b = NodePath("../Spatial/KinematicBody")
 script = ExtResource( 49 )
 
 [node name="SliderJoint" type="SliderJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/StaticBody")
 script = ExtResource( 48 )
 
 [node name="GridMap" type="GridMap" parent="."]
-visible = false
 data = {
 "cells": PoolIntArray(  )
 }
@@ -361,11 +331,9 @@ __meta__ = {
 }
 
 [node name="Listener" type="Listener" parent="."]
-visible = false
 script = ExtResource( 51 )
 
 [node name="Navigation" type="Navigation" parent="."]
-visible = false
 script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
@@ -374,7 +342,6 @@ navmesh = SubResource( 14 )
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
-visible = false
 curve = SubResource( 15 )
 script = ExtResource( 52 )
 
@@ -382,30 +349,25 @@ script = ExtResource( 52 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.851509, -11.6767 )
 
 [node name="Position3D" type="Position3D" parent="."]
-visible = false
 script = ExtResource( 54 )
 
 [node name="Camera 2" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
-visible = false
 current = true
 script = ExtResource( 16 )
 
 [node name="ProximityGroup" type="ProximityGroup" parent="."]
-visible = false
 script = ExtResource( 59 )
 
 [node name="RayCast" type="RayCast" parent="."]
-visible = false
 script = ExtResource( 57 )
 
 [node name="RemoteTransform" type="RemoteTransform" parent="."]
-visible = false
 remote_path = NodePath("../Camera")
 script = ExtResource( 55 )
 
 [node name="Skeleton" type="Skeleton" parent="."]
-visible = false
+bones_in_world_transform = true
 script = ExtResource( 56 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="Skeleton"]
@@ -429,13 +391,10 @@ shape = SubResource( 16 )
 shape = SubResource( 16 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
-visible = false
 script = ExtResource( 61 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-visible = false
 script = ExtResource( 58 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
-visible = false
 script = ExtResource( 60 )

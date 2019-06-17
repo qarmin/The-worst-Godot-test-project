@@ -13,7 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -22,7 +21,6 @@ func _process(delta) -> void:
 		set_update_position(bool(randi()%2))
 		set_update_rotation(bool(randi()%2))
 		set_update_scale(bool(randi()%2))
-		
 		
 		if Autoload.WRONG_BUGS:
 			set_remote_node("/root/2fwwL")

@@ -13,7 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -48,7 +47,7 @@ func _process(delta) -> void:
 			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_antialiased(bool(randi()%2))
-			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_texture_scale(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_texture_rotation_degrees(randf() * 1000 - 500)

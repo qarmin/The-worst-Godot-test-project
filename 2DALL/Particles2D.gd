@@ -102,15 +102,15 @@ func _process(delta) -> void:
 			pm.set_emission_shape(randi() % 1000 - 500)
 			pm.set_emission_sphere_radius(randf() * 1000 - 500)
 			pm.set_emission_box_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
-			pm.set_emission_point_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			pm.set_emission_normal_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			pm.set_emission_color_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			pm.set_emission_point_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			pm.set_emission_normal_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			pm.set_emission_color_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			pm.set_emission_point_count(randi() % 1000 - 500)
 			pm.set_spread(randf() * 1000 - 500)
 			pm.set_flatness(randf() * 1000 - 500)
 			pm.set_gravity(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
 			pm.set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-			pm.set_color_ramp(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			pm.set_color_ramp(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
 			pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
@@ -120,11 +120,11 @@ func _process(delta) -> void:
 			for j in range(12): # range(12):
 				pm.set_param(j,randf() * 1000 - 500)
 				pm.set_param_randomness(j,randf() * 1000 - 500)
-				pm.set_param_texture(j,load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+				pm.set_param_texture(j,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			set_process_material(pm)
-			set_texture(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_normal_map(load("res://Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			qq += str(capture_rect())
 			if randi()%7 == 0:

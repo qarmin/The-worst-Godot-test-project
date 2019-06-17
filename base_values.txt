@@ -9,7 +9,7 @@ Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,r
 Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 Vector2(randf() * 50,randf() * 50))
 Vector3(randf() * 50,randf() * 50,randf() * 50))
-PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50)])
+PoolVector3Array([Vector3(randf() * 50,randf() * 50),randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50)])
 PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
 randf() * 50)
 bool(randi()%2))
