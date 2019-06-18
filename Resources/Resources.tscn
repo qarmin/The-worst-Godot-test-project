@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=45 format=2]
 
 [ext_resource path="res://Resources/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Resources.gd" type="Script" id=2]
@@ -9,6 +9,41 @@
 [ext_resource path="res://Resources/Resource.gd" type="Script" id=7]
 [ext_resource path="res://Resources/AStar.gd" type="Script" id=8]
 [ext_resource path="res://Resources/MobileVRInterface.gd" type="Script" id=9]
+[ext_resource path="res://Resources/AnimationNodeBlendOutput.gd" type="Script" id=10]
+[ext_resource path="res://Resources/StreamTexture.gd" type="Script" id=11]
+[ext_resource path="res://Resources/AnimationNodeBlendMachine.gd" type="Script" id=12]
+[ext_resource path="res://Resources/ViewportTexture.gd" type="Script" id=13]
+[ext_resource path="res://Resources/Animation.gd" type="Script" id=14]
+[ext_resource path="res://Resources/ImageTexture.gd" type="Script" id=15]
+[ext_resource path="res://Resources/LargeTexture.gd" type="Script" id=16]
+[ext_resource path="res://Resources/AnimationNodeBlendStateMachinePlayback.gd" type="Script" id=17]
+[ext_resource path="res://Resources/MeshTexture.gd" type="Script" id=18]
+[ext_resource path="res://Resources/AnimationNodeBlendTransition.gd" type="Script" id=19]
+[ext_resource path="res://Resources/AnimationNodeBlendTree.gd" type="Script" id=20]
+[ext_resource path="res://Resources/AnimationNodeBlendSpace1D.gd" type="Script" id=21]
+[ext_resource path="res://Resources/NoiseTexture.gd" type="Script" id=22]
+[ext_resource path="res://Resources/ProxyTexture.gd" type="Script" id=23]
+[ext_resource path="res://Resources/AnimationRootNode.gd" type="Script" id=24]
+[ext_resource path="res://Resources/AnimationNodeAdd2.gd" type="Script" id=25]
+[ext_resource path="res://Resources/Mesh.gd" type="Script" id=26]
+[ext_resource path="res://Resources/AnimationNodeBlendStateMachineTransition.gd" type="Script" id=27]
+[ext_resource path="res://Resources/AnimationNodeBlendTimeScale.gd" type="Script" id=28]
+[ext_resource path="res://Resources/AnimationNodeBlendBlend3.gd" type="Script" id=29]
+[ext_resource path="res://Resources/AtlasTexture.gd" type="Script" id=30]
+[ext_resource path="res://Resources/ArrayMesh.gd" type="Script" id=31]
+[ext_resource path="res://Resources/CurveTexture.gd" type="Script" id=32]
+[ext_resource path="res://Resources/Texture.gd" type="Script" id=33]
+[ext_resource path="res://Resources/GradientTexture.gd" type="Script" id=34]
+[ext_resource path="res://Resources/AnimationNodeBlendSpace2D.gd" type="Script" id=35]
+[ext_resource path="res://Resources/AnimationNode.gd" type="Script" id=36]
+[ext_resource path="res://Resources/AnimationNodeAdd3.gd" type="Script" id=37]
+[ext_resource path="res://Resources/AnimatedTexture.gd" type="Script" id=38]
+[ext_resource path="res://Resources/AnimationNodeBlendOneShot.gd" type="Script" id=39]
+[ext_resource path="res://Resources/AnimationNodeBlendTimeSeek.gd" type="Script" id=40]
+[ext_resource path="res://Resources/AnimationNodeBlendBlend2.gd" type="Script" id=41]
+[ext_resource path="res://Resources/AnimationNodeAnimation.gd" type="Script" id=42]
+[ext_resource path="res://Resources/CameraTexture.gd" type="Script" id=43]
+[ext_resource path="res://Resources/AAAAAAAAAAAAAAMeshLibrary.gd" type="Script" id=44]
 
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
@@ -38,110 +73,148 @@ visible = false
 script = ExtResource( 9 )
 
 [node name="AStar" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 8 )
 
 [node name="Resource" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 7 )
 
-[node name="Texture" type="Node2D" parent="."]
+[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 33 )
 
 [node name="AnimatedTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 38 )
 
 [node name="AtlasTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 30 )
 
 [node name="CameraTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 43 )
 
 [node name="CurveTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 32 )
 
 [node name="GradientTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 34 )
 
 [node name="ImageTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 15 )
 
 [node name="LargeTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 16 )
 
 [node name="MeshTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 18 )
 
 [node name="NoiseTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 22 )
 
 [node name="ProxyTexture" type="Node2D" parent="."]
 visible = false
-
-[node name="StreamTexture" type="Node2D" parent="."]
-visible = false
+script = ExtResource( 23 )
 
 [node name="ViewportTexture" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 13 )
+
+[node name="StreamTexture" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 11 )
 
 [node name="Animation" type="Node2D" parent="."]
-visible = false
+script = ExtResource( 14 )
 
 [node name="AnimationNode" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 36 )
 
 [node name="AnimationNodeAdd2" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 25 )
 
 [node name="AnimationNodeAdd3" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 37 )
 
 [node name="AnimationRootNode" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 24 )
 
 [node name="AnimationNodeAnimation" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 42 )
 
 [node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 21 )
 
 [node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 35 )
 
 [node name="AnimationNodeBlendTree" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 20 )
 
 [node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 12 )
 
 [node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 41 )
 
 [node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 29 )
 
 [node name="AnimationNodeBlendOneShot" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 39 )
 
 [node name="AnimationNodeBlendOutput" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 10 )
 
 [node name="AnimationNodeBlendTimeScale" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 28 )
 
 [node name="AnimationNodeBlendTimeSeek" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 40 )
 
 [node name="AnimationNodeBlendTransition" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 19 )
 
 [node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 17 )
 
 [node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 27 )
 
 [node name="Mesh" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 26 )
 
 [node name="ArrayMesh" type="Node2D" parent="."]
 visible = false
+script = ExtResource( 31 )
+
+[node name="AAAAAAAAAAAAAAMeshLibrary" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 44 )
