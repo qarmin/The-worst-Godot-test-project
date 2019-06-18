@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://Resources/Resources.tscn"
+run/main_scene="res://ControlALL/ControlALL.tscn"
 config/icon="res://icon.png"
 
 [autoload]
@@ -77,7 +77,6 @@ name_num_separator=1
 
 [physics]
 
-2d/thread_model=2
 2d/sleep_threshold_linear=1.94
 2d/sleep_threshold_angular=0.23
 2d/time_before_sleep=0.35
@@ -94,6 +93,7 @@ name_num_separator=1
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 quality/shading/force_vertex_shading=true
