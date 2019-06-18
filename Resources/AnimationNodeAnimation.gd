@@ -14,10 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		var q_AnimationNodeAnimation : AnimationNodeAnimation = AnimationNodeAnimation.new()
+		
+		q_AnimationNodeAnimation.set_animation("Lewandowski")
+		
 		
 		if Autoload.WRONG_BUGS:
-			pass
-			
-			
-			
-			
+			q_AnimationNodeAnimation.set_animation("Lewandowski")

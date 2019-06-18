@@ -49,12 +49,15 @@
 script = ExtResource( 2 )
 
 [node name="GDScript" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 1 )
 
 [node name="GlobalScope" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 3 )
 
 [node name="Reference" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 5 )
 
 [node name="ARVRInterface_CANT" type="Node2D" parent="."]
@@ -66,117 +69,121 @@ visible = false
 script = ExtResource( 6 )
 
 [node name="MobileVRInterface" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 9 )
 
 [node name="AStar" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 8 )
 
 [node name="Resource" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 7 )
 
 [node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 33 )
 
 [node name="AnimatedTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 38 )
 
 [node name="AtlasTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 30 )
 
 [node name="CameraTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 43 )
 
 [node name="CurveTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 32 )
 
 [node name="GradientTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 34 )
 
 [node name="ImageTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 15 )
 
 [node name="LargeTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 16 )
 
 [node name="MeshTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 18 )
 
 [node name="NoiseTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 22 )
 
 [node name="ProxyTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 23 )
 
 [node name="ViewportTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 13 )
 
 [node name="StreamTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 11 )
 
 [node name="Animation" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 14 )
 
 [node name="AnimationNode" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 36 )
 
 [node name="AnimationNodeAdd2" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 25 )
 
 [node name="AnimationNodeAdd3" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 37 )
 
 [node name="AnimationRootNode" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 24 )
 
 [node name="AnimationNodeAnimation" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 42 )
 
 [node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 21 )
 
 [node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 35 )
 
 [node name="AnimationNodeBlendTree" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 20 )
 
 [node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 12 )
 
 [node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 41 )
 
 [node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 29 )
 
-[node name="AnimationNodeBlendOneShot" type="Node2D" parent="."]
-visible = false
+[node name="AnimationNodeOneShot" type="Node2D" parent="."]
 script = ExtResource( 39 )
 
-[node name="AnimationNodeBlendOutput" type="Node2D" parent="."]
-visible = false
+[node name="AnimationNodeOutput" type="Node2D" parent="."]
 script = ExtResource( 10 )
 
-[node name="AnimationNodeBlendTimeScale" type="Node2D" parent="."]
+[node name="AnimationNodeTimeScale" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 28 )
 
-[node name="AnimationNodeBlendTimeSeek" type="Node2D" parent="."]
+[node name="AnimationNodeTimeSeek" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 40 )
 
-[node name="AnimationNodeBlendTransition" type="Node2D" parent="."]
+[node name="AnimationNodeTransition" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 19 )
 

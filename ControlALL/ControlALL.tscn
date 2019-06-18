@@ -97,14 +97,14 @@ script = ExtResource( 11 )
 [node name="FileDialog" type="FileDialog" parent="."]
 visible = true
 margin_left = 566.0
-margin_right = 841.0
+margin_right = 873.0
 margin_bottom = 130.0
 script = ExtResource( 9 )
 
 [node name="PopupDialog" type="PopupDialog" parent="."]
 visible = true
-margin_left = 845.0
-margin_right = 919.0
+margin_left = 877.0
+margin_right = 951.0
 margin_bottom = 130.0
 script = ExtResource( 19 )
 
@@ -116,62 +116,62 @@ script = ExtResource( 2 )
 
 [node name="PopupPanel" type="PopupPanel" parent="."]
 visible = true
-margin_left = 923.0
-margin_right = 931.0
+margin_left = 955.0
+margin_right = 963.0
 margin_bottom = 130.0
 script = ExtResource( 10 )
 
 [node name="Button_ALL" type="Button" parent="."]
-margin_left = 935.0
-margin_right = 947.0
+margin_left = 967.0
+margin_right = 979.0
 margin_bottom = 130.0
 script = ExtResource( 22 )
 
 [node name="CheckBox" type="CheckBox" parent="."]
-margin_left = 951.0
-margin_right = 975.0
+margin_left = 983.0
+margin_right = 1007.0
 margin_bottom = 130.0
 script = ExtResource( 18 )
 
 [node name="CheckButton" type="CheckButton" parent="."]
-margin_left = 979.0
-margin_right = 1055.0
+margin_left = 1011.0
+margin_right = 1087.0
 margin_bottom = 130.0
 script = ExtResource( 21 )
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
-margin_left = 1059.0
-margin_right = 1073.0
+margin_left = 1091.0
+margin_right = 1105.0
 margin_bottom = 130.0
 script = ExtResource( 20 )
 
 [node name="MenuButton" type="MenuButton" parent="."]
-margin_left = 1077.0
-margin_right = 1135.0
+margin_left = 1109.0
+margin_right = 1167.0
 margin_bottom = 130.0
 script = ExtResource( 14 )
 
 [node name="OptionButton" type="OptionButton" parent="."]
-margin_left = 1139.0
-margin_right = 1180.0
+margin_left = 1171.0
+margin_right = 1212.0
 margin_bottom = 130.0
 script = ExtResource( 15 )
 
 [node name="ToolButton" type="ToolButton" parent="."]
-margin_left = 1184.0
-margin_right = 1196.0
+margin_left = 1216.0
+margin_right = 1228.0
 margin_bottom = 130.0
 script = ExtResource( 17 )
 
 [node name="LinkButton" type="LinkButton" parent="."]
-margin_left = 1200.0
-margin_right = 1200.0
+margin_left = 1232.0
+margin_right = 1232.0
 margin_bottom = 130.0
 script = ExtResource( 12 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 1204.0
-margin_right = 1204.0
+margin_left = 1236.0
+margin_right = 1236.0
 margin_bottom = 130.0
 script = ExtResource( 16 )
 
@@ -211,84 +211,84 @@ script = ExtResource( 26 )
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 margin_left = 566.0
 margin_top = 134.0
-margin_right = 841.0
+margin_right = 873.0
 margin_bottom = 596.0
 script = ExtResource( 27 )
 
 [node name="GraphNode" type="GraphNode" parent="."]
-margin_left = 845.0
+margin_left = 877.0
 margin_top = 134.0
-margin_right = 919.0
+margin_right = 951.0
 margin_bottom = 596.0
 script = ExtResource( 29 )
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 923.0
+margin_left = 955.0
 margin_top = 134.0
-margin_right = 931.0
+margin_right = 963.0
 margin_bottom = 596.0
 script = ExtResource( 28 )
 
 [node name="HSplitContainer_SC" type="HSplitContainer" parent="."]
-margin_left = 935.0
+margin_left = 967.0
 margin_top = 134.0
-margin_right = 947.0
+margin_right = 979.0
 margin_bottom = 596.0
 script = ExtResource( 30 )
 
 [node name="VSplitContainer" type="VSplitContainer" parent="."]
-margin_left = 951.0
+margin_left = 983.0
 margin_top = 134.0
-margin_right = 975.0
+margin_right = 1007.0
 margin_bottom = 596.0
 script = ExtResource( 31 )
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
-margin_left = 979.0
+margin_left = 1011.0
 margin_top = 134.0
-margin_right = 1055.0
+margin_right = 1087.0
 margin_bottom = 596.0
 script = ExtResource( 33 )
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-margin_left = 1059.0
+margin_left = 1091.0
 margin_top = 134.0
-margin_right = 1073.0
+margin_right = 1105.0
 margin_bottom = 596.0
 script = ExtResource( 32 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 1077.0
+margin_left = 1109.0
 margin_top = 134.0
-margin_right = 1135.0
+margin_right = 1167.0
 margin_bottom = 596.0
 script = ExtResource( 34 )
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_left = 1139.0
+margin_left = 1171.0
 margin_top = 134.0
-margin_right = 1180.0
+margin_right = 1212.0
 margin_bottom = 596.0
 script = ExtResource( 35 )
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_left = 1184.0
+margin_left = 1216.0
 margin_top = 134.0
-margin_right = 1196.0
+margin_right = 1228.0
 margin_bottom = 596.0
 script = ExtResource( 36 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 1200.0
+margin_left = 1232.0
 margin_top = 134.0
-margin_right = 1200.0
+margin_right = 1232.0
 margin_bottom = 596.0
 script = ExtResource( 37 )
 
 [node name="GraphEdit" type="GraphEdit" parent="."]
-margin_left = 1204.0
+margin_left = 1236.0
 margin_top = 134.0
-margin_right = 1204.0
+margin_right = 1236.0
 margin_bottom = 596.0
 scroll_offset = Vector2( 0, -24 )
 script = ExtResource( 38 )
@@ -323,84 +323,84 @@ script = ExtResource( 45 )
 [node name="ProgressBar" type="ProgressBar" parent="."]
 margin_left = 566.0
 margin_top = 600.0
-margin_right = 841.0
+margin_right = 873.0
 margin_bottom = 614.0
 script = ExtResource( 44 )
 
 [node name="SpinBox" type="SpinBox" parent="."]
-margin_left = 845.0
+margin_left = 877.0
 margin_top = 600.0
-margin_right = 919.0
+margin_right = 951.0
 margin_bottom = 624.0
 script = ExtResource( 43 )
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_left = 923.0
+margin_left = 955.0
 margin_top = 600.0
-margin_right = 931.0
+margin_right = 963.0
 margin_bottom = 624.0
 script = ExtResource( 41 )
 
 [node name="HSeparator_SE" type="HSeparator" parent="."]
-margin_left = 935.0
+margin_left = 967.0
 margin_top = 600.0
-margin_right = 947.0
+margin_right = 979.0
 margin_bottom = 624.0
 script = ExtResource( 48 )
 
 [node name="VSeparator" type="VSeparator" parent="."]
-margin_left = 951.0
+margin_left = 983.0
 margin_top = 600.0
-margin_right = 975.0
+margin_right = 1007.0
 margin_bottom = 624.0
 script = ExtResource( 49 )
 
 [node name="Label" type="Label" parent="."]
-margin_left = 979.0
+margin_left = 1011.0
 margin_top = 605.0
-margin_right = 1055.0
+margin_right = 1087.0
 margin_bottom = 619.0
 script = ExtResource( 47 )
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_left = 1059.0
+margin_left = 1091.0
 margin_top = 600.0
-margin_right = 1073.0
+margin_right = 1105.0
 margin_bottom = 624.0
 script = ExtResource( 46 )
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 1077.0
+margin_left = 1109.0
 margin_top = 600.0
-margin_right = 1135.0
+margin_right = 1167.0
 margin_bottom = 624.0
 script = ExtResource( 50 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_left = 1139.0
+margin_left = 1171.0
 margin_top = 600.0
-margin_right = 1180.0
+margin_right = 1212.0
 margin_bottom = 624.0
 script = ExtResource( 51 )
 
 [node name="Panel" type="Panel" parent="."]
-margin_left = 1184.0
+margin_left = 1216.0
 margin_top = 600.0
-margin_right = 1196.0
+margin_right = 1228.0
 margin_bottom = 624.0
 script = ExtResource( 52 )
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-margin_left = 1200.0
+margin_left = 1232.0
 margin_top = 600.0
-margin_right = 1200.0
+margin_right = 1232.0
 margin_bottom = 624.0
 script = ExtResource( 53 )
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 1204.0
+margin_left = 1236.0
 margin_top = 600.0
-margin_right = 1204.0
+margin_right = 1236.0
 margin_bottom = 624.0
 script = ExtResource( 54 )
 
@@ -434,6 +434,6 @@ script = ExtResource( 59 )
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
 margin_left = 566.0
 margin_top = 628.0
-margin_right = 841.0
+margin_right = 873.0
 margin_bottom = 652.0
 script = ExtResource( 58 )

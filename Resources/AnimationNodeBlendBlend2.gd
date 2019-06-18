@@ -14,10 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		var q_AnimationNodeBlend2 : AnimationNodeBlend2 = AnimationNodeBlend2.new()
+		
+		q_AnimationNodeBlend2.set_use_sync(bool(randi()%2))
+		
 		
 		if Autoload.WRONG_BUGS:
-			pass
-			
-			
-			
-			
+			q_AnimationNodeBlend2.set_use_sync(bool(randi()%2))
