@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=2]
+[gd_scene load_steps=429 format=2]
 
 [ext_resource path="res://Resources/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Resources.gd" type="Script" id=2]
@@ -44,165 +44,1731 @@
 [ext_resource path="res://Resources/AnimationNodeAnimation.gd" type="Script" id=42]
 [ext_resource path="res://Resources/CameraTexture.gd" type="Script" id=43]
 [ext_resource path="res://Resources/AAAAAAAAAAAAAAMeshLibrary.gd" type="Script" id=44]
+[ext_resource path="res://Resources/AudioEffectSpectrumAnalyzerInstance.gd" type="Script" id=45]
+[ext_resource path="res://Resources/AnimationTrackEditPlugin.gd" type="Script" id=46]
+[ext_resource path="res://Resources/AudioEffectInstance.gd" type="Script" id=47]
+[ext_resource path="res://Resources/World2.gd" type="Script" id=48]
+[ext_resource path="res://Resources/ResourceImporter.gd" type="Script" id=49]
+[ext_resource path="res://Resources/EditorFeatureProfile.gd" type="Script" id=50]
+[ext_resource path="res://Resources/AudioStreamPlayback.gd" type="Script" id=51]
+[ext_resource path="res://Resources/World.gd" type="Script" id=52]
+[ext_resource path="res://Resources/EditorExportPlugin.gd" type="Script" id=53]
+[ext_resource path="res://Resources/EditorInspectorPlugin.gd" type="Script" id=54]
+[ext_resource path="res://Resources/AudioStreamGeneratorPlayback.gd" type="Script" id=55]
+[ext_resource path="res://Resources/CameraFeed.gd" type="Script" id=56]
+[ext_resource path="res://Resources/Directory.gd" type="Script" id=57]
+[ext_resource path="res://Resources/ConfigFile.gd" type="Script" id=58]
+[ext_resource path="res://Resources/TCP_Server.gd" type="Script" id=59]
+[ext_resource path="res://Resources/AudioStreamPlaybackResampled.gd" type="Script" id=60]
+[ext_resource path="res://Resources/Expression.gd" type="Script" id=61]
+[ext_resource path="res://Resources/File.gd" type="Script" id=62]
+[ext_resource path="res://Resources/EditorSceneImporterAssimp.gd" type="Script" id=63]
+[ext_resource path="res://Resources/EditorScenePostImport.gd" type="Script" id=64]
+[ext_resource path="res://Resources/EditorImportPlugin.gd" type="Script" id=65]
+[ext_resource path="res://Resources/EditorResourceConversionPlugin.gd" type="Script" id=66]
+[ext_resource path="res://Resources/EditorResourcePreviewGenerator.gd" type="Script" id=67]
+[ext_resource path="res://Resources/EditorScript.gd" type="Script" id=68]
+[ext_resource path="res://Resources/EncodedObjectAsID.gd" type="Script" id=69]
+[ext_resource path="res://Resources/EditorSpatialGizmo.gd" type="Script" id=70]
+[ext_resource path="res://Resources/EditorSceneImporter.gd" type="Script" id=71]
+[ext_resource path="res://Resources/SpatialGizmo.gd" type="Script" id=72]
+[ext_resource path="res://Resources/MeshDataTool.gd" type="Script" id=73]
+[ext_resource path="res://Resources/PacketPeer.gd" type="Script" id=74]
+[ext_resource path="res://Resources/NetworkedMultiplayerPeer.gd" type="Script" id=75]
+[ext_resource path="res://Resources/Marshalls.gd" type="Script" id=76]
+[ext_resource path="res://Resources/KinematicCollision2D.gd" type="Script" id=77]
+[ext_resource path="res://Resources/KinematicCollision.gd" type="Script" id=78]
+[ext_resource path="res://Resources/GDScriptNativeClass.gd" type="Script" id=79]
+[ext_resource path="res://Resources/FuncRef.gd" type="Script" id=80]
+[ext_resource path="res://Resources/JSONParseResult.gd" type="Script" id=81]
+[ext_resource path="res://Resources/GDNative.gd" type="Script" id=82]
+[ext_resource path="res://Resources/HTTPClient.gd" type="Script" id=83]
+[ext_resource path="res://Resources/GDScriptFunctionState.gd" type="Script" id=84]
+[ext_resource path="res://Resources/Mutex.gd" type="Script" id=85]
+[ext_resource path="res://Resources/WebSocketPeer.gd" type="Script" id=86]
+[ext_resource path="res://Resources/PhysicsShapeQueryParameters.gd" type="Script" id=87]
+[ext_resource path="res://Resources/WebSocketServer.gd" type="Script" id=88]
+[ext_resource path="res://Resources/PacketPeerGDNative.gd" type="Script" id=89]
+[ext_resource path="res://Resources/WebSocketMultiplayerPeer.gd" type="Script" id=90]
+[ext_resource path="res://Resources/WebRTCMultiplayer.gd" type="Script" id=91]
+[ext_resource path="res://Resources/WebSocketClient.gd" type="Script" id=92]
+[ext_resource path="res://Resources/MultiplayerPeerGDNative.gd" type="Script" id=93]
+[ext_resource path="res://Resources/NetworkedMultiplayerENet.gd" type="Script" id=94]
+[ext_resource path="res://Resources/PCKPacker.gd" type="Script" id=95]
+[ext_resource path="res://Resources/Physics2DShapeQueryParameters.gd" type="Script" id=96]
+[ext_resource path="res://Resources/PacketPeerStream.gd" type="Script" id=97]
+[ext_resource path="res://Resources/PacketPeerUDP.gd" type="Script" id=98]
+[ext_resource path="res://Resources/WebRTCDataChannelGDNative.gd" type="Script" id=99]
+[ext_resource path="res://Resources/WebRTCDataChannel.gd" type="Script" id=100]
+[ext_resource path="res://Resources/PackerDatacontainerRef.gd" type="Script" id=101]
+[ext_resource path="res://Resources/ResourveInteractiveLoader.gd" type="Script" id=102]
+[ext_resource path="res://Resources/ResourceImporterOGGVorbis.gd" type="Script" id=103]
+[ext_resource path="res://Resources/RandomNumberGenerator.gd" type="Script" id=104]
+[ext_resource path="res://Resources/RegEx.gd" type="Script" id=105]
+[ext_resource path="res://Resources/RegExMatch.gd" type="Script" id=106]
+[ext_resource path="res://Resources/PhysicsShapeQueryResult.gd" type="Script" id=107]
+[ext_resource path="res://Resources/Physics2DShapeQueryResult.gd" type="Script" id=108]
+[ext_resource path="res://Resources/Physics2DTestMotionResult.gd" type="Script" id=109]
+[ext_resource path="res://Resources/ResourceFormatLoader.gd" type="Script" id=110]
+[ext_resource path="res://Resources/ResourceFormatSaver.gd" type="Script" id=111]
+[ext_resource path="res://Resources/StreamPeerBuffer.gd" type="Script" id=112]
+[ext_resource path="res://Resources/StreamPeerGDNative.gd" type="Script" id=113]
+[ext_resource path="res://Resources/SurfaceTool.gd" type="Script" id=114]
+[ext_resource path="res://Resources/StreamPeerSSL.gd" type="Script" id=115]
+[ext_resource path="res://Resources/SpatialVelocityTracker.gd" type="Script" id=116]
+[ext_resource path="res://Resources/SceneState.gd" type="Script" id=117]
+[ext_resource path="res://Resources/StreamPeer.gd" type="Script" id=118]
+[ext_resource path="res://Resources/SceneTreeTimer.gd" type="Script" id=119]
+[ext_resource path="res://Resources/Semaphore.gd" type="Script" id=120]
+[ext_resource path="res://Resources/ARVRPositionalTracker.gd" type="Script" id=121]
+[ext_resource path="res://Resources/PhysicsDirectSpaceState.gd" type="Script" id=122]
+[ext_resource path="res://Resources/BulletPhysicsDirectBodyState.gd" type="Script" id=123]
+[ext_resource path="res://Resources/BulletPhysicsDirectSpaceState.gd" type="Script" id=124]
+[ext_resource path="res://Resources/AudioServer.gd" type="Script" id=125]
+[ext_resource path="res://Resources/CameraServer.gd" type="Script" id=126]
+[ext_resource path="res://Resources/WebRTCPeerConnection.gd" type="Script" id=127]
+[ext_resource path="res://Resources/WebRTCPeerConnectionGDNative.gd" type="Script" id=128]
+[ext_resource path="res://Resources/XMLParser.gd" type="Script" id=129]
+[ext_resource path="res://Resources/StreamPeerTCP.gd" type="Script" id=130]
+[ext_resource path="res://Resources/Thread.gd" type="Script" id=131]
+[ext_resource path="res://Resources/TriangleMesh.gd" type="Script" id=132]
+[ext_resource path="res://Resources/UPNP.gd" type="Script" id=133]
+[ext_resource path="res://Resources/UPNPDevice.gd" type="Script" id=134]
+[ext_resource path="res://Resources/VisualScriptFunctionState.gd" type="Script" id=135]
+[ext_resource path="res://Resources/WeakRef.gd" type="Script" id=136]
+[ext_resource path="res://Resources/ARVRServer.gd" type="Script" id=137]
+[ext_resource path="res://Resources/PhysicsDirectBodyState.gd" type="Script" id=138]
+[ext_resource path="res://Resources/IP.gd" type="Script" id=139]
+[ext_resource path="res://Resources/IP_Unix.gd" type="Script" id=140]
+[ext_resource path="res://Resources/Input.gd" type="Script" id=141]
+[ext_resource path="res://Resources/ClassDB.gd" type="Script" id=142]
+[ext_resource path="res://Resources/EditorFileSystemDirectory.gd" type="Script" id=143]
+[ext_resource path="res://Resources/EditorNavigationMeshGenerator.gd" type="Script" id=144]
+[ext_resource path="res://Resources/BulletPhysicsServer.gd" type="Script" id=145]
+[ext_resource path="res://Resources/PhysicsServer.gd" type="Script" id=146]
+[ext_resource path="res://Resources/ProjectSettings.gd" type="Script" id=147]
+[ext_resource path="res://Resources/ResourceLoader.gd" type="Script" id=148]
+[ext_resource path="res://Resources/Engine.gd" type="Script" id=149]
+[ext_resource path="res://Resources/Geometry.gd" type="Script" id=150]
+[ext_resource path="res://Resources/EditorSelection.gd" type="Script" id=151]
+[ext_resource path="res://Resources/ResourceSaver.gd" type="Script" id=152]
+[ext_resource path="res://Resources/TranslationServer.gd" type="Script" id=153]
+[ext_resource path="res://Resources/Physics2DServer.gd" type="Script" id=154]
+[ext_resource path="res://Resources/Physics2DServerSW.gd" type="Script" id=155]
+[ext_resource path="res://Resources/InputDefault.gd" type="Script" id=156]
+[ext_resource path="res://Resources/InputMap.gd" type="Script" id=157]
+[ext_resource path="res://Resources/JSON.gd" type="Script" id=158]
+[ext_resource path="res://Resources/JavaScript.gd" type="Script" id=159]
+[ext_resource path="res://Resources/MainLoop.gd" type="Script" id=160]
+[ext_resource path="res://Resources/SceneTree.gd" type="Script" id=161]
+[ext_resource path="res://Resources/OS.gd" type="Script" id=162]
+[ext_resource path="res://Resources/Performance.gd" type="Script" id=163]
+[ext_resource path="res://Resources/Physics2DDirectBodyState.gd" type="Script" id=164]
+[ext_resource path="res://Resources/Physics2DDirectBodyStateSW.gd" type="Script" id=165]
+[ext_resource path="res://Resources/Physics2DDirectSpaceState.gd" type="Script" id=166]
+[ext_resource path="res://Resources/Physics2DDirectSpaceStateSW.gd" type="Script" id=167]
+[ext_resource path="res://Resources/bool.gd" type="Script" id=168]
+[ext_resource path="res://Resources/float.gd" type="Script" id=169]
+[ext_resource path="res://Resources/Vector3.gd" type="Script" id=170]
+[ext_resource path="res://Resources/UndoRedo.gd" type="Script" id=171]
+[ext_resource path="res://Resources/VisualScriptEditor.gd" type="Script" id=172]
+[ext_resource path="res://Resources/Array.gd" type="Script" id=173]
+[ext_resource path="res://Resources/VisualServer.gd" type="Script" id=174]
+[ext_resource path="res://Resources/TreeItem.gd" type="Script" id=175]
+[ext_resource path="res://Resources/Color.gd" type="Script" id=176]
+[ext_resource path="res://Resources/Basis.gd" type="Script" id=177]
+[ext_resource path="res://Resources/PoolColorArray.gd" type="Script" id=178]
+[ext_resource path="res://Resources/int.gd" type="Script" id=179]
+[ext_resource path="res://Resources/PoolIntArray.gd" type="Script" id=180]
+[ext_resource path="res://Resources/Transform2D.gd" type="Script" id=181]
+[ext_resource path="res://Resources/Vector2.gd" type="Script" id=182]
+[ext_resource path="res://Resources/PoolRealArray.gd" type="Script" id=183]
+[ext_resource path="res://Resources/Dictionary.gd" type="Script" id=184]
+[ext_resource path="res://Resources/Nil.gd" type="Script" id=185]
+[ext_resource path="res://Resources/NodePath.gd" type="Script" id=186]
+[ext_resource path="res://Resources/Plane.gd" type="Script" id=187]
+[ext_resource path="res://Resources/PoolByteArray.gd" type="Script" id=188]
+[ext_resource path="res://Resources/Variant.gd" type="Script" id=189]
+[ext_resource path="res://Resources/String.gd" type="Script" id=190]
+[ext_resource path="res://Resources/Rect2.gd" type="Script" id=191]
+[ext_resource path="res://Resources/Transform.gd" type="Script" id=192]
+[ext_resource path="res://Resources/RID.gd" type="Script" id=193]
+[ext_resource path="res://Resources/Quat.gd" type="Script" id=194]
+[ext_resource path="res://Resources/PoolVector2Array.gd" type="Script" id=195]
+[ext_resource path="res://Resources/PoolVector3Array.gd" type="Script" id=196]
+[ext_resource path="res://Resources/PoolStringArray.gd" type="Script" id=197]
+[ext_resource path="res://Resources/AudioEffectHighShelfFilter.gd" type="Script" id=198]
+[ext_resource path="res://Resources/CapsuleMesh.gd" type="Script" id=199]
+[ext_resource path="res://Resources/PrimitiveMesh.gd" type="Script" id=200]
+[ext_resource path="res://Resources/SphereMesh.gd" type="Script" id=201]
+[ext_resource path="res://Resources/QuadMesh.gd" type="Script" id=202]
+[ext_resource path="res://Resources/PrismMesh.gd" type="Script" id=203]
+[ext_resource path="res://Resources/PlaneMesh.gd" type="Script" id=204]
+[ext_resource path="res://Resources/AudioEffectCompressor.gd" type="Script" id=205]
+[ext_resource path="res://Resources/AudioEffectDelay.gd" type="Script" id=206]
+[ext_resource path="res://Resources/AudioStreamStreamSample.gd" type="Script" id=207]
+[ext_resource path="res://Resources/AudioEffectDistortion.gd" type="Script" id=208]
+[ext_resource path="res://Resources/AudioEffectLowShelfFilter.gd" type="Script" id=209]
+[ext_resource path="res://Resources/AudioEffectNotchFilter.gd" type="Script" id=210]
+[ext_resource path="res://Resources/AudioEffectChorus.gd" type="Script" id=211]
+[ext_resource path="res://Resources/AudioEffectBandPassFilter.gd" type="Script" id=212]
+[ext_resource path="res://Resources/AudioEffectBandLimitFilter.gd" type="Script" id=213]
+[ext_resource path="res://Resources/AudioEffectLowPassFilter.gd" type="Script" id=214]
+[ext_resource path="res://Resources/AudioEffectHighPassFilter.gd" type="Script" id=215]
+[ext_resource path="res://Resources/CubeMesh.gd" type="Script" id=216]
+[ext_resource path="res://Resources/CylinderMesh.gd" type="Script" id=217]
+[ext_resource path="res://Resources/AudioEffect.gd" type="Script" id=218]
+[ext_resource path="res://Resources/AudioBusLayout.gd" type="Script" id=219]
+[ext_resource path="res://Resources/AudioEffectAmplify.gd" type="Script" id=220]
+[ext_resource path="res://Resources/AudioEffectFilter.gd" type="Script" id=221]
+[ext_resource path="res://Resources/AudioEffectStereoEnhance.gd" type="Script" id=222]
+[ext_resource path="res://Resources/AudioStreamGenerator.gd" type="Script" id=223]
+[ext_resource path="res://Resources/AudioStreamMicrophone.gd" type="Script" id=224]
+[ext_resource path="res://Resources/AudioEffectSpectrumAnalyzer.gd" type="Script" id=225]
+[ext_resource path="res://Resources/AudioEffectPitchShift.gd" type="Script" id=226]
+[ext_resource path="res://Resources/AudioEffectEQ6.gd" type="Script" id=227]
+[ext_resource path="res://Resources/AudioEffectLimiter.gd" type="Script" id=228]
+[ext_resource path="res://Resources/AudioEffectEQ21.gd" type="Script" id=229]
+[ext_resource path="res://Resources/AudioEffectPanner.gd" type="Script" id=230]
+[ext_resource path="res://Resources/AudioStreamOGGVorbis.gd" type="Script" id=231]
+[ext_resource path="res://Resources/AudioEffectEQ.gd" type="Script" id=232]
+[ext_resource path="res://Resources/AudioEffectEQ10.gd" type="Script" id=233]
+[ext_resource path="res://Resources/AudioStream.gd" type="Script" id=234]
+[ext_resource path="res://Resources/BakedLightmapData.gd" type="Script" id=235]
+[ext_resource path="res://Resources/AudioEffectReverb.gd" type="Script" id=236]
+[ext_resource path="res://Resources/AudioEffectPhaser.gd" type="Script" id=237]
+[ext_resource path="res://Resources/AudioEffectRecord.gd" type="Script" id=238]
+[ext_resource path="res://Resources/ButtonGroup.gd" type="Script" id=239]
+[ext_resource path="res://Resources/Material.gd" type="Script" id=240]
+[ext_resource path="res://Resources/PartialMaterial.gd" type="Script" id=241]
+[ext_resource path="res://Resources/Shape.gd" type="Script" id=242]
+[ext_resource path="res://Resources/CapsuleShape.gd" type="Script" id=243]
+[ext_resource path="res://Resources/BoxShape.gd" type="Script" id=244]
+[ext_resource path="res://Resources/BitMap.gd" type="Script" id=245]
+[ext_resource path="res://Resources/DynamicFont.gd" type="Script" id=246]
+[ext_resource path="res://Resources/Font.gd" type="Script" id=247]
+[ext_resource path="res://Resources/BitmapFont.gd" type="Script" id=248]
+[ext_resource path="res://Resources/ConcavePolygonShape.gd" type="Script" id=249]
+[ext_resource path="res://Resources/AudioStreamRandomPitch.gd" type="Script" id=250]
+[ext_resource path="res://Resources/CanvasItemMaterial.gd" type="Script" id=251]
+[ext_resource path="res://Resources/SpatialMaterial.gd" type="Script" id=252]
+[ext_resource path="res://Resources/Shape2D.gd" type="Script" id=253]
+[ext_resource path="res://Resources/ShaderMaterial.gd" type="Script" id=254]
+[ext_resource path="res://Resources/CylinderShape.gd" type="Script" id=255]
+[ext_resource path="res://Resources/SphereShape.gd" type="Script" id=256]
+[ext_resource path="res://Resources/HeightMapShape.gd" type="Script" id=257]
+[ext_resource path="res://Resources/RayShape.gd" type="Script" id=258]
+[ext_resource path="res://Resources/PlaneShape.gd" type="Script" id=259]
+[ext_resource path="res://Resources/ConvexPolygonShape.gd" type="Script" id=260]
+[ext_resource path="res://Resources/SegmentShape2D.gd" type="Script" id=261]
+[ext_resource path="res://Resources/CubeMap.gd" type="Script" id=262]
+[ext_resource path="res://Resources/Curve.gd" type="Script" id=263]
+[ext_resource path="res://Resources/RayShape2D.gd" type="Script" id=264]
+[ext_resource path="res://Resources/RectangleShape2D.gd" type="Script" id=265]
+[ext_resource path="res://Resources/LineShape2D.gd" type="Script" id=266]
+[ext_resource path="res://Resources/CapsuleShape2D.gd" type="Script" id=267]
+[ext_resource path="res://Resources/CircleShape2D.gd" type="Script" id=268]
+[ext_resource path="res://Resources/ConcavePolygonShape2D.gd" type="Script" id=269]
+[ext_resource path="res://Resources/ConvexPolygonShape2D.gd" type="Script" id=270]
+[ext_resource path="res://Resources/EditorSpatialGizmoPlugin.gd" type="Script" id=271]
+[ext_resource path="res://Resources/GDNativeLibrary.gd" type="Script" id=272]
+[ext_resource path="res://Resources/Script.gd" type="Script" id=273]
+[ext_resource path="res://Resources/DynamicFontData.gd" type="Script" id=274]
+[ext_resource path="res://Resources/VisualScript.gd" type="Script" id=275]
+[ext_resource path="res://Resources/IntpuEvent.gd" type="Script" id=276]
+[ext_resource path="res://Resources/EditorSettings.gd" type="Script" id=277]
+[ext_resource path="res://Resources/Curve2D.gd" type="Script" id=278]
+[ext_resource path="res://Resources/Curve3D.gd" type="Script" id=279]
+[ext_resource path="res://Resources/InputEventAction.gd" type="Script" id=280]
+[ext_resource path="res://Resources/IntpuEventPanGesture.gd" type="Script" id=281]
+[ext_resource path="res://Resources/IntpuEventKey.gd" type="Script" id=282]
+[ext_resource path="res://Resources/IntpuEventMIDI.gd" type="Script" id=283]
+[ext_resource path="res://Resources/IntpuEventMouse.gd" type="Script" id=284]
+[ext_resource path="res://Resources/IntpuEventJoypadButton.gd" type="Script" id=285]
+[ext_resource path="res://Resources/IntpuEventMouseMotion.gd" type="Script" id=286]
+[ext_resource path="res://Resources/IntpuEventMouseButton.gd" type="Script" id=287]
+[ext_resource path="res://Resources/NativeScript.gd" type="Script" id=288]
+[ext_resource path="res://Resources/Environment.gd" type="Script" id=289]
+[ext_resource path="res://Resources/IntpuEventScreenTouch.gd" type="Script" id=290]
+[ext_resource path="res://Resources/IntpuEventJoypadMotion.gd" type="Script" id=291]
+[ext_resource path="res://Resources/PluginScript.gd" type="Script" id=292]
+[ext_resource path="res://Resources/Image.gd" type="Script" id=293]
+[ext_resource path="res://Resources/IntpuEventWithModifiers.gd" type="Script" id=294]
+[ext_resource path="res://Resources/GIProbeData.gd" type="Script" id=295]
+[ext_resource path="res://Resources/Gradient.gd" type="Script" id=296]
+[ext_resource path="res://Resources/IntpuEventAction.gd" type="Script" id=297]
+[ext_resource path="res://Resources/IntpuEventScreenDrag.gd" type="Script" id=298]
+[ext_resource path="res://Resources/IntpuEventGesture.gd" type="Script" id=299]
+[ext_resource path="res://Resources/IntpuEventMagnifyGesture.gd" type="Script" id=300]
+[ext_resource path="res://Resources/VisualScriptIndexSet.gd" type="Script" id=301]
+[ext_resource path="res://Resources/VisualShaderNodeVectorScalarStep.gd" type="Script" id=302]
+[ext_resource path="res://Resources/VisualScriptBuiltinFunc.gd" type="Script" id=303]
+[ext_resource path="res://Resources/VisualScriptTypeCast.gd" type="Script" id=304]
+[ext_resource path="res://Resources/VisualScriptExpression.gd" type="Script" id=305]
+[ext_resource path="res://Resources/VisualScriptSwitch.gd" type="Script" id=306]
+[ext_resource path="res://Resources/VisualScriptSceneTree.gd" type="Script" id=307]
+[ext_resource path="res://Resources/VisualScriptClassConstant.gd" type="Script" id=308]
+[ext_resource path="res://Resources/VisualShaderNodeUniform.gd" type="Script" id=309]
+[ext_resource path="res://Resources/VisualScriptPropertySet.gd" type="Script" id=310]
+[ext_resource path="res://Resources/PanoramaSky.gd" type="Script" id=311]
+[ext_resource path="res://Resources/PackedDataContainer.gd" type="Script" id=312]
+[ext_resource path="res://Resources/VisualScriptWhile.gd" type="Script" id=313]
+[ext_resource path="res://Resources/SpriteFrames.gd" type="Script" id=314]
+[ext_resource path="res://Resources/VisualScriptYield.gd" type="Script" id=315]
+[ext_resource path="res://Resources/VisualShaderNodeColorFunc.gd" type="Script" id=316]
+[ext_resource path="res://Resources/VisualScriptPreload.gd" type="Script" id=317]
+[ext_resource path="res://Resources/VisualShaderNodeGroupBase.gd" type="Script" id=318]
+[ext_resource path="res://Resources/VisualScriptYieldSignal.gd" type="Script" id=319]
+[ext_resource path="res://Resources/VisualShaderNodeTextureUniform.gd" type="Script" id=320]
+[ext_resource path="res://Resources/VisualShaderNodeBooleanConstant.gd" type="Script" id=321]
+[ext_resource path="res://Resources/VisualShaderNodeVec3Uniform.gd" type="Script" id=322]
+[ext_resource path="res://Resources/VisualShaderNodeCubeMapUniform.gd" type="Script" id=323]
+[ext_resource path="res://Resources/OpenSimplexNoise.gd" type="Script" id=324]
+[ext_resource path="res://Resources/VisualScriptIterator.gd" type="Script" id=325]
+[ext_resource path="res://Resources/VisualShaderNodeColorUniform.gd" type="Script" id=326]
+[ext_resource path="res://Resources/VisualShaderNodeTransformUniform.gd" type="Script" id=327]
+[ext_resource path="res://Resources/VisualScriptEmitSignal.gd" type="Script" id=328]
+[ext_resource path="res://Resources/VisualShaderNodeScalarUniform.gd" type="Script" id=329]
+[ext_resource path="res://Resources/PolygonPathFinder.gd" type="Script" id=330]
+[ext_resource path="res://Resources/VisualScriptFunction.gd" type="Script" id=331]
+[ext_resource path="res://Resources/PhysicsMaterial.gd" type="Script" id=332]
+[ext_resource path="res://Resources/Sky.gd" type="Script" id=333]
+[ext_resource path="res://Resources/VisualShaderNodeTexture.gd" type="Script" id=334]
+[ext_resource path="res://Resources/VisualShaderNodeVectorScalarSmoothStep.gd" type="Script" id=335]
+[ext_resource path="res://Resources/VisualShaderNodeDeterminant.gd" type="Script" id=336]
+[ext_resource path="res://Resources/VisualScriptIndexGet.gd" type="Script" id=337]
+[ext_resource path="res://Resources/Theme.gd" type="Script" id=338]
+[ext_resource path="res://Resources/VisualShaderNodeVec3Constant.gd" type="Script" id=339]
+[ext_resource path="res://Resources/VisualShaderNodeVectorInterp.gd" type="Script" id=340]
+[ext_resource path="res://Resources/VisualShaderNode.gd" type="Script" id=341]
+[ext_resource path="res://Resources/VisualShaderNodeScalarSmoothStep.gd" type="Script" id=342]
+[ext_resource path="res://Resources/PHashTranslation.gd" type="Script" id=343]
+[ext_resource path="res://Resources/VisualShaderNodeCubeMap.gd" type="Script" id=344]
+[ext_resource path="res://Resources/VisualShaderNodeColorOp.gd" type="Script" id=345]
+[ext_resource path="res://Resources/VisualShaderNodeExpression.gd" type="Script" id=346]
+[ext_resource path="res://Resources/VisualScriptSelf.gd" type="Script" id=347]
+[ext_resource path="res://Resources/VisualShaderNodeTransformMult.gd" type="Script" id=348]
+[ext_resource path="res://Resources/VisualShaderNodeScalarOp.gd" type="Script" id=349]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDistance.gd" type="Script" id=350]
+[ext_resource path="res://Resources/VisualScriptOperator.gd" type="Script" id=351]
+[ext_resource path="res://Resources/VisualShaderNodeVectorClamp.gd" type="Script" id=352]
+[ext_resource path="res://Resources/VisualShaderNodeVectorSmoothStep.gd" type="Script" id=353]
+[ext_resource path="res://Resources/VisualScriptReturn.gd" type="Script" id=354]
+[ext_resource path="res://Resources/VideoStreamGDNative.gd" type="Script" id=355]
+[ext_resource path="res://Resources/VisualScriptNode.gd" type="Script" id=356]
+[ext_resource path="res://Resources/ShortCut.gd" type="Script" id=357]
+[ext_resource path="res://Resources/VideoStreamTheora.gd" type="Script" id=358]
+[ext_resource path="res://Resources/VideoStream.gd" type="Script" id=359]
+[ext_resource path="res://Resources/VisualScriptVariableSet.gd" type="Script" id=360]
+[ext_resource path="res://Resources/StyleBoxEmpty.gd" type="Script" id=361]
+[ext_resource path="res://Resources/VisualShaderNodeTransformConstant.gd" type="Script" id=362]
+[ext_resource path="res://Resources/VisualScriptBasicTypeConstant.gd" type="Script" id=363]
+[ext_resource path="res://Resources/VisualShaderNodeTransformVecMult.gd" type="Script" id=364]
+[ext_resource path="res://Resources/VisualScriptDeconstruct.gd" type="Script" id=365]
+[ext_resource path="res://Resources/VisualScriptSelect.gd" type="Script" id=366]
+[ext_resource path="res://Resources/StyleBoxFlat.gd" type="Script" id=367]
+[ext_resource path="res://Resources/VisualScriptConstant.gd" type="Script" id=368]
+[ext_resource path="res://Resources/VisualScriptLocalVarSet.gd" type="Script" id=369]
+[ext_resource path="res://Resources/TextFile.gd" type="Script" id=370]
+[ext_resource path="res://Resources/VisualScriptMathConstant.gd" type="Script" id=371]
+[ext_resource path="res://Resources/VideoStreamWebm.gd" type="Script" id=372]
+[ext_resource path="res://Resources/VisualShaderNodeIf.gd" type="Script" id=373]
+[ext_resource path="res://Resources/VisualShaderNodeSwitch.gd" type="Script" id=374]
+[ext_resource path="res://Resources/Translation.gd" type="Script" id=375]
+[ext_resource path="res://Resources/Shader.gd" type="Script" id=376]
+[ext_resource path="res://Resources/VisualShaderNodeVectorFunc.gd" type="Script" id=377]
+[ext_resource path="res://Resources/StyleBox.gd" type="Script" id=378]
+[ext_resource path="res://Resources/VisualScriptVariableGet.gd" type="Script" id=379]
+[ext_resource path="res://Resources/Texture3D.gd" type="Script" id=380]
+[ext_resource path="res://Resources/VisualShader.gd" type="Script" id=381]
+[ext_resource path="res://Resources/TileSet.gd" type="Script" id=382]
+[ext_resource path="res://Resources/VisualScriptEndgineSingleton.gd" type="Script" id=383]
+[ext_resource path="res://Resources/VisualShaderNodeOutput.gd" type="Script" id=384]
+[ext_resource path="res://Resources/VisualShaderNodeVectorCompose.gd" type="Script" id=385]
+[ext_resource path="res://Resources/StyleBoxTexture.gd" type="Script" id=386]
+[ext_resource path="res://Resources/TextureArray.gd" type="Script" id=387]
+[ext_resource path="res://Resources/VisualShaderNodeColorConstant.gd" type="Script" id=388]
+[ext_resource path="res://Resources/VisualScriptComment.gd" type="Script" id=389]
+[ext_resource path="res://Resources/VisualShaderNodeScalarInterp.gd" type="Script" id=390]
+[ext_resource path="res://Resources/TextureLayered.gd" type="Script" id=391]
+[ext_resource path="res://Resources/NavigationPolygon.gd" type="Script" id=392]
+[ext_resource path="res://Resources/VisualShaderNodeScalarDerivativeFunc.gd" type="Script" id=393]
+[ext_resource path="res://Resources/OccluderPolygon2D.gd" type="Script" id=394]
+[ext_resource path="res://Resources/PackedScene.gd" type="Script" id=395]
+[ext_resource path="res://Resources/VisualScriptLocalVar.gd" type="Script" id=396]
+[ext_resource path="res://Resources/VisualShaderNodeVectorRefract.gd" type="Script" id=397]
+[ext_resource path="res://Resources/VisualShaderNodeVectorOp.gd" type="Script" id=398]
+[ext_resource path="res://Resources/ProceduralSky.gd" type="Script" id=399]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDerivativeFunc.gd" type="Script" id=400]
+[ext_resource path="res://Resources/VisualScriptCondition.gd" type="Script" id=401]
+[ext_resource path="res://Resources/VisualScriptFunctionCall.gd" type="Script" id=402]
+[ext_resource path="res://Resources/VisualScriptResourcePath.gd" type="Script" id=403]
+[ext_resource path="res://Resources/VisualShaderNodeFresnel.gd" type="Script" id=404]
+[ext_resource path="res://Resources/VisualScriptSceneNode.gd" type="Script" id=405]
+[ext_resource path="res://Resources/VisualShaderNodeBooleanUniform.gd" type="Script" id=406]
+[ext_resource path="res://Resources/VisualScriptInputAction.gd" type="Script" id=407]
+[ext_resource path="res://Resources/VisualScriptSequence.gd" type="Script" id=408]
+[ext_resource path="res://Resources/VisualScriptSubCall.gd" type="Script" id=409]
+[ext_resource path="res://Resources/VisualShaderNodeScalarClamp.gd" type="Script" id=410]
+[ext_resource path="res://Resources/VisualShaderNodeFaceForward.gd" type="Script" id=411]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDecompose.gd" type="Script" id=412]
+[ext_resource path="res://Resources/MultiMesh.gd" type="Script" id=413]
+[ext_resource path="res://Resources/VisualScriptConstructor.gd" type="Script" id=414]
+[ext_resource path="res://Resources/StyleBoxLine.gd" type="Script" id=415]
+[ext_resource path="res://Resources/VisualShaderNodeOuterProduct.gd" type="Script" id=416]
+[ext_resource path="res://Resources/VisualShaderNodeVectorLen.gd" type="Script" id=417]
+[ext_resource path="res://Resources/VisualShaderNodeDotProduct.gd" type="Script" id=418]
+[ext_resource path="res://Resources/VisualShaderNodeDecompose.gd" type="Script" id=419]
+[ext_resource path="res://Resources/VisualScriptGlobalConstant.gd" type="Script" id=420]
+[ext_resource path="res://Resources/VisualShaderNodeTransformFunc.gd" type="Script" id=421]
+[ext_resource path="res://Resources/VisualShaderNodeTransformCompose.gd" type="Script" id=422]
+[ext_resource path="res://Resources/VisualShaderNodeScalarConstant.gd" type="Script" id=423]
+[ext_resource path="res://Resources/VisualScriptPropertyGet.gd" type="Script" id=424]
+[ext_resource path="res://Resources/VisualShaderNodeScalarFunc.gd" type="Script" id=425]
+[ext_resource path="res://Resources/VisualShaderNodeInput.gd" type="Script" id=426]
+[ext_resource path="res://Resources/NavigationMesh.gd" type="Script" id=427]
+[ext_resource path="res://Resources/VisualScriptCustomNode.gd" type="Script" id=428]
 
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
 
-[node name="GDScript" type="Node2D" parent="."]
+[node name="ALLCREATED" type="Node2D" parent="."]
+visible = false
+
+[node name="GDScript" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 1 )
 
-[node name="GlobalScope" type="Node2D" parent="."]
+[node name="GlobalScope" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 3 )
 
-[node name="Reference" type="Node2D" parent="."]
+[node name="Reference" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 5 )
 
-[node name="ARVRInterface_CANT" type="Node2D" parent="."]
+[node name="ARVRInterface_CANT" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 4 )
 
-[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="."]
+[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 6 )
 
-[node name="MobileVRInterface" type="Node2D" parent="."]
+[node name="MobileVRInterface" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 9 )
 
-[node name="AStar" type="Node2D" parent="."]
+[node name="AStar" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 8 )
 
-[node name="Resource" type="Node2D" parent="."]
+[node name="Resource" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 7 )
 
-[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
+[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 33 )
 
-[node name="AnimatedTexture" type="Node2D" parent="."]
+[node name="AnimatedTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 38 )
 
-[node name="AtlasTexture" type="Node2D" parent="."]
+[node name="AtlasTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 30 )
 
-[node name="CameraTexture" type="Node2D" parent="."]
+[node name="CameraTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 43 )
 
-[node name="CurveTexture" type="Node2D" parent="."]
+[node name="CurveTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 32 )
 
-[node name="GradientTexture" type="Node2D" parent="."]
+[node name="GradientTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 34 )
 
-[node name="ImageTexture" type="Node2D" parent="."]
+[node name="ImageTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 15 )
 
-[node name="LargeTexture" type="Node2D" parent="."]
+[node name="LargeTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 16 )
 
-[node name="MeshTexture" type="Node2D" parent="."]
+[node name="MeshTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 18 )
 
-[node name="NoiseTexture" type="Node2D" parent="."]
+[node name="NoiseTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 22 )
 
-[node name="ProxyTexture" type="Node2D" parent="."]
+[node name="ProxyTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 23 )
 
-[node name="ViewportTexture" type="Node2D" parent="."]
+[node name="ViewportTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 13 )
 
-[node name="StreamTexture" type="Node2D" parent="."]
+[node name="StreamTexture" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 11 )
 
-[node name="Animation" type="Node2D" parent="."]
+[node name="Animation" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 14 )
 
-[node name="AnimationNode" type="Node2D" parent="."]
+[node name="AnimationNode" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 36 )
 
-[node name="AnimationNodeAdd2" type="Node2D" parent="."]
+[node name="AnimationNodeAdd2" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 25 )
 
-[node name="AnimationNodeAdd3" type="Node2D" parent="."]
+[node name="AnimationNodeAdd3" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 37 )
 
-[node name="AnimationRootNode" type="Node2D" parent="."]
+[node name="AnimationRootNode" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 24 )
 
-[node name="AnimationNodeAnimation" type="Node2D" parent="."]
+[node name="AnimationNodeAnimation" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 42 )
 
-[node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
+[node name="AnimationNodeBlendSpace1D" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 21 )
 
-[node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
+[node name="AnimationNodeBlendSpace2D" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 35 )
 
-[node name="AnimationNodeBlendTree" type="Node2D" parent="."]
+[node name="AnimationNodeBlendTree" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 20 )
 
-[node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
+[node name="AnimationNodeBlendMachine" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 12 )
 
-[node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
+[node name="AnimationNodeBlendBlend2" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 41 )
 
-[node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
+[node name="AnimationNodeBlendBlend3" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 29 )
 
-[node name="AnimationNodeOneShot" type="Node2D" parent="."]
+[node name="AnimationNodeOneShot" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 39 )
 
-[node name="AnimationNodeOutput" type="Node2D" parent="."]
+[node name="AnimationNodeOutput" type="Node2D" parent="ALLCREATED"]
+visible = false
 script = ExtResource( 10 )
 
-[node name="AnimationNodeTimeScale" type="Node2D" parent="."]
+[node name="AnimationNodeTimeScale" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 28 )
 
-[node name="AnimationNodeTimeSeek" type="Node2D" parent="."]
+[node name="AnimationNodeTimeSeek" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 40 )
 
-[node name="AnimationNodeTransition" type="Node2D" parent="."]
+[node name="AnimationNodeTransition" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 19 )
 
-[node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="."]
+[node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 17 )
 
-[node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="."]
+[node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 27 )
 
-[node name="Mesh" type="Node2D" parent="."]
+[node name="Mesh" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 26 )
 
-[node name="ArrayMesh" type="Node2D" parent="."]
+[node name="ArrayMesh" type="Node2D" parent="ALLCREATED"]
 visible = false
 script = ExtResource( 31 )
 
-[node name="AAAAAAAAAAAAAAMeshLibrary" type="Node2D" parent="."]
+[node name="TODO" type="Node2D" parent="."]
+
+[node name="PrimitiveMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 200 )
+
+[node name="CapsuleMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 199 )
+
+[node name="CubeMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 216 )
+
+[node name="CylinderMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 217 )
+
+[node name="PlaneMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 204 )
+
+[node name="PrismMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 203 )
+
+[node name="QuadMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 202 )
+
+[node name="SphereMesh" type="Node2D" parent="TODO"]
+script = ExtResource( 201 )
+
+[node name="Audio TODO" type="Node2D" parent="."]
+visible = false
+
+[node name="AudioBusLayout" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 219 )
+
+[node name="AudioEffect" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 218 )
+
+[node name="AudioEffectAmplify" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 220 )
+
+[node name="AudioEffectFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 221 )
+
+[node name="AudioEffectBandLimitFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 213 )
+
+[node name="AudioEffectBandPassFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 212 )
+
+[node name="AudioEffectHighPassFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 215 )
+
+[node name="AudioEffectHighShelfFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 198 )
+
+[node name="AudioEffectLowPassFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 214 )
+
+[node name="AudioEffectLowShelfFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 209 )
+
+[node name="AudioEffectNotchFilter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 210 )
+
+[node name="AudioEffectChorus" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 211 )
+
+[node name="AudioEffectCompressor" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 205 )
+
+[node name="AudioEffectDelay" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 206 )
+
+[node name="AudioEffectDistortion" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 208 )
+
+[node name="AudioEffectEQ" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 232 )
+
+[node name="AudioEffectEQ10" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 233 )
+
+[node name="AudioEffectEQ21" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 229 )
+
+[node name="AudioEffectEQ6" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 227 )
+
+[node name="AudioEffectLimiter" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 228 )
+
+[node name="AudioEffectPanner" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 230 )
+
+[node name="AudioEffectPhaser" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 237 )
+
+[node name="AudioEffectPitchShift" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 226 )
+
+[node name="AudioEffectRecord" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 238 )
+
+[node name="AudioEffectReverb" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 236 )
+
+[node name="AudioEffectSpectrumAnalyzer" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 225 )
+
+[node name="AudioEffectStereoEnhance" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 222 )
+
+[node name="AudioStream" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 234 )
+
+[node name="AudioStreamGenerator" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 223 )
+
+[node name="AudioStreamMicrophone" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 224 )
+
+[node name="AudioStreamOGGVorbis" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 231 )
+
+[node name="AudioStreamRandomPitch" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 250 )
+
+[node name="AudioStreamStreamSample" type="Node2D" parent="Audio TODO"]
+script = ExtResource( 207 )
+
+[node name="TODO 2" type="Node2D" parent="."]
+
+[node name="BakedLightmapData" type="Node2D" parent="TODO 2"]
+script = ExtResource( 235 )
+
+[node name="BitMap" type="Node2D" parent="TODO 2"]
+script = ExtResource( 245 )
+
+[node name="Font" type="Node2D" parent="TODO 2"]
+script = ExtResource( 247 )
+
+[node name="BitmapFont" type="Node2D" parent="TODO 2"]
+script = ExtResource( 248 )
+
+[node name="DynamicFont" type="Node2D" parent="TODO 2"]
+script = ExtResource( 246 )
+
+[node name="Shape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 242 )
+
+[node name="BoxShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 244 )
+
+[node name="CapsuleShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 243 )
+
+[node name="ConcavePolygonShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 249 )
+
+[node name="ConvexPolygonShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 260 )
+
+[node name="CylinderShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 255 )
+
+[node name="HeightMapShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 257 )
+
+[node name="PlaneShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 259 )
+
+[node name="RayShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 258 )
+
+[node name="SphereShape" type="Node2D" parent="TODO 2"]
+script = ExtResource( 256 )
+
+[node name="ButtonGroup" type="Node2D" parent="TODO 2"]
+script = ExtResource( 239 )
+
+[node name="Material" type="Node2D" parent="TODO 2"]
+script = ExtResource( 240 )
+
+[node name="CanvasItemMaterial" type="Node2D" parent="TODO 2"]
+script = ExtResource( 251 )
+
+[node name="PartialMaterial" type="Node2D" parent="TODO 2"]
+script = ExtResource( 241 )
+
+[node name="ShaderMaterial" type="Node2D" parent="TODO 2"]
+script = ExtResource( 254 )
+
+[node name="SpatialMaterial" type="Node2D" parent="TODO 2"]
+script = ExtResource( 252 )
+
+[node name="Shape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 253 )
+
+[node name="CapsuleShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 267 )
+
+[node name="CircleShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 268 )
+
+[node name="ConcavePolygonShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 269 )
+
+[node name="ConvexPolygonShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 270 )
+
+[node name="LineShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 266 )
+
+[node name="RayShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 264 )
+
+[node name="RectangleShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 265 )
+
+[node name="SegmentShape2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 261 )
+
+[node name="CubeMap" type="Node2D" parent="TODO 2"]
+script = ExtResource( 262 )
+
+[node name="Curve" type="Node2D" parent="TODO 2"]
+script = ExtResource( 263 )
+
+[node name="Curve2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 278 )
+
+[node name="Curve3D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 279 )
+
+[node name="DynamicFontData" type="Node2D" parent="TODO 2"]
+script = ExtResource( 274 )
+
+[node name="EditorSettings" type="Node2D" parent="TODO 2"]
+script = ExtResource( 277 )
+
+[node name="EditorSpatialGizmoPlugin" type="Node2D" parent="TODO 2"]
+script = ExtResource( 271 )
+
+[node name="Environment" type="Node2D" parent="TODO 2"]
+script = ExtResource( 289 )
+
+[node name="GDNativeLibrary" type="Node2D" parent="TODO 2"]
+script = ExtResource( 272 )
+
+[node name="Script" type="Node2D" parent="TODO 2"]
+script = ExtResource( 273 )
+
+[node name="GDScript" type="Node2D" parent="TODO 2"]
+script = ExtResource( 1 )
+
+[node name="NativeScript" type="Node2D" parent="TODO 2"]
+script = ExtResource( 288 )
+
+[node name="PluginScript" type="Node2D" parent="TODO 2"]
+script = ExtResource( 292 )
+
+[node name="VisualScript" type="Node2D" parent="TODO 2"]
+script = ExtResource( 275 )
+
+[node name="GIProbeData" type="Node2D" parent="TODO 2"]
+script = ExtResource( 295 )
+
+[node name="Gradient" type="Node2D" parent="TODO 2"]
+script = ExtResource( 296 )
+
+[node name="Image" type="Node2D" parent="TODO 2"]
+script = ExtResource( 293 )
+
+[node name="IntpuEvent" type="Node2D" parent="TODO 2"]
+script = ExtResource( 276 )
+
+[node name="InputEventAction" type="Node2D" parent="TODO 2"]
+script = ExtResource( 280 )
+
+[node name="IntpuEventAction" type="Node2D" parent="TODO 2"]
+script = ExtResource( 297 )
+
+[node name="IntpuEventWithModifiers" type="Node2D" parent="TODO 2"]
+script = ExtResource( 294 )
+
+[node name="IntpuEventGesture" type="Node2D" parent="TODO 2"]
+script = ExtResource( 299 )
+
+[node name="IntpuEventMagnifyGesture" type="Node2D" parent="TODO 2"]
+script = ExtResource( 300 )
+
+[node name="IntpuEventPanGesture" type="Node2D" parent="TODO 2"]
+script = ExtResource( 281 )
+
+[node name="IntpuEventKey" type="Node2D" parent="TODO 2"]
+script = ExtResource( 282 )
+
+[node name="IntpuEventMouse" type="Node2D" parent="TODO 2"]
+script = ExtResource( 284 )
+
+[node name="IntpuEventMouseButton" type="Node2D" parent="TODO 2"]
+script = ExtResource( 287 )
+
+[node name="IntpuEventMouseMotion" type="Node2D" parent="TODO 2"]
+script = ExtResource( 286 )
+
+[node name="IntpuEventJoypadButton" type="Node2D" parent="TODO 2"]
+script = ExtResource( 285 )
+
+[node name="IntpuEventJoypadMotion" type="Node2D" parent="TODO 2"]
+script = ExtResource( 291 )
+
+[node name="IntpuEventMIDI" type="Node2D" parent="TODO 2"]
+script = ExtResource( 283 )
+
+[node name="IntpuEventScreenDrag" type="Node2D" parent="TODO 2"]
+script = ExtResource( 298 )
+
+[node name="IntpuEventScreenTouch" type="Node2D" parent="TODO 2"]
+script = ExtResource( 290 )
+
+[node name="MeshLibrary" type="Node2D" parent="TODO 2"]
 visible = false
 script = ExtResource( 44 )
+
+[node name="MultiMesh" type="Node2D" parent="TODO 2"]
+script = ExtResource( 413 )
+
+[node name="NavigationMesh" type="Node2D" parent="TODO 2"]
+script = ExtResource( 427 )
+
+[node name="NavigationPolygon" type="Node2D" parent="TODO 2"]
+script = ExtResource( 392 )
+
+[node name="OccluderPolygon2D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 394 )
+
+[node name="OpenSimplexNoise" type="Node2D" parent="TODO 2"]
+script = ExtResource( 324 )
+
+[node name="Translation" type="Node2D" parent="TODO 2"]
+script = ExtResource( 375 )
+
+[node name="PHashTranslation" type="Node2D" parent="TODO 2"]
+script = ExtResource( 343 )
+
+[node name="PackedDataContainer" type="Node2D" parent="TODO 2"]
+script = ExtResource( 312 )
+
+[node name="PackedScene" type="Node2D" parent="TODO 2"]
+script = ExtResource( 395 )
+
+[node name="Sky" type="Node2D" parent="TODO 2"]
+script = ExtResource( 333 )
+
+[node name="PanoramaSky" type="Node2D" parent="TODO 2"]
+script = ExtResource( 311 )
+
+[node name="ProceduralSky" type="Node2D" parent="TODO 2"]
+script = ExtResource( 399 )
+
+[node name="PhysicsMaterial" type="Node2D" parent="TODO 2"]
+script = ExtResource( 332 )
+
+[node name="PolygonPathFinder" type="Node2D" parent="TODO 2"]
+script = ExtResource( 330 )
+
+[node name="Shader" type="Node2D" parent="TODO 2"]
+script = ExtResource( 376 )
+
+[node name="VisualShader" type="Node2D" parent="TODO 2"]
+script = ExtResource( 381 )
+
+[node name="ShortCut" type="Node2D" parent="TODO 2"]
+script = ExtResource( 357 )
+
+[node name="SpriteFrames" type="Node2D" parent="TODO 2"]
+script = ExtResource( 314 )
+
+[node name="StyleBox" type="Node2D" parent="TODO 2"]
+script = ExtResource( 378 )
+
+[node name="StyleBoxEmpty" type="Node2D" parent="TODO 2"]
+script = ExtResource( 361 )
+
+[node name="StyleBoxFlat" type="Node2D" parent="TODO 2"]
+script = ExtResource( 367 )
+
+[node name="StyleBoxLine" type="Node2D" parent="TODO 2"]
+script = ExtResource( 415 )
+
+[node name="StyleBoxTexture" type="Node2D" parent="TODO 2"]
+script = ExtResource( 386 )
+
+[node name="TextFile" type="Node2D" parent="TODO 2"]
+script = ExtResource( 370 )
+
+[node name="TextureLayered" type="Node2D" parent="TODO 2"]
+script = ExtResource( 391 )
+
+[node name="Texture3D" type="Node2D" parent="TODO 2"]
+script = ExtResource( 380 )
+
+[node name="TextureArray" type="Node2D" parent="TODO 2"]
+script = ExtResource( 387 )
+
+[node name="Theme" type="Node2D" parent="TODO 2"]
+script = ExtResource( 338 )
+
+[node name="TileSet" type="Node2D" parent="TODO 2"]
+script = ExtResource( 382 )
+
+[node name="VideoStream" type="Node2D" parent="TODO 2"]
+script = ExtResource( 359 )
+
+[node name="VideoStreamGDNative" type="Node2D" parent="TODO 2"]
+script = ExtResource( 355 )
+
+[node name="VideoStreamTheora" type="Node2D" parent="TODO 2"]
+script = ExtResource( 358 )
+
+[node name="VideoStreamWebm" type="Node2D" parent="TODO 2"]
+script = ExtResource( 372 )
+
+[node name="VisualScript TODO" type="Node2D" parent="."]
+
+[node name="VisualScriptNode" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 356 )
+
+[node name="VisualScriptBasicTypeConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 363 )
+
+[node name="VisualScriptBuiltinFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 303 )
+
+[node name="VisualScriptClassConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 308 )
+
+[node name="VisualScriptComment" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 389 )
+
+[node name="VisualScriptCondition" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 401 )
+
+[node name="VisualScriptConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 368 )
+
+[node name="VisualScriptConstructor" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 414 )
+
+[node name="VisualScriptCustomNode" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 428 )
+
+[node name="VisualScriptDeconstruct" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 365 )
+
+[node name="VisualScriptEmitSignal" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 328 )
+
+[node name="VisualScriptEndgineSingleton" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 383 )
+
+[node name="VisualScriptExpression" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 305 )
+
+[node name="VisualScriptFunction" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 331 )
+
+[node name="VisualScriptFunctionCall" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 402 )
+
+[node name="VisualScriptGlobalConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 420 )
+
+[node name="VisualScriptIndexGet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 337 )
+
+[node name="VisualScriptIndexSet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 301 )
+
+[node name="VisualScriptInputAction" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 407 )
+
+[node name="VisualScriptIterator" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 325 )
+
+[node name="VisualScriptLocalVar" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 396 )
+
+[node name="VisualScriptLocalVarSet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 369 )
+
+[node name="VisualScriptMathConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 371 )
+
+[node name="VisualScriptOperator" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 351 )
+
+[node name="VisualScriptPreload" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 317 )
+
+[node name="VisualScriptPropertyGet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 424 )
+
+[node name="VisualScriptPropertySet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 310 )
+
+[node name="VisualScriptResourcePath" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 403 )
+
+[node name="VisualScriptReturn" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 354 )
+
+[node name="VisualScriptSceneNode" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 405 )
+
+[node name="VisualScriptSceneTree" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 307 )
+
+[node name="VisualScriptSelect" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 366 )
+
+[node name="VisualScriptSelf" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 347 )
+
+[node name="VisualScriptSequence" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 408 )
+
+[node name="VisualScriptSubCall" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 409 )
+
+[node name="VisualScriptSwitch" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 306 )
+
+[node name="VisualScriptTypeCast" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 304 )
+
+[node name="VisualScriptVariableGet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 379 )
+
+[node name="VisualScriptVariableSet" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 360 )
+
+[node name="VisualScriptWhile" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 313 )
+
+[node name="VisualScriptYield" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 315 )
+
+[node name="VisualScriptYieldSignal" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 319 )
+
+[node name="VisualShaderNode" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 341 )
+
+[node name="VisualShaderNodeBooleanConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 321 )
+
+[node name="VisualShaderNodeUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 309 )
+
+[node name="VisualShaderNodeBooleanUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 406 )
+
+[node name="VisualShaderNodeColorUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 326 )
+
+[node name="VisualShaderNodeScalarUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 329 )
+
+[node name="VisualShaderNodeTextureUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 320 )
+
+[node name="VisualShaderNodeTransformUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 327 )
+
+[node name="VisualShaderNodeVec3Uniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 322 )
+
+[node name="VisualShaderNodeColorConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 388 )
+
+[node name="VisualShaderNodeColorFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 316 )
+
+[node name="VisualShaderNodeColorOp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 345 )
+
+[node name="VisualShaderNodeCubeMap" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 344 )
+
+[node name="VisualShaderNodeCubeMapUniform" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 323 )
+
+[node name="VisualShaderNodeDeterminant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 336 )
+
+[node name="VisualShaderNodeDotProduct" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 418 )
+
+[node name="VisualShaderNodeGroupBase" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 318 )
+
+[node name="VisualShaderNodeExpression" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 346 )
+
+[node name="VisualShaderNodeFaceForward" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 411 )
+
+[node name="VisualShaderNodeFresnel" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 404 )
+
+[node name="VisualShaderNodeIf" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 373 )
+
+[node name="VisualShaderNodeInput" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 426 )
+
+[node name="VisualShaderNodeOuterProduct" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 416 )
+
+[node name="VisualShaderNodeOutput" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 384 )
+
+[node name="VisualShaderNodeScalarClamp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 410 )
+
+[node name="VisualShaderNodeScalarConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 423 )
+
+[node name="VisualShaderNodeScalarDerivativeFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 393 )
+
+[node name="VisualShaderNodeScalarFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 425 )
+
+[node name="VisualShaderNodeScalarInterp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 390 )
+
+[node name="VisualShaderNodeScalarOp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 349 )
+
+[node name="VisualShaderNodeScalarSmoothStep" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 342 )
+
+[node name="VisualShaderNodeSwitch" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 374 )
+
+[node name="VisualShaderNodeTexture" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 334 )
+
+[node name="VisualShaderNodeTransformCompose" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 422 )
+
+[node name="VisualShaderNodeTransformConstant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 362 )
+
+[node name="VisualShaderNodeDecompose" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 419 )
+
+[node name="VisualShaderNodeTransformFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 421 )
+
+[node name="VisualShaderNodeTransformMult" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 348 )
+
+[node name="VisualShaderNodeTransformVecMult" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 364 )
+
+[node name="VisualShaderNodeVec3Constant" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 339 )
+
+[node name="VisualShaderNodeVectorClamp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 352 )
+
+[node name="VisualShaderNodeVectorCompose" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 385 )
+
+[node name="VisualShaderNodeVectorDecompose" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 412 )
+
+[node name="VisualShaderNodeVectorDerivativeFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 400 )
+
+[node name="VisualShaderNodeVectorDistance" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 350 )
+
+[node name="VisualShaderNodeVectorFunc" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 377 )
+
+[node name="VisualShaderNodeVectorInterp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 340 )
+
+[node name="VisualShaderNodeVectorLen" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 417 )
+
+[node name="VisualShaderNodeVectorOp" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 398 )
+
+[node name="VisualShaderNodeVectorRefract" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 397 )
+
+[node name="VisualShaderNodeVectorScalarSmoothStep" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 335 )
+
+[node name="VisualShaderNodeVectorScalarStep" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 302 )
+
+[node name="VisualShaderNodeVectorSmoothStep" type="Node2D" parent="VisualScript TODO"]
+script = ExtResource( 353 )
+
+[node name="TODO 3" type="Node2D" parent="."]
+
+[node name="World" type="Node2D" parent="."]
+script = ExtResource( 52 )
+
+[node name="World2" type="Node2D" parent="."]
+script = ExtResource( 48 )
+
+[node name="AnimationTrackEditPlugin" type="Node2D" parent="."]
+script = ExtResource( 46 )
+
+[node name="AudioEffectInstance" type="Node2D" parent="."]
+script = ExtResource( 47 )
+
+[node name="AudioEffectSpectrumAnalyzerInstance" type="Node2D" parent="."]
+script = ExtResource( 45 )
+
+[node name="AudioStreamPlayback" type="Node2D" parent="."]
+script = ExtResource( 51 )
+
+[node name="AudioStreamPlaybackResampled" type="Node2D" parent="."]
+script = ExtResource( 60 )
+
+[node name="AudioStreamGeneratorPlayback" type="Node2D" parent="."]
+script = ExtResource( 55 )
+
+[node name="CameraFeed" type="Node2D" parent="."]
+script = ExtResource( 56 )
+
+[node name="ConfigFile" type="Node2D" parent="."]
+script = ExtResource( 58 )
+
+[node name="Directory" type="Node2D" parent="."]
+script = ExtResource( 57 )
+
+[node name="EditorExportPlugin" type="Node2D" parent="."]
+script = ExtResource( 53 )
+
+[node name="EditorFeatureProfile" type="Node2D" parent="."]
+script = ExtResource( 50 )
+
+[node name="EditorImportPlugin" type="Node2D" parent="."]
+script = ExtResource( 65 )
+
+[node name="EditorInspectorPlugin" type="Node2D" parent="."]
+script = ExtResource( 54 )
+
+[node name="EditorResourceConversionPlugin" type="Node2D" parent="."]
+script = ExtResource( 66 )
+
+[node name="EditorResourcePreviewGenerator" type="Node2D" parent="."]
+script = ExtResource( 67 )
+
+[node name="EditorSceneImporter" type="Node2D" parent="."]
+script = ExtResource( 71 )
+
+[node name="EditorSceneImporterAssimp" type="Node2D" parent="."]
+script = ExtResource( 63 )
+
+[node name="EditorScenePostImport" type="Node2D" parent="."]
+script = ExtResource( 64 )
+
+[node name="EditorScript" type="Node2D" parent="."]
+script = ExtResource( 68 )
+
+[node name="SpatialGizmo" type="Node2D" parent="."]
+script = ExtResource( 72 )
+
+[node name="EditorSpatialGizmo" type="Node2D" parent="."]
+script = ExtResource( 70 )
+
+[node name="EncodedObjectAsID" type="Node2D" parent="."]
+script = ExtResource( 69 )
+
+[node name="Expression" type="Node2D" parent="."]
+script = ExtResource( 61 )
+
+[node name="File" type="Node2D" parent="."]
+script = ExtResource( 62 )
+
+[node name="FuncRef" type="Node2D" parent="."]
+script = ExtResource( 80 )
+
+[node name="GDNative" type="Node2D" parent="."]
+script = ExtResource( 82 )
+
+[node name="GDScriptFunctionState" type="Node2D" parent="."]
+script = ExtResource( 84 )
+
+[node name="GDScriptNativeClass" type="Node2D" parent="."]
+script = ExtResource( 79 )
+
+[node name="HTTPClient" type="Node2D" parent="."]
+script = ExtResource( 83 )
+
+[node name="JSONParseResult" type="Node2D" parent="."]
+script = ExtResource( 81 )
+
+[node name="KinematicCollision" type="Node2D" parent="."]
+script = ExtResource( 78 )
+
+[node name="KinematicCollision2D" type="Node2D" parent="."]
+script = ExtResource( 77 )
+
+[node name="Marshalls" type="Node2D" parent="."]
+script = ExtResource( 76 )
+
+[node name="MeshDataTool" type="Node2D" parent="."]
+script = ExtResource( 73 )
+
+[node name="PacketPeer" type="Node2D" parent="."]
+script = ExtResource( 74 )
+
+[node name="NetworkedMultiplayerPeer" type="Node2D" parent="."]
+script = ExtResource( 75 )
+
+[node name="MultiplayerPeerGDNative" type="Node2D" parent="."]
+script = ExtResource( 93 )
+
+[node name="NetworkedMultiplayerENet" type="Node2D" parent="."]
+script = ExtResource( 94 )
+
+[node name="WebRTCMultiplayer" type="Node2D" parent="."]
+script = ExtResource( 91 )
+
+[node name="WebSocketMultiplayerPeer" type="Node2D" parent="."]
+script = ExtResource( 90 )
+
+[node name="WebSocketClient" type="Node2D" parent="."]
+script = ExtResource( 92 )
+
+[node name="WebSocketServer" type="Node2D" parent="."]
+script = ExtResource( 88 )
+
+[node name="PacketPeerGDNative" type="Node2D" parent="."]
+script = ExtResource( 89 )
+
+[node name="PacketPeerStream" type="Node2D" parent="."]
+script = ExtResource( 97 )
+
+[node name="PacketPeerUDP" type="Node2D" parent="."]
+script = ExtResource( 98 )
+
+[node name="WebRTCDataChannel" type="Node2D" parent="."]
+script = ExtResource( 100 )
+
+[node name="WebRTCDataChannelGDNative" type="Node2D" parent="."]
+script = ExtResource( 99 )
+
+[node name="WebSocketPeer" type="Node2D" parent="."]
+script = ExtResource( 86 )
+
+[node name="Mutex" type="Node2D" parent="."]
+script = ExtResource( 85 )
+
+[node name="PCKPacker" type="Node2D" parent="."]
+script = ExtResource( 95 )
+
+[node name="PackerDatacontainerRef" type="Node2D" parent="."]
+script = ExtResource( 101 )
+
+[node name="Physics2DShapeQueryParameters" type="Node2D" parent="."]
+script = ExtResource( 96 )
+
+[node name="Physics2DShapeQueryResult" type="Node2D" parent="."]
+script = ExtResource( 108 )
+
+[node name="Physics2DTestMotionResult" type="Node2D" parent="."]
+script = ExtResource( 109 )
+
+[node name="PhysicsShapeQueryParameters" type="Node2D" parent="."]
+script = ExtResource( 87 )
+
+[node name="PhysicsShapeQueryResult" type="Node2D" parent="."]
+script = ExtResource( 107 )
+
+[node name="RandomNumberGenerator" type="Node2D" parent="."]
+script = ExtResource( 104 )
+
+[node name="RegEx" type="Node2D" parent="."]
+script = ExtResource( 105 )
+
+[node name="RegExMatch" type="Node2D" parent="."]
+script = ExtResource( 106 )
+
+[node name="ResourceFormatLoader" type="Node2D" parent="."]
+script = ExtResource( 110 )
+
+[node name="ResourceFormatSaver" type="Node2D" parent="."]
+script = ExtResource( 111 )
+
+[node name="ResourceImporter" type="Node2D" parent="."]
+script = ExtResource( 49 )
+
+[node name="ResourceImporterOGGVorbis" type="Node2D" parent="."]
+script = ExtResource( 103 )
+
+[node name="ResourveInteractiveLoader" type="Node2D" parent="."]
+script = ExtResource( 102 )
+
+[node name="SceneState" type="Node2D" parent="."]
+script = ExtResource( 117 )
+
+[node name="SceneTreeTimer" type="Node2D" parent="."]
+script = ExtResource( 119 )
+
+[node name="Semaphore" type="Node2D" parent="."]
+script = ExtResource( 120 )
+
+[node name="SpatialVelocityTracker" type="Node2D" parent="."]
+script = ExtResource( 116 )
+
+[node name="StreamPeer" type="Node2D" parent="."]
+script = ExtResource( 118 )
+
+[node name="StreamPeerBuffer" type="Node2D" parent="."]
+script = ExtResource( 112 )
+
+[node name="StreamPeerGDNative" type="Node2D" parent="."]
+script = ExtResource( 113 )
+
+[node name="StreamPeerSSL" type="Node2D" parent="."]
+script = ExtResource( 115 )
+
+[node name="StreamPeerTCP" type="Node2D" parent="."]
+script = ExtResource( 130 )
+
+[node name="SurfaceTool" type="Node2D" parent="."]
+script = ExtResource( 114 )
+
+[node name="TCP_Server" type="Node2D" parent="."]
+script = ExtResource( 59 )
+
+[node name="Thread" type="Node2D" parent="."]
+script = ExtResource( 131 )
+
+[node name="TriangleMesh" type="Node2D" parent="."]
+script = ExtResource( 132 )
+
+[node name="UPNP" type="Node2D" parent="."]
+script = ExtResource( 133 )
+
+[node name="UPNPDevice" type="Node2D" parent="."]
+script = ExtResource( 134 )
+
+[node name="VisualScriptFunctionState" type="Node2D" parent="."]
+script = ExtResource( 135 )
+
+[node name="WeakRef" type="Node2D" parent="."]
+script = ExtResource( 136 )
+
+[node name="WebRTCPeerConnection" type="Node2D" parent="."]
+script = ExtResource( 127 )
+
+[node name="WebRTCPeerConnectionGDNative" type="Node2D" parent="."]
+script = ExtResource( 128 )
+
+[node name="XMLParser" type="Node2D" parent="."]
+script = ExtResource( 129 )
+
+[node name="ARVRPositionalTracker" type="Node2D" parent="."]
+script = ExtResource( 121 )
+
+[node name="ARVRServer" type="Node2D" parent="."]
+script = ExtResource( 137 )
+
+[node name="AudioServer" type="Node2D" parent="."]
+script = ExtResource( 125 )
+
+[node name="PhysicsDirectBodyState" type="Node2D" parent="."]
+script = ExtResource( 138 )
+
+[node name="BulletPhysicsDirectBodyState" type="Node2D" parent="."]
+script = ExtResource( 123 )
+
+[node name="PhysicsDirectSpaceState" type="Node2D" parent="."]
+script = ExtResource( 122 )
+
+[node name="BulletPhysicsDirectSpaceState" type="Node2D" parent="."]
+script = ExtResource( 124 )
+
+[node name="PhysicsServer" type="Node2D" parent="."]
+script = ExtResource( 146 )
+
+[node name="BulletPhysicsServer" type="Node2D" parent="."]
+script = ExtResource( 145 )
+
+[node name="CameraServer" type="Node2D" parent="."]
+script = ExtResource( 126 )
+
+[node name="ClassDB" type="Node2D" parent="."]
+script = ExtResource( 142 )
+
+[node name="EditorFileSystemDirectory" type="Node2D" parent="."]
+script = ExtResource( 143 )
+
+[node name="EditorNavigationMeshGenerator" type="Node2D" parent="."]
+script = ExtResource( 144 )
+
+[node name="EditorSelection" type="Node2D" parent="."]
+script = ExtResource( 151 )
+
+[node name="Engine" type="Node2D" parent="."]
+script = ExtResource( 149 )
+
+[node name="Geometry" type="Node2D" parent="."]
+script = ExtResource( 150 )
+
+[node name="IP" type="Node2D" parent="."]
+script = ExtResource( 139 )
+
+[node name="IP_Unix" type="Node2D" parent="."]
+script = ExtResource( 140 )
+
+[node name="Input" type="Node2D" parent="."]
+script = ExtResource( 141 )
+
+[node name="InputDefault" type="Node2D" parent="."]
+script = ExtResource( 156 )
+
+[node name="InputMap" type="Node2D" parent="."]
+script = ExtResource( 157 )
+
+[node name="JSON" type="Node2D" parent="."]
+script = ExtResource( 158 )
+
+[node name="JavaScript" type="Node2D" parent="."]
+script = ExtResource( 159 )
+
+[node name="MainLoop" type="Node2D" parent="."]
+script = ExtResource( 160 )
+
+[node name="SceneTree" type="Node2D" parent="."]
+script = ExtResource( 161 )
+
+[node name="OS" type="Node2D" parent="."]
+script = ExtResource( 162 )
+
+[node name="Performance" type="Node2D" parent="."]
+script = ExtResource( 163 )
+
+[node name="Physics2DDirectBodyState" type="Node2D" parent="."]
+script = ExtResource( 164 )
+
+[node name="Physics2DDirectBodyStateSW" type="Node2D" parent="."]
+script = ExtResource( 165 )
+
+[node name="Physics2DDirectSpaceState" type="Node2D" parent="."]
+script = ExtResource( 166 )
+
+[node name="Physics2DDirectSpaceStateSW" type="Node2D" parent="."]
+script = ExtResource( 167 )
+
+[node name="Physics2DServer" type="Node2D" parent="."]
+script = ExtResource( 154 )
+
+[node name="Physics2DServerSW" type="Node2D" parent="."]
+script = ExtResource( 155 )
+
+[node name="ProjectSettings" type="Node2D" parent="."]
+script = ExtResource( 147 )
+
+[node name="ResourceLoader" type="Node2D" parent="."]
+script = ExtResource( 148 )
+
+[node name="ResourceSaver" type="Node2D" parent="."]
+script = ExtResource( 152 )
+
+[node name="TranslationServer" type="Node2D" parent="."]
+script = ExtResource( 153 )
+
+[node name="TreeItem" type="Node2D" parent="."]
+script = ExtResource( 175 )
+
+[node name="UndoRedo" type="Node2D" parent="."]
+script = ExtResource( 171 )
+
+[node name="VisualScriptEditor" type="Node2D" parent="."]
+script = ExtResource( 172 )
+
+[node name="VisualServer" type="Node2D" parent="."]
+script = ExtResource( 174 )
+
+[node name="Array" type="Node2D" parent="."]
+script = ExtResource( 173 )
+
+[node name="Basis" type="Node2D" parent="."]
+script = ExtResource( 177 )
+
+[node name="Color" type="Node2D" parent="."]
+script = ExtResource( 176 )
+
+[node name="Dictionary" type="Node2D" parent="."]
+script = ExtResource( 184 )
+
+[node name="Nil" type="Node2D" parent="."]
+script = ExtResource( 185 )
+
+[node name="NodePath" type="Node2D" parent="."]
+script = ExtResource( 186 )
+
+[node name="Plane" type="Node2D" parent="."]
+script = ExtResource( 187 )
+
+[node name="PoolByteArray" type="Node2D" parent="."]
+script = ExtResource( 188 )
+
+[node name="PoolColorArray" type="Node2D" parent="."]
+script = ExtResource( 178 )
+
+[node name="PoolIntArray" type="Node2D" parent="."]
+script = ExtResource( 180 )
+
+[node name="PoolRealArray" type="Node2D" parent="."]
+script = ExtResource( 183 )
+
+[node name="PoolStringArray" type="Node2D" parent="."]
+script = ExtResource( 197 )
+
+[node name="PoolVector2Array" type="Node2D" parent="."]
+script = ExtResource( 195 )
+
+[node name="PoolVector3Array" type="Node2D" parent="."]
+script = ExtResource( 196 )
+
+[node name="Quat" type="Node2D" parent="."]
+script = ExtResource( 194 )
+
+[node name="RID" type="Node2D" parent="."]
+script = ExtResource( 193 )
+
+[node name="Rect2" type="Node2D" parent="."]
+script = ExtResource( 191 )
+
+[node name="String" type="Node2D" parent="."]
+script = ExtResource( 190 )
+
+[node name="Transform" type="Node2D" parent="."]
+script = ExtResource( 192 )
+
+[node name="Transform2D" type="Node2D" parent="."]
+script = ExtResource( 181 )
+
+[node name="Variant" type="Node2D" parent="."]
+script = ExtResource( 189 )
+
+[node name="Vector2" type="Node2D" parent="."]
+script = ExtResource( 182 )
+
+[node name="Vector3" type="Node2D" parent="."]
+script = ExtResource( 170 )
+
+[node name="bool" type="Node2D" parent="."]
+script = ExtResource( 168 )
+
+[node name="float" type="Node2D" parent="."]
+script = ExtResource( 169 )
+
+[node name="int" type="Node2D" parent="."]
+script = ExtResource( 179 )

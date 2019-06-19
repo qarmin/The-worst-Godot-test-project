@@ -24,10 +24,11 @@ func _process(delta) -> void:
 		q_AnimationNodeStateMachinePlayback.stop()
 		q_AnimationNodeStateMachinePlayback.travel( "Kraków" )
 		
-		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
+			qq += str(q_AnimationNodeStateMachinePlayback.get_travel_path())
 			
-			
-			
-			
+			qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
+			q_AnimationNodeStateMachinePlayback.start( "Karamba" )
+			q_AnimationNodeStateMachinePlayback.stop()
+			q_AnimationNodeStateMachinePlayback.travel( "Kraków" )

@@ -26,6 +26,13 @@ func _process(delta) -> void:
 		qq += str(q_AnimationNodeOneShot.get_mix_mode())
 		q_AnimationNodeOneShot.set_mix_mode(randi() % 2) # MIX_MODE
 		
-		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AnimationNodeOneShot.set_fadein_time(randf() * 1000 - 500)
+			q_AnimationNodeOneShot.set_fadeout_time(randf() * 1000 - 500)
+			q_AnimationNodeOneShot.set_autorestart(bool(randi()%2))
+			q_AnimationNodeOneShot.set_autorestart_delay(randf() * 1000 - 500)
+			q_AnimationNodeOneShot.set_autorestart_random_delay(randf() * 1000 - 500)
+			q_AnimationNodeOneShot.set_use_sync(bool(randi()%2))
+			
+			qq += str(q_AnimationNodeOneShot.get_mix_mode())
+			q_AnimationNodeOneShot.set_mix_mode(randi() % 1000 - 500) # MIX_MODE

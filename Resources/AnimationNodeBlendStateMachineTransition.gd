@@ -25,4 +25,9 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AnimationNodeStateMachineTransition.set_switch_mode(randi() % 1000 - 500) # SwitchMode
+			q_AnimationNodeStateMachineTransition.set_auto_advance(bool(randi()%2))
+			q_AnimationNodeStateMachineTransition.set_advance_condition("Nom")
+			q_AnimationNodeStateMachineTransition.set_xfade_time(randf() * 1000 - 500)
+			q_AnimationNodeStateMachineTransition.set_priority(randi() % 1000 - 500)
+			q_AnimationNodeStateMachineTransition.set_disabled(bool(randi()%2))

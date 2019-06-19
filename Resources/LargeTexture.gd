@@ -30,8 +30,15 @@ func _process(delta) -> void:
 		q_LargeTexture.clear() ## At the end
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_LargeTexture.add_piece(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+			###MOVED q_LargeTexture.clear()
 			
+			qq += str(q_LargeTexture.get_piece_count())
+			qq += str(q_LargeTexture.get_piece_offset(randi() % 1000 - 500))
+			qq += str(q_LargeTexture.get_piece_texture(randi() % 1000 - 500))
 			
+			q_LargeTexture.set_piece_offset(randi() % 1000 - 500,Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			q_LargeTexture.set_piece_texture(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_LargeTexture.set_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			
-			
+			q_LargeTexture.clear() ## At the end
