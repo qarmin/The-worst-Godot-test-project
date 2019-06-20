@@ -39,7 +39,7 @@ func _process(delta) -> void:
 			for _i in range(4):
 				q_Gradient.add_point( randf() * 1000 - 500,Color(randf(),randf(),randf(),randf()) )
 				
-			qq += str(q_Gradient.get_color(randi() % 1000 - 500 ))
+			#BUG qq += str(q_Gradient.get_color(randi() % 1000 - 500 ))
 			qq += str(q_Gradient.get_offset(randi() % 1000 - 500 ))
 			qq += str(q_Gradient.get_point_count())
 			
