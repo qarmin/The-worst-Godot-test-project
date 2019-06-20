@@ -47,4 +47,4 @@ func _process(delta) -> void:
 			q_Gradient.remove_point(randi() % 1000 - 500 )
 			
 			#BUG q_Gradient.set_color(randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()) )
-			q_Gradient.set_offset(randi() % 1000 - 500,randf() * 1000 - 500)
+			#BUG q_Gradient.set_offset(randi() % 1000 - 500,randf() * 1000 - 500)
