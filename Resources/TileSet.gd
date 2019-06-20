@@ -141,7 +141,7 @@ func _process(delta) -> void:
 			qq += str(q_TileSet.tile_get_shape_offset( randi() % 1000 - 500, randi() % 1000 - 500 ))
 			qq += str(q_TileSet.tile_get_shape_one_way( randi() % 1000 - 500, randi() % 1000 - 500 ))
 			qq += str(q_TileSet.tile_get_shape_one_way_margin( randi() % 1000 - 500, randi() % 1000 - 500 ))
-			qq += str(q_TileSet.tile_get_shape_transform( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			#BUG qq += str(q_TileSet.tile_get_shape_transform( randi() % 1000 - 500, randi() % 1000 - 500 ))
 			qq += str(q_TileSet.tile_get_shapes( randi() % 1000 - 500 ))
 			qq += str(q_TileSet.tile_get_texture( randi() % 1000 - 500 ))
 			qq += str(q_TileSet.tile_get_texture_offset( randi() % 1000 - 500 ))
