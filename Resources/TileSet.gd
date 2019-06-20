@@ -156,7 +156,7 @@ func _process(delta) -> void:
 			q_TileSet.tile_set_normal_map( randi() % 1000 - 500, Texture.new() )
 			q_TileSet.tile_set_occluder_offset( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			q_TileSet.tile_set_region( randi() % 1000 - 500, Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-			q_TileSet.tile_set_shape( randi() % 1000 - 500, randi() % 1000 - 500, Shape2D.new() )
+			#BUG q_TileSet.tile_set_shape( randi() % 1000 - 500, randi() % 1000 - 500, Shape2D.new() )
 			#BUG q_TileSet.tile_set_shape_offset( randi() % 1000 - 500, randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			#BUG q_TileSet.tile_set_shape_one_way( randi() % 1000 - 500, randi() % 1000 - 500, bool(randi()%2) )
 			q_TileSet.tile_set_shape_one_way_margin( randi() % 1000 - 500, randi() % 1000 - 500, randf() * 1000 - 500)
