@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_CircleShape2D.set_radius(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CircleShape2D.set_radius(randf() * 1000 - 500)

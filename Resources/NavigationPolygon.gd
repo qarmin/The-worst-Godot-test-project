@@ -39,4 +39,24 @@ func _process(delta) -> void:
 		q_NavigationPolygon.clear_polygons() #MOVED
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_NavigationPolygon.add_outline( PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]) )
+			q_NavigationPolygon.add_outline_at_index( PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), randi() % 1000 - 500 )
+			q_NavigationPolygon.add_polygon( PoolIntArray([11,124,1241,24,21,214,12,11]))
+			
+			#MOVED q_NavigationPolygon.clear_outlines()
+			#MOVED q_NavigationPolygon.clear_polygons()
+			
+			qq += str(q_NavigationPolygon.get_outline(randi() % 1000 - 500 ))
+			qq += str(q_NavigationPolygon.get_outline_count())
+			qq += str(q_NavigationPolygon.get_polygon(randi() % 1000 - 500 ))
+			qq += str(q_NavigationPolygon.get_polygon_count())
+			qq += str(q_NavigationPolygon.get_vertices())
+			
+			q_NavigationPolygon.make_polygons_from_outlines()
+			q_NavigationPolygon.remove_outline(randi() % 1000 - 500 )
+			
+			q_NavigationPolygon.set_outline(randi() % 1000 - 500, PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]) )
+			q_NavigationPolygon.set_vertices( PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]) )
+			
+			q_NavigationPolygon.clear_outlines() #MOVED
+			q_NavigationPolygon.clear_polygons() #MOVED

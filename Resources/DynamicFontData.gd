@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_DynamicFontData.set_font_path("res://FreeMono.otf")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_DynamicFontData.set_antialiased(bool(randi()%2))
+			q_DynamicFontData.set_hinting(randi() % 1000 - 500) # Hinting
+			q_DynamicFontData.set_font_path("res://FreeMono.otf")

@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		qq += str(q_PackedScene.pack( self ))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_PackedScene.can_instance())
+			qq += str(q_PackedScene.get_state())
+			qq += str(q_PackedScene.instance( randi() % 1000 - 500 )) # GenEditState
+			qq += str(q_PackedScene.pack( self ))

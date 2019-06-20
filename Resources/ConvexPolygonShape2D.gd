@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_ConvexPolygonShape2D.set_point_cloud( PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_ConvexPolygonShape2D.set_points(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]))
+			q_ConvexPolygonShape2D.set_point_cloud( PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]))

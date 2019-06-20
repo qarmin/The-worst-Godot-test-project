@@ -93,4 +93,78 @@ func _process(delta) -> void:
 		q_TileSet.clear() #MOVED
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			### q_TileSet._forward_atlas_subtile_selection( int atlastile_id, Object tilemap, Vector2 tile_location )
+			### q_TileSet._forward_subtile_selection( int autotile_id, int bitmask, Object tilemap, Vector2 tile_location )
+			### q_TileSet._is_tile_bound( int drawn_id, int neighbor_id )
+			
+			q_TileSet.autotile_clear_bitmask_map( randi() % 1000 - 500 )
+			qq += str(q_TileSet.autotile_get_bitmask( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_TileSet.autotile_get_bitmask_mode( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.autotile_get_icon_coordinate( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.autotile_get_light_occluder( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_TileSet.autotile_get_navigation_polygon( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_TileSet.autotile_get_size( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.autotile_get_spacing( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.autotile_get_subtile_priority( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_TileSet.autotile_get_z_index( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
+			q_TileSet.autotile_set_bitmask( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500 ) #AutotileBindings
+			q_TileSet.autotile_set_bitmask_mode( randi() % 1000 - 500, randi() % 1000 - 500) #BitmaskMode
+			q_TileSet.autotile_set_icon_coordinate( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.autotile_set_light_occluder( randi() % 1000 - 500, OccluderPolygon2D.new(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.autotile_set_navigation_polygon( randi() % 1000 - 500, NavigationPolygon.new(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.autotile_set_size( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.autotile_set_spacing( randi() % 1000 - 500, randi() % 1000 - 500 )
+			q_TileSet.autotile_set_subtile_priority( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500)
+			q_TileSet.autotile_set_z_index( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500 )
+			
+			#MOVED q_TileSet.clear()
+			
+			for i in range(4):
+				q_TileSet.create_tile(i)
+			qq += str(q_TileSet.find_tile_by_name( "Hehemot" ))
+			
+			qq += str(q_TileSet.get_last_unused_tile_id())
+			qq += str(q_TileSet.get_tiles_ids())
+			
+			q_TileSet.tile_add_shape( randi() % 1000 - 500, Shape2D.new(), Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)), bool(randi()%2), Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			qq += str(q_TileSet.tile_get_light_occluder( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_material( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_modulate( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_name( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_navigation_polygon( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_navigation_polygon_offset( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_normal_map( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_occluder_offset( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_region( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape_count( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape_offset( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape_one_way( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape_one_way_margin( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shape_transform( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_shapes( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_texture( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_texture_offset( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_tile_mode( randi() % 1000 - 500 ))
+			qq += str(q_TileSet.tile_get_z_index( randi() % 1000 - 500 ))
+			q_TileSet.tile_set_light_occluder( randi() % 1000 - 500, OccluderPolygon2D.new())
+			q_TileSet.tile_set_material( randi() % 1000 - 500, ShaderMaterial.new() )
+			q_TileSet.tile_set_modulate( randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()))
+			q_TileSet.tile_set_name( randi() % 1000 - 500, "Niesio" )
+			q_TileSet.tile_set_navigation_polygon( randi() % 1000 - 500, NavigationPolygon.new() )
+			q_TileSet.tile_set_navigation_polygon_offset( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.tile_set_normal_map( randi() % 1000 - 500, Texture.new() )
+			q_TileSet.tile_set_occluder_offset( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.tile_set_region( randi() % 1000 - 500, Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_TileSet.tile_set_shape( randi() % 1000 - 500, randi() % 1000 - 500, Shape2D.new() )
+			q_TileSet.tile_set_shape_offset( randi() % 1000 - 500, randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_TileSet.tile_set_shape_one_way( randi() % 1000 - 500, randi() % 1000 - 500, bool(randi()%2) )
+			q_TileSet.tile_set_shape_one_way_margin( randi() % 1000 - 500, randi() % 1000 - 500, randf() * 1000 - 500)
+			q_TileSet.tile_set_shape_transform( randi() % 1000 - 500, randi() % 1000 - 500, Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)) )
+			q_TileSet.tile_set_shapes( randi() % 1000 - 500, [Shape.new(),Shape.new()])
+			q_TileSet.tile_set_texture( randi() % 1000 - 500, Texture.new() )
+			q_TileSet.tile_set_texture_offset( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_TileSet.tile_set_tile_mode( randi() % 1000 - 500, randi() % 1000 - 500 ) #TileMode
+			q_TileSet.tile_set_z_index( randi() % 1000 - 500, randi() % 1000 - 500 )
+			
+			q_TileSet.clear() #MOVED

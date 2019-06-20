@@ -44,7 +44,7 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_color(Color(randf(),randf(),randf(),randf()))
 			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_antialiased(bool(randi()%2))
 			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
@@ -57,7 +57,7 @@ func _process(delta) -> void:
 			set_invert_border(randf() * 1000 - 500)
 			set_polygon([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
 			set_uv([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
-			set_vertex_colors([Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)])
+			set_vertex_colors([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
 			set_polygons([randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500])
 			_set_bones([randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500])
 			set_internal_vertex_count(randi() % 1000 - 500)

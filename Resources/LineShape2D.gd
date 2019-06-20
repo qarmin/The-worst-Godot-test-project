@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_LineShape2D.set_d(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_LineShape2D.set_normal(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_LineShape2D.set_d(randf() * 1000 - 500)

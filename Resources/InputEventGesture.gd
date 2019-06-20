@@ -17,6 +17,6 @@ func _process(delta) -> void:
 #		var q_InputEventGesture : InputEventGesture = InputEventGesture.new()
 #
 #		q_InputEventGesture.set_position(Vector2(randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

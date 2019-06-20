@@ -26,4 +26,11 @@ func _process(delta) -> void:
 		q_InputEventMIDI.set_controller_value(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventMIDI.set_channel(randi() % 1000 - 500)
+			q_InputEventMIDI.set_message(randi() % 1000 - 500)
+			q_InputEventMIDI.set_pitch(randi() % 1000 - 500)
+			q_InputEventMIDI.set_velocity(randi() % 1000 - 500)
+			q_InputEventMIDI.set_instrument(randi() % 1000 - 500)
+			q_InputEventMIDI.set_pressure(randi() % 1000 - 500)
+			q_InputEventMIDI.set_controller_number(randi() % 1000 - 500)
+			q_InputEventMIDI.set_controller_value(randi() % 1000 - 500)

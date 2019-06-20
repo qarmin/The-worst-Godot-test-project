@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		qq += str(q_ButtonGroup.get_pressed_button())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_ButtonGroup.get_buttons())
+			qq += str(q_ButtonGroup.get_pressed_button())

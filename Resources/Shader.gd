@@ -22,7 +22,14 @@ func _process(delta) -> void:
 		qq += str(q_Shader.get_mode())
 		
 		qq += str(q_Shader.has_param( "Spoko" ))
-		q_Shader.set_default_texture_param( "Rozwiazac", load("res://Sprite" + str(randi()%4 + 1) + ".png") )
+#		q_Shader.set_default_texture_param( "Rozwiazac", load("res://Sprite" + str(randi()%4 + 1) + ".png") )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_Shader.set_code("KOD")
+			
+			qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
+			qq += str(q_Shader.get_mode())
+			
+			qq += str(q_Shader.has_param( "Spoko" ))
+			q_Shader.set_default_texture_param( "Rozwiazac", load("res://Sprite" + str(randi()%4 + 1) + ".png") )
+		

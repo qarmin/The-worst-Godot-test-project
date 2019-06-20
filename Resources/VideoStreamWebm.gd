@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VideoStreamWebm.set_file( "Paleta" )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_VideoStreamWebm.get_file())
+			q_VideoStreamWebm.set_file( "Paleta" )

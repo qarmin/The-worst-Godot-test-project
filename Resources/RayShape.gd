@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_RayShape.set_slips_on_slope(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_RayShape.set_length(randf() * 1000 - 500)
+			q_RayShape.set_slips_on_slope(bool(randi()%2))

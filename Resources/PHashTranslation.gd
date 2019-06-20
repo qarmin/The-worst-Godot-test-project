@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_PHashTranslation.generate( Translation.new())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PHashTranslation.generate( Translation.new())

@@ -42,7 +42,6 @@ func _process(delta) -> void:
 		q_ParticlesMaterial.set_flag(q_ParticlesMaterial.FLAG_ROTATE_Y ,bool(randi()%2))
 		q_ParticlesMaterial.set_flag(q_ParticlesMaterial.FLAG_DISABLE_Z,bool(randi()%2))
 		
-		#Setting last PARAM_ANIM_OFFSET (11) cause GLES 3 error
 		for j in range(12): # range(12):
 			q_ParticlesMaterial.set_param(j,randf() * 50)
 			q_ParticlesMaterial.set_param_randomness(j,randf() * 50)
@@ -68,14 +67,13 @@ func _process(delta) -> void:
 			q_ParticlesMaterial.set_spread(randf() * 1000 - 500)
 			q_ParticlesMaterial.set_flatness(randf() * 1000 - 500)
 			q_ParticlesMaterial.set_gravity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-			q_ParticlesMaterial.set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_ParticlesMaterial.set_color(Color(randf(),randf(),randf(),randf()))
 			q_ParticlesMaterial.set_color_ramp(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			q_ParticlesMaterial.set_flag(q_ParticlesMaterial.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
 			q_ParticlesMaterial.set_flag(q_ParticlesMaterial.FLAG_ROTATE_Y ,bool(randi()%2))
 			q_ParticlesMaterial.set_flag(q_ParticlesMaterial.FLAG_DISABLE_Z,bool(randi()%2))
 			
-			#Setting last PARAM_ANIM_OFFSET (11) cause GLES 3 error
 			for j in range(12): # range(12):
 				q_ParticlesMaterial.set_param(j,randf() * 1000 - 500)
 				q_ParticlesMaterial.set_param_randomness(j,randf() * 1000 - 500)

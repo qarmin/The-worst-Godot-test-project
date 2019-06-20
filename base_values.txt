@@ -3,7 +3,7 @@ randi() % 1000000 - 500000
 randf() * 1000 - 500
 Vector2(randf() * 1000 - 500, randf() * 1000 - 500)
 Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)
-Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+
 
 Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 

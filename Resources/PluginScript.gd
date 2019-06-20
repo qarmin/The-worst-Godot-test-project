@@ -17,6 +17,6 @@ func _process(delta) -> void:
 #		var q_PluginScript : PluginScript = PluginScript.new()
 #
 #		qq += str(q_PluginScript.new())
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

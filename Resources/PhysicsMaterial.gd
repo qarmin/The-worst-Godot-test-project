@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		q_PhysicsMaterial.set_absorbent(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PhysicsMaterial.set_friction(randf() * 1000 - 500)
+			q_PhysicsMaterial.set_rough(bool(randi()%2))
+			q_PhysicsMaterial.set_bounce(randf() * 1000 - 500)
+			q_PhysicsMaterial.set_absorbent(bool(randi()%2))

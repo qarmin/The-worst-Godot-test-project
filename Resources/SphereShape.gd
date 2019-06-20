@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_SphereShape.set_radius(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_SphereShape.set_radius(randf() * 1000 - 500)

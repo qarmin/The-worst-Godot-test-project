@@ -88,7 +88,7 @@ func _process(delta) -> void:
 			pop()
 			push_align(randi() % 1000 - 500)
 			push_cell()
-			push_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			push_color(Color(randf(),randf(),randf(),randf()))
 			push_font(load("res://DynamicFontasfasfawg.tres"))
 			push_indent(randi() % 1000 - 500)
 			push_list(randi() % 1000 - 500)

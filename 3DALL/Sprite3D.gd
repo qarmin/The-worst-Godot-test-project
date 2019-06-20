@@ -51,7 +51,7 @@ func _process(delta) -> void:
 #			set_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 #			set_flip_h(bool(randi()%2))
 #			set_flip_v(bool(randi()%2))
-#			set_modulate(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_modulate(Color(randf(),randf(),randf(),randf()))
 #			set_opacity(randf() * 1000 - 500)
 #			set_pixel_size(randf() * 1000 - 500)
 #			set_axis(randi() % 1000 - 500)

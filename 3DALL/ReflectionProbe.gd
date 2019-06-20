@@ -40,6 +40,6 @@ func _process(delta) -> void:
 			set_enable_shadows(bool(randi()%2))
 			set_cull_mask(randi() % 1000 - 500)
 			set_as_interior(bool(randi()%2))
-			set_interior_ambient(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_interior_ambient(Color(randf(),randf(),randf(),randf()))
 			set_interior_ambient_energy(randf() * 1000 - 500)
 			set_interior_ambient_probe_contribution(randf() * 1000 - 500)

@@ -26,6 +26,6 @@ func _process(delta) -> void:
 #		qq += str(q_NativeScript.get_property_documentation( "Wlochy" ))
 #		qq += str(q_NativeScript.get_signal_documentation( "Tysiac" ))
 #		qq += str(q_NativeScript.new())
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

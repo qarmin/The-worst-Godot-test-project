@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		#q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)]))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_ConcavePolygonShape.get_faces())
+			q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500),Vector3(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500)]))

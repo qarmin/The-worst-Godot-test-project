@@ -41,5 +41,26 @@ func _process(delta) -> void:
 		q_MeshLibrary.remove_item(0) #MOVED
 		
 		if Autoload.WRONG_BUGS:
-			pass
-		
+			q_MeshLibrary.clear()
+			q_MeshLibrary.create_item(randi() % 1000 - 500)
+			qq += str(q_MeshLibrary.find_item_by_name("Dokumenty"))
+			
+			qq += str(q_MeshLibrary.get_item_list())
+			qq += str(q_MeshLibrary.get_item_mesh(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_item_name(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_item_navmesh(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_item_navmesh_transform(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_item_preview(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_item_shapes(randi() % 1000 - 500))
+			qq += str(q_MeshLibrary.get_last_unused_item_id())
+			
+			###MOVEDq_MeshLibrary.remove_item(
+			
+			q_MeshLibrary.set_item_mesh(randi() % 1000 - 500,CubeMesh.new())
+			q_MeshLibrary.set_item_name(randi() % 1000 - 500,"Kukurydza")
+			q_MeshLibrary.set_item_navmesh(randi() % 1000 - 500,NavigationMesh.new())
+			q_MeshLibrary.set_item_navmesh_transform(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_MeshLibrary.set_item_preview(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_MeshLibrary.set_item_shapes(randi() % 1000 - 500,[BoxShape.new(),BoxShape.new()])
+			
+			q_MeshLibrary.remove_item(randi() % 1000 - 500) #MOVED

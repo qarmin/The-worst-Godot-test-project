@@ -113,8 +113,8 @@ func _process(delta) -> void:
 			cursor_set_blink_speed(randf() * 1000 - 500)
 			set_right_click_moves_caret(bool(randi()%2))
 			
-			add_color_region("aqwfqwfqw", "qascqw", Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2))
-			add_keyword_color("sffqwfasfasfqw", Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			add_color_region("aqwfqwfqw", "qascqw", Color(randf(),randf(),randf(),randf()),bool(randi()%2))
+			add_keyword_color("sffqwfasfasfqw", Color(randf(),randf(),randf(),randf()))
 			qq += str(can_fold(randi() % 1000 - 500))
 			clear_colors()
 			clear_undo_history()

@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		q_InputEventScreenDrag.set_speed(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventScreenDrag.set_index(randi() % 1000 - 500)
+			q_InputEventScreenDrag.set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_InputEventScreenDrag.set_relative(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_InputEventScreenDrag.set_speed(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

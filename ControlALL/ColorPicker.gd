@@ -41,11 +41,11 @@ func _process(delta) -> void:
 		add_spacer(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			set_pick_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_pick_color(Color(randf(),randf(),randf(),randf()))
 			set_edit_alpha(bool(randi()%2))
 			set_raw_mode(bool(randi()%2))
 			set_deferred_mode(bool(randi()%2))
 			set_presets_enabled(bool(randi()%2))
 			set_presets_visible(bool(randi()%2))
-			add_preset(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-			qq += str(erase_preset(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			add_preset(Color(randf(),randf(),randf(),randf()))
+			qq += str(erase_preset(Color(randf(),randf(),randf(),randf())))

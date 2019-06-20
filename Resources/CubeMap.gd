@@ -23,7 +23,14 @@ func _process(delta) -> void:
 		qq += str(q_CubeMap.get_height())
 		qq += str(q_CubeMap.get_side(randi() % 6))# Side
 		qq += str(q_CubeMap.get_width())
-		q_CubeMap.set_side( randi() % 6, load("res://Sprite" + str(randi()%4 + 1) + ".png"))# Side
+		#BUG q_CubeMap.set_side( randi() % 6, load("res://Sprite" + str(randi()%4 + 1) + ".png"))# Side
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CubeMap.set_flags(randi() % 1000 - 500) #FLAGS 
+			q_CubeMap.set_storage(randi() % 1000 - 500) #Storage
+			q_CubeMap.set_lossy_storage_quality(randf() * 1000 - 500)
+			
+			qq += str(q_CubeMap.get_height())
+			qq += str(q_CubeMap.get_side(randi() % 1000 - 500))# Side
+			qq += str(q_CubeMap.get_width())
+			#BUG q_CubeMap.set_side( randi() % 1000 - 500, load("res://Sprite" + str(randi()%4 + 1) + ".png"))# Side

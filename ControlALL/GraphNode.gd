@@ -59,7 +59,7 @@ func _process(delta) -> void:
 			set_selected(bool(randi()%2))
 			set_comment(bool(randi()%2))
 			set_overlay(randi() % 1000 - 500)
-			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), bool(randi()%2), randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
+			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
 			clear_slot(randi() % 1000 - 500)
 			clear_all_slots()
 			qq += str(get_connection_input_color(randi() % 1000 - 500))

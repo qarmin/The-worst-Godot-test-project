@@ -34,7 +34,7 @@ func _process(delta) -> void:
 #			begin(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
 #			clear()
 #			end()
-#			set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+#			set_color(Color(randf(),randf(),randf(),randf()))
 #			set_normal(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 #			set_tangent(Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 #			set_uv(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

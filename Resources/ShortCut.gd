@@ -16,12 +16,17 @@ func _process(delta) -> void:
 		
 		var q_ShortCut : ShortCut = ShortCut.new()
 		
-		q_ShortCut.set_shortcut(InputEvent.new())
+		#q_ShortCut.set_shortcut(InputEvent.new())
 		
 		qq += str(q_ShortCut.get_as_text())
 		
-		qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+		#qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
 		qq += str(q_ShortCut.is_valid())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_ShortCut.set_shortcut(InputEvent.new())
+			
+			qq += str(q_ShortCut.get_as_text())
+			
+			qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+			qq += str(q_ShortCut.is_valid())

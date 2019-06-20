@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_CylinderShape.set_height(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CylinderShape.set_radius(randf() * 1000 - 500)
+			q_CylinderShape.set_height(randf() * 1000 - 500)

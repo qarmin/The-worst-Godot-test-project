@@ -29,4 +29,14 @@ func _process(delta) -> void:
 		q_GIProbeData.set_compress(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_GIProbeData.set_bounds(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_GIProbeData.set_cell_size(randf() * 1000 - 500)
+			q_GIProbeData.set_to_cell_xform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_GIProbeData.set_dynamic_data(PoolIntArray([11,124,1241,24,21,214,12,11]))
+			q_GIProbeData.set_dynamic_range(randi() % 1000 - 500)
+			q_GIProbeData.set_energy(randf() * 1000 - 500)
+			q_GIProbeData.set_bias(randf() * 1000 - 500)
+			q_GIProbeData.set_normal_bias(randf() * 1000 - 500)
+			q_GIProbeData.set_propagation(randf() * 1000 - 500)
+			q_GIProbeData.set_interior(bool(randi()%2))
+			q_GIProbeData.set_compress(bool(randi()%2))

@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_InputEventScreenTouch.set_pressed(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventScreenTouch.set_index(randi() % 1000 - 500)
+			q_InputEventScreenTouch.set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_InputEventScreenTouch.set_pressed(bool(randi()%2))

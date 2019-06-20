@@ -109,7 +109,7 @@ func _process(delta) -> void:
 			pm.set_spread(randf() * 1000 - 500)
 			pm.set_flatness(randf() * 1000 - 500)
 			pm.set_gravity(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
-			pm.set_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			pm.set_color(Color(randf(),randf(),randf(),randf()))
 			pm.set_color_ramp(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))

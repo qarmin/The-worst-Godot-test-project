@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_InputEventMagnifyGesture.set_factor(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventMagnifyGesture.set_factor(randf() * 1000 - 500)

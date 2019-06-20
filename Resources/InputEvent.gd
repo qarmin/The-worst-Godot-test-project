@@ -29,6 +29,6 @@ func _process(delta) -> void:
 #
 #		qq += str(q_InputEvent.shortcut_match( InputEvent.new()))
 #		qq += str(q_InputEvent.xformed_by( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) ))
-
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

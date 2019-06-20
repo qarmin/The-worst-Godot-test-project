@@ -18,6 +18,7 @@ func _process(delta) -> void:
 #
 #		q_Material.set_render_priority(randi()%50)
 #		q_Material.set_next_pass(Material.new())
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			q_Material.set_render_priority(randi() % 1000 - 500)
+#			q_Material.set_next_pass(Material.new())

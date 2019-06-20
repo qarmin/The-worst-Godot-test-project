@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VideoStreamGDNative.set_file( "res://Heg.mp4")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_VideoStreamGDNative.get_file())
+			q_VideoStreamGDNative.set_file( "res://Heg.mp4")

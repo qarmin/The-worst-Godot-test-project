@@ -133,7 +133,6 @@ func _process(delta) -> void:
 		
 		#qq += str(yield(self,"draw"))
 		
-		print("assfasf")
 		if Autoload.WRONG_BUGS:
 			print("asf")
 			qq += str(Color8(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500))

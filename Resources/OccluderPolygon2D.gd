@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_OccluderPolygon2D.set_closed(bool(randi()%2))
+			q_OccluderPolygon2D.set_cull_mode(randi() % 1000 - 500) # CullMode
+			q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]))

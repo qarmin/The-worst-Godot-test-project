@@ -83,7 +83,7 @@ func _process(delta) -> void:
 			set_emission_rect_extents(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_emission_points(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
 			set_emission_normals(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
-			set_emission_colors(PoolColorArray([Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
+			set_emission_colors(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
 			set_particle_flag(randi() % 1000 - 500,randi() % 1000 - 500)
 			set_spread(randf() * 1000 - 500)
 			set_flatness(randf() * 1000 - 500)

@@ -19,6 +19,6 @@ func _process(delta) -> void:
 #		q_InputEventMouse.set_button_mask(randi() % 257) #ButtonList
 #		q_InputEventMouse.set_position(Vector2(randf() * 50,randf() * 50))
 #		q_InputEventMouse.set_global_position(Vector2(randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

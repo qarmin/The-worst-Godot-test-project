@@ -22,4 +22,5 @@ func _process(delta) -> void:
 		qq += str(q_PackedDataContainer.size())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_PackedDataContainer.pack(String("asfasf")))
+			qq += str(q_PackedDataContainer.size())

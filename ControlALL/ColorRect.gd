@@ -28,4 +28,4 @@ func _process(delta) -> void:
 		set_frame_color(Color(randf(),randf(),randf(),randf()))
 		
 		if Autoload.WRONG_BUGS:
-			set_frame_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_frame_color(Color(randf(),randf(),randf(),randf()))

@@ -29,6 +29,6 @@ func _process(delta) -> void:
 #
 #		q_TextureLayered.set_data_partial( Image.new(), randi()%50, randi()%50, randi()%50, randi()%50 )
 #		q_TextureLayered.set_layer_data( Image.new(), randi()%50 )
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

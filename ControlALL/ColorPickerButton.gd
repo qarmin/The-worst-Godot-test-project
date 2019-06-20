@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		qq += str(get_popup())
 		
 		if Autoload.WRONG_BUGS:
-			set_pick_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_pick_color(Color(randf(),randf(),randf(),randf()))
 			set_edit_alpha(bool(randi()%2))
 			qq += str(get_picker())
 			qq += str(get_popup())

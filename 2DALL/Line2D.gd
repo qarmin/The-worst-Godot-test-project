@@ -38,7 +38,7 @@ func _process(delta) -> void:
 			clear_points()
 			set_points(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
 			set_width(randf() * 1000 - 500)
-			set_default_color(Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			set_default_color(Color(randf(),randf(),randf(),randf()))
 			set_gradient(load("res://Gradient" + str(randi() % 1000 - 500) + ".tres"))
 			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_mode(randi() % 1000 - 500)

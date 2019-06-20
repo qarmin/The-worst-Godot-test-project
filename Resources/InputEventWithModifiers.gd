@@ -21,6 +21,6 @@ func _process(delta) -> void:
 #		q_InputEventWithModifiers.set_control(bool(randi()%2))
 #		q_InputEventWithModifiers.set_metakey(bool(randi()%2))
 #		q_InputEventWithModifiers.set_command(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

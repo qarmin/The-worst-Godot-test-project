@@ -479,7 +479,7 @@ script = ExtResource( 235 )
 [node name="BitMap" type="Node2D" parent="."]
 script = ExtResource( 245 )
 
-[node name="Font" type="Node2D" parent="."]
+[node name="Font_CANT" type="Node2D" parent="."]
 script = ExtResource( 247 )
 
 [node name="BitmapFont" type="Node2D" parent="."]
@@ -488,11 +488,8 @@ script = ExtResource( 248 )
 [node name="DynamicFont" type="Node2D" parent="."]
 script = ExtResource( 246 )
 
-[node name="Shape" type="Node2D" parent="."]
+[node name="Shape_CANT" type="Node2D" parent="."]
 script = ExtResource( 242 )
-
-[node name="BoxShape" type="Node2D" parent="."]
-script = ExtResource( 244 )
 
 [node name="CapsuleShape" type="Node2D" parent="."]
 script = ExtResource( 243 )
@@ -505,6 +502,9 @@ script = ExtResource( 260 )
 
 [node name="CylinderShape" type="Node2D" parent="."]
 script = ExtResource( 255 )
+
+[node name="BoxShape" type="Node2D" parent="."]
+script = ExtResource( 244 )
 
 [node name="HeightMapShape" type="Node2D" parent="."]
 script = ExtResource( 257 )
@@ -521,7 +521,7 @@ script = ExtResource( 256 )
 [node name="ButtonGroup" type="Node2D" parent="."]
 script = ExtResource( 239 )
 
-[node name="Material" type="Node2D" parent="."]
+[node name="Material_CANT" type="Node2D" parent="."]
 script = ExtResource( 240 )
 
 [node name="CanvasItemMaterial" type="Node2D" parent="."]
@@ -536,7 +536,7 @@ script = ExtResource( 254 )
 [node name="SpatialMaterial" type="Node2D" parent="."]
 script = ExtResource( 252 )
 
-[node name="Shape2D" type="Node2D" parent="."]
+[node name="Shape2D_CANT" type="Node2D" parent="."]
 script = ExtResource( 253 )
 
 [node name="CapsuleShape2D" type="Node2D" parent="."]
@@ -581,7 +581,7 @@ script = ExtResource( 274 )
 [node name="EditorSettings_TODO" type="Node2D" parent="."]
 script = ExtResource( 277 )
 
-[node name="EditorSpatialGizmoPlugin" type="Node2D" parent="."]
+[node name="EditorSpatialGizmoPlugin_CANT" type="Node2D" parent="."]
 script = ExtResource( 271 )
 
 [node name="Environment" type="Node2D" parent="."]
@@ -590,16 +590,16 @@ script = ExtResource( 289 )
 [node name="GDNativeLibrary" type="Node2D" parent="."]
 script = ExtResource( 272 )
 
-[node name="Script" type="Node2D" parent="."]
+[node name="Script_CANT" type="Node2D" parent="."]
 script = ExtResource( 273 )
 
 [node name="GDScript" type="Node2D" parent="."]
 script = ExtResource( 1 )
 
-[node name="NativeScript" type="Node2D" parent="."]
+[node name="NativeScript_CANT" type="Node2D" parent="."]
 script = ExtResource( 288 )
 
-[node name="PluginScript" type="Node2D" parent="."]
+[node name="PluginScript_CANT" type="Node2D" parent="."]
 script = ExtResource( 292 )
 
 [node name="VisualScript_TODO" type="Node2D" parent="."]
@@ -614,16 +614,16 @@ script = ExtResource( 296 )
 [node name="Image" type="Node2D" parent="."]
 script = ExtResource( 293 )
 
-[node name="InputEvent" type="Node2D" parent="."]
+[node name="InputEvent_CANT" type="Node2D" parent="."]
 script = ExtResource( 276 )
 
 [node name="InputEventAction" type="Node2D" parent="."]
 script = ExtResource( 280 )
 
-[node name="IntpuEventWithModifiers" type="Node2D" parent="."]
+[node name="IntpuEventWithModifiers_CANT" type="Node2D" parent="."]
 script = ExtResource( 294 )
 
-[node name="IntpuEventGesture" type="Node2D" parent="."]
+[node name="IntpuEventGesture_CANT" type="Node2D" parent="."]
 script = ExtResource( 299 )
 
 [node name="IntpuEventMagnifyGesture" type="Node2D" parent="."]
@@ -635,7 +635,7 @@ script = ExtResource( 281 )
 [node name="IntpuEventKey" type="Node2D" parent="."]
 script = ExtResource( 282 )
 
-[node name="IntpuEventMouse" type="Node2D" parent="."]
+[node name="IntpuEventMouse_CANT" type="Node2D" parent="."]
 script = ExtResource( 284 )
 
 [node name="IntpuEventMouseButton" type="Node2D" parent="."]
@@ -689,10 +689,10 @@ script = ExtResource( 312 )
 [node name="PackedScene" type="Node2D" parent="."]
 script = ExtResource( 395 )
 
-[node name="Sky" type="Node2D" parent="."]
+[node name="Sky_CANT" type="Node2D" parent="."]
 script = ExtResource( 333 )
 
-[node name="PanoramaSky" type="Node2D" parent="."]
+[node name="PanoramaSky_CANT" type="Node2D" parent="."]
 script = ExtResource( 311 )
 
 [node name="ProceduralSky" type="Node2D" parent="."]
@@ -716,10 +716,10 @@ script = ExtResource( 357 )
 [node name="SpriteFrames" type="Node2D" parent="."]
 script = ExtResource( 314 )
 
-[node name="StyleBox" type="Node2D" parent="."]
+[node name="StyleBox_CANT" type="Node2D" parent="."]
 script = ExtResource( 378 )
 
-[node name="StyleBoxEmpty" type="Node2D" parent="."]
+[node name="StyleBoxEmpty_CANT" type="Node2D" parent="."]
 script = ExtResource( 361 )
 
 [node name="StyleBoxFlat" type="Node2D" parent="."]
@@ -731,16 +731,16 @@ script = ExtResource( 415 )
 [node name="StyleBoxTexture" type="Node2D" parent="."]
 script = ExtResource( 386 )
 
-[node name="TextFile" type="Node2D" parent="."]
+[node name="TextFile_CANT" type="Node2D" parent="."]
 script = ExtResource( 370 )
 
-[node name="TextureLayered" type="Node2D" parent="."]
+[node name="TextureLayered_CANT" type="Node2D" parent="."]
 script = ExtResource( 391 )
 
-[node name="Texture3D" type="Node2D" parent="."]
+[node name="Texture3D_CANT" type="Node2D" parent="."]
 script = ExtResource( 380 )
 
-[node name="TextureArray" type="Node2D" parent="."]
+[node name="TextureArray_CANT" type="Node2D" parent="."]
 script = ExtResource( 387 )
 
 [node name="Theme" type="Node2D" parent="."]

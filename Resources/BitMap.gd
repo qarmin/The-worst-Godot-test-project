@@ -37,7 +37,7 @@ func _process(delta) -> void:
 			qq += str(q_BitMap.get_size())
 			qq += str(q_BitMap.get_true_bit_count())
 			
-			q_BitMap.grow_mask( randi()%50, Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_BitMap.grow_mask( randi() % 1000 - 500, Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
 			qq += str(q_BitMap.opaque_to_polygons(  Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)), randf() * 1000 - 500))
 			
 			q_BitMap.set_bit( Vector2(randf() * 1000 - 500,randf() * 1000 - 500), bool(randi()%2))

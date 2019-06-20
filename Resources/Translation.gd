@@ -25,4 +25,10 @@ func _process(delta) -> void:
 		qq += str(q_Translation.get_message_list())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_Translation.set_locale("pl")
+			
+			q_Translation.add_message( "Bolaczka", "Pomysl" )
+			q_Translation.erase_message( "Historia" )
+			qq += str(q_Translation.get_message( "Geralt" ))
+			qq += str(q_Translation.get_message_count())
+			qq += str(q_Translation.get_message_list())

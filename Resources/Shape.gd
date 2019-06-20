@@ -17,6 +17,6 @@ func _process(delta) -> void:
 #		var q_Shape : Shape = Shape.new()
 #
 #		q_Shape.set_margin(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			q_Shape.set_margin(randf() * 50)

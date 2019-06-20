@@ -23,4 +23,8 @@ func _process(delta) -> void:
 		q_StyleBoxLine.set_vertical(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_StyleBoxLine.set_color(Color(randf(),randf(),randf(),randf()))
+			q_StyleBoxLine.set_grow_begin(randf() * 1000 - 500)
+			q_StyleBoxLine.set_grow_end(randf() * 1000 - 500)
+			q_StyleBoxLine.set_thickness(randi() % 1000 - 500)
+			q_StyleBoxLine.set_vertical(bool(randi()%2))

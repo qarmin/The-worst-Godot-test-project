@@ -24,4 +24,9 @@ func _process(delta) -> void:
 		q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CanvasItemMaterial.set_blend_mode(randi() % 1000 - 500) #BlendMode
+			q_CanvasItemMaterial.set_light_mode(randi() % 1000 - 500) # LightMode
+			q_CanvasItemMaterial.set_particles_animation(bool(randi()%2))
+			q_CanvasItemMaterial.set_particles_anim_h_frames(randi() % 1000 - 500)
+			q_CanvasItemMaterial.set_particles_anim_v_frames(randi() % 1000 - 500)
+			q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))

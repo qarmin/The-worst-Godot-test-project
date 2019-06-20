@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		q_InputEventMouseButton.set_doubleclick(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventMouseButton.set_factor(randf() * 1000 - 500)
+			q_InputEventMouseButton.set_button_index(randi() % 1000 - 500)
+			q_InputEventMouseButton.set_pressed(bool(randi()%2))
+			q_InputEventMouseButton.set_doubleclick(bool(randi()%2))

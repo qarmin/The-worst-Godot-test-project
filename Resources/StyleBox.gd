@@ -28,6 +28,6 @@ func _process(delta) -> void:
 #		qq += str(q_StyleBox.get_offset())
 #
 #		qq += str(q_StyleBox.test_mask( Vector2(randf() * 50,randf() * 50), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50))))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

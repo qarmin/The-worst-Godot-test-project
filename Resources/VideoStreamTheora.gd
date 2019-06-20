@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VideoStreamTheora.set_file( "Pewnosc" )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_VideoStreamTheora.get_file())
+			q_VideoStreamTheora.set_file( "Pewnosc" )

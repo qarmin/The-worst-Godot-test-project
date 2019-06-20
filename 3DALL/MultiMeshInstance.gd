@@ -56,8 +56,8 @@ func _process(delta) -> void:
 			qq += str(MM.get_instance_transform_2d(randi() % 1000 - 500))
 	
 			MM.set_as_bulk_array(PoolRealArray([randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500]))
-			MM.set_instance_color(randi() % 1000 - 500,Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-			MM.set_instance_custom_data(randi() % 1000 - 500,Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			MM.set_instance_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+			MM.set_instance_custom_data(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
 			MM.set_instance_transform(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
 			MM.set_instance_transform_2d(randi() % 1000 - 500,Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
 			

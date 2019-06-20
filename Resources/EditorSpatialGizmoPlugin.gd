@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 #		var q_EditorSpatialGizmoPlugin : EditorSpatialGizmoPlugin = EditorSpatialGizmoPlugin.new()
 #
-#		q_EditorSpatialGizmoPlugin.can_be_hidden()
+#		qq += str(q_EditorSpatialGizmoPlugin.can_be_hidden())
 #		q_EditorSpatialGizmoPlugin.commit_handle( EditorSpatialGizmo gizmo, int index, Variant restore, bool cancel=false )
 #		q_EditorSpatialGizmoPlugin.create_gizmo( Spatial spatial )
 #		q_EditorSpatialGizmoPlugin.get_handle_name( EditorSpatialGizmo gizmo, int index )
@@ -28,7 +28,7 @@ func _process(delta) -> void:
 #		q_EditorSpatialGizmoPlugin.is_selectable_when_hidden()
 #		q_EditorSpatialGizmoPlugin.redraw( EditorSpatialGizmo gizmo )
 #		q_EditorSpatialGizmoPlugin.set_handle( EditorSpatialGizmo gizmo, int index, Camera camera, Vector2 point )
-#
+
 #		q_EditorSpatialGizmoPlugin.add_material( "Monit", SpatialMaterial.new() )
 #
 #		q_EditorSpatialGizmoPlugin.create_handle_material( "Wonsz", bool(randi()%2))
@@ -36,6 +36,6 @@ func _process(delta) -> void:
 #		q_EditorSpatialGizmoPlugin.create_material( "Ale", Color(randf(),randf(),randf(),randf()), bool(randi()%2), bool(randi()%2), bool(randi()%2) )
 #
 #		qq += str(q_EditorSpatialGizmoPlugin.get_material( "Mionsz", EditorSpatialGizmo.new() ))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

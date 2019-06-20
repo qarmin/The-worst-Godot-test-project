@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_SegmentShape2D.set_b(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_SegmentShape2D.set_a(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_SegmentShape2D.set_b(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

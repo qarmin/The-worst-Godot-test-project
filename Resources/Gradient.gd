@@ -33,4 +33,18 @@ func _process(delta) -> void:
 		q_Gradient.set_offset( 0,randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_Gradient.set_offsets(PoolRealArray([125125.125,12512.1251,122.124]))
+			q_Gradient.set_colors(PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]))
+			
+			for _i in range(4):
+				q_Gradient.add_point( randf() * 1000 - 500,Color(randf(),randf(),randf(),randf()) )
+				
+			qq += str(q_Gradient.get_color(randi() % 1000 - 500 ))
+			qq += str(q_Gradient.get_offset(randi() % 1000 - 500 ))
+			qq += str(q_Gradient.get_point_count())
+			
+			qq += str(q_Gradient.interpolate(randf() * 1000 - 500))
+			q_Gradient.remove_point(randi() % 1000 - 500 )
+			
+			q_Gradient.set_color(randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()) )
+			q_Gradient.set_offset(randi() % 1000 - 500,randf() * 1000 - 500)

@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_InputEventJoypadButton.set_pressed(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventJoypadButton.set_button_index(randi() % 1000 - 500)
+			q_InputEventJoypadButton.set_pressure(bool(randi()%2))
+			q_InputEventJoypadButton.set_pressed(bool(randi()%2))

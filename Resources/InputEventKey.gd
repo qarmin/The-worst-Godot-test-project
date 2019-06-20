@@ -23,4 +23,8 @@ func _process(delta) -> void:
 		qq += str(q_InputEventKey.get_scancode_with_modifiers())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventKey.set_pressed(bool(randi()%2))
+			q_InputEventKey.set_scancode(randi() % 10000000 - 5000000) #KeyList
+			q_InputEventKey.set_unicode(randi() % 1000 - 500)
+			q_InputEventKey.set_echo(bool(randi()%2))
+			qq += str(q_InputEventKey.get_scancode_with_modifiers())

@@ -34,4 +34,19 @@ func _process(delta) -> void:
 		q_ProceduralSky.set_texture_size(randi() % ProceduralSky.TEXTURE_SIZE_MAX) # TextureSize
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_ProceduralSky.set_sky_top_color(Color(randf(),randf(),randf(),randf()))
+			q_ProceduralSky.set_sky_horizon_color(Color(randf(),randf(),randf(),randf()))
+			q_ProceduralSky.set_sky_curve(randf() * 1000 - 500)
+			q_ProceduralSky.set_sky_energy(randf() * 1000 - 500)
+			q_ProceduralSky.set_ground_bottom_color(Color(randf(),randf(),randf(),randf()))
+			q_ProceduralSky.set_ground_horizon_color(Color(randf(),randf(),randf(),randf()))
+			q_ProceduralSky.set_ground_curve(randf() * 1000 - 500)
+			q_ProceduralSky.set_ground_energy(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_color(Color(randf(),randf(),randf(),randf()))
+			q_ProceduralSky.set_sun_latitude(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_longitude(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_angle_min(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_angle_max(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_curve(randf() * 1000 - 500)
+			q_ProceduralSky.set_sun_energy(randf() * 1000 - 500)
+			q_ProceduralSky.set_texture_size(randi() % 1000 - 500) # TextureSize

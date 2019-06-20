@@ -30,8 +30,8 @@ func _process(delta) -> void:
 #		q_Font.update_changes()
 #
 #		if Autoload.WRONG_BUGS:
-#			q_Font.draw( RID(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500), "Drzewo", Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			qq += str(q_Font.draw_char( RID(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500, randi() % 1000 - 500, Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2)))
+#			q_Font.draw( RID(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500), "Drzewo", Color(randf(),randf(),randf(),randf()), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()))
+#			qq += str(q_Font.draw_char( RID(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500, randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()),bool(randi()%2)))
 #
 #			qq += str(q_Font.get_ascent())
 #			qq += str(q_Font.get_descent())

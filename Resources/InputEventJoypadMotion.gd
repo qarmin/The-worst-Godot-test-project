@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_InputEventJoypadMotion.set_axis_value(randf() * 2 - 1.0)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventJoypadMotion.set_axis(randi() % 1000 - 500) #JoystickList
+			q_InputEventJoypadMotion.set_axis_value(randf() * 1000 - 500)

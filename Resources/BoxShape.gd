@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_BoxShape.set_extents(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_BoxShape.set_extents(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))

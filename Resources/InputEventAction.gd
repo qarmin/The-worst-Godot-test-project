@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_InputEventAction.set_strength(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_InputEventAction.set_action("Mina")
+			q_InputEventAction.set_pressed(bool(randi()%2))
+			q_InputEventAction.set_strength(randf() * 1000 - 500)

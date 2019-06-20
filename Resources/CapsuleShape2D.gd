@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_CapsuleShape2D.set_height(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CapsuleShape2D.set_radius(randf() * 1000 - 500)
+			q_CapsuleShape2D.set_height(randf() * 1000 - 500)

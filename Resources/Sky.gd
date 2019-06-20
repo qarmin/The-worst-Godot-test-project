@@ -17,6 +17,6 @@ func _process(delta) -> void:
 #		var q_Sky : Sky = Sky.new()
 #
 #		q_Sky.set_radiance_size(randi() % Sky.RADIANCE_SIZE_MAX) # RadianceSize
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass
