@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
-		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+#		var q_Sky : Sky = Sky.new()
+#
+#		q_Sky.set_radiance_size(randi() % Sky.RADIANCE_SIZE_MAX) # RadianceSize
 		
 		if Autoload.WRONG_BUGS:
 			pass

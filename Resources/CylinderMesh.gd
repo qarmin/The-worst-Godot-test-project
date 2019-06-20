@@ -14,11 +14,17 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_CylinderMesh : CylinderMesh = CylinderMesh.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_CylinderMesh.set_top_radius(randf() * 50)
+		q_CylinderMesh.set_bottom_radius(randf() * 50)
+		q_CylinderMesh.set_height(randf() * 50)
+		q_CylinderMesh.set_radial_segments(randi()%2)
+		q_CylinderMesh.set_rings(randi()%2)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CylinderMesh.set_top_radius(randf() * 1000 - 500)
+			q_CylinderMesh.set_bottom_radius(randf() * 1000 - 500)
+			q_CylinderMesh.set_height(randf() * 1000 - 500)
+			q_CylinderMesh.set_radial_segments(randi()%10 - 8)
+			q_CylinderMesh.set_rings(randi()%10 - 8)

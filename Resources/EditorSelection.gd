@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_EditorSelection : EditorSelection = EditorSelection.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_EditorSelection.
+		q_EditorSelection.
+		q_EditorSelection.
 		
 		if Autoload.WRONG_BUGS:
 			pass

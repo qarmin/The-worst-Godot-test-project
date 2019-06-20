@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_ShaderMaterial : ShaderMaterial = ShaderMaterial.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_ShaderMaterial.set_shader(Shader.new())
+		
+		qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
+		qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
+		qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
+		
+		q_ShaderMaterial.set_shader_param( "Krokiew", randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_ResourceLoader : ResourceLoader = ResourceLoader.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_ResourceLoader.
+		q_ResourceLoader.
+		q_ResourceLoader.
 		
 		if Autoload.WRONG_BUGS:
 			pass

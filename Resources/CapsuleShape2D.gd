@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_CapsuleShape2D : CapsuleShape2D = CapsuleShape2D.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_CapsuleShape2D.set_radius(randf() * 50)
+		q_CapsuleShape2D.set_height(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

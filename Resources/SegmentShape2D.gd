@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_SegmentShape2D : SegmentShape2D = SegmentShape2D.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_SegmentShape2D.set_a(Vector2(randf() * 50,randf() * 50))
+		q_SegmentShape2D.set_b(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
 			pass

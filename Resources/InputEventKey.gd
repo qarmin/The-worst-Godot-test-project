@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_InputEventKey : InputEventKey = InputEventKey.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_InputEventKey.set_pressed(bool(randi()%2))
+		q_InputEventKey.set_scancode(randi()%33554432) #KeyList
+		q_InputEventKey.set_unicode(randi()%50)
+		q_InputEventKey.set_echo(bool(randi()%2))
+		qq += str(q_InputEventKey.get_scancode_with_modifiers())
 		
 		if Autoload.WRONG_BUGS:
 			pass

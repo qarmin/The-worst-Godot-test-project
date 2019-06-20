@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
 		q_AnimationNodeStateMachinePlayback.start( "Karamba" )
 		q_AnimationNodeStateMachinePlayback.stop()
-		q_AnimationNodeStateMachinePlayback.travel( "Kraków" )
+		q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )
 		
 		if Autoload.WRONG_BUGS:
 			qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
@@ -31,4 +31,4 @@ func _process(delta) -> void:
 			qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
 			q_AnimationNodeStateMachinePlayback.start( "Karamba" )
 			q_AnimationNodeStateMachinePlayback.stop()
-			q_AnimationNodeStateMachinePlayback.travel( "Kraków" )
+			q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )

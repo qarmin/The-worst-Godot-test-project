@@ -72,7 +72,7 @@ func _process(delta) -> void:
 			set_collision_layer(randi() % 1000000 - 500000)
 			set_collision_mask(randi() % 1000000 - 500000)
 			set_audio_bus_override(bool(randi()%2))
-			set_audio_bus_name("ŚÓĆŒĄÓŚŁ")
+			set_audio_bus_name("snocŒanosl")
 			
 			qq += str(get_collision_layer_bit(randi() % 1000 - 500))
 			qq += str(get_collision_mask_bit(randi() % 1000 - 500))

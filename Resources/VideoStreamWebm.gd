@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		qq += str(q_VideoStreamWebm.get_file())
+		q_VideoStreamWebm.set_file( "Paleta" )
 		
 		if Autoload.WRONG_BUGS:
 			pass

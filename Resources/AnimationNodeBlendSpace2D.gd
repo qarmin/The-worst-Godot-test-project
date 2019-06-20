@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		q_AnimationNodeBlendSpace2D.set_max_space(Vector2(randf() * 50,randf() * 50))
 		q_AnimationNodeBlendSpace2D.set_snap(Vector2(randf() * 50,randf() * 50))
 		q_AnimationNodeBlendSpace2D.set_x_label("Buty")
-		q_AnimationNodeBlendSpace2D.set_y_label("Szałwia")
+		q_AnimationNodeBlendSpace2D.set_y_label("Szalwia")
 		q_AnimationNodeBlendSpace2D.set_blend_mode(randi() % 3) #BlendMode
 		
 		#q_AnimationNodeBlendSpace2D.add_blend_point( AnimationRootNode.new(), Vector2(randf() * 50,randf() * 50), randi()%50 )
@@ -44,7 +44,7 @@ func _process(delta) -> void:
 			q_AnimationNodeBlendSpace2D.set_max_space(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			q_AnimationNodeBlendSpace2D.set_snap(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			q_AnimationNodeBlendSpace2D.set_x_label("Buty")
-			q_AnimationNodeBlendSpace2D.set_y_label("Szałwia")
+			q_AnimationNodeBlendSpace2D.set_y_label("Szalwia")
 			q_AnimationNodeBlendSpace2D.set_blend_mode(randi() % 1000 - 500) #BlendMode
 			
 			q_AnimationNodeBlendSpace2D.add_blend_point( AnimationRootNode.new(), Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500 )

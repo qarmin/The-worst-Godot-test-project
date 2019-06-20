@@ -14,11 +14,12 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_PackedDataContainer : PackedDataContainer = PackedDataContainer.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_PackedDataContainer._set_data(PoolByteArray([11,124,1241,24,21,214,12,11]))
+		
+		qq += str(q_PackedDataContainer.pack(String("asfasf")))
+		qq += str(q_PackedDataContainer.size())
 		
 		if Autoload.WRONG_BUGS:
 			pass

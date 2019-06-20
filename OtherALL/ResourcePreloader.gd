@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		
 		qq += str(has_resource("qq"))
 		rename_resource("qq","dd")
-		remove_resource("dd") ## Zmiana kolejności
+		remove_resource("dd") ## Zmiana kolejnosci
 		
 		if Autoload.WRONG_BUGS:
 			add_resource("qq", ImageTexture.new())
@@ -31,4 +31,4 @@ func _process(delta) -> void:
 			
 			qq += str(has_resource("qasfq"))
 			rename_resource("qasq","asfd")
-			remove_resource("ddaf") ## Zmiana kolejności
+			remove_resource("ddaf") ## Zmiana kolejnosci

@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_StyleBoxLine : StyleBoxLine = StyleBoxLine.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_StyleBoxLine.set_color(Color(randf(),randf(),randf(),randf()))
+		q_StyleBoxLine.set_grow_begin(randf() * 50)
+		q_StyleBoxLine.set_grow_end(randf() * 50)
+		q_StyleBoxLine.set_thickness(randi()%50)
+		q_StyleBoxLine.set_vertical(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			pass

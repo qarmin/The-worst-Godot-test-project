@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_InputEventJoypadButton : InputEventJoypadButton = InputEventJoypadButton.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_InputEventJoypadButton.set_button_index(randi()%50)
+		q_InputEventJoypadButton.set_pressure(bool(randi()%2))
+		q_InputEventJoypadButton.set_pressed(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			pass

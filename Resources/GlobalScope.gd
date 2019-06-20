@@ -300,13 +300,13 @@ func _process(delta) -> void:
 
 		## Input
 
-#		Input.action_press("Rafał",randf() * 50)
+#		Input.action_press("Rafal",randf() * 50)
 #		Input.action_release("Roman")
 #
 #		Input.add_joy_mapping("Lif",bool(randi()%2))
 #
 #		qq += str(Input.get_accelerometer())
-#		qq += str(Input.get_action_strength("Jesteś?"))
+#		qq += str(Input.get_action_strength("Jestes?"))
 #		qq += str(Input.get_connected_joypads())
 #		qq += str(Input.get_current_cursor_shape())
 #		qq += str(Input.get_gravity())
@@ -326,14 +326,14 @@ func _process(delta) -> void:
 #		qq += str(Input.get_mouse_mode())
 #
 #		qq += str(Input.is_action_just_pressed("Wredny"))
-#		qq += str(Input.is_action_just_released("Koł"))
-#		qq += str(Input.is_action_pressed("Zdjęcia"))
+#		qq += str(Input.is_action_just_released("Kol"))
+#		qq += str(Input.is_action_pressed("Zdjecia"))
 #		qq += str(Input.is_joy_button_pressed(randi()%50,randi()%50))
 #		qq += str(Input.is_joy_known(randi()%50))
 #		qq += str(Input.is_key_pressed(randi()%50))
 #		qq += str(Input.is_mouse_button_pressed(randi()%50))
 #
-#		Input.joy_connection_changed(randi()%50, bool(randi()%2), "Studnia", "Ołówek") 
+#		Input.joy_connection_changed(randi()%50, bool(randi()%2), "Studnia", "Olnowek") 
 #		#Input.parse_input_event(InputEvent.new())
 #		Input.remove_joy_mapping("Grace")
 #
@@ -349,7 +349,7 @@ func _process(delta) -> void:
 		## InputMap
 
 		#InputMap.action_add_event("Geralt",InputEvent.new())
-		#InputMap.action_erase_event("Świat",InputEvent.new())
+		#InputMap.action_erase_event("swiat",InputEvent.new())
 		#InputMap.action_erase_events("Okno")
 		#qq += str(InputMap.action_has_event("Duck",InputEvent.new()))
 		#InputMap.action_set_deadzone("Kichacz",randf() * 50)
@@ -361,13 +361,13 @@ func _process(delta) -> void:
 		qq += str(InputMap.get_action_list("Bohater"))
 		qq += str(InputMap.get_actions())
 		
-		qq += str(InputMap.has_action("Złap"))
+		qq += str(InputMap.has_action("Zlap"))
 		InputMap.load_from_globals()
 
 		## JSON
 
 		qq += str(JSON.parse("Konceptualny"))
-		qq += str(JSON.print("Brzęczyszczykiewicz","Łękołody",bool(randi()%2)))
+		qq += str(JSON.print("Brzeczyszczykiewicz","lekolody",bool(randi()%2)))
 
 		## JavaScript
 

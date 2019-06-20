@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_VisualShaderNodeColorFunc : VisualShaderNodeColorFunc = VisualShaderNodeColorFunc.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_VisualShaderNodeColorFunc.
+		q_VisualShaderNodeColorFunc.
+		q_VisualShaderNodeColorFunc.
 		
 		if Autoload.WRONG_BUGS:
 			pass

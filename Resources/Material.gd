@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
-		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+#		var q_Material : Material = Material.new()
+#
+#		q_Material.set_render_priority(randi()%50)
+#		q_Material.set_next_pass(Material.new())
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -14,11 +14,17 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_AudioEffectPhaser : AudioEffectPhaser = AudioEffectPhaser.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_AudioEffectPhaser.set_range_min_hz(randf() * 50)
+		q_AudioEffectPhaser.set_range_max_hz(randf() * 50)
+		q_AudioEffectPhaser.set_rate_hz(randf() * 50)
+		q_AudioEffectPhaser.set_feedback(randf() * 50)
+		q_AudioEffectPhaser.set_depth(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AudioEffectPhaser.set_range_min_hz(randf() * 1000 - 500)
+			q_AudioEffectPhaser.set_range_max_hz(randf() * 1000 - 500)
+			q_AudioEffectPhaser.set_rate_hz(randf() * 1000 - 500)
+			q_AudioEffectPhaser.set_feedback(randf() * 1000 - 500)
+			q_AudioEffectPhaser.set_depth(randf() * 1000 - 500)

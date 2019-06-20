@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_AudioEffectSpectrumAnalyzer : AudioEffectSpectrumAnalyzer = AudioEffectSpectrumAnalyzer.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * 50)
+		q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * 50)
+		q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % AudioEffectSpectrumAnalyzer.FFT_SIZE_MAX)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * 1000 - 500)
+			q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * 1000 - 500)
+			q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % 1000 - 500)

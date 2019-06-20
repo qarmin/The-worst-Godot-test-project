@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
-		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+#		var q_VisualScript : VisualScript = VisualScript.new()
+#
+#		q_VisualScript.add_custom_signal( String name )
+#		q_VisualScript.
+#		q_VisualScript.
 		
 		if Autoload.WRONG_BUGS:
 			pass

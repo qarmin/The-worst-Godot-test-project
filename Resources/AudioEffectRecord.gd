@@ -14,11 +14,17 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_AudioEffectRecord : AudioEffectRecord = AudioEffectRecord.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_AudioEffectRecord.set_format(randi() % 3) #Format
+		
+		qq += str(q_AudioEffectRecord.get_recording())
+		qq += str(q_AudioEffectRecord.is_recording_active())
+		q_AudioEffectRecord.set_recording_active( bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AudioEffectRecord.set_format(randi() % 1000 - 500) #Format
+			
+			qq += str(q_AudioEffectRecord.get_recording())
+			qq += str(q_AudioEffectRecord.is_recording_active())
+			q_AudioEffectRecord.set_recording_active( bool(randi()%2))

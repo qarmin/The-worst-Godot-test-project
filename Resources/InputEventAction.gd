@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_InputEventAction : InputEventAction = InputEventAction.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_InputEventAction.set_action("Mina")
+		q_InputEventAction.set_pressed(bool(randi()%2))
+		q_InputEventAction.set_strength(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

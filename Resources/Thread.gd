@@ -1,13 +1,24 @@
 extends Node2D
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+var counter : float
+var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _process(delta) -> void:
+	counter -= delta
+	var qq : String = ""
+	qq = qq
+	
+	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		var q_Thread : Thread = Thread.new()
+		
+		q_Thread.
+		q_Thread.
+		q_Thread.
+		
+		if Autoload.WRONG_BUGS:
+			pass

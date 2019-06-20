@@ -1,6 +1,6 @@
 extends Node
 
-const WRONG_BUGS : bool = true
+const WRONG_BUGS : bool = false
 
 
 func _process(_delta):

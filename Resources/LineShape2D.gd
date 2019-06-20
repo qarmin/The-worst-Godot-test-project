@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_LineShape2D : LineShape2D = LineShape2D.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_LineShape2D.set_normal(Vector2(randf() * 50,randf() * 50))
+		q_LineShape2D.set_d(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

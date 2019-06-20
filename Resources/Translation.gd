@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_Translation : Translation = Translation.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_Translation.set_locale("pl")
+		
+		q_Translation.add_message( "Bolaczka", "Pomysl" )
+		q_Translation.erase_message( "Historia" )
+		qq += str(q_Translation.get_message( "Geralt" ))
+		qq += str(q_Translation.get_message_count())
+		qq += str(q_Translation.get_message_list())
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		set_visibility_aabb(AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		set_use_local_coordinates(bool(randi()%2))
 		set_draw_order(randi()%3)
-		# Luka na process_material który jest na końcu
+		# Luka na process_material ktnory jest na koncu
 		for i in range(1):#MAX_DRAW_PASSES):
 			set_draw_pass_mesh(i, CubeMesh.new())
 		
@@ -86,7 +86,7 @@ func _process(delta) -> void:
 			set_visibility_aabb(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
 			set_use_local_coordinates(bool(randi()%2))
 			set_draw_order(randi() % 1000 - 500)
-			# Luka na process_material który jest na końcu
+			# Luka na process_material ktnory jest na koncu
 			for i in range(1):#MAX_DRAW_PASSES):
 				set_draw_pass_mesh(i, CubeMesh.new())
 			

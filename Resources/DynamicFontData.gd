@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_DynamicFontData : DynamicFontData = DynamicFontData.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_DynamicFontData.set_antialiased(bool(randi()%2))
+		q_DynamicFontData.set_hinting(randi() % 3) # Hinting
+		q_DynamicFontData.set_font_path("res://FreeMono.otf")
 		
 		if Autoload.WRONG_BUGS:
 			pass

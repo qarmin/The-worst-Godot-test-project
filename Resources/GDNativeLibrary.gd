@@ -14,11 +14,16 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_GDNativeLibrary : GDNativeLibrary = GDNativeLibrary.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_GDNativeLibrary.set_config_file(ConfigFile.new())
+		q_GDNativeLibrary.set_load_once(bool(randi()%2))
+		q_GDNativeLibrary.set_singleton(bool(randi()%2))
+		q_GDNativeLibrary.set_symbol_prefix("Prefixus")
+		q_GDNativeLibrary.set_reloadable(bool(randi()%2))
+		
+		qq += str(q_GDNativeLibrary.get_current_dependencies())
+		qq += str(q_GDNativeLibrary.get_current_library_path())
 		
 		if Autoload.WRONG_BUGS:
 			pass

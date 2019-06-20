@@ -1,0 +1,384 @@
+[gd_scene load_steps=96 format=2]
+
+[ext_resource path="res://Resources/VisualScriptIndexSet.gd" type="Script" id=1]
+[ext_resource path="res://Resources/VisualShaderNodeVectorScalarStep.gd" type="Script" id=2]
+[ext_resource path="res://Resources/VisualScriptBuiltinFunc.gd" type="Script" id=3]
+[ext_resource path="res://Resources/VisualScriptTypeCast.gd" type="Script" id=4]
+[ext_resource path="res://Resources/VisualScriptExpression.gd" type="Script" id=5]
+[ext_resource path="res://Resources/VisualScriptSwitch.gd" type="Script" id=6]
+[ext_resource path="res://Resources/VisualScriptSceneTree.gd" type="Script" id=7]
+[ext_resource path="res://Resources/VisualScriptClassConstant.gd" type="Script" id=8]
+[ext_resource path="res://Resources/VisualShaderNodeUniform.gd" type="Script" id=9]
+[ext_resource path="res://Resources/VisualScriptPropertySet.gd" type="Script" id=10]
+[ext_resource path="res://Resources/VisualScriptWhile.gd" type="Script" id=11]
+[ext_resource path="res://Resources/VisualScriptYield.gd" type="Script" id=12]
+[ext_resource path="res://Resources/VisualShaderNodeColorFunc.gd" type="Script" id=13]
+[ext_resource path="res://Resources/VisualScriptPreload.gd" type="Script" id=14]
+[ext_resource path="res://Resources/VisualShaderNodeGroupBase.gd" type="Script" id=15]
+[ext_resource path="res://Resources/VisualScriptYieldSignal.gd" type="Script" id=16]
+[ext_resource path="res://Resources/VisualShaderNodeTextureUniform.gd" type="Script" id=17]
+[ext_resource path="res://Resources/VisualShaderNodeBooleanConstant.gd" type="Script" id=18]
+[ext_resource path="res://Resources/VisualShaderNodeVec3Uniform.gd" type="Script" id=19]
+[ext_resource path="res://Resources/VisualShaderNodeCubeMapUniform.gd" type="Script" id=20]
+[ext_resource path="res://Resources/VisualShaderNodeTransformUniform.gd" type="Script" id=21]
+[ext_resource path="res://Resources/VisualShaderNodeColorUniform.gd" type="Script" id=22]
+[ext_resource path="res://Resources/VisualScriptIterator.gd" type="Script" id=23]
+[ext_resource path="res://Resources/VisualScriptEmitSignal.gd" type="Script" id=24]
+[ext_resource path="res://Resources/VisualShaderNodeScalarUniform.gd" type="Script" id=25]
+[ext_resource path="res://Resources/VisualScriptFunction.gd" type="Script" id=26]
+[ext_resource path="res://Resources/VisualShaderNodeTexture.gd" type="Script" id=27]
+[ext_resource path="res://Resources/VisualShaderNodeVectorScalarSmoothStep.gd" type="Script" id=28]
+[ext_resource path="res://Resources/VisualShaderNodeDeterminant.gd" type="Script" id=29]
+[ext_resource path="res://Resources/VisualScriptIndexGet.gd" type="Script" id=30]
+[ext_resource path="res://Resources/VisualShaderNodeVec3Constant.gd" type="Script" id=31]
+[ext_resource path="res://Resources/VisualShaderNodeVectorInterp.gd" type="Script" id=32]
+[ext_resource path="res://Resources/VisualShaderNode.gd" type="Script" id=33]
+[ext_resource path="res://Resources/VisualShaderNodeScalarSmoothStep.gd" type="Script" id=34]
+[ext_resource path="res://Resources/VisualShaderNodeCubeMap.gd" type="Script" id=35]
+[ext_resource path="res://Resources/VisualShaderNodeColorOp.gd" type="Script" id=36]
+[ext_resource path="res://Resources/VisualShaderNodeExpression.gd" type="Script" id=37]
+[ext_resource path="res://Resources/VisualScriptSelf.gd" type="Script" id=38]
+[ext_resource path="res://Resources/VisualShaderNodeTransformMult.gd" type="Script" id=39]
+[ext_resource path="res://Resources/VisualShaderNodeScalarOp.gd" type="Script" id=40]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDistance.gd" type="Script" id=41]
+[ext_resource path="res://Resources/VisualScriptOperator.gd" type="Script" id=42]
+[ext_resource path="res://Resources/VisualShaderNodeVectorClamp.gd" type="Script" id=43]
+[ext_resource path="res://Resources/VisualShaderNodeVectorSmoothStep.gd" type="Script" id=44]
+[ext_resource path="res://Resources/VisualScriptReturn.gd" type="Script" id=45]
+[ext_resource path="res://Resources/VisualScriptNode.gd" type="Script" id=46]
+[ext_resource path="res://Resources/VisualScriptVariableSet.gd" type="Script" id=47]
+[ext_resource path="res://Resources/VisualShaderNodeTransformConstant.gd" type="Script" id=48]
+[ext_resource path="res://Resources/VisualScriptBasicTypeConstant.gd" type="Script" id=49]
+[ext_resource path="res://Resources/VisualShaderNodeTransformVecMult.gd" type="Script" id=50]
+[ext_resource path="res://Resources/VisualScriptDeconstruct.gd" type="Script" id=51]
+[ext_resource path="res://Resources/VisualScriptSelect.gd" type="Script" id=52]
+[ext_resource path="res://Resources/VisualScriptConstant.gd" type="Script" id=53]
+[ext_resource path="res://Resources/VisualScriptLocalVarSet.gd" type="Script" id=54]
+[ext_resource path="res://Resources/VisualScriptMathConstant.gd" type="Script" id=55]
+[ext_resource path="res://Resources/VisualShaderNodeIf.gd" type="Script" id=56]
+[ext_resource path="res://Resources/VisualShaderNodeSwitch.gd" type="Script" id=57]
+[ext_resource path="res://Resources/VisualShaderNodeVectorFunc.gd" type="Script" id=58]
+[ext_resource path="res://Resources/VisualScriptVariableGet.gd" type="Script" id=59]
+[ext_resource path="res://Resources/VisualScriptEndgineSingleton.gd" type="Script" id=60]
+[ext_resource path="res://Resources/VisualShaderNodeOutput.gd" type="Script" id=61]
+[ext_resource path="res://Resources/VisualShaderNodeVectorCompose.gd" type="Script" id=62]
+[ext_resource path="res://Resources/VisualShaderNodeColorConstant.gd" type="Script" id=63]
+[ext_resource path="res://Resources/VisualScriptComment.gd" type="Script" id=64]
+[ext_resource path="res://Resources/VisualShaderNodeScalarInterp.gd" type="Script" id=65]
+[ext_resource path="res://Resources/VisualShaderNodeScalarDerivativeFunc.gd" type="Script" id=66]
+[ext_resource path="res://Resources/VisualScriptLocalVar.gd" type="Script" id=67]
+[ext_resource path="res://Resources/VisualShaderNodeVectorRefract.gd" type="Script" id=68]
+[ext_resource path="res://Resources/VisualShaderNodeVectorOp.gd" type="Script" id=69]
+[ext_resource path="res://Resources/VisualScriptFunctionCall.gd" type="Script" id=70]
+[ext_resource path="res://Resources/VisualScriptResourcePath.gd" type="Script" id=71]
+[ext_resource path="res://Resources/VisualShaderNodeFresnel.gd" type="Script" id=72]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDerivativeFunc.gd" type="Script" id=73]
+[ext_resource path="res://Resources/VisualScriptCondition.gd" type="Script" id=74]
+[ext_resource path="res://Resources/VisualScriptSceneNode.gd" type="Script" id=75]
+[ext_resource path="res://Resources/VisualShaderNodeBooleanUniform.gd" type="Script" id=76]
+[ext_resource path="res://Resources/VisualScriptInputAction.gd" type="Script" id=77]
+[ext_resource path="res://Resources/VisualScriptSequence.gd" type="Script" id=78]
+[ext_resource path="res://Resources/VisualScriptSubCall.gd" type="Script" id=79]
+[ext_resource path="res://Resources/VisualShaderNodeScalarClamp.gd" type="Script" id=80]
+[ext_resource path="res://Resources/VisualShaderNodeFaceForward.gd" type="Script" id=81]
+[ext_resource path="res://Resources/VisualShaderNodeVectorDecompose.gd" type="Script" id=82]
+[ext_resource path="res://Resources/VisualShaderNodeOuterProduct.gd" type="Script" id=83]
+[ext_resource path="res://Resources/VisualScriptConstructor.gd" type="Script" id=84]
+[ext_resource path="res://Resources/VisualShaderNodeDotProduct.gd" type="Script" id=85]
+[ext_resource path="res://Resources/VisualShaderNodeVectorLen.gd" type="Script" id=86]
+[ext_resource path="res://Resources/VisualShaderNodeDecompose.gd" type="Script" id=87]
+[ext_resource path="res://Resources/VisualScriptGlobalConstant.gd" type="Script" id=88]
+[ext_resource path="res://Resources/VisualShaderNodeTransformFunc.gd" type="Script" id=89]
+[ext_resource path="res://Resources/VisualShaderNodeTransformCompose.gd" type="Script" id=90]
+[ext_resource path="res://Resources/VisualShaderNodeScalarConstant.gd" type="Script" id=91]
+[ext_resource path="res://Resources/VisualScriptPropertyGet.gd" type="Script" id=92]
+[ext_resource path="res://Resources/VisualShaderNodeScalarFunc.gd" type="Script" id=93]
+[ext_resource path="res://Resources/VisualShaderNodeInput.gd" type="Script" id=94]
+[ext_resource path="res://Resources/VisualScriptCustomNode.gd" type="Script" id=95]
+
+[node name="VisualScript TODO" type="Node2D"]
+
+[node name="VisualScriptNode" type="Node2D" parent="."]
+script = ExtResource( 46 )
+
+[node name="VisualScriptBasicTypeConstant" type="Node2D" parent="."]
+script = ExtResource( 49 )
+
+[node name="VisualScriptBuiltinFunc" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="VisualScriptClassConstant" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="VisualScriptComment" type="Node2D" parent="."]
+script = ExtResource( 64 )
+
+[node name="VisualScriptCondition" type="Node2D" parent="."]
+script = ExtResource( 74 )
+
+[node name="VisualScriptConstant" type="Node2D" parent="."]
+script = ExtResource( 53 )
+
+[node name="VisualScriptConstructor" type="Node2D" parent="."]
+script = ExtResource( 84 )
+
+[node name="VisualScriptCustomNode" type="Node2D" parent="."]
+script = ExtResource( 95 )
+
+[node name="VisualScriptDeconstruct" type="Node2D" parent="."]
+script = ExtResource( 51 )
+
+[node name="VisualScriptEmitSignal" type="Node2D" parent="."]
+script = ExtResource( 24 )
+
+[node name="VisualScriptEngineSingleton" type="Node2D" parent="."]
+script = ExtResource( 60 )
+
+[node name="VisualScriptExpression" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="VisualScriptFunction" type="Node2D" parent="."]
+script = ExtResource( 26 )
+
+[node name="VisualScriptFunctionCall" type="Node2D" parent="."]
+script = ExtResource( 70 )
+
+[node name="VisualScriptGlobalConstant" type="Node2D" parent="."]
+script = ExtResource( 88 )
+
+[node name="VisualScriptIndexGet" type="Node2D" parent="."]
+script = ExtResource( 30 )
+
+[node name="VisualScriptIndexSet" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="VisualScriptInputAction" type="Node2D" parent="."]
+script = ExtResource( 77 )
+
+[node name="VisualScriptIterator" type="Node2D" parent="."]
+script = ExtResource( 23 )
+
+[node name="VisualScriptLocalVar" type="Node2D" parent="."]
+script = ExtResource( 67 )
+
+[node name="VisualScriptLocalVarSet" type="Node2D" parent="."]
+script = ExtResource( 54 )
+
+[node name="VisualScriptMathConstant" type="Node2D" parent="."]
+script = ExtResource( 55 )
+
+[node name="VisualScriptOperator" type="Node2D" parent="."]
+script = ExtResource( 42 )
+
+[node name="VisualScriptPreload" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="VisualScriptPropertyGet" type="Node2D" parent="."]
+script = ExtResource( 92 )
+
+[node name="VisualScriptPropertySet" type="Node2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="VisualScriptResourcePath" type="Node2D" parent="."]
+script = ExtResource( 71 )
+
+[node name="VisualScriptReturn" type="Node2D" parent="."]
+script = ExtResource( 45 )
+
+[node name="VisualScriptSceneNode" type="Node2D" parent="."]
+script = ExtResource( 75 )
+
+[node name="VisualScriptSceneTree" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="VisualScriptSelect" type="Node2D" parent="."]
+script = ExtResource( 52 )
+
+[node name="VisualScriptSelf" type="Node2D" parent="."]
+script = ExtResource( 38 )
+
+[node name="VisualScriptSequence" type="Node2D" parent="."]
+script = ExtResource( 78 )
+
+[node name="VisualScriptSubCall" type="Node2D" parent="."]
+script = ExtResource( 79 )
+
+[node name="VisualScriptSwitch" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="VisualScriptTypeCast" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="VisualScriptVariableGet" type="Node2D" parent="."]
+script = ExtResource( 59 )
+
+[node name="VisualScriptVariableSet" type="Node2D" parent="."]
+script = ExtResource( 47 )
+
+[node name="VisualScriptWhile" type="Node2D" parent="."]
+script = ExtResource( 11 )
+
+[node name="VisualScriptYield" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="VisualScriptYieldSignal" type="Node2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="VisualShaderNode" type="Node2D" parent="."]
+script = ExtResource( 33 )
+
+[node name="VisualShaderNodeBooleanConstant" type="Node2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="VisualShaderNodeUniform" type="Node2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="VisualShaderNodeBooleanUniform" type="Node2D" parent="."]
+script = ExtResource( 76 )
+
+[node name="VisualShaderNodeColorUniform" type="Node2D" parent="."]
+script = ExtResource( 22 )
+
+[node name="VisualShaderNodeScalarUniform" type="Node2D" parent="."]
+script = ExtResource( 25 )
+
+[node name="VisualShaderNodeTextureUniform" type="Node2D" parent="."]
+script = ExtResource( 17 )
+
+[node name="VisualShaderNodeTransformUniform" type="Node2D" parent="."]
+script = ExtResource( 21 )
+
+[node name="VisualShaderNodeVec3Uniform" type="Node2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="VisualShaderNodeColorConstant" type="Node2D" parent="."]
+script = ExtResource( 63 )
+
+[node name="VisualShaderNodeColorFunc" type="Node2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="VisualShaderNodeColorOp" type="Node2D" parent="."]
+script = ExtResource( 36 )
+
+[node name="VisualShaderNodeCubeMap" type="Node2D" parent="."]
+script = ExtResource( 35 )
+
+[node name="VisualShaderNodeCubeMapUniform" type="Node2D" parent="."]
+script = ExtResource( 20 )
+
+[node name="VisualShaderNodeDeterminant" type="Node2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="VisualShaderNodeDotProduct" type="Node2D" parent="."]
+script = ExtResource( 85 )
+
+[node name="VisualShaderNodeGroupBase" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="VisualShaderNodeExpression" type="Node2D" parent="."]
+script = ExtResource( 37 )
+
+[node name="VisualShaderNodeFaceForward" type="Node2D" parent="."]
+script = ExtResource( 81 )
+
+[node name="VisualShaderNodeFresnel" type="Node2D" parent="."]
+script = ExtResource( 72 )
+
+[node name="VisualShaderNodeIf" type="Node2D" parent="."]
+script = ExtResource( 56 )
+
+[node name="VisualShaderNodeInput" type="Node2D" parent="."]
+script = ExtResource( 94 )
+
+[node name="VisualShaderNodeOuterProduct" type="Node2D" parent="."]
+script = ExtResource( 83 )
+
+[node name="VisualShaderNodeOutput" type="Node2D" parent="."]
+script = ExtResource( 61 )
+
+[node name="VisualShaderNodeScalarClamp" type="Node2D" parent="."]
+script = ExtResource( 80 )
+
+[node name="VisualShaderNodeScalarConstant" type="Node2D" parent="."]
+script = ExtResource( 91 )
+
+[node name="VisualShaderNodeScalarDerivativeFunc" type="Node2D" parent="."]
+script = ExtResource( 66 )
+
+[node name="VisualShaderNodeScalarFunc" type="Node2D" parent="."]
+script = ExtResource( 93 )
+
+[node name="VisualShaderNodeScalarInterp" type="Node2D" parent="."]
+script = ExtResource( 65 )
+
+[node name="VisualShaderNodeScalarOp" type="Node2D" parent="."]
+script = ExtResource( 40 )
+
+[node name="VisualShaderNodeScalarSmoothStep" type="Node2D" parent="."]
+script = ExtResource( 34 )
+
+[node name="VisualShaderNodeSwitch" type="Node2D" parent="."]
+script = ExtResource( 57 )
+
+[node name="VisualShaderNodeTexture" type="Node2D" parent="."]
+script = ExtResource( 27 )
+
+[node name="VisualShaderNodeTransformCompose" type="Node2D" parent="."]
+script = ExtResource( 90 )
+
+[node name="VisualShaderNodeTransformConstant" type="Node2D" parent="."]
+script = ExtResource( 48 )
+
+[node name="VisualShaderNodeDecompose" type="Node2D" parent="."]
+script = ExtResource( 87 )
+
+[node name="VisualShaderNodeTransformFunc" type="Node2D" parent="."]
+script = ExtResource( 89 )
+
+[node name="VisualShaderNodeTransformMult" type="Node2D" parent="."]
+script = ExtResource( 39 )
+
+[node name="VisualShaderNodeTransformVecMult" type="Node2D" parent="."]
+script = ExtResource( 50 )
+
+[node name="VisualShaderNodeVec3Constant" type="Node2D" parent="."]
+script = ExtResource( 31 )
+
+[node name="VisualShaderNodeVectorClamp" type="Node2D" parent="."]
+script = ExtResource( 43 )
+
+[node name="VisualShaderNodeVectorCompose" type="Node2D" parent="."]
+script = ExtResource( 62 )
+
+[node name="VisualShaderNodeVectorDecompose" type="Node2D" parent="."]
+script = ExtResource( 82 )
+
+[node name="VisualShaderNodeVectorDerivativeFunc" type="Node2D" parent="."]
+script = ExtResource( 73 )
+
+[node name="VisualShaderNodeVectorDistance" type="Node2D" parent="."]
+script = ExtResource( 41 )
+
+[node name="VisualShaderNodeVectorFunc" type="Node2D" parent="."]
+script = ExtResource( 58 )
+
+[node name="VisualShaderNodeVectorInterp" type="Node2D" parent="."]
+script = ExtResource( 32 )
+
+[node name="VisualShaderNodeVectorLen" type="Node2D" parent="."]
+script = ExtResource( 86 )
+
+[node name="VisualShaderNodeVectorOp" type="Node2D" parent="."]
+script = ExtResource( 69 )
+
+[node name="VisualShaderNodeVectorRefract" type="Node2D" parent="."]
+script = ExtResource( 68 )
+
+[node name="VisualShaderNodeVectorScalarSmoothStep" type="Node2D" parent="."]
+script = ExtResource( 28 )
+
+[node name="VisualShaderNodeVectorScalarStep" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="VisualShaderNodeVectorSmoothStep" type="Node2D" parent="."]
+script = ExtResource( 44 )

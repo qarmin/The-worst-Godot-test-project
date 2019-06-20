@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_VisualShaderNodeScalarConstant : VisualShaderNodeScalarConstant = VisualShaderNodeScalarConstant.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_VisualShaderNodeScalarConstant.
+		q_VisualShaderNodeScalarConstant.
+		q_VisualShaderNodeScalarConstant.
 		
 		if Autoload.WRONG_BUGS:
 			pass

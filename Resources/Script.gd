@@ -14,11 +14,21 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
-		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+#		var q_Script : Script = Script.new()
+#
+#		q_Script.set_source_code("Tak")
+#
+#		qq += str(q_Script.can_instance())
+#
+#		qq += str(q_Script.get_base_script())
+#		qq += str(q_Script.get_instance_base_type())
+#
+#		qq += str(q_Script.has_script_signal( "Brzeczy" ))
+#		qq += str(q_Script.has_source_code())
+#
+#		qq += str(q_Script.instance_has( self ))
+#		qq += str(q_Script.is_tool())
+#		qq += str(q_Script.reload( bool(randi()%2) ))
 		
 		if Autoload.WRONG_BUGS:
 			pass

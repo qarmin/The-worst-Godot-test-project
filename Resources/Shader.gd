@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_Shader : Shader = Shader.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_Shader.set_code("KOD")
+		
+		qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
+		qq += str(q_Shader.get_mode())
+		
+		qq += str(q_Shader.has_param( "Spoko" ))
+		q_Shader.set_default_texture_param( "Rozwiazac", load("res://Sprite" + str(randi()%4 + 1) + ".png") )
 		
 		if Autoload.WRONG_BUGS:
 			pass

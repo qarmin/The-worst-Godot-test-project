@@ -14,11 +14,36 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_Curve : Curve = Curve.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_Curve.set_min_value(randf() * 50)
+		q_Curve.set_max_value(randf() * 50)
+		q_Curve.set_bake_resolution(randi()%50)
+		for _i in range(3):
+			qq += str(q_Curve.add_point( Vector2(randf() * 50,randf() * 50), randf() * 50,randf() * 50, randi() % 3, randi() % 3 )) #TangentMode
+		q_Curve.bake()
+		
+		q_Curve.clean_dupes()
+		q_Curve.clear_points()
+		
+		qq += str(q_Curve.get_point_count())
+		#qq += str(q_Curve.get_point_left_mode( 0 ))
+		#qq += str(q_Curve.get_point_left_tangent( 0 ))
+		#qq += str(q_Curve.get_point_position( 0 ))
+		#qq += str(q_Curve.get_point_right_mode( 0 ))
+		#qq += str(q_Curve.get_point_right_tangent( 0 ))
+		
+		qq += str(q_Curve.interpolate( randf() * 50 ))
+		qq += str(q_Curve.interpolate_baked( randf() * 50 ))
+		
+		#q_Curve.remove_point( 0)
+		
+		#q_Curve.set_point_left_mode( 0, randi() % 3 )#TangentMode
+		#q_Curve.set_point_left_tangent( 0, randf() * 50)
+		#qq += str(q_Curve.set_point_offset( 0, randf() * 50 ))
+		#q_Curve.set_point_right_mode( 0, randi() % 3 )#TangentMode
+		#q_Curve.set_point_right_tangent( 0, randf() * 50 )
+		#q_Curve.set_point_value( 0, randf() * 50 )
 		
 		if Autoload.WRONG_BUGS:
 			pass

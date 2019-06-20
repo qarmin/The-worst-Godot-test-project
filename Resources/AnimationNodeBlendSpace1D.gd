@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		q_AnimationNodeBlendSpace1D.set_min_space(randf() * 50)
 		q_AnimationNodeBlendSpace1D.set_max_space(randf() * 50)
 		q_AnimationNodeBlendSpace1D.set_snap(randf() * 50)
-		q_AnimationNodeBlendSpace1D.set_value_label("Jakaś wartość")
+		q_AnimationNodeBlendSpace1D.set_value_label("Jakas wartosc")
 		
 		#q_AnimationNodeBlendSpace1D.add_blend_point( AnimationRootNode.new(), randf() * 50, randi()%50 )
 		qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_count())
@@ -33,7 +33,7 @@ func _process(delta) -> void:
 			q_AnimationNodeBlendSpace1D.set_min_space(randf() * 1000 - 500)
 			q_AnimationNodeBlendSpace1D.set_max_space(randf() * 1000 - 500)
 			q_AnimationNodeBlendSpace1D.set_snap(randf() * 1000 - 500)
-			q_AnimationNodeBlendSpace1D.set_value_label("Jakaś wartość")
+			q_AnimationNodeBlendSpace1D.set_value_label("Jakas wartosc")
 			
 			q_AnimationNodeBlendSpace1D.add_blend_point( AnimationRootNode.new(), randf() * 1000 - 500, randi() % 1000 - 500 )
 			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_count())

@@ -14,11 +14,22 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_OpenSimplexNoise : OpenSimplexNoise = OpenSimplexNoise.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_OpenSimplexNoise.set_seed(randi()%50)
+		q_OpenSimplexNoise.set_octaves(randi()%50)
+		q_OpenSimplexNoise.set_period(randf() * 50)
+		q_OpenSimplexNoise.set_persistence(randf() * 50)
+		q_OpenSimplexNoise.set_lacunarity(randf() * 50)
+		
+		qq += str(q_OpenSimplexNoise.get_image( randi()%50,randi()%50))
+		qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 50 ))
+		qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 50,randf() * 50 ))
+		qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 50,randf() * 50)))
+		qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 50,randf() * 50,randf() * 50))
+		qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 50,randf() * 50,randf() * 50)))
+		qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 50,randf() * 50,randf() * 50,randf() * 50 ))
+		qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%50))
 		
 		if Autoload.WRONG_BUGS:
 			pass

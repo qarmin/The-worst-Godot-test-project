@@ -6,11 +6,20 @@ Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)
 Color(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
 
 Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
+
 Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+
+ PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)]))
+ PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
+ PoolByteArray([11,124,1241,24,21,214,12,11]))
+ PoolRealArray([125125.125,12512.1251,122.124]))
+
+ Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+ AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
+
 Vector2(randf() * 50,randf() * 50))
 Vector3(randf() * 50,randf() * 50,randf() * 50))
-PoolVector3Array([Vector3(randf() * 50,randf() * 50),randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50)])
-PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
+
 randf() * 50)
 bool(randi()%2))
 randi()%50)

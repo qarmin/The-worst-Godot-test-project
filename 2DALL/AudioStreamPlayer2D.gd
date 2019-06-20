@@ -43,7 +43,7 @@ func _process(delta) -> void:
 			set_stream_paused(bool(randi()%2))
 			set_max_distance(randf() * 1000 - 500)
 			set_attenuation(randf() * 1000 - 500)
-			set_bus("ŹĆŻΩŒÓ")
+			set_bus("ŹcŻΩŒno")
 			set_area_mask(randi() % 1000 - 500)
 			play()
 			seek(randf() * 1000 - 500)

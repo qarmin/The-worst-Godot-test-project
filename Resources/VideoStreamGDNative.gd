@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_VideoStreamGDNative : VideoStreamGDNative = VideoStreamGDNative.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		qq += str(q_VideoStreamGDNative.get_file())
+		q_VideoStreamGDNative.set_file( "res://Heg.mp4")
 		
 		if Autoload.WRONG_BUGS:
 			pass

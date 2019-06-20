@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_CubeMesh : CubeMesh = CubeMesh.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_CubeMesh.set_size(Vector3(randf() * 50,randf() * 50,randf() * 50))
+		q_CubeMesh.set_subdivide_width(randi() % 2) 
+		q_CubeMesh.set_subdivide_height(randi() % 2)
+		q_CubeMesh.set_subdivide_depth(randi() % 2)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CubeMesh.set_size(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_CubeMesh.set_subdivide_width(randi() % 10 - 8) 
+			q_CubeMesh.set_subdivide_height(randi() % 10 - 8)
+			q_CubeMesh.set_subdivide_depth(randi() % 10 - 8)

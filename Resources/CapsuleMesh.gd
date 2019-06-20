@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_CapsuleMesh : CapsuleMesh = CapsuleMesh.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_CapsuleMesh.set_radius(randf() * 50)
+		q_CapsuleMesh.set_mid_height(randf() * 50)
+		q_CapsuleMesh.set_radial_segments(randi()%5)
+		q_CapsuleMesh.set_rings(randi()%5)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CapsuleMesh.set_radius(randf() * 1000 - 500)
+			q_CapsuleMesh.set_mid_height(randf() * 1000 - 500)
+			q_CapsuleMesh.set_radial_segments(randi()%10 - 5)
+			q_CapsuleMesh.set_rings(randi()% 10 -5)

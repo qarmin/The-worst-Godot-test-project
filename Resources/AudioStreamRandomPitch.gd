@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_AudioStreamRandomPitch : AudioStreamRandomPitch = AudioStreamRandomPitch.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+		q_AudioStreamRandomPitch.set_random_pitch(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+			q_AudioStreamRandomPitch.set_random_pitch(randf() * 1000 - 500)

@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_KinematicCollision2D : KinematicCollision2D = KinematicCollision2D.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_KinematicCollision2D.
+		q_KinematicCollision2D.
+		q_KinematicCollision2D.
 		
 		if Autoload.WRONG_BUGS:
 			pass

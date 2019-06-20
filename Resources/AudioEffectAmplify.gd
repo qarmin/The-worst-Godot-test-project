@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_QQQQQQQQQQQQ : QQQQQQQQQQQQ = QQQQQQQQQQQQ.new()
+		var q_AudioEffectAmplify : AudioEffectAmplify = AudioEffectAmplify.new()
 		
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
-		q_QQQQQQQQQQQQ.
+		q_AudioEffectAmplify.set_volume_db(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_AudioEffectAmplify.set_volume_db(randf() * 1000 - 500)

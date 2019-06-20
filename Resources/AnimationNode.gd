@@ -21,14 +21,14 @@ func _process(delta) -> void:
 		### qq +=  str(q_AnimationNode.get_caption())
 		### qq +=  str(q_AnimationNode.get_child_by_name("Miecz"))
 		### qq +=  str(q_AnimationNode.get_child_nodes())
-		### qq +=  str(q_AnimationNode.get_parameter_default_value("Grać"))
+		### qq +=  str(q_AnimationNode.get_parameter_default_value("Grac"))
 		### qq +=  str(q_AnimationNode.get_parameter_list())
 		### qq +=  str(q_AnimationNode.has_filter())
 		### q_AnimationNode.process( randf() * 50, bool(randi()%2) )
 		
-		q_AnimationNode.add_input("Strzała")
+		q_AnimationNode.add_input("Strzala")
 		
-		#q_AnimationNode.blend_animation( "Kołczan", randf() * 50, randf() * 50, bool(randi()%2), randf() * 50 )
+		#q_AnimationNode.blend_animation( "Kolczan", randf() * 50, randf() * 50, bool(randi()%2), randf() * 50 )
 		#q_AnimationNode.blend_input( 0, randf() * 50, bool(randi()%2), randf() * 50, randi() % 4, bool(randi()%2) )#FilterAction
 		#q_AnimationNode.blend_node( "Pra", AnimationNode.new(), randf() * 50, bool(randi()%2), randf() * 50, randi() % 4, bool(randi()%2) )#FilterAction
 		
@@ -48,16 +48,16 @@ func _process(delta) -> void:
 			### qq +=  str(q_AnimationNode.get_caption())
 			### qq +=  str(q_AnimationNode.get_child_by_name("Miecz"))
 			### qq +=  str(q_AnimationNode.get_child_nodes())
-			### qq +=  str(q_AnimationNode.get_parameter_default_value("Grać"))
+			### qq +=  str(q_AnimationNode.get_parameter_default_value("Grac"))
 			### qq +=  str(q_AnimationNode.get_parameter_list())
 			### qq +=  str(q_AnimationNode.has_filter())
 			### q_AnimationNode.process( randf() * 50, bool(randi()%2) )
 			
-			q_AnimationNode.add_input("Strzała")
+			q_AnimationNode.add_input("Strzala")
 			
-			q_AnimationNode.blend_animation( "Kołczan", randf() * 1000 - 500, randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500 )
-			q_AnimationNode.blend_input( 0, randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500, randi() % 1000 - 500, bool(randi()%2) )#FilterAction
-			q_AnimationNode.blend_node( "Pra", AnimationNode.new(), randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500, randi() % 1000 - 500, bool(randi()%2) )#FilterAction
+			q_AnimationNode.blend_animation( "Kolczan", randf() * 1000 - 500, randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500 )
+			qq += str(q_AnimationNode.blend_input( 0, randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500, randi() % 1000 - 500, bool(randi()%2) ))#FilterAction
+			qq += str(q_AnimationNode.blend_node( "Pra", AnimationNode.new(), randf() * 1000 - 500, bool(randi()%2), randf() * 1000 - 500, randi() % 1000 - 500, bool(randi()%2) ))#FilterAction
 			
 			qq +=  str(q_AnimationNode.get_input_count())
 			qq +=  str(q_AnimationNode.get_input_name( randi() % 1000 - 500))
