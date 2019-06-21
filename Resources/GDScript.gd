@@ -214,7 +214,7 @@ func _process(delta) -> void:
 			qq += str(randf())
 			qq += str(randi())
 			randomize()
-			qq += str(range(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 500))
+			qq += str(range(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 500 + 1))
 			qq += str(range_lerp(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			
 			qq += str(round(randf() * 1000 - 500))

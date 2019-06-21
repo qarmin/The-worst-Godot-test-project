@@ -183,295 +183,295 @@
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
 
-[node name="ALLCREATED" type="Node2D" parent="."]
-visible = false
-
-[node name="GlobalScope" type="Node2D" parent="ALLCREATED"]
+[node name="GlobalScope" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 3 )
 
-[node name="Reference" type="Node2D" parent="ALLCREATED"]
+[node name="Reference" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 5 )
 
-[node name="ARVRInterface_CANT" type="Node2D" parent="ALLCREATED"]
+[node name="ARVRInterface_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 4 )
 
-[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="ALLCREATED"]
+[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 6 )
 
-[node name="MobileVRInterface" type="Node2D" parent="ALLCREATED"]
+[node name="MobileVRInterface" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 9 )
 
-[node name="AStar" type="Node2D" parent="ALLCREATED"]
+[node name="AStar" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 8 )
 
-[node name="Resource" type="Node2D" parent="ALLCREATED"]
+[node name="Resource" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 7 )
 
-[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="ALLCREATED"]
+[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 33 )
 
-[node name="AnimatedTexture" type="Node2D" parent="ALLCREATED"]
+[node name="AnimatedTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 38 )
 
-[node name="AtlasTexture" type="Node2D" parent="ALLCREATED"]
+[node name="AtlasTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 30 )
 
-[node name="CameraTexture" type="Node2D" parent="ALLCREATED"]
+[node name="CameraTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 43 )
 
-[node name="CurveTexture" type="Node2D" parent="ALLCREATED"]
+[node name="CurveTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 32 )
 
-[node name="GradientTexture" type="Node2D" parent="ALLCREATED"]
+[node name="GradientTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 34 )
 
-[node name="ImageTexture" type="Node2D" parent="ALLCREATED"]
+[node name="ImageTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 15 )
 
-[node name="LargeTexture" type="Node2D" parent="ALLCREATED"]
+[node name="LargeTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 16 )
 
-[node name="MeshTexture" type="Node2D" parent="ALLCREATED"]
+[node name="MeshTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 18 )
 
-[node name="NoiseTexture" type="Node2D" parent="ALLCREATED"]
+[node name="NoiseTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 22 )
 
-[node name="ProxyTexture" type="Node2D" parent="ALLCREATED"]
+[node name="ProxyTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 23 )
 
-[node name="ViewportTexture" type="Node2D" parent="ALLCREATED"]
+[node name="ViewportTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 13 )
 
-[node name="StreamTexture" type="Node2D" parent="ALLCREATED"]
+[node name="StreamTexture" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 11 )
 
-[node name="Animation" type="Node2D" parent="ALLCREATED"]
+[node name="Animation" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 14 )
 
-[node name="AnimationNode" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNode" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 36 )
 
-[node name="AnimationNodeAdd2" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeAdd2" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 25 )
 
-[node name="AnimationNodeAdd3" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeAdd3" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 37 )
 
-[node name="AnimationRootNode" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationRootNode" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 24 )
 
-[node name="AnimationNodeAnimation" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeAnimation" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 42 )
 
-[node name="AnimationNodeBlendSpace1D" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 21 )
 
-[node name="AnimationNodeBlendSpace2D" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 35 )
 
-[node name="AnimationNodeBlendTree" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendTree" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 20 )
 
-[node name="AnimationNodeBlendMachine" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 12 )
 
-[node name="AnimationNodeBlendBlend2" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 41 )
 
-[node name="AnimationNodeBlendBlend3" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 29 )
 
-[node name="AnimationNodeOneShot" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeOneShot" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 39 )
 
-[node name="AnimationNodeOutput" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeOutput" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 10 )
 
-[node name="AnimationNodeTimeScale" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeTimeScale" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 28 )
 
-[node name="AnimationNodeTimeSeek" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeTimeSeek" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 40 )
 
-[node name="AnimationNodeTransition" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeTransition" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 19 )
 
-[node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 17 )
 
-[node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="ALLCREATED"]
+[node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 27 )
 
-[node name="Mesh" type="Node2D" parent="ALLCREATED"]
+[node name="Mesh" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 26 )
 
-[node name="ArrayMesh" type="Node2D" parent="ALLCREATED"]
+[node name="ArrayMesh" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 31 )
 
-[node name="PrimitiveMesh" type="Node2D" parent="ALLCREATED"]
+[node name="PrimitiveMesh" type="Node2D" parent="."]
 script = ExtResource( 200 )
 
-[node name="CapsuleMesh" type="Node2D" parent="ALLCREATED"]
+[node name="CapsuleMesh" type="Node2D" parent="."]
 script = ExtResource( 199 )
 
-[node name="CubeMesh" type="Node2D" parent="ALLCREATED"]
+[node name="CubeMesh" type="Node2D" parent="."]
 script = ExtResource( 216 )
 
-[node name="CylinderMesh" type="Node2D" parent="ALLCREATED"]
+[node name="CylinderMesh" type="Node2D" parent="."]
 script = ExtResource( 217 )
 
-[node name="PlaneMesh" type="Node2D" parent="ALLCREATED"]
+[node name="PlaneMesh" type="Node2D" parent="."]
 script = ExtResource( 204 )
 
-[node name="PrismMesh" type="Node2D" parent="ALLCREATED"]
+[node name="PrismMesh" type="Node2D" parent="."]
 script = ExtResource( 203 )
 
-[node name="QuadMesh" type="Node2D" parent="ALLCREATED"]
+[node name="QuadMesh" type="Node2D" parent="."]
 script = ExtResource( 202 )
 
-[node name="SphereMesh" type="Node2D" parent="ALLCREATED"]
+[node name="SphereMesh" type="Node2D" parent="."]
 script = ExtResource( 201 )
 
-[node name="AudioBusLayout" type="Node2D" parent="ALLCREATED"]
+[node name="AudioBusLayout" type="Node2D" parent="."]
 script = ExtResource( 219 )
 
-[node name="AudioEffect" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffect" type="Node2D" parent="."]
 script = ExtResource( 218 )
 
-[node name="AudioEffectAmplify" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectAmplify" type="Node2D" parent="."]
 script = ExtResource( 220 )
 
-[node name="AudioEffectFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectFilter" type="Node2D" parent="."]
 script = ExtResource( 221 )
 
-[node name="AudioEffectBandLimitFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectBandLimitFilter" type="Node2D" parent="."]
 script = ExtResource( 213 )
 
-[node name="AudioEffectBandPassFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectBandPassFilter" type="Node2D" parent="."]
 script = ExtResource( 212 )
 
-[node name="AudioEffectHighPassFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectHighPassFilter" type="Node2D" parent="."]
 script = ExtResource( 215 )
 
-[node name="AudioEffectHighShelfFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectHighShelfFilter" type="Node2D" parent="."]
 script = ExtResource( 198 )
 
-[node name="AudioEffectLowPassFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectLowPassFilter" type="Node2D" parent="."]
 script = ExtResource( 214 )
 
-[node name="AudioEffectLowShelfFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectLowShelfFilter" type="Node2D" parent="."]
 script = ExtResource( 209 )
 
-[node name="AudioEffectNotchFilter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectNotchFilter" type="Node2D" parent="."]
 script = ExtResource( 210 )
 
-[node name="AudioEffectChorus" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectChorus" type="Node2D" parent="."]
 script = ExtResource( 211 )
 
-[node name="AudioEffectCompressor" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectCompressor" type="Node2D" parent="."]
 script = ExtResource( 205 )
 
-[node name="AudioEffectDelay" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectDelay" type="Node2D" parent="."]
 script = ExtResource( 206 )
 
-[node name="AudioEffectDistortion" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectDistortion" type="Node2D" parent="."]
 script = ExtResource( 208 )
 
-[node name="AudioEffectEQ" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectEQ" type="Node2D" parent="."]
 script = ExtResource( 232 )
 
-[node name="AudioEffectEQ10" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectEQ10" type="Node2D" parent="."]
 script = ExtResource( 233 )
 
-[node name="AudioEffectEQ21" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectEQ21" type="Node2D" parent="."]
 script = ExtResource( 229 )
 
-[node name="AudioEffectEQ6" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectEQ6" type="Node2D" parent="."]
 script = ExtResource( 227 )
 
-[node name="AudioEffectLimiter" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectLimiter" type="Node2D" parent="."]
 script = ExtResource( 228 )
 
-[node name="AudioEffectPanner" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectPanner" type="Node2D" parent="."]
 script = ExtResource( 230 )
 
-[node name="AudioEffectPhaser" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectPhaser" type="Node2D" parent="."]
 script = ExtResource( 237 )
 
-[node name="AudioEffectPitchShift" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectPitchShift" type="Node2D" parent="."]
 script = ExtResource( 226 )
 
-[node name="AudioEffectRecord" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectRecord" type="Node2D" parent="."]
 script = ExtResource( 238 )
 
-[node name="AudioEffectReverb" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectReverb" type="Node2D" parent="."]
 script = ExtResource( 236 )
 
-[node name="AudioEffectSpectrumAnalyzer" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectSpectrumAnalyzer" type="Node2D" parent="."]
 script = ExtResource( 225 )
 
-[node name="AudioEffectStereoEnhance" type="Node2D" parent="ALLCREATED"]
+[node name="AudioEffectStereoEnhance" type="Node2D" parent="."]
 script = ExtResource( 222 )
 
-[node name="AudioStream" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStream" type="Node2D" parent="."]
 script = ExtResource( 234 )
 
-[node name="AudioStreamGenerator" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStreamGenerator" type="Node2D" parent="."]
 script = ExtResource( 223 )
 
-[node name="AudioStreamMicrophone" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStreamMicrophone" type="Node2D" parent="."]
 script = ExtResource( 224 )
 
-[node name="AudioStreamOGGVorbis" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStreamOGGVorbis" type="Node2D" parent="."]
 script = ExtResource( 231 )
 
-[node name="AudioStreamSample" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStreamSample" type="Node2D" parent="."]
 script = ExtResource( 250 )
 
-[node name="AudioStreamStreamSample" type="Node2D" parent="ALLCREATED"]
+[node name="AudioStreamStreamSample" type="Node2D" parent="."]
 script = ExtResource( 207 )
+
+[node name="ALLCREATED" type="Node2D" parent="."]
+visible = false
 
 [node name="BakedLightmapData" type="Node2D" parent="."]
 visible = false
@@ -658,6 +658,7 @@ visible = false
 script = ExtResource( 296 )
 
 [node name="Image" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 293 )
 
 [node name="InputEvent_CANT" type="Node2D" parent="."]

@@ -103,7 +103,7 @@ func _process(delta) -> void:
 			### TOO MANY BUGS AND TOO SLOW qq += str(q_Image.decompress())
 			qq += str(q_Image.detect_alpha())
 			q_Image.expand_x2_hq2x()
-			q_Image.fill( Color(randf(),randf(),randf(),randf()))
+			#BUG q_Image.fill( Color(randf(),randf(),randf(),randf()))
 			q_Image.fix_alpha_edges()
 
 			q_Image.flip_x()
@@ -117,7 +117,7 @@ func _process(delta) -> void:
 			qq += str(q_Image.get_mipmap_offset( randi() % 10 - 5 ))
 			qq += str(q_Image.get_pixel( randi() % 10 - 5, randi() % 10 - 5 ))
 			qq += str(q_Image.get_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
-			qq += str(q_Image.get_rect( Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5))))
+			#BUG qq += str(q_Image.get_rect( Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5))))
 			qq += str(q_Image.get_size())
 			qq += str(q_Image.get_used_rect())
 			qq += str(q_Image.get_width())
@@ -143,8 +143,8 @@ func _process(delta) -> void:
 			qq += str(q_Image.rgbe_to_srgb())
 			qq += str(q_Image.save_png( "res://lafar.png" ))
 
-			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
-			q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))
+			#BUG q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
+			#BUG q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))
 
 			#BUG q_Image.shrink_x2()
 			q_Image.srgb_to_linear()

@@ -18,11 +18,11 @@ func _process(delta) -> void:
 		
 		qq += str(q_PackedScene.can_instance())
 		qq += str(q_PackedScene.get_state())
-		#qq += str(q_PackedScene.instance( randi() % 3 )) # GenEditState
+		#qq += str(q_PackedScene.instance( randi() % 3 ).queue_free()) # GenEditState
 		qq += str(q_PackedScene.pack( self ))
 		
 		if Autoload.WRONG_BUGS:
 			qq += str(q_PackedScene.can_instance())
 			qq += str(q_PackedScene.get_state())
-			qq += str(q_PackedScene.instance( randi() % 1000 - 500 )) # GenEditState
+			qq += str(q_PackedScene.instance( randi() % 1000 - 500 ).queue_free()) # GenEditState
 			qq += str(q_PackedScene.pack( self ))
