@@ -146,6 +146,6 @@ func _process(delta) -> void:
 			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
 			q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))
 
-			q_Image.shrink_x2()
+			#BUG q_Image.shrink_x2()
 			q_Image.srgb_to_linear()
 			q_Image.unlock()
