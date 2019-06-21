@@ -1,8 +1,7 @@
-[gd_scene load_steps=180 format=2]
+[gd_scene load_steps=179 format=2]
 
 [ext_resource path="res://Resources/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://Resources/Resources.gd" type="Script" id=2]
-[ext_resource path="res://Resources/GlobalScope.gd" type="Script" id=3]
 [ext_resource path="res://Resources/ARVRInterface.gd" type="Script" id=4]
 [ext_resource path="res://Resources/Reference.gd" type="Script" id=5]
 [ext_resource path="res://Resources/ARVRInterfaceGDNative.gd" type="Script" id=6]
@@ -183,10 +182,6 @@
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
 
-[node name="GlobalScope" type="Node2D" parent="."]
-visible = false
-script = ExtResource( 3 )
-
 [node name="Reference" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 5 )
@@ -347,127 +342,167 @@ script = ExtResource( 26 )
 visible = false
 script = ExtResource( 31 )
 
-[node name="PrimitiveMesh" type="Node2D" parent="."]
+[node name="PrimitiveMesh_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 200 )
 
 [node name="CapsuleMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 199 )
 
 [node name="CubeMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 216 )
 
 [node name="CylinderMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 217 )
 
 [node name="PlaneMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 204 )
 
 [node name="PrismMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 203 )
 
 [node name="QuadMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 202 )
 
 [node name="SphereMesh" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 201 )
 
 [node name="AudioBusLayout" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 219 )
 
 [node name="AudioEffect" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 218 )
 
 [node name="AudioEffectAmplify" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 220 )
 
 [node name="AudioEffectFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 221 )
 
 [node name="AudioEffectBandLimitFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 213 )
 
 [node name="AudioEffectBandPassFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 212 )
 
 [node name="AudioEffectHighPassFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 215 )
 
 [node name="AudioEffectHighShelfFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 198 )
 
 [node name="AudioEffectLowPassFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 214 )
 
 [node name="AudioEffectLowShelfFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 209 )
 
 [node name="AudioEffectNotchFilter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 210 )
 
 [node name="AudioEffectChorus" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 211 )
 
 [node name="AudioEffectCompressor" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 205 )
 
 [node name="AudioEffectDelay" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 206 )
 
 [node name="AudioEffectDistortion" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 208 )
 
 [node name="AudioEffectEQ" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 232 )
 
 [node name="AudioEffectEQ10" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 233 )
 
 [node name="AudioEffectEQ21" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 229 )
 
 [node name="AudioEffectEQ6" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 227 )
 
 [node name="AudioEffectLimiter" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 228 )
 
 [node name="AudioEffectPanner" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 230 )
 
 [node name="AudioEffectPhaser" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 237 )
 
 [node name="AudioEffectPitchShift" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 226 )
 
 [node name="AudioEffectRecord" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 238 )
 
 [node name="AudioEffectReverb" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 236 )
 
 [node name="AudioEffectSpectrumAnalyzer" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 225 )
 
 [node name="AudioEffectStereoEnhance" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 222 )
 
-[node name="AudioStream" type="Node2D" parent="."]
+[node name="AudioStream_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 234 )
 
 [node name="AudioStreamGenerator" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 223 )
 
 [node name="AudioStreamMicrophone" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 224 )
 
 [node name="AudioStreamOGGVorbis" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 231 )
 
-[node name="AudioStreamSample" type="Node2D" parent="."]
+[node name="AudioStreamRandomPitch" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 250 )
 
-[node name="AudioStreamStreamSample" type="Node2D" parent="."]
+[node name="AudioStreamSample" type="Node2D" parent="."]
 script = ExtResource( 207 )
 
 [node name="ALLCREATED" type="Node2D" parent="."]

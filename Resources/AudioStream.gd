@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_AudioStream : AudioStream = AudioStream.new()
-		
-		qq += str(q_AudioStream.get_length())
-		
-		if Autoload.WRONG_BUGS:
-			qq += str(q_AudioStream.get_length())
+#		var q_AudioStream : AudioStream = AudioStream.new()
+#
+#		qq += str(q_AudioStream.get_length())
+#
+#		if Autoload.WRONG_BUGS:
+#			qq += str(q_AudioStream.get_length())
