@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptEndgineSingleton : VisualScriptEngineSingleton = VisualScriptEngineSingleton.new()
+		var q_VisualScriptEngineSingleton : VisualScriptEngineSingleton = VisualScriptEngineSingleton.new()
 		
-		q_VisualScriptEngineSingleton.
-		q_VisualScriptEngineSingleton.
-		q_VisualScriptEngineSingleton.
+		q_VisualScriptEngineSingleton.set_singleton("asf")
 		
 		if Autoload.WRONG_BUGS:
 			pass

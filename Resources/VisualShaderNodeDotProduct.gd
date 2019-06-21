@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeDotProduct : VisualShaderNodeDotProduct = VisualShaderNodeDotProduct.new()
-		
-		q_VisualShaderNodeDotProduct.
-		q_VisualShaderNodeDotProduct.
-		q_VisualShaderNodeDotProduct.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeDotProduct : VisualShaderNodeDotProduct = VisualShaderNodeDotProduct.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

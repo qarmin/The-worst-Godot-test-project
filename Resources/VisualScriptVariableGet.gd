@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptVariableGet : VisualScriptVariableGet = VisualScriptVariableGet.new()
 		
-		q_VisualScriptVariableGet.
-		q_VisualScriptVariableGet.
-		q_VisualScriptVariableGet.
+		q_VisualScriptVariableGet.set_variable("Hel")
 		
 		if Autoload.WRONG_BUGS:
 			pass

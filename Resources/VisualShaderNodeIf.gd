@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeIf : VisualShaderNodeIf = VisualShaderNodeIf.new()
-		
-		q_VisualShaderNodeIf.
-		q_VisualShaderNodeIf.
-		q_VisualShaderNodeIf.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeIf : VisualShaderNodeIf = VisualShaderNodeIf.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

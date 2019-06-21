@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeVectorFunc : VisualShaderNodeVectorFunc = VisualShaderNodeVectorFunc.new()
 		
-		q_VisualShaderNodeVectorFunc.
-		q_VisualShaderNodeVectorFunc.
-		q_VisualShaderNodeVectorFunc.
+		q_VisualShaderNodeVectorFunc.set_function(randi() % 2) #Function
 		
 		if Autoload.WRONG_BUGS:
 			pass

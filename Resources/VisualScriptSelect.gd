@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptSelect : VisualScriptSelect = VisualScriptSelect.new()
 		
-		q_VisualScriptSelect.
-		q_VisualScriptSelect.
-		q_VisualScriptSelect.
+		q_VisualScriptSelect.set_typed(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

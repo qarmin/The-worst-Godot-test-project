@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptLocalVar : VisualScriptLocalVar = VisualScriptLocalVar.new()
 		
-		q_VisualScriptLocalVar.
-		q_VisualScriptLocalVar.
-		q_VisualScriptLocalVar.
+		q_VisualScriptLocalVar.set_var_name("Pawulon")
+		q_VisualScriptLocalVar.set_var_type(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

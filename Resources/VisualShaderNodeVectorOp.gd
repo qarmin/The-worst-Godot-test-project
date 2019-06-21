@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeVectorOp : VisualShaderNodeVectorOp = VisualShaderNodeVectorOp.new()
 		
-		q_VisualShaderNodeVectorOp.
-		q_VisualShaderNodeVectorOp.
-		q_VisualShaderNodeVectorOp.
+		q_VisualShaderNodeVectorOp.set_operator(randi() % 12) #Operator
 		
 		if Autoload.WRONG_BUGS:
 			pass

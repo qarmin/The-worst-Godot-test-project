@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptInputAction : VisualScriptInputAction = VisualScriptInputAction.new()
 		
-		q_VisualScriptInputAction.
-		q_VisualScriptInputAction.
-		q_VisualScriptInputAction.
+		q_VisualScriptInputAction.set_action_name("Akcja")
+		q_VisualScriptInputAction.set_action_mode(randi() % 4) # Mode
 		
 		if Autoload.WRONG_BUGS:
 			pass

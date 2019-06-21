@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptSubCall : VisualScriptSubCall = VisualScriptSubCall.new()
 		
-		q_VisualScriptSubCall.
-		q_VisualScriptSubCall.
-		q_VisualScriptSubCall.
+		q_VisualScriptSubCall._subcall( randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

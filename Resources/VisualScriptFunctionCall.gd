@@ -16,9 +16,16 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptFunctionCall : VisualScriptFunctionCall = VisualScriptFunctionCall.new()
 		
-		q_VisualScriptFunctionCall.
-		q_VisualScriptFunctionCall.
-		q_VisualScriptFunctionCall.
+		q_VisualScriptFunctionCall.set_call_mode(randi() % 5) # CallMode
+		q_VisualScriptFunctionCall.set_base_type("Int")
+		q_VisualScriptFunctionCall.set_base_script("Script")
+		q_VisualScriptFunctionCall.set_singleton("QQQr")
+		q_VisualScriptFunctionCall.set_basic_type(randi()%50)
+		q_VisualScriptFunctionCall.set_base_path(".")
+		q_VisualScriptFunctionCall.set_function("Rzym")
+		q_VisualScriptFunctionCall.set_use_default_args(randi()%50)
+		q_VisualScriptFunctionCall.set_validate(bool(randi()%2))
+		q_VisualScriptFunctionCall.set_rpc_call_mode(randi() % 5) #RPCCallMode
 		
 		if Autoload.WRONG_BUGS:
 			pass

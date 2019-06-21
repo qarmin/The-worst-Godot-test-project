@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptIndexSet : VisualScriptIndexSet = VisualScriptIndexSet.new()
-		
-		q_VisualScriptIndexSet.
-		q_VisualScriptIndexSet.
-		q_VisualScriptIndexSet.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualScriptIndexSet : VisualScriptIndexSet = VisualScriptIndexSet.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

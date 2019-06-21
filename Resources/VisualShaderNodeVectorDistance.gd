@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeVectorDistance : VisualShaderNodeVectorDistance = VisualShaderNodeVectorDistance.new()
-		
-		q_VisualShaderNodeVectorDistance.
-		q_VisualShaderNodeVectorDistance.
-		q_VisualShaderNodeVectorDistance.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeVectorDistance : VisualShaderNodeVectorDistance = VisualShaderNodeVectorDistance.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

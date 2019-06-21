@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeScalarConstant : VisualShaderNodeScalarConstant = VisualShaderNodeScalarConstant.new()
 		
-		q_VisualShaderNodeScalarConstant.
-		q_VisualShaderNodeScalarConstant.
-		q_VisualShaderNodeScalarConstant.
+		q_VisualShaderNodeScalarConstant.set_constant(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeDecompose : VisualShaderNodeDecompose = VisualShaderNodeDecompose.new()
-		
-		q_VisualShaderNodeDecompose.
-		q_VisualShaderNodeDecompose.
-		q_VisualShaderNodeDecompose.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeDecompose : VisualShaderNodeDecompose = VisualShaderNodeDecompose.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

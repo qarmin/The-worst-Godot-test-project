@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeVec3Constant : VisualShaderNodeVec3Constant = VisualShaderNodeVec3Constant.new()
 		
-		q_VisualShaderNodeVec3Constant.
-		q_VisualShaderNodeVec3Constant.
-		q_VisualShaderNodeVec3Constant.
+		q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
 			pass

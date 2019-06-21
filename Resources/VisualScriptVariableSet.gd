@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptVariableSet : VisualScriptVariableSet = VisualScriptVariableSet.new()
 		
-		q_VisualScriptVariableSet.
-		q_VisualScriptVariableSet.
-		q_VisualScriptVariableSet.
+		q_VisualScriptVariableSet.set_variable("Małopolska")
 		
 		if Autoload.WRONG_BUGS:
 			pass

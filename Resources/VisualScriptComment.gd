@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptComment : VisualScriptComment = VisualScriptComment.new()
 		
-		q_VisualScriptComment.
-		q_VisualScriptComment.
-		q_VisualScriptComment.
+		q_VisualScriptComment.set_title("Koń")
+		q_VisualScriptComment.set_description("Zwierzę")
+		q_VisualScriptComment.set_size(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
 			pass

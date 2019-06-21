@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptSceneNode : VisualScriptSceneNode = VisualScriptSceneNode.new()
 		
-		q_VisualScriptSceneNode.
-		q_VisualScriptSceneNode.
-		q_VisualScriptSceneNode.
+		q_VisualScriptSceneNode.set_node_path(".")
 		
 		if Autoload.WRONG_BUGS:
 			pass

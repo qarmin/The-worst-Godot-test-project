@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptYield : VisualScriptYield = VisualScriptYield.new()
 		
-		q_VisualScriptYield.
-		q_VisualScriptYield.
-		q_VisualScriptYield.
+		q_VisualScriptYield.set_yield_mode(randi() % 3 + 1) #Yield mode
+		q_VisualScriptYield.set_wait_time(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

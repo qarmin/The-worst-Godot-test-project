@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptBasicTypeConstant : VisualScriptBasicTypeConstant = VisualScriptBasicTypeConstant.new()
 		
-		q_VisualScriptBasicTypeConstant.
-		q_VisualScriptBasicTypeConstant.
-		q_VisualScriptBasicTypeConstant.
+		q_VisualScriptBasicTypeConstant.set_basic_type(randi() % 1000)
+		q_VisualScriptBasicTypeConstant.set_basic_type_constant("Vector3")
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -16,9 +16,11 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptNode : VisualScriptNode = VisualScriptNode.new()
 		
-		q_VisualScriptNode.
-		q_VisualScriptNode.
-		q_VisualScriptNode.
+		q_VisualScriptNode.get_default_input_value( 0 )
+		q_VisualScriptNode.get_visual_script()
+		
+		q_VisualScriptNode.ports_changed_notify()
+		q_VisualScriptNode.set_default_input_value( 0, String() )
 		
 		if Autoload.WRONG_BUGS:
 			pass

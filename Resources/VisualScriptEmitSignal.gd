@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptEmitSignal : VisualScriptEmitSignal = VisualScriptEmitSignal.new()
 		
-		q_VisualScriptEmitSignal.
-		q_VisualScriptEmitSignal.
-		q_VisualScriptEmitSignal.
+		q_VisualScriptEmitSignal.set_signal("Bez Sensu")
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeExpression : VisualShaderNodeExpression = VisualShaderNodeExpression.new()
 		
-		q_VisualShaderNodeExpression.
-		q_VisualShaderNodeExpression.
-		q_VisualShaderNodeExpression.
+		q_VisualShaderNodeExpression.set_expression("Uderzenie")
+		
+		q_VisualShaderNodeExpression.build()
 		
 		if Autoload.WRONG_BUGS:
 			pass

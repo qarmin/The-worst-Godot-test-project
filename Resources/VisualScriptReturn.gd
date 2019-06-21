@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptReturn : VisualScriptReturn = VisualScriptReturn.new()
 		
-		q_VisualScriptReturn.
-		q_VisualScriptReturn.
-		q_VisualScriptReturn.
+		q_VisualScriptReturn.set_enable_return_value(bool(randi()%2))
+		q_VisualScriptReturn.set_return_type(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

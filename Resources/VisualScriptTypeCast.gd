@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptTypeCast : VisualScriptTypeCast = VisualScriptTypeCast.new()
 		
-		q_VisualScriptTypeCast.
-		q_VisualScriptTypeCast.
-		q_VisualScriptTypeCast.
+		q_VisualScriptTypeCast.set_base_type("Policja")
+		q_VisualScriptTypeCast.set_base_script("Czany Charakter")
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptYieldSignal : VisualScriptYieldSignal = VisualScriptYieldSignal.new()
 		
-		q_VisualScriptYieldSignal.
-		q_VisualScriptYieldSignal.
-		q_VisualScriptYieldSignal.
-		
+		q_VisualScriptYieldSignal.set_call_mode(randi() % 3) # CallMode
+		q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
+		q_VisualScriptYieldSignal.set_base_script("Debilny Sposób")
+		q_VisualScriptYieldSignal.set_signal("Podwodny")
 		if Autoload.WRONG_BUGS:
 			pass

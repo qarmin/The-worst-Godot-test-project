@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeColorOp : VisualShaderNodeColorOp = VisualShaderNodeColorOp.new()
 		
-		q_VisualShaderNodeColorOp.
-		q_VisualShaderNodeColorOp.
-		q_VisualShaderNodeColorOp.
+		q_VisualShaderNodeColorOp.set_operator(randi() % 9) # Operator
 		
 		if Autoload.WRONG_BUGS:
 			pass

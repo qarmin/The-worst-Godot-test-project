@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeVectorSmoothStep : VisualShaderNodeVectorSmoothStep = VisualShaderNodeVectorSmoothStep.new()
-		
-		q_VisualShaderNodeVectorSmoothStep.
-		q_VisualShaderNodeVectorSmoothStep.
-		q_VisualShaderNodeVectorSmoothStep.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeVectorSmoothStep : VisualShaderNodeVectorSmoothStep = VisualShaderNodeVectorSmoothStep.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

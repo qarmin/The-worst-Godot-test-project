@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptBuiltinFunc : VisualScriptBuiltinFunc = VisualScriptBuiltinFunc.new()
 		
-		q_VisualScriptBuiltinFunc.
-		q_VisualScriptBuiltinFunc.
-		q_VisualScriptBuiltinFunc.
+		q_VisualScriptBuiltinFunc.set_func(randi() % q_VisualScriptBuiltinFunc.FUNC_MAX) # BuiltinFunc
 		
 		if Autoload.WRONG_BUGS:
 			pass

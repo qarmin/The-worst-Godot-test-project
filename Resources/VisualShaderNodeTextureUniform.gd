@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeTextureUniform : VisualShaderNodeTextureUniform = VisualShaderNodeTextureUniform.new()
 		
-		q_VisualShaderNodeTextureUniform.
-		q_VisualShaderNodeTextureUniform.
-		q_VisualShaderNodeTextureUniform.
+		q_VisualShaderNodeTextureUniform.set_texture_type(randi() % 4) # Texture
+		q_VisualShaderNodeTextureUniform.set_color_default(randi() % 2) # ColorDefault
 		
 		if Autoload.WRONG_BUGS:
 			pass

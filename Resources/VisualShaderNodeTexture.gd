@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeTexture : VisualShaderNodeTexture = VisualShaderNodeTexture.new()
 		
-		q_VisualShaderNodeTexture.
-		q_VisualShaderNodeTexture.
-		q_VisualShaderNodeTexture.
+		q_VisualShaderNodeTexture.set_source(randi() % 4) #Source
+		q_VisualShaderNodeTexture.set_texture(CurveTexture.new())
+		q_VisualShaderNodeTexture.set_texture_type(randi() % 3) # TextureType
 		
 		if Autoload.WRONG_BUGS:
 			pass

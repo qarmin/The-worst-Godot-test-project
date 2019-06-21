@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeScalarOp : VisualShaderNodeScalarOp = VisualShaderNodeScalarOp.new()
 		
-		q_VisualShaderNodeScalarOp.
-		q_VisualShaderNodeScalarOp.
-		q_VisualShaderNodeScalarOp.
+		q_VisualShaderNodeScalarOp.set_operator(randi() %10) #Operator
 		
 		if Autoload.WRONG_BUGS:
 			pass

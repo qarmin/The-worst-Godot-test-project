@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptMathConstant : VisualScriptMathConstant = VisualScriptMathConstant.new()
 		
-		q_VisualScriptMathConstant.
-		q_VisualScriptMathConstant.
-		q_VisualScriptMathConstant.
+		q_VisualScriptMathConstant.set_math_constant(randi() % q_VisualScriptMathConstant.MATH_CONSTANT_MAX)
 		
 		if Autoload.WRONG_BUGS:
 			pass

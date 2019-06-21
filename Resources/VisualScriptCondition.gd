@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptCondition : VisualScriptCondition = VisualScriptCondition.new()
-		
-		q_VisualScriptCondition.
-		q_VisualScriptCondition.
-		q_VisualScriptCondition.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualScriptCondition : VisualScriptCondition = VisualScriptCondition.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

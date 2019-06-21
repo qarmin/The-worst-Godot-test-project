@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeVec3Uniform : VisualShaderNodeVec3Uniform = VisualShaderNodeVec3Uniform.new()
-		
-		q_VisualShaderNodeVec3Uniform.
-		q_VisualShaderNodeVec3Uniform.
-		q_VisualShaderNodeVec3Uniform.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeVec3Uniform : VisualShaderNodeVec3Uniform = VisualShaderNodeVec3Uniform.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

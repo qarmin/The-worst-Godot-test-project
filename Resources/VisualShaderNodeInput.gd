@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeInput : VisualShaderNodeInput = VisualShaderNodeInput.new()
 		
-		q_VisualShaderNodeInput.
-		q_VisualShaderNodeInput.
-		q_VisualShaderNodeInput.
+		q_VisualShaderNodeInput.set_input_name("Szkoła")
 		
 		if Autoload.WRONG_BUGS:
 			pass

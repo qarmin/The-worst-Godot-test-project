@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptIterator : VisualScriptIterator = VisualScriptIterator.new()
-		
-		q_VisualScriptIterator.
-		q_VisualScriptIterator.
-		q_VisualScriptIterator.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualScriptIterator : VisualScriptIterator = VisualScriptIterator.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptSceneTree : VisualScriptSceneTree = VisualScriptSceneTree.new()
-		
-		q_VisualScriptSceneTree.
-		q_VisualScriptSceneTree.
-		q_VisualScriptSceneTree.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualScriptSceneTree : VisualScriptSceneTree = VisualScriptSceneTree.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

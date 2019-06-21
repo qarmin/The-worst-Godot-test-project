@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeCubeMap : VisualShaderNodeCubeMap = VisualShaderNodeCubeMap.new()
 		
-		q_VisualShaderNodeCubeMap.
-		q_VisualShaderNodeCubeMap.
-		q_VisualShaderNodeCubeMap.
+		q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
+		q_VisualShaderNodeCubeMap.set_texture_type(randi() % 3) #TextureType
 		
 		if Autoload.WRONG_BUGS:
 			pass

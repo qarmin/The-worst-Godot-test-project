@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptLocalVarSet : VisualScriptLocalVarSet = VisualScriptLocalVarSet.new()
 		
-		q_VisualScriptLocalVarSet.
-		q_VisualScriptLocalVarSet.
-		q_VisualScriptLocalVarSet.
+		q_VisualScriptLocalVarSet.set_var_name("Piotrek")
+		q_VisualScriptLocalVarSet.set_var_type(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

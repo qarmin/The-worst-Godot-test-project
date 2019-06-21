@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeBooleanConstant : VisualShaderNodeBooleanConstant = VisualShaderNodeBooleanConstant.new()
 		
-		q_VisualShaderNodeBooleanConstant.
-		q_VisualShaderNodeBooleanConstant.
-		q_VisualShaderNodeBooleanConstant.
+		q_VisualShaderNodeBooleanConstant.set_constant(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			pass

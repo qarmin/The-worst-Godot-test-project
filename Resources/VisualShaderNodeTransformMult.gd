@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeTransformMult : VisualShaderNodeTransformMult = VisualShaderNodeTransformMult.new()
 		
-		q_VisualShaderNodeTransformMult.
-		q_VisualShaderNodeTransformMult.
-		q_VisualShaderNodeTransformMult.
+		q_VisualShaderNodeTransformMult.set_operator(randi() % 10) #Operator
 		
 		if Autoload.WRONG_BUGS:
 			pass

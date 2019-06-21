@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptGlobalConstant : VisualScriptGlobalConstant = VisualScriptGlobalConstant.new()
 		
-		q_VisualScriptGlobalConstant.
-		q_VisualScriptGlobalConstant.
-		q_VisualScriptGlobalConstant.
+		q_VisualScriptGlobalConstant.set_global_constant(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

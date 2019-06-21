@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptOperator : VisualScriptOperator = VisualScriptOperator.new()
 		
-		q_VisualScriptOperator.
-		q_VisualScriptOperator.
-		q_VisualScriptOperator.
+		q_VisualScriptOperator.set_operator(randi()%50)
+		q_VisualScriptOperator.set_typed(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptClassConstant : VisualScriptClassConstant = VisualScriptClassConstant.new()
 		
-		q_VisualScriptClassConstant.
-		q_VisualScriptClassConstant.
-		q_VisualScriptClassConstant.
+		q_VisualScriptClassConstant.set_base_type("String")
+		q_VisualScriptClassConstant.set_class_constant("Vector2")
 		
 		if Autoload.WRONG_BUGS:
 			pass

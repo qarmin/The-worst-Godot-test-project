@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeColorFunc : VisualShaderNodeColorFunc = VisualShaderNodeColorFunc.new()
 		
-		q_VisualShaderNodeColorFunc.
-		q_VisualShaderNodeColorFunc.
-		q_VisualShaderNodeColorFunc.
+		q_VisualShaderNodeColorFunc.set_function(randi() % 2) #Function
 		
 		if Autoload.WRONG_BUGS:
 			pass

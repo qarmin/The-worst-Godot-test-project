@@ -16,9 +16,11 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptConstructor : VisualScriptConstructor = VisualScriptConstructor.new()
 		
-		q_VisualScriptConstructor.
-		q_VisualScriptConstructor.
-		q_VisualScriptConstructor.
+		q_VisualScriptConstructor.get_constructor()
+		q_VisualScriptConstructor.get_constructor_type()
+		
+		q_VisualScriptConstructor.set_constructor( {"as":25} )
+		q_VisualScriptConstructor.set_constructor_type( randi() % 10042)
 		
 		if Autoload.WRONG_BUGS:
 			pass

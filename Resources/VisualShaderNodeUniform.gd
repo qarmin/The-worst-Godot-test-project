@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeUniform : VisualShaderNodeUniform = VisualShaderNodeUniform.new()
 		
-		q_VisualShaderNodeUniform.
-		q_VisualShaderNodeUniform.
-		q_VisualShaderNodeUniform.
+		q_VisualShaderNodeUniform.set_uniform_name("Rury")
 		
 		if Autoload.WRONG_BUGS:
 			pass
