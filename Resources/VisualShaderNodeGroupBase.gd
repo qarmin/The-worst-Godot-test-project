@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		q_VisualShaderNodeGroupBase.set_control( q_control,0 )
 		q_VisualShaderNodeGroupBase.set_input_port_name( 0, "Kapitan" )
 		q_VisualShaderNodeGroupBase.set_input_port_type( 0, 2 )
-		q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
+		#q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
 		q_VisualShaderNodeGroupBase.set_output_port_name( 0, "Fajf" )
 		q_VisualShaderNodeGroupBase.set_output_port_type( 0, 2 )
 		q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
