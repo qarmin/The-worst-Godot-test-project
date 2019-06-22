@@ -75,7 +75,7 @@ func _process(delta) -> void:
 			qq += str(q_VisualShaderNodeGroupBase.has_output_port(randi() % 1000 - 500))
 			
 			#BUG q_VisualShaderNodeGroupBase.remove_input_port( randi() % 1000 - 500 )
-			q_VisualShaderNodeGroupBase.remove_output_port( randi() % 1000 - 500 )
+			#BUG q_VisualShaderNodeGroupBase.remove_output_port( randi() % 1000 - 500 )
 			
 			q_control = Control.new()
 			
