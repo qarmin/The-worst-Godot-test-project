@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptClassConstant.set_class_constant("Vector2")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptClassConstant.set_base_type("Kekin")
+			q_VisualScriptClassConstant.set_class_constant("Osoba")

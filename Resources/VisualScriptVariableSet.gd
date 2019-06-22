@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptVariableSet.set_variable("Małopolska")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptVariableSet.set_variable("Małopolska")

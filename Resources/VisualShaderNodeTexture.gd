@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_VisualShaderNodeTexture.set_texture_type(randi() % 3) # TextureType
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeTexture.set_source(randi() % 1000 - 500) #Source
+			q_VisualShaderNodeTexture.set_texture(CurveTexture.new())
+			q_VisualShaderNodeTexture.set_texture_type(randi() % 1000 - 500) # TextureType

@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeBooleanConstant.set_constant(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeBooleanConstant.set_constant(bool(randi()%2))

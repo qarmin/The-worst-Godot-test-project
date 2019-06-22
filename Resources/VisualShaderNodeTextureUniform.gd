@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualShaderNodeTextureUniform.set_color_default(randi() % 2) # ColorDefault
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeTextureUniform.set_texture_type(randi() % 1000 - 500) # Texture
+			q_VisualShaderNodeTextureUniform.set_color_default(randi() % 1000 - 500) # ColorDefault

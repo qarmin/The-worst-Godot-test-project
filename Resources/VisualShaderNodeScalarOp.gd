@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeScalarOp.set_operator(randi() %10) #Operator
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeScalarOp.set_operator(randi() % 1000 - 500) #Operator

@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 50,randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))

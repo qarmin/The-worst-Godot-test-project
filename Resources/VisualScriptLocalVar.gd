@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptLocalVar.set_var_type(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptLocalVar.set_var_name("Pawulon")
+			q_VisualScriptLocalVar.set_var_type(randi() % 1000 - 500)

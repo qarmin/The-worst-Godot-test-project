@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))

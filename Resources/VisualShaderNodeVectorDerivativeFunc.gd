@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeVectorDerivativeFunc : VisualShaderNodeVectorDerivativeFunc = VisualShaderNodeVectorDerivativeFunc.new()
 		
-		q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % 2) #Function
+		q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % 3) #Function
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % 1000 - 500) #Function

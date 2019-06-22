@@ -18,7 +18,11 @@ func _process(delta) -> void:
 		
 		q_VisualScriptYieldSignal.set_call_mode(randi() % 3) # CallMode
 		q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
-		q_VisualScriptYieldSignal.set_base_script("Debilny Sposób")
+		q_VisualScriptYieldSignal.set_base_path(".")
 		q_VisualScriptYieldSignal.set_signal("Podwodny")
+		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptYieldSignal.set_call_mode(randi() % 1000 - 500) # CallMode
+			q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
+			q_VisualScriptYieldSignal.set_base_path(".2f")
+			q_VisualScriptYieldSignal.set_signal("Podwodny")

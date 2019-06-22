@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptEmitSignal.set_signal("Bez Sensu")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptEmitSignal.set_signal("Jednak z sensem")

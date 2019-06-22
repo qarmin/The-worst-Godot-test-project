@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptTypeCast.set_base_script("Czany Charakter")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptTypeCast.set_base_type("Policja")
+			q_VisualScriptTypeCast.set_base_script("Czany Charakter")

@@ -28,10 +28,10 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_emitting(bool(randi()%2))
-		set_amount(randi()%50 + 10)
+		set_amount(randi()%10 + 5)
 		set_lifetime(randf() * 10 + 5)
 		set_one_shot(bool(randi()%2))
-		set_pre_process_time(randf() * 50)
+		set_pre_process_time(randf() * 5)
 		set_speed_scale(randf() * 50)
 		set_explosiveness_ratio(randf())
 		set_randomness_ratio(randf())
@@ -319,13 +319,13 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_emitting(bool(randi()%2))
-			set_amount(randi() % 50 - 500)
+			set_amount(randi() % 20 - 500)
 			set_lifetime(randf() * 1000 - 500)
 			set_one_shot(bool(randi()%2))
-			set_pre_process_time(randf() * 1000 - 500)
+			set_pre_process_time(randf() * 1 - 0.5)
 			set_speed_scale(randf() * 1000 - 500)
-			set_explosiveness_ratio(randf())
-			set_randomness_ratio(randf())
+			set_explosiveness_ratio(randf() * 1000 - 500)
+			set_randomness_ratio(randf() * 1000 - 500)
 			set_fixed_fps(randi() % 1000 - 500)
 			set_fractional_delta(bool(randi()%2))
 			set_use_local_coordinates(bool(randi()%2))
@@ -610,6 +610,6 @@ func _process(delta) -> void:
 			set_message_translation(bool(randi()%2))
 			set_meta("fsafassfafwqa", CubeMesh.new())
 			#set_script(Reference.new())
-	
+			
 			qq += str(to_string())
 			qq += str(tr("asfqwasfasfqwt        "))

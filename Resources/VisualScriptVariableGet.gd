@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptVariableGet.set_variable("Hel")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptVariableGet.set_variable("Hel")

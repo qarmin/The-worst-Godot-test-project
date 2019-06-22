@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptSequence : VisualScriptSequence = VisualScriptSequence.new()
 		
-		q_VisualScriptSequence.set_steps(randi()%50)
+		q_VisualScriptSequence.set_steps(randi()%50 + 1)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptSequence.set_steps(randi() % 1000 - 500)

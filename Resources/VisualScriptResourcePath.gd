@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptResourcePath.set_resource_path("res://Sprite1.png")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptResourcePath.set_resource_path("res://Spr22te1.png")

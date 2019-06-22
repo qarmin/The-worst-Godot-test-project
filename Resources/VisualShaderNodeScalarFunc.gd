@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualShaderNodeScalarFunc : VisualShaderNodeScalarFunc = VisualShaderNodeScalarFunc.new()
 		
-		q_VisualShaderNodeScalarFunc.set_function(randi() % 2) #Function
+		q_VisualShaderNodeScalarFunc.set_function(randi() % 32) #Function
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeScalarFunc.set_function(randi() % 1000 - 500) #Function

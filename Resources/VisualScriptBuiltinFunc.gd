@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptBuiltinFunc.set_func(randi() % q_VisualScriptBuiltinFunc.FUNC_MAX) # BuiltinFunc
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptBuiltinFunc.set_func(randi() % 1000 - 500) # BuiltinFunc

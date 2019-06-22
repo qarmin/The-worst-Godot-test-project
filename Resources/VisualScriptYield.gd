@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptYield.set_wait_time(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptYield.set_yield_mode(randi() % 1000 - 500) #Yield mode
+			q_VisualScriptYield.set_wait_time(randi() % 1000 - 500)

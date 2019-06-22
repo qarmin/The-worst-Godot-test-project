@@ -26,4 +26,11 @@ func _process(delta) -> void:
 		q_VisualScriptPropertySet.set_assign_op(randi() % 11) # AssignOP
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptPropertySet.set_call_mode(randi() % 1000 - 500) # CallMode
+			q_VisualScriptPropertySet.set_base_type("Nabzdryngolony")
+			q_VisualScriptPropertySet.set_base_script("Debilny Sposób")
+			q_VisualScriptPropertySet.set_basic_type(randi() % 1000 - 500)
+			q_VisualScriptPropertySet.set_base_path(".")
+			q_VisualScriptPropertySet.set_property("Adam")
+			q_VisualScriptPropertySet.set_index("Koniak")
+			q_VisualScriptPropertySet.set_assign_op(randi() % 1000 - 500) # AssignOP

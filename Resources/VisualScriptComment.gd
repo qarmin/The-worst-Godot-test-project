@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_VisualScriptComment.set_size(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptComment.set_title("Koń")
+			q_VisualScriptComment.set_description("Zwierzę")
+			q_VisualScriptComment.set_size(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

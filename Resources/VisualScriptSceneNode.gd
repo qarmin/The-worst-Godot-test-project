@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptSceneNode.set_node_path(".")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptSceneNode.set_node_path("q.r")

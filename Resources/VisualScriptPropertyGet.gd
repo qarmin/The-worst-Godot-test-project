@@ -25,4 +25,10 @@ func _process(delta) -> void:
 		q_VisualScriptPropertyGet.set_index("Koniak")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptPropertyGet.set_call_mode(randi() % 1000 - 500) # CallMode
+			q_VisualScriptPropertyGet.set_base_type("Nabzdryngolony")
+			q_VisualScriptPropertyGet.set_base_script("Debilny Sposób")
+			q_VisualScriptPropertyGet.set_basic_type(randi() % 1000 - 500)
+			q_VisualScriptPropertyGet.set_base_path(".w")
+			q_VisualScriptPropertyGet.set_property("Adam")
+			q_VisualScriptPropertyGet.set_index("Koniak")

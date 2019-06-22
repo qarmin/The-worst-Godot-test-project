@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeTransformFunc.set_function(randi() % 2) # Function
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeTransformFunc.set_function(randi() % 1000 - 500) # Function

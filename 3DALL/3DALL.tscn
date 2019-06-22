@@ -197,12 +197,10 @@ parent_collision_ignore = NodePath("..")
 script = ExtResource( 28 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-visible = false
 script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67796, -20.5468 )
-visible = false
 visibility_aabb = AABB( -11.0782, -6.47799, -3.54041, 22.1564, 12.956, 7.08083 )
 process_material = SubResource( 11 )
 draw_pass_1 = SubResource( 12 )
@@ -243,7 +241,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4649, 3.87396, -64.5134 )
 shape = SubResource( 13 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
-visible = false
 script = ExtResource( 40 )
 
 [node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
@@ -251,7 +248,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
-visible = false
 script = ExtResource( 38 )
 
 [node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
@@ -259,7 +255,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-visible = false
 script = ExtResource( 39 )
 
 [node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
@@ -267,7 +262,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
-visible = false
 script = ExtResource( 41 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
@@ -283,7 +277,6 @@ shape = SubResource( 13 )
 [node name="VehicleWheel 4" type="VehicleWheel" parent="VehicleBody"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
-visible = false
 script = ExtResource( 42 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]

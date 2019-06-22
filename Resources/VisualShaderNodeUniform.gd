@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualShaderNodeUniform : VisualShaderNodeUniform = VisualShaderNodeUniform.new()
-		
-		q_VisualShaderNodeUniform.set_uniform_name("Rury")
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_VisualShaderNodeUniform : VisualShaderNodeUniform = VisualShaderNodeUniform.new()
+#
+#		q_VisualShaderNodeUniform.set_uniform_name("Rury")
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

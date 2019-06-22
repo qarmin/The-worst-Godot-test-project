@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualShaderNodeInput.set_input_name("Szkoła")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualShaderNodeInput.set_input_name("Szkoła")

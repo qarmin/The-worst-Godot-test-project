@@ -16,8 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptConstant : VisualScriptConstant = VisualScriptConstant.new()
 		
-		q_VisualScriptConstant.set_constant_type(randi()%50)
+		q_VisualScriptConstant.set_constant_type(randi()%27) #VARIANT_MAX
 		q_VisualScriptConstant.set_constant_value(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptConstant.set_constant_type(randi() % 1000 - 500) #VARIANT_MAX
+			q_VisualScriptConstant.set_constant_value(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

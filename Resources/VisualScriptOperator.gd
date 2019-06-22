@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptOperator.set_typed(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptOperator.set_operator(randi() % 1000 - 500)
+			q_VisualScriptOperator.set_typed(randi() % 1000 - 500)

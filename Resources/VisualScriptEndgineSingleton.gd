@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptEngineSingleton.set_singleton("asf")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptEngineSingleton.set_singleton("ase")

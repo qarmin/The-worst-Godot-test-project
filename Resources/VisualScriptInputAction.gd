@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_VisualScriptInputAction.set_action_mode(randi() % 4) # Mode
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptInputAction.set_action_name("Akcja")
+			q_VisualScriptInputAction.set_action_mode(randi() % 1000 - 500) # Mode

@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptDeconstruct : VisualScriptDeconstruct = VisualScriptDeconstruct.new()
 		
-		q_VisualScriptDeconstruct.set_deconstruct_type(randi()%50)
+		q_VisualScriptDeconstruct.set_deconstruct_type(randi()%27)  # Variant_MAX
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptDeconstruct.set_deconstruct_type(randi() % 1000 - 500)  # Variant_MAX

@@ -987,7 +987,7 @@ script = ExtResource( 358 )
 visible = false
 script = ExtResource( 372 )
 
-[node name="VisualScriptNode" type="Node2D" parent="."]
+[node name="VisualScriptNode_CANT" type="Node2D" parent="."]
 script = ExtResource( 86 )
 
 [node name="VisualScriptBasicTypeConstant" type="Node2D" parent="."]
@@ -1002,7 +1002,7 @@ script = ExtResource( 78 )
 [node name="VisualScriptComment" type="Node2D" parent="."]
 script = ExtResource( 81 )
 
-[node name="VisualScriptCondition" type="Node2D" parent="."]
+[node name="VisualScriptCondition_CANT" type="Node2D" parent="."]
 script = ExtResource( 82 )
 
 [node name="VisualScriptConstant" type="Node2D" parent="."]
@@ -1011,7 +1011,7 @@ script = ExtResource( 83 )
 [node name="VisualScriptConstructor" type="Node2D" parent="."]
 script = ExtResource( 84 )
 
-[node name="VisualScriptCustomNode" type="Node2D" parent="."]
+[node name="VisualScriptCustomNode_CANT" type="Node2D" parent="."]
 script = ExtResource( 85 )
 
 [node name="VisualScriptDeconstruct" type="Node2D" parent="."]
@@ -1023,10 +1023,10 @@ script = ExtResource( 73 )
 [node name="VisualScriptEngineSingleton" type="Node2D" parent="."]
 script = ExtResource( 51 )
 
-[node name="VisualScriptExpression" type="Node2D" parent="."]
+[node name="VisualScriptExpression_CANT" type="Node2D" parent="."]
 script = ExtResource( 94 )
 
-[node name="VisualScriptFunction" type="Node2D" parent="."]
+[node name="VisualScriptFunction_CANT" type="Node2D" parent="."]
 script = ExtResource( 66 )
 
 [node name="VisualScriptFunctionCall" type="Node2D" parent="."]
@@ -1035,16 +1035,16 @@ script = ExtResource( 102 )
 [node name="VisualScriptGlobalConstant" type="Node2D" parent="."]
 script = ExtResource( 92 )
 
-[node name="VisualScriptIndexGet" type="Node2D" parent="."]
+[node name="VisualScriptIndexGet_CANT" type="Node2D" parent="."]
 script = ExtResource( 123 )
 
-[node name="VisualScriptIndexSet" type="Node2D" parent="."]
+[node name="VisualScriptIndexSet_CANT" type="Node2D" parent="."]
 script = ExtResource( 70 )
 
 [node name="VisualScriptInputAction" type="Node2D" parent="."]
 script = ExtResource( 65 )
 
-[node name="VisualScriptIterator" type="Node2D" parent="."]
+[node name="VisualScriptIterator_CANT" type="Node2D" parent="."]
 script = ExtResource( 76 )
 
 [node name="VisualScriptLocalVar" type="Node2D" parent="."]
@@ -1077,22 +1077,22 @@ script = ExtResource( 64 )
 [node name="VisualScriptSceneNode" type="Node2D" parent="."]
 script = ExtResource( 127 )
 
-[node name="VisualScriptSceneTree" type="Node2D" parent="."]
+[node name="VisualScriptSceneTree_CANT" type="Node2D" parent="."]
 script = ExtResource( 89 )
 
 [node name="VisualScriptSelect" type="Node2D" parent="."]
 script = ExtResource( 134 )
 
-[node name="VisualScriptSelf" type="Node2D" parent="."]
+[node name="VisualScriptSelf_CANT" type="Node2D" parent="."]
 script = ExtResource( 48 )
 
 [node name="VisualScriptSequence" type="Node2D" parent="."]
 script = ExtResource( 63 )
 
-[node name="VisualScriptSubCall" type="Node2D" parent="."]
+[node name="VisualScriptSubCall_CANT" type="Node2D" parent="."]
 script = ExtResource( 69 )
 
-[node name="VisualScriptSwitch" type="Node2D" parent="."]
+[node name="VisualScriptSwitch_CANT" type="Node2D" parent="."]
 script = ExtResource( 93 )
 
 [node name="VisualScriptTypeCast" type="Node2D" parent="."]
@@ -1104,7 +1104,7 @@ script = ExtResource( 126 )
 [node name="VisualScriptVariableSet" type="Node2D" parent="."]
 script = ExtResource( 54 )
 
-[node name="VisualScriptWhile" type="Node2D" parent="."]
+[node name="VisualScriptWhile_CANT" type="Node2D" parent="."]
 script = ExtResource( 128 )
 
 [node name="VisualScriptYield" type="Node2D" parent="."]
@@ -1113,31 +1113,31 @@ script = ExtResource( 116 )
 [node name="VisualScriptYieldSignal" type="Node2D" parent="."]
 script = ExtResource( 3 )
 
-[node name="VisualShaderNode" type="Node2D" parent="."]
+[node name="VisualShaderNode_CANT" type="Node2D" parent="."]
 script = ExtResource( 124 )
 
 [node name="VisualShaderNodeBooleanConstant" type="Node2D" parent="."]
 script = ExtResource( 119 )
 
-[node name="VisualShaderNodeUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 90 )
 
-[node name="VisualShaderNodeBooleanUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeBooleanUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 101 )
 
-[node name="VisualShaderNodeColorUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeColorUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 135 )
 
-[node name="VisualShaderNodeScalarUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeScalarUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 130 )
 
 [node name="VisualShaderNodeTextureUniform" type="Node2D" parent="."]
 script = ExtResource( 121 )
 
-[node name="VisualShaderNodeTransformUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeTransformUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 100 )
 
-[node name="VisualShaderNodeVec3Uniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeVec3Uniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 67 )
 
 [node name="VisualShaderNodeColorConstant" type="Node2D" parent="."]
@@ -1152,13 +1152,13 @@ script = ExtResource( 87 )
 [node name="VisualShaderNodeCubeMap" type="Node2D" parent="."]
 script = ExtResource( 46 )
 
-[node name="VisualShaderNodeCubeMapUniform" type="Node2D" parent="."]
+[node name="VisualShaderNodeCubeMapUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 137 )
 
-[node name="VisualShaderNodeDeterminant" type="Node2D" parent="."]
+[node name="VisualShaderNodeDeterminant_CANT" type="Node2D" parent="."]
 script = ExtResource( 122 )
 
-[node name="VisualShaderNodeDotProduct" type="Node2D" parent="."]
+[node name="VisualShaderNodeDotProduct_CANT" type="Node2D" parent="."]
 script = ExtResource( 138 )
 
 [node name="VisualShaderNodeGroupBase" type="Node2D" parent="."]
@@ -1167,25 +1167,25 @@ script = ExtResource( 96 )
 [node name="VisualShaderNodeExpression" type="Node2D" parent="."]
 script = ExtResource( 75 )
 
-[node name="VisualShaderNodeFaceForward" type="Node2D" parent="."]
+[node name="VisualShaderNodeFaceForward_CANT" type="Node2D" parent="."]
 script = ExtResource( 62 )
 
-[node name="VisualShaderNodeFresnel" type="Node2D" parent="."]
+[node name="VisualShaderNodeFresnel_CANT" type="Node2D" parent="."]
 script = ExtResource( 104 )
 
-[node name="VisualShaderNodeIf" type="Node2D" parent="."]
+[node name="VisualShaderNodeIf_CANT" type="Node2D" parent="."]
 script = ExtResource( 110 )
 
 [node name="VisualShaderNodeInput" type="Node2D" parent="."]
 script = ExtResource( 120 )
 
-[node name="VisualShaderNodeOuterProduct" type="Node2D" parent="."]
+[node name="VisualShaderNodeOuterProduct_CANT" type="Node2D" parent="."]
 script = ExtResource( 131 )
 
-[node name="VisualShaderNodeOutput" type="Node2D" parent="."]
+[node name="VisualShaderNodeOutput_CANT" type="Node2D" parent="."]
 script = ExtResource( 55 )
 
-[node name="VisualShaderNodeScalarClamp" type="Node2D" parent="."]
+[node name="VisualShaderNodeScalarClamp_CANT" type="Node2D" parent="."]
 script = ExtResource( 60 )
 
 [node name="VisualShaderNodeScalarConstant" type="Node2D" parent="."]
@@ -1197,28 +1197,28 @@ script = ExtResource( 108 )
 [node name="VisualShaderNodeScalarFunc" type="Node2D" parent="."]
 script = ExtResource( 105 )
 
-[node name="VisualShaderNodeScalarInterp" type="Node2D" parent="."]
+[node name="VisualShaderNodeScalarInterp_CANT" type="Node2D" parent="."]
 script = ExtResource( 88 )
 
 [node name="VisualShaderNodeScalarOp" type="Node2D" parent="."]
 script = ExtResource( 52 )
 
-[node name="VisualShaderNodeScalarSmoothStep" type="Node2D" parent="."]
+[node name="VisualShaderNodeScalarSmoothStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 118 )
 
-[node name="VisualShaderNodeSwitch" type="Node2D" parent="."]
+[node name="VisualShaderNodeSwitch_CANT" type="Node2D" parent="."]
 script = ExtResource( 111 )
 
 [node name="VisualShaderNodeTexture" type="Node2D" parent="."]
 script = ExtResource( 99 )
 
-[node name="VisualShaderNodeTransformCompose" type="Node2D" parent="."]
+[node name="VisualShaderNodeTransformCompose_CANT" type="Node2D" parent="."]
 script = ExtResource( 45 )
 
 [node name="VisualShaderNodeTransformConstant" type="Node2D" parent="."]
 script = ExtResource( 117 )
 
-[node name="VisualShaderNodeDecompose" type="Node2D" parent="."]
+[node name="VisualShaderNodeDecompose_CANT" type="Node2D" parent="."]
 script = ExtResource( 61 )
 
 [node name="VisualShaderNodeTransformFunc" type="Node2D" parent="."]
@@ -1233,41 +1233,41 @@ script = ExtResource( 91 )
 [node name="VisualShaderNodeVec3Constant" type="Node2D" parent="."]
 script = ExtResource( 103 )
 
-[node name="VisualShaderNodeVectorClamp" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorClamp_CANT" type="Node2D" parent="."]
 script = ExtResource( 77 )
 
-[node name="VisualShaderNodeVectorCompose" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorCompose_CANT" type="Node2D" parent="."]
 script = ExtResource( 129 )
 
-[node name="VisualShaderNodeVectorDecompose" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorDecompose_CANT" type="Node2D" parent="."]
 script = ExtResource( 72 )
 
 [node name="VisualShaderNodeVectorDerivativeFunc" type="Node2D" parent="."]
 script = ExtResource( 109 )
 
-[node name="VisualShaderNodeVectorDistance" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorDistance_CANT" type="Node2D" parent="."]
 script = ExtResource( 57 )
 
 [node name="VisualShaderNodeVectorFunc" type="Node2D" parent="."]
 script = ExtResource( 58 )
 
-[node name="VisualShaderNodeVectorInterp" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorInterp_CANT" type="Node2D" parent="."]
 script = ExtResource( 115 )
 
-[node name="VisualShaderNodeVectorLen" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorLen_CANT" type="Node2D" parent="."]
 script = ExtResource( 132 )
 
 [node name="VisualShaderNodeVectorOp" type="Node2D" parent="."]
 script = ExtResource( 136 )
 
-[node name="VisualShaderNodeVectorRefract" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorRefract_CANT" type="Node2D" parent="."]
 script = ExtResource( 106 )
 
-[node name="VisualShaderNodeVectorScalarSmoothStep" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorScalarSmoothStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 113 )
 
-[node name="VisualShaderNodeVectorScalarStep" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorScalarStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 98 )
 
-[node name="VisualShaderNodeVectorSmoothStep" type="Node2D" parent="."]
+[node name="VisualShaderNodeVectorSmoothStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 47 )

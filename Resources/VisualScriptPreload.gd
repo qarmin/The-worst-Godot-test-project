@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_VisualScriptPreload.set_preload(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_VisualScriptPreload.set_preload(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
