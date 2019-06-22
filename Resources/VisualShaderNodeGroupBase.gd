@@ -80,7 +80,7 @@ func _process(delta) -> void:
 			q_control = Control.new()
 			
 			q_VisualShaderNodeGroupBase.set_control( q_control,randi() % 1000 - 500 )
-			q_VisualShaderNodeGroupBase.set_input_port_name( randi() % 1000 - 500, "Kapitan" )
+			#BUG q_VisualShaderNodeGroupBase.set_input_port_name( randi() % 1000 - 500, "Kapitan" )
 			q_VisualShaderNodeGroupBase.set_input_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
 			#BUG q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
 			q_VisualShaderNodeGroupBase.set_output_port_name( randi() % 1000 - 500, "Fajf" )
