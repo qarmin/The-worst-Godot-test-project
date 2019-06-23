@@ -28,4 +28,13 @@ func _process(delta) -> void:
 		q_StreamPeerBuffer.seek( 0 )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_StreamPeerBuffer.set_data_array(PoolByteArray([11,124,1241,24,21,214,12,11]))
+			
+			q_StreamPeerBuffer.clear()
+			qq += str(q_StreamPeerBuffer.duplicate())
+			
+			qq += str(q_StreamPeerBuffer.get_position())
+			qq += str(q_StreamPeerBuffer.get_size())
+			
+			q_StreamPeerBuffer.resize( randi() % 1000 - 500)
+			q_StreamPeerBuffer.seek( randi() % 1000 - 500 )

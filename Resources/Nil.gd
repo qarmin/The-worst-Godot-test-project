@@ -14,7 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-#		var q_Nil : Nil 
+#		var q_Nil 
 #
 #		q_Nil = Nil( PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]) )
 #		q_Nil = Nil( PoolVector3Array() )

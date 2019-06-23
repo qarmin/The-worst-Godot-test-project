@@ -35,7 +35,26 @@ func _process(delta) -> void:
 		#q_PoolByteArray.set(randi()%50, randi()%50)
 		qq += str(q_PoolByteArray.sha256_string())
 		qq += str(q_PoolByteArray.size())
-		qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
+		#BUG qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
 		
-		if Autoload.WRONG_BUGS:
-			pass
+		if Autoload.WRONG_BUGS:		
+			q_PoolByteArray = PoolByteArray([Color()])
+			
+			q_PoolByteArray.append(randi() % 1000 - 500)
+			q_PoolByteArray.append_array(PoolByteArray([randi() % 1000 - 500]))
+			
+			qq += str(q_PoolByteArray.compress(randi() % 1000 - 500)) # File.CompressionMode
+			qq += str(q_PoolByteArray.decompress(randi() % 1000 - 500,randi() % 1000 - 500))
+			
+			qq += str(q_PoolByteArray.get_string_from_ascii())
+			qq += str(q_PoolByteArray.get_string_from_utf8())
+			
+			qq += str(q_PoolByteArray.insert( randi() % 1000 - 500, randi() % 1000 - 500) )
+			q_PoolByteArray.invert()
+			q_PoolByteArray.push_back( randi() % 1000 - 500 )
+			q_PoolByteArray.remove( randi() % 1000 - 500)
+			q_PoolByteArray.resize( randi() % 1000 - 500)
+			q_PoolByteArray.set(randi() % 1000 - 500, randi() % 1000 - 500)
+			qq += str(q_PoolByteArray.sha256_string())
+			qq += str(q_PoolByteArray.size())
+			#BUG qq += str(q_PoolByteArray.subarray(randi() % 1000 - 500,randi() % 1000 - 500))

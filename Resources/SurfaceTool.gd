@@ -47,4 +47,32 @@ func _process(delta) -> void:
 		q_SurfaceTool.set_material( SpatialMaterial.new() )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_SurfaceTool.add_bones( PoolIntArray([11,124,1241,24,21,214,12,11]))
+			q_SurfaceTool.add_color( Color(randf(),randf(),randf(),randf()))
+			q_SurfaceTool.add_index( randi() % 1000 - 500)
+			q_SurfaceTool.add_normal( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_SurfaceTool.add_smooth_group( bool(randi()%2))
+			q_SurfaceTool.add_tangent( Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_SurfaceTool.add_triangle_fan( PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]), [124,214,214,124,214,214,2] )
+			q_SurfaceTool.add_uv( Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_SurfaceTool.add_uv2( Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_SurfaceTool.add_vertex( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_SurfaceTool.add_weights( PoolRealArray([125125.125,12512.1251,122.124]))
+			
+			q_SurfaceTool.append_from( Mesh.new(), randi() % 1000 - 500, Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_SurfaceTool.begin( randi() % 1000 - 500 )#PrimitiveType
+			q_SurfaceTool.clear()
+			
+			qq += str(q_SurfaceTool.commit( ArrayMesh.new(), randi() % 1000 - 500))
+			qq += str(q_SurfaceTool.commit_to_arrays())
+			
+			q_SurfaceTool.create_from( Mesh.new(), randi() % 1000 - 500 )
+			q_SurfaceTool.create_from_blend_shape( Mesh.new(), randi() % 1000 - 500, "Mapa" )
+			
+			q_SurfaceTool.deindex()
+			
+			q_SurfaceTool.generate_normals( bool(randi()%2))
+			q_SurfaceTool.generate_tangents()
+			
+			q_SurfaceTool.index()
+			q_SurfaceTool.set_material( SpatialMaterial.new() )

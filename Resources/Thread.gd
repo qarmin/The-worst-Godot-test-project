@@ -18,8 +18,15 @@ func _process(delta) -> void:
 		
 		qq += str(q_Thread.get_id())
 		qq += str(q_Thread.is_active())
-		#qq += str(q_Thread.start( Node.new(), "Hiszpania", String(), randi() %3 ))#Priority
+		#var q_temp : Node = load("res://RES/Node.tscn").instance()
+		#qq += str(q_Thread.start( q_temp, "Hiszpania", String(), randi() %3 ))#Priority
+		#q_temp.queue_free()
 		#q_Thread.wait_to_finish()
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_Thread.get_id())
+			qq += str(q_Thread.is_active())
+			var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
+			qq += str(q_Thread.start( q_temp_0, "Hiszpania", String(), randi() % 1000 - 500 ))#Priority
+			q_temp_0.queue_free()
+			q_Thread.wait_to_finish()

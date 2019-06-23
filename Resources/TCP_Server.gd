@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		qq += str(q_TCP_Server.take_connection())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_TCP_Server.is_connection_available())
+			qq += str(q_TCP_Server.listen( randi() % 1000 - 500, "Zero" ))
+			q_TCP_Server.stop()
+			qq += str(q_TCP_Server.take_connection())

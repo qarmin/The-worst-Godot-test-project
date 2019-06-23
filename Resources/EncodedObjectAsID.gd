@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		q_EncodedObjectAsID.set_object_id(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_EncodedObjectAsID.get_object_id())
+			q_EncodedObjectAsID.set_object_id(randi() % 1000 - 500)

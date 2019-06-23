@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		q_WeakRef.get_ref()
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_WeakRef.get_ref()

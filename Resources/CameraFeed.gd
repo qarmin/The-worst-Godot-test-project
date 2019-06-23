@@ -24,4 +24,8 @@ func _process(delta) -> void:
 		qq += str(q_CameraFeed.get_position())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_CameraFeed.set_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+			
+			qq += str(q_CameraFeed.get_id())
+			qq += str(q_CameraFeed.get_name())
+			qq += str(q_CameraFeed.get_position())

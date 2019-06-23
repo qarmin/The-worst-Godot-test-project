@@ -16,9 +16,15 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptFunctionState : VisualScriptFunctionState = VisualScriptFunctionState.new()
 		
-		#q_VisualScriptFunctionState.connect_to_signal( Node.new(), "Widać", ["Gra"] )
+		#var q_temp : Node = load("res://RES/Node.tscn").instance()
+		#q_VisualScriptFunctionState.connect_to_signal( q_temp, "Widać", ["Gra"] )
+		#q_temp.queue_free()
 		qq += str(q_VisualScriptFunctionState.is_valid())
 		#q_VisualScriptFunctionState.resume( ["Dino"] )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
+			q_VisualScriptFunctionState.connect_to_signal( q_temp_0, "Widać", ["Gra"] )
+			q_temp_0.queue_free()
+			qq += str(q_VisualScriptFunctionState.is_valid())
+			q_VisualScriptFunctionState.resume( ["Dino"] )

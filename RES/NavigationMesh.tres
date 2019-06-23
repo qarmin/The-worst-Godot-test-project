@@ -1,0 +1,22 @@
+[gd_resource type="NavigationMesh" format=2]
+
+[resource]
+sample_partition_type/sample_partition_type = 1
+geometry/parsed_geometry_type = 1
+geometry/collision_mask = 4294967295
+cell/size = 0.51
+cell/height = 0.9
+agent/height = 2.38
+agent/radius = 1.8
+agent/max_climb = 2.2
+agent/max_slope = 65.0
+region/min_size = 8.5
+region/merge_size = 55.16
+edge/max_length = 13.6
+edge/max_error = 0.1
+polygon/verts_per_poly = 8.0
+detail/sample_distance = 9.0
+detail/sample_max_error = 9.25
+filter/low_hanging_obstacles = true
+filter/ledge_spans = true
+filter/filter_walkable_low_height_spans = true

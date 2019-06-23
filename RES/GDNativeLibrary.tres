@@ -1,0 +1,7 @@
+[gd_resource type="GDNativeLibrary" format=2]
+
+[resource]
+load_once = false
+singleton = true
+symbol_prefix = "RRQW"
+reloadable = false

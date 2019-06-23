@@ -26,4 +26,11 @@ func _process(delta) -> void:
 		q_RandomNumberGenerator.randomize()
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_RandomNumberGenerator.set_seed(randi() % 1000 - 500)
+			
+			qq += str(q_RandomNumberGenerator.randf())
+			qq += str(q_RandomNumberGenerator.randf_range( randf() * 1000 - 500, randf() * 1000 - 500 ))
+			qq += str(q_RandomNumberGenerator.randfn( randf() * 1000 - 500, randf() * 1000 - 500 ))
+			qq += str(q_RandomNumberGenerator.randi())
+			qq += str(q_RandomNumberGenerator.randi_range( randi() % 1000 - 500, randi() % 1000 - 500 ))
+			q_RandomNumberGenerator.randomize()

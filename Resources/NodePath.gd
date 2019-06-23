@@ -29,4 +29,14 @@ func _process(delta) -> void:
 		qq += str(q_NodePath.is_empty())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_NodePath = NodePath(".")
+			
+			qq += str(q_NodePath.get_as_property_path())
+			qq += str(q_NodePath.get_concatenated_subnames())
+			qq += str(q_NodePath.get_name( randi() % 1000 - 500))
+			qq += str(q_NodePath.get_name_count())
+			qq += str(q_NodePath.get_subname(randi() % 1000 - 500 ))
+			qq += str(q_NodePath.get_subname_count())
+			
+			qq += str(q_NodePath.is_absolute())
+			qq += str(q_NodePath.is_empty())

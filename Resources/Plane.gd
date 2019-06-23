@@ -33,5 +33,20 @@ func _process(delta) -> void:
 		qq += str(q_Plane.normalized())
 		qq += str(q_Plane.project( Vector3(randf() * 50,randf() * 50,randf() * 50) ))
 		
-		if Autoload.WRONG_BUGS:
-			pass
+		if Autoload.WRONG_BUGS:		
+			q_Plane = Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+			q_Plane = Plane(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_Plane = Plane(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500)
+			
+			qq += str(q_Plane.center())
+			qq += str(q_Plane.distance_to( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_Plane.get_any_point())
+			qq += str(q_Plane.has_point( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500))
+			
+			qq += str(q_Plane.intersect_3( Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_Plane.intersects_ray( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_Plane.intersects_segment( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))
+			
+			qq += str(q_Plane.is_point_over( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))
+			qq += str(q_Plane.normalized())
+			qq += str(q_Plane.project( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) ))

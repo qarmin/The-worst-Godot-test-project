@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		q_Mutex.unlock()
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_Mutex.lock()
+			qq += str(q_Mutex.try_lock())
+			q_Mutex.unlock()

@@ -29,4 +29,14 @@ func _process(delta) -> void:
 		#qq += str(q_UPNPDevice.query_external_address())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_UPNPDevice.set_description_url(str(randi() % 1000 - 500))
+			q_UPNPDevice.set_service_type(str(randi() % 1000 - 500))
+			q_UPNPDevice.set_igd_control_url(str(randi() % 1000 - 500))
+			q_UPNPDevice.set_igd_service_type(str(randi() % 1000 - 500))
+			q_UPNPDevice.set_igd_our_addr(str(randi() % 1000 - 500))
+			q_UPNPDevice.set_igd_status(randi() % 1000 - 500)#IGD STATUS
+			
+			qq += str(q_UPNPDevice.add_port_mapping( randi() % 1000 - 500, randi() % 1000 - 500, str(randi() % 1000 - 500), str(randi() % 1000 - 500), randi() % 1000 - 500 ))
+			qq += str(q_UPNPDevice.delete_port_mapping( randi() % 1000 - 500, str(randi() % 1000 - 500) ))
+			qq += str(q_UPNPDevice.is_valid_gateway())
+			qq += str(q_UPNPDevice.query_external_address())

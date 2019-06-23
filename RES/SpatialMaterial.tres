@@ -1,0 +1,45 @@
+[gd_resource type="SpatialMaterial" load_steps=3 format=2]
+
+[sub_resource type="GradientTexture" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+
+[resource]
+next_pass = SubResource( 2 )
+flags_transparent = true
+flags_use_shadow_to_opacity = true
+flags_unshaded = true
+flags_vertex_lighting = true
+flags_no_depth_test = true
+flags_use_point_size = true
+flags_world_triplanar = true
+flags_fixed_size = true
+flags_albedo_tex_force_srgb = true
+flags_do_not_receive_shadows = true
+flags_disable_ambient_light = true
+flags_ensure_correct_normals = true
+vertex_color_use_as_albedo = true
+vertex_color_is_srgb = true
+params_diffuse_mode = 3
+params_specular_mode = 2
+params_blend_mode = 2
+params_cull_mode = 1
+params_depth_draw_mode = 1
+params_line_width = 71.0
+params_point_size = 85.0
+params_billboard_mode = 1
+params_billboard_keep_scale = true
+params_grow = true
+params_grow_amount = 0.0
+albedo_color = Color( 0.415686, 0.270588, 0.270588, 1 )
+albedo_texture = SubResource( 1 )
+detail_enabled = true
+detail_blend_mode = 0
+detail_uv_layer = 0
+uv1_scale = Vector3( 1.99, 1, 1 )
+uv2_offset = Vector3( -0.27, 0.66, 0 )
+proximity_fade_enable = true
+proximity_fade_distance = 1.0
+distance_fade_mode = 1
+distance_fade_min_distance = 0.0
+distance_fade_max_distance = 10.0

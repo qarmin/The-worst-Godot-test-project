@@ -20,4 +20,5 @@ func _process(delta) -> void:
 		qq += str(q_Semaphore.wait())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_Semaphore.post())
+			qq += str(q_Semaphore.wait())

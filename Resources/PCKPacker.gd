@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		qq += str(q_PCKPacker.pck_start( "Krzywy",  randi()%50))
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
+			qq += str(q_PCKPacker.flush( bool(randi()%2)))
+			qq += str(q_PCKPacker.pck_start( "Krzywy",  randi() % 1000 - 500))

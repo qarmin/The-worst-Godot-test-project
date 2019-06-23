@@ -25,6 +25,16 @@ func _process(delta) -> void:
 #
 #		#qq += str(q_IP.resolve_hostname("https://duckduckgo.com",randi() % (q_IPTYPE_ANY + 1)))
 #		#qq += str(q_IP.resolve_hostname_queue_item("https://duckduckgo.com",randi() % (q_IPTYPE_ANY + 1)))
-#
+
 #		if Autoload.WRONG_BUGS:
-#			pass
+#			var q_IP : IP = IP.new()
+#
+#			q_IP.clear_cache("asfafsqwfas")
+#			q_IP.erase_resolve_item(randi() % 1000 - 500)
+#
+#			qq += str(q_IP.get_local_addresses())
+#			qq += str(q_IP.get_resolve_item_address(randi() % 1000 - 500))
+#			qq += str(q_IP.get_resolve_item_status(randi() % 1000 - 500))
+#
+#			qq += str(q_IP.resolve_hostname("https://duckduckgo.com",randi() % 1000 - 500))
+#			qq += str(q_IP.resolve_hostname_queue_item("https://duckduckgo.com",randi() % 1000 - 500))

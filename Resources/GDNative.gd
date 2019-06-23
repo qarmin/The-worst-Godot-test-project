@@ -16,11 +16,15 @@ func _process(delta) -> void:
 		
 		var q_GDNative : GDNative = GDNative.new()
 		
-		q_GDNative.set_library(GDNativeLibrary.new())
+		q_GDNative.set_library(load("res://RES/GDNativeLibrary.tres"))
 		
 		#q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
 		#qq += str(q_GDNative.initialize())
 		#qq += str(q_GDNative.terminate())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_GDNative.set_library(load("res://RES/GDNativeLibrary.tres"))
+			
+			q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
+			qq += str(q_GDNative.initialize())
+			qq += str(q_GDNative.terminate())

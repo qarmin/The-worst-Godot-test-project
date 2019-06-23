@@ -27,4 +27,12 @@ func _process(delta) -> void:
 		q_WebSocketServer.stop()
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_WebSocketServer.disconnect_peer( randi() % 1000 - 500, randi() % 1000 - 500, "Jeden" )
+			
+			qq += str(q_WebSocketServer.get_peer_address( randi() % 1000 - 500 ))
+			qq += str(q_WebSocketServer.get_peer_port( randi() % 1000 - 500 ))
+			
+			qq += str(q_WebSocketServer.has_peer( randi() % 1000 - 500 ))
+			qq += str(q_WebSocketServer.is_listening())
+			qq += str(q_WebSocketServer.listen( randi() % 1000 - 500, PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
+			q_WebSocketServer.stop()

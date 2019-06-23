@@ -27,4 +27,12 @@ func _process(delta) -> void:
 		#q_WebRTCMultiplayer.remove_peer( 0 )
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), randi() % 1000 - 500, randi() % 1000 - 500 ))
+			q_WebRTCMultiplayer.close()
+			
+			qq += str(q_WebRTCMultiplayer.get_peer( randi() % 1000 - 500 ))
+			qq += str(q_WebRTCMultiplayer.get_peers())
+			
+			qq += str(q_WebRTCMultiplayer.has_peer( randi() % 1000 - 500 ))
+			qq += str(q_WebRTCMultiplayer.initialize( randi() % 1000 - 500, bool(randi()%2)))
+			q_WebRTCMultiplayer.remove_peer( randi() % 1000 - 500 )

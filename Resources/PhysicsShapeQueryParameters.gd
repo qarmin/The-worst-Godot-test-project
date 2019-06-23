@@ -27,4 +27,12 @@ func _process(delta) -> void:
 		q_PhysicsShapeQueryParameters.set_shape(BoxShape.new())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PhysicsShapeQueryParameters.set_collision_mask(randi() % 1000 - 500)
+			q_PhysicsShapeQueryParameters.set_exclude([11,124,1241,24,21,214,12,11])
+			q_PhysicsShapeQueryParameters.set_margin(randf() * 1000 - 500)
+			q_PhysicsShapeQueryParameters.set_shape_rid(RID())
+			q_PhysicsShapeQueryParameters.set_transform(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			q_PhysicsShapeQueryParameters.set_collide_with_bodies(bool(randi()%2))
+			q_PhysicsShapeQueryParameters.set_collide_with_areas(bool(randi()%2))
+			
+			q_PhysicsShapeQueryParameters.set_shape(BoxShape.new())

@@ -29,4 +29,14 @@ func _process(delta) -> void:
 		#qq += str(q_PacketPeerUDP.wait())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PacketPeerUDP.close()
+			
+			qq += str(q_PacketPeerUDP.get_packet_ip())
+			qq += str(q_PacketPeerUDP.get_packet_port())
+			
+			qq += str(q_PacketPeerUDP.is_listening())
+			qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
+			qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
+			qq += str(q_PacketPeerUDP.listen( randi() % 1000 - 500, "Gol", randi() % 1000 - 500))
+			qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",randi() % 1000 - 500))
+			qq += str(q_PacketPeerUDP.wait())

@@ -22,4 +22,7 @@ func _process(delta) -> void:
 		q_JSONParseResult.set_result("Rezultat")
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_JSONParseResult.set_error(randi() % 1000 - 500) #ERROR
+			q_JSONParseResult.set_error_string("Bądź drzewem")
+			q_JSONParseResult.set_error_line(randi() % 1000 - 500)
+			q_JSONParseResult.set_result("Rezultat")

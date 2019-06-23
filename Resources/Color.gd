@@ -38,4 +38,23 @@ func _process(delta) -> void:
 		qq += str(q_Color.to_rgba64())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_Color = Color( Color.cyan)
+			q_Color = Color( randi() % 1000 - 500)
+			q_Color = Color( randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500 )
+			q_Color = Color( randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500 )
+			
+			qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
+			qq += str(q_Color.contrasted())
+			qq += str(q_Color.darkened( randf() * 1000 - 500 ))
+			qq += str(q_Color.from_hsv( randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500 ))
+			qq += str(q_Color.gray())
+			qq += str(q_Color.inverted())
+			qq += str(q_Color.lightened( randf() * 1000 - 500 ))
+			
+			qq += str(q_Color.to_abgr32())
+			qq += str(q_Color.to_abgr64())
+			qq += str(q_Color.to_argb32())
+			qq += str(q_Color.to_argb64())
+			qq += str(q_Color.to_html(bool(randi()%2)))
+			qq += str(q_Color.to_rgba32())
+			qq += str(q_Color.to_rgba64())
