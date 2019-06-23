@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Physics2DDirectBodyStateSW : Physics2DDirectBodyStateSW = Physics2DDirectBodyStateSW.new()
-		
-		q_Physics2DDirectBodyStateSW.
-		q_Physics2DDirectBodyStateSW.
-		q_Physics2DDirectBodyStateSW.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_Physics2DDirectBodyStateSW : Physics2DDirectBodyStateSW = Physics2DDirectBodyStateSW.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_PackerDatacontainerRef : PackerDatacontainerRef = PackerDatacontainerRef.new()
-		
-		q_PackerDatacontainerRef.
-		q_PackerDatacontainerRef.
-		q_PackerDatacontainerRef.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_PackerDatacontainerRef : PackerDatacontainerRef = PackerDatacontainerRef.new()
+#
+#		q_PackerDatacontainerRef.size()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

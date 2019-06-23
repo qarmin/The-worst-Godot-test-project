@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_PacketPeerStream : PacketPeerStream = PacketPeerStream.new()
 		
-		q_PacketPeerStream.
-		q_PacketPeerStream.
-		q_PacketPeerStream.
+		q_PacketPeerStream.set_input_buffer_max_size(randi()%50)
+		q_PacketPeerStream.set_output_buffer_max_size(randi()%50)
+		#q_PacketPeerStream.set_stream_peer(StreamPeer.new())
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -16,9 +16,15 @@ func _process(delta) -> void:
 		
 		var q_Physics2DTestMotionResult : Physics2DTestMotionResult = Physics2DTestMotionResult.new()
 		
-		q_Physics2DTestMotionResult.
-		q_Physics2DTestMotionResult.
-		q_Physics2DTestMotionResult.
+		qq += str(q_Physics2DTestMotionResult.get_motion())
+		qq += str(q_Physics2DTestMotionResult.get_motion_remainder())
+		qq += str(q_Physics2DTestMotionResult.get_collision_point())
+		qq += str(q_Physics2DTestMotionResult.get_collision_normal())
+		qq += str(q_Physics2DTestMotionResult.get_collider_velocity())
+		qq += str(q_Physics2DTestMotionResult.get_collider_id())
+		qq += str(q_Physics2DTestMotionResult.get_collider_rid())
+		qq += str(q_Physics2DTestMotionResult.get_collider())
+		qq += str(q_Physics2DTestMotionResult.get_collider_shape())
 		
 		if Autoload.WRONG_BUGS:
 			pass

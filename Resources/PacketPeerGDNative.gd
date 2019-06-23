@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_PacketPeerGDNative : PacketPeerGDNative = PacketPeerGDNative.new()
-		
-		q_PacketPeerGDNative.
-		q_PacketPeerGDNative.
-		q_PacketPeerGDNative.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_PacketPeerGDNative : PacketPeerGDNative = PacketPeerGDNative.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

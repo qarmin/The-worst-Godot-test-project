@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_float : float = float.new()
-		
-		q_float.
-		q_float.
-		q_float.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_float : float = float.new()
+#
+#		q_float.
+#		q_float.
+#		q_float.
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

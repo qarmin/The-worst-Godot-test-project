@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_EncodedObjectAsID : EncodedObjectAsID = EncodedObjectAsID.new()
 		
-		q_EncodedObjectAsID.
-		q_EncodedObjectAsID.
-		q_EncodedObjectAsID.
+		qq += str(q_EncodedObjectAsID.get_object_id())
+		q_EncodedObjectAsID.set_object_id(randi()%50)
 		
 		if Autoload.WRONG_BUGS:
 			pass

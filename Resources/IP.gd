@@ -14,11 +14,17 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_IP : IP = IP.new()
-		
-		q_IP.
-		q_IP.
-		q_IP.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_IP : IP = IP.new()
+#
+#		q_IP.clear_cache("asfafsqwfas")
+#		q_IP.erase_resolve_item(0)
+#
+#		qq += str(q_IP.get_local_addresses())
+#		#qq += str(q_IP.get_resolve_item_address(0))
+#		#qq += str(q_IP.get_resolve_item_status(0))
+#
+#		#qq += str(q_IP.resolve_hostname("https://duckduckgo.com",randi() % (q_IPTYPE_ANY + 1)))
+#		#qq += str(q_IP.resolve_hostname_queue_item("https://duckduckgo.com",randi() % (q_IPTYPE_ANY + 1)))
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

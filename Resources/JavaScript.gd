@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_JavaScript : JavaScript = JavaScript.new()
-		
-		q_JavaScript.
-		q_JavaScript.
-		q_JavaScript.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_JavaScript : JavaScript = JavaScript.new()
+#
+#		qq += str(q_JavaScript.eval("17",bool(randi()%2)))
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_SceneTreeTimer : SceneTreeTimer = SceneTreeTimer.new()
-		
-		q_SceneTreeTimer.
-		q_SceneTreeTimer.
-		q_SceneTreeTimer.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_SceneTreeTimer : SceneTreeTimer = SceneTreeTimer.new()
+#
+#		q_SceneTreeTimer.set_time_left(randf() * 50)
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

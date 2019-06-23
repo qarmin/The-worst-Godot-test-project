@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_WebRTCDataChannelGDNative : WebRTCDataChannelGDNative = WebRTCDataChannelGDNative.new()
-		
-		q_WebRTCDataChannelGDNative.
-		q_WebRTCDataChannelGDNative.
-		q_WebRTCDataChannelGDNative.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_WebRTCDataChannelGDNative : WebRTCDataChannelGDNative = WebRTCDataChannelGDNative.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

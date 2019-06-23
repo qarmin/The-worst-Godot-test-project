@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_JSON : JSON = JSON.new()
-		
-		q_JSON.
-		q_JSON.
-		q_JSON.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_JSON : JSON = JSON.new()
+#
+#		qq += str(q_JSON.parse("Konceptualny"))
+#		qq += str(q_JSON.print("Brzeczyszczykiewicz","lekolody",bool(randi()%2)))
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_ResourceImporterOGGVorbis : ResourceImporterOGGVorbis = ResourceImporterOGGVorbis.new()
-		
-		q_ResourceImporterOGGVorbis.
-		q_ResourceImporterOGGVorbis.
-		q_ResourceImporterOGGVorbis.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_ResourceImporterOGGVorbis : ResourceImporterOGGVorbis = ResourceImporterOGGVorbis.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

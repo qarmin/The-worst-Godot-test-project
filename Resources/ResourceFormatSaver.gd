@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_ResourceFormatSaver : ResourceFormatSaver = ResourceFormatSaver.new()
-		
-		q_ResourceFormatSaver.
-		q_ResourceFormatSaver.
-		q_ResourceFormatSaver.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_ResourceFormatSaver : ResourceFormatSaver = ResourceFormatSaver.new()
+#
+#		q_ResourceFormatSaver.get_recognized_extensions( Resource.new() )
+#		q_ResourceFormatSaver.recognize( Resource.new() )
+#		q_ResourceFormatSaver.save( "user://Zapis.png", Resource.new(), randi() % 127 )
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -16,9 +16,12 @@ func _process(delta) -> void:
 		
 		var q_CameraFeed : CameraFeed = CameraFeed.new()
 		
-		q_CameraFeed.
-		q_CameraFeed.
-		q_CameraFeed.
+#ACTIVATE SPAM		q_CameraFeed.set_active(bool(randi()%2))
+		q_CameraFeed.set_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+		
+		qq += str(q_CameraFeed.get_id())
+		qq += str(q_CameraFeed.get_name())
+		qq += str(q_CameraFeed.get_position())
 		
 		if Autoload.WRONG_BUGS:
 			pass

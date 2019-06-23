@@ -14,11 +14,55 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Array : Array = Array.new()
+		var q_Array : Array
 		
-		q_Array.
-		q_Array.
-		q_Array.
+		q_Array = Array(PoolColorArray([Color()]))
+		q_Array = Array(PoolVector3Array([Color()]))
+		q_Array = Array(PoolVector2Array([Color()]))
+		q_Array = Array(PoolStringArray([Color()]))
+		q_Array = Array(PoolRealArray([Color()]))
+		q_Array = Array(PoolIntArray([Color()]))
+		q_Array = Array(PoolByteArray([Color()]))
+		
+		q_Array.append("Rosół")
+		q_Array.back()
+		
+		qq += str(q_Array.bsearch( "Nie", bool(randi()%2)))
+		qq += str(q_Array.bsearch_custom( "Nie", Node.new(), "Jesion", bool(randi()%2)))
+		
+		q_Array.clear()
+		qq += str(q_Array.count( "Nie" ))
+		qq += str(q_Array.duplicate( bool(randi()%2)))
+		qq += str(q_Array.empty())
+		q_Array.erase( "Nie" )
+		
+		qq += str(q_Array.find( "Jesiotr", randi()%50))
+		qq += str(q_Array.find_last( "Nie" ))
+		
+		q_Array.front()
+		
+		qq += str(q_Array.has( "Nie" ))
+		qq += str(q_Array.hash())
+		
+		q_Array.insert( randi()%50, "Nie") 
+		q_Array.invert()
+		q_Array.max()
+		q_Array.min()
+		
+		q_Array.pop_back()
+		q_Array.pop_front()
+		
+		q_Array.push_back( "Nie" )
+		q_Array.push_front( "Nie" )
+		
+		q_Array.remove( randi()%50)
+		q_Array.resize( randi()%50)
+		qq += str(q_Array.rfind( "Nie", randi()%50))
+		q_Array.shuffle()
+		qq += str(q_Array.size())
+		
+		q_Array.sort()
+		q_Array.sort_custom( Node.new(), "Ram" )
 		
 		if Autoload.WRONG_BUGS:
 			pass

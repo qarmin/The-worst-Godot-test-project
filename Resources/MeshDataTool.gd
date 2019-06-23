@@ -16,9 +16,46 @@ func _process(delta) -> void:
 		
 		var q_MeshDataTool : MeshDataTool = MeshDataTool.new()
 		
-		q_MeshDataTool.
-		q_MeshDataTool.
-		q_MeshDataTool.
+		q_MeshDataTool.clear()
+		#qq += str(q_MeshDataTool.commit_to_surface( ArrayMesh.new() ))
+		#qq += str(q_MeshDataTool.create_from_surface( ArrayMesh.new(), 0 ))
+		
+		qq += str(q_MeshDataTool.get_edge_count())
+		#qq += str(q_MeshDataTool.get_edge_faces( 0 ))
+		#qq += str(q_MeshDataTool.get_edge_meta( 0 ))
+		#qq += str(q_MeshDataTool.get_edge_vertex( 0, 0 ))
+		qq += str(q_MeshDataTool.get_face_count())
+		#qq += str(q_MeshDataTool.get_face_edge( 0, 0 ))
+		#qq += str(q_MeshDataTool.get_face_meta( 0 ))
+		#qq += str(q_MeshDataTool.get_face_normal( 0 ))
+		#qq += str(q_MeshDataTool.get_face_vertex( 0, 0 ))
+		qq += str(q_MeshDataTool.get_format())
+		qq += str(q_MeshDataTool.get_material())
+		#qq += str(q_MeshDataTool.get_vertex( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_bones( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_color( 0 ))
+		qq += str(q_MeshDataTool.get_vertex_count())
+		#qq += str(q_MeshDataTool.get_vertex_edges( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_faces( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_meta( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_normal( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_tangent( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_uv( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_uv2( 0 ))
+		#qq += str(q_MeshDataTool.get_vertex_weights( 0 ))
+		
+		#q_MeshDataTool.set_edge_meta( 0, randf() * 50)
+		#q_MeshDataTool.set_face_meta( 0, randf() * 50)
+		q_MeshDataTool.set_material( SpatialMaterial.new() )
+		#q_MeshDataTool.set_vertex( 0, Vector3(randf() * 50,randf() * 50,randf() * 50))
+		#q_MeshDataTool.set_vertex_bones( 0, PoolIntArray([11,124,1241,24,21,214,12,11]))
+		#q_MeshDataTool.set_vertex_color( 0, Color(randf(),randf(),randf(),randf()) )
+		#q_MeshDataTool.set_vertex_meta( 0, randf() * 50)
+		#q_MeshDataTool.set_vertex_normal( 0, Vector3(randf() * 50,randf() * 50,randf() * 50))
+		#q_MeshDataTool.set_vertex_tangent( 0, Plane(randf() * 50,randf() * 50,randf() * 50,randf() * 50))
+		#q_MeshDataTool.set_vertex_uv( 0, Vector2(randf() * 50,randf() * 50))
+		#q_MeshDataTool.set_vertex_uv2( 0, Vector2(randf() * 50,randf() * 50))
+		#q_MeshDataTool.set_vertex_weights( 0, PoolRealArray([125125.125,12512.1251,122.124]))
 		
 		if Autoload.WRONG_BUGS:
 			pass

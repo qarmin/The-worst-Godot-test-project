@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_World2 : World2 = World2.new()
+		var q_World2D : World2D = World2D.new()
 		
-		q_World2.
-		q_World2.
-		q_World2.
+		qq += str(q_World2D.get_canvas())
+		qq += str(q_World2D.get_space())
+		qq += str(q_World2D.get_direct_space_state())
 		
 		if Autoload.WRONG_BUGS:
 			pass

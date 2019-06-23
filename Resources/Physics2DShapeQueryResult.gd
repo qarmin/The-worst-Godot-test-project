@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Physics2DShapeQueryResult : Physics2DShapeQueryResult = Physics2DShapeQueryResult.new()
-		
-		q_Physics2DShapeQueryResult.
-		q_Physics2DShapeQueryResult.
-		q_Physics2DShapeQueryResult.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_Physics2DShapeQueryResult : Physics2DShapeQueryResult = Physics2DShapeQueryResult.new()
+#
+#		q_Physics2DShapeQueryResult.get_result_count()
+#		q_Physics2DShapeQueryResult.get_result_object( 0 )
+#		q_Physics2DShapeQueryResult.get_result_object_id( 0 )
+#		q_Physics2DShapeQueryResult.get_result_object_shape( 0 )
+#		q_Physics2DShapeQueryResult.get_result_rid( 0 )
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

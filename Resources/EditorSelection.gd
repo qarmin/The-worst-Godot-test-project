@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorSelection : EditorSelection = EditorSelection.new()
-		
-		q_EditorSelection.
-		q_EditorSelection.
-		q_EditorSelection.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorSelection : EditorSelection = EditorSelection.new()
+#
+#		q_EditorSelection.add_node( Node.new() )
+#		q_EditorSelection.clear()
+#
+#		q_EditorSelection.get_selected_nodes()
+#		q_EditorSelection.get_transformable_selected_nodes()
+#
+#		q_EditorSelection.remove_node( Node.new() )
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

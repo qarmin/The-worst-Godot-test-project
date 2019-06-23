@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Vector2 : Vector2 = Vector2.new()
-		
-		q_Vector2.
-		q_Vector2.
-		q_Vector2.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_Vector2 : Vector2 = Vector2.new()
+#
+#		q_Vector2.
+#		q_Vector2.
+#		q_Vector2.
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

@@ -14,11 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_AudioEffectSpectrumAnalyzerInstance : AudioEffectSpectrumAnalyzerInstance = AudioEffectSpectrumAnalyzerInstance.new()
-		
-		q_AudioEffectSpectrumAnalyzerInstance.
-		q_AudioEffectSpectrumAnalyzerInstance.
-		q_AudioEffectSpectrumAnalyzerInstance.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_AudioEffectSpectrumAnalyzerInstance : AudioEffectSpectrumAnalyzerInstance = AudioEffectSpectrumAnalyzerInstance.new()
+#
+#		q_AudioEffectSpectrumAnalyzerInstance.get_magnitude_for_frequency_range( randf() * 50, randf() * 50, randi() % 2) #MagnitudeMode
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

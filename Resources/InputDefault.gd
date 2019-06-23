@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_InputDefault : InputDefault = InputDefault.new()
-		
-		q_InputDefault.
-		q_InputDefault.
-		q_InputDefault.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_InputDefault : InputDefault = InputDefault.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

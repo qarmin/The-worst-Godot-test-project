@@ -14,11 +14,14 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorScript : EditorScript = EditorScript.new()
-		
-		q_EditorScript.
-		q_EditorScript.
-		q_EditorScript.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorScript : EditorScript = EditorScript.new()
+#
+#		q_EditorScript._run()
+#
+#		q_EditorScript.add_root_node( Node.new() )
+#
+#		q_EditorScript.get_editor_interface()
+#		q_EditorScript.get_scene()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

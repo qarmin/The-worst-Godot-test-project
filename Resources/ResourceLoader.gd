@@ -14,11 +14,20 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_ResourceLoader : ResourceLoader = ResourceLoader.new()
-		
-		q_ResourceLoader.
-		q_ResourceLoader.
-		q_ResourceLoader.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_ResourceLoader : ResourceLoader = ResourceLoader.new()
+#
+#		#qq += str(ResourceLoader.exists("asfafs", "fasfqawtg"))
+#
+#		qq += str(ResourceLoader.get_dependencies("asdtgwqfeaga"))
+#		#qq += str(ResourceLoader.get_recognized_extensions_for_type("asdtgwqfeaga"))
+#
+#		#DEPRECATED qq += str(ResourceLoader.has("asdtgwqfeaga"))
+#		qq += str(ResourceLoader.has_cached("asdtgwqfeaga"))
+#
+#		#qq += str(ResourceLoader.load("asdtgwqfeaga","asdtgwqfeaga", bool(randi() % 2)))
+#		#qq += str(ResourceLoader.load_interactive("asdtgwqfeaga","asdtgwqfeaga"))
+#
+#		ResourceLoader.set_abort_on_missing_resources(bool(randi() % 2))
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

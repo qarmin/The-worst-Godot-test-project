@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_WebRTCPeerConnectionGDNative : WebRTCPeerConnectionGDNative = WebRTCPeerConnectionGDNative.new()
-		
-		q_WebRTCPeerConnectionGDNative.
-		q_WebRTCPeerConnectionGDNative.
-		q_WebRTCPeerConnectionGDNative.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_WebRTCPeerConnectionGDNative : WebRTCPeerConnectionGDNative = WebRTCPeerConnectionGDNative.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

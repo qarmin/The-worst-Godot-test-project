@@ -84,7 +84,7 @@ func _process(delta) -> void:
 			#BUG q_VisualShaderNodeGroupBase.set_input_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
 			#BUG q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
 			#BUG q_VisualShaderNodeGroupBase.set_output_port_name( randi() % 1000 - 500, "Fajf" )
-			q_VisualShaderNodeGroupBase.set_output_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
+			#BUG q_VisualShaderNodeGroupBase.set_output_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
 			#BUG q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
 			q_VisualShaderNodeGroupBase.set_size( Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			

@@ -16,9 +16,14 @@ func _process(delta) -> void:
 		
 		var q_RegExMatch : RegExMatch = RegExMatch.new()
 		
-		q_RegExMatch.
-		q_RegExMatch.
-		q_RegExMatch.
+		qq += str(q_RegExMatch.get_subject())
+		qq += str(q_RegExMatch.get_names())
+		qq += str(q_RegExMatch.get_strings())
+		
+		qq += str(q_RegExMatch.get_end( String() ))
+		qq += str(q_RegExMatch.get_group_count())
+		qq += str(q_RegExMatch.get_start( String() ))
+		qq += str(q_RegExMatch.get_string( String() ))
 		
 		if Autoload.WRONG_BUGS:
 			pass

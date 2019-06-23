@@ -40,8 +40,8 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-			set_vframes(randi() % 50 - 25)
-			set_hframes(randi() % 50 - 25)
+			set_vframes(randi()%50 - 25)
+			set_hframes(randi()%50 - 25)
 			set_frame(randi() % 100 - 50)
 			set_region(bool(randi()%2))
 			set_region_rect(Rect2(Vector2(randf() * 100 - 50,randf() * 100 - 50),Vector2(randf() * 100 - 50,randf() * 100 - 50)))

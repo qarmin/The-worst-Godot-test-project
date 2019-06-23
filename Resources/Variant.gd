@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Variant : Variant = Variant.new()
-		
-		q_Variant.
-		q_Variant.
-		q_Variant.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_Variant : Variant = Variant.new()
+#
+#		q_Variant.
+#		q_Variant.
+#		q_Variant.
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

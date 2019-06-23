@@ -16,9 +16,10 @@ func _process(delta) -> void:
 		
 		var q_JSONParseResult : JSONParseResult = JSONParseResult.new()
 		
-		q_JSONParseResult.
-		q_JSONParseResult.
-		q_JSONParseResult.
+		q_JSONParseResult.set_error(randi() % 48) #ERROR
+		q_JSONParseResult.set_error_string("Bądź drzewem")
+		q_JSONParseResult.set_error_line(randi()%50)
+		q_JSONParseResult.set_result("Rezultat")
 		
 		if Autoload.WRONG_BUGS:
 			pass

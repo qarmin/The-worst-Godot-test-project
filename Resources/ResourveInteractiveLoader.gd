@@ -14,11 +14,14 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_ResourveInteractiveLoader : ResourveInteractiveLoader = ResourveInteractiveLoader.new()
-		
-		q_ResourveInteractiveLoader.
-		q_ResourveInteractiveLoader.
-		q_ResourveInteractiveLoader.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_ResourveInteractiveLoader : ResourveInteractiveLoader = ResourveInteractiveLoader.new()
+#
+#		q_ResourveInteractiveLoader.get_resource()
+#		q_ResourveInteractiveLoader.get_stage()
+#		q_ResourveInteractiveLoader.get_stage_count()
+#
+#		q_ResourveInteractiveLoader.poll()
+#		q_ResourveInteractiveLoader.wait()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

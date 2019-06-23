@@ -16,9 +16,10 @@ func _process(delta) -> void:
 		
 		var q_TCP_Server : TCP_Server = TCP_Server.new()
 		
-		q_TCP_Server.
-		q_TCP_Server.
-		q_TCP_Server.
+		qq += str(q_TCP_Server.is_connection_available())
+		qq += str(q_TCP_Server.listen( randi()%50, "Zero" ))
+		q_TCP_Server.stop()
+		qq += str(q_TCP_Server.take_connection())
 		
 		if Autoload.WRONG_BUGS:
 			pass

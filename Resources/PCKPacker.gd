@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_PCKPacker : PCKPacker = PCKPacker.new()
 		
-		q_PCKPacker.
-		q_PCKPacker.
-		q_PCKPacker.
+		qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
+		#qq += str(q_PCKPacker.flush( bool(randi()%2)))
+		qq += str(q_PCKPacker.pck_start( "Krzywy",  randi()%50))
 		
 		if Autoload.WRONG_BUGS:
 			pass

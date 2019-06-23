@@ -14,11 +14,20 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_PoolColorArray : PoolColorArray = PoolColorArray.new()
+		var q_PoolColorArray : PoolColorArray
 		
-		q_PoolColorArray.
-		q_PoolColorArray.
-		q_PoolColorArray.
+		q_PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+		
+		q_PoolColorArray.append(Color(randf(),randf(),randf(),randf()))
+		q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+		
+		qq += str(q_PoolColorArray.insert( randi()%50, Color(randf(),randf(),randf(),randf())) )
+		q_PoolColorArray.invert()
+		q_PoolColorArray.push_back( Color(randf(),randf(),randf(),randf()) )
+		q_PoolColorArray.remove( randi()%50)
+		q_PoolColorArray.resize( randi()%50)
+		q_PoolColorArray.set(randi()%50, Color(randf(),randf(),randf(),randf()))
+		qq += str(q_PoolColorArray.size())
 		
 		if Autoload.WRONG_BUGS:
 			pass

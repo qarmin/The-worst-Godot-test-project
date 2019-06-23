@@ -16,9 +16,10 @@ func _process(delta) -> void:
 		
 		var q_Expression : Expression = Expression.new()
 		
-		q_Expression.
-		q_Expression.
-		q_Expression.
+		#qq += str(q_Expression.execute( ["Indeksy"], Node.new(), bool(randi()%2)))
+		qq += str(q_Expression.get_error_text())
+		qq += str(q_Expression.has_execute_failed())
+		qq += str(q_Expression.parse( "Zaginiony", PoolStringArray(["Parapetówa"]) ))
 		
 		if Autoload.WRONG_BUGS:
 			pass

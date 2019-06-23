@@ -28,7 +28,7 @@ func _process(delta) -> void:
 		## Slider
 		set_editable(bool(randi() % 2))
 		set_scrollable(bool(randi() % 2))
-		set_ticks(randi() % 50)
+		set_ticks(randi()%50)
 		set_ticks_on_borders(bool(randi() % 2))
 		set_focus_mode(randi() % (FOCUS_ALL + 1))
 		

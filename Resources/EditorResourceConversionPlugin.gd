@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorResourceConversionPlugin : EditorResourceConversionPlugin = EditorResourceConversionPlugin.new()
-		
-		q_EditorResourceConversionPlugin.
-		q_EditorResourceConversionPlugin.
-		q_EditorResourceConversionPlugin.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorResourceConversionPlugin : EditorResourceConversionPlugin = EditorResourceConversionPlugin.new()
+#
+#		q_EditorResourceConversionPlugin._convert( Resource.new() )
+#		q_EditorResourceConversionPlugin._converts_to()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

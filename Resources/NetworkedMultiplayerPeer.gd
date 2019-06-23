@@ -14,11 +14,16 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer = NetworkedMultiplayerPeer.new()
-		
-		q_NetworkedMultiplayerPeer.
-		q_NetworkedMultiplayerPeer.
-		q_NetworkedMultiplayerPeer.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer = NetworkedMultiplayerPeer.new()
+#
+#		q_NetworkedMultiplayerPeer.set_refuse_new_connections(bool(randi()%2))
+#		q_NetworkedMultiplayerPeer.set_transfer_mode(randi() % 3) #TransferMode
+#
+#		q_NetworkedMultiplayerPeer.get_connection_status()
+#		q_NetworkedMultiplayerPeer.get_packet_peer()
+#		q_NetworkedMultiplayerPeer.get_unique_id()
+#		q_NetworkedMultiplayerPeer.poll()
+#		q_NetworkedMultiplayerPeer.set_target_peer( 0 )
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

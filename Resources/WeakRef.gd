@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_WeakRef : WeakRef = WeakRef.new()
 		
-		q_WeakRef.
-		q_WeakRef.
-		q_WeakRef.
+		q_WeakRef.get_ref()
 		
 		if Autoload.WRONG_BUGS:
 			pass

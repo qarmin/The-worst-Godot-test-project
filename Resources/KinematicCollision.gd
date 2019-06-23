@@ -16,9 +16,17 @@ func _process(delta) -> void:
 		
 		var q_KinematicCollision : KinematicCollision = KinematicCollision.new()
 		
-		q_KinematicCollision.
-		q_KinematicCollision.
-		q_KinematicCollision.
+		qq += str(q_KinematicCollision.get_position())
+		qq += str(q_KinematicCollision.get_normal())
+		qq += str(q_KinematicCollision.get_travel())
+		qq += str(q_KinematicCollision.get_remainder())
+		#qq += str(q_KinematicCollision.get_local_shape())
+		qq += str(q_KinematicCollision.get_collider())
+		qq += str(q_KinematicCollision.get_collider_id() )
+		qq += str(q_KinematicCollision.get_collider_shape())
+		qq += str(q_KinematicCollision.get_collider_shape_index())
+		qq += str(q_KinematicCollision.get_collider_velocity())
+		qq += str(q_KinematicCollision.get_collider_metadata())
 		
 		if Autoload.WRONG_BUGS:
 			pass

@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorSceneImporterAssimp : EditorSceneImporterAssimp = EditorSceneImporterAssimp.new()
-		
-		q_EditorSceneImporterAssimp.
-		q_EditorSceneImporterAssimp.
-		q_EditorSceneImporterAssimp.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorSceneImporterAssimp : EditorSceneImporterAssimp = EditorSceneImporterAssimp.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

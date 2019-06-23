@@ -12,7 +12,13 @@ Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50
  PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)]))
  PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
  PoolByteArray([11,124,1241,24,21,214,12,11]))
+ PoolIntArray([11,124,1241,24,21,214,12,11]))
  PoolRealArray([125125.125,12512.1251,122.124]))
+ PoolStringArray(["Tak","Nie","Być może"]))
+ PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+
+[124,214,214,124,214,214,2]
+{"Ouo": 15, "Kompresja": 124}
 
  Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
  AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))

@@ -45,4 +45,4 @@ func _process(delta) -> void:
 			qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 50 - 25,randf() * 50 - 25,randf() * 50 - 25))
 			qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 50 - 25,randf() * 50 - 25,randf() * 50 - 25)))
 			qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 50 - 25,randf() * 50 - 25,randf() * 50 - 25,randf() * 50 - 25 ))
-			qq += str(q_OpenSimplexNoise.get_seamless_image( randi() % 50 - 25))
+			qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%50 - 25))

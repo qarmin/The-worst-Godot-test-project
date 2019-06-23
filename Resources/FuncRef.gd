@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_FuncRef : FuncRef = FuncRef.new()
-		
-		q_FuncRef.
-		q_FuncRef.
-		q_FuncRef.
+#		var q_FuncRef : FuncRef = FuncRef.new()
+#
+#		q_FuncRef.call_func("Dzieli")
+#		q_FuncRef.is_valid()
+#
+#		q_FuncRef.set_function( "Kurek" )
+#		q_FuncRef.set_instance( Node.new() )
 		
 		if Autoload.WRONG_BUGS:
 			pass

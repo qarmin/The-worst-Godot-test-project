@@ -14,11 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_AudioEffectInstance : AudioEffectInstance = AudioEffectInstance.new()
-		
-		q_AudioEffectInstance.
-		q_AudioEffectInstance.
-		q_AudioEffectInstance.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_AudioEffectInstance : AudioEffectInstance = AudioEffectInstance.new()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

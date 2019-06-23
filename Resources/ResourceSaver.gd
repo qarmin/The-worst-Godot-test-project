@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_ResourceSaver : ResourceSaver = ResourceSaver.new()
-		
-		q_ResourceSaver.
-		q_ResourceSaver.
-		q_ResourceSaver.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_ResourceSaver : ResourceSaver = ResourceSaver.new()
+#
+#		qq += str(ResourceSaver.get_recognized_extensions(CubeMesh.new()))
+#		qq += str(ResourceSaver.save("asfadw",CubeMesh.new(),randi() % 128))  # SaverFlags
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

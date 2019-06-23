@@ -16,9 +16,8 @@ func _process(delta) -> void:
 		
 		var q_Semaphore : Semaphore = Semaphore.new()
 		
-		q_Semaphore.
-		q_Semaphore.
-		q_Semaphore.
+		qq += str(q_Semaphore.post())
+		qq += str(q_Semaphore.wait())
 		
 		if Autoload.WRONG_BUGS:
 			pass

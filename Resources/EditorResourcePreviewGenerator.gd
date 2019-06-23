@@ -14,11 +14,13 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorResourcePreviewGenerator : EditorResourcePreviewGenerator = EditorResourcePreviewGenerator.new()
-		
-		q_EditorResourcePreviewGenerator.
-		q_EditorResourcePreviewGenerator.
-		q_EditorResourcePreviewGenerator.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorResourcePreviewGenerator : EditorResourcePreviewGenerator = EditorResourcePreviewGenerator.new()
+#
+#		q_EditorResourcePreviewGenerator.can_generate_small_preview()
+#		q_EditorResourcePreviewGenerator.generate( Resource.new(), Vector2(randf() * 50,randf() * 50))
+#		q_EditorResourcePreviewGenerator.generate_from_path( "Uciekaj!!", Vector2(randf() * 50,randf() * 50))
+#		q_EditorResourcePreviewGenerator.generate_small_preview_automatically()
+#		q_EditorResourcePreviewGenerator.handles( "To pułapka!!" )
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

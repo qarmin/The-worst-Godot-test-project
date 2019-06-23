@@ -49,7 +49,7 @@ func _process(delta) -> void:
 		pm.set_emission_point_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		pm.set_emission_normal_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
 		pm.set_emission_color_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		pm.set_emission_point_count(randi() % 50)
+		pm.set_emission_point_count(randi()%50)
 		pm.set_spread(randf() * 360)
 		pm.set_flatness(randf())
 		pm.set_gravity(Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))

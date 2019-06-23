@@ -16,9 +16,11 @@ func _process(delta) -> void:
 		
 		var q_World : World = World.new()
 		
-		q_World.
-		q_World.
-		q_World.
+		q_World.set_environment(Environment.new())
+		q_World.set_fallback_environment(Environment.new())
+		qq += str(q_World.get_space())
+		qq += str(q_World.get_scenario())
+		qq += str(q_World.get_direct_space_state())
 		
 		if Autoload.WRONG_BUGS:
 			pass

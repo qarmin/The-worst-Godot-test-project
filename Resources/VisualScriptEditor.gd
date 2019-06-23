@@ -14,11 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_VisualScriptEditor : VisualScriptEditor = VisualScriptEditor.new()
+#		var q_VisualScriptEditor : VisualScriptEditor = VisualScriptEditor.new()
 		
-		q_VisualScriptEditor.
-		q_VisualScriptEditor.
-		q_VisualScriptEditor.
+		#VisualScriptEditor.add_custom_node("Reklama","Qarmin", Script.new())
+		#VisualScriptEditor.remove_custom_node("Wam Wszystkim", "Sztuczne drzwi")
 		
 		if Autoload.WRONG_BUGS:
 			pass

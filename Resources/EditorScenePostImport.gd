@@ -14,11 +14,12 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorScenePostImport : EditorScenePostImport = EditorScenePostImport.new()
-		
-		q_EditorScenePostImport.
-		q_EditorScenePostImport.
-		q_EditorScenePostImport.
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_EditorScenePostImport : EditorScenePostImport = EditorScenePostImport.new()
+#
+#		q_EditorScenePostImport.post_import( Control.new())
+#
+#		q_EditorScenePostImport.get_source_file()
+#		q_EditorScenePostImport.get_source_folder()
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

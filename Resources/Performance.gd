@@ -16,9 +16,7 @@ func _process(delta) -> void:
 		
 		var q_Performance : Performance = Performance.new()
 		
-		q_Performance.
-		q_Performance.
-		q_Performance.
+		qq += str(q_Performance.get_monitor(randi() % Performance.MONITOR_MAX))
 		
 		if Autoload.WRONG_BUGS:
 			pass
