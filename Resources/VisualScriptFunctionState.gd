@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptFunctionState : VisualScriptFunctionState = VisualScriptFunctionState.new()
 		
-		q_VisualScriptFunctionState.connect_to_signal( Node.new(), "Widać", ["Gra"] )
+		#q_VisualScriptFunctionState.connect_to_signal( Node.new(), "Widać", ["Gra"] )
 		qq += str(q_VisualScriptFunctionState.is_valid())
-		q_VisualScriptFunctionState.resume( ["Dino"] )
+		#q_VisualScriptFunctionState.resume( ["Dino"] )
 		
 		if Autoload.WRONG_BUGS:
 			pass

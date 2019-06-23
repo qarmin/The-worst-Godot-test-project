@@ -17,12 +17,12 @@ func _process(delta) -> void:
 		var q_XMLParser : XMLParser = XMLParser.new()
 		
 		qq += str(q_XMLParser.get_attribute_count())
-		qq += str(q_XMLParser.get_attribute_name( randi()%50 ))
-		qq += str(q_XMLParser.get_attribute_value( randi()%50 ))
+		#qq += str(q_XMLParser.get_attribute_name( randi()%50 ))
+		#qq += str(q_XMLParser.get_attribute_value( randi()%50 ))
 		qq += str(q_XMLParser.get_current_line())
-		qq += str(q_XMLParser.get_named_attribute_value( "Niecelnie" ))
+		#qq += str(q_XMLParser.get_named_attribute_value( "Niecelnie" ))
 		qq += str(q_XMLParser.get_named_attribute_value_safe( "Praca" ))
-		qq += str(q_XMLParser.get_node_data())
+		#qq += str(q_XMLParser.get_node_data())
 		qq += str(q_XMLParser.get_node_name())
 		qq += str(q_XMLParser.get_node_offset())
 		qq += str(q_XMLParser.get_node_type())
@@ -30,11 +30,11 @@ func _process(delta) -> void:
 		qq += str(q_XMLParser.has_attribute( "Celny" ))
 		qq += str(q_XMLParser.is_empty())
 		
-		qq += str(q_XMLParser.open( "Nawałnica" ))
+		#qq += str(q_XMLParser.open( "Nawałnica" ))
 		qq += str(q_XMLParser.open_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 		
 		qq += str(q_XMLParser.read())
-		qq += str(q_XMLParser.seek( randi()%50 ))
+		#qq += str(q_XMLParser.seek( randi()%50 ))
 		q_XMLParser.skip_section()
 		
 		if Autoload.WRONG_BUGS:

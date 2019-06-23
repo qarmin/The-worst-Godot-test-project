@@ -24,16 +24,16 @@ func _process(delta) -> void:
 		qq += str(q_UPNP.add_port_mapping( randi()%50, randi()%50, "Kompot", "Ślęża", randi()%50 ))
 		
 		q_UPNP.clear_devices()
-		qq += str(q_UPNP.delete_port_mapping( randi()%50, "UDP" ))
-		qq += str(q_UPNP.discover( randi()%50, randi()%50, "Pozycyjny" ))
+		#qq += str(q_UPNP.delete_port_mapping( randi()%50, "UDP" ))
+		#qq += str(q_UPNP.discover( randi()%50, randi()%50, "Pozycyjny" ))
 		
-		qq += str(q_UPNP.get_device( randi()%50 ))
+		#qq += str(q_UPNP.get_device( randi()%50 ))
 		qq += str(q_UPNP.get_device_count())
-		qq += str(q_UPNP.get_gateway())
+		#qq += str(q_UPNP.get_gateway())
 		
-		qq += str(q_UPNP.query_external_address())
-		q_UPNP.remove_device( randi()%50 )
-		q_UPNP.set_device( randi()%50, UPNPDevice.new() )
+		#qq += str(q_UPNP.query_external_address())
+		#q_UPNP.remove_device( randi()%50 )
+		#q_UPNP.set_device( randi()%50, UPNPDevice.new() )
 		
 		if Autoload.WRONG_BUGS:
 			pass

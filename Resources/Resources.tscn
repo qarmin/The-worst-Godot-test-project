@@ -1723,6 +1723,7 @@ visible = false
 script = ExtResource( 193 )
 
 [node name="StreamPeerSSL" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 344 )
 
 [node name="StreamPeerTCP" type="Node2D" parent="."]
@@ -1746,7 +1747,6 @@ visible = false
 script = ExtResource( 408 )
 
 [node name="UPNP" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 374 )
 
 [node name="UPNPDevice" type="Node2D" parent="."]
@@ -1777,7 +1777,7 @@ script = ExtResource( 140 )
 visible = false
 script = ExtResource( 310 )
 
-[node name="ARVRServer" type="Node2D" parent="."]
+[node name="ARVRServer_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 345 )
 
@@ -1813,7 +1813,7 @@ script = ExtResource( 389 )
 visible = false
 script = ExtResource( 342 )
 
-[node name="ClassDB" type="Node2D" parent="."]
+[node name="ClassDB_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 172 )
 
@@ -1822,7 +1822,6 @@ visible = false
 script = ExtResource( 302 )
 
 [node name="EditorNavigationMeshGenerator" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 388 )
 
 [node name="EditorSelection_CANT" type="Node2D" parent="."]

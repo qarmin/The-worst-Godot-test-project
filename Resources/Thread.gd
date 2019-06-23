@@ -18,8 +18,8 @@ func _process(delta) -> void:
 		
 		qq += str(q_Thread.get_id())
 		qq += str(q_Thread.is_active())
-		qq += str(q_Thread.start( Node.new(), "Hiszpania", String(), randi() %3 ))#Priority
-		q_Thread.wait_to_finish()
+		#qq += str(q_Thread.start( Node.new(), "Hiszpania", String(), randi() %3 ))#Priority
+		#q_Thread.wait_to_finish()
 		
 		if Autoload.WRONG_BUGS:
 			pass

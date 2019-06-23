@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		var q_TCP_Server : TCP_Server = TCP_Server.new()
 		
 		qq += str(q_TCP_Server.is_connection_available())
-		qq += str(q_TCP_Server.listen( randi()%50, "Zero" ))
+		#qq += str(q_TCP_Server.listen( randi()%50, "Zero" ))
 		q_TCP_Server.stop()
 		qq += str(q_TCP_Server.take_connection())
 		

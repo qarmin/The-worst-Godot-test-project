@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
 		
-		qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", 0 ))
+		#qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", 0 ))
 		q_StreamPeerTCP.disconnect_from_host()
 		
 		qq += str(q_StreamPeerTCP.get_connected_host())
@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		qq += str(q_StreamPeerTCP.get_status())
 		
 		qq += str(q_StreamPeerTCP.is_connected_to_host())
-		q_StreamPeerTCP.set_no_delay( bool(randi()%2))
+		#q_StreamPeerTCP.set_no_delay( bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			pass
