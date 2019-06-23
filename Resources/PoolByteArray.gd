@@ -22,17 +22,17 @@ func _process(delta) -> void:
 		q_PoolByteArray.append_array(PoolByteArray([randi()%50]))
 		
 		qq += str(q_PoolByteArray.compress(randi() % 4)) # File.CompressionMode
-		qq += str(q_PoolByteArray.decompress(randi()%50,randi() % 4))
+		#qq += str(q_PoolByteArray.decompress(randi()%50,randi() % 4))
 		
 		qq += str(q_PoolByteArray.get_string_from_ascii())
 		qq += str(q_PoolByteArray.get_string_from_utf8())
 		
-		qq += str(q_PoolByteArray.insert( randi()%50, randi()%50) )
+		#qq += str(q_PoolByteArray.insert( randi()%50, randi()%50) )
 		q_PoolByteArray.invert()
 		q_PoolByteArray.push_back( randi()%50 )
-		q_PoolByteArray.remove( randi()%50)
+		#q_PoolByteArray.remove( randi()%50)
 		q_PoolByteArray.resize( randi()%50)
-		q_PoolByteArray.set(randi()%50, randi()%50)
+		#q_PoolByteArray.set(randi()%50, randi()%50)
 		qq += str(q_PoolByteArray.sha256_string())
 		qq += str(q_PoolByteArray.size())
 		qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))

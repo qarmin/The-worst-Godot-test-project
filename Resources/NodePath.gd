@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		qq += str(q_NodePath.get_concatenated_subnames())
 		qq += str(q_NodePath.get_name( 0))
 		qq += str(q_NodePath.get_name_count())
-		qq += str(q_NodePath.get_subname(0 ))
+		#qq += str(q_NodePath.get_subname(0 ))
 		qq += str(q_NodePath.get_subname_count())
 		
 		qq += str(q_NodePath.is_absolute())

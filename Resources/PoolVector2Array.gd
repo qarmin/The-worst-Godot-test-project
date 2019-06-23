@@ -21,12 +21,12 @@ func _process(delta) -> void:
 		q_PoolVector2Array.append(Vector2(randf() * 50,randf() * 50))
 		q_PoolVector2Array.append_array(PoolVector2Array([Vector2(randf() * 50,randf() * 50)]))
 		
-		qq += str(q_PoolVector2Array.insert( randi()%50, Vector2(randf() * 50,randf() * 50)) )
+		#qq += str(q_PoolVector2Array.insert( randi()%50, Vector2(randf() * 50,randf() * 50)) )
 		q_PoolVector2Array.invert()
 		q_PoolVector2Array.push_back( Vector2(randf() * 50,randf() * 50) )
-		q_PoolVector2Array.remove( randi()%50)
+		#q_PoolVector2Array.remove( randi()%50)
 		q_PoolVector2Array.resize( randi()%50)
-		q_PoolVector2Array.set(randi()%50, Vector2(randf() * 50,randf() * 50))
+		#q_PoolVector2Array.set(randi()%50, Vector2(randf() * 50,randf() * 50))
 		qq += str(q_PoolVector2Array.size())
 		
 		if Autoload.WRONG_BUGS:

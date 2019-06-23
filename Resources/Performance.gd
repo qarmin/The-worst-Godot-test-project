@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Performance : Performance = Performance.new()
-		
-		qq += str(q_Performance.get_monitor(randi() % Performance.MONITOR_MAX))
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#		var q_Performance : Performance = Performance.new()
+#
+#		qq += str(q_Performance.get_monitor(randi() % Performance.MONITOR_MAX))
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

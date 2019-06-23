@@ -1747,6 +1747,7 @@ visible = false
 script = ExtResource( 408 )
 
 [node name="UPNP" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 374 )
 
 [node name="UPNPDevice" type="Node2D" parent="."]
@@ -1965,7 +1966,6 @@ visible = false
 script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]

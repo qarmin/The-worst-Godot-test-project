@@ -39,12 +39,12 @@ func _process(delta) -> void:
 		qq += str(q_Array.find( "Jesiotr", randi()%50))
 		qq += str(q_Array.find_last( "Nie" ))
 		
-		q_Array.front()
+		#q_Array.front()
 		
 		qq += str(q_Array.has( "Nie" ))
 		qq += str(q_Array.hash())
 		
-		q_Array.insert( randi()%50, "Nie") 
+		#q_Array.insert( randi()%50, "Nie") 
 		q_Array.invert()
 		q_Array.max()
 		q_Array.min()
@@ -55,7 +55,7 @@ func _process(delta) -> void:
 		q_Array.push_back( "Nie" )
 		q_Array.push_front( "Nie" )
 		
-		q_Array.remove( randi()%50)
+		#q_Array.remove( randi()%50)
 		q_Array.resize( randi()%50)
 		qq += str(q_Array.rfind( "Nie", randi()%50))
 		q_Array.shuffle()

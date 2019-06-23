@@ -28,7 +28,7 @@ func _process(delta) -> void:
 		qq += str(q_MainLoop.idle( randf() * 50 ))
 		q_MainLoop.init()
 		
-		q_MainLoop.input_event( InputEvent.new() )
+		#q_MainLoop.input_event( InputEvent.new() )
 		q_MainLoop.input_text( "Fanfary" )
 		
 		qq += str(q_MainLoop.iteration( randf() * 50 ))

@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 		
-		q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
+		#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
 		q_EditorNavigationMeshGenerator.clear( NavigationMesh.new() )
 		
 		if Autoload.WRONG_BUGS:
