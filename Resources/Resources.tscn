@@ -1837,6 +1837,7 @@ visible = false
 script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]
@@ -1852,7 +1853,6 @@ visible = false
 script = ExtResource( 320 )
 
 [node name="PoolStringArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 363 )
 
 [node name="PoolVector2Array" type="Node2D" parent="."]
