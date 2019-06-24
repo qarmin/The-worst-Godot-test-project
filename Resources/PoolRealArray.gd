@@ -30,4 +30,13 @@ func _process(delta) -> void:
 		qq += str(q_PoolRealArray.size())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PoolRealArray.append(randf() * 1000 - 500)
+			q_PoolRealArray.append_array(PoolRealArray([randi() % 1000 - 500]))
+			
+			qq += str(q_PoolRealArray.insert( randi() % 1000 - 500, randf() * 1000 - 500) )
+			q_PoolRealArray.invert()
+			q_PoolRealArray.push_back( randf() * 1000 - 500 )
+			q_PoolRealArray.remove( randi() % 1000 - 500)
+			q_PoolRealArray.resize( randi() % 1000 - 500)
+			q_PoolRealArray.set(randi() % 1000 - 500, randf() * 1000 - 500)
+			qq += str(q_PoolRealArray.size())

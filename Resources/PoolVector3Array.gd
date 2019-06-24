@@ -30,4 +30,15 @@ func _process(delta) -> void:
 		qq += str(q_PoolVector3Array.size())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PoolVector3Array = PoolVector3Array([randf() * 1000 - 500])
+			
+			q_PoolVector3Array.append(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_PoolVector3Array.append_array(PoolVector3Array([Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)]))
+			
+			qq += str(q_PoolVector3Array.insert( randi() % 1000 - 500, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)) )
+			q_PoolVector3Array.invert()
+			q_PoolVector3Array.push_back( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
+			q_PoolVector3Array.remove( randi() % 1000 - 500)
+			q_PoolVector3Array.resize( randi() % 1000 - 500)
+			q_PoolVector3Array.set(randi() % 1000 - 500, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			qq += str(q_PoolVector3Array.size())

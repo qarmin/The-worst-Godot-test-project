@@ -30,4 +30,15 @@ func _process(delta) -> void:
 		qq += str(q_PoolColorArray.size())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			q_PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+			
+			q_PoolColorArray.append(Color(randf(),randf(),randf(),randf()))
+			q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+			
+			qq += str(q_PoolColorArray.insert( randi() % 1000 - 500, Color(randf(),randf(),randf(),randf())) )
+			q_PoolColorArray.invert()
+			q_PoolColorArray.push_back( Color(randf(),randf(),randf(),randf()) )
+			q_PoolColorArray.remove( randi() % 1000 - 500)
+			q_PoolColorArray.resize( randi() % 1000 - 500)
+			q_PoolColorArray.set(randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()))
+			qq += str(q_PoolColorArray.size())

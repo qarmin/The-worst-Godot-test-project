@@ -33,7 +33,7 @@ func _process(delta) -> void:
 		qq += str(q_Plane.normalized())
 		qq += str(q_Plane.project( Vector3(randf() * 50,randf() * 50,randf() * 50) ))
 		
-		if Autoload.WRONG_BUGS:		
+		if Autoload.WRONG_BUGS:
 			q_Plane = Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
 			q_Plane = Plane(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			q_Plane = Plane(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500)

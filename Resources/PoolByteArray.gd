@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		qq += str(q_PoolByteArray.size())
 		#BUG qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
 		
-		if Autoload.WRONG_BUGS:		
+		if Autoload.WRONG_BUGS:
 			q_PoolByteArray = PoolByteArray([Color()])
 			
 			q_PoolByteArray.append(randi() % 1000 - 500)
