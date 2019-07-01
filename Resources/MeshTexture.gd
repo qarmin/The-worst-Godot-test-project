@@ -17,10 +17,10 @@ func _process(delta) -> void:
 		var q_MeshTexture : MeshTexture = MeshTexture.new()
 		
 		q_MeshTexture.set_mesh(Mesh.new())
-		q_MeshTexture.set_base_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		q_MeshTexture.set_image_size(Vector2(randf() * 50,randf() * 50))
 		
 		if Autoload.WRONG_BUGS:
 			q_MeshTexture.set_mesh(Mesh.new())
-			q_MeshTexture.set_base_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			q_MeshTexture.set_image_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))

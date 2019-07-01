@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptResourcePath : VisualScriptResourcePath = VisualScriptResourcePath.new()
 		
-		q_VisualScriptResourcePath.set_resource_path("res://Sprite1.png")
+		q_VisualScriptResourcePath.set_resource_path("res://RES/Sprite1.png")
 		
 		if Autoload.WRONG_BUGS:
 			q_VisualScriptResourcePath.set_resource_path("res://Spr22te1.png")

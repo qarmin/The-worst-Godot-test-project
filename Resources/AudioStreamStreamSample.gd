@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		q_AudioStreamSample.set_mix_rate(randi()%50)
 		q_AudioStreamSample.set_stereo(bool(randi()%2))
 		
-		qq += str(q_AudioStreamSample.save_to_wav("."))
+		#qq += str(q_AudioStreamSample.save_to_wav("."))
 		
 		if Autoload.WRONG_BUGS:
 			q_AudioStreamSample.set_data(PoolByteArray([12421,421,421,4,124,214,214,12,4]))
@@ -35,4 +35,4 @@ func _process(delta) -> void:
 			q_AudioStreamSample.set_mix_rate(randi() % 1000 - 500)
 			q_AudioStreamSample.set_stereo(bool(randi()%2))
 			
-			qq += str(q_AudioStreamSample.save_to_wav("."))
+			#qq += str(q_AudioStreamSample.save_to_wav("."))

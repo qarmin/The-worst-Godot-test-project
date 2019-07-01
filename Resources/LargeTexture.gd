@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_LargeTexture : LargeTexture = LargeTexture.new()
 		
-		qq += str(q_LargeTexture.add_piece(Vector2(randf() * 50,randf() * 50),load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+		qq += str(q_LargeTexture.add_piece(Vector2(randf() * 50,randf() * 50),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 		###MOVED q_LargeTexture.clear()
 		
 		qq += str(q_LargeTexture.get_piece_count())
@@ -24,13 +24,13 @@ func _process(delta) -> void:
 		qq += str(q_LargeTexture.get_piece_texture(0))
 		
 		q_LargeTexture.set_piece_offset(0,Vector2(randf() * 50,randf() * 50))
-		q_LargeTexture.set_piece_texture(0,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_LargeTexture.set_piece_texture(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		q_LargeTexture.set_size(Vector2(randf() * 50,randf() * 50))
 		
 		q_LargeTexture.clear() ## At the end
 		
 		if Autoload.WRONG_BUGS:
-			qq += str(q_LargeTexture.add_piece(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+			qq += str(q_LargeTexture.add_piece(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 			###MOVED q_LargeTexture.clear()
 			
 			qq += str(q_LargeTexture.get_piece_count())
@@ -38,7 +38,7 @@ func _process(delta) -> void:
 			qq += str(q_LargeTexture.get_piece_texture(randi() % 1000 - 500))
 			
 			q_LargeTexture.set_piece_offset(randi() % 1000 - 500,Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			q_LargeTexture.set_piece_texture(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_LargeTexture.set_piece_texture(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			q_LargeTexture.set_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			
 			q_LargeTexture.clear() ## At the end

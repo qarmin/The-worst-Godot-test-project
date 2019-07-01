@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_ProxyTexture : ProxyTexture = ProxyTexture.new()
 		
-		q_ProxyTexture.set_base(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
-			q_ProxyTexture.set_base(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

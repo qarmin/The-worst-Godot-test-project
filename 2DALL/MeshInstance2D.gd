@@ -16,9 +16,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
-			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-			set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

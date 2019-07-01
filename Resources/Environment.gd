@@ -93,7 +93,7 @@ func _process(delta) -> void:
 		q_Environment.set_adjustment_brightness(randf() * 50)
 		q_Environment.set_adjustment_contrast(randf() * 50)
 		q_Environment.set_adjustment_saturation(randf() * 50)
-		q_Environment.set_adjustment_color_correction(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_Environment.set_adjustment_color_correction(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
 			q_Environment.set_background(randi() % 1000 - 500)
@@ -173,4 +173,4 @@ func _process(delta) -> void:
 			q_Environment.set_adjustment_brightness(randf() * 1000 - 500)
 			q_Environment.set_adjustment_contrast(randf() * 1000 - 500)
 			q_Environment.set_adjustment_saturation(randf() * 1000 - 500)
-			q_Environment.set_adjustment_color_correction(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_Environment.set_adjustment_color_correction(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

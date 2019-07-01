@@ -22,6 +22,7 @@ Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50
 
  Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
  AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
+ Basis( Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50) )
 
 Vector2(randf() * 50,randf() * 50))
 Vector3(randf() * 50,randf() * 50,randf() * 50))

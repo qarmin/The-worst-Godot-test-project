@@ -16,8 +16,8 @@ func _process(delta) -> void:
 		
 		var q_StyleBoxTexture : StyleBoxTexture = StyleBoxTexture.new()
 		
-		q_StyleBoxTexture.set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		q_StyleBoxTexture.set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_StyleBoxTexture.set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		q_StyleBoxTexture.set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		q_StyleBoxTexture.set_region_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		for i in range(4):
 			q_StyleBoxTexture.set_margin_size(i,randf() * 50)
@@ -31,8 +31,8 @@ func _process(delta) -> void:
 		q_StyleBoxTexture.set_expand_margin_individual( randf() * 50,randf() * 50,randf() * 50,randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			q_StyleBoxTexture.set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-			q_StyleBoxTexture.set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_StyleBoxTexture.set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_StyleBoxTexture.set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			q_StyleBoxTexture.set_region_rect(Rect2(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
 			for i in range(4):
 				q_StyleBoxTexture.set_margin_size(i,randf() * 1000 - 500)

@@ -71,9 +71,9 @@ func _process(delta) -> void:
 		set_use_parent_material(bool(randi()%2))
 		
 		###_draw()
-		#draw_char(load("res://DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
+		#draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
 		#draw_circle(Vector2(randf() * 50,randf() * 50),randf() * 50,Color(randf(),randf(),randf(),randf()))
-		#draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+		#draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 		#draw_line(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50), Color(randf(),randf(),randf(),randf()))
 #		draw_mesh(
 #		draw_multiline(
@@ -175,9 +175,9 @@ func _process(delta) -> void:
 			set_use_parent_material(bool(randi()%2))
 			
 			###_draw()
-			#draw_char(load("res://DynamicFont1.tres"),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),"Q","D",Color(randf(),randf(),randf(),randf()))
+			#draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),"Q","D",Color(randf(),randf(),randf(),randf()))
 			#draw_circle(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500,Color(randf(),randf(),randf(),randf()))
-			#draw_colored_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]),load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+			#draw_colored_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 			#draw_line(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500), Color(randf(),randf(),randf(),randf()))
 	#		draw_mesh(
 	#		draw_multiline(

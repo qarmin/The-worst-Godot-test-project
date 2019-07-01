@@ -35,7 +35,7 @@ func _process(delta) -> void:
 		q_MeshLibrary.set_item_name(0,"Kukurydza")
 		q_MeshLibrary.set_item_navmesh(0,NavigationMesh.new())
 		q_MeshLibrary.set_item_navmesh_transform(0,Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
-		q_MeshLibrary.set_item_preview(0,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_MeshLibrary.set_item_preview(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		q_MeshLibrary.set_item_shapes(0,[BoxShape.new(),BoxShape.new()])
 		
 		q_MeshLibrary.remove_item(0) #MOVED
@@ -60,7 +60,7 @@ func _process(delta) -> void:
 			q_MeshLibrary.set_item_name(randi() % 1000 - 500,"Kukurydza")
 			q_MeshLibrary.set_item_navmesh(randi() % 1000 - 500,NavigationMesh.new())
 			q_MeshLibrary.set_item_navmesh_transform(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-			q_MeshLibrary.set_item_preview(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_MeshLibrary.set_item_preview(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			q_MeshLibrary.set_item_shapes(randi() % 1000 - 500,[BoxShape.new(),BoxShape.new()])
 			
 			q_MeshLibrary.remove_item(randi() % 1000 - 500) #MOVED

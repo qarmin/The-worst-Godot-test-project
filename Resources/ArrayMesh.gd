@@ -44,7 +44,7 @@ func _process(delta) -> void:
 			q_ArrayMesh.clear_blend_shapes()
 			qq += str(q_ArrayMesh.get_blend_shape_count())
 			qq += str(q_ArrayMesh.get_blend_shape_name( randi() % 1000 - 500))
-			qq += str(q_ArrayMesh.lightmap_unwrap( Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)),randf() * 1000 - 500))
+			#qq += str(q_ArrayMesh.lightmap_unwrap( Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)),randf() * 1000 - 500))
 			q_ArrayMesh.regen_normalmaps()
 			qq += str(q_ArrayMesh.surface_find_by_name( "Bazylia" ))
 			qq += str(q_ArrayMesh.surface_get_array_index_len( randi() % 1000 - 500 ))

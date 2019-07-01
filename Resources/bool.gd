@@ -14,11 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-#		var q_bool : bool = bool.new()
-#
-#		q_bool.
-#		q_bool.
-#		q_bool.
-#
-#		if Autoload.WRONG_BUGS:
-#			pass
+# warning-ignore:unused_variable
+		var q_bool : bool 
+
+		q_bool = bool(randi()%50)
+# warning-ignore:narrowing_conversion
+		q_bool = bool(randf() * 50)
+		q_bool = bool("false")
+
+		if Autoload.WRONG_BUGS:
+			q_bool = bool(randi() % 1000 - 500)
+			q_bool = bool(randf() * 1000 - 500)
+			q_bool = bool("asfaf")

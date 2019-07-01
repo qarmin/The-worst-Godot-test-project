@@ -2,9 +2,9 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.s3tc.stex"
-path.etc2="res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.etc2.stex"
-path.etc="res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.etc.stex"
+path.s3tc="res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.s3tc.stex"
+path.etc2="res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.etc2.stex"
+path.etc="res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.etc.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2", "etc" ],
 "vram_texture": true
@@ -12,8 +12,8 @@ metadata={
 
 [deps]
 
-source_file="res://Sprite3.png"
-dest_files=[ "res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.s3tc.stex", "res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.etc2.stex", "res://.import/Sprite3.png-5aedaf9c080575ac681af699f32a0076.etc.stex" ]
+source_file="res://RES/Sprite3.png"
+dest_files=[ "res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.s3tc.stex", "res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.etc2.stex", "res://.import/Sprite3.png-6f3984260dec7ddd6174937534fa75ab.etc.stex" ]
 
 [params]
 

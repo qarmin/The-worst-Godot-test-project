@@ -17,8 +17,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_centered(bool(randi()%2))
 		set_offset(Vector2(randf() * 50,randf() * 50))
 		set_flip_h(bool(randi()%2))
@@ -34,8 +34,8 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-			set_normal_map(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_centered(bool(randi()%2))
 			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_flip_h(bool(randi()%2))

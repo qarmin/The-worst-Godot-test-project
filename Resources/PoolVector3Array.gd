@@ -40,5 +40,5 @@ func _process(delta) -> void:
 			q_PoolVector3Array.push_back( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
 			q_PoolVector3Array.remove( randi() % 10 - 5)
 			q_PoolVector3Array.resize( randi() % 10 - 5)
-			q_PoolVector3Array.set(randi() % 10 - 5, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			#BUG q_PoolVector3Array.set(randi() % 10 - 5, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
 			qq += str(q_PoolVector3Array.size())

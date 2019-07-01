@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		
 		set_enabled(bool(randi()%2))
 		set_editor_only(bool(randi()%2))
-		set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_texture_offset(Vector2(randf() * 50,randf() * 50))
 		set_texture_scale(randf() * 50)
 		set_color(Color(randf(),randf(),randf(),randf()))
@@ -40,7 +40,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_enabled(bool(randi()%2))
 			set_editor_only(bool(randi()%2))
-			set_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_texture_scale(randf() * 1000 - 500)
 			set_color(Color(randf(),randf(),randf(),randf()))

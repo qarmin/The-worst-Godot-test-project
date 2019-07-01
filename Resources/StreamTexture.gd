@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_StreamTexture : StreamTexture = StreamTexture.new()
 		
-		#q_StreamTexture.load("res://Sprite" + str(randi()%4 + 1) + ".png")
+		#q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")
 		
 		if Autoload.WRONG_BUGS:
-			qq += str(q_StreamTexture.load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			qq += str(q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

@@ -1,6 +1,6 @@
 extends Spatial
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(5.1,5.1)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(2.0,2.0)
 const USE_GLOBAL_COUNTER : bool = true
 
 func _ready() -> void:

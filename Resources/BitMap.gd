@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		var q_BitMap : BitMap = BitMap.new()
 		
 		#q_BitMap.create(Vector2(randf() * 50,randf() * 50))
-		#q_BitMap.create_from_image_alpha( load("res://Sprite" + str(randi()%4 + 1) + ".png"),randf() * 50)
+		#q_BitMap.create_from_image_alpha( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * 50)
 		
 		#qq += str(q_BitMap.get_bit(Vector2(randf() * 50,randf() * 50)))
 		qq += str(q_BitMap.get_size())
@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			q_BitMap.create(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			q_BitMap.create_from_image_alpha( load("res://Sprite" + str(randi()%4 + 1) + ".png"),randf() * 1000 - 500)
+			q_BitMap.create_from_image_alpha( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * 1000 - 500)
 			
 			qq += str(q_BitMap.get_bit(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
 			qq += str(q_BitMap.get_size())

@@ -53,7 +53,7 @@ func _process(delta) -> void:
 #		#q_Input.parse_input_event(InputEvent.new())
 #		q_Input.remove_joy_mapping("Grace")
 #
-#		#q_Input.set_custom_mouse_cursor(load("res://Sprite1.png"), randi() % 17,Vector2(randf() * 50,randf() * 50)) #CursorShape
+#		#q_Input.set_custom_mouse_cursor(load("res://RES/Sprite1.png"), randi() % 17,Vector2(randf() * 50,randf() * 50)) #CursorShape
 #		q_Input.set_default_cursor_shape(randi() % 17) #CursorShape
 #		q_Input.set_mouse_mode(randi() % 4) #MouseMode
 #		q_Input.set_use_accumulated_input(bool(randi()%2))

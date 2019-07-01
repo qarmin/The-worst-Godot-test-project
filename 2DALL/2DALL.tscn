@@ -4,12 +4,12 @@
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
 [ext_resource path="res://2DALL/2DALL.gd" type="Script" id=4]
-[ext_resource path="res://Sprite2.png" type="Texture" id=5]
-[ext_resource path="res://Sprite1.png" type="Texture" id=6]
+[ext_resource path="res://RES/Sprite2.png" type="Texture" id=5]
+[ext_resource path="res://RES/Sprite1.png" type="Texture" id=6]
 [ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
 [ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
-[ext_resource path="res://Sprite3.png" type="Texture" id=9]
-[ext_resource path="res://Sprite4.png" type="Texture" id=10]
+[ext_resource path="res://RES/Sprite3.png" type="Texture" id=9]
+[ext_resource path="res://RES/Sprite4.png" type="Texture" id=10]
 [ext_resource path="res://2DALL/AudioStreamPlayer2D.gd" type="Script" id=11]
 [ext_resource path="res://2DALL/BackBufferCopy.gd" type="Script" id=12]
 [ext_resource path="res://2DALL/Skeleton2D.gd" type="Script" id=13]
@@ -99,7 +99,6 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 2
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true

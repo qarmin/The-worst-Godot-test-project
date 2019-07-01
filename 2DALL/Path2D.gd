@@ -16,7 +16,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_curve(load("res://Curve2D1.tres"))
+		set_curve(load("res://RES/Curve2D1.tres"))
 		$PathFollow2D.set_offset(randf() * 50)
 		$PathFollow2D.set_unit_offset(randf() * 50)
 		$PathFollow2D.set_h_offset(randf() * 50)
@@ -27,7 +27,7 @@ func _process(delta) -> void:
 		$PathFollow2D.set_lookahead(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
-			set_curve(load("res://Curve2D1.tres"))
+			set_curve(load("res://RES/Curve2D1.tres"))
 			$PathFollow2D.set_offset(randf() * 1000 - 500)
 			$PathFollow2D.set_unit_offset(randf() * 1000 - 500)
 			$PathFollow2D.set_h_offset(randf() * 1000 - 500)

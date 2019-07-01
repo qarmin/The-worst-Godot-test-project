@@ -17,7 +17,7 @@ func _process(delta) -> void:
 #		bool(randi()%2))
 #		randi()%50)
 #		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #		var qq : String = ""
 #		qq += str(
 #		qq = qq
@@ -29,7 +29,7 @@ func _process(delta) -> void:
 		
 		set_popup(popup_menu_temp)
 		#set_tab_disabled(0,bool(randi()%2))
-		#set_tab_icon(0,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		#set_tab_icon(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		#set_tab_title(0,str(randi()%50))
 		set_tabs_rearrange_group(0)
 		
@@ -52,7 +52,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_popup(popup_menu_temp)
 			set_tab_disabled(randi() % 1000 - 500,bool(randi()%2))
-			set_tab_icon(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			set_tab_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_tab_title(randi() % 1000 - 500,str(randi() % 1000 - 500))
 			set_tabs_rearrange_group(0)
 			

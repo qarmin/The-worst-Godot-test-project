@@ -23,7 +23,7 @@ func _process(delta) -> void:
 		q_ImageTexture.create_from_image(Image.new(),randi() % 64)
 		
 		qq += str(q_ImageTexture.get_format())
-		#qq += str(q_ImageTexture.load("res://Sprite1.png"))
+		#qq += str(q_ImageTexture.load("res://RES/Sprite1.png"))
 		
 		#q_ImageTexture.set_data(Image.new())
 		q_ImageTexture.set_size_override(Vector2(randf() * 50 + 10,randf() * 50 + 10))
@@ -36,7 +36,7 @@ func _process(delta) -> void:
 			q_ImageTexture.create_from_image(Image.new(),randi() % 1000 - 500)
 
 			qq += str(q_ImageTexture.get_format())
-			qq += str(q_ImageTexture.load("res://Sprite1.png"))
+			qq += str(q_ImageTexture.load("res://RES/Sprite1.png"))
 
 			q_ImageTexture.set_data(Image.new())
 			q_ImageTexture.set_size_override(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))

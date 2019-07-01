@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		
 #		add_sphere(randi()%50,randi()%50,randf() * 50,bool(randi()%2))
 #		add_vertex(Vector3(randf() * 50,randf() * 50,randf() * 50))
-#		begin(randi() % 7,load("res://Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#		begin(randi() % 7,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
 #		clear()
 #		end()
 #		set_color(Color(randf(),randf(),randf(),randf()))
@@ -31,7 +31,7 @@ func _process(delta) -> void:
 #		if Autoload.WRONG_BUGS:
 #			add_sphere(randi() % 1000 - 500,randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2))
 #			add_vertex(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
-#			begin(randi() % 1000 - 500,load("res://Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#			begin(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
 #			clear()
 #			end()
 #			set_color(Color(randf(),randf(),randf(),randf()))

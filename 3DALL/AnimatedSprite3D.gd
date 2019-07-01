@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		
 		var SF : SpriteFrames = SpriteFrames.new()
 		for i in range(4):
-			SF.add_frame("default",load("res://Sprite" + str(i + 1) + ".png"),-1)
+			SF.add_frame("default",load("res://RES/Sprite" + str(i + 1) + ".png"),-1)
 		
 		set_sprite_frames(SF)
 		set_animation("default")
@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			SF = SpriteFrames.new()
 			for i in range(4):
-				SF.add_frame(str(randi() % 1000000),load("res://Sprite" + str(i + 1) + ".png"),randi() % 1000 - 500)
+				SF.add_frame(str(randi() % 1000000),load("res://RES/Sprite" + str(i + 1) + ".png"),randi() % 1000 - 500)
 			
 			set_sprite_frames(SF)
 			set_animation("default")

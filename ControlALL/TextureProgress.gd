@@ -17,7 +17,7 @@ func _process(delta) -> void:
 #		bool(randi()%2))
 #		randi()%50)
 #		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #		var qq : String = ""
 #		qq += str(
 #		qq = qq
@@ -25,9 +25,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_under_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_over_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
-		set_progress_texture(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_under_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_over_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_progress_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_fill_mode(randi()%9)
 		set_tint_under(Color(randf(),randf(),randf(),randf()))
 		set_tint_over(Color(randf(),randf(),randf(),randf()))
@@ -43,9 +43,9 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			set_under_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
-			set_over_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
-			set_progress_texture(load("res://Sprite" + str(randi()%10 + 1) + ".png"))
+			set_under_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_over_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_progress_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_fill_mode(randi() % 1000 - 500)
 			set_tint_under(Color(randf(),randf(),randf(),randf()))
 			set_tint_over(Color(randf(),randf(),randf(),randf()))

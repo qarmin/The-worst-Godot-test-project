@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 #		var q_PanoramaSky : PanoramaSky = PanoramaSky.new()
 #
-#		q_PanoramaSky.set_panorama(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+#		q_PanoramaSky.set_panorama(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

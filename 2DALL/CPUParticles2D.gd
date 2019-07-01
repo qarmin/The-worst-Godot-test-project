@@ -50,14 +50,14 @@ func _process(delta) -> void:
 		set_gravity(Vector2(randf() * 50,randf() * 50))
 		set("local_coords", bool(randi()%2))
 		set("draw_order", randi()%2)
-		set("texture", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
-		set("normalmap", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+		set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+		set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 		set("emission_shape", randi()%5)
 		set("flag_align_y", bool(randi()%2))
 		
 		for j in range(12): # range(12):
 			set_param(j,randf() * 2)
-			set_param_curve(j,load("res://Curve" + str(randi()%2+1) + ".tres"))
+			set_param_curve(j,load("res://RES/Curve" + str(randi()%2+1) + ".tres"))
 			set_param_randomness(j,randf())
 			
 			
@@ -90,12 +90,12 @@ func _process(delta) -> void:
 			set_gravity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set("local_coords", bool(randi()%2))
 			set("draw_order", randi() % 1000 - 500)
-			set("texture", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
-			set("normalmap", (load("res://Sprite" + str(randi()%4 + 1) + ".png")))
+			set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+			set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 			set("emission_shape", randi() % 1000 - 500)
 			set("flag_align_y", bool(randi()%2))
 			
 			for j in range(12): # range(12):
 				set_param(j,randf() * 1000 - 500)
-				set_param_curve(j,load("res://Curve" + str(randi() % 1000 - 500) + ".tres"))
+				set_param_curve(j,load("res://RES/Curve" + str(randi() % 1000 - 500) + ".tres"))
 				set_param_randomness(j,randf() * 1000 - 500)

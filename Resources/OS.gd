@@ -131,7 +131,7 @@ func _process(delta) -> void:
 #		q_OS.request_attention()
 #		qq += str(q_OS.request_permission("NO"))
 #
-#		q_OS.set_icon(load("res://Sprite1.png"))
+#		q_OS.set_icon(load("res://RES/Sprite1.png"))
 #		q_OS.set_ime_active(bool(randi()%2))
 #		q_OS.set_ime_position(Vector2(randf() * 50,randf() * 50))
 #		q_OS.set_native_icon("Roman")

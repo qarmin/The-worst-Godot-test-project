@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_VisualScriptPreload : VisualScriptPreload = VisualScriptPreload.new()
 		
-		q_VisualScriptPreload.set_preload(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_VisualScriptPreload.set_preload(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		if Autoload.WRONG_BUGS:
-			q_VisualScriptPreload.set_preload(load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_VisualScriptPreload.set_preload(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

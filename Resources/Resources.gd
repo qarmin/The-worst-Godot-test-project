@@ -1,6 +1,6 @@
 extends Node
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.1)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(4.0,4.0)
 const USE_GLOBAL_COUNTER : bool = true
 
 func _ready() -> void:

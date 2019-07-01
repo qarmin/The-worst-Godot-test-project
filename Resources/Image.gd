@@ -60,7 +60,7 @@ func _process(delta) -> void:
 		qq += str(q_Image.is_empty())
 		qq += str(q_Image.is_invisible())
 
-		#qq += str(q_Image.load( "res://Sprite1.png" ))
+		#qq += str(q_Image.load( "res://RES/Sprite1.png" ))
 		#qq += str(q_Image.load_jpg_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 		#qq += str(q_Image.load_png_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 		#qq += str(q_Image.load_webp_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
@@ -128,7 +128,7 @@ func _process(delta) -> void:
 			qq += str(q_Image.is_empty())
 			qq += str(q_Image.is_invisible())
 
-			qq += str(q_Image.load( "res://Sprite1.png" ))
+			qq += str(q_Image.load( "res://RES/Sprite1.png" ))
 			qq += str(q_Image.load_jpg_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 			qq += str(q_Image.load_png_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 			qq += str(q_Image.load_webp_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))

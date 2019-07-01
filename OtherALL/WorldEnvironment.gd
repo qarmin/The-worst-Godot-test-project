@@ -17,4 +17,4 @@ func _process(delta) -> void:
 		#set_environment(load("default_env" + str(randi() % 2)+".tres"))
 		
 		if Autoload.WRONG_BUGS:
-			set_environment(load("res://default_env" + str(randi() % 2)+".tres"))
+			set_environment(load("res://RES/default_env" + str(randi() % 2)+".tres"))

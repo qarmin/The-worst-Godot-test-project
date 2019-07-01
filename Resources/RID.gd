@@ -21,4 +21,5 @@ func _process(delta) -> void:
 		qq += str(q_RID.get_id())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			#q_RID = RID()
+			qq += str(q_RID.get_id())

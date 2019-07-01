@@ -14,31 +14,53 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-#		var q_Quat : Quat
-#
-#		q_Quat = Quat( Ba
-#		q_Quat = Quat(
-#		q_Quat = Quat(
-#		q_Quat = Quat(
-#
-#		q_Quat.cubic_slerp( Quat b, Quat pre_a, Quat post_b, float t )
-#		q_Quat.dot( Quat b )
-#		q_Quat.get_euler()
-#		q_Quat.inverse()
-#		q_Quat.is_normalized()
-#
-#		q_Quat.length()
-#		q_Quat.length_squared()
-#
-#		q_Quat.normalized()
-#
-#		q_Quat.set_axis_angle( Vector3 axis, float angle )
-#		q_Quat.set_euler( Vector3 euler )
-#
-#		q_Quat.slerp( Quat b, float t )
-#		q_Quat.slerpni( Quat b, float t )
-#
-#		q_Quat.xform( Vector3 v )
-#
-#		if Autoload.WRONG_BUGS:
-#			pass
+		var q_Quat : Quat
+
+		q_Quat = Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50)
+		#q_Quat = Quat(Vector3(randf() * 50,randf() * 50,randf() * 50))
+		#q_Quat = Quat(Vector3(randf() * 50,randf() * 50,randf() * 50),randf() * 50)
+		q_Quat = Quat(Basis( Vector3(randf() * 50,randf() * 50,randf() * 50)))
+
+		#qq += str(q_Quat.cubic_slerp( Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50), Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50), Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50), randf() * 50))
+		qq += str(q_Quat.dot( Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50)))
+		qq += str(q_Quat.get_euler())
+		qq += str(q_Quat.inverse())
+		qq += str(q_Quat.is_normalized())
+
+		qq += str(q_Quat.length())
+		qq += str(q_Quat.length_squared())
+
+		qq += str(q_Quat.normalized())
+
+		#q_Quat.set_axis_angle( Vector3(randf() * 50,randf() * 50,randf() * 50), randf() * 50)
+		q_Quat.set_euler( Vector3(randf() * 50,randf() * 50,randf() * 50) )
+
+		#qq += str(q_Quat.slerp( Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50), randf() * 50))
+		#qq += str(q_Quat.slerpni(Quat(randf() * 50,randf() * 50,randf() * 50,randf() * 50), randf() * 50))
+
+		qq += str(q_Quat.xform( Vector3(randf() * 50,randf() * 50,randf() * 50)))
+
+		if Autoload.WRONG_BUGS:
+			q_Quat = Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+			#q_Quat = Quat(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			q_Quat = Quat(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500)
+			q_Quat = Quat(Basis( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+	
+			qq += str(q_Quat.cubic_slerp( Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500))
+			qq += str(q_Quat.dot( Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			qq += str(q_Quat.get_euler())
+			qq += str(q_Quat.inverse())
+			qq += str(q_Quat.is_normalized())
+	
+			qq += str(q_Quat.length())
+			qq += str(q_Quat.length_squared())
+	
+			qq += str(q_Quat.normalized())
+	
+			q_Quat.set_axis_angle( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500)
+			q_Quat.set_euler( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
+	
+			qq += str(q_Quat.slerp( Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500))
+			qq += str(q_Quat.slerpni(Quat(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500))
+	
+			qq += str(q_Quat.xform( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))

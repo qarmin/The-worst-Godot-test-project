@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		q_SpatialMaterial.set_particles_anim_v_frames(randi()%50)
 		q_SpatialMaterial.set_particles_anim_loop(bool(randi()%2))
 		q_SpatialMaterial.set_albedo(Color(randf(),randf(),randf(),randf()))
-		q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		q_SpatialMaterial.set_metallic(randf() * 50)
 		q_SpatialMaterial.set_specular(randf() * 50)
 		q_SpatialMaterial.set_metallic_texture_channel(randi() % 5)#TextureChannel
@@ -99,7 +99,7 @@ func _process(delta) -> void:
 			q_SpatialMaterial.set_particles_anim_v_frames(randi() % 1000 - 500)
 			q_SpatialMaterial.set_particles_anim_loop(bool(randi()%2))
 			q_SpatialMaterial.set_albedo(Color(randf(),randf(),randf(),randf()))
-			q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+			q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			q_SpatialMaterial.set_metallic(randf() * 1000 - 500)
 			q_SpatialMaterial.set_specular(randf() * 1000 - 500)
 			q_SpatialMaterial.set_metallic_texture_channel(randi() % 1000 - 500)#TextureChannel

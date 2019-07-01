@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		qq += str(q_ConfigFile.has_section( "Sekcja" ))
 		qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
 		
-		#qq += str(q_ConfigFile.load( "res://Sprite1.png" ))
+		#qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
 		### q_ConfigFile.save( "res://Close.png" )
 		q_ConfigFile.set_value( "Sekcja", "Klucz", String())
 		
@@ -39,6 +39,6 @@ func _process(delta) -> void:
 			qq += str(q_ConfigFile.has_section( "Sekcja" ))
 			qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
 			
-			qq += str(q_ConfigFile.load( "res://Sprite1.png" ))
+			qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
 			### q_ConfigFile.save( "res://Close.png" )
 			q_ConfigFile.set_value( "Sekcja", "Klucz", String())

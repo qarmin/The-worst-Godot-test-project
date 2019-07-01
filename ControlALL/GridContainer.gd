@@ -17,7 +17,7 @@ func _process(delta) -> void:
 #		bool(randi()%2))
 #		randi()%50)
 #		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #		var qq : String = ""
 #		qq += str(
 #		qq = qq

@@ -17,7 +17,7 @@ func _process(delta) -> void:
 #		bool(randi()%2))
 #		randi()%50)
 #		Color(randf(),randf(),randf(),randf()))
-#		load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #		var qq : String = ""
 #		qq += str(
 #		qq = qq
@@ -32,7 +32,7 @@ func _process(delta) -> void:
 		set_selected(bool(randi()%2))
 		set_comment(bool(randi()%2))
 		set_overlay(randi()%3)
-		set_slot(0, bool(randi()%2), 0, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi()%3, Color(randf(),randf(),randf(),randf()), load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"))
+		set_slot(0, bool(randi()%2), 0, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi()%3, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		clear_slot(0)
 		clear_all_slots()
 		#qq += str(get_connection_input_color(0))
@@ -59,7 +59,7 @@ func _process(delta) -> void:
 			set_selected(bool(randi()%2))
 			set_comment(bool(randi()%2))
 			set_overlay(randi() % 1000 - 500)
-			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), load("res://Sprite" + str(randi()%4 + 1) + ".png"), load("res://Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
+			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
 			clear_slot(randi() % 1000 - 500)
 			clear_all_slots()
 			qq += str(get_connection_input_color(randi() % 1000 - 500))
