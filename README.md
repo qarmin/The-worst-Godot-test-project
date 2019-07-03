@@ -15,3 +15,4 @@ FreeMono.otf is downloaded from https://savannah.gnu.org/projects/freefont/ and 
 - Full - Project check as most as possible bugs, but also produce tons of errors  
 This modes can be change in Autoload.gd by changing variable WRONG_BUGS
 4. It also have a time to execute a script again and again. It is stored at scipt in root node of each scene(2DALL, 3DALL), it has name TIME_TO_ACTIVATE and contains min and max time to next script execution.
+5. I added also in Autoload a variable BASIC_COUNTER which is being reduced by 1 in each frame and when BASIC_COUNTER will have value smaller than 0, then game quit

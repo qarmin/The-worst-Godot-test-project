@@ -13,11 +13,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
-	
-	
-	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -36,8 +31,8 @@ func _process(delta) -> void:
 		set_fractional_delta(bool(randi()%2))
 		set_use_local_coordinates(bool(randi()%2))
 		set_draw_order(randi()%2)
-		set_texture(load("Sprite" + str(randi()%4 + 1) + ".png"))
-		set_normalmap(load("Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_normalmap(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_emission_shape(randi()%5)
 		set_emission_sphere_radius(randf() * 50)
 		set_emission_rect_extents(Vector2(randf() * 50,randf() * 50))
@@ -76,8 +71,8 @@ func _process(delta) -> void:
 			set_fractional_delta(bool(randi()%2))
 			set_use_local_coordinates(bool(randi()%2))
 			set_draw_order(randi() % 1000 - 500)
-			set_texture(load("Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_normalmap(load("Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://RES/Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_normalmap(load("res://RES/Sprite" + str(randi() % 1000 - 500) + ".png"))
 			set_emission_shape(randi() % 1000 - 500)
 			set_emission_sphere_radius(randf() * 1000 - 500)
 			set_emission_rect_extents(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))

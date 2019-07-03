@@ -35,7 +35,7 @@ func _process(delta) -> void:
 		#q_PoolByteArray.set(randi()%50, randi()%50)
 		qq += str(q_PoolByteArray.sha256_string())
 		qq += str(q_PoolByteArray.size())
-		#BUG qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
+		qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
 		
 		if Autoload.WRONG_BUGS:
 			q_PoolByteArray = PoolByteArray([Color()])
@@ -55,6 +55,6 @@ func _process(delta) -> void:
 			q_PoolByteArray.remove( randi() % 1000 - 500)
 			q_PoolByteArray.resize( randi() % 1000 - 500)
 			q_PoolByteArray.set(randi() % 1000 - 500, randi() % 1000 - 500)
-			#BUG qq += str(q_PoolByteArray.sha256_string())
+			qq += str(q_PoolByteArray.sha256_string())
 			qq += str(q_PoolByteArray.size())
-			#BUG qq += str(q_PoolByteArray.subarray(randi() % 1000 - 500,randi() % 1000 - 500))
+			qq += str(q_PoolByteArray.subarray(randi() % 1000 - 500,randi() % 1000 - 500))

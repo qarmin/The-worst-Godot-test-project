@@ -78,7 +78,7 @@ func _process(delta) -> void:
 		q_Animation.track_set_interpolation_type(1, randi() % 3) # InterpolationType
 		#q_Animation.track_set_key_time(1,2,bool(randi()%2))
 		#q_Animation.track_set_key_transition(1,2,bool(randi()%2))
-		#BUG q_Animation.track_set_key_value(1,2,randf() * 50)
+		q_Animation.track_set_key_value(1,2,randf() * 50)
 		q_Animation.track_set_path(1,".")
 		#q_Animation.track_swap(randi()%50,randi()%50)
 		#qq += str(q_Animation.transform_track_insert_key(randi()%50,randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50),Quat(Vector3(randf() * 50,randf() * 50,randf() * 50),randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
@@ -153,7 +153,7 @@ func _process(delta) -> void:
 			q_Animation.track_set_interpolation_type(randi() % 1000 - 500, randi() % 1000 - 500) # InterpolationType
 			q_Animation.track_set_key_time(randi() % 1000 - 500,randi() % 1000 - 500,bool(randi()%2))
 			q_Animation.track_set_key_transition(randi() % 1000 - 500,randi() % 1000 - 500,bool(randi()%2))
-			#BUG q_Animation.track_set_key_value(randi() % 1000 - 500,randi() % 1000 - 500,randf() * 1000 - 500)
+			q_Animation.track_set_key_value(randi() % 1000 - 500,randi() % 1000 - 500,randf() * 1000 - 500)
 			q_Animation.track_set_path(randi() % 1000 - 500,".")
 			q_Animation.track_swap(randi() % 1000 - 500,randi() % 1000 - 500)
 			qq += str(q_Animation.transform_track_insert_key(randi() % 1000 - 500,randf() * 1000 - 500,Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Quat(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))

@@ -43,10 +43,10 @@ func _process(delta) -> void:
 		q_VisualShaderNodeGroupBase.set_control( q_control,0 )
 		q_VisualShaderNodeGroupBase.set_input_port_name( 0, "Kapitan" )
 		q_VisualShaderNodeGroupBase.set_input_port_type( 0, 2 )
-		#BUG q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
+		q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
 		q_VisualShaderNodeGroupBase.set_output_port_name( 0, "Fajf" )
 		q_VisualShaderNodeGroupBase.set_output_port_type( 0, 2 )
-		#BUG q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
+		q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
 		q_VisualShaderNodeGroupBase.set_size( Vector2(randf() * 50,randf() * 50) )
 		
 		q_VisualShaderNodeGroupBase.clear_input_ports() #MOVED
@@ -74,18 +74,18 @@ func _process(delta) -> void:
 			qq += str(q_VisualShaderNodeGroupBase.has_input_port(randi() % 1000 - 500))
 			qq += str(q_VisualShaderNodeGroupBase.has_output_port(randi() % 1000 - 500))
 			
-			#BUG q_VisualShaderNodeGroupBase.remove_input_port( randi() % 1000 - 500 )
-			#BUG q_VisualShaderNodeGroupBase.remove_output_port( randi() % 1000 - 500 )
+			q_VisualShaderNodeGroupBase.remove_input_port( randi() % 1000 - 500 )
+			q_VisualShaderNodeGroupBase.remove_output_port( randi() % 1000 - 500 )
 			
 			q_control = Control.new()
 			
 			q_VisualShaderNodeGroupBase.set_control( q_control,randi() % 1000 - 500 )
-			#BUG q_VisualShaderNodeGroupBase.set_input_port_name( randi() % 1000 - 500, "Kapitan" )
-			#BUG q_VisualShaderNodeGroupBase.set_input_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
-			#BUG q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
-			#BUG q_VisualShaderNodeGroupBase.set_output_port_name( randi() % 1000 - 500, "Fajf" )
-			#BUG q_VisualShaderNodeGroupBase.set_output_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
-			#BUG q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
+			q_VisualShaderNodeGroupBase.set_input_port_name( randi() % 1000 - 500, "Kapitan" )
+			q_VisualShaderNodeGroupBase.set_input_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
+			q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
+			q_VisualShaderNodeGroupBase.set_output_port_name( randi() % 1000 - 500, "Fajf" )
+			q_VisualShaderNodeGroupBase.set_output_port_type( randi() % 1000 - 500, randi() % 1000 - 500 )
+			q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
 			q_VisualShaderNodeGroupBase.set_size( Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			
 			q_VisualShaderNodeGroupBase.clear_input_ports() #MOVED

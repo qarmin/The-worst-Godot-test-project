@@ -10,7 +10,7 @@ func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
 	qq = qq
-	
+	#BUG ALL CLASS with string
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		

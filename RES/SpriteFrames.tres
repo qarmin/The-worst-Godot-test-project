@@ -1,0 +1,24 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=2]
+
+[ext_resource path="res://RES/Sprite4.png" type="Texture" id=1]
+[ext_resource path="res://RES/Sprite1.png" type="Texture" id=2]
+[ext_resource path="res://RES/Sprite3.png" type="Texture" id=3]
+[ext_resource path="res://RES/Sprite2.png" type="Texture" id=4]
+
+[resource]
+animations = [ {
+"frames": [ ExtResource( 3 ), ExtResource( 1 ), ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 2 ) ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 5.0
+} ]

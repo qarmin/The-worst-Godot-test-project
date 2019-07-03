@@ -53,7 +53,7 @@ func _process(delta) -> void:
 			qq += str(q_Curve2D.get_closest_offset( Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
 			qq += str(q_Curve2D.get_closest_point( Vector2(randf() * 1000 - 500,randf() * 1000 - 500) ))
 			qq += str(q_Curve2D.get_point_count())
-			qq += str(q_Curve2D.get_point_in(randi() % 1000 - 500 ))
+			#BUG qq += str(q_Curve2D.get_point_in(randi() % 1000 - 500 ))
 			qq += str(q_Curve2D.get_point_out(randi() % 1000 - 500 ))
 			qq += str(q_Curve2D.get_point_position(randi() % 1000 - 500 ))
 			

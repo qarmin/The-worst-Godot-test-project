@@ -38,7 +38,7 @@ func _process(delta) -> void:
 		
 		q_NavigationMesh.add_polygon( PoolIntArray([125125.125,12512.1251,122.124]))
 		#MOVED q_NavigationMesh.clear_polygons()
-		q_NavigationMesh.create_from_mesh(CubeMesh.new())
+		#BUG q_NavigationMesh.create_from_mesh(CubeMesh.new())
 		
 		qq += str(q_NavigationMesh.get_collision_mask_bit( randi()%20 ))
 		qq += str(q_NavigationMesh.get_polygon( randi() % 5 ))
@@ -70,7 +70,7 @@ func _process(delta) -> void:
 			
 			q_NavigationMesh.add_polygon( PoolIntArray([125125.125,12512.1251,122.124]))
 			#MOVED q_NavigationMesh.clear_polygons()
-			q_NavigationMesh.create_from_mesh(CubeMesh.new())
+			#BUG q_NavigationMesh.create_from_mesh(CubeMesh.new())
 			
 			qq += str(q_NavigationMesh.get_collision_mask_bit( randi() % 1000 - 500 ))
 			qq += str(q_NavigationMesh.get_polygon( randi() % 1000 - 500 ))

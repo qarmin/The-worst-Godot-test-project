@@ -2,7 +2,6 @@ extends AnimatedSprite
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-var right = false
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
@@ -14,16 +13,12 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	position.x += (int(right) * 2 - 1) * delta * 100
-	if position.x > 1280:
-		right = false
-	elif position.x < 0:
-		right = true
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_sprite_frames(get_sprite_frames())
+		var node_temp : Node = load("res://RES/Node.tscn").instance()
+		
+		set_sprite_frames(load("res://RES/SpriteFrames.tres"))
 		set_frame(randi()%3)
 		set_animation("default")
 		set_speed_scale(randf() * 50)
@@ -67,7 +62,7 @@ func _process(delta) -> void:
 		set_draw_behind_parent(bool(randi()%2))
 		_set_on_top(bool(randi()%2))
 		set_light_mask(randi()%50)
-		set_material(SpatialMaterial.new())
+		set_material(load("res://RES/SpatialMaterial.tres"))
 		set_use_parent_material(bool(randi()%2))
 		
 		###_draw()
@@ -127,7 +122,7 @@ func _process(delta) -> void:
 		
 		## With Errors
 		if Autoload.WRONG_BUGS:
-			set_sprite_frames(SpriteFrames.new())
+			set_sprite_frames(load("res://RES/SpriteFrames.tres"))
 			set_frame(randi() % 1000 - 500)
 			set_animation("afqwgqagagasfqw")
 			set_speed_scale(randf() * 1000 - 500)
@@ -154,7 +149,7 @@ func _process(delta) -> void:
 			set_z_as_relative(bool(randi()%2))
 			apply_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			qq += str(get_angle_to(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-			qq += str(get_relative_transform_to_parent(get_parent()))
+			qq += str(get_relative_transform_to_parent(node_temp))
 			global_translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			look_at(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			move_local_x(randf() * 1000 - 500,bool(randi()%2))
@@ -171,7 +166,7 @@ func _process(delta) -> void:
 			set_draw_behind_parent(bool(randi()%2))
 			_set_on_top(bool(randi()%2))
 			set_light_mask(randi() % 1000 - 500)
-			set_material(SpatialMaterial.new())
+			set_material(load("res://RES/SpatialMaterial.tres"))
 			set_use_parent_material(bool(randi()%2))
 			
 			###_draw()
@@ -226,3 +221,6 @@ func _process(delta) -> void:
 			
 			show()
 			update()
+			
+			
+		node_temp.queue_free()

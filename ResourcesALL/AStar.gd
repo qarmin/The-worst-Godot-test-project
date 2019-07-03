@@ -36,10 +36,10 @@ func _process(delta) -> void:
 		qq += str(q_AStar.get_points())
 
 		qq += str(q_AStar.has_point(0))
-		#BUG qq += str(q_AStar.is_point_disabled(0))
+		qq += str(q_AStar.is_point_disabled(0))
 		#q_AStar.remove_point(0)
 
-		#BUG q_AStar.set_point_disabled(0,bool(randi()%2))
+		q_AStar.set_point_disabled(0,bool(randi()%2))
 		#q_AStar.set_point_position(0,Vector3(randf() * 50,randf() * 50,randf() * 50))
 		#q_AStar.set_point_weight_scale(0,randf() * 50)
 
@@ -64,9 +64,9 @@ func _process(delta) -> void:
 			qq += str(q_AStar.get_points())
 
 			qq += str(q_AStar.has_point(randi() % 1000 - 500))
-			#BUG qq += str(q_AStar.is_point_disabled(randi() % 1000 - 500))
+			qq += str(q_AStar.is_point_disabled(randi() % 1000 - 500))
 			q_AStar.remove_point(randi() % 1000 - 500)
 
-			#BUG q_AStar.set_point_disabled(randi() % 1000 - 500,bool(randi()%2))
+			q_AStar.set_point_disabled(randi() % 1000 - 500,bool(randi()%2))
 			q_AStar.set_point_position(randi() % 1000 - 500,Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
 			q_AStar.set_point_weight_scale(randi() % 1000 - 500,randf() * 1000 - 500)

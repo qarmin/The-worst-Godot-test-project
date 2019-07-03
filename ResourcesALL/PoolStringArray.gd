@@ -39,6 +39,6 @@ func _process(delta) -> void:
 			qq += str(q_PoolStringArray.join("q"))
 			q_PoolStringArray.push_back("Rzeczy" )
 			q_PoolStringArray.remove( randi() % 1000 - 500)
-			#BUG q_PoolStringArray.resize( randi() % 1000 - 500)
+			q_PoolStringArray.resize( randi() % 1000 - 500)
 			q_PoolStringArray.set(randi() % 1000 - 500, "Rzeczy")
 			qq += str(q_PoolStringArray.size())

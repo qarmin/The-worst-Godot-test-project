@@ -1,12 +1,18 @@
 extends GridContainer
 
 const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.1)
-var counter : float
-const USE_GLOBAL_COUNTER : bool = true
+var counter_to_delete : int = 10000000000
 
 func _ready() -> void:
-	if USE_GLOBAL_COUNTER:
+	if Autoload.BASIC_COUTER > 0:
+		counter_to_delete = Autoload.BASIC_COUTER
+	for i in get_children():
+		i.C_COUNTER = TIME_TO_ACTIVATE
+		i.show()
+
+func _process(_delta: float) -> void:
+	counter_to_delete -= 1
+	if counter_to_delete < 0:
 		for i in get_children():
-			i.show()
-			i.C_COUNTER = TIME_TO_ACTIVATE
-	counter = randf() * (TIME_TO_ACTIVATE.y - TIME_TO_ACTIVATE.x) + TIME_TO_ACTIVATE.x
+			i.queue_free()
+		get_tree().quit()

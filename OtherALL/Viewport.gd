@@ -17,8 +17,8 @@ func _process(delta) -> void:
 		set_use_arvr(bool(randi()%2))
 		set_size(Vector2(randf() * 50,randf() * 50))
 		set_use_own_world(bool(randi()%2))
-		#BUG set_world(World.new())
-		#BUG set_world_2d(World2D.new())
+		set_world(World.new())
+		set_world_2d(World2D.new())
 		set_transparent_background(bool(randi()%2))
 		set_handle_input_locally(bool(randi()%2))
 		set_msaa(randi() % 5) # MSAA
@@ -60,7 +60,7 @@ func _process(delta) -> void:
 		qq += str(gui_has_modal_stack())
 		qq += str(gui_is_dragging())
 
-		#BUG input(InputEvent.new())
+		input(InputEvent.new())
 
 		qq += str(is_input_handled())
 		qq += str(is_size_override_enabled())
@@ -80,8 +80,8 @@ func _process(delta) -> void:
 			set_use_arvr(bool(randi()%2))
 			set_size(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
 			set_use_own_world(bool(randi()%2))
-			#BUG set_world(World.new())
-			#BUG set_world_2d(World2D.new())
+			set_world(World.new())
+			set_world_2d(World2D.new())
 			set_transparent_background(bool(randi()%2))
 			set_handle_input_locally(bool(randi()%2))
 			set_msaa(randi() % 1000 - 500) # MSAA

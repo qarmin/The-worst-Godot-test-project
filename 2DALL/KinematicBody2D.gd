@@ -31,12 +31,13 @@ func _physics_process(delta) -> void:
 			qq += str(get_slide_collision(j).collider.name)
 		qq += str(is_on_ceiling())
 		qq += str(is_on_floor())
-		#BUG if !is_sync_to_physics_enabled():
-			#BUG qq += str(move_and_collide(Vector2((int(right) * 2 - 1) * delta * 100,0),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
-			#BUG qq += str(move_and_slide(Vector2((int(right) * 2 - 1) * delta * 100,0), Vector2(0,1),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
-			#BUG qq += str(move_and_slide_with_snap(Vector2((int(right) * 2 - 1) * delta * 100,0), Vector2(0.4,0), Vector2(0,1),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
+		### TOO SLOW
+		#if !is_sync_to_physics_enabled():
+			#qq += str(move_and_collide(Vector2(delta * 100,0),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
+			#qq += str(move_and_slide(Vector2(delta * 100,0), Vector2(0,1),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
+			#qq += str(move_and_slide_with_snap(Vector2(delta * 100,0), Vector2(0.4,0), Vector2(0,1),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
 
-		#BUG qq += str(test_move( Transform2D(0.0, Vector2(11,11)), Vector2(11.11,124.12),bool(randi()%2) ))
+		qq += str(test_move( Transform2D(0.0, Vector2(11,11)), Vector2(11.11,124.12),bool(randi()%2) ))
 		
 		# Physics Body
 		_set_layers(randi()%20)
@@ -71,7 +72,7 @@ func _physics_process(delta) -> void:
 		#remove_shape_owner(0)
 		
 		qq += str(shape_find_owner(0))
-		#shape_owner_add_shape(0,Shape2D.new())
+		#shape_owner_add_shape(0,load("res://RES/CircleShape2D.tres"))
 		#shape_owner_clear_shapes(0)
 		qq += str(shape_owner_get_owner(0))
 		qq += str(shape_owner_get_shape(0,0))
@@ -103,12 +104,13 @@ func _physics_process(delta) -> void:
 				qq += str(get_slide_collision(j).collider.name)
 			qq += str(is_on_ceiling())
 			qq += str(is_on_floor())
-			#BUG if !is_sync_to_physics_enabled():
-				#BUG qq += str(move_and_collide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
-				#BUG qq += str(move_and_slide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500, randf() * 1000 - 500, bool(randi()%2)))
-				#BUG qq += str(move_and_slide_with_snap(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2)))
+			#TOO SLOW
+#			if !is_sync_to_physics_enabled():
+#				 qq += str(move_and_collide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
+#				 qq += str(move_and_slide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500, randf() * 1000 - 500, bool(randi()%2)))
+#				 qq += str(move_and_slide_with_snap(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2)))
 
-			#BUG qq += str(test_move( Transform2D(randf() * 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500)), Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			qq += str(test_move( Transform2D(randf() * 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500)), Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
 
 			# Physics Body
 			_set_layers(randi() % 1000 - 500)
@@ -143,7 +145,7 @@ func _physics_process(delta) -> void:
 			remove_shape_owner(randi() % 1000 - 500)
 			
 			qq += str(shape_find_owner(randi() % 1000 - 500))
-			shape_owner_add_shape(randi() % 1000 - 500,Shape2D.new())
+			shape_owner_add_shape(randi() % 1000 - 500,load("res://RES/CircleShape2D.tres"))
 			shape_owner_clear_shapes(randi() % 1000 - 500)
 			qq += str(shape_owner_get_owner(randi() % 1000 - 500))
 			qq += str(shape_owner_get_shape(randi() % 1000 - 500,randi() % 1000 - 500))

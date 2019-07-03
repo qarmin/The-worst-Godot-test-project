@@ -27,7 +27,7 @@ func _physics_process(delta) -> void:
 		set_constant_angular_velocity(randf() * 50)
 		#Deprecated set_friction(randf())
 		#Deprecated set_bounce(randf())
-		set_physics_material_override(PhysicsMaterial.new())
+		set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
 		
 		if Autoload.WRONG_BUGS:
 			for i in get_children():
@@ -41,4 +41,4 @@ func _physics_process(delta) -> void:
 			set_constant_angular_velocity(randf() * 50)
 			set_friction(randf() * 1000 - 500)
 			set_bounce(randf() * 1000 - 500)
-			set_physics_material_override(PhysicsMaterial.new())
+			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
