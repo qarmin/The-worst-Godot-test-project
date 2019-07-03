@@ -16,11 +16,11 @@ func _process(delta) -> void:
 		
 		var q_HeightMapShape : HeightMapShape = HeightMapShape.new()
 		
-		q_HeightMapShape.set_map_width(randi()%50)
+		#BUG q_HeightMapShape.set_map_width(randi()%50)
 		#BUG q_HeightMapShape.set_map_depth(randi()%50)
 		q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))
 		
 		if Autoload.WRONG_BUGS:
-			q_HeightMapShape.set_map_width(randi() % 1000 - 500)
+			#BUG q_HeightMapShape.set_map_width(randi() % 1000 - 500)
 			#BUG q_HeightMapShape.set_map_depth(randi() % 1000 - 500)
 			q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))

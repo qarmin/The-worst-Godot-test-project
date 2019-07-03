@@ -33,7 +33,7 @@ func _process(delta) -> void:
 			q_PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
 			
 			q_PoolColorArray.append(Color(randf(),randf(),randf(),randf()))
-			q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+			#BUG q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
 			
 			qq += str(q_PoolColorArray.insert( randi() % 1000 - 500, Color(randf(),randf(),randf(),randf())) )
 			q_PoolColorArray.invert()

@@ -61,7 +61,6 @@
 [ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
 [ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
 
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ) ],
@@ -234,7 +233,6 @@ script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0577, 0, -49.5921 )
-visible = false
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]

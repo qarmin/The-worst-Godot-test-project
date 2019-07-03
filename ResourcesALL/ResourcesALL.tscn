@@ -452,7 +452,7 @@ script = ExtResource( 7 )
 [node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 33 )
 
-[node name="AnimatedTexture" type="Node2D" parent="."]
+[node name="AnimatedTexture_BUG" type="Node2D" parent="."]
 script = ExtResource( 38 )
 
 [node name="AtlasTexture" type="Node2D" parent="."]
@@ -948,6 +948,7 @@ script = ExtResource( 387 )
 script = ExtResource( 338 )
 
 [node name="TileSet" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 382 )
 
 [node name="VideoStream" type="Node2D" parent="."]
@@ -1137,7 +1138,6 @@ script = ExtResource( 122 )
 script = ExtResource( 138 )
 
 [node name="VisualShaderNodeGroupBase" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 96 )
 
 [node name="VisualShaderNodeExpression" type="Node2D" parent="."]

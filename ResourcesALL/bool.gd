@@ -24,5 +24,6 @@ func _process(delta) -> void:
 
 		if Autoload.WRONG_BUGS:
 			q_bool = bool(randi() % 1000 - 500)
+# warning-ignore:narrowing_conversion
 			q_bool = bool(randf() * 1000 - 500)
 			q_bool = bool("asfaf")
