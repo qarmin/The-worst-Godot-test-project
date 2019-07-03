@@ -428,8 +428,6 @@
 [ext_resource path="res://ResourcesALL/MultiplayerAPI.gd" type="Script" id=426]
 [ext_resource path="res://ResourcesALL/NavigationMesh.gd" type="Script" id=427]
 
-
-
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
 

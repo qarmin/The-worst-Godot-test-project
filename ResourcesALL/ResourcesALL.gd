@@ -8,6 +8,8 @@ func _ready() -> void:
 		counter_to_delete = Autoload.BASIC_COUTER
 	for i in get_children():
 		i.C_COUNTER = TIME_TO_ACTIVATE
+		if !i.is_visible():
+			i.queue_free()
 
 func _process(_delta: float) -> void:
 	counter_to_delete -= 1
