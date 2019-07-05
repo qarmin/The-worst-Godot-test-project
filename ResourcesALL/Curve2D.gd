@@ -67,4 +67,5 @@ func _process(delta) -> void:
 			#BUG q_Curve2D.set_point_out(randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			#BUG q_Curve2D.set_point_position(randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500) )
 			
-			#TOO SLOW qq += str(q_Curve2D.tessellate( randi() % 1000 - 500, randf() * 1000 - 500 ))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_Curve2D.tessellate( randi() % 1000 - 500, randf() * 1000 - 500 ))

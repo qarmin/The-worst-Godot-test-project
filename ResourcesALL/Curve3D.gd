@@ -44,8 +44,8 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			q_Curve3D.clear_points() #MOVED
-#TOO SLOW, BUT I DONT KNOW WHY			for _i in range(5):
-#				q_Curve3D.add_point( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500 )
+			if Autoload.SLOW_FUNCTIONS:
+				q_Curve3D.add_point( Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), randi() % 1000 - 500 )
 			#MOVED q_Curve3D.clear_points()
 
 			qq += str(q_Curve3D.get_baked_length())
@@ -67,5 +67,5 @@ func _process(delta) -> void:
 			q_Curve3D.set_point_out( randi() % 1000 - 500, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
 			q_Curve3D.set_point_position( randi() % 1000 - 500, Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500) )
 
-			# TOO SLOW
-			### qq += str(q_Curve3D.tessellate( randi() % 1000 - 500, randf() * 1000 - 500 ))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_Curve3D.tessellate( randi() % 1000 - 500, randf() * 1000 - 500 ))

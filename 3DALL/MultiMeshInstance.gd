@@ -48,8 +48,8 @@ func _process(delta) -> void:
 			MM.set_mesh(CubeMesh.new())
 			
 			qq += str(MM.get_aabb())
-			qq += str(MM.get_instance_color(randi() % 1000 - 500))
-			qq += str(MM.get_instance_custom_data(randi() % 1000 - 500))
+			#BUG qq += str(MM.get_instance_color(randi() % 1000 - 500))
+			#BUG qq += str(MM.get_instance_custom_data(randi() % 1000 - 500))
 			qq += str(MM.get_instance_transform(randi() % 1000 - 500))
 			qq += str(MM.get_instance_transform_2d(randi() % 1000 - 500))
 	

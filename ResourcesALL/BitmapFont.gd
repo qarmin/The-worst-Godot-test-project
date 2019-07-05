@@ -26,7 +26,8 @@ func _process(delta) -> void:
 		q_BitmapFont.add_texture( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		q_BitmapFont.clear()
-		#qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
+		#if Autoload.SLOW_FUNCTIONS:
+		#	qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
 
 		qq += str(q_BitmapFont.get_char_size( randi()%50, randi()%50 ))
 		qq += str(q_BitmapFont.get_kerning_pair(randi()%50, randi()%50 ))
@@ -44,7 +45,7 @@ func _process(delta) -> void:
 			q_BitmapFont.add_texture( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			q_BitmapFont.clear()
-			if randi() % 20 == 0: # It is slow
+			if Autoload.SLOW_FUNCTIONS:
 				qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
 	
 			qq += str(q_BitmapFont.get_char_size( randi() % 1000 - 500, randi() % 1000 - 500 ))

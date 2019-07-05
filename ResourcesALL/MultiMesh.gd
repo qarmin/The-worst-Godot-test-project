@@ -21,7 +21,7 @@ func _process(delta) -> void:
 #		q_MultiMesh.set_custom_data_format(randi() % 3) #ColorDataFormat
 		q_MultiMesh.set_instance_count(randi()%50)
 		q_MultiMesh.set_visible_instance_count(randi()%50)
-		#BUG q_MultiMesh.set_mesh(CubeMesh.new())
+		q_MultiMesh.set_mesh(CubeMesh.new())
 		
 #		qq += str(q_MultiMesh.get_aabb())
 #		qq += str(q_MultiMesh.get_instance_color( 0 ))
@@ -41,7 +41,7 @@ func _process(delta) -> void:
 			q_MultiMesh.set_custom_data_format(randi() % 1000 - 500) #ColorDataFormat
 			q_MultiMesh.set_instance_count(randi() % 1000 - 500)
 			q_MultiMesh.set_visible_instance_count(randi() % 1000 - 500)
-			#BUG q_MultiMesh.set_mesh(CubeMesh.new())
+			q_MultiMesh.set_mesh(CubeMesh.new())
 			
 			qq += str(q_MultiMesh.get_aabb())
 			qq += str(q_MultiMesh.get_instance_color(randi() % 1000 - 500 ))

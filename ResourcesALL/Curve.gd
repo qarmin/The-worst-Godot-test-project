@@ -21,7 +21,8 @@ func _process(delta) -> void:
 		q_Curve.set_bake_resolution(randi()%50 + 1)
 		for _i in range(3):
 			qq += str(q_Curve.add_point( Vector2(randf() * 50,randf() * 50), randf() * 50,randf() * 50, randi() % 3, randi() % 3 )) #TangentMode
-		#q_Curve.bake()
+#		if Autoload.SLOW_FUNCTIONS:
+#			q_Curve.bake()
 		
 		q_Curve.clean_dupes()
 		q_Curve.clear_points()
@@ -51,7 +52,8 @@ func _process(delta) -> void:
 			q_Curve.set_bake_resolution(randi() % 10 - 500)
 			for _i in range(3):
 				qq += str(q_Curve.add_point( Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500,randf() * 1000 - 500, randi() % 1000 - 500, randi() % 1000 - 500 )) #TangentMode
-			#TOO SLOW q_Curve.bake()
+			if Autoload.SLOW_FUNCTIONS:
+				q_Curve.bake()
 
 			q_Curve.clean_dupes()
 			q_Curve.clear_points()

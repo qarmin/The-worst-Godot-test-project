@@ -29,13 +29,12 @@ func _physics_process(delta) -> void:
 			qq += str(get_slide_collision(j).collider.name)
 		qq += str(is_on_ceiling())
 		qq += str(is_on_floor())
-		### TOO SLOW
-		#if !is_sync_to_physics_enabled():
-			#qq += str(move_and_collide(Vector2(delta * 100,0),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
-			#qq += str(move_and_slide(Vector2(delta * 100,0), Vector2(0,1),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
-			#qq += str(move_and_slide_with_snap(Vector2(delta * 100,0), Vector2(0.4,0), Vector2(0,1),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
+		if Autoload.SLOW_FUNCTIONS && !is_sync_to_physics_enabled():
+			qq += str(move_and_collide(Vector2(delta * 100,0),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
+			qq += str(move_and_slide(Vector2(delta * 100,0), Vector2(0,1),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
+			qq += str(move_and_slide_with_snap(Vector2(delta * 100,0), Vector2(0.4,0), Vector2(0,1),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
 
-		qq += str(test_move( Transform2D(0.0, Vector2(11,11)), Vector2(11.11,124.12),bool(randi()%2) ))
+			qq += str(test_move( Transform2D(0.0, Vector2(11,11)), Vector2(11.11,124.12),bool(randi()%2) ))
 		
 		# Physics Body
 		_set_layers(randi()%20)
@@ -102,13 +101,12 @@ func _physics_process(delta) -> void:
 				qq += str(get_slide_collision(j).collider.name)
 			qq += str(is_on_ceiling())
 			qq += str(is_on_floor())
-			#TOO SLOW
-#			if !is_sync_to_physics_enabled():
-#				 qq += str(move_and_collide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
-#				 qq += str(move_and_slide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500, randf() * 1000 - 500, bool(randi()%2)))
-#				 qq += str(move_and_slide_with_snap(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2)))
-
-			qq += str(test_move( Transform2D(randf() * 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500)), Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(move_and_collide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
+				qq += str(move_and_slide(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500, randf() * 1000 - 500, bool(randi()%2)))
+				qq += str(move_and_slide_with_snap(Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2),randi() % 1000 - 500,randf() * 1000 - 500,bool(randi()%2)))
+				
+				qq += str(test_move( Transform2D(randf() * 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500)), Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
 
 			# Physics Body
 			_set_layers(randi() % 1000 - 500)

@@ -33,7 +33,7 @@ func _process(delta) -> void:
 			q_PoolRealArray.append(randf() * 1000 - 500)
 			q_PoolRealArray.append_array(PoolRealArray([randi() % 1000 - 500]))
 			
-			#BUG qq += str(q_PoolRealArray.insert( randi() % 1000 - 500, randf() * 1000 - 500) )
+			qq += str(q_PoolRealArray.insert( randi() % 1000 - 500, randf() * 1000 - 500) )
 			q_PoolRealArray.invert()
 			q_PoolRealArray.push_back( randf() * 1000 - 500 )
 			q_PoolRealArray.remove( randi() % 1000 - 500)

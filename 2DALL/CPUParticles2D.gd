@@ -15,13 +15,11 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_emitting(bool(randi()%2))
-		if randi() % 3 == 0: # Changing amount of partices also reset it 
-			set_amount(randi()%40+10)
-		if randi() % 4 == 0:
-			restart()
-		set_lifetime(randf() * 10 + 5)
+		set_amount(randi()%4)
+		restart()
+		set_lifetime(randf())
 		set_one_shot(bool(randi()%2))
-		set_pre_process_time(randf() * 50)
+		set_pre_process_time(randf())
 		set_speed_scale(randf() * 50)
 		set_explosiveness_ratio(randf())
 		set_randomness_ratio(randf())
@@ -55,13 +53,11 @@ func _process(delta) -> void:
 			
 			
 		if Autoload.WRONG_BUGS:
-			if randi() % 3 == 0: # Changing amount of partices also reset it 
-				set_amount(randi() % 300 - 150)
-			if randi() % 4 == 0:
-				restart()
-			set_lifetime(randf() * 1000 - 500)
+			set_amount(randi() % 4 - 2)
+			restart()
+			set_lifetime(randf() - 0.5)
 			set_one_shot(bool(randi()%2))
-			set_pre_process_time(randf() * 1000 - 500)
+			set_pre_process_time(randf() * 1 - 0.5)
 			set_speed_scale(randf() * 1000 - 500)
 			set_explosiveness_ratio(randf() * 1000 - 500)
 			set_randomness_ratio(randf() * 1000 - 500)

@@ -99,7 +99,6 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 1
 playing = true
 offset = Vector2( 1.88, 5.34 )
 flip_h = true
@@ -256,6 +255,7 @@ rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 default_length = 34.0
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
 position = Vector2( 664.461, 348.954 )
 emitting = false
 lifetime = 5.9
@@ -365,6 +365,7 @@ script = ExtResource( 25 )
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 
 [node name="Particles2D" type="Particles2D" parent="."]
+visible = false
 position = Vector2( 631.992, 385.152 )
 process_material = SubResource( 15 )
 script = ExtResource( 26 )

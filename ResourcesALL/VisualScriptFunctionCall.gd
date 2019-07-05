@@ -34,7 +34,7 @@ func _process(delta) -> void:
 			q_VisualScriptFunctionCall.set_singleton("QQQr")
 			q_VisualScriptFunctionCall.set_basic_type(randi() % 1000 - 500)
 			q_VisualScriptFunctionCall.set_base_path("wq.")
-			q_VisualScriptFunctionCall.set_function("Rzsafym")
+			#BUG VERY RARELY q_VisualScriptFunctionCall.set_function("Rzsafym")
 			q_VisualScriptFunctionCall.set_use_default_args(randi() % 1000 - 500)
 			q_VisualScriptFunctionCall.set_validate(bool(randi()%2))
 			q_VisualScriptFunctionCall.set_rpc_call_mode(randi() % 1000 - 500) #RPCCallMode

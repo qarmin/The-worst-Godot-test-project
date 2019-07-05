@@ -14,8 +14,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Image : Image = Image.new()
-# BUG
+#		var q_Image : Image = Image.new()
+#
 #		#q_Image.blend_rect( Image.new(), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) )
 #		#q_Image.blend_rect_mask( Image.new(), Image.new(), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) )
 #
@@ -81,7 +81,7 @@ func _process(delta) -> void:
 #		#q_Image.shrink_x2()
 #		#q_Image.srgb_to_linear()
 #		q_Image.unlock()
-##
+#
 #		if Autoload.WRONG_BUGS:
 #
 #			q_Image.blend_rect( Image.new(), Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)), Vector2(randf() * 10 - 5,randf() * 10 - 5) )
@@ -100,7 +100,8 @@ func _process(delta) -> void:
 #			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), randi() % 10 - 5 , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
 #
 #			q_Image.crop( randi() % 10 - 5, randi() % 10 - 5 )
-#			### TOO MANY BUGS AND TOO SLOW qq += str(q_Image.decompress())
+#			if Autoload.SLOW_FUNCTIONS:
+#				qq += str(q_Image.decompress())
 #			qq += str(q_Image.detect_alpha())
 #			q_Image.expand_x2_hq2x()
 #			#BUG q_Image.fill( Color(randf(),randf(),randf(),randf()))
@@ -141,7 +142,7 @@ func _process(delta) -> void:
 #			q_Image.resize_to_po2( bool(randi()%2))
 #
 #			qq += str(q_Image.rgbe_to_srgb())
-#			qq += str(q_Image.save_png( "res://lafar.png" ))
+#			#BUG qq += str(q_Image.save_png( "res://lafar.png" ))
 #
 #			#BUG q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
 #			#BUG q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))

@@ -33,7 +33,7 @@ func _process(delta) -> void:
 			q_PoolVector2Array = PoolVector2Array([randf() * 1000 - 500])
 			
 			q_PoolVector2Array.append(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			#BUG q_PoolVector2Array.append_array(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]))
+			q_PoolVector2Array.append_array(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]))
 			
 			qq += str(q_PoolVector2Array.insert( randi() % 1000 - 500, Vector2(randf() * 1000 - 500,randf() * 1000 - 500)) )
 			q_PoolVector2Array.invert()

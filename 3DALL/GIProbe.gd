@@ -25,12 +25,12 @@ func _process(delta) -> void:
 		set_compress(bool(randi()%2))
 		set_probe_data(GIProbeData.new())
 		
-#		if randi() % 30: # Too low performace
-#			bake(self, bool(randi()%2))
-#			debug_bake()
+		if Autoload.SLOW_FUNCTIONS:
+			bake(self, bool(randi()%2))
+			debug_bake()
 		
 		if Autoload.WRONG_BUGS:
-			set_subdiv(randi() % 1000 - 500) # Subdiv
+			set_subdiv(randi() % 10 - 50) # Subdiv
 			set_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
 			set_dynamic_range(randi() % 1000 - 500)
 			set_energy(randf() * 1000 - 500)
@@ -41,6 +41,6 @@ func _process(delta) -> void:
 			set_compress(bool(randi()%2))
 			set_probe_data(GIProbeData.new())
 			
-	#		if randi() % 30: # Too low performace
-	#			bake(self, bool(randi()%2))
-	#			debug_bake()
+			if Autoload.SLOW_FUNCTIONS:
+				bake(self, bool(randi()%2))
+				debug_bake()

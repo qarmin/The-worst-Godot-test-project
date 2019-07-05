@@ -14,11 +14,11 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
-		
-		#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
-		q_EditorNavigationMeshGenerator.clear( load("res://RES/NavigationMesh.tres"))
-		
-		if Autoload.WRONG_BUGS:
-			#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
-			q_EditorNavigationMeshGenerator.clear(load("res://RES/NavigationMesh.tres") )
+#		var q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
+#
+#		#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
+#		q_EditorNavigationMeshGenerator.clear( load("res://RES/NavigationMesh.tres"))
+#
+#		if Autoload.WRONG_BUGS:
+#			#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
+#			q_EditorNavigationMeshGenerator.clear(load("res://RES/NavigationMesh.tres") )

@@ -16,11 +16,10 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_emitting(bool(randi()%2))
-		if randi()%7 == 0:
-			set_amount(randi()%15 + 40)
-		set_lifetime(randf() * 50)
+		set_amount(randi()%4)
+		set_lifetime(randf())
 		set_one_shot(bool(randi()%2))
-		set_pre_process_time(randf() * 5)
+		set_pre_process_time(randf() * 1)
 		set_speed_scale(randf() * 4)
 		set_explosiveness_ratio(randf())
 		set_randomness_ratio(randf())
@@ -38,7 +37,7 @@ func _process(delta) -> void:
 		CT.set_curve(load("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
 		pm.set_trail_divisor(randi()%12)
 		pm.set_trail_size_modifier(CT)
-		pm.set_trail_color_modifier(load("res://Gradient1.tres"))
+		pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
 		pm.set_emission_shape(randi()%5)
 		pm.set_emission_sphere_radius(randf() * 50)
 		pm.set_emission_box_extents(Vector3(randf() * 50,randf() * 50,randf() * 50))
@@ -54,7 +53,7 @@ func _process(delta) -> void:
 		
 		pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
 		pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
-		pm.set_flag(2,bool(randi()%2))#pm.FLAG_DISABLE_Z,bool(randi()%2))
+		pm.set_flag(pm.FLAG_DISABLE_Z,bool(randi()%2))
 		
 		#Setting last PARAM_ANIM_OFFSET (11) cause GLES 3 error
 		for j in range(11): # range(12):
@@ -69,16 +68,14 @@ func _process(delta) -> void:
 		set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		
 		qq += str(capture_rect())
-		if randi()%7 == 0:
-			restart()
+		restart()
 			
 		if Autoload.WRONG_BUGS:
 			set_emitting(bool(randi()%2))
-			if randi()%7 == 0:
-				set_amount(randi()%300 + 150)
-			set_lifetime(randf() * 1000 - 500)
+			set_amount(randi()%4-2)
+			set_lifetime(randf() - 0.5)
 			set_one_shot(bool(randi()%2))
-			set_pre_process_time(randf() * 1000 - 500)
+			set_pre_process_time(randf() * 1 - 0.5)
 			set_speed_scale(randf() * 1000 - 500)
 			set_explosiveness_ratio(randf() * 1000 - 500)
 			set_randomness_ratio(randf() * 1000 - 500)
@@ -96,7 +93,7 @@ func _process(delta) -> void:
 			CT.set_curve(load("res://RES/Curve" + str(randi() % 1000 - 500) + ".tres"))
 			pm.set_trail_divisor(randi() % 1000 - 500)
 			pm.set_trail_size_modifier(CT)
-			pm.set_trail_color_modifier(load("res://Gradient1.tres"))
+			pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
 			pm.set_emission_shape(randi() % 1000 - 500)
 			pm.set_emission_sphere_radius(randf() * 1000 - 500)
 			pm.set_emission_box_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
@@ -112,7 +109,7 @@ func _process(delta) -> void:
 			
 			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
 			pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
-			pm.set_flag(randi() % 1000 - 500,bool(randi()%2))#pm.FLAG_DISABLE_Z,bool(randi()%2))
+			pm.set_flag(pm.FLAG_DISABLE_Z,bool(randi()%2))
 			
 			
 			for j in range(12): # range(12):
@@ -125,5 +122,4 @@ func _process(delta) -> void:
 			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			qq += str(capture_rect())
-			if randi()%7 == 0:
-				restart()
+			restart()

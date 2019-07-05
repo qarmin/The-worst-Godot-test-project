@@ -25,7 +25,8 @@ func _process(delta) -> void:
 		
 		q_UPNP.clear_devices()
 		#qq += str(q_UPNP.delete_port_mapping( randi()%50, "UDP" ))
-		#qq += str(q_UPNP.discover( randi()%50, randi()%50, "Pozycyjny" ))
+		#if Autoload.SLOW_FUNCTIONS:
+		#	qq += str(q_UPNP.discover( randi()%50, randi()%50, "Pozycyjny" ))
 		
 		#qq += str(q_UPNP.get_device( randi()%50 ))
 		qq += str(q_UPNP.get_device_count())
@@ -45,7 +46,8 @@ func _process(delta) -> void:
 			
 			q_UPNP.clear_devices()
 			qq += str(q_UPNP.delete_port_mapping( randi() % 1000 - 500, "UDP" ))
-			qq += str(q_UPNP.discover( randi() % 1000 - 500, randi() % 1000 - 500, "Pozycyjny" ))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_UPNP.discover( randi() % 1000 - 500, randi() % 1000 - 500, "Pozycyjny" ))
 			
 			qq += str(q_UPNP.get_device( randi() % 1000 - 500 ))
 			qq += str(q_UPNP.get_device_count())

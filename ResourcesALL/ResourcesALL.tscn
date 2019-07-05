@@ -813,6 +813,7 @@ script = ExtResource( 295 )
 script = ExtResource( 296 )
 
 [node name="Image" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 293 )
 
 [node name="InputEvent_CANT" type="Node2D" parent="."]
@@ -948,7 +949,6 @@ script = ExtResource( 387 )
 script = ExtResource( 338 )
 
 [node name="TileSet" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 382 )
 
 [node name="VideoStream" type="Node2D" parent="."]
@@ -1483,6 +1483,7 @@ script = ExtResource( 371 )
 script = ExtResource( 308 )
 
 [node name="Thread" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 356 )
 
 [node name="TriangleMesh_CANT" type="Node2D" parent="."]
