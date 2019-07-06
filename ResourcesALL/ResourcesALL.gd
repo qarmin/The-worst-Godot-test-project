@@ -1,6 +1,6 @@
 extends Node
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.01,0.01)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(0.5,0.5)
 var counter_to_delete : int = 10000000000
 
 func _ready() -> void:

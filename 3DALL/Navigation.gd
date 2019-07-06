@@ -14,7 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		#get_child(0).set_navigation_mesh(NavigationMesh.new())
+		##LEAK get_child(0).set_navigation_mesh(NavigationMesh.new())
 		#get_child(0).set_enabled(bool(randi()%2))
 			
 		set_up_vector(Vector3(randf() * 50,randf() * 50,randf() * 50))
@@ -25,13 +25,13 @@ func _process(delta) -> void:
 		qq += str(get_closest_point_to_segment(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2)))
 		qq += str(get_simple_path(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),bool(randi()%2)))
 		
-		qq += str(navmesh_add(NavigationMesh.new(), Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)), self))
+		#LEAK qq += str(navmesh_add(NavigationMesh.new(), Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)), self))
 		#navmesh_remove(0)
 		#navmesh_set_transform(0,Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		
 		
 		if Autoload.WRONG_BUGS:
-			get_child(0).set_navigation_mesh(NavigationMesh.new())
+			#LEAK get_child(0).set_navigation_mesh(NavigationMesh.new())
 			get_child(0).set_enabled(bool(randi()%2))
 				
 			set_up_vector(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
@@ -42,6 +42,6 @@ func _process(delta) -> void:
 			qq += str(get_closest_point_to_segment(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2)))
 			qq += str(get_simple_path(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2)))
 			
-			qq += str(navmesh_add(NavigationMesh.new(), Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)), get_parent()))
+			#LEAK qq += str(navmesh_add(NavigationMesh.new(), Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)), get_parent()))
 			navmesh_remove(randi() % 1000 - 500)
 			navmesh_set_transform(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))

@@ -23,7 +23,8 @@ func _process(delta) -> void:
 		qq += str(q_Directory.file_exists( "res://Pmr.png" ))
 		
 		qq += str(q_Directory.get_current_dir())
-		qq += str(q_Directory.get_current_drive())
+		if Autoload.SLOW_FUNCTIONS:
+			qq += str(q_Directory.get_current_drive())
 		#qq += str(q_Directory.get_drive( randi()%50))
 		qq += str(q_Directory.get_drive_count())
 		qq += str(q_Directory.get_next())
@@ -32,12 +33,13 @@ func _process(delta) -> void:
 		qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
 		q_Directory.list_dir_end()
 		
-		qq += str(q_Directory.make_dir( "res://Pmr.png" ))
-		qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
-		
-		qq += str(q_Directory.open( "res://Pmr.png" ))
-		qq += str(q_Directory.remove( "res://Pmr.png" ))
-		qq += str(q_Directory.rename( "Dominuje", "Walka" ))
+		if Autoload.SLOW_FUNCTIONS:
+			qq += str(q_Directory.make_dir( "res://Pmr.png" ))
+			qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
+			
+			qq += str(q_Directory.open( "res://Pmr.png" ))
+			qq += str(q_Directory.remove( "res://Pmr.png" ))
+			qq += str(q_Directory.rename( "Dominuje", "Walka" ))
 		
 		if Autoload.WRONG_BUGS:
 			qq += str(q_Directory.change_dir( "Ścieżka" ))
@@ -47,7 +49,8 @@ func _process(delta) -> void:
 			qq += str(q_Directory.file_exists( "res://Pmr.png" ))
 			
 			qq += str(q_Directory.get_current_dir())
-			qq += str(q_Directory.get_current_drive())
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_Directory.get_current_drive())
 			qq += str(q_Directory.get_drive( randi() % 1000 - 500))
 			qq += str(q_Directory.get_drive_count())
 			qq += str(q_Directory.get_next())
@@ -56,9 +59,10 @@ func _process(delta) -> void:
 			qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
 			q_Directory.list_dir_end()
 			
-			qq += str(q_Directory.make_dir( "res://Pmr.png" ))
-			qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
-			
-			qq += str(q_Directory.open( "res://Pmr.png" ))
-			qq += str(q_Directory.remove( "res://Pmr.png" ))
-			qq += str(q_Directory.rename( "Dominuje", "Walka" ))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_Directory.make_dir( "res://Pmr.png" ))
+				qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
+				
+				qq += str(q_Directory.open( "res://Pmr.png" ))
+				qq += str(q_Directory.remove( "res://Pmr.png" ))
+				qq += str(q_Directory.rename( "Dominuje", "Walka" ))

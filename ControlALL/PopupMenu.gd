@@ -12,16 +12,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-#		Vector2(randf() * 50,randf() * 50))
-#		randf() * 50)
-#		bool(randi()%2))
-#		randi()%50)
-#		Color(randf(),randf(),randf(),randf()))
-#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-#		var qq : String = ""
-#		qq += str(
-#		qq = qq
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -135,21 +125,3 @@ func _process(delta) -> void:
 			toggle_item_checked(randi() % 1000 - 500)
 			toggle_item_multistate(randi() % 1000 - 500)
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		emit_signal("about_to_show")
-		emit_signal("popup_hide")
-		
-		emit_signal("id_focused",0)
-		emit_signal("id_pressed",0)
-		emit_signal("index_pressed",0)
-		show()
-		
-

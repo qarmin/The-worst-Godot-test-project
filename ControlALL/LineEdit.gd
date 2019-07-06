@@ -12,16 +12,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-#		Vector2(randf() * 50,randf() * 50))
-#		randf() * 50)
-#		bool(randi()%2))
-#		randi()%50)
-#		Color(randf(),randf(),randf(),randf()))
-#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-#		var qq : String = ""
-#		qq += str(
-#		qq = qq
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -44,7 +34,7 @@ func _process(delta) -> void:
 		append_at_cursor(str(randf()))
 		deselect()
 		qq += str(get_menu())
-		qq += str(menu_option(randi()%MENU_MAX))
+		qq += str(menu_option(randi()%MENU_MAX))#HMMM A LITTLE TOO SLOW
 		select(randi()%2, randi()%10 + 2)
 		select_all()
 		
@@ -70,7 +60,7 @@ func _process(delta) -> void:
 			append_at_cursor(str(randf()))
 			deselect()
 			qq += str(get_menu())
-			qq += str(menu_option(randi() % 1000 - 500))
+			qq += str(menu_option(randi() % 1000 - 500))#HMMM A LITTLE TOO SLOW
 			select(randi() % 1000 - 500,randi() % 1000 - 500)
 			select_all()
 			

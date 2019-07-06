@@ -14,14 +14,14 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_Reference : Reference = Reference.new()
-		
-		qq += str(q_Reference.init_ref())
-		qq += str(q_Reference.reference())
-		qq += str(q_Reference.unreference())
-		
-		if Autoload.WRONG_BUGS:
-		
-			qq += str(q_Reference.init_ref())
-			qq += str(q_Reference.reference())
-			qq += str(q_Reference.unreference())
+#		var q_Reference : Reference = Reference.new()
+#
+#		qq += str(q_Reference.init_ref())
+#		qq += str(q_Reference.reference())
+#		qq += str(q_Reference.unreference())
+#
+#		if Autoload.WRONG_BUGS:
+#
+#			qq += str(q_Reference.init_ref())
+#			qq += str(q_Reference.reference())
+#			qq += str(q_Reference.unreference())

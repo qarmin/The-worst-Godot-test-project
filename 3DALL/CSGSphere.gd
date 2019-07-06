@@ -14,16 +14,15 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		
 		set_radius(randf() * 50)
-		set_radial_segments(randi()%50)
-		set_rings(randi()%50)
+		set_radial_segments(randi()%4)
+		set_rings(randi()%4)
 		set_smooth_faces(bool(randi()%2))
 		set_material(SpatialMaterial.new())
 		
 		if Autoload.WRONG_BUGS:
 			set_radius(randf() * 1000 - 500)
-			set_radial_segments(randi() % 10 - 5)
-			set_rings(randi() % 10 - 5)
+			set_radial_segments(randi() % 4 - 2)
+			set_rings(randi() % 4 - 2)
 			set_smooth_faces(bool(randi()%2))
 			set_material(SpatialMaterial.new())

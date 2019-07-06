@@ -431,7 +431,7 @@
 [node name="Resources" type="Node"]
 script = ExtResource( 2 )
 
-[node name="Reference" type="Node2D" parent="."]
+[node name="Reference_LEAK" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
 [node name="ARVRInterface_CANT" type="Node2D" parent="."]
@@ -1510,7 +1510,7 @@ script = ExtResource( 412 )
 [node name="XMLParser" type="Node2D" parent="."]
 script = ExtResource( 140 )
 
-[node name="ARVRPositionalTracker" type="Node2D" parent="."]
+[node name="ARVRPositionalTracker_LEAK" type="Node2D" parent="."]
 script = ExtResource( 310 )
 
 [node name="ARVRServer_CANT" type="Node2D" parent="."]
@@ -1579,7 +1579,7 @@ script = ExtResource( 318 )
 [node name="JavaScript_CANT" type="Node2D" parent="."]
 script = ExtResource( 350 )
 
-[node name="MainLoop" type="Node2D" parent="."]
+[node name="MainLoop_LEAK" type="Node2D" parent="."]
 script = ExtResource( 351 )
 
 [node name="SceneTree\?" type="Node2D" parent="."]

@@ -54,7 +54,8 @@ func _physics_process(delta) -> void:
 		set_axis_velocity(Vector2(randf() * 50,randf() * 50))
 		if contact_monitor:
 			qq += str(get_colliding_bodies())
-		 qq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
+		if Autoload.SLOW_FUNCTIONS:
+			qq += str(test_motion(Vector2(randf() * 50,randf() * 50)))
 		
 		
 		## With Errors
@@ -97,4 +98,5 @@ func _physics_process(delta) -> void:
 			apply_torque_impulse(randf() * 1000 - 500)
 	
 			set_axis_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			qq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

@@ -12,16 +12,6 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-#		Vector2(randf() * 50,randf() * 50))
-#		randf() * 50)
-#		bool(randi()%2))
-#		randi()%50)
-#		Color(randf(),randf(),randf(),randf()))
-#		load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-#		var qq : String = ""
-#		qq += str(
-#		qq = qq
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
@@ -44,15 +34,18 @@ func _process(delta) -> void:
 		set_scrolling_enabled(bool(randi()%2))
 		set_drag_to_rearrange_enabled(bool(randi()%2))
 		
-		
 		move_tab(randi() % 2, randi() % 2 + 3)
-		remove_tab(randi() % get_tab_count())
+		
+		#MOVED remove_tab(randi() % get_tab_count())
 		
 		set_select_with_rmb(bool(randi()%2))
 		set_tab_disabled(randi() % get_tab_count(),bool(randi()%2))
 		set_tab_icon(randi() % get_tab_count(),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_tab_title(randi() % get_tab_count(),str(randi()%50))
 		set_tabs_rearrange_group(randi()%50)
+		
+		for _i in range(get_tab_count()):
+			remove_tab(randi() % get_tab_count())
 		
 		if Autoload.WRONG_BUGS:
 			for _i in range(10):
@@ -64,7 +57,7 @@ func _process(delta) -> void:
 			qq += str(get_tab_disabled(randi() % 1000 - 500))
 			qq += str(get_tab_icon(randi() % 1000 - 500))
 			qq += str(get_tab_offset())
-			#qq += str(get_tab_rect(randi() % 1000 - 500))
+			qq += str(get_tab_rect(randi() % 1000 - 500))
 			qq += str(get_tab_title(randi() % 1000 - 500))
 			qq += str(get_tabs_rearrange_group())
 			
@@ -76,10 +69,13 @@ func _process(delta) -> void:
 			
 			
 			move_tab(randi() % 1000 - 500, randi() % 1000 - 500)
-			remove_tab(randi() % 1000 - 500)
+			#MOVED remove_tab(randi() % get_tab_count())
 			
 			set_select_with_rmb(bool(randi()%2))
 			set_tab_disabled(randi() % 1000 - 500,bool(randi()%2))
 			set_tab_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_tab_title(randi() % 1000 - 500,str(randi()%50))
 			set_tabs_rearrange_group(randi() % 1000 - 500)
+			
+			for _i in range(get_tab_count()):
+				remove_tab(randi() % get_tab_count())

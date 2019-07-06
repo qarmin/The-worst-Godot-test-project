@@ -141,7 +141,6 @@ script = ExtResource( 13 )
 script = ExtResource( 14 )
 
 [node name="CPUParticles_ALL" type="CPUParticles" parent="."]
-visible = false
 mesh = SubResource( 2 )
 angular_velocity = 4.56529e-41
 script = ExtResource( 15 )
@@ -202,7 +201,6 @@ script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67796, -20.5468 )
-visible = false
 visibility_aabb = AABB( -11.0782, -6.47799, -3.54041, 22.1564, 12.956, 7.08083 )
 process_material = SubResource( 11 )
 draw_pass_1 = SubResource( 12 )
@@ -327,10 +325,10 @@ __meta__ = {
 [node name="Listener" type="Listener" parent="."]
 script = ExtResource( 51 )
 
-[node name="Navigation" type="Navigation" parent="."]
+[node name="Navigation_LEAK" type="Navigation" parent="."]
 script = ExtResource( 53 )
 
-[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation"]
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
 navmesh = SubResource( 14 )
 

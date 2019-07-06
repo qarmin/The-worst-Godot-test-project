@@ -6,12 +6,10 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-
 func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
 	qq = qq
-	
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
@@ -23,10 +21,6 @@ func _process(delta) -> void:
 		popup_centered_minsize(Vector2(randf() * 5,randf() * 5))
 		popup_centered_ratio(randf())
 		
-		emit_signal("about_to_show")
-		emit_signal("popup_hide")
-		show()
-		
 		if Autoload.WRONG_BUGS:
 			set_exclusive(bool(randi()%2))
 			popup(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
@@ -35,6 +29,3 @@ func _process(delta) -> void:
 			popup_centered_minsize(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			popup_centered_ratio(randf() * 1000 - 500)
 			
-			emit_signal("about_to_show")
-			emit_signal("popup_hide")
-			show()
