@@ -18,9 +18,9 @@ func _process(delta) -> void:
 		
 		q_AudioEffectRecord.set_format(randi() % 3) #Format
 		
-		qq += str(q_AudioEffectRecord.get_recording())
+		#qq += str(q_AudioEffectRecord.get_recording())
 		qq += str(q_AudioEffectRecord.is_recording_active())
-		q_AudioEffectRecord.set_recording_active( bool(randi()%2))
+		#q_AudioEffectRecord.set_recording_active( bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
 			q_AudioEffectRecord.set_format(randi() % 1000 - 500) #Format

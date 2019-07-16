@@ -17,8 +17,8 @@ func _process(delta) -> void:
 		var q_AudioEffectEQ : AudioEffectEQ = AudioEffectEQ.new()
 		
 		qq += str(q_AudioEffectEQ.get_band_count())
-		qq += str(q_AudioEffectEQ.get_band_gain_db( randi()%50 ))
-		q_AudioEffectEQ.set_band_gain_db( randi()%50, randi()%50)
+		#qq += str(q_AudioEffectEQ.get_band_gain_db( randi()%50 ))
+		#q_AudioEffectEQ.set_band_gain_db( randi()%50, randi()%50)
 
 		
 		if Autoload.WRONG_BUGS:

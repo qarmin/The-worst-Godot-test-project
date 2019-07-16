@@ -18,6 +18,5 @@ func _process(delta) -> void:
 		
 		q_AnimationNodeAnimation.set_animation("Lewandowski")
 		
-		
 		if Autoload.WRONG_BUGS:
 			q_AnimationNodeAnimation.set_animation("Lewandowski")

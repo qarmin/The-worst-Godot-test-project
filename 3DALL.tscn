@@ -233,6 +233,7 @@ script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0577, 0, -49.5921 )
+visible = false
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
@@ -240,6 +241,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4649, 3.87396, -64.5134 )
 shape = SubResource( 13 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
+visible = false
 script = ExtResource( 40 )
 
 [node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
@@ -247,6 +249,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
+visible = false
 script = ExtResource( 38 )
 
 [node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
@@ -254,6 +257,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+visible = false
 script = ExtResource( 39 )
 
 [node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
@@ -261,6 +265,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
+visible = false
 script = ExtResource( 41 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
@@ -276,6 +281,7 @@ shape = SubResource( 13 )
 [node name="VehicleWheel 4" type="VehicleWheel" parent="VehicleBody"]
 
 [node name="StaticBody" type="StaticBody" parent="."]
+visible = false
 script = ExtResource( 42 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]
@@ -283,37 +289,45 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
 shape = SubResource( 13 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+visible = false
 script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
+visible = false
 script = ExtResource( 44 )
 
 [node name="ConeTwistJoint" type="ConeTwistJoint" parent="."]
+visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/VehicleBody")
 script = ExtResource( 47 )
 
 [node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
+visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/PhysicalBone")
 script = ExtResource( 46 )
 
 [node name="HingeJoint" type="HingeJoint" parent="."]
+visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/PhysicalBone")
 script = ExtResource( 45 )
 
 [node name="PinJoint" type="PinJoint" parent="."]
+visible = false
 nodes/node_a = NodePath("../Spatial/Area")
 nodes/node_b = NodePath("../Spatial/KinematicBody")
 script = ExtResource( 49 )
 
 [node name="SliderJoint" type="SliderJoint" parent="."]
+visible = false
 nodes/node_a = NodePath("../Spatial/VehicleBody")
 nodes/node_b = NodePath("../Spatial/StaticBody")
 script = ExtResource( 48 )
 
 [node name="GridMap" type="GridMap" parent="."]
+visible = false
 data = {
 "cells": PoolIntArray(  )
 }
@@ -323,9 +337,11 @@ __meta__ = {
 }
 
 [node name="Listener" type="Listener" parent="."]
+visible = false
 script = ExtResource( 51 )
 
 [node name="Navigation_LEAK" type="Navigation" parent="."]
+visible = false
 script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
@@ -334,6 +350,7 @@ navmesh = SubResource( 14 )
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
+visible = false
 curve = SubResource( 15 )
 script = ExtResource( 52 )
 
@@ -341,24 +358,30 @@ script = ExtResource( 52 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.851509, -11.6767 )
 
 [node name="Position3D" type="Position3D" parent="."]
+visible = false
 script = ExtResource( 54 )
 
 [node name="Camera 2" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
+visible = false
 current = true
 script = ExtResource( 16 )
 
 [node name="ProximityGroup" type="ProximityGroup" parent="."]
+visible = false
 script = ExtResource( 59 )
 
 [node name="RayCast" type="RayCast" parent="."]
+visible = false
 script = ExtResource( 57 )
 
 [node name="RemoteTransform" type="RemoteTransform" parent="."]
+visible = false
 remote_path = NodePath("../Camera")
 script = ExtResource( 55 )
 
 [node name="Skeleton" type="Skeleton" parent="."]
+visible = false
 bones_in_world_transform = true
 script = ExtResource( 56 )
 
@@ -383,10 +406,13 @@ shape = SubResource( 16 )
 shape = SubResource( 16 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
+visible = false
 script = ExtResource( 61 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+visible = false
 script = ExtResource( 58 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
+visible = false
 script = ExtResource( 60 )

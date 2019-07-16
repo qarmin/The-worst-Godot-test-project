@@ -78,7 +78,7 @@ func _process(delta) -> void:
 		q_Animation.track_set_interpolation_type(1, randi() % 3) # InterpolationType
 		#q_Animation.track_set_key_time(1,2,bool(randi()%2))
 		#q_Animation.track_set_key_transition(1,2,bool(randi()%2))
-		q_Animation.track_set_key_value(1,2,randf() * 50)
+		#q_Animation.track_set_key_value(1,2,randf() * 50)
 		q_Animation.track_set_path(1,".")
 		#q_Animation.track_swap(randi()%50,randi()%50)
 		#qq += str(q_Animation.transform_track_insert_key(randi()%50,randf() * 50,Vector3(randf() * 50,randf() * 50,randf() * 50),Quat(Vector3(randf() * 50,randf() * 50,randf() * 50),randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))

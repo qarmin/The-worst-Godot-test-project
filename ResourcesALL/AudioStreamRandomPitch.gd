@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_AudioStreamRandomPitch : AudioStreamRandomPitch = AudioStreamRandomPitch.new()
 		
-		q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+		#q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
 		q_AudioStreamRandomPitch.set_random_pitch(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:

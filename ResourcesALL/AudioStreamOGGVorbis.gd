@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_AudioStreamOGGVorbis : AudioStreamOGGVorbis = AudioStreamOGGVorbis.new()
 		
-		q_AudioStreamOGGVorbis.set_data(PoolByteArray([1241,214,124,214,214,12,412,421,215,2151251,251,25125,215,125,21,512,512,512,5215]))
+		#q_AudioStreamOGGVorbis.set_data(PoolByteArray([1241,214,124,214,214,12,412,421,215,2151251,251,25125,215,125,21,512,512,512,5215]))
 		q_AudioStreamOGGVorbis.set_loop(bool(randi()%2))
 		q_AudioStreamOGGVorbis.set_loop_offset(randf() * 50)
 		

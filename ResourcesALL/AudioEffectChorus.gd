@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		
 		var q_AudioEffectChorus : AudioEffectChorus = AudioEffectChorus.new()
 		
-		q_AudioEffectChorus.set_voice_count(randi()%50)
+		#q_AudioEffectChorus.set_voice_count(randi()%50 + 1)
 		q_AudioEffectChorus.set_dry(randf() * 50)
 		q_AudioEffectChorus.set_wet(randf() * 50)
 		for i in range(4):

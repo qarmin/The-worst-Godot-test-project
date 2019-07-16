@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		
 		q_AStar.add_point(0, Vector3(randf() * 50,randf() * 50,randf() * 50), randf() * 50 + 1)
 		qq += str(q_AStar.are_points_connected(0,1))
-		q_AStar.clear()
+		#q_AStar.clear()
 		#q_AStar.connect_points(0,1,bool(randi()%2))
 		#q_AStar.disconnect_points(0,1)
 		
@@ -36,7 +36,7 @@ func _process(delta) -> void:
 		qq += str(q_AStar.get_points())
 
 		qq += str(q_AStar.has_point(0))
-		qq += str(q_AStar.is_point_disabled(0))
+		#qq += str(q_AStar.is_point_disabled(0))
 		#q_AStar.remove_point(0)
 
 		q_AStar.set_point_disabled(0,bool(randi()%2))

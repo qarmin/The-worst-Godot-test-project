@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		#set_theme(MeshLibrary.new())
 		set_mesh_library(MeshLibrary.new())
 		set_cell_size(Vector3(randf() * 50 + 1,randf() * 50 + 1,randf() * 50 + 1))
-		set_octant_size(randi()%50)
+		set_octant_size(randi()%50 + 1)
 		set_center_x(bool(randi()%2))
 		set_center_y(bool(randi()%2))
 		set_center_z(bool(randi()%2))
