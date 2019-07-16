@@ -428,7 +428,7 @@
 [ext_resource path="res://ResourcesALL/MultiplayerAPI.gd" type="Script" id=426]
 [ext_resource path="res://ResourcesALL/NavigationMesh.gd" type="Script" id=427]
 
-[node name="Resources" type="Node"]
+[node name="Resources" type="Node2D"]
 script = ExtResource( 2 )
 
 [node name="Reference_LEAK" type="Node2D" parent="."]
@@ -452,7 +452,7 @@ script = ExtResource( 7 )
 [node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 33 )
 
-[node name="AnimatedTexture_BUG" type="Node2D" parent="."]
+[node name="AnimatedTexture" type="Node2D" parent="."]
 script = ExtResource( 38 )
 
 [node name="AtlasTexture" type="Node2D" parent="."]
@@ -813,7 +813,6 @@ script = ExtResource( 295 )
 script = ExtResource( 296 )
 
 [node name="Image" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 293 )
 
 [node name="InputEvent_CANT" type="Node2D" parent="."]
@@ -1483,7 +1482,6 @@ script = ExtResource( 371 )
 script = ExtResource( 308 )
 
 [node name="Thread" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 356 )
 
 [node name="TriangleMesh_CANT" type="Node2D" parent="."]
@@ -1624,7 +1622,7 @@ script = ExtResource( 373 )
 [node name="TreeItem_TODO" type="Node2D" parent="."]
 script = ExtResource( 366 )
 
-[node name="UndoRedo" type="Node2D" parent="."]
+[node name="UndoRedo_LEAK" type="Node2D" parent="."]
 script = ExtResource( 422 )
 
 [node name="VisualScriptEditor_CANT" type="Node2D" parent="."]

@@ -35,6 +35,7 @@ formats/gzip/compression_level=9
 
 [debug]
 
+settings/profiler/max_functions=65535
 settings/fps/force_fps=120
 settings/stdout/print_fps=true
 gdscript/completion/autocomplete_setters_and_getters=true
@@ -77,6 +78,13 @@ file_logging/max_log_files=30
 
 limits/multithreaded_server/rid_pool_prealloc=100
 limits/message_queue/max_size_kb=131072
+
+[network]
+
+limits/packet_peer_stream/max_buffer_po2=1
+limits/debugger_stdout/max_chars_per_second=1
+limits/debugger_stdout/max_messages_per_frame=1
+limits/debugger_stdout/max_errors_per_frame=1
 
 [node]
 

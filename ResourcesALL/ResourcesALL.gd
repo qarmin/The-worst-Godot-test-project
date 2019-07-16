@@ -1,9 +1,11 @@
-extends Node
+extends Node2D
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.5,0.5)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(4.4,4.5)
 var counter_to_delete : int = 10000000000
 
 func _ready() -> void:
+	if !is_visible():
+		queue_free()
 	if Autoload.BASIC_COUTER > 0:
 		counter_to_delete = Autoload.BASIC_COUTER
 	for i in get_children():

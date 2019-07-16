@@ -1,9 +1,11 @@
 extends GridContainer
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.1)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(0.3,0.4)
 var counter_to_delete : int = 10000000000
 
 func _ready() -> void:
+	if !is_visible():
+		queue_free()
 	if Autoload.BASIC_COUTER > 0:
 		counter_to_delete = Autoload.BASIC_COUTER
 	for i in get_children():
