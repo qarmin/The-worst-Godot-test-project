@@ -81,9 +81,9 @@ limits/message_queue/max_size_kb=131072
 
 [network]
 
-limits/debugger_stdout/max_chars_per_second=0
-limits/debugger_stdout/max_messages_per_frame=0
-limits/debugger_stdout/max_errors_per_frame=0
+limits/debugger_stdout/max_chars_per_second=5
+limits/debugger_stdout/max_messages_per_frame=5
+limits/debugger_stdout/max_errors_per_frame=5
 
 [node]
 
@@ -107,6 +107,7 @@ name_num_separator=1
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 quality/shading/force_vertex_shading=true

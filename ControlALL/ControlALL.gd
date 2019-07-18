@@ -1,6 +1,6 @@
 extends GridContainer
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.3,0.4)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.2)
 var counter_to_delete : int = 10000000000
 
 func _ready() -> void:

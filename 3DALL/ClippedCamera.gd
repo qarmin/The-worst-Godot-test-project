@@ -20,11 +20,11 @@ func _process(delta) -> void:
 		set_clip_to_bodies(bool(randi()%2))
 		
 		add_exception(get_parent())
-		#add_exception_rid()
+		add_exception_rid(RID())
 		clear_exceptions()
 		qq += str(get_collision_mask_bit(randi() % 20))
 		remove_exception(get_parent())
-		#remove_exception_rid(RID(DynamicFont.new()))
+		remove_exception_rid(RID())
 		set_collision_mask_bit(randi()%20,bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:

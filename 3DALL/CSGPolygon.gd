@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
-#		set_mode(randi() % 3) # Mode
+		set_mode(randi() % 3) # Mode
 		set_depth(randf() * 50)
 		set_spin_degrees(randf() * 50)
 		set_spin_sides(randi()%50 + 3)
