@@ -345,8 +345,8 @@ position = Vector2( 201.113, 134.18 )
 occluder = SubResource( 12 )
 script = ExtResource( 21 )
 
-[node name="Line2D" type="Line2D" parent="."]
-texture_mode = 273590176
+[node name="Line2D_INVALID" type="Line2D" parent="."]
+visible = false
 script = ExtResource( 22 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
