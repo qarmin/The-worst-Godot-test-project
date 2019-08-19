@@ -1,0 +1,4 @@
+[gd_resource type="InputEventAction" format=2]
+
+[resource]
+action = "gasf"

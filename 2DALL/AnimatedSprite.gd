@@ -107,7 +107,7 @@ func _process(delta) -> void:
 		qq += str(is_visible_in_tree())
 		
 		qq += str(make_canvas_position_local(Vector2(randf() * 50,randf() * 50)))
-		#make_input_local(InputEvent.new())
+		qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
 		
 		set_as_toplevel(bool(randi()%2))
 		set_notify_local_transform(bool(randi()%2))
@@ -211,7 +211,7 @@ func _process(delta) -> void:
 			qq += str(is_visible_in_tree())
 			
 			qq += str(make_canvas_position_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-			#make_input_local(InputEvent.new())
+			qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
 			
 			set_as_toplevel(bool(randi()%2))
 			set_notify_local_transform(bool(randi()%2))

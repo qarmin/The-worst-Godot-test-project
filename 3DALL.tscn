@@ -1,4 +1,4 @@
-[gd_scene load_steps=64 format=2]
+[gd_scene load_steps=109 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -16,6 +16,13 @@
 [ext_resource path="res://3DALL/Sprite3D.gd" type="Script" id=14]
 [ext_resource path="res://3DALL/CPUParticles.gd" type="Script" id=15]
 [ext_resource path="res://3DALL/AAAAAAAAAAAAA.gd" type="Script" id=16]
+[ext_resource path="res://3DALL/CSGCombiner.gd" type="Script" id=17]
+[ext_resource path="res://3DALL/CSGSphere.gd" type="Script" id=18]
+[ext_resource path="res://3DALL/CSGPolygon.gd" type="Script" id=19]
+[ext_resource path="res://3DALL/CSGBox_CSGS_CSGP.gd" type="Script" id=20]
+[ext_resource path="res://3DALL/CSGMesh.gd" type="Script" id=21]
+[ext_resource path="res://3DALL/CSGCylinder.gd" type="Script" id=22]
+[ext_resource path="res://3DALL/CSGTorus.gd" type="Script" id=23]
 [ext_resource path="res://3DALL/ImmediateGeometry.gd" type="Script" id=24]
 [ext_resource path="res://3DALL/Particles.gd" type="Script" id=25]
 [ext_resource path="res://3DALL/MeshInstance.gd" type="Script" id=26]
@@ -28,6 +35,7 @@
 [ext_resource path="res://3DALL/GIProbe.gd" type="Script" id=33]
 [ext_resource path="res://3DALL/RootMotionView.gd" type="Script" id=34]
 [ext_resource path="res://3DALL/ReflectionProbe.gd" type="Script" id=35]
+[ext_resource path="res://3DALL/GridMap.gd" type="Script" id=36]
 [ext_resource path="res://3DALL/Area.gd" type="Script" id=37]
 [ext_resource path="res://3DALL/PhysicalBone.gd" type="Script" id=38]
 [ext_resource path="res://3DALL/RigidBody.gd" type="Script" id=39]
@@ -36,11 +44,7 @@
 [ext_resource path="res://3DALL/StaticBody.gd" type="Script" id=42]
 [ext_resource path="res://3DALL/AudioStreamPlayer3D.gd" type="Script" id=43]
 [ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=44]
-[ext_resource path="res://3DALL/HingeJoint.gd" type="Script" id=45]
-[ext_resource path="res://3DALL/Generic6DOFJoint.gd" type="Script" id=46]
-[ext_resource path="res://3DALL/ConeTwistJoint.gd" type="Script" id=47]
-[ext_resource path="res://3DALL/SliderJoint.gd" type="Script" id=48]
-[ext_resource path="res://3DALL/PinJoint.gd" type="Script" id=49]
+[ext_resource path="res://icon.png" type="Texture" id=50]
 [ext_resource path="res://3DALL/Listener.gd" type="Script" id=51]
 [ext_resource path="res://3DALL/Path.gd" type="Script" id=52]
 [ext_resource path="res://3DALL/Navigation.gd" type="Script" id=53]
@@ -53,7 +57,17 @@
 [ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
 [ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
 
-[sub_resource type="SpriteFrames" id=1]
+[sub_resource type="Environment" id=1]
+
+[sub_resource type="Environment" id=2]
+
+[sub_resource type="Environment" id=3]
+
+[sub_resource type="Environment" id=4]
+
+[sub_resource type="ShaderMaterial" id=5]
+
+[sub_resource type="SpriteFrames" id=6]
 animations = [ {
 "frames": [ ExtResource( 12 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 9 ), ExtResource( 11 ) ],
 "loop": true,
@@ -61,238 +75,879 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CubeMesh" id=2]
+[sub_resource type="ShaderMaterial" id=7]
 
-[sub_resource type="SpatialMaterial" id=3]
+[sub_resource type="CubeMesh" id=8]
 
-[sub_resource type="QuadMesh" id=4]
+[sub_resource type="SpatialMaterial" id=9]
 
-[sub_resource type="CubeMesh" id=5]
+[sub_resource type="SpatialMaterial" id=10]
 
-[sub_resource type="ParticlesMaterial" id=6]
+[sub_resource type="SpatialMaterial" id=11]
+
+[sub_resource type="CapsuleMesh" id=12]
+material = SubResource( 11 )
+radius = 1.272
+mid_height = 0.001
+radial_segments = 4
+rings = 2
+
+[sub_resource type="CameraTexture" id=13]
+camera_feed_id = 1
+which_feed = 1
+
+[sub_resource type="SpatialMaterial" id=14]
+roughness_texture = SubResource( 13 )
+roughness_texture_channel = 1
+
+[sub_resource type="SpatialMaterial" id=15]
+
+[sub_resource type="SpatialMaterial" id=16]
+
+[sub_resource type="SpatialMaterial" id=17]
+
+[sub_resource type="SpatialMaterial" id=18]
+
+[sub_resource type="QuadMesh" id=19]
+
+[sub_resource type="VisualShader" id=20]
+
+[sub_resource type="ShaderMaterial" id=21]
+shader = SubResource( 20 )
+
+[sub_resource type="ParticlesMaterial" id=22]
+next_pass = SubResource( 21 )
+
+[sub_resource type="ParticlesMaterial" id=23]
+next_pass = SubResource( 22 )
+
+[sub_resource type="CanvasItemMaterial" id=24]
+next_pass = SubResource( 23 )
+
+[sub_resource type="ParticlesMaterial" id=25]
+next_pass = SubResource( 24 )
+
+[sub_resource type="CanvasItemMaterial" id=26]
+next_pass = SubResource( 25 )
+blend_mode = 1
+light_mode = 2
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 6
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=27]
+next_pass = SubResource( 26 )
+
+[sub_resource type="SpatialMaterial" id=28]
+render_priority = 6
+next_pass = SubResource( 27 )
+
+[sub_resource type="CanvasItemMaterial" id=29]
+render_priority = 6
+next_pass = SubResource( 28 )
+blend_mode = 1
+light_mode = 1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 6
+particles_anim_loop = true
+
+[sub_resource type="VisualShader" id=30]
+
+[sub_resource type="ShaderMaterial" id=31]
+render_priority = 8
+next_pass = SubResource( 29 )
+shader = SubResource( 30 )
+
+[sub_resource type="VisualShader" id=32]
+
+[sub_resource type="ShaderMaterial" id=33]
+shader = SubResource( 32 )
+
+[sub_resource type="CubeMesh" id=34]
+
+[sub_resource type="SpatialMaterial" id=35]
+detail_enabled = true
+detail_blend_mode = 1
+detail_uv_layer = 0
+uv1_scale = Vector3( 2.4, 1, 1 )
+uv1_offset = Vector3( 0, -0.74, 0 )
+uv2_scale = Vector3( 2.88, 2.16, 1.53 )
+uv2_offset = Vector3( -0.51, 0.47, -0.53 )
+uv2_triplanar = true
+uv2_triplanar_sharpness = 0.129408
+
+[sub_resource type="CubeMesh" id=36]
+
+[sub_resource type="MultiMesh" id=37]
+color_format = 2
+transform_format = 1
+custom_data_format = 2
+instance_count = 15
+visible_instance_count = 121212
+mesh = SubResource( 36 )
+transform_array = PoolVector3Array( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
+color_array = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+custom_data_array = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+
+[sub_resource type="ParticlesMaterial" id=38]
+render_priority = 7
 angular_velocity = 2.36936e-38
 
-[sub_resource type="CubeMesh" id=7]
+[sub_resource type="CubeMesh" id=39]
 
-[sub_resource type="BoxShape" id=8]
+[sub_resource type="BakedLightmapData" id=40]
+energy = 5.7
+
+[sub_resource type="GIProbeData" id=41]
+
+[sub_resource type="BoxShape" id=42]
+margin = 0.5
 extents = Vector3( 1, 26.5038, 3.22286 )
 
-[sub_resource type="NavigationMesh" id=9]
+[sub_resource type="PhysicsMaterial" id=43]
+friction = -9.2
+rough = true
+bounce = -2.65
+absorbent = true
 
-[sub_resource type="Curve3D" id=10]
+[sub_resource type="PhysicsMaterial" id=44]
+
+[sub_resource type="PhysicsMaterial" id=45]
+friction = 3.53
+rough = true
+bounce = 0.82
+
+[sub_resource type="AudioStreamGenerator" id=46]
+mix_rate = 44095.0
+buffer_length = 7.1
+
+[sub_resource type="MeshLibrary" id=47]
+
+[sub_resource type="NavigationMesh" id=48]
+sample_partition_type/sample_partition_type = 2
+geometry/parsed_geometry_type = 1
+geometry/collision_mask = 4294967295
+cell/size = 0.5
+cell/height = 5.1
+agent/height = 4.2
+agent/radius = 5.8
+agent/max_climb = 6.2
+agent/max_slope = 0.0
+region/min_size = 15.6
+region/merge_size = 24.8
+edge/max_length = 17.4
+edge/max_error = 0.1
+polygon/verts_per_poly = 9.0
+detail/sample_distance = 0.0
+detail/sample_max_error = 6.7
+filter/low_hanging_obstacles = true
+filter/ledge_spans = true
+filter/filter_walkable_low_height_spans = true
+
+[sub_resource type="Curve3D" id=49]
+bake_interval = 10.0
 _data = {
-"points": PoolVector3Array(  ),
-"tilts": PoolRealArray(  )
+"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007, 0, 0, 0, 0, 0, 0, -18.4839, 0.381447, -2.2567, 0, 0, 0, 0, 0, 0, -9.25256, -1.66295, 1.34504, 0, 0, 0, 0, 0, 0, 14.3498, 1.51124, -0.660617, 0, 0, 0, 0, 0, 0, 16.5666, 7.48303, -8.42252, 0, 0, 0, 0, 0, 0, 5.21951, 11.8408, -15.3123, 0, 0, 0, 0, 0, 0, -6.34309, 13.0513, -18.0214, 0, 0, 0, 0, 0, 0, -22.2367, 9.90402, -15.3228, 0, 0, 0, 0, 0, 0, -5.97389, 1.40365, -2.43845, 0, 0, 0, 0, 0, 0, 1.22511, 4.12054, -5.38451, 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007 ),
+"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
 
-[sub_resource type="BoxShape" id=11]
+[sub_resource type="Environment" id=50]
+fog_enabled = true
+fog_sun_color = Color( 0.701961, 0.658824, 0.572549, 1 )
+fog_depth_curve = 2.14355
+
+[sub_resource type="BoxShape" id=51]
+margin = 1.21
+extents = Vector3( 1, 1.77, 1.71 )
+
+[sub_resource type="BoxShape" id=52]
+margin = 10.0
+extents = Vector3( 6.25, -20.56, 3.16 )
 
 [node name="3DALL" type="Spatial"]
 script = ExtResource( 1 )
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
+world_scale = 1000.0
 script = ExtResource( 2 )
 
 [node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
-transform = Transform( 1, 0, 0, 0, 0.866025, 0.5, 0, -0.5, 0.866025, 0, 2.8471, 5.29913 )
+transform = Transform( 1, 0, 0, 8.35, 0.866, 0.5, 0, -0.5, 0.866, 0, 2.847, 5.299 )
+keep_aspect = 0
+environment = SubResource( 1 )
+h_offset = -68.25
+v_offset = -27.67
+doppler_tracking = 2
+projection = 1
+current = true
+size = 16004.7
+near = 8192.0
+far = 8192.0
 script = ExtResource( 4 )
 
 [node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
+anchor_id = 32
 script = ExtResource( 5 )
 
 [node name="ARVRController" type="ARVRController" parent="ARVROrigin"]
+controller_id = 32
 script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-visible = false
+keep_aspect = 0
+environment = SubResource( 2 )
+h_offset = 10000.0
+v_offset = -13.05
+doppler_tracking = 1
+projection = 2
+current = true
+size = 16170.0
+frustum_offset = Vector2( 1000, -40000 )
+near = 8192.0
+far = 8192.0
 script = ExtResource( 6 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
-transform = Transform( 1, 0, 0, 0, 0.965926, 0.258819, 0, -0.258819, 0.965926, 0, 1.67803, 7.35442 )
-fov = 103.32
+transform = Transform( -1, 0, 0, 0, -0.965926, -0.258819, 0, 0.258819, -0.965926, 0, 1.67803, 7.35442 )
+keep_aspect = 0
+environment = SubResource( 3 )
+h_offset = 10000.0
+v_offset = 10000.0
+doppler_tracking = 1
+projection = 1
+current = true
+fov = 41.6343
+size = 15954.2
+near = 8192.0
+far = 8192.0
+margin = 32.0
+process_mode = 1
 script = ExtResource( 7 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.307571, 6.51298 )
+keep_aspect = 0
+environment = SubResource( 4 )
+h_offset = 0.31
+v_offset = 30.24
+doppler_tracking = 1
+projection = 1
+current = true
+size = 16384.0
+near = 8192.0
+far = 8192.0
+target = NodePath("../ARVROrigin/ARVRController")
+speed = 10000.0
+enabled = true
 script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-frames = SubResource( 1 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.77516, 0.98628, 5.49265 )
+material_override = SubResource( 5 )
+cast_shadow = 0
+extra_cull_margin = 16384.0
+use_in_baked_light = true
+lod_min_distance = 31634.0
+lod_min_hysteresis = 32768.0
+lod_max_distance = 32087.0
+lod_max_hysteresis = 32768.0
+centered = false
+offset = Vector2( 111111, -111141 )
+flip_h = true
+flip_v = true
+modulate = Color( 0.47451, 0.227451, 0.227451, 1 )
+opacity = 0.0
+pixel_size = 128.0
+axis = 0
+transparent = false
+shaded = true
+double_sided = false
+alpha_cut = 1
+frames = SubResource( 6 )
+playing = true
 script = ExtResource( 13 )
 
 [node name="Sprite3D_SB" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -12.4854, -0.0179501, -362.898 )
+material_override = SubResource( 7 )
+cast_shadow = 0
+extra_cull_margin = 16384.0
+use_in_baked_light = true
+centered = false
+offset = Vector2( 13.68, 8.79 )
+flip_h = true
+flip_v = true
+opacity = 0.0
+pixel_size = 128.0
+axis = 0
+transparent = false
+shaded = true
+double_sided = false
+alpha_cut = 2
+texture = ExtResource( 50 )
+vframes = 3
+hframes = 2
+frame = 5
 script = ExtResource( 14 )
 
 [node name="CPUParticles_ALL" type="CPUParticles" parent="."]
-mesh = SubResource( 2 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.612776, -3.8147e-06, -0.617956 )
+extra_cull_margin = 16384.0
+lod_min_distance = 32768.0
+lod_min_hysteresis = 32768.0
+lod_max_distance = 32768.0
+lod_max_hysteresis = 32768.0
+emitting = false
+amount = 16
+lifetime = 600.0
+one_shot = true
+preprocess = 600.0
+speed_scale = 64.0
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 1.0
+fixed_fps = 563
+draw_order = 1
+mesh = SubResource( 8 )
+emission_shape = 1
+emission_sphere_radius = 1.0
+emission_points = PoolVector3Array( -3.99, -2.36, -4.83, 0, 5.63, 2.24, 0, 0.63, 0, 1.95, 5.39, 1.75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+emission_colors = PoolColorArray( 0.541176, 0.156863, 0.156863, 1, 0.701961, 0.580392, 0.580392, 1, 0.211765, 0.203922, 0.54902, 1, 0.278431, 0.494118, 0.160784, 1, 0.686275, 0.6, 0.262745, 1, 0.141176, 0.054902, 0.0941176, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1 )
+flag_align_y = true
+flag_rotate_y = true
+flag_disable_z = true
+direction = Vector3( 2.27, -1.77, 1.36 )
+spread = 180.0
+flatness = 1.0
+initial_velocity = 1000.0
+initial_velocity_random = 1.0
 angular_velocity = 4.56529e-41
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+orbit_velocity_curve = null
+hue_variation = 1.0
+hue_variation_random = 1.0
+anim_speed = 9.8
+anim_speed_random = 1.0
+anim_offset = 1.0
+anim_offset_random = 1.0
 script = ExtResource( 15 )
 
+[node name="CSGBox_CSGS_CSGP" type="CSGBox" parent="."]
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+width = 1000.0
+height = 1000.0
+depth = 0.001
+material = SubResource( 9 )
+script = ExtResource( 20 )
+
+[node name="CSGCylinder" type="CSGCylinder" parent="."]
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+radius = 1000.0
+height = 1000.0
+sides = 5
+cone = true
+material = SubResource( 10 )
+script = ExtResource( 22 )
+
+[node name="CSGMesh" type="CSGMesh" parent="."]
+transform = Transform( 0.689013, 0, 0.724749, 0, 1, 0, -0.724749, 0, 0.689013, -1.56465, 0.452006, -3.75818 )
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+mesh = SubResource( 12 )
+material = SubResource( 14 )
+script = ExtResource( 21 )
+
+[node name="CSGPolygon" type="CSGPolygon" parent="."]
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+polygon = PoolVector2Array( 1.3, 0.59, 1, 0.06, 1, -6.56, 0, 0, 0, 0, 0, 0 )
+mode = 1
+spin_degrees = 360.0
+spin_sides = 9
+smooth_faces = true
+material = SubResource( 15 )
+script = ExtResource( 19 )
+
+[node name="CSGSphere" type="CSGSphere" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.02108, 0.489235, 5.41779 )
+operation = 2
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+radius = 100.0
+radial_segments = 7
+rings = 4
+material = SubResource( 16 )
+script = ExtResource( 18 )
+
+[node name="CSGTorus" type="CSGTorus" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.626133, 0.355808, 0.128424 )
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+invert_faces = true
+inner_radius = 1000.0
+outer_radius = 0.001
+sides = 5
+ring_sides = 3
+smooth_faces = false
+material = SubResource( 17 )
+script = ExtResource( 23 )
+
+[node name="CSGCombiner" type="CSGCombiner" parent="."]
+operation = 1
+snap = 1.0
+calculate_tangents = false
+use_collision = true
+script = ExtResource( 17 )
+
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
-material_override = SubResource( 3 )
+material_override = SubResource( 18 )
+cast_shadow = 2
+extra_cull_margin = 16065.6
+use_in_baked_light = true
+lod_min_distance = 32768.0
+lod_min_hysteresis = 32438.0
+lod_max_distance = 32025.0
+lod_max_hysteresis = 32768.0
 script = ExtResource( 24 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-mesh = SubResource( 4 )
-material/0 = null
+mesh = SubResource( 19 )
+material/0 = SubResource( 31 )
 script = ExtResource( 26 )
 
 [node name="SoftBody" type="SoftBody" parent="."]
-transform = Transform( 0.579041, 0.815298, 0, -0.815298, 0.579041, 0, 0, 0, 1, -0.624185, 0.384725, -5.91273 )
-mesh = SubResource( 5 )
-material/0 = null
+transform = Transform( 0.579041, 0.815298, 0, -0.815298, 0.579041, 0, 0, 0, 1, 0.210141, -0.307431, -4.96667 )
+material_override = SubResource( 33 )
+cast_shadow = 0
+extra_cull_margin = 16384.0
+lod_min_distance = 32768.0
+lod_min_hysteresis = 32768.0
+lod_max_distance = 32768.0
+lod_max_hysteresis = 32768.0
+mesh = SubResource( 34 )
+material/0 = SubResource( 35 )
+collision_layer = 413769
+collision_mask = 4385
 parent_collision_ignore = NodePath("..")
+simulation_precision = 100
+total_mass = 10000.0
+linear_stiffness = 1.0
+areaAngular_stiffness = 1.0
+volume_stiffness = 1.0
+pressure_coefficient = 10000.0
+damping_coefficient = 1.0
+drag_coefficient = 1.0
+pose_matching_coefficient = 1.0
+pinned_points = [ 5, 4 ]
+attachments/0/point_index = 5
+attachments/0/spatial_attachment_path = NodePath("../CSGBox_CSGS_CSGP")
+attachments/0/offset = Vector3( -0.026116, -1.70177, -5.96667 )
+attachments/1/point_index = 4
+attachments/1/spatial_attachment_path = NodePath("../CSGTorus")
+attachments/1/offset = Vector3( -0.558, -0.247, -4.095 )
 script = ExtResource( 28 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.990307, 0 )
+multimesh = SubResource( 37 )
 script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67796, -20.5468 )
+lifetime = 600.0
+one_shot = true
+preprocess = 1.39
+speed_scale = 64.0
+explosiveness = 1.0
+randomness = 1.0
+fixed_fps = 1000
+fract_delta = false
 visibility_aabb = AABB( -11.0782, -6.47799, -3.54041, 22.1564, 12.956, 7.08083 )
-process_material = SubResource( 6 )
-draw_pass_1 = SubResource( 7 )
+local_coords = false
+draw_order = 2
+process_material = SubResource( 38 )
+draw_passes = 4
+draw_pass_1 = SubResource( 39 )
+draw_pass_2 = null
+draw_pass_3 = null
+draw_pass_4 = null
 script = ExtResource( 25 )
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
+bake_cell_size = 64.0
+bake_quality = 2
+bake_mode = 1
+bake_propagation = 0.96
+bake_energy = 32.0
+bake_hdr = true
+bake_extents = Vector3( 11.25, 17.26, 13.39 )
+bake_default_texels_per_unit = 103.6
+capture_cell_size = 62.32
+image_path = "res://file.jpg"
+light_data = SubResource( 40 )
 script = ExtResource( 29 )
 
 [node name="DirectionalLight_LI" type="DirectionalLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.300249, 10.0456, -36.4106 )
+layers = 32777
+light_color = Color( 0.537255, 0.27451, 0.27451, 1 )
+light_energy = 14.58
+light_indirect_energy = 14.93
+light_negative = true
+light_specular = 0.6
+light_bake_mode = 0
+light_cull_mask = 4294443007
+shadow_enabled = true
+shadow_color = Color( 0.109804, 0.423529, 0.486275, 1 )
+shadow_bias = 14.17
+shadow_reverse_cull_face = true
+editor_only = true
+directional_shadow_mode = 0
+directional_shadow_split_1 = 1.0
+directional_shadow_split_2 = 0.971
+directional_shadow_split_3 = 0.971
+directional_shadow_blend_splits = true
+directional_shadow_normal_bias = 15.86
+directional_shadow_bias_split_scale = 0.98
+directional_shadow_depth_range = 1
+directional_shadow_max_distance = 5254.4
 script = ExtResource( 30 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.72183, -43.0131 )
+light_color = Color( 0.654902, 0.145098, 0.572549, 1 )
+light_energy = 23.5
+light_indirect_energy = 13.99
+light_negative = true
+light_specular = 1.0
+light_bake_mode = 0
+shadow_enabled = true
+shadow_color = Color( 0.164706, 0.184314, 0.501961, 1 )
+shadow_bias = 4.09
+shadow_reverse_cull_face = true
+omni_range = 76.2
+omni_attenuation = 3.03143
+omni_shadow_mode = 0
+omni_shadow_detail = 0
 script = ExtResource( 31 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
+light_color = Color( 0.215686, 0.819608, 0.0313726, 1 )
+light_energy = 13.26
+light_indirect_energy = 14.3
+light_negative = true
+light_specular = 0.0
+light_bake_mode = 0
+shadow_enabled = true
+shadow_color = Color( 0.192157, 0.341176, 0.243137, 1 )
+shadow_bias = 14.86
+shadow_reverse_cull_face = true
+spot_range = 4096.0
+spot_attenuation = 1.41421
+spot_angle = 78.1
+spot_angle_attenuation = 19.0273
 script = ExtResource( 32 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
+subdiv = 3
+extents = Vector3( 10, 10, 22.3077 )
+dynamic_range = 16
+energy = 37.2
+propagation = 0.93
+bias = 4.0
+normal_bias = 4.0
+interior = true
+compress = true
+data = SubResource( 41 )
 script = ExtResource( 33 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
+update_mode = 1
+intensity = 0.0
+max_distance = 3178.6
+extents = Vector3( 1, 0.01, 3.16 )
+origin_offset = Vector3( 0.99, -2.23517e-10, -0.99 )
+box_projection = true
+enable_shadows = true
+interior_enable = true
+interior_ambient_color = Color( 0.403922, 0.235294, 0.235294, 1 )
+interior_ambient_energy = 12.77
+interior_ambient_contrib = 1.0
 script = ExtResource( 35 )
 
 [node name="RootMotionView" type="RootMotionView" parent="."]
+color = Color( 0.243137, 0.243137, 0.478431, 1 )
+cell_size = 26.8
+radius = 99.2
+zero_y = false
 script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 25.0577, 0, -49.5921 )
+visible = false
+input_ray_pickable = false
+input_capture_on_drag = true
+space_override = 1
+gravity_point = true
+gravity_distance_scale = 1024.0
+gravity_vec = Vector3( -3.1, -2.11, 0.9 )
+gravity = 993.18
+linear_damp = 100.0
+angular_damp = 96.841
+priority = 13.0
+monitoring = false
+monitorable = false
+audio_bus_override = true
+reverb_bus_enable = true
+reverb_bus_amount = 1.0
+reverb_bus_uniformity = 1.0
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.4649, 3.87396, -64.5134 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
+visible = false
+collision/safe_margin = 256.0
 script = ExtResource( 40 )
 
 [node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
+visible = false
+joint_type = 2
+mass = 6606.35
+weight = 65535.0
+friction = 0.0
+bounce = 1.0
+gravity_scale = 10.0
+bone_name = "RWQS"
+joint_constraints/swing_span = -180.0
+joint_constraints/twist_span = -40000.0
+joint_constraints/bias = 16.0
+joint_constraints/softness = 16.0
+joint_constraints/relaxation = 16.0
 script = ExtResource( 38 )
 
 [node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
 visible = false
+mass = 65535.0
+physics_material_override = SubResource( 43 )
+gravity_scale = 128.0
+custom_integrator = true
+continuous_cd = true
+contacts_reported = 34
+contact_monitor = true
+sleeping = true
+can_sleep = false
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+linear_velocity = Vector3( -1.38, 1.23, 1.15 )
+linear_damp = 100.0
+angular_velocity = Vector3( 1.28, -0.67, -0.62 )
+angular_damp = 100.0
 script = ExtResource( 39 )
 
 [node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
+visible = false
+collision_layer = 622665
+collision_mask = 299541
+mass = 39.7681
+physics_material_override = SubResource( 44 )
+gravity_scale = 19.73
+custom_integrator = true
+continuous_cd = true
+contacts_reported = 5
+contact_monitor = true
+sleeping = true
+axis_lock_linear_x = true
+axis_lock_linear_y = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+axis_lock_angular_z = true
+linear_velocity = Vector3( -0.81, 0.81, 0.62 )
+linear_damp = 10.94
+angular_velocity = Vector3( 1.42, -0.58, 0.65 )
+angular_damp = 0.21
+engine_force = 123.2
+brake = 1.0
+steering = -6.2
 script = ExtResource( 41 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 1.59748e-43
+brake = 1.0
+steering = -2.6
+use_as_traction = true
+use_as_steering = true
+wheel_roll_influence = -1.53
+wheel_radius = -0.5
+wheel_rest_length = 1.21
+wheel_friction_slip = 10.93
+suspension_travel = 6.21
+suspension_stiffness = 4.2
+suspension_max_force = 5997.54
+damping_compression = 1.83
+damping_relaxation = -1.69
 
 [node name="VehicleWheel 2" type="VehicleWheel" parent="VehicleBody"]
+brake = 1.0
+steering = 6.9
+use_as_traction = true
+use_as_steering = true
+wheel_radius = 1.19
+wheel_rest_length = 1.93
+damping_compression = 1.13
+damping_relaxation = 1.61
 
 [node name="VehicleWheel 3" type="VehicleWheel" parent="VehicleBody"]
 engine_force = 4.2039e-45
+brake = 1.0
 
 [node name="VehicleWheel 4" type="VehicleWheel" parent="VehicleBody"]
+transform = Transform( 0.808062, 0, -0.589098, 0, 1, 0, 0.589098, 0, 0.808062, 1.10344, -0.570775, 0.0697458 )
+engine_force = -1.0
+brake = 1.0
 
 [node name="StaticBody" type="StaticBody" parent="."]
+physics_material_override = SubResource( 45 )
 script = ExtResource( 42 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5226, 3.87396, -114.105 )
-shape = SubResource( 8 )
+shape = SubResource( 42 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = SubResource( 46 )
+attenuation_model = 2
+unit_db = 0.45
+unit_size = 0.1
+max_db = 3.57
+pitch_scale = 1.41
+autoplay = true
+stream_paused = true
+max_distance = 3.0
+out_of_range_mode = 1
+area_mask = 16385
+emission_angle_enabled = true
+emission_angle_degrees = 83.0
+emission_angle_filter_attenuation_db = -9.0
+attenuation_filter_cutoff_hz = 4995.0
+attenuation_filter_db = -6.0
+doppler_tracking = 2
 script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
+bone_name = "hbuyhv"
 script = ExtResource( 44 )
 
-[node name="ConeTwistJoint" type="ConeTwistJoint" parent="."]
-nodes/node_a = NodePath("../Spatial/VehicleBody")
-nodes/node_b = NodePath("../Spatial/VehicleBody")
-script = ExtResource( 47 )
-
-[node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
-nodes/node_a = NodePath("../Spatial/VehicleBody")
-nodes/node_b = NodePath("../Spatial/PhysicalBone")
-script = ExtResource( 46 )
-
-[node name="HingeJoint" type="HingeJoint" parent="."]
-nodes/node_a = NodePath("../Spatial/VehicleBody")
-nodes/node_b = NodePath("../Spatial/PhysicalBone")
-script = ExtResource( 45 )
-
-[node name="PinJoint" type="PinJoint" parent="."]
-nodes/node_a = NodePath("../Spatial/Area")
-nodes/node_b = NodePath("../Spatial/KinematicBody")
-script = ExtResource( 49 )
-
-[node name="SliderJoint" type="SliderJoint" parent="."]
-nodes/node_a = NodePath("../Spatial/VehicleBody")
-nodes/node_b = NodePath("../Spatial/StaticBody")
-script = ExtResource( 48 )
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = SubResource( 47 )
+cell_size = Vector3( 2, 1.14, 3.08 )
+cell_octant_size = 48
+cell_scale = 6.94
+data = {
+"cells": PoolIntArray(  )
+}
+script = ExtResource( 36 )
+__meta__ = {
+"_editor_clip_": 0
+}
 
 [node name="Listener" type="Listener" parent="."]
+current = true
 script = ExtResource( 51 )
 
 [node name="Navigation_LEAK" type="Navigation" parent="."]
+up_vector = Vector3( -3.39, 2.53, 1.27 )
 script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
-navmesh = SubResource( 9 )
+navmesh = SubResource( 48 )
 
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
-curve = SubResource( 10 )
+curve = SubResource( 49 )
 script = ExtResource( 52 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.851509, -11.6767 )
+transform = Transform( -0.659725, 0.371734, -0.653128, -0.522325, 0.398039, 0.754149, 0.540313, 0.838677, -0.0684304, -15.1509, 5.82905, -6.5181 )
+offset = 99.0802
+h_offset = 2.13
+v_offset = 2.17
+rotation_mode = 1
+cubic_interp = false
+loop = false
 
 [node name="Position3D" type="Position3D" parent="."]
 script = ExtResource( 54 )
 
 [node name="Camera 2" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
+keep_aspect = 0
+environment = SubResource( 50 )
+h_offset = 1.93
+v_offset = 33.83
+projection = 1
 current = true
+fov = 130.0
+near = 11.45
+far = 196.0
 script = ExtResource( 16 )
 
 [node name="ProximityGroup" type="ProximityGroup" parent="."]
+group_name = "asfwqfq"
+dispatch_mode = 1
 script = ExtResource( 59 )
 
 [node name="RayCast" type="RayCast" parent="."]
+enabled = true
+exclude_parent = false
+cast_to = Vector3( 0.64, 0.04, -1.13 )
 script = ExtResource( 57 )
 
 [node name="RemoteTransform" type="RemoteTransform" parent="."]
@@ -304,30 +959,58 @@ bones_in_world_transform = true
 script = ExtResource( 56 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="Skeleton"]
+transform = Transform( 3.759, 3.01, 3.12, 1.92, 3.759, 1.17, -1.26, -1.36, 3.759, 1.18, 3.196, 0.72 )
+joint_type = 3
+joint_offset = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.937188, -1.22871, -0.321945 )
+body_offset = Transform( 3.759, 3.01, 3.12, 1.92, 3.759, 1.17, -1.26, -1.36, 3.759, 1.18, 3.196, 0.72 )
+mass = 0.0322581
+weight = 0.32
+bounce = 0.7
+gravity_scale = -8.95
+joint_constraints/angular_limit_enabled = true
+joint_constraints/angular_limit_upper = 84.8
+joint_constraints/angular_limit_lower = -82.3
+joint_constraints/angular_limit_bias = 0.01
+joint_constraints/angular_limit_softness = 16.0
+joint_constraints/angular_limit_relaxation = 0.01
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone"]
-shape = SubResource( 11 )
+shape = SubResource( 51 )
 
-[node name="PhysicalBone 2" type="PhysicalBone" parent="Skeleton"]
+[node name="PhysicalBone 2" type="PhysicalBone" parent="Skeleton/PhysicalBone/CollisionShape"]
+transform = Transform( 0.397349, -0.393217, -0.207413, -0.219674, 0.456492, 0.0402466, 0.0537122, 0.0333534, 0.211065, 0.937188, -1.22871, -0.321945 )
+body_offset = Transform( 1, -1.16229e-06, -1.19209e-07, -2.83122e-07, 0.999999, 1.19209e-07, 2.23517e-07, 6.10948e-07, 1, 2.38419e-06, 2.86102e-06, -2.02656e-06 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 2"]
-shape = SubResource( 11 )
+[node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone/CollisionShape/PhysicalBone 2"]
+shape = SubResource( 51 )
+
+[node name="BoneAttachment" type="BoneAttachment" parent="Skeleton/PhysicalBone/CollisionShape"]
+transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
+bone_name = "asfw"
 
 [node name="PhysicalBone 3" type="PhysicalBone" parent="Skeleton"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
-shape = SubResource( 11 )
+shape = SubResource( 51 )
 
 [node name="PhysicalBone 4" type="PhysicalBone" parent="Skeleton"]
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 4"]
-shape = SubResource( 11 )
+shape = SubResource( 51 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
+collision_mask = 167937
+shape = SubResource( 52 )
+spring_length = 5.97
+margin = -8.14
 script = ExtResource( 61 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.866991, -0.44476, 0.07431 )
+aabb = AABB( 3.03, 0.06, -1.61, 11.28, -3.5, 0.69 )
 script = ExtResource( 58 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.62132, 0.281682, -3.03309 )
+aabb = AABB( -1, -0.05, -1, 2, 2.74, 2 )
 script = ExtResource( 60 )

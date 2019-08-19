@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://OtherALL/OtherALL.gd" type="Script" id=1]
 [ext_resource path="res://OtherALL/CanvasLayer.gd" type="Script" id=2]
@@ -14,49 +14,150 @@
 [ext_resource path="res://OtherALL/ResourcePreloader.gd" type="Script" id=12]
 [ext_resource path="res://OtherALL/ParallaxBackground.gd" type="Script" id=13]
 
-[sub_resource type="AnimationNodeAnimation" id=1]
+[sub_resource type="Animation" id=1]
+resource_name = "New Anim"
+tracks/0/type = "method"
+tracks/0/path = NodePath("../Tween")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray(  ),
+"transitions": PoolRealArray(  ),
+"values": [  ]
+}
 
-[sub_resource type="Environment" id=2]
+[sub_resource type="AnimationNodeAnimation" id=2]
+
+[sub_resource type="AudioStreamSample" id=4]
+
+[sub_resource type="Environment" id=5]
+
+[sub_resource type="Environment" id=6]
+
+[sub_resource type="World" id=7]
+environment = SubResource( 5 )
+fallback_environment = SubResource( 6 )
+
+[sub_resource type="Environment" id=3]
 
 [node name="OtherALL" type="Node"]
 script = ExtResource( 1 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-root_node = NodePath(".")
+root_node = NodePath("../HTTPRequest")
+playback_process_mode = 2
+playback_default_blend_time = 3956.01
+playback_speed = -64.0
+method_call_mode = 1
+"anims/New Anim" = SubResource( 1 )
 script = ExtResource( 6 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 1 )
+tree_root = SubResource( 2 )
 anim_player = NodePath("../AnimationPlayer")
+active = true
+process_mode = 2
+root_motion_track = NodePath("../Tween")
 script = ExtResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource( 4 )
+volume_db = -80.0
+pitch_scale = 32.0
+autoplay = true
+stream_paused = true
+mix_target = 1
 script = ExtResource( 8 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -59
+offset = Vector2( 1.11, -1.36 )
+rotation = 18.8496
+scale = Vector2( 0.08, 1.51 )
+transform = Transform2D( 0.08, 3.81596e-09, -7.20263e-08, 1.51, 1.11, -1.36 )
+follow_viewport_enable = true
+follow_viewport_scale = 936.592
 script = ExtResource( 2 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_offset = Vector2( -2.48, 2.35 )
+scroll_base_offset = Vector2( -1.69, -1.4 )
+scroll_base_scale = Vector2( 1, 0.09 )
+scroll_limit_begin = Vector2( -1.1, 0 )
+scroll_limit_end = Vector2( -0.47, 0 )
+scroll_ignore_camera_zoom = true
 script = ExtResource( 13 )
 
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
+download_file = "35235523rtgart"
+use_threads = true
+body_size_limit = 634634
+max_redirects = 64
+timeout = 86400
 script = ExtResource( 7 )
 
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 script = ExtResource( 12 )
 
 [node name="SkeletonIK" type="SkeletonIK" parent="."]
+root_bone = "srgrgsegsgsr"
+tip_bone = "grsgrg"
+interpolation = 0.0
+target = Transform( 2.49, 1.02, -0.07, 1.15, 1, -1.97, -0.7, -1.01, 2.42, -0.7, -0.59, -0.29 )
+override_tip_basis = false
+use_magnet = true
+magnet = Vector3( 2.8, -3.69, -0.95 )
+target_node = NodePath("../ResourcePreloader")
+min_distance = 1.20453e+08
+max_iterations = 235235235
 script = ExtResource( 10 )
 
 [node name="Timer" type="Timer" parent="."]
+process_mode = 0
+wait_time = 4096.0
+one_shot = true
+autostart = true
 script = ExtResource( 5 )
 
 [node name="Tween" type="Tween" parent="."]
+repeat = true
+playback_process_mode = 0
+playback_speed = -64.0
+playback/repeat = true
+playback/speed = -64.0
 script = ExtResource( 3 )
 
 [node name="Viewport" type="Viewport" parent="."]
+arvr = true
+size = Vector2( 8.75497e+08, 3.52352e+07 )
+size_override_stretch = true
+own_world = true
+world = SubResource( 7 )
+transparent_bg = true
+handle_input_locally = false
+msaa = 4
+disable_3d = true
+keep_3d_linear = true
+usage = 0
+render_direct_to_screen = true
+debug_draw = 2
+render_target_v_flip = true
+render_target_clear_mode = 1
+render_target_update_mode = 0
+audio_listener_enable_2d = true
+audio_listener_enable_3d = true
+physics_object_picking = true
+gui_disable_input = true
+gui_snap_controls_to_pixels = false
+shadow_atlas_size = 1416869216
+shadow_atlas_quad_0 = 4
+shadow_atlas_quad_1 = 1
+shadow_atlas_quad_2 = 6
+shadow_atlas_quad_3 = 0
 script = ExtResource( 11 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 2 )
+environment = SubResource( 3 )
 script = ExtResource( 4 )

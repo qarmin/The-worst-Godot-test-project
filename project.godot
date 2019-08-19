@@ -37,7 +37,6 @@ formats/gzip/compression_level=9
 
 settings/profiler/max_functions=65535
 settings/fps/force_fps=120
-settings/stdout/print_fps=true
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]

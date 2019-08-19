@@ -17,9 +17,8 @@ func _process(delta) -> void:
 		
 		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		# TODO Bitmap
-		set_bitmask(BitMap.new())
-		set_shape(CircleShape2D.new())
+		set_bitmask(load("res://RES/Bitmap.tres"))
+		set_shape(load("res://RES/CircleShape2D.tres"))
 		set_shape_centered(bool(randi()%2))
 		set_shape_visible(bool(randi()%2))
 		set_passby_press(bool(randi()%2))
@@ -33,9 +32,8 @@ func _process(delta) -> void:
 			
 			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			# TODO Bitmap
-			set_bitmask(BitMap.new())
-			set_shape(CircleShape2D.new())
+			set_bitmask(load("res://RES/Bitmap.tres"))
+			set_shape(load("res://RES/CircleShape2D.tres"))
 			set_shape_centered(bool(randi()%2))
 			set_shape_visible(bool(randi()%2))
 			set_passby_press(bool(randi()%2))

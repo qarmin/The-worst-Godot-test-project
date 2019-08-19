@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_audio_track(randi()%50)
-		#set_stream(VideoStream.new()) # TODO
+		#set_stream(load("res://RES/VideoStreamWebm.tres"))
 		set_volume_db(randf() * 50)
 		set_volume(randf() * 50)
 		set_autoplay(bool(randi()%2))
@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_audio_track(randi() % 1000 - 500)
-			set_stream(VideoStream.new()) # TODO
+			set_stream(load("res://RES/VideoStreamWebm.tres"))
 			set_volume_db(randf() * 1000 - 500)
 			set_volume(randf() * 1000 - 500)
 			set_autoplay(bool(randi()%2))

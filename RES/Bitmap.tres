@@ -1,0 +1,7 @@
+[gd_resource type="BitMap" format=2]
+
+[resource]
+data = {
+"data": PoolByteArray(  ),
+"size": Vector2( 0, 0 )
+}

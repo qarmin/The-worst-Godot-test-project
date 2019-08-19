@@ -18,8 +18,7 @@ func _process(delta) -> void:
 		clear()
 		fix_invalid_tiles()
 		set_mode(randi()%3)
-		# TODO Tileset
-		set_tileset(TileSet.new())
+		set_tileset(load("res://RES/Tileset.tres"))
 		set_cell_size(Vector2(randf() * 50 + 10,randf() * 50 + 10))
 		set_custom_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_half_offset(randi()%5)
@@ -59,8 +58,7 @@ func _process(delta) -> void:
 			clear()
 			fix_invalid_tiles()
 			set_mode(randi() % 1000 - 500)
-			# TODO Tileset
-			set_tileset(TileSet.new())
+			set_tileset(load("res://RES/Tileset.tres"))
 			set_cell_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_custom_transform(Transform2D(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500), Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
 			set_half_offset(randi() % 1000 - 500)
