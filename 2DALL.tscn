@@ -46,24 +46,19 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "New Anim 4",
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "New Anim 3",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim",
+"name": "New Anim 2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "New Anim 5",
-"speed": 5.0
-}, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim 1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
@@ -76,14 +71,19 @@ animations = [ {
 "name": "New Anim 6",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "New Anim 3",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 2",
+"name": "New Anim 4",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
 "speed": 5.0
 } ]
 
@@ -154,11 +154,11 @@ colors = PoolColorArray( 0, 0, 0, 1, 0.836735, 0.836735, 0.836735, 1, 1, 1, 1, 1
 gradient = SubResource( 19 )
 width = 21423535
 
-[sub_resource type="SpatialMaterial" id=33]
+[sub_resource type="SpatialMaterial" id=21]
 
-[sub_resource type="CylinderMesh" id=21]
+[sub_resource type="CylinderMesh" id=22]
 lightmap_size_hint = Vector2( 0, -5.04 )
-material = SubResource( 33 )
+material = SubResource( 21 )
 custom_aabb = AABB( 0, -2.18, 0, 0, 1.14, 0 )
 flip_faces = true
 top_radius = 100.0
@@ -167,52 +167,52 @@ height = 46.901
 radial_segments = 11
 rings = 2
 
-[sub_resource type="NavigationPolygon" id=22]
+[sub_resource type="NavigationPolygon" id=23]
 vertices = PoolVector2Array( 296.65, 558.363, 590.582, 134.8, 991.535, 303.622, 782.014, 568.914 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( 296.65, 558.363, 590.582, 134.8, 991.535, 303.622, 782.014, 568.914 ) ]
 
-[sub_resource type="ParticlesMaterial" id=23]
+[sub_resource type="ParticlesMaterial" id=24]
 flag_disable_z = true
 gravity = Vector3( 0, 98, 0 )
 angular_velocity = 0.000168972
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 
-[sub_resource type="Curve2D" id=24]
+[sub_resource type="Curve2D" id=25]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 600.13, 43.3051, 0, 0, 0, 0, 300.135, 362.781, 0, 0, 0, 0, 705.323, 520.571, 0, 0, 0, 0, 1046.23, 234.211, 0, 0, 0, 0, 810.516, 74.4735, 0, 0, 0, 0, 652.727, 304.34, 0, 0, 0, 0, 658.571, 132.914, 0, 0, 0, 0, 600.13, 43.3051 )
 }
 
-[sub_resource type="Gradient" id=25]
+[sub_resource type="Gradient" id=26]
 offsets = PoolRealArray( -0.372549, -0.372549, -0.372549, -0.372549, 0, 0, 0, 0.713775, 1 )
 colors = PoolColorArray( 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.188235, 0.572549, 0.0941176, 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.623529, 0.498039, 0.498039, 1, 0.509804, 0.262745, 0.262745, 1 )
 
-[sub_resource type="GradientTexture" id=26]
-gradient = SubResource( 25 )
+[sub_resource type="GradientTexture" id=27]
+gradient = SubResource( 26 )
 
-[sub_resource type="Gradient" id=27]
+[sub_resource type="Gradient" id=28]
 offsets = PoolRealArray( 0, 0.103757, 0.343693, 0.605119, 0.987, 1.34 )
 colors = PoolColorArray( 0, 0, 0, 1, 0.682353, 0.682353, 0.682353, 1, 0.786627, 0.786627, 0.786627, 1, 0.67563, 0.603763, 0.603763, 1, 0.501961, 0.317647, 0.317647, 1, 0.682353, 0.223529, 0.223529, 1 )
 
-[sub_resource type="GradientTexture" id=28]
-gradient = SubResource( 27 )
+[sub_resource type="GradientTexture" id=29]
+gradient = SubResource( 28 )
 
-[sub_resource type="BitMap" id=29]
+[sub_resource type="BitMap" id=30]
 data = {
 "data": PoolByteArray(  ),
 "size": Vector2( 0, 0 )
 }
 
-[sub_resource type="CapsuleShape2D" id=30]
+[sub_resource type="CapsuleShape2D" id=31]
 custom_solver_bias = 1.0
 radius = 523523.0
 height = 523523.0
 
-[sub_resource type="VisualShader" id=31]
+[sub_resource type="VisualShader" id=32]
 
-[sub_resource type="ShaderMaterial" id=32]
-shader = SubResource( 31 )
+[sub_resource type="ShaderMaterial" id=33]
+shader = SubResource( 32 )
 
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
@@ -220,7 +220,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "New Anim 7"
-frame = 4
+frame = 5
 speed_scale = 22222.9
 playing = true
 centered = false
@@ -616,14 +616,14 @@ round_precision = 325235235
 script = ExtResource( 22 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-mesh = SubResource( 21 )
+mesh = SubResource( 22 )
 script = ExtResource( 23 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
 script = ExtResource( 24 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-navpoly = SubResource( 22 )
+navpoly = SubResource( 23 )
 enabled = false
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
@@ -653,11 +653,11 @@ randomness = 1.0
 fixed_fps = 1000
 visibility_rect = Rect2( -100, -101.3, 198.61, 200 )
 draw_order = 1
-process_material = SubResource( 23 )
+process_material = SubResource( 24 )
 script = ExtResource( 26 )
 
 [node name="Path2D" type="Path2D" parent="."]
-curve = SubResource( 24 )
+curve = SubResource( 25 )
 script = ExtResource( 27 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
@@ -742,10 +742,10 @@ tile_data = PoolIntArray( -237436027, 0, 0, -237370492, 0, 0, -237304957, 0, 0, 
 script = ExtResource( 33 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-normal = SubResource( 26 )
-pressed = SubResource( 28 )
-bitmask = SubResource( 29 )
-shape = SubResource( 30 )
+normal = SubResource( 27 )
+pressed = SubResource( 29 )
+bitmask = SubResource( 30 )
+shape = SubResource( 31 )
 shape_centered = false
 shape_visible = false
 passby_press = true
@@ -757,7 +757,7 @@ script = ExtResource( 35 )
 pause_mode = 1
 show_behind_parent = true
 light_mask = 270345
-material = SubResource( 32 )
+material = SubResource( 33 )
 position = Vector2( 3.52352e+06, 235235 )
 rotation = -1.97807e+06
 scale = Vector2( 3525, 1255 )

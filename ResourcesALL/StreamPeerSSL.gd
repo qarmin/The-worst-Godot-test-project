@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		#q_StreamPeerSSL.poll()
 		
 		if Autoload.WRONG_BUGS:
-			qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new() ))
+			qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new(),CryptoKey.new(),X509Certificate.new(),X509Certificate.new()))
 			qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
 			q_StreamPeerSSL.disconnect_from_stream()
 			qq += str(q_StreamPeerSSL.get_status())

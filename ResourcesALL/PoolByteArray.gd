@@ -33,7 +33,6 @@ func _process(delta) -> void:
 		#q_PoolByteArray.remove( randi()%50)
 		q_PoolByteArray.resize( randi()%50)
 		#q_PoolByteArray.set(randi()%50, randi()%50)
-		qq += str(q_PoolByteArray.sha256_string())
 		qq += str(q_PoolByteArray.size())
 		#qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
 		
@@ -55,6 +54,5 @@ func _process(delta) -> void:
 			q_PoolByteArray.remove( randi() % 1000 - 500)
 			q_PoolByteArray.resize( randi() % 1000 - 500)
 			q_PoolByteArray.set(randi() % 1000 - 500, randi() % 1000 - 500)
-			qq += str(q_PoolByteArray.sha256_string())
 			qq += str(q_PoolByteArray.size())
 			qq += str(q_PoolByteArray.subarray(randi() % 1000 - 500,randi() % 1000 - 500))
