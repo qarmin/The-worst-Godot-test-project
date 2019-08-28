@@ -366,7 +366,7 @@ shaded = true
 double_sided = false
 alpha_cut = 1
 frames = SubResource( 6 )
-frame = 2
+frame = 3
 playing = true
 script = ExtResource( 13 )
 
@@ -563,10 +563,10 @@ pose_matching_coefficient = 1.0
 pinned_points = [ 5, 4 ]
 attachments/0/point_index = 5
 attachments/0/spatial_attachment_path = NodePath("../CSGBox_CSGS_CSGP")
-attachments/0/offset = Vector3( 1, -1, -1 )
+attachments/0/offset = Vector3( -0.026116, -1.70177, -5.96667 )
 attachments/1/point_index = 4
 attachments/1/spatial_attachment_path = NodePath("../CSGTorus")
-attachments/1/offset = Vector3( -1, -1, 1 )
+attachments/1/offset = Vector3( -0.558065, -0.426982, -4.09509 )
 script = ExtResource( 28 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
@@ -979,8 +979,8 @@ joint_constraints/angular_limit_relaxation = 0.01
 shape = SubResource( 51 )
 
 [node name="PhysicalBone 2" type="PhysicalBone" parent="Skeleton/PhysicalBone/CollisionShape"]
-transform = Transform( 0.397349, -0.393217, -0.207413, -0.219674, 0.456492, 0.0402466, 0.0537122, 0.0333535, 0.211065, 0.937188, -1.22871, -0.321945 )
-body_offset = Transform( 1, -1.2219e-06, 0, -2.83122e-07, 0.999999, 2.08616e-07, 2.23517e-07, 7.45058e-07, 1, 2.6226e-06, 3.33786e-06, -2.14577e-06 )
+transform = Transform( 0.397349, -0.393218, -0.207413, -0.219674, 0.456492, 0.0402467, 0.0537122, 0.0333535, 0.211065, 0.937188, -1.22871, -0.321945 )
+body_offset = Transform( 1, -1.86265e-06, 2.98023e-07, -2.83122e-07, 0.999999, 5.06639e-07, 2.23517e-07, 1.16229e-06, 1, 2.6226e-06, 3.33786e-06, -2.14577e-06 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone/CollisionShape/PhysicalBone 2"]
 shape = SubResource( 51 )

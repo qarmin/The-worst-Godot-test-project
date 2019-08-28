@@ -30,17 +30,17 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationNodeAnimation" id=2]
 
-[sub_resource type="AudioStreamSample" id=4]
+[sub_resource type="AudioStreamSample" id=3]
+
+[sub_resource type="Environment" id=4]
 
 [sub_resource type="Environment" id=5]
 
-[sub_resource type="Environment" id=6]
+[sub_resource type="World" id=6]
+environment = SubResource( 4 )
+fallback_environment = SubResource( 5 )
 
-[sub_resource type="World" id=7]
-environment = SubResource( 5 )
-fallback_environment = SubResource( 6 )
-
-[sub_resource type="Environment" id=3]
+[sub_resource type="Environment" id=7]
 
 [node name="OtherALL" type="Node"]
 script = ExtResource( 1 )
@@ -63,7 +63,7 @@ root_motion_track = NodePath("../Tween")
 script = ExtResource( 9 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = SubResource( 4 )
+stream = SubResource( 3 )
 volume_db = -80.0
 pitch_scale = 32.0
 autoplay = true
@@ -74,7 +74,7 @@ script = ExtResource( 8 )
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 layer = -59
 offset = Vector2( 1.11, -1.36 )
-rotation = 18.8496
+rotation = 4.76995e-08
 scale = Vector2( 0.08, 1.51 )
 transform = Transform2D( 0.08, 3.81596e-09, -7.20263e-08, 1.51, 1.11, -1.36 )
 follow_viewport_enable = true
@@ -134,7 +134,7 @@ arvr = true
 size = Vector2( 8.75497e+08, 3.52352e+07 )
 size_override_stretch = true
 own_world = true
-world = SubResource( 7 )
+world = SubResource( 6 )
 transparent_bg = true
 handle_input_locally = false
 msaa = 4
@@ -159,5 +159,5 @@ shadow_atlas_quad_3 = 0
 script = ExtResource( 11 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 3 )
+environment = SubResource( 7 )
 script = ExtResource( 4 )

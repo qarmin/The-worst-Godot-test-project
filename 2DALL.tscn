@@ -111,21 +111,21 @@ a = Vector2( 7.41, 0 )
 [sub_resource type="PhysicsMaterial" id=10]
 friction = 634634.0
 rough = true
-bounce = 2.62363e+07
+bounce = 262363
 absorbent = true
 
 [sub_resource type="PhysicsMaterial" id=11]
 friction = 215152.0
 rough = true
-bounce = 1.25125e+07
+bounce = 125125e
 absorbent = true
 
 [sub_resource type="AudioStreamSample" id=12]
 format = 1
 loop_mode = 2
-loop_begin = 940267939
+loop_begin = 9402679
 loop_end = 235235
-mix_rate = 2048687045
+mix_rate = 20486870
 stereo = true
 
 [sub_resource type="Gradient" id=13]
