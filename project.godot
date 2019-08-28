@@ -80,9 +80,12 @@ limits/message_queue/max_size_kb=131072
 
 [network]
 
-limits/debugger_stdout/max_chars_per_second=5
-limits/debugger_stdout/max_messages_per_frame=5
-limits/debugger_stdout/max_errors_per_frame=5
+limits/packet_peer_stream/max_buffer_po2=0
+limits/debugger_stdout/max_chars_per_second=0
+limits/debugger_stdout/max_messages_per_frame=0
+limits/debugger_stdout/max_errors_per_second=0
+limits/debugger_stdout/max_warnings_per_second=0
+limits/debugger_stdout/max_errors_per_frame=0
 
 [node]
 

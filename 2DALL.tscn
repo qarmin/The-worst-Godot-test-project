@@ -46,6 +46,11 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
 "loop": false,
 "name": "New Anim 3",
@@ -53,17 +58,12 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 2",
+"name": "New Anim 5",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "New Anim 7",
+"name": "New Anim 2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
@@ -71,9 +71,9 @@ animations = [ {
 "name": "New Anim 6",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
 "loop": true,
-"name": "New Anim 4",
+"name": "New Anim 7",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -81,9 +81,9 @@ animations = [ {
 "name": "New Anim 1",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim",
+"name": "New Anim 4",
 "speed": 5.0
 } ]
 
@@ -111,13 +111,13 @@ a = Vector2( 7.41, 0 )
 [sub_resource type="PhysicsMaterial" id=10]
 friction = 634634.0
 rough = true
-bounce = 262363
+bounce = 262363.0
 absorbent = true
 
 [sub_resource type="PhysicsMaterial" id=11]
 friction = 215152.0
 rough = true
-bounce = 125125e
+bounce = 125125.0
 absorbent = true
 
 [sub_resource type="AudioStreamSample" id=12]
@@ -220,7 +220,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "New Anim 7"
-frame = 5
+frame = 3
 speed_scale = 22222.9
 playing = true
 centered = false

@@ -8,7 +8,7 @@ const USE_ONLY_ONE_NODE : bool = true
 var file : File = File.new()
 
 func _ready():
-	if file.open("usr://dane.txt",File.WRITE) != OK:
+	if file.open("user://dane.txt",File.WRITE) != OK:
 		printerr("AAAAAAAAAAA")
 		get_tree().quit()
 
@@ -19,5 +19,6 @@ func _process(_delta):
 		get_tree().quit()
 
 func save_to_file(message : String) -> void:
-	file.store_line(message)
+	file.store_line(" ||| " + str(OS.get_time()["minute"]) + ":" + str(OS.get_time()["second"]) + " ||| " +message)
+	#file.store_string(message)
 	
