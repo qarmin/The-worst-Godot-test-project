@@ -15,8 +15,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_radius(randf() * 50)
-		set_radial_segments(randi()%4)
-		set_rings(randi()%4)
+		set_radial_segments(randi()%4 + 1)
+		#set_rings(randi()%4 + 1)
 		set_smooth_faces(bool(randi()%2))
 		set_material(SpatialMaterial.new())
 		

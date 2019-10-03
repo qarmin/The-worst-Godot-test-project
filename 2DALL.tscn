@@ -55,22 +55,17 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "New Anim",
+"name": "New Anim 1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": false,
-"name": "New Anim 3",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
-"loop": true,
-"name": "New Anim 7",
+"name": "New Anim 6",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 5",
+"name": "New Anim 2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
@@ -80,17 +75,22 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 2",
+"name": "New Anim 5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim 7",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
 "loop": false,
-"name": "New Anim 6",
+"name": "New Anim 3",
 "speed": 5.0
 }, {
 "frames": [  ],
 "loop": true,
-"name": "New Anim 1",
+"name": "New Anim",
 "speed": 5.0
 } ]
 

@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		navpol.set_vertices(PoolVector2Array([Vector2(randf() * 50,randf() * 50),-Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * -50)]))
 		
 		#navpoly_remove(navpoly_add(navpol,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50 + 100,randf() * 50 + 100),Vector2(randf() * 50 - 50,randf() * 50 + 500))))
-		navpoly_set_transform(1,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+		#navpoly_set_transform(1,Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		
 		
 		if Autoload.WRONG_BUGS:

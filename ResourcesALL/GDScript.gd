@@ -111,7 +111,7 @@ func _process(delta) -> void:
 		qq += str(step_decimals(randf() * 50))
 		qq += str(stepify(randf() * 50,randf() * 50))
 		
-		qq += str(str(2152153523423251523523513135623623523))
+		qq += str(str(21521535))
 		qq += str(str2var("asfqwgqgqfa"))
 		
 		qq += str(tan(randf() * 50))
@@ -230,7 +230,7 @@ func _process(delta) -> void:
 			qq += str(step_decimals(randf() * 1000 - 500))
 			qq += str(stepify(randf() * 1000 - 500,randf() * 1000 - 500))
 			
-			qq += str(str(2152153523423251523523513135623623523))
+			qq += str(str(2152153))
 			qq += str(str2var("asfqwgqgqfa"))
 			
 			qq += str(tan(randf() * 1000 - 500))

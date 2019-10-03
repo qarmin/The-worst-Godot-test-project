@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		apply_rest()
-		qq += str(get_index_in_skeleton())
+		#qq += str(get_index_in_skeleton())
 		qq += str(get_skeleton_rest())
 		
 		if Autoload.WRONG_BUGS:

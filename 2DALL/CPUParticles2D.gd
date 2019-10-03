@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_emitting(bool(randi()%2))
-		set_amount(randi()%4)
+		set_amount(randi()%4 + 1)
 		restart()
 		set_lifetime(randf())
 		set_one_shot(bool(randi()%2))
