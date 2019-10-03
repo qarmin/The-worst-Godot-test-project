@@ -36,3 +36,5 @@ func _process(delta) -> void:
 			qq += str(q_JSONRPC.process_string("Za"))
 			
 			q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
+		
+		q_JSONRPC.free()
