@@ -1,0 +1,108 @@
+[gd_resource type="VisualShader" load_steps=9 format=2]
+
+[sub_resource type="VisualShaderNodeVectorFunc" id=1]
+function = 14
+
+[sub_resource type="VisualShaderNodeColorFunc" id=2]
+output_port_for_preview = 0
+
+[sub_resource type="VisualShaderNodeInput" id=3]
+
+[sub_resource type="VisualShaderNodeColorUniform" id=4]
+uniform_name = "ColorUniform"
+
+[sub_resource type="VisualShaderNodeInput" id=5]
+
+[sub_resource type="VisualShaderNodeTransformCompose" id=6]
+
+[sub_resource type="VisualShaderNodeVectorFunc" id=7]
+
+[sub_resource type="VisualShaderNodeVectorFunc" id=8]
+function = 6
+
+[resource]
+code = "shader_type spatial;
+uniform vec4 ColorUniform : hint_color;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Input:6
+	float n_out6p0;
+	n_out6p0 = 0.0;
+
+// VectorFunc:2
+	vec3 n_out2p0;
+	n_out2p0=cos(vec3(n_out6p0));
+
+// VectorFunc:8
+	vec3 n_in8p0 = vec3(0.00000,0.00000,0.00000);
+	vec3 n_out8p0;
+	n_out8p0=normalize(n_in8p0);
+
+// VectorFunc:9
+	vec3 n_out9p0;
+	n_out9p0=abs(n_out8p0);
+
+// ColorFunc:3
+	vec3 n_out3p0;
+	{
+		vec3 c = n_out9p0;
+		float max1 = max(c.r, c.g);
+		float max2 = max(max1, c.b);
+		float max3 = max(max1, max2);
+		n_out3p0 = vec3(max3, max3, max3);
+	}
+
+// ColorUniform:5
+	vec3 n_out5p0;
+	float n_out5p1;
+	n_out5p0 = ColorUniform.rgb;
+	n_out5p1 = ColorUniform.a;
+
+// Output:0
+	SPECULAR = dot(n_out2p0,vec3(0.333333,0.333333,0.333333));
+	AO = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	NORMAL = n_out3p0;
+	NORMALMAP = n_out5p0;
+	NORMALMAP_DEPTH = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	RIM = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	RIM_TINT = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	CLEARCOAT = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	CLEARCOAT_GLOSS = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	ANISOTROPY = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	ANISOTROPY_FLOW = n_out3p0.xy;
+	SSS_STRENGTH = dot(n_out3p0,vec3(0.333333,0.333333,0.333333));
+	ALPHA_SCISSOR = n_out5p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -71, -51 )
+nodes/fragment/0/position = Vector2( 880, 100 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( 240, 160 )
+nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/position = Vector2( 380, 380 )
+nodes/fragment/4/node = SubResource( 3 )
+nodes/fragment/4/position = Vector2( 420, 620 )
+nodes/fragment/5/node = SubResource( 4 )
+nodes/fragment/5/position = Vector2( 400, 260 )
+nodes/fragment/6/node = SubResource( 5 )
+nodes/fragment/6/position = Vector2( 20, 220 )
+nodes/fragment/7/node = SubResource( 6 )
+nodes/fragment/7/position = Vector2( 600, 500 )
+nodes/fragment/8/node = SubResource( 7 )
+nodes/fragment/8/position = Vector2( -20, 360 )
+nodes/fragment/9/node = SubResource( 8 )
+nodes/fragment/9/position = Vector2( 128, 445.5 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 0, 4, 3, 0, 0, 10, 5, 1, 0, 18, 5, 0, 0, 8, 6, 0, 2, 0, 8, 0, 7, 0, 8, 0, 9, 0, 9, 0, 3, 0, 8, 0, 7, 2, 4, 0, 7, 3, 4, 0, 7, 1, 3, 0, 0, 13, 3, 0, 0, 12, 3, 0, 0, 11, 3, 0, 0, 14, 3, 0, 0, 9, 3, 0, 0, 7, 3, 0, 0, 6, 3, 0, 0, 15, 3, 0, 0, 16 )

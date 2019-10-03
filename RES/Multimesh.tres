@@ -1,0 +1,17 @@
+[gd_resource type="MultiMesh" load_steps=2 format=2]
+
+[sub_resource type="CubeMesh" id=1]
+lightmap_size_hint = Vector2( 0.37, -0.27 )
+custom_aabb = AABB( 0.32, 0.22, 0.29, 0.3, -0.22, -0.36 )
+flip_faces = true
+size = Vector3( 2, 2.67, 2.65 )
+
+[resource]
+color_format = 1
+custom_data_format = 1
+instance_count = 3
+visible_instance_count = 4
+mesh = SubResource( 1 )
+transform_2d_array = PoolVector2Array( 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0, 1, 0, 0 )
+color_array = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 )
+custom_data_array = PoolColorArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )

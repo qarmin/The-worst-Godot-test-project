@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		qq += str(q_MeshLibrary.get_item_name(0))
 		qq += str(q_MeshLibrary.get_item_navmesh(0))
 		qq += str(q_MeshLibrary.get_item_navmesh_transform(0))
-		qq += str(q_MeshLibrary.get_item_preview(0))
+		#qq += str(q_MeshLibrary.get_item_preview(0))
 		qq += str(q_MeshLibrary.get_item_shapes(0))
 		qq += str(q_MeshLibrary.get_last_unused_item_id())
 		

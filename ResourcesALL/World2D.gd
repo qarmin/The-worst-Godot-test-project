@@ -21,4 +21,6 @@ func _process(delta) -> void:
 		qq += str(q_World2D.get_direct_space_state())
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			qq += str(q_World2D.get_canvas())
+			qq += str(q_World2D.get_space())
+			qq += str(q_World2D.get_direct_space_state())

@@ -16,27 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://3DALL.tscn"
-run/disable_stdout=true
-run/disable_stderr=true
+run/main_scene="res://ResourcesALL.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 Autoload="*res://Autoload.gd"
 
-[compression]
-
-formats/zstd/long_distance_matching=true
-formats/zstd/compression_level=22
-formats/zstd/window_log_size=30
-formats/zlib/compression_level=9
-formats/gzip/compression_level=9
-
 [debug]
 
 settings/profiler/max_functions=65535
 settings/fps/force_fps=120
+settings/stdout/print_fps=true
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]
@@ -75,17 +66,11 @@ file_logging/max_log_files=30
 
 [memory]
 
-limits/multithreaded_server/rid_pool_prealloc=100
 limits/message_queue/max_size_kb=131072
 
 [network]
 
 limits/packet_peer_stream/max_buffer_po2=0
-limits/debugger_stdout/max_chars_per_second=0
-limits/debugger_stdout/max_messages_per_frame=0
-limits/debugger_stdout/max_errors_per_second=0
-limits/debugger_stdout/max_warnings_per_second=0
-limits/debugger_stdout/max_errors_per_frame=0
 
 [node]
 
@@ -109,7 +94,6 @@ name_num_separator=1
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 quality/shading/force_vertex_shading=true

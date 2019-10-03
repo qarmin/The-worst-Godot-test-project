@@ -1,6 +1,6 @@
 extends Node2D
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.2)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(0.2,0.4)
 var counter_to_delete : int = 10000000000
 const TIME_TO_NEXT_NODE : float = 0.5
 var current_time_to_next_node : float = TIME_TO_NEXT_NODE

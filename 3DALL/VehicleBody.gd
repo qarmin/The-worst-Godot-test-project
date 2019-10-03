@@ -32,9 +32,9 @@ func _physics_process(delta) -> void:
 				i.set_damping_compression(randf() * 50)
 				i.set_damping_relaxation(randf() * 50)
 				
-				i.get_rpm()
-				i.get_skidinfo()
-				i.is_in_contact()
+				qq += str(i.get_rpm())
+				qq += str(i.get_skidinfo())
+				qq += str(i.is_in_contact())
 				
 		if Autoload.WRONG_BUGS:
 			set_engine_force(randf() * 1000 - 500)
@@ -55,6 +55,6 @@ func _physics_process(delta) -> void:
 					i.set_damping_compression(randf() * 1000 - 500)
 					i.set_damping_relaxation(randf() * 1000 - 500)
 					
-					i.get_rpm()
-					i.get_skidinfo()
-					i.is_in_contact()
+					qq += str(i.get_rpm())
+					qq += str(i.get_skidinfo())
+					qq += str(i.is_in_contact())

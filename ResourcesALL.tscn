@@ -1,4 +1,4 @@
-[gd_scene load_steps=428 format=2]
+[gd_scene load_steps=452 format=2]
 
 [ext_resource path="res://ResourcesALL/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://ResourcesALL/ResourcesALL.gd" type="Script" id=2]
@@ -195,7 +195,6 @@
 [ext_resource path="res://ResourcesALL/StreamPeerGDNative.gd" type="Script" id=193]
 [ext_resource path="res://ResourcesALL/Directory.gd" type="Script" id=194]
 [ext_resource path="res://ResourcesALL/InputMap.gd" type="Script" id=195]
-[ext_resource path="res://ResourcesALL/ResourceImporter.gd" type="Script" id=196]
 [ext_resource path="res://ResourcesALL/EditorInspectorPlugin.gd" type="Script" id=197]
 [ext_resource path="res://ResourcesALL/AudioEffectHighShelfFilter.gd" type="Script" id=198]
 [ext_resource path="res://ResourcesALL/CapsuleMesh.gd" type="Script" id=199]
@@ -427,6 +426,31 @@
 [ext_resource path="res://ResourcesALL/Variant.gd" type="Script" id=425]
 [ext_resource path="res://ResourcesALL/MultiplayerAPI.gd" type="Script" id=426]
 [ext_resource path="res://ResourcesALL/NavigationMesh.gd" type="Script" id=427]
+[ext_resource path="res://ResourcesALL/AStar2D.gd" type="Script" id=428]
+[ext_resource path="res://ResourcesALL/PointMesh.gd" type="Script" id=429]
+[ext_resource path="res://ResourcesALL/RichTextEffects.gd" type="Script" id=430]
+[ext_resource path="res://ResourcesALL/Skin.gd" type="Script" id=431]
+[ext_resource path="res://ResourcesALL/VisualScriptLists.gd" type="Script" id=432]
+[ext_resource path="res://ResourcesALL/VisualScriptComposeArray.gd" type="Script" id=433]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeTextureUniformTriplanar.gd" type="Script" id=434]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeCompare.gd" type="Script" id=435]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeCustom.gd" type="Script" id=436]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeGlobalExpression.gd" type="Script" id=437]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeIs.gd" type="Script" id=438]
+[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorScalarMix.gd" type="Script" id=439]
+[ext_resource path="res://ResourcesALL/X509Certificate.gd" type="Script" id=440]
+[ext_resource path="res://ResourcesALL/AudioEffectAmplifyInstance.gd" type="Script" id=441]
+[ext_resource path="res://ResourcesALL/AudioEffectEQInstance.gd" type="Script" id=442]
+[ext_resource path="res://ResourcesALL/AudioEffectPannerInstance.gd" type="Script" id=443]
+[ext_resource path="res://ResourcesALL/CharFXTransform.gd" type="Script" id=444]
+[ext_resource path="res://ResourcesALL/Crypto.gd" type="Script" id=445]
+[ext_resource path="res://ResourcesALL/ResourceImporter.gd" type="Script" id=446]
+[ext_resource path="res://ResourcesALL/HashingContext.gd" type="Script" id=447]
+[ext_resource path="res://ResourcesALL/ResourceFormatLoaderCrypto.gd" type="Script" id=448]
+[ext_resource path="res://ResourcesALL/ResourceFormatSaverCrypto.gd" type="Script" id=449]
+[ext_resource path="res://ResourcesALL/SkinReference.gd" type="Script" id=450]
+[ext_resource path="res://ResourcesALL/EditorVCSInterface.gd" type="Script" id=451]
+[ext_resource path="res://ResourcesALL/JSONRPC.gd" type="Script" id=452]
 
 [node name="Resources" type="Node2D"]
 script = ExtResource( 2 )
@@ -445,6 +469,9 @@ script = ExtResource( 9 )
 
 [node name="AStar" type="Node2D" parent="."]
 script = ExtResource( 8 )
+
+[node name="AStar2D" type="Node2D" parent="."]
+script = ExtResource( 428 )
 
 [node name="Resource" type="Node2D" parent="."]
 script = ExtResource( 7 )
@@ -482,11 +509,11 @@ script = ExtResource( 22 )
 [node name="ProxyTexture" type="Node2D" parent="."]
 script = ExtResource( 23 )
 
-[node name="ViewportTexture" type="Node2D" parent="."]
-script = ExtResource( 13 )
-
 [node name="StreamTexture" type="Node2D" parent="."]
 script = ExtResource( 11 )
+
+[node name="ViewportTexture" type="Node2D" parent="."]
+script = ExtResource( 13 )
 
 [node name="Animation" type="Node2D" parent="."]
 script = ExtResource( 14 )
@@ -565,6 +592,9 @@ script = ExtResource( 217 )
 
 [node name="PlaneMesh" type="Node2D" parent="."]
 script = ExtResource( 204 )
+
+[node name="PointMesh" type="Node2D" parent="."]
+script = ExtResource( 429 )
 
 [node name="PrismMesh" type="Node2D" parent="."]
 script = ExtResource( 203 )
@@ -692,6 +722,9 @@ script = ExtResource( 246 )
 [node name="Shape_CANT" type="Node2D" parent="."]
 script = ExtResource( 242 )
 
+[node name="BoxShape" type="Node2D" parent="."]
+script = ExtResource( 244 )
+
 [node name="CapsuleShape" type="Node2D" parent="."]
 script = ExtResource( 243 )
 
@@ -703,9 +736,6 @@ script = ExtResource( 260 )
 
 [node name="CylinderShape" type="Node2D" parent="."]
 script = ExtResource( 255 )
-
-[node name="BoxShape" type="Node2D" parent="."]
-script = ExtResource( 244 )
 
 [node name="HeightMapShape" type="Node2D" parent="."]
 script = ExtResource( 257 )
@@ -763,6 +793,9 @@ script = ExtResource( 265 )
 
 [node name="SegmentShape2D" type="Node2D" parent="."]
 script = ExtResource( 261 )
+
+[node name="CryptoKey" type="Node2D" parent="."]
+script = ExtResource( 262 )
 
 [node name="CubeMap" type="Node2D" parent="."]
 script = ExtResource( 262 )
@@ -905,6 +938,9 @@ script = ExtResource( 332 )
 [node name="PolygonPathFinder" type="Node2D" parent="."]
 script = ExtResource( 330 )
 
+[node name="RichTextEffects" type="Node2D" parent="."]
+script = ExtResource( 430 )
+
 [node name="Shader" type="Node2D" parent="."]
 script = ExtResource( 376 )
 
@@ -913,6 +949,9 @@ script = ExtResource( 381 )
 
 [node name="ShortCut" type="Node2D" parent="."]
 script = ExtResource( 357 )
+
+[node name="Skin" type="Node2D" parent="."]
+script = ExtResource( 431 )
 
 [node name="SpriteFrames" type="Node2D" parent="."]
 script = ExtResource( 314 )
@@ -976,6 +1015,12 @@ script = ExtResource( 78 )
 
 [node name="VisualScriptComment" type="Node2D" parent="."]
 script = ExtResource( 81 )
+
+[node name="VisualScriptLists_CANT" type="Node2D" parent="."]
+script = ExtResource( 432 )
+
+[node name="VisualScriptComposeArray_CANT" type="Node2D" parent="."]
+script = ExtResource( 433 )
 
 [node name="VisualScriptCondition_CANT" type="Node2D" parent="."]
 script = ExtResource( 82 )
@@ -1109,6 +1154,9 @@ script = ExtResource( 130 )
 [node name="VisualShaderNodeTextureUniform" type="Node2D" parent="."]
 script = ExtResource( 121 )
 
+[node name="VisualShaderNodeTextureUniformTriplanar_CANT" type="Node2D" parent="."]
+script = ExtResource( 434 )
+
 [node name="VisualShaderNodeTransformUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 100 )
 
@@ -1124,11 +1172,17 @@ script = ExtResource( 59 )
 [node name="VisualShaderNodeColorOp" type="Node2D" parent="."]
 script = ExtResource( 87 )
 
+[node name="VisualShaderNodeCompare" type="Node2D" parent="."]
+script = ExtResource( 435 )
+
 [node name="VisualShaderNodeCubeMap" type="Node2D" parent="."]
 script = ExtResource( 46 )
 
 [node name="VisualShaderNodeCubeMapUniform_CANT" type="Node2D" parent="."]
 script = ExtResource( 137 )
+
+[node name="VisualShaderNodeCustom_CANT" type="Node2D" parent="."]
+script = ExtResource( 436 )
 
 [node name="VisualShaderNodeDeterminant_CANT" type="Node2D" parent="."]
 script = ExtResource( 122 )
@@ -1142,6 +1196,9 @@ script = ExtResource( 96 )
 [node name="VisualShaderNodeExpression" type="Node2D" parent="."]
 script = ExtResource( 75 )
 
+[node name="VisualShaderNodeGlobalExpression" type="Node2D" parent="."]
+script = ExtResource( 437 )
+
 [node name="VisualShaderNodeFaceForward_CANT" type="Node2D" parent="."]
 script = ExtResource( 62 )
 
@@ -1153,6 +1210,9 @@ script = ExtResource( 110 )
 
 [node name="VisualShaderNodeInput" type="Node2D" parent="."]
 script = ExtResource( 120 )
+
+[node name="VisualShaderNodeIs" type="Node2D" parent="."]
+script = ExtResource( 438 )
 
 [node name="VisualShaderNodeOuterProduct_CANT" type="Node2D" parent="."]
 script = ExtResource( 131 )
@@ -1182,6 +1242,9 @@ script = ExtResource( 52 )
 script = ExtResource( 118 )
 
 [node name="VisualShaderNodeSwitch_CANT" type="Node2D" parent="."]
+script = ExtResource( 111 )
+
+[node name="VisualShaderNodeScalarSwitch_CANT" type="Node2D" parent="."]
 script = ExtResource( 111 )
 
 [node name="VisualShaderNodeTexture" type="Node2D" parent="."]
@@ -1238,6 +1301,9 @@ script = ExtResource( 136 )
 [node name="VisualShaderNodeVectorRefract_CANT" type="Node2D" parent="."]
 script = ExtResource( 106 )
 
+[node name="VisualShaderNodeVectorScalarMix_CANT" type="Node2D" parent="."]
+script = ExtResource( 439 )
+
 [node name="VisualShaderNodeVectorScalarSmoothStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 113 )
 
@@ -1253,11 +1319,23 @@ script = ExtResource( 157 )
 [node name="World2D" type="Node2D" parent="."]
 script = ExtResource( 331 )
 
+[node name="X509Certificate" type="Node2D" parent="."]
+script = ExtResource( 440 )
+
 [node name="AnimationTrackEditPlugin_CANT" type="Node2D" parent="."]
 script = ExtResource( 148 )
 
 [node name="AudioEffectInstance_CANT" type="Node2D" parent="."]
 script = ExtResource( 150 )
+
+[node name="AudioEffectAmplifyInstance_CANT" type="Node2D" parent="."]
+script = ExtResource( 441 )
+
+[node name="AudioEffectEQInstance_CANT" type="Node2D" parent="."]
+script = ExtResource( 442 )
+
+[node name="AudioEffectPannerInstance_CANT" type="Node2D" parent="."]
+script = ExtResource( 443 )
 
 [node name="AudioEffectSpectrumAnalyzerInstance_CANT" type="Node2D" parent="."]
 script = ExtResource( 325 )
@@ -1274,8 +1352,14 @@ script = ExtResource( 161 )
 [node name="CameraFeed" type="Node2D" parent="."]
 script = ExtResource( 174 )
 
+[node name="CharFXTransform" type="Node2D" parent="."]
+script = ExtResource( 444 )
+
 [node name="ConfigFile" type="Node2D" parent="."]
 script = ExtResource( 143 )
+
+[node name="Crypto" type="Node2D" parent="."]
+script = ExtResource( 445 )
 
 [node name="Directory" type="Node2D" parent="."]
 script = ExtResource( 194 )
@@ -1286,8 +1370,14 @@ script = ExtResource( 297 )
 [node name="EditorFeatureProfile_CANT" type="Node2D" parent="."]
 script = ExtResource( 149 )
 
+[node name="ResourceImporter" type="Node2D" parent="."]
+script = ExtResource( 446 )
+
 [node name="EditorImportPlugin_CANT" type="Node2D" parent="."]
 script = ExtResource( 151 )
+
+[node name="ResourceImporterOGGVorbis_CANT" type="Node2D" parent="."]
+script = ExtResource( 183 )
 
 [node name="EditorInspectorPlugin_CANT" type="Node2D" parent="."]
 script = ExtResource( 197 )
@@ -1339,6 +1429,9 @@ script = ExtResource( 362 )
 
 [node name="HTTPClient" type="Node2D" parent="."]
 script = ExtResource( 155 )
+
+[node name="HashingContext" type="Node2D" parent="."]
+script = ExtResource( 447 )
 
 [node name="JSONParseResult" type="Node2D" parent="."]
 script = ExtResource( 316 )
@@ -1436,14 +1529,17 @@ script = ExtResource( 186 )
 [node name="ResourceFormatLoader_CANT" type="Node2D" parent="."]
 script = ExtResource( 334 )
 
+[node name="ResourceFormatLoaderCrypto_CANT" type="Node2D" parent="."]
+script = ExtResource( 448 )
+
 [node name="ResourceFormatSaver_CANT" type="Node2D" parent="."]
 script = ExtResource( 146 )
 
-[node name="ResourceImporter_CANT" type="Node2D" parent="."]
-script = ExtResource( 196 )
+[node name="ResourceFormatSaverCrypto_CANT" type="Node2D" parent="."]
+script = ExtResource( 449 )
 
-[node name="ResourceImporterOGGVorbis_CANT" type="Node2D" parent="."]
-script = ExtResource( 183 )
+[node name="ResourceImporter_CANT" type="Node2D" parent="."]
+script = ExtResource( 446 )
 
 [node name="ResourveInteractiveLoader_CANT" type="Node2D" parent="."]
 script = ExtResource( 159 )
@@ -1456,6 +1552,9 @@ script = ExtResource( 145 )
 
 [node name="Semaphore" type="Node2D" parent="."]
 script = ExtResource( 144 )
+
+[node name="SkinReference_CANT" type="Node2D" parent="."]
+script = ExtResource( 450 )
 
 [node name="SpatialVelocityTracker" type="Node2D" parent="."]
 script = ExtResource( 141 )
@@ -1550,6 +1649,9 @@ script = ExtResource( 388 )
 [node name="EditorSelection_CANT" type="Node2D" parent="."]
 script = ExtResource( 187 )
 
+[node name="EditorVCSInterface_CANT" type="Node2D" parent="."]
+script = ExtResource( 451 )
+
 [node name="Engine_CANT" type="Node2D" parent="."]
 script = ExtResource( 369 )
 
@@ -1573,6 +1675,9 @@ script = ExtResource( 195 )
 
 [node name="JSON_CANT" type="Node2D" parent="."]
 script = ExtResource( 318 )
+
+[node name="JSONRPC" type="Node2D" parent="."]
+script = ExtResource( 452 )
 
 [node name="JavaScript_CANT" type="Node2D" parent="."]
 script = ExtResource( 350 )
@@ -1691,7 +1796,7 @@ script = ExtResource( 337 )
 [node name="Transform2D" type="Node2D" parent="."]
 script = ExtResource( 179 )
 
-[node name="Variant__CANT" type="Node2D" parent="."]
+[node name="Variant_CANT" type="Node2D" parent="."]
 script = ExtResource( 425 )
 
 [node name="Vector2" type="Node2D" parent="."]

@@ -3,4 +3,8 @@
 [ext_resource path="res://RES/FreeMono.otf" type="DynamicFontData" id=1]
 
 [resource]
+size = 12
+use_mipmaps = true
+use_filter = true
+extra_spacing_top = 1
 font_data = ExtResource( 1 )

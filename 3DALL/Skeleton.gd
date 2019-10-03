@@ -53,7 +53,7 @@ func _process(delta) -> void:
 #		clear_bones() # ZE SRODKA
 
 		if Autoload.WRONG_BUGS:
-			set_use_bones_in_world_transform(bool(randi()%2))
+			#set_use_bones_in_world_transform(bool(randi()%2))
 			
 			for _i in range(10):
 				add_bone(str(randi() % 2525))
@@ -68,7 +68,7 @@ func _process(delta) -> void:
 			qq += str(get_bone_parent(randi() % 1000 - 500))
 			qq += str(get_bone_pose(randi() % 1000 - 500))
 			qq += str(get_bone_rest(randi() % 1000 - 500))
-			qq += str(get_bone_transform(randi() % 1000 - 500))
+			#qq += str(get_bone_transform(randi() % 1000 - 500))
 			qq += str(get_bound_child_nodes_to_bone(randi() % 1000 - 500))
 	
 			qq += str(is_bone_rest_disabled(randi() % 1000 - 500))
@@ -80,8 +80,8 @@ func _process(delta) -> void:
 			physical_bones_stop_simulation()
 			set_bone_custom_pose(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
 			set_bone_disable_rest(randi() % 1000 - 500,bool(randi()%2))
-			set_bone_global_pose(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-			set_bone_ignore_animation(randi() % 1000 - 500,bool(randi()%2))
+			#set_bone_global_pose(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+			#set_bone_ignore_animation(randi() % 1000 - 500,bool(randi()%2))
 			set_bone_parent(randi() % 1000 - 500,randi() % 1000 - 500)
 			set_bone_pose(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
 			set_bone_rest(randi() % 1000 - 500,Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))

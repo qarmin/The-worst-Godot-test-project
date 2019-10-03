@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=114 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -44,6 +44,11 @@
 [ext_resource path="res://3DALL/StaticBody.gd" type="Script" id=42]
 [ext_resource path="res://3DALL/AudioStreamPlayer3D.gd" type="Script" id=43]
 [ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=44]
+[ext_resource path="res://3DALL/CollisionPolygon.gd" type="Script" id=45]
+[ext_resource path="res://3DALL/CollisionShape.gd" type="Script" id=46]
+[ext_resource path="res://3DALL/NavigationMeshInstance.gd" type="Script" id=47]
+[ext_resource path="res://3DALL/PathFollow.gd" type="Script" id=48]
+[ext_resource path="res://3DALL/VehicleWheel.gd" type="Script" id=49]
 [ext_resource path="res://icon.png" type="Texture" id=50]
 [ext_resource path="res://3DALL/Listener.gd" type="Script" id=51]
 [ext_resource path="res://3DALL/Path.gd" type="Script" id=52]
@@ -273,6 +278,10 @@ script = ExtResource( 1 )
 world_scale = 1000.0
 script = ExtResource( 2 )
 
+[node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
+anchor_id = 32
+script = ExtResource( 5 )
+
 [node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
 transform = Transform( 1, 0, 0, 8.35, 0.866, 0.5, 0, -0.5, 0.866, 0, 2.847, 5.299 )
 keep_aspect = 0
@@ -286,10 +295,6 @@ size = 16004.7
 near = 8192.0
 far = 8192.0
 script = ExtResource( 4 )
-
-[node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
-anchor_id = 32
-script = ExtResource( 5 )
 
 [node name="ARVRController" type="ARVRController" parent="ARVROrigin"]
 controller_id = 32
@@ -576,6 +581,7 @@ script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.67796, -20.5468 )
+emitting = false
 lifetime = 600.0
 one_shot = true
 preprocess = 1.39
@@ -836,6 +842,7 @@ damping_compression = 1.83
 damping_relaxation = -1.69
 
 [node name="VehicleWheel 2" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 3.60134e-43
 brake = 1.0
 steering = 6.9
 use_as_traction = true
@@ -886,6 +893,12 @@ script = ExtResource( 43 )
 bone_name = "hbuyhv"
 script = ExtResource( 44 )
 
+[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
+script = ExtResource( 45 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+script = ExtResource( 46 )
+
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = SubResource( 47 )
 cell_size = Vector3( 2, 1.14, 3.08 )
@@ -911,6 +924,11 @@ script = ExtResource( 53 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
 navmesh = SubResource( 48 )
 
+[node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
+navmesh = SubResource( 48 )
+script = ExtResource( 47 )
+
 [node name="Path" type="Path" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.851509, 11.6767 )
 curve = SubResource( 49 )
@@ -924,6 +942,16 @@ v_offset = 2.17
 rotation_mode = 1
 cubic_interp = false
 loop = false
+
+[node name="PathFollow" type="PathFollow" parent="."]
+transform = Transform( -0.659725, 0.371734, -0.653128, -0.522325, 0.398039, 0.754149, 0.540313, 0.838677, -0.0684304, -15.1509, 6.68055, 5.1586 )
+offset = 99.0802
+h_offset = 2.13
+v_offset = 2.17
+rotation_mode = 1
+cubic_interp = false
+loop = false
+script = ExtResource( 48 )
 
 [node name="Position3D" type="Position3D" parent="."]
 script = ExtResource( 54 )
@@ -957,7 +985,6 @@ remote_path = NodePath("../Camera")
 script = ExtResource( 55 )
 
 [node name="Skeleton" type="Skeleton" parent="."]
-bones_in_world_transform = true
 script = ExtResource( 56 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="Skeleton"]
@@ -980,8 +1007,8 @@ joint_constraints/angular_limit_relaxation = 0.01
 shape = SubResource( 51 )
 
 [node name="PhysicalBone 2" type="PhysicalBone" parent="Skeleton/PhysicalBone/CollisionShape"]
-transform = Transform( 0.397349, -0.393218, -0.207413, -0.219674, 0.456492, 0.0402468, 0.0537122, 0.0333536, 0.211065, 0.937188, -1.22871, -0.321945 )
-body_offset = Transform( 1, -2.07126e-06, 6.55651e-07, -2.83122e-07, 0.999999, 9.38773e-07, 2.23517e-07, 1.59442e-06, 1, 2.6226e-06, 3.33786e-06, -2.14577e-06 )
+transform = Transform( 0.397349, -0.393219, -0.207413, -0.219674, 0.456492, 0.040247, 0.0537122, 0.0333537, 0.211065, 0.937188, -1.22871, -0.321945 )
+body_offset = Transform( 1, -3.53158e-06, 1.3113e-06, -2.83122e-07, 0.999999, 1.53482e-06, 2.23517e-07, 2.32458e-06, 1, 2.6226e-06, 3.33786e-06, -2.14577e-06 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone/CollisionShape/PhysicalBone 2"]
 shape = SubResource( 51 )
@@ -1006,6 +1033,12 @@ shape = SubResource( 52 )
 spring_length = 5.97
 margin = -8.14
 script = ExtResource( 61 )
+
+[node name="VehicleWheel" type="VehicleWheel" parent="."]
+transform = Transform( 0.808062, 0, -0.589098, 0, 1, 0, 0.589098, 0, 0.808062, 1.10344, -0.570775, 0.0697458 )
+engine_force = -1.0
+brake = 1.0
+script = ExtResource( 49 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.866991, -0.44476, 0.07431 )

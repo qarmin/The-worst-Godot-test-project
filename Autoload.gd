@@ -1,9 +1,9 @@
 extends Node
 
-const WRONG_BUGS : bool = true
+const WRONG_BUGS : bool = false
 const BASIC_COUTER : int = -10# smaller than 0 doesn't exit project
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
-const USE_ONLY_ONE_NODE : bool = true
+const USE_ONLY_ONE_NODE : bool = false#true
 
 var file : File = File.new()
 

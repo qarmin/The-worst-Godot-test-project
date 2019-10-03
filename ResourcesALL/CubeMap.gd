@@ -14,23 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		var q_CubeMap : CubeMap = CubeMap.new()
-		
-		q_CubeMap.set_flags(randi() % 7 + 1) #FLAGS 
-		q_CubeMap.set_storage(randi() % 3) #Storage
-		q_CubeMap.set_lossy_storage_quality(randf() * 50)
-		
-		qq += str(q_CubeMap.get_height())
-		qq += str(q_CubeMap.get_side(randi() % 6))# Side
-		qq += str(q_CubeMap.get_width())
-		#q_CubeMap.set_side( randi() % 6, load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))# Side
+		var q_CryptoKey : CryptoKey = CryptoKey.new()
+		#qq += str(q_CryptoKey.load("Lelele"))
+		#qq += str(q_CryptoKey.save("gqwrw"))
 		
 		if Autoload.WRONG_BUGS:
-			q_CubeMap.set_flags(randi() % 1000 - 500) #FLAGS 
-			q_CubeMap.set_storage(randi() % 1000 - 500) #Storage
-			q_CubeMap.set_lossy_storage_quality(randf() * 1000 - 500)
-			
-			qq += str(q_CubeMap.get_height())
-			qq += str(q_CubeMap.get_side(randi() % 1000 - 500))# Side
-			qq += str(q_CubeMap.get_width())
-			q_CubeMap.set_side( randi() % 1000 - 500, load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))# Side
+			qq += str(q_CryptoKey.load("Lelele"))
+			qq += str(q_CryptoKey.save("gqwrw"))
