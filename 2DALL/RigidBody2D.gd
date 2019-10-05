@@ -12,14 +12,6 @@ func _physics_process(delta) -> void:
 	qq = qq
 
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		for i in get_children():
-			if i.get_name().begins_with("Collision"):
-				i.set_disabled(bool(randi()%2))
-				i.set_shape(i.get_shape())
-				i.set_one_way_collision(bool(randi()%2))
-				i.set_one_way_collision_margin(randf() * 50)
 
 		set_mode(randi()%4)
 		set_mass(randf() * 50)
@@ -60,12 +52,6 @@ func _physics_process(delta) -> void:
 		
 		## With Errors
 		if Autoload.WRONG_BUGS:
-			for i in get_children():
-				if i.get_name().begins_with("Collision"):
-					i.set_disabled(bool(randi()%2))
-					i.set_shape(i.get_shape())
-					i.set_one_way_collision(bool(randi()%2))
-					i.set_one_way_collision_margin(randf() * 50)
 	
 			set_mode(randi() % 1000 - 500)
 			set_mass(randf() * 1000 - 500)

@@ -90,7 +90,7 @@ func _process(delta) -> void:
 			pm.set_next_pass(ParticlesMaterial.new())
 			CT = CurveTexture.new()
 			CT.set_width(randi() % 1000 - 500)
-			CT.set_curve(load("res://RES/Curve" + str(randi() % 1000 - 500) + ".tres"))
+			CT.set_curve(load("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
 			pm.set_trail_divisor(randi() % 1000 - 500)
 			pm.set_trail_size_modifier(CT)
 			pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
