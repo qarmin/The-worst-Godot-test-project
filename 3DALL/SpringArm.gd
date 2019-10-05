@@ -34,3 +34,21 @@ func _process(delta) -> void:
 			clear_excluded_objects()
 			qq += str(get_hit_length())
 			qq += str(remove_excluded_object(RID()))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_shape(BoxShape.new())
+		if randi() % 2 == 1:
+			set_length(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_margin(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			add_excluded_object(RID())
+		if randi() % 2 == 1:
+			clear_excluded_objects()
+		if randi() % 2 == 1:
+			qq += str(get_hit_length())
+		if randi() % 2 == 1:
+			qq += str(remove_excluded_object(RID()))

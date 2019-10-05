@@ -89,3 +89,77 @@ func _process(delta) -> void:
 			scroll_to_line(randi() % 1000 - 500)
 			qq += str(remove_line(randi() % 1000 - 500))
 			set_table_column_expand(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			clear()
+		if randi() % 2 == 1:
+			set_use_bbcode(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
+		if randi() % 2 == 1:
+			set_visible_characters(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_percent_visible(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_meta_underline(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_tab_size(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_text(str("\n\n\nafafas") + str(randi()%50))
+		if randi() % 2 == 1:
+			set_scroll_active(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_scroll_follow(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_selection_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_override_selected_font_color(bool(randi()%2))
+		if randi() % 2 == 1:
+			add_image(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+		if randi() % 2 == 1:
+			add_text(str("\n\n\nafafas") + str(randi()%50))
+		if randi() % 2 == 1:
+			qq += str(append_bbcode(str("\n\n\nafafas") + str(randi()%50)))
+		if randi() % 2 == 1:
+			qq += str(get_content_height())
+		if randi() % 2 == 1:
+			qq += str(get_line_count())
+		if randi() % 2 == 1:
+			qq += str(get_total_character_count())
+		if randi() % 2 == 1:
+			qq += str(get_v_scroll())
+		if randi() % 2 == 1:
+			qq += str(get_visible_line_count())
+		if randi() % 2 == 1:
+			newline()
+		if randi() % 2 == 1:
+			qq += str(parse_bbcode("\n\n\nafafas"))
+		if randi() % 2 == 1:
+			pop()
+		if randi() % 2 == 1:
+			push_align(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			push_cell()
+		if randi() % 2 == 1:
+			push_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			push_font(load("res://RES/DynamicFontasfasfawg.tres"))
+		if randi() % 2 == 1:
+			push_indent(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			push_list(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			push_meta(get_parent())
+		if randi() % 2 == 1:
+			push_strikethrough()
+		if randi() % 2 == 1:
+			push_table(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			push_underline()
+		if randi() % 2 == 1:
+			scroll_to_line(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			qq += str(remove_line(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_table_column_expand(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500)

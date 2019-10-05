@@ -19,3 +19,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			qq += str(get_cancel())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			qq += str(get_cancel())

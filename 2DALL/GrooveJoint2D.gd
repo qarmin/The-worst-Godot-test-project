@@ -24,3 +24,13 @@ func _process(delta) -> void:
 			set_initial_offset(randf() * 1000 - 500)
 			set_bias(randf() * 1000 - 500)
 			set_exclude_nodes_from_collision(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_length(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_initial_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bias(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_exclude_nodes_from_collision(bool(randi()%2))

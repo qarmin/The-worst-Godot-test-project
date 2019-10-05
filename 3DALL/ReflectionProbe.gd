@@ -41,3 +41,29 @@ func _process(delta) -> void:
 			set_interior_ambient(Color(randf(),randf(),randf(),randf()))
 			set_interior_ambient_energy(randf() * 1000 - 500)
 			set_interior_ambient_probe_contribution(randf() * 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_update_mode(randi() % 1000 - 500) #UpdateMode
+		if randi() % 2 == 1:
+			set_intensity(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_max_distance(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_extents(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_origin_offset(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_enable_box_projection(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_enable_shadows(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_cull_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_as_interior(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_interior_ambient(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_interior_ambient_energy(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_interior_ambient_probe_contribution(randf() * 1000 - 500)

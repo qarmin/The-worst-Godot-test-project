@@ -27,6 +27,22 @@ func _process(delta) -> void:
 			set_unit_offset(randf() * 1000 - 500)
 			set_h_offset(randf() * 1000 - 500)
 			set_v_offset(randf() * 1000 - 500)
-			set_rotation_mode(randi() % 5) # ENUM RotationMode
+			set_rotation_mode(randi() % 1000 - 500) # ENUM RotationMode
 			set_cubic_interpolation(bool(randi()%2))
+			set_loop(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_unit_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_h_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_v_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_rotation_mode(randi() % 1000 - 500) # ENUM RotationMode
+		if randi() % 2 == 1:
+			set_cubic_interpolation(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_loop(bool(randi()%2))

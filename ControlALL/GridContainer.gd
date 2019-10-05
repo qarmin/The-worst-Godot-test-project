@@ -19,3 +19,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_columns(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_columns(randi() % 1000 - 500)

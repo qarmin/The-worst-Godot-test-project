@@ -14,5 +14,30 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		set_radius(randf() * 50)
+		set_height(randf() * 50)
+		set_sides(randi()%5 + 4)
+		set_cone(bool(randi()%2))
+		set_smooth_faces(bool(randi()%2))
+		set_material(SpatialMaterial.new())
+		
 		if Autoload.WRONG_BUGS:
-			pass
+			set_radius(randf() * 1000 - 500)
+			set_height(randf() * 1000 - 500)
+			set_sides(randi()%5 + 4)
+			set_cone(bool(randi()%2))
+			set_smooth_faces(bool(randi()%2))
+			set_material(SpatialMaterial.new())
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_height(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_sides(randi()%5 + 4)
+		if randi() % 2 == 1:
+			set_cone(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_smooth_faces(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_material(SpatialMaterial.new())

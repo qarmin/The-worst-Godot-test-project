@@ -10,7 +10,6 @@
 
 [node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63619, -0.392871, 2.48948 )
-visible = false
 nodes/node_a = NodePath("../StaticBody")
 nodes/node_b = NodePath("../PhysicalBone")
 solver/priority = 5
@@ -25,7 +24,6 @@ angular_spring_z/equilibrium_point = -0.9
 script = ExtResource( 5 )
 
 [node name="HingeJoint" type="HingeJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../StaticBody")
 nodes/node_b = NodePath("../PhysicalBone")
 params/bias = 0.99
@@ -42,13 +40,11 @@ script = ExtResource( 1 )
 
 [node name="SliderJoint" type="SliderJoint" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17785, 0.25203, 4.6063 )
-visible = false
 nodes/node_a = NodePath("../VehicleBody")
 nodes/node_b = NodePath("../StaticBody")
 script = ExtResource( 3 )
 
 [node name="PinJoint" type="PinJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../Area")
 nodes/node_b = NodePath("../StaticBody")
 params/bias = 0.99
@@ -57,7 +53,6 @@ params/impulse_clamp = 7.2
 script = ExtResource( 4 )
 
 [node name="ConeTwistJoint" type="ConeTwistJoint" parent="."]
-visible = false
 nodes/node_a = NodePath("../PhysicalBone")
 nodes/node_b = NodePath("../RigidBody")
 solver/priority = 8

@@ -76,3 +76,64 @@ func _process(delta) -> void:
 			set_orthogonal(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
 			set_perspective(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
 			qq += str(unproject_position(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_keep_aspect_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_cull_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_environment(Environment.new())
+		if randi() % 2 == 1:
+			set_h_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_v_offset(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_doppler_tracking(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_projection(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_current(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_fov(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_size(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_frustum_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_znear(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_zfar(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			clear_current(bool(randi()%2))
+		if randi() % 2 == 1:
+			qq += str(get_camera_rid())
+		if randi() % 2 == 1:
+			qq += str(get_camera_transform())
+		if randi() % 2 == 1:
+			qq += str(get_cull_mask_bit(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_frustum())
+		if randi() % 2 == 1:
+			qq += str(is_position_behind(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			make_current()
+		if randi() % 2 == 1:
+			qq += str(project_local_ray_normal(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(project_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(project_ray_normal(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(project_ray_origin(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_cull_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_frustum(randf() * 1000 - 500,Vector2(randf() * 1000 - 500,randf() * 1000 - 500), randf() * 1000 - 500, randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_orthogonal(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_perspective(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			qq += str(unproject_position(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))

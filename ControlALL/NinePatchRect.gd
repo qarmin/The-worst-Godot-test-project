@@ -35,3 +35,23 @@ func _process(delta) -> void:
 			set("patch_margin_bottom", randi() % 1000 - 500)
 			set_h_axis_stretch_mode(randi() % 1000 - 500)
 			set_v_axis_stretch_mode(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_draw_center(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_region_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set("patch_margin_left", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set("patch_margin_top", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set("patch_margin_right", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set("patch_margin_bottom", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_h_axis_stretch_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_v_axis_stretch_mode(randi() % 1000 - 500)

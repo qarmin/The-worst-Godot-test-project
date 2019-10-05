@@ -65,3 +65,51 @@ func _process(delta) -> void:
 			select_all()
 			
 			clear()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_text(str(randf()))
+		if randi() % 2 == 1:
+			set_align(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_max_length(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_editable(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_secret(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_secret_character(str(randi()%10))
+		if randi() % 2 == 1:
+			set_expand_to_text_length(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_focus_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_context_menu_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_clear_button_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_placeholder(str(randf()))
+		if randi() % 2 == 1:
+			set_placeholder_alpha(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			cursor_set_blink_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			cursor_set_blink_speed(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_cursor_position(randi() % 1000 - 500)
+			
+		if randi() % 2 == 1:
+			append_at_cursor(str(randf()))
+		if randi() % 2 == 1:
+			deselect()
+		if randi() % 2 == 1:
+			qq += str(get_menu())
+		if randi() % 2 == 1:
+			qq += str(menu_option(randi() % 1000 - 500))#HMMM A LITTLE TOO SLOW
+		if randi() % 2 == 1:
+			select(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			select_all()
+			
+		if randi() % 2 == 1:
+			clear()

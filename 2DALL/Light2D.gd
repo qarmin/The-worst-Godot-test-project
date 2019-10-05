@@ -55,3 +55,43 @@ func _process(delta) -> void:
 			set_shadow_buffer_size(randi() % 1000 - 500)
 			set_shadow_smooth(randi() % 1000 - 500)
 			set_item_shadow_cull_mask(randi() % 1000000 - 500000)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_editor_only(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_texture_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_texture_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_energy(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_height(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_z_range_min(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_z_range_max(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_layer_range_min(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_layer_range_max(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_cull_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_shadow_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_shadow_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_shadow_buffer_size(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_shadow_smooth(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_shadow_cull_mask(randi() % 1000000 - 500000)

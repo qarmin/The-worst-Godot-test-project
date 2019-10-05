@@ -24,3 +24,11 @@ func _process(delta) -> void:
 			set_motion_scale(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_motion_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			set_mirroring(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_motion_scale(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_motion_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_mirroring(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))

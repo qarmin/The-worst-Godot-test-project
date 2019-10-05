@@ -36,3 +36,24 @@ func _process(delta) -> void:
 			qq += str(get_joystick_id())
 			qq += str(get_mesh())
 			qq += str(is_button_pressed(randi() % 1000 - 500))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_controller_id(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_rumble(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			qq += str(get_controller_name())
+		if randi() % 2 == 1:
+			qq += str(get_hand())
+		if randi() % 2 == 1:
+			qq += str(get_is_active())
+		if randi() % 2 == 1:
+			qq += str(get_joystick_axis(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_joystick_id())
+		if randi() % 2 == 1:
+			qq += str(get_mesh())
+		if randi() % 2 == 1:
+			qq += str(is_button_pressed(randi() % 1000 - 500))

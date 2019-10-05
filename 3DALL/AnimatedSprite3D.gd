@@ -38,3 +38,24 @@ func _process(delta) -> void:
 			qq += str(is_playing())
 			play(str(randi() % 1000000))
 			stop()
+
+	else: #RANDI
+		var SF : SpriteFrames = SpriteFrames.new()
+		if randi() % 2 == 1:
+			for i in range(4):
+				SF.add_frame(str(randi() % 1000000),load("res://RES/Sprite" + str(i + 1) + ".png"),randi() % 1000 - 500)
+			
+		if randi() % 2 == 1:
+			set_sprite_frames(SF)
+		if randi() % 2 == 1:
+			set_animation("default")
+		if randi() % 2 == 1:
+			set_frame(bool(randi()%2))
+		if randi() % 2 == 1:
+			_set_playing(bool(randi()%2))
+		if randi() % 2 == 1:
+			qq += str(is_playing())
+		if randi() % 2 == 1:
+			play(str(randi() % 1000000))
+		if randi() % 2 == 1:
+			stop()

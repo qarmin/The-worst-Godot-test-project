@@ -22,3 +22,10 @@ func _process(delta) -> void:
 			set("params/bias",randf() * 1000 - 500)
 			set("params/damping",randf() * 1000 - 500)
 			set("params/impulse_clamp",randf() * 1000 - 500)
+	else: #RANDI
+		if randi() % 2 == 1:
+			set("params/bias",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("params/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("params/impulse_clamp",randf() * 1000 - 500)

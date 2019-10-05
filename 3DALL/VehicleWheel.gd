@@ -46,3 +46,34 @@ func _physics_process(delta) -> void:
 			qq += str(get_rpm())
 			qq += str(get_skidinfo())
 			qq += str(is_in_contact())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_use_as_traction(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_use_as_steering(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_roll_influence(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_suspension_rest_length(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_friction_slip(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_suspension_travel(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_suspension_stiffness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_suspension_max_force(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_damping_compression(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_damping_relaxation(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			qq += str(get_rpm())
+		if randi() % 2 == 1:
+			qq += str(get_skidinfo())
+		if randi() % 2 == 1:
+			qq += str(is_in_contact())

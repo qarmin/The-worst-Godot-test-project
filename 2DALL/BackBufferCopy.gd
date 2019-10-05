@@ -20,3 +20,8 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_copy_mode(randi() % 1000 - 500)
 			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_copy_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

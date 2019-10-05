@@ -123,3 +123,102 @@ func _process(delta) -> void:
 			
 			qq += str(capture_rect())
 			restart()
+	else: #RANDI
+		var pm : ParticlesMaterial = ParticlesMaterial.new()
+		var CT : CurveTexture  = CurveTexture.new()
+		
+		if randi() % 2 == 1:
+			set_emitting(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_amount(randi()%4-2)
+		if randi() % 2 == 1:
+			set_lifetime(randf() - 0.5)
+		if randi() % 2 == 1:
+			set_one_shot(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_pre_process_time(randf() * 1 - 0.5)
+		if randi() % 2 == 1:
+			set_speed_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_explosiveness_ratio(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_randomness_ratio(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_fixed_fps(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_fractional_delta(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_visibility_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_use_local_coordinates(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_draw_order(randi() % 1000 - 500)
+			
+		if randi() % 2 == 1:
+			pm.set_render_priority(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_next_pass(ParticlesMaterial.new())
+		if randi() % 2 == 1:
+			CT = CurveTexture.new()
+		if randi() % 2 == 1:
+			CT.set_width(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			CT.set_curve(load("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
+		if randi() % 2 == 1:
+			pm.set_trail_divisor(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_trail_size_modifier(CT)
+		if randi() % 2 == 1:
+			pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
+		if randi() % 2 == 1:
+			pm.set_emission_shape(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_emission_sphere_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_emission_box_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			pm.set_emission_point_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_normal_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_color_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_point_count(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_spread(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_flatness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_gravity(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			pm.set_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+		if randi() % 2 == 1:
+			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
+		if randi() % 2 == 1:
+			pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
+		if randi() % 2 == 1:
+			pm.set_flag(pm.FLAG_DISABLE_Z,bool(randi()%2))
+			
+			
+			for j in range(12): # range(12):
+				if randi() % 2 == 1:
+					pm.set_param(j,randf() * 1000 - 500)
+				if randi() % 2 == 1:
+					pm.set_param_randomness(j,randf() * 1000 - 500)
+				if randi() % 2 == 1:
+					pm.set_param_texture(j,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+		if randi() % 2 == 1:
+			set_process_material(pm)
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+		if randi() % 2 == 1:
+			qq += str(capture_rect())
+		if randi() % 2 == 1:
+			restart()

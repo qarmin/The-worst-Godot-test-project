@@ -24,3 +24,13 @@ func _process(delta) -> void:
 			qq += str(get_listener_transform())
 			qq += str(is_current())
 			make_current()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			clear_current()
+		if randi() % 2 == 1:
+			qq += str(get_listener_transform())
+		if randi() % 2 == 1:
+			qq += str(is_current())
+		if randi() % 2 == 1:
+			make_current()

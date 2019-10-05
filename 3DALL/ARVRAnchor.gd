@@ -28,3 +28,17 @@ func _process(delta) -> void:
 			qq += str(get_mesh())
 			qq += str(get_plane())
 			qq += str(get_size())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_anchor_id(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			qq += str(get_anchor_name())
+		if randi() % 2 == 1:
+			qq += str(get_is_active())
+		if randi() % 2 == 1:
+			qq += str(get_mesh())
+		if randi() % 2 == 1:
+			qq += str(get_plane())
+		if randi() % 2 == 1:
+			qq += str(get_size())

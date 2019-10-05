@@ -19,10 +19,23 @@ func _process(delta) -> void:
 		
 		set_split_offset(randi()%50)
 		set_collapsed(bool(randi()%2))
-		set_dragger_visibility(randi() % 3)
+		set_dragger_visibility(randi() % 3)# draggervisibility
 		clamp_split_offset()
 		
 		
 		
 		if Autoload.WRONG_BUGS:
-			pass
+			set_split_offset(randi()%50)
+			set_collapsed(bool(randi()%2))
+			set_dragger_visibility(randi() % 1000 - 500)# draggervisibility
+			clamp_split_offset()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_split_offset(randi()%50)
+		if randi() % 2 == 1:
+			set_collapsed(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_dragger_visibility(randi() % 1000 - 500)# draggervisibility
+		if randi() % 2 == 1:
+			clamp_split_offset()

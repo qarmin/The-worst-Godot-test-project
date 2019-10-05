@@ -27,3 +27,15 @@ func _process(delta) -> void:
 			set_prefix(str(randi() % 1000 - 500))
 			set_suffix(str(randi() % 1000 - 500))
 			qq += str(get_line_edit())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_align(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_editable(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_prefix(str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_suffix(str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_line_edit())

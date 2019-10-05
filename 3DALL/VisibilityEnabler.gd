@@ -18,5 +18,7 @@ func _process(delta) -> void:
 		set_enabler(ENABLER_FREEZE_BODIES,bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			set_enabler(ENABLER_PAUSE_ANIMATIONS,bool(randi()%2))
-			set_enabler(ENABLER_FREEZE_BODIES,bool(randi()%2))
+			set_enabler(randi() % 1000 - 500,bool(randi()%2))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_enabler(randi() % 1000 - 500,bool(randi()%2))

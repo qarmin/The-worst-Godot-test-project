@@ -43,3 +43,31 @@ func _process(delta) -> void:
 			set_path_joined(bool(randi()%2))
 			set_smooth_faces(bool(randi()%2))
 			set_material(SpatialMaterial.new())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
+		if randi() % 2 == 1:
+			set_mode(randi() % 1000 - 500) # Mode
+		if randi() % 2 == 1:
+			set_depth(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_spin_degrees(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_spin_sides(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_path_node(".hityuf")
+		if randi() % 2 == 1:
+			set_path_interval(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_path_rotation(randi() % 1000 - 500) # PathRotation
+		if randi() % 2 == 1:
+			set_path_local(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_path_continuous_u(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_path_joined(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_smooth_faces(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_material(SpatialMaterial.new())

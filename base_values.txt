@@ -36,4 +36,5 @@ var qq : String = ""
 qq += str(
 qq = qq
 
-get_parent().get_child(randi() % get_parent().get_child_count())
+	else: #RANDI
+		if randi() % 2 == 1:

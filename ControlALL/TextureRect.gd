@@ -28,4 +28,14 @@ func _process(delta) -> void:
 			set_flip_h(bool(randi()%2))
 			set_flip_v(bool(randi()%2))
 		
-	
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_expand(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_stretch_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_flip_h(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_flip_v(bool(randi()%2))

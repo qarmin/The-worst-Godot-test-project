@@ -27,3 +27,14 @@ func _process(delta) -> void:
 			set_cell_size(randf() * 1000 - 500)
 			set_radius(randf() * 1000 - 500)
 			set_zero_y(bool(randi()%2))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_animation_path("fawfasfaw.")
+		if randi() % 2 == 1:
+			set_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_cell_size(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_zero_y(bool(randi()%2))

@@ -27,3 +27,15 @@ func _process(delta) -> void:
 			set_update_position(bool(randi()%2))
 			set_update_rotation(bool(randi()%2))
 			set_update_scale(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_remote_node(".asgfaw")
+		if randi() % 2 == 1:
+			set_use_global_coordinates(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_update_position(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_update_rotation(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_update_scale(bool(randi()%2))

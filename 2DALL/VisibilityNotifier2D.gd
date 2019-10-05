@@ -20,3 +20,9 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
 			qq += str(is_on_screen())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(is_on_screen())

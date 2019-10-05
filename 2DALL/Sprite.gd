@@ -46,3 +46,33 @@ func _process(delta) -> void:
 			set_region_filter_clip(bool(randi()%2))
 			qq += str(get_rect())
 			qq += str(is_pixel_opaque(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_centered(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_flip_h(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_flip_v(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_vframes(randi() % 10 - 5)
+		if randi() % 2 == 1:
+			set_hframes(randi() % 10 - 5)
+		if randi() % 2 == 1:
+			set_frame(randi() % 10 - 5)
+		if randi() % 2 == 1:
+			set_region(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_region_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_region_filter_clip(bool(randi()%2))
+		if randi() % 2 == 1:
+			qq += str(get_rect())
+		if randi() % 2 == 1:
+			qq += str(is_pixel_opaque(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

@@ -39,3 +39,24 @@ func _process(delta) -> void:
 			set("motor/enable",bool(randi()%2))
 			set("motor/target_velocity",randf() * 1000 - 500)
 			set("motor/max_impulse",randf() * 1000 - 500)
+	else: #RANDI
+		if randi() % 2 == 1:
+			set("params/bias",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/enable",bool(randi()%2))
+		if randi() % 2 == 1:
+			set("angular_limit/upper",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/lower",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/bias",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/relaxation",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("motor/enable",bool(randi()%2))
+		if randi() % 2 == 1:
+			set("motor/target_velocity",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("motor/max_impulse",randf() * 1000 - 500)

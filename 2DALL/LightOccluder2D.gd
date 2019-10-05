@@ -28,3 +28,16 @@ func _process(delta) -> void:
 			occluder_polygon.set_polygon([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
 			set_occluder_polygon(occluder_polygon)
 			set_occluder_light_mask(randi() % 1000 - 500)
+
+	else: #RANDI
+		var occluder_polygon : OccluderPolygon2D = OccluderPolygon2D.new()
+		if randi() % 2 == 1:
+			occluder_polygon.set_closed(bool(randi()%2))
+		if randi() % 2 == 1:
+			occluder_polygon.set_cull_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			occluder_polygon.set_polygon([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
+		if randi() % 2 == 1:
+			set_occluder_polygon(occluder_polygon)
+		if randi() % 2 == 1:
+			set_occluder_light_mask(randi() % 1000 - 500)

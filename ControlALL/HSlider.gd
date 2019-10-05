@@ -30,3 +30,15 @@ func _process(delta) -> void:
 			set_ticks(randi() % 1000 - 500)
 			set_ticks_on_borders(bool(randi() % 2))
 			set_focus_mode(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_editable(bool(randi() % 2))
+		if randi() % 2 == 1:
+			set_scrollable(bool(randi() % 2))
+		if randi() % 2 == 1:
+			set_ticks(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_ticks_on_borders(bool(randi() % 2))
+		if randi() % 2 == 1:
+			set_focus_mode(randi() % 1000 - 500)

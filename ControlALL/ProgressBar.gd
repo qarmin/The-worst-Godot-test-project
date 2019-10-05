@@ -19,3 +19,8 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_percent_visible(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_percent_visible(bool(randi()%2))
+			

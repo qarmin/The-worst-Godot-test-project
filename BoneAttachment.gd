@@ -1,4 +1,4 @@
-extends YSort
+extends BoneAttachment
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -9,16 +9,15 @@ func _ready():
 func _process(delta) -> void:
 	counter -= delta
 	var qq : String = ""
-	qq = qq
+	qq=qq
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_sort_enabled(bool(randi()%2))
+		set_bone_name("AFs")
 		
 		if Autoload.WRONG_BUGS:
-			set_sort_enabled(bool(randi()%2))
+			set_bone_name("AFs")
 
 	else: #RANDI
 		if randi() % 2 == 1:
-			set_sort_enabled(bool(randi()%2))
+			set_bone_name("AFs")

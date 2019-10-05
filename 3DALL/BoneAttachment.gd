@@ -18,3 +18,7 @@ func _process(delta) -> void:
 
 		if Autoload.WRONG_BUGS:
 			set_bone_name(str(randi() % 1000000))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_bone_name(str(randi() % 1000000))

@@ -76,9 +76,7 @@ func _physics_process(delta):
 		shape_owner_set_transform(0, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 		
 		if Autoload.WRONG_BUGS:
-			set_axis_lock(Vector3.AXIS_X,bool(randi()%2))
-			set_axis_lock(Vector3.AXIS_Y,bool(randi()%2))
-			set_axis_lock(Vector3.AXIS_Z,bool(randi()%2))
+			set_axis_lock(randi() % 1000 - 500,bool(randi()%2))
 			set_safe_margin(randf() * 1000 - 500)
 	
 			qq += str(get_floor_velocity())
@@ -96,8 +94,8 @@ func _physics_process(delta):
 				qq += str(test_move( Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2)))
 
 			# Physics Body
-			set_collision_layer(randi()%50000)
-			set_collision_mask(randi()%50000)
+			set_collision_layer(randi() % 1000 - 500)
+			set_collision_mask(randi() % 1000 - 500)
 
 			add_collision_exception_with(self)
 
@@ -134,4 +132,96 @@ func _physics_process(delta):
 			qq += str(shape_owner_get_transform(randi() % 1000 - 500))
 			shape_owner_remove_shape(randi() % 1000 - 500,randi() % 1000 - 500)
 			shape_owner_set_disabled(randi() % 1000 - 500,bool(randi()%2))
+			shape_owner_set_transform(randi() % 1000 - 500, Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_axis_lock(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_safe_margin(randf() * 1000 - 500)
+	
+		if randi() % 2 == 1:
+			qq += str(get_floor_velocity())
+			
+		if randi() % 2 == 1:
+			for j in get_slide_count():
+				qq += str(get_slide_collision(j).collider.name)
+
+		if randi() % 2 == 1:
+			qq += str(is_on_ceiling())
+		if randi() % 2 == 1:
+			qq += str(is_on_floor())
+
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(move_and_collide(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2),bool(randi()%2),bool(randi()%2)))
+				qq += str(move_and_slide(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2),randi()%10, randf(), bool(randi()%2)))
+				qq += str(move_and_slide_with_snap(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2),randi()%10,randf(),bool(randi()%2)))
+	
+				qq += str(test_move( Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),bool(randi()%2)))
+
+			# Physics Body
+		if randi() % 2 == 1:
+			set_collision_layer(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % 1000 - 500)
+
+		if randi() % 2 == 1:
+			add_collision_exception_with(self)
+
+		if randi() % 2 == 1:
+			qq += str(get_collision_exceptions())
+		if randi() % 2 == 1:
+			qq += str(get_collision_layer_bit(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
+
+		if randi() % 2 == 1:
+			remove_collision_exception_with(self)
+
+		if randi() % 2 == 1:
+			set_collision_layer_bit(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+
+			# Collision Object
+		if randi() % 2 == 1:
+			set_ray_pickable(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_capture_input_on_drag(bool(randi()%2))
+
+			###_input_event(get_parent().find_node("Camera"), InputEvent.new(), Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),randi() % 1000 - 500)
+
+		if randi() % 2 == 1:
+			qq += str(create_shape_owner(self))
+
+		if randi() % 2 == 1:
+			qq += str(get_rid())
+		if randi() % 2 == 1:
+			qq += str(get_shape_owners())
+
+		if randi() % 2 == 1:
+			qq += str(is_shape_owner_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			remove_shape_owner(randi() % 1000 - 500)
+
+		if randi() % 2 == 1:
+			qq += str(shape_find_owner(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			shape_owner_add_shape(randi() % 1000 - 500,Shape.new())
+		if randi() % 2 == 1:
+			shape_owner_clear_shapes(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			qq += str(shape_owner_get_owner(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(shape_owner_get_shape(randi() % 1000 - 500,randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(shape_owner_get_shape_count(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(shape_owner_get_shape_index(randi() % 1000 - 500,randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(shape_owner_get_transform(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			shape_owner_remove_shape(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			shape_owner_set_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
 			shape_owner_set_transform(randi() % 1000 - 500, Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))

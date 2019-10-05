@@ -39,3 +39,27 @@ func _process(delta) -> void:
 			
 			for i in get_children():
 				i.queue_free()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_mesh(CubeMesh.new())
+		if randi() % 2 == 1:
+			set_skeleton_path(".")
+			
+		if randi() % 2 == 1:
+			create_convex_collision()
+		if randi() % 2 == 1:
+			create_debug_tangents()
+		if randi() % 2 == 1:
+			create_trimesh_collision()
+		if randi() % 2 == 1:
+			qq += str(get_surface_material(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_surface_material_count())
+		if randi() % 2 == 1:
+			set_surface_material(randi() % 1000 - 500, SpatialMaterial.new())
+			
+			
+			
+		for i in get_children():
+			i.queue_free()

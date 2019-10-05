@@ -22,4 +22,11 @@ func _process(delta) -> void:
 			set_title(str(randi()%50000))
 			set_resizable(bool(randi() % 2))
 			qq += str(get_close_button())
-			
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_title(str(randi()%50000))
+		if randi() % 2 == 1:
+			set_resizable(bool(randi() % 2))
+		if randi() % 2 == 1:
+			qq += str(get_close_button())

@@ -18,3 +18,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_world_scale(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_world_scale(bool(randi()%2))

@@ -59,3 +59,45 @@ func _process(delta) -> void:
 			remove_valid_right_disconnect_type(randi() % 1000 - 500)
 			set_connection_activity("qwtqwa",randi() % 1000 - 500,"qwfqwfa",randi() % 1000 - 500,randf() * 1000 - 500)
 			set_selected(get_parent().get_child(randi() % get_parent().get_child_count()))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_right_disconnects(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_scroll_ofs(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_snap(randi() % 1000000 - 500000)
+		if randi() % 2 == 1:
+			set_use_snap(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_zoom(randf() * 1000 - 500)
+			
+			add_valid_connection_type(randi() % 1000000 - 500000,randi() % 1000000 - 500000)
+		if randi() % 2 == 1:
+			add_valid_left_disconnect_type(randi() % 1000000 - 500000)
+		if randi() % 2 == 1:
+			qq += str(add_valid_right_disconnect_type(randi() % 1000000 - 500000))
+		if randi() % 2 == 1:
+			clear_connections()
+		if randi() % 2 == 1:
+			qq += str(connect_node("qwfqafvasfqw",randi() % 1000000 - 500000,"qwgfewgregser",randi() % 1000000 - 500000))
+		if randi() % 2 == 1:
+			qq += str(disconnect_node("qwtqwagae",randi() % 1000 - 500,"fqasfqwgfqw",randi() % 1000000 - 500000))
+		if randi() % 2 == 1:
+			qq += str(get_connection_list())
+		if randi() % 2 == 1:
+			qq += str(get_zoom_hbox())
+		if randi() % 2 == 1:
+			qq += str(is_node_connected("qqwtqwdaff",randi() % 1000 - 500,"fqqwqwrqwt",randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_valid_connection_type(randi() % 1000 - 500,randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			remove_valid_connection_type(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			remove_valid_left_disconnect_type(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			remove_valid_right_disconnect_type(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_connection_activity("qwtqwa",randi() % 1000 - 500,"qwfqwfa",randi() % 1000 - 500,randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_selected(get_parent().get_child(randi() % get_parent().get_child_count()))

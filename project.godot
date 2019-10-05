@@ -16,7 +16,9 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://2DALL.tscn"
+run/main_scene="res://ControlALL.tscn"
+run/disable_stdout=true
+run/disable_stderr=true
 config/icon="res://icon.png"
 
 [autoload]
@@ -27,6 +29,7 @@ Autoload="*res://Autoload.gd"
 
 settings/fps/force_fps=120
 settings/stdout/print_fps=true
+gdscript/warnings/enable=false
 gdscript/completion/autocomplete_setters_and_getters=true
 
 [display]

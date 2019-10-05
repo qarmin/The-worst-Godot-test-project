@@ -26,3 +26,14 @@ func _process(delta) -> void:
 			set_rings(randi() % 4 - 2)
 			set_smooth_faces(bool(randi()%2))
 			set_material(SpatialMaterial.new())
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_radial_segments(randi() % 4 - 2)
+		if randi() % 2 == 1:
+			set_rings(randi() % 4 - 2)
+		if randi() % 2 == 1:
+			set_smooth_faces(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_material(SpatialMaterial.new())

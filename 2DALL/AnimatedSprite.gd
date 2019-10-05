@@ -227,7 +227,7 @@ func _process(delta) -> void:
 			node_temp.queue_free()
 		else: ## RANDI
 			var node_temp : Node = load("res://RES/Node.tscn").instance()
-			print("A")
+			
 			if randi()%2 == 1:
 				set_sprite_frames(load("res://RES/SpriteFrames.tres"))
 			if randi()%2 == 1:

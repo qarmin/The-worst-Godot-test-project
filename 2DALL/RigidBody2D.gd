@@ -86,3 +86,66 @@ func _physics_process(delta) -> void:
 			set_axis_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
 			if Autoload.SLOW_FUNCTIONS:
 				qq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+				
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_mass(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_inertia(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_weight(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_friction(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bounce(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_gravity_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+		if randi() % 2 == 1:
+			set_use_custom_integrator(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_continuous_collision_detection_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_max_contacts_reported(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_contact_monitor(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_sleeping(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_can_sleep(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_linear_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_linear_damp(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_angular_velocity(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_angular_damp(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_applied_force(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_applied_torque(randf() * 1000 - 500)
+	
+			#_integrate_forces()
+	
+		if randi() % 2 == 1:
+			add_central_force(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			add_force(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			add_torque(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			apply_central_impulse(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			apply_impulse(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			apply_torque_impulse(randf() * 1000 - 500)
+	
+		if randi() % 2 == 1:
+			set_axis_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(test_motion(Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

@@ -14,7 +14,7 @@ func _process(delta) -> void:
 	if counter <= 0:
 		
 		set_margin(randf() * 50)
-		set_process_mode(randi() % 2)
+		set_process_mode(randi() % 2) #ProcessMode
 		set_collision_mask(randi() % 409600)
 		set_clip_to_areas(bool(randi()%2))
 		set_clip_to_bodies(bool(randi()%2))
@@ -29,8 +29,8 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_margin(randf() * 1000 - 500)
-			set_process_mode(randi() % 2)
-			set_collision_mask(randi() % 409600)
+			set_process_mode(randi() % 1000 - 500) #ProcessMode
+			set_collision_mask(randi() % 1000 - 500)
 			set_clip_to_areas(bool(randi()%2))
 			set_clip_to_bodies(bool(randi()%2))
 			
@@ -40,4 +40,31 @@ func _process(delta) -> void:
 			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
 			remove_exception(get_parent())
 			remove_exception_rid(RID())
+			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_margin(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_process_mode(randi() % 1000 - 500) #ProcessMode
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_clip_to_areas(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_clip_to_bodies(bool(randi()%2))
+		if randi() % 2 == 1:
+			
+			add_exception(get_parent())
+		if randi() % 2 == 1:
+			add_exception_rid(RID())
+		if randi() % 2 == 1:
+			clear_exceptions()
+		if randi() % 2 == 1:
+			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			remove_exception(get_parent())
+		if randi() % 2 == 1:
+			remove_exception_rid(RID())
+		if randi() % 2 == 1:
 			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))

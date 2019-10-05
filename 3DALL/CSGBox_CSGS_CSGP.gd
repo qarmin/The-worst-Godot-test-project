@@ -41,16 +41,16 @@ func _process(delta) -> void:
 		
 		
 		if Autoload.WRONG_BUGS:
-			set_width(randf() * 100 - 50)
-			set_height(randf() * 100 - 50)
-			set_depth(randf() * 100 - 50)
+			set_width(randf() * 1000 - 500)
+			set_height(randf() * 1000 - 500)
+			set_depth(randf() * 1000 - 500)
 			set_material(SpatialMaterial.new())
 			
 			# CSGPrimivive
 			set_invert_faces(bool(randi()%2))
 			
 			# CSGShape
-			set_operation(randi() % 100 - 50) # OPERATION
+			set_operation(randi() % 1000 - 500) # OPERATION
 			set_snap(randf() * 1000 - 500)
 			set_calculate_tangents(bool(randi()%2))
 			set_use_collision(bool(randi()%2))
@@ -64,4 +64,47 @@ func _process(delta) -> void:
 			qq += str(is_root_shape())
 			
 			set_collision_layer_bit(randi() % 1000000 - 500000,bool(randi()%2))
+			set_collision_mask_bit(randi() % 1000000 - 500000,bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_width(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_height(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_depth(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_material(SpatialMaterial.new())
+			
+			# CSGPrimivive
+		if randi() % 2 == 1:
+			set_invert_faces(bool(randi()%2))
+			
+			# CSGShape
+		if randi() % 2 == 1:
+			set_operation(randi() % 1000 - 500) # OPERATION
+		if randi() % 2 == 1:
+			set_snap(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_calculate_tangents(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_use_collision(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_collision_layer(randi() % 1000000 - 500000)
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % 1000000 - 500000)
+			
+		if randi() % 2 == 1:
+			qq += str(get_collision_layer_bit(randi() % 1000000 - 500000))
+		if randi() % 2 == 1:
+			qq += str(get_collision_mask_bit(randi() % 1000000 - 500000))
+		if randi() % 2 == 1:
+			qq += str(get_meshes())
+			
+		if randi() % 2 == 1:
+			qq += str(is_root_shape())
+			
+		if randi() % 2 == 1:
+			set_collision_layer_bit(randi() % 1000000 - 500000,bool(randi()%2))
+		if randi() % 2 == 1:
 			set_collision_mask_bit(randi() % 1000000 - 500000,bool(randi()%2))

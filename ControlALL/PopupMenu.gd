@@ -125,3 +125,111 @@ func _process(delta) -> void:
 			toggle_item_checked(randi() % 1000 - 500)
 			toggle_item_multistate(randi() % 1000 - 500)
 		
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			clear()
+		if randi() % 2 == 1:
+			set_hide_on_item_selection(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_hide_on_checkable_item_selection(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_hide_on_state_item_selection(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_submenu_popup_delay(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			add_check_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_check_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+		if randi() % 2 == 1:
+			add_icon_check_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_icon_check_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_icon_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_radio_check_item(str(randi()%50000), randi() % 1000 - 500, randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_radio_check_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+		if randi() % 2 == 1:
+			add_separator(str(randi()%50000))
+		if randi() % 2 == 1:
+			add_shortcut(ShortCut.new(), randi() % 1000 - 500, bool(randi()%2))
+		if randi() % 2 == 1:
+			add_submenu_item(str(randi()%50000),str(randi()%50000))
+		if randi() % 2 == 1:
+			qq += str(get_item_accelerator(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_count())
+		if randi() % 2 == 1:
+			qq += str(get_item_icon(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_id(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_index(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_metadata(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_shortcut(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_submenu(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_text(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_tooltip(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_hide_on_window_lose_focus())
+		if randi() % 2 == 1:
+			qq += str(is_item_checkable(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_checked(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_radio_checkable(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_separator(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_shortcut_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			remove_item(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_hide_on_window_lose_focus(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_accelerator(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_as_checkable(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_as_radio_checkable(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_as_separator(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_checked(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_metadata(randi() % 1000 - 500,PoolByteArray([12,55,1,5,12,5215,215]))
+		if randi() % 2 == 1:
+			set_item_multistate(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_shortcut(randi() % 1000 - 500, ShortCut.new(), bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_shortcut_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_submenu(randi() % 1000 - 500,str(randi()%50000))
+		if randi() % 2 == 1:
+			set_item_text(randi() % 1000 - 500,str(randi()%50000))
+		if randi() % 2 == 1:
+			set_item_tooltip(randi() % 1000 - 500,str(randi()%50000))
+		if randi() % 2 == 1:
+			toggle_item_checked(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			toggle_item_multistate(randi() % 1000 - 500)

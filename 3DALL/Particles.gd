@@ -81,9 +81,9 @@ func _process(delta) -> void:
 			set_visibility_aabb(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
 			set_use_local_coordinates(bool(randi()%2))
 			set_draw_order(randi() % 1000 - 500)
-			# Luka na process_material ktnory jest na koncu
-			for i in range(1):#MAX_DRAW_PASSES):
-				set_draw_pass_mesh(i, CubeMesh.new())
+			# Luka na process_material ktory jest na koncu
+			
+			set_draw_pass_mesh(randi() % 1000 - 500, CubeMesh.new())
 			
 			pm = ParticlesMaterial.new()
 			pm.set_render_priority(randi() % 1000 - 500)
@@ -107,16 +107,105 @@ func _process(delta) -> void:
 			pm.set_color(Color(randf(),randf(),randf(),randf()))
 			pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			
-			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
-			pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
-			pm.set_flag(pm.FLAG_DISABLE_Z,bool(randi()%2))
+			pm.set_flag(randi() % 1000 - 500,bool(randi()%2))
 			
-			#Setting last PARAM_ANIM_OFFSET (11) cause GLES 3 error
-			for j in range(12): # range(12):
-				pm.set_param(j,randf() * 1000 - 500)
-				pm.set_param_randomness(j,randf() * 1000 - 500)
-				pm.set_param_texture(j,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			pm.set_param(randi() % 1000 - 500,randf() * 1000 - 500)
+			pm.set_param_randomness(randi() % 1000 - 500,randf() * 1000 - 500)
+			pm.set_param_texture(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			
 			set_process_material(pm)
 			
 			restart()
+
+	else: #RANDI
+		var pm : ParticlesMaterial = ParticlesMaterial.new()
+		var CT : CurveTexture  = CurveTexture.new()
+		
+		if randi() % 2 == 1:
+			set_emitting(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_amount(randi()%4 - 2)
+		if randi() % 2 == 1:
+			set_lifetime(randf() - 0.5)
+		if randi() % 2 == 1:
+			set_one_shot(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_pre_process_time(randf() * 1 - 0.5)
+		if randi() % 2 == 1:
+			set_speed_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_explosiveness_ratio(randf())
+		if randi() % 2 == 1:
+			set_randomness_ratio(randf())
+		if randi() % 2 == 1:
+			set_fixed_fps(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_fractional_delta(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_visibility_aabb(AABB(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_use_local_coordinates(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_draw_order(randi() % 1000 - 500)
+			# Luka na process_material ktnory jest na koncu
+		if randi() % 2 == 1:
+			set_draw_pass_mesh(randi() % 1000 - 500, CubeMesh.new())
+			
+		if randi() % 2 == 1:
+			pm = ParticlesMaterial.new()
+		if randi() % 2 == 1:
+			pm.set_render_priority(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_next_pass(ParticlesMaterial.new())
+		if randi() % 2 == 1:
+			CT = CurveTexture.new()
+		if randi() % 2 == 1:
+			CT.set_width(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			CT.set_curve(load("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
+		if randi() % 2 == 1:
+			pm.set_trail_divisor(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_trail_size_modifier(CT)
+		if randi() % 2 == 1:
+			pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
+		if randi() % 2 == 1:
+			pm.set_emission_shape(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_emission_sphere_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_emission_box_extents(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			pm.set_emission_point_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_normal_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_color_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			pm.set_emission_point_count(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_spread(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_flatness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_gravity(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			pm.set_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+		if randi() % 2 == 1:
+			pm.set_flag(randi() % 1000 - 500,bool(randi()%2))
+			
+		if randi() % 2 == 1:
+			pm.set_param(randi() % 1000 - 500,randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_param_randomness(randi() % 1000 - 500,randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			pm.set_param_texture(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+		if randi() % 2 == 1:
+			restart()
+			
+		set_process_material(pm)
+			

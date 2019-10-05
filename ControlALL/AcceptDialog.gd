@@ -31,4 +31,18 @@ func _process(delta) -> void:
 			#LEAK qq += str(add_cancel(str(randi() % 1000 - 500)))
 			qq += str(get_label())
 			qq += str(get_ok())
-			#register_text_enter(
+			register_text_enter(self)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_text(str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_hide_on_ok(bool(randi()%2))
+			#LEAK qq += str(add_button(str(randi() % 1000 - 500), bool(randi()%2)))
+			#LEAK qq += str(add_cancel(str(randi() % 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(get_label())
+		if randi() % 2 == 1:
+			qq += str(get_ok())
+		if randi() % 2 == 1:
+			register_text_enter(self)

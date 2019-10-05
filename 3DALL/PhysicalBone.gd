@@ -42,3 +42,30 @@ func _physics_process(delta) -> void:
 			qq += str(get_simulate_physics())
 			qq += str(is_simulating_physics())
 			qq += str(is_static_body())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_joint_type(randi() % 1000 - 500) #JOINT_TYPE
+		if randi() % 2 == 1:
+			set_joint_offset(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_body_offset(Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_mass(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_weight(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_friction(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bounce(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_gravity_scale(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			qq += str(get_bone_id())
+		if randi() % 2 == 1:
+			qq += str(get_simulate_physics())
+		if randi() % 2 == 1:
+			qq += str(is_simulating_physics())
+		if randi() % 2 == 1:
+			qq += str(is_static_body())

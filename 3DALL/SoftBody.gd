@@ -66,3 +66,51 @@ func _process(delta) -> void:
 			set_collision_layer_bit(randi() % 1000 - 500,bool(randi()%2))
 			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))
 			set_ray_pickable(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_collision_layer(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_parent_collision_ignore(".asfasfa")
+		if randi() % 2 == 1:
+			set_simulation_precision(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_total_mass(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_linear_stiffness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_areaAngular_stiffness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_volume_stiffness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_pressure_coefficient(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_damping_coefficient(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_drag_coefficient(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_pose_matching_coefficient(randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			add_collision_exception_with(self)
+			
+		if randi() % 2 == 1:
+			qq += str(get_collision_exceptions())
+		if randi() % 2 == 1:
+			qq += str(get_collision_layer_bit(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_collision_mask_bit(randi() % 1000 - 500))
+			
+		if randi() % 2 == 1:
+			qq += str(is_ray_pickable())
+		if randi() % 2 == 1:
+			remove_collision_exception_with(get_parent())
+			
+		if randi() % 2 == 1:
+			set_collision_layer_bit(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_collision_mask_bit(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_ray_pickable(bool(randi()%2))

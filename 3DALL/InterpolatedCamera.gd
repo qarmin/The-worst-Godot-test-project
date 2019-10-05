@@ -25,3 +25,13 @@ func _process(delta) -> void:
 			set_speed(randf() * 1000 - 500)
 			set_interpolation_enabled(bool(randi()%2))
 			set_target(self)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_target_path("Romanagasgfg")
+		if randi() % 2 == 1:
+			set_speed(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_interpolation_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_target(self)

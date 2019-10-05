@@ -17,10 +17,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			pass
-		
-		
-		emit_signal("about_to_show")
-		emit_signal("popup_hide")
-		show()
-		
 
+	else: #RANDI
+		if randi() % 2 == 1:
+			pass

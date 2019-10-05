@@ -65,8 +65,8 @@ func _process(delta) -> void:
 			set_fractional_delta(bool(randi()%2))
 			set_use_local_coordinates(bool(randi()%2))
 			set_draw_order(randi() % 1000 - 500)
-			set_texture(load("res://RES/Sprite" + str(randi() % 1000 - 500) + ".png"))
-			set_normalmap(load("res://RES/Sprite" + str(randi() % 1000 - 500) + ".png"))
+			set_texture(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+			set_normalmap(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
 			set_emission_shape(randi() % 1000 - 500)
 			set_emission_sphere_radius(randf() * 1000 - 500)
 			set_emission_rect_extents(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
@@ -86,5 +86,72 @@ func _process(delta) -> void:
 			
 			for j in range(12): # range(12):
 				set_param(j,randf() * 1000 - 500)
-				set_param_curve(j,load("res://RES/Curve" + str(randi() % 1000 - 500) + ".tres"))
+				set_param_curve(j,load("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
 				set_param_randomness(j,randf() * 1000 - 500)
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_amount(randi() % 4 - 2)
+		if randi() % 2 == 1:
+			restart()
+		if randi() % 2 == 1:
+			set_lifetime(randf() - 0.5)
+		if randi() % 2 == 1:
+			set_one_shot(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_pre_process_time(randf() * 1 - 0.5)
+		if randi() % 2 == 1:
+			set_speed_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_explosiveness_ratio(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_randomness_ratio(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_fixed_fps(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_fractional_delta(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_use_local_coordinates(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_draw_order(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_normalmap(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_emission_shape(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_emission_sphere_radius(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_emission_rect_extents(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_emission_points(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
+		if randi() % 2 == 1:
+			set_emission_normals(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
+		if randi() % 2 == 1:
+			set_emission_colors(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+		if randi() % 2 == 1:
+			set_particle_flag(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_spread(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_flatness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_gravity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set("local_coords", bool(randi()%2))
+		if randi() % 2 == 1:
+			set("draw_order", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+		if randi() % 2 == 1:
+			set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+		if randi() % 2 == 1:
+			set("emission_shape", randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set("flag_align_y", bool(randi()%2))
+			
+			for j in range(12): # range(12):
+				if randi() % 2 == 1:
+					set_param(j,randf() * 1000 - 500)
+					set_param_curve(j,load("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
+					set_param_randomness(j,randf() * 1000 - 500)

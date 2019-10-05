@@ -60,3 +60,48 @@ func _process(delta) -> void:
 			set("angular_ortho/softness",randf() * 1000 - 500)
 			set("angular_ortho/restitution",randf() * 1000 - 500)
 			set("angular_ortho/damping",randf() * 1000 - 500)
+	else: #RANDI
+		if randi() % 2 == 1:
+			set("linear_limit/upper_distance",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_limit/lower_distance",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_limit/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_limit/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_limit/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_motion/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_motion/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_motion/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_ortho/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_ortho/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("linear_ortho/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/upper_angle",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/lower_angle",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_limit/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_motion/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_motion/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_motion/damping",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_ortho/softness",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_ortho/restitution",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("angular_ortho/damping",randf() * 1000 - 500)

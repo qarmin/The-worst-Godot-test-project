@@ -44,3 +44,29 @@ func _process(delta) -> void:
 			if Autoload.SLOW_FUNCTIONS:
 				bake(self, bool(randi()%2))
 				debug_bake()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_subdiv(randi() % 10 - 50) # Subdiv
+		if randi() % 2 == 1:
+			set_extents(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_dynamic_range(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_energy(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_propagation(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bias(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_normal_bias(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_interior(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_compress(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_probe_data(GIProbeData.new())
+			
+			if Autoload.SLOW_FUNCTIONS:
+				bake(self, bool(randi()%2))
+				debug_bake()

@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_text(str(bool(randi()%2)))
 			set_align(randi() % 1000 - 500)
-			set_valign(randi() % 1000 - 5004)
+			set_valign(randi() % 1000 - 500)
 			set_autowrap(bool(randi()%2))
 			set_clip_text(bool(randi()%2))
 			set_uppercase(bool(randi()%2))
@@ -46,4 +46,35 @@ func _process(delta) -> void:
 			qq += str(get_line_count())
 			qq += str(get_line_height())
 			qq += str(get_total_character_count())
+			qq += str(get_visible_line_count())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_text(str(bool(randi()%2)))
+		if randi() % 2 == 1:
+			set_align(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_valign(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_autowrap(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_clip_text(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_uppercase(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_visible_characters(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_percent_visible(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_lines_skipped(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_max_lines_visible(randi() % 1000 - 500)
+			
+		if randi() % 2 == 1:
+			qq += str(get_line_count())
+		if randi() % 2 == 1:
+			qq += str(get_line_height())
+		if randi() % 2 == 1:
+			qq += str(get_total_character_count())
+		if randi() % 2 == 1:
 			qq += str(get_visible_line_count())

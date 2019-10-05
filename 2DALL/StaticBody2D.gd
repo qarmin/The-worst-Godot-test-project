@@ -23,7 +23,18 @@ func _physics_process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 					
 			set_constant_linear_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			set_constant_angular_velocity(randf() * 50)
+			set_constant_angular_velocity(randf() * 1000 - 500)
 			set_friction(randf() * 1000 - 500)
 			set_bounce(randf() * 1000 - 500)
+			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_constant_linear_velocity(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_constant_angular_velocity(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_friction(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bounce(randf() * 1000 - 500)
+		if randi() % 2 == 1:
 			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))

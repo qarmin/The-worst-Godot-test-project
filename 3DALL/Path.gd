@@ -18,3 +18,7 @@ func _process(delta) -> void:
 
 		if Autoload.WRONG_BUGS:
 			set_curve(Curve3D.new())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_curve(Curve3D.new())

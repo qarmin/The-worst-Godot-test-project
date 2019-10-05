@@ -62,3 +62,44 @@ func _process(delta) -> void:
 			set_drag_to_rearrange_enabled(bool(randi()%2))
 			
 		popup_menu_temp.queue_free()
+
+	else: #RANDI
+		var popup_menu_temp : PopupMenu = PopupMenu.new()
+		if randi() % 2 == 1:
+			set_popup(popup_menu_temp)
+		if randi() % 2 == 1:
+			set_tab_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_tab_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_tab_title(randi() % 1000 - 500,str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_tabs_rearrange_group(0)
+			
+		if randi() % 2 == 1:
+			qq += str(get_current_tab_control())
+		if randi() % 2 == 1:
+			qq += str(get_popup())
+		if randi() % 2 == 1:
+			qq += str(get_previous_tab())
+		if randi() % 2 == 1:
+			qq += str(get_tab_control(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_tab_count())
+		if randi() % 2 == 1:
+			qq += str(get_tab_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_tab_icon(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_tab_title(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_tabs_rearrange_group())
+			
+		if randi() % 2 == 1:
+			set_tab_align(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_current_tab(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_tabs_visible(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_drag_to_rearrange_enabled(bool(randi()%2))

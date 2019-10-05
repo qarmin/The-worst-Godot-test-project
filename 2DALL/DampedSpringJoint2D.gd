@@ -39,3 +39,24 @@ func _process(delta) -> void:
 			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
 			set_bias(randf() * 1000 - 500)
 			set_exclude_nodes_from_collision(bool(randi()%2))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_length(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_rest_length(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_stiffness(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_damping(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_exclude_nodes_from_collision(bool(randi()%2))
+			
+			# Joint2D
+		if randi() % 2 == 1:
+			set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+		if randi() % 2 == 1:
+			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+		if randi() % 2 == 1:
+			set_bias(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_exclude_nodes_from_collision(bool(randi()%2))

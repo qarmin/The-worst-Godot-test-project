@@ -67,3 +67,54 @@ func _process(delta) -> void:
 			play()
 			seek(randf() * 1000 - 500)
 			stop()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_stream(AudioStream.new())
+		if randi() % 2 == 1:
+			set_attenuation_model(randi() % 1000 - 500) # AttenuationModel
+		if randi() % 2 == 1:
+			set_unit_db(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_unit_size(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_max_db(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_pitch_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			_set_playing(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_autoplay(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_stream_paused(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_max_distance(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_out_of_range_mode(randi() % 1000 - 500) #OutOfRangeMode
+		if randi() % 2 == 1:
+			set_bus(str("sgasfqw"))
+		if randi() % 2 == 1:
+			set_area_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_emission_angle_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_emission_angle(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_emission_angle_filter_attenuation_db(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_attenuation_filter_cutoff_hz(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_attenuation_filter_db(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_doppler_tracking(randi() % 1000 - 500) # DopplerTracking
+			
+		if randi() % 2 == 1:
+			qq += str(get_playback_position())
+		if randi() % 2 == 1:
+			qq += str(get_stream_playback())
+		if randi() % 2 == 1:
+			play()
+		if randi() % 2 == 1:
+			seek(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			stop()

@@ -50,3 +50,39 @@ func _process(delta) -> void:
 #			qq += str(get_point_position(randi() % 1000 - 500))
 #			remove_point(randi() % 1000 - 500)
 #			set_point_position(randi() % 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+#
+#	else: #RANDI
+#		if randi() % 2 == 1:
+#			clear_points()
+#		if randi() % 2 == 1:
+#			set_points(PoolVector2Array([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)]))
+#		if randi() % 2 == 1:
+#			set_width(randf() * 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_default_color(Color(randf(),randf(),randf(),randf()))
+#		if randi() % 2 == 1:
+#			set_gradient(load("res://RES/Gradient" + str(randi() % 1000 - 500) + ".tres"))
+#		if randi() % 2 == 1:
+#			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#		if randi() % 2 == 1:
+#			set_texture_mode(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_joint_mode(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_begin_cap_mode(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_end_cap_mode(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_sharp_limit(randf() * 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_round_precision(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			add_point(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+#		if randi() % 2 == 1:
+#			qq += str(get_point_count())
+#		if randi() % 2 == 1:
+#			qq += str(get_point_position(randi() % 1000 - 500))
+#		if randi() % 2 == 1:
+#			remove_point(randi() % 1000 - 500)
+#		if randi() % 2 == 1:
+#			set_point_position(randi() % 1000 - 500, Vector2(randf() * 1000 - 500, randf() * 1000 - 500))

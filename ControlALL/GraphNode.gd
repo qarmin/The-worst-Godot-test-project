@@ -66,3 +66,53 @@ func _process(delta) -> void:
 			qq += str(get_slot_type_right(randi() % 1000 - 500))
 			qq += str(is_slot_enabled_left(randi() % 1000 - 500))
 			qq += str(is_slot_enabled_right(randi() % 1000 - 500))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_title(str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_offset(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			set_show_close_button(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_resizable(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_selected(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_comment(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_overlay(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_slot(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % 1000 - 500, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
+		if randi() % 2 == 1:
+			clear_slot(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			clear_all_slots()
+		if randi() % 2 == 1:
+			qq += str(get_connection_input_color(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_connection_input_count())
+		if randi() % 2 == 1:
+			qq += str(get_connection_input_position(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_connection_input_type(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_connection_output_color(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_connection_output_count())
+		if randi() % 2 == 1:
+			qq += str(get_connection_output_position(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_connection_output_type(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_slot_color_left(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_slot_color_right(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_slot_type_left(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_slot_type_right(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_slot_enabled_left(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_slot_enabled_right(randi() % 1000 - 500))

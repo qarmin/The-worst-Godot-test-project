@@ -49,4 +49,35 @@ func _process(delta) -> void:
 			qq += str(is_playing())
 			play()
 			stop()
-		
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_audio_track(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_stream(load("res://RES/VideoStreamWebm.tres"))
+		if randi() % 2 == 1:
+			set_volume_db(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_volume(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_autoplay(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_paused(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_expand(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_buffering_msec(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_stream_position(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bus(str(randf() * 1000 - 500))
+			
+		if randi() % 2 == 1:
+			qq += str(get_stream_name())
+		if randi() % 2 == 1:
+			qq += str(get_video_texture())
+		if randi() % 2 == 1:
+			qq += str(is_playing())
+		if randi() % 2 == 1:
+			play()
+		if randi() % 2 == 1:
+			stop()

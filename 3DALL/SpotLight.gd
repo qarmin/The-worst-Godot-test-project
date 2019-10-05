@@ -25,3 +25,12 @@ func _process(delta) -> void:
 			set("spot_attenuation",randf() * 1000 - 500)
 			set("spot_angle",randf() * 1000 - 500)
 			set("spot_angle_attenuation",randf() * 1000 - 500)
+	else: #RANDI
+		if randi() % 2 == 1:
+			set("spot_range",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("spot_attenuation",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("spot_angle",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("spot_angle_attenuation",randf() * 1000 - 500)

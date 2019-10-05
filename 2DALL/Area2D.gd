@@ -99,7 +99,7 @@ func _process(delta) -> void:
 			set_audio_bus_override(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_audio_bus_name("snocŒanosl")
-			
+		if randi() % 2 == 1:
 			qq += str(get_collision_layer_bit(randi() % 1000 - 500))
 		if randi() % 2 == 1:
 			qq += str(get_collision_mask_bit(randi() % 1000 - 500))

@@ -125,3 +125,111 @@ func _process(delta) -> void:
 			
 			
 		popup_temp.queue_free()
+
+	else: #RANDI
+		var popup_temp : Popup = Popup.new()
+		
+		if randi() % 2 == 1:
+			set_select_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_allow_reselect(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_allow_rmb_select(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_max_text_lines(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_auto_height(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_max_columns(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_same_column_width(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_fixed_column_width(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_icon_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_icon_scale(randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_fixed_icon_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+		if randi() % 2 == 1:
+			add_icon_item(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+		if randi() % 2 == 1:
+			add_item(str(randi() % 1000 - 500),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+		if randi() % 2 == 1:
+			ensure_current_is_visible()
+		if randi() % 2 == 1:
+			qq += str(get_item_at_position(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2)))
+		if randi() % 2 == 1:
+			qq += str(get_item_count())
+		if randi() % 2 == 1:
+			qq += str(get_item_custom_bg_color(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_custom_fg_color(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_icon(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_icon_modulate(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_icon_region(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_metadata(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_text(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_tooltip(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_selected_items())
+		if randi() % 2 == 1:
+			qq += str(get_v_scroll())
+		if randi() % 2 == 1:
+			qq += str(is_anything_selected())
+		if randi() % 2 == 1:
+			qq += str(is_item_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_icon_transposed(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_selectable(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_item_tooltip_enabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(is_selected(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			move_item(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			remove_item(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			select(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_custom_bg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_item_custom_fg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_item_icon_modulate(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_item_icon_region(randi() % 1000 - 500,Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			set_item_icon_transposed(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_metadata(randi() % 1000 - 500,popup_temp)
+		if randi() % 2 == 1:
+			set_item_selectable(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_text(randi() % 1000 - 500,str(bool(randi()%2)))
+		if randi() % 2 == 1:
+			set_item_tooltip(randi() % 1000 - 500,str(bool(randi()%2)))
+		if randi() % 2 == 1:
+			set_item_tooltip_enabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			sort_items_by_text()
+		if randi() % 2 == 1:
+			unselect(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			unselect_all()
+		if randi() % 2 == 1:
+			clear()
+		popup_temp.queue_free()
+			

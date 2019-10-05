@@ -46,3 +46,33 @@ func _process(delta) -> void:
 			qq += str(get_line_edit())
 			qq += str(get_vbox())
 			invalidate()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_mode_overrides_title(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_mode(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_access(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_filters(PoolStringArray(["*.pqfqwfng ; PNG Imagesqwfqw","*.gqwfqwfd ; GD Script"]))
+		if randi() % 2 == 1:
+			set_show_hidden_files(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_current_dir("res://" + str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_current_file("res://" + str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			set_current_path("res://" + str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			clear_filters()
+		if randi() % 2 == 1:
+			add_filter("*.pnqwfg ; PNG Images")
+		if randi() % 2 == 1:
+			deselect_items()
+		if randi() % 2 == 1:
+			qq += str(get_line_edit())
+		if randi() % 2 == 1:
+			qq += str(get_vbox())
+		if randi() % 2 == 1:
+			invalidate()

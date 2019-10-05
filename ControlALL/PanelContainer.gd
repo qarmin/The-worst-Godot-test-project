@@ -18,3 +18,6 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			pass
+	else: #RANDI
+		if randi() % 2 == 1:
+			pass

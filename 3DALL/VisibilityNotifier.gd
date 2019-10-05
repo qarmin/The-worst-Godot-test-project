@@ -20,3 +20,8 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_aabb(AABB(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500),Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
 			qq += str(is_on_screen())
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_aabb(AABB(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500),Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
+		if randi() % 2 == 1:
+			qq += str(is_on_screen())

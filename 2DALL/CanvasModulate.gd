@@ -14,7 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_color(Color(1.0 - randf()/24,1.0 - randf()/24,1.0 - randf()/24,1.0 - randf()/24))
+		set_color(Color(randf(),randf(),randf(),randf()))
 		
 		if Autoload.WRONG_BUGS:
+			set_color(Color(randf(),randf(),randf(),randf()))
+	else: #RANDI
+		if randi() % 2 == 1:
 			set_color(Color(randf(),randf(),randf(),randf()))

@@ -47,10 +47,33 @@ func _process(delta) -> void:
 			
 			# BoxContainer
 			
-			set_alignment(randi() % 3)
+			set_alignment(randi() % 1000 - 500) # alignmode
 
 #LEAK
 #			add_spacer(bool(randi()%2))
 #
 #			for i in range (default_number_of_children,get_child_count()):
 #				get_child(i).queue_free()
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_pick_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_edit_alpha(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_raw_mode(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_deferred_mode(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_presets_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_presets_visible(bool(randi()%2))
+		if randi() % 2 == 1:
+			add_preset(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			qq += str(erase_preset(Color(randf(),randf(),randf(),randf())))
+			
+			# BoxContainer
+			
+		if randi() % 2 == 1:
+			set_alignment(randi() % 1000 - 500) # alignmode

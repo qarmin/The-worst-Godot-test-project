@@ -22,3 +22,9 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_stretch(bool(randi()%2))
 			set_stretch_shrink(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_stretch(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_stretch_shrink(randi() % 1000 - 500)

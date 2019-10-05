@@ -47,18 +47,18 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			
-			set_shadow_mode(randi() % 3)
+			set_shadow_mode(randi() % 1000 - 500) # ShadowMode
 			
-			set("directional_shadow_split_1",randf() * 50)
-			set("directional_shadow_split_2",randf() * 50)
-			set("directional_shadow_split_3",randf() * 50)
+			set("directional_shadow_split_1",randf() * 1000 - 500)
+			set("directional_shadow_split_2",randf() * 1000 - 500)
+			set("directional_shadow_split_3",randf() * 1000 - 500)
 			
-			set("directional_shadow_normal_bias",randf() * 50)
-			set("directional_shadow_bias_split_scale",randf() * 50)
+			set("directional_shadow_normal_bias",randf() * 1000 - 500)
+			set("directional_shadow_bias_split_scale",randf() * 1000 - 500)
 				
-			set_blend_splits(randi() % 2)
+			set_blend_splits(randi() % 1000 - 500) # ShadowDepthRange
 			
-			set("directional_shadow_max_distance",randf() * 50)
+			set("directional_shadow_max_distance",randf() * 1000 - 500)
 			
 			# Light
 			set_color(Color(randf(),randf(),randf(),randf()))
@@ -74,4 +74,55 @@ func _process(delta) -> void:
 			set("shadow_bias",randf() * 1000 - 500)
 			set("shadow_contact",randf() * 1000 - 500)
 			set_shadow_reverse_cull_face(bool(randi()%2))
+			set_editor_only(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_shadow_mode(randi() % 1000 - 500) # ShadowMode
+			
+		if randi() % 2 == 1:
+			set("directional_shadow_split_1",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("directional_shadow_split_2",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("directional_shadow_split_3",randf() * 1000 - 500)
+			
+		if randi() % 2 == 1:
+			set("directional_shadow_normal_bias",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("directional_shadow_bias_split_scale",randf() * 1000 - 500)
+				
+		if randi() % 2 == 1:
+			set_blend_splits(randi() % 1000 - 500) # ShadowDepthRange
+			
+		if randi() % 2 == 1:
+			set("directional_shadow_max_distance",randf() * 1000 - 500)
+			
+			# Light
+		if randi() % 2 == 1:
+			set_color(Color(randf(),randf(),randf(),randf()))
+			
+		if randi() % 2 == 1:
+			set("light_energy",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("light_indirect_energy",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_negative(bool(randi()%2))
+		if randi() % 2 == 1:
+			set("light_specular",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_bake_mode(randi() % 1000 - 500) # BakeMode
+		if randi() % 2 == 1:
+			set_cull_mask(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_shadow(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_shadow_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set("shadow_bias",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("shadow_contact",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_shadow_reverse_cull_face(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_editor_only(bool(randi()%2))

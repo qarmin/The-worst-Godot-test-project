@@ -25,3 +25,13 @@ func _process(delta) -> void:
 			set_edit_alpha(bool(randi()%2))
 			qq += str(get_picker())
 			qq += str(get_popup())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_pick_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
+			set_edit_alpha(bool(randi()%2))
+		if randi() % 2 == 1:
+			qq += str(get_picker())
+		if randi() % 2 == 1:
+			qq += str(get_popup())

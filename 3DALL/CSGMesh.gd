@@ -20,3 +20,8 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_mesh(load("res://RES/CubeMesh.tres"))
 			set_material(load("res://RES/SpatialMaterial.tres"))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_mesh(load("res://RES/CubeMesh.tres"))
+		if randi() % 2 == 1:
+			set_material(load("res://RES/SpatialMaterial.tres"))

@@ -24,3 +24,12 @@ func _process(delta) -> void:
 			set("omni_attenuation",randf() * 1000 - 500)
 			set_shadow_mode(randi() % 1000 - 500) # ShadowMode
 			set_shadow_detail(randi() % 1000 - 500) # SkadowDetail
+	else: #RANDI
+		if randi() % 2 == 1:
+			set("omni_range",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set("omni_attenuation",randf() * 1000 - 500)
+		if randi() % 2 == 1:
+			set_shadow_mode(randi() % 1000 - 500) # ShadowMode
+		if randi() % 2 == 1:
+			set_shadow_detail(randi() % 1000 - 500) # SkadowDetail

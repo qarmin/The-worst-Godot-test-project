@@ -34,3 +34,20 @@ func _process(delta) -> void:
 			
 			qq += str(get_h_scrollbar())
 			qq += str(get_v_scrollbar())
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_enable_h_scroll(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_h_scroll(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_enable_v_scroll(bool(randi()%2))
+		if randi() % 2 == 1:
+			set_v_scroll(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_deadzone(randi() % 1000 - 500)
+			
+		if randi() % 2 == 1:
+			qq += str(get_h_scrollbar())
+		if randi() % 2 == 1:
+			qq += str(get_v_scrollbar())

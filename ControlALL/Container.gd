@@ -22,3 +22,9 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			queue_sort()
 			fit_child_in_rect(self, Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			queue_sort()
+		if randi() % 2 == 1:
+			fit_child_in_rect(self, Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))

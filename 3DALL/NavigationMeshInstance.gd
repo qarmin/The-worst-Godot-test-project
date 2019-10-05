@@ -20,3 +20,9 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
 			set_enabled(bool(randi()%2))
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
+		if randi() % 2 == 1:
+			set_enabled(bool(randi()%2))

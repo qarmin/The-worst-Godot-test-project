@@ -15,22 +15,10 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_curve(load("res://RES/Curve2D1.tres"))
-		$PathFollow2D.set_offset(randf() * 50)
-		$PathFollow2D.set_unit_offset(randf() * 50)
-		$PathFollow2D.set_h_offset(randf() * 50)
-		$PathFollow2D.set_v_offset(randf() * 50)
-		$PathFollow2D.set_rotate(bool(randi()%2))
-		$PathFollow2D.set_cubic_interpolation(bool(randi()%2))
-		$PathFollow2D.set_loop(bool(randi()%2))
-		$PathFollow2D.set_lookahead(randf() * 50)
 		
 		if Autoload.WRONG_BUGS:
 			set_curve(load("res://RES/Curve2D1.tres"))
-			$PathFollow2D.set_offset(randf() * 1000 - 500)
-			$PathFollow2D.set_unit_offset(randf() * 1000 - 500)
-			$PathFollow2D.set_h_offset(randf() * 1000 - 500)
-			$PathFollow2D.set_v_offset(randf() * 1000 - 500)
-			$PathFollow2D.set_rotate(bool(randi()%2))
-			$PathFollow2D.set_cubic_interpolation(bool(randi()%2))
-			$PathFollow2D.set_loop(bool(randi()%2))
-			$PathFollow2D.set_lookahead(randf() * 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_curve(load("res://RES/Curve2D1.tres"))

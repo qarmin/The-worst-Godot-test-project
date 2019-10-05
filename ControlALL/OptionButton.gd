@@ -60,3 +60,47 @@ func _process(delta) -> void:
 			set_item_metadata(randi() % 1000 - 500,randi() % 1000 - 500)
 			set_item_text(randi() % 1000 - 500,str(randi() % 1000 - 500))
 			remove_item(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			clear()
+		if randi() % 2 == 1:
+			_select_int(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			add_item(str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_count())
+		if randi() % 2 == 1:
+			qq += str(get_item_icon(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_id(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_index(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_metadata(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_item_text(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			qq += str(get_popup())
+		if randi() % 2 == 1:
+			qq += str(get_selected_id())
+		if randi() % 2 == 1:
+			qq += str(get_selected_metadata())
+		if randi() % 2 == 1:
+			qq += str(is_item_disabled(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			select(randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_metadata(randi() % 1000 - 500,randi() % 1000 - 500)
+		if randi() % 2 == 1:
+			set_item_text(randi() % 1000 - 500,str(randi() % 1000 - 500))
+		if randi() % 2 == 1:
+			remove_item(randi() % 1000 - 500)

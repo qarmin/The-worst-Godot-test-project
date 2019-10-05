@@ -21,3 +21,8 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_text(str(randi() % 1000 - 500))
 			set_underline_mode(randi() % 1000 - 500)
+
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_text(str(randi() % 1000 - 500))
+			set_underline_mode(randi() % 1000 - 500)

@@ -20,3 +20,8 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+	else: #RANDI
+		if randi() % 2 == 1:
+			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if randi() % 2 == 1:
+			set_normal_map(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
