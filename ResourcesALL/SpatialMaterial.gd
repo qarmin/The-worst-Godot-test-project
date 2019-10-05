@@ -115,7 +115,7 @@ func _process(delta) -> void:
 			q_SpatialMaterial.set_clearcoat_gloss(randf() * 1000 - 500)
 			q_SpatialMaterial.set_anisotropy(randf() * 1000 - 500)
 			q_SpatialMaterial.set_ao_light_affect(randf() * 1000 - 500)
-			q_SpatialMaterial.set_ao_texture_channel(randi() % 1000 - 500)#TextureChannel
+			#BUG q_SpatialMaterial.set_ao_texture_channel(randi() % 1000 - 500)#TextureChannel
 			q_SpatialMaterial.set_depth_scale(randf() * 1000 - 500)
 			q_SpatialMaterial.set_depth_deep_parallax(bool(randi()%2))
 			q_SpatialMaterial.set_depth_deep_parallax_min_layers(randi() % 1000 - 500)
@@ -124,7 +124,7 @@ func _process(delta) -> void:
 			q_SpatialMaterial.set_depth_deep_parallax_flip_binormal(bool(randi()%2))
 			q_SpatialMaterial.set_subsurface_scattering_strength(bool(randi()%2))
 			q_SpatialMaterial.set_refraction(bool(randi()%2))
-			q_SpatialMaterial.set_refraction_texture_channel(randi() % 1000 - 500)#TextureChannel
+			#BUG q_SpatialMaterial.set_refraction_texture_channel(randi() % 1000 - 500)#TextureChannel
 			q_SpatialMaterial.set_detail_blend_mode(randi() % 1000 - 500) #BlendMode
 			q_SpatialMaterial.set_detail_uv(randi() % 1000 - 500) #DetailUV
 			q_SpatialMaterial.set_uv1_scale(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))

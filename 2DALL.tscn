@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=75 format=2]
 
 [ext_resource path="res://2DALL/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
@@ -53,21 +53,6 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim 1",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": false,
-"name": "New Anim 6",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "New Anim 2",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "New Anim 4",
@@ -78,9 +63,19 @@ animations = [ {
 "name": "New Anim 5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "New Anim 6",
+"speed": 5.0
+}, {
+"frames": [  ],
 "loop": true,
-"name": "New Anim 7",
+"name": "New Anim 1",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
@@ -88,9 +83,14 @@ animations = [ {
 "name": "New Anim 3",
 "speed": 5.0
 }, {
-"frames": [  ],
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim",
+"name": "New Anim 2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim 7",
 "speed": 5.0
 } ]
 
@@ -98,28 +98,17 @@ animations = [ {
 
 [sub_resource type="CircleShape2D" id=3]
 
-[sub_resource type="ConcavePolygonShape2D" id=4]
-segments = PoolVector2Array( 6.52, -5.46, 12.66, -12.85, 11.46, -9.99, 9.37, -11.37 )
-
-[sub_resource type="ConvexPolygonShape2D" id=5]
-points = PoolVector2Array( -3.48, -7.32, 4.31, -4.9, 1.58, 6.14, 0, 0 )
-
-[sub_resource type="LineShape2D" id=6]
-normal = Vector2( -0.13, -1 )
-
-[sub_resource type="RayShape2D" id=7]
+[sub_resource type="PhysicsMaterial" id=10]
+friction = 634634.0
+rough = true
+bounce = 262363.0
+absorbent = true
 
 [sub_resource type="RectangleShape2D" id=8]
 extents = Vector2( 10.79, 10 )
 
 [sub_resource type="SegmentShape2D" id=9]
 a = Vector2( 7.41, 0 )
-
-[sub_resource type="PhysicsMaterial" id=10]
-friction = 634634.0
-rough = true
-bounce = 262363.0
-absorbent = true
 
 [sub_resource type="PhysicsMaterial" id=11]
 friction = 215152.0
@@ -227,7 +216,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
 animation = "New Anim 7"
-frame = 2
+frame = 1
 speed_scale = 22222.9
 playing = true
 centered = false
@@ -260,33 +249,6 @@ shape = SubResource( 2 )
 position = Vector2( 120.189, 281.734 )
 shape = SubResource( 3 )
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 94.3419, 320.504 )
-shape = SubResource( 4 )
-
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D5" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 140.867, 280.441 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 87.8802, 237.793 )
-shape = SubResource( 7 )
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 116.312, 295.949 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 84.0031, 200.315 )
-shape = SubResource( 9 )
-
-[node name="Sprite2" type="Sprite" parent="Area2D"]
-position = Vector2( 34.25, 171.65 )
-texture = ExtResource( 5 )
-
 [node name="KinematicBody2D_CO_PB" type="KinematicBody2D" parent="."]
 position = Vector2( 166.714, 319.212 )
 collision/safe_margin = 256.0
@@ -300,34 +262,6 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
 position = Vector2( 204.192, 171.883 )
 shape = SubResource( 3 )
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 126.651, 252.009 )
-shape = SubResource( 4 )
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 126.651, 239.086 )
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 147.329, 303.703 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 298.534, 152.498 )
-shape = SubResource( 7 )
-
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 315.335, 168.421 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D16" type="CollisionShape2D" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 206.777, 121.481 )
-shape = SubResource( 9 )
-
-[node name="Sprite1" type="Sprite" parent="KinematicBody2D_CO_PB"]
-position = Vector2( 33.3, 107.05 )
-texture = ExtResource( 6 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 visible = false
@@ -347,28 +281,6 @@ angular_damp = 100.0
 applied_force = Vector2( -2.48, 0 )
 applied_torque = -16.53
 script = ExtResource( 8 )
-
-[node name="Sprite3" type="Sprite" parent="RigidBody2D"]
-position = Vector2( 245.521, 86.0057 )
-texture = ExtResource( 9 )
-
-[node name="CollisionShape2D15" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 2 )
-
-[node name="CollisionShape2D14" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 3 )
-
-[node name="CollisionShape2D13" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 4 )
-
-[node name="CollisionShape2D12" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D11" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D10" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource( 7 )
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource( 8 )
@@ -390,32 +302,6 @@ shape = SubResource( 2 )
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 341.182, 367.029 )
 shape = SubResource( 3 )
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 205.485, 414.846 )
-shape = SubResource( 4 )
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 5 )
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 374.783, 347.644 )
-shape = SubResource( 6 )
-
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource( 7 )
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 66.2978, 444.441 )
-shape = SubResource( 8 )
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2( 303.704, 96.9267 )
-shape = SubResource( 9 )
-
-[node name="Sprite4" type="Sprite" parent="StaticBody2D"]
-position = Vector2( 32.35, 301.8 )
-texture = ExtResource( 10 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 254.594, 94.3419 )
@@ -549,10 +435,6 @@ applied_force = Vector2( 18.14, -1.17 )
 position = Vector2( 214.854, 389.193 )
 shape = SubResource( 16 )
 
-[node name="Sprite3" type="Sprite" parent="DampedSpringJoint2D_J/RigidBody2D"]
-position = Vector2( 73.5, 224.5 )
-texture = ExtResource( 9 )
-
 [node name="RigidBody2D2" type="RigidBody2D" parent="DampedSpringJoint2D_J"]
 position = Vector2( 64.6178, 325.674 )
 gravity_scale = -1.0
@@ -560,10 +442,6 @@ gravity_scale = -1.0
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D_J/RigidBody2D2"]
 position = Vector2( 72.4365, 281.152 )
 shape = SubResource( 16 )
-
-[node name="Sprite2" type="Sprite" parent="DampedSpringJoint2D_J/RigidBody2D2"]
-position = Vector2( 169.5, 200.5 )
-texture = ExtResource( 5 )
 
 [node name="GrooveJoint2D" type="GrooveJoint2D" parent="."]
 position = Vector2( 14.2159, 275.272 )
@@ -583,20 +461,12 @@ applied_force = Vector2( 18.14, -1.17 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrooveJoint2D/RigidBody2D4"]
 shape = SubResource( 16 )
 
-[node name="Sprite3" type="Sprite" parent="GrooveJoint2D/RigidBody2D4"]
-position = Vector2( 73.5, 224.5 )
-texture = ExtResource( 9 )
-
 [node name="RigidBody2D3" type="RigidBody2D" parent="GrooveJoint2D"]
 position = Vector2( 272.632, 105.263 )
 gravity_scale = -1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrooveJoint2D/RigidBody2D3"]
 shape = SubResource( 16 )
-
-[node name="Sprite2" type="Sprite" parent="GrooveJoint2D/RigidBody2D3"]
-position = Vector2( 169.5, 200.5 )
-texture = ExtResource( 5 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
 position = Vector2( 162.837, 223.577 )
@@ -720,16 +590,8 @@ cubic_interp = false
 loop = false
 lookahead = 1024.0
 
-[node name="Sprite3" type="Sprite" parent="Path2D/PathFollow2D"]
-position = Vector2( -5.70514, 16.0328 )
-texture = ExtResource( 9 )
-vframes = 12
-hframes = 13
-frame = 151
-region_enabled = true
-region_rect = Rect2( 3.22, -3.73, -12.17, 1.44 )
-
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
+visible = false
 position = Vector2( 4.57517e+06, 5.64646e+08 )
 rotation = 2.32475
 offset = 2145.48
@@ -751,6 +613,7 @@ region_enabled = true
 region_rect = Rect2( 3.22, -3.73, -12.17, 1.44 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
+visible = false
 offset = Vector2( 5.23524e+07, 5.23524e+06 )
 antialiased = true
 texture_offset = Vector2( 6346, 0 )
@@ -765,6 +628,7 @@ polygons = [ AABB( 0, 0, 0, 0, 0, 0 ), null, null, null, null, null, null, null,
 script = ExtResource( 28 )
 
 [node name="Position2D" type="Position2D" parent="."]
+visible = false
 position = Vector2( 263.898, 77.9197 )
 script = ExtResource( 29 )
 __meta__ = {
@@ -772,6 +636,7 @@ __meta__ = {
 }
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
+visible = false
 position = Vector2( 215.382, 149.224 )
 enabled = true
 exclude_parent = false
@@ -779,12 +644,14 @@ cast_to = Vector2( 2.51251e+07, 2.15125e+08 )
 script = ExtResource( 30 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
+visible = false
 position = Vector2( 245.521, 86.0057 )
 remote_path = NodePath("../RigidBody2D/Sprite3")
 use_global_coordinates = false
 script = ExtResource( 31 )
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
+visible = false
 position = Vector2( 275.325, 100.727 )
 rotation = -1.16937
 script = ExtResource( 13 )
@@ -800,19 +667,8 @@ position = Vector2( -131.441, 387.901 )
 rest = Transform2D( 1, 0, 0, 1, 0, 0 )
 script = ExtResource( 39 )
 
-[node name="Bone2D3" type="Bone2D" parent="Skeleton2D"]
-position = Vector2( -201, 224.031 )
-rest = Transform2D( 1, 0, 0, 1, 0, 0 )
-default_length = 29.0
-script = ExtResource( 39 )
-
-[node name="Bone2D4" type="Bone2D" parent="Skeleton2D"]
-position = Vector2( -307.395, 315.875 )
-rest = Transform2D( 1, 0, 0, 1, 0, 0 )
-default_length = 34.0
-script = ExtResource( 39 )
-
 [node name="Sprite" type="Sprite" parent="."]
+visible = false
 offset = Vector2( 3.52353e+06, 2.35235e+08 )
 flip_h = true
 flip_v = true
@@ -824,6 +680,7 @@ region_rect = Rect2( 1.96, -3.82, 2.57, -3.83 )
 script = ExtResource( 32 )
 
 [node name="TileMap" type="TileMap" parent="."]
+visible = false
 position = Vector2( 362.183, 302.023 )
 mode = 1
 tile_set = ExtResource( 38 )
@@ -844,6 +701,7 @@ tile_data = PoolIntArray( -237436027, 0, 0, -237370492, 0, 0, -237304957, 0, 0, 
 script = ExtResource( 33 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+visible = false
 position = Vector2( 259.763, 58.156 )
 normal = SubResource( 27 )
 pressed = SubResource( 29 )
@@ -858,6 +716,7 @@ script = ExtResource( 35 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
 pause_mode = 1
+visible = false
 show_behind_parent = true
 light_mask = 270345
 material = SubResource( 33 )
@@ -870,6 +729,7 @@ rect = Rect2( 3.52352e+06, -10, -14.7, 20 )
 script = ExtResource( 34 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
 position = Vector2( 45.4263, 432.164 )
 pause_animations = false
 freeze_bodies = false
@@ -880,6 +740,7 @@ physics_process_parent = true
 script = ExtResource( 36 )
 
 [node name="YSort" type="YSort" parent="."]
+visible = false
 modulate = Color( 0.627451, 0.282353, 0.282353, 1 )
 self_modulate = Color( 0.364706, 1, 1, 1 )
 show_behind_parent = true
