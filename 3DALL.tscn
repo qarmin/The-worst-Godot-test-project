@@ -1,4 +1,4 @@
-[gd_scene load_steps=99 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -43,7 +43,6 @@
 [ext_resource path="res://3DALL/VehicleBody.gd" type="Script" id=41]
 [ext_resource path="res://3DALL/StaticBody.gd" type="Script" id=42]
 [ext_resource path="res://3DALL/AudioStreamPlayer3D.gd" type="Script" id=43]
-[ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=44]
 [ext_resource path="res://3DALL/CollisionPolygon.gd" type="Script" id=45]
 [ext_resource path="res://3DALL/CollisionShape.gd" type="Script" id=46]
 [ext_resource path="res://3DALL/NavigationMeshInstance.gd" type="Script" id=47]
@@ -61,7 +60,7 @@
 [ext_resource path="res://3DALL/ProximityGroup.gd" type="Script" id=59]
 [ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
 [ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
-[ext_resource path="res://BoneAttachment.gd" type="Script" id=62]
+[ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=62]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -255,7 +254,7 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 1 )
-frame = 2
+frame = 3
 playing = true
 script = ExtResource( 13 )
 
@@ -364,6 +363,7 @@ script = ExtResource( 35 )
 script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
+visible = false
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
@@ -371,6 +371,7 @@ shape = SubResource( 32 )
 script = ExtResource( 46 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
+visible = false
 script = ExtResource( 40 )
 
 [node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
@@ -378,6 +379,7 @@ shape = SubResource( 32 )
 script = ExtResource( 46 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
+visible = false
 script = ExtResource( 38 )
 
 [node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
@@ -385,6 +387,7 @@ shape = SubResource( 32 )
 script = ExtResource( 46 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
+visible = false
 script = ExtResource( 39 )
 
 [node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
@@ -392,6 +395,7 @@ shape = SubResource( 32 )
 script = ExtResource( 46 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
+visible = false
 script = ExtResource( 41 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
@@ -403,9 +407,11 @@ engine_force = 5.60519e-45
 script = ExtResource( 49 )
 
 [node name="VehicleWheel 2" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 1.47136e-43
 script = ExtResource( 49 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
+visible = false
 script = ExtResource( 42 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]
@@ -416,7 +422,7 @@ script = ExtResource( 46 )
 script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
-script = ExtResource( 44 )
+script = ExtResource( 62 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="."]
 script = ExtResource( 45 )

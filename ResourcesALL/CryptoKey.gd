@@ -1,4 +1,4 @@
-extends CanvasModulate
+extends Node2D
 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -13,12 +13,18 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		var q_CryptoKey : CryptoKey = CryptoKey.new()
 		if !Autoload.RANDI:
-			
-			set_color(Color(randf(),randf(),randf(),randf()))
+			#qq += str(q_CryptoKey.load("Lelele"))
+			#qq += str(q_CryptoKey.save("gqwrw"))
 			
 			if Autoload.WRONG_BUGS:
-				set_color(Color(randf(),randf(),randf(),randf()))
+				qq += str(q_CryptoKey.load("Lelele"))
+				qq += str(q_CryptoKey.save("gqwrw"))
+
 		else: #RANDI
 			if randi() % 2 == 1:
-				set_color(Color(randf(),randf(),randf(),randf()))
+				qq += str(q_CryptoKey.load("Lelele"))
+			if randi() % 2 == 1:
+				qq += str(q_CryptoKey.save("gqwrw"))

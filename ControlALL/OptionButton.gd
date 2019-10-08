@@ -40,48 +40,48 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			clear()
-			_select_int(randi() % 1000 - 500)
-			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % 1000 - 500))
-			add_item(str(randi() % 1000 - 500))
+			_select_int(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(get_item_count())
-			qq += str(get_item_icon(randi() % 1000 - 500))
-			qq += str(get_item_id(randi() % 1000 - 500))
-			qq += str(get_item_index(randi() % 1000 - 500))
-			qq += str(get_item_metadata(randi() % 1000 - 500))
-			qq += str(get_item_text(randi() % 1000 - 500))
+			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_index(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(get_popup())
 			qq += str(get_selected_id())
 			qq += str(get_selected_metadata())
-			qq += str(is_item_disabled(randi() % 1000 - 500))
-			select(randi() % 1000 - 500)
-			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
-			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
-			set_item_metadata(randi() % 1000 - 500,randi() % 1000 - 500)
-			set_item_text(randi() % 1000 - 500,str(randi() % 1000 - 500))
-			remove_item(randi() % 1000 - 500)
+			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 
 	else: #RANDI
 		if randi() % 2 == 1:
 			clear()
 		if randi() % 2 == 1:
-			_select_int(randi() % 1000 - 500)
+			_select_int(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % 1000 - 500))
+			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			add_item(str(randi() % 1000 - 500))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(get_item_count())
 		if randi() % 2 == 1:
-			qq += str(get_item_icon(randi() % 1000 - 500))
+			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_id(randi() % 1000 - 500))
+			qq += str(get_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_index(randi() % 1000 - 500))
+			qq += str(get_item_index(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_metadata(randi() % 1000 - 500))
+			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_text(randi() % 1000 - 500))
+			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(get_popup())
 		if randi() % 2 == 1:
@@ -89,18 +89,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_selected_metadata())
 		if randi() % 2 == 1:
-			qq += str(is_item_disabled(randi() % 1000 - 500))
+			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			select(randi() % 1000 - 500)
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		if randi() % 2 == 1:
-			set_item_id(randi() % 1000 - 500,randi() % 1000 - 500)
+			set_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_item_metadata(randi() % 1000 - 500,randi() % 1000 - 500)
+			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_item_text(randi() % 1000 - 500,str(randi() % 1000 - 500))
+			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			remove_item(randi() % 1000 - 500)
+			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)

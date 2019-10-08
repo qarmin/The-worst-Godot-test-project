@@ -13,20 +13,21 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_StreamPeerSSL : StreamPeerSSL = StreamPeerSSL.new()
-		
-		q_StreamPeerSSL.set_blocking_handshake_enabled(bool(randi()%2))
-		
-		#qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new() ))
-		#qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
-		q_StreamPeerSSL.disconnect_from_stream()
-		qq += str(q_StreamPeerSSL.get_status())
-		#q_StreamPeerSSL.poll()
-		
-		if Autoload.WRONG_BUGS:
-			qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new(),CryptoKey.new(),X509Certificate.new(),X509Certificate.new()))
-			qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
+			var q_StreamPeerSSL : StreamPeerSSL = StreamPeerSSL.new()
+			
+			q_StreamPeerSSL.set_blocking_handshake_enabled(bool(randi()%2))
+			
+			#qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new() ))
+			#qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
 			q_StreamPeerSSL.disconnect_from_stream()
 			qq += str(q_StreamPeerSSL.get_status())
-			q_StreamPeerSSL.poll()
+			#q_StreamPeerSSL.poll()
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new(),CryptoKey.new(),X509Certificate.new(),X509Certificate.new()))
+				qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
+				q_StreamPeerSSL.disconnect_from_stream()
+				qq += str(q_StreamPeerSSL.get_status())
+				q_StreamPeerSSL.poll()

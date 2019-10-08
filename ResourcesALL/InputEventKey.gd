@@ -15,16 +15,29 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_InputEventKey : InputEventKey = InputEventKey.new()
-		
-		q_InputEventKey.set_pressed(bool(randi()%2))
-		q_InputEventKey.set_scancode(randi()%33554432) #KeyList
-		q_InputEventKey.set_unicode(randi()%50)
-		q_InputEventKey.set_echo(bool(randi()%2))
-		qq += str(q_InputEventKey.get_scancode_with_modifiers())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_InputEventKey.set_pressed(bool(randi()%2))
-			q_InputEventKey.set_scancode(randi() % 10000000 - 5000000) #KeyList
-			q_InputEventKey.set_unicode(randi() % 1000 - 500)
+			q_InputEventKey.set_scancode(randi()%33554432) #KeyList
+			q_InputEventKey.set_unicode(randi()%50)
 			q_InputEventKey.set_echo(bool(randi()%2))
 			qq += str(q_InputEventKey.get_scancode_with_modifiers())
+			
+			if Autoload.WRONG_BUGS:
+				q_InputEventKey.set_pressed(bool(randi()%2))
+				q_InputEventKey.set_scancode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #KeyList
+				q_InputEventKey.set_unicode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_InputEventKey.set_echo(bool(randi()%2))
+				qq += str(q_InputEventKey.get_scancode_with_modifiers())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_InputEventKey.set_pressed(bool(randi()%2))
+			if randi() % 2 == 1:
+				q_InputEventKey.set_scancode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #KeyList
+			if randi() % 2 == 1:
+				q_InputEventKey.set_unicode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_InputEventKey.set_echo(bool(randi()%2))
+			if randi() % 2 == 1:
+				qq += str(q_InputEventKey.get_scancode_with_modifiers())

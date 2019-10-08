@@ -13,15 +13,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_copy_mode(randi()%3)
-		set_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
-		
-		if Autoload.WRONG_BUGS:
-			set_copy_mode(randi() % 1000 - 500)
-			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_copy_mode(randi() % 1000 - 500)
-		if randi() % 2 == 1:
-			set_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+		if !Autoload.RANDI:
+			
+			set_copy_mode(randi()%3)
+			set_rect(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+			
+			if Autoload.WRONG_BUGS:
+				set_copy_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				set_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_copy_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))

@@ -13,30 +13,31 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_PacketPeerUDP : PacketPeerUDP = PacketPeerUDP.new()
-		
-		q_PacketPeerUDP.close()
-		
-		qq += str(q_PacketPeerUDP.get_packet_ip())
-		qq += str(q_PacketPeerUDP.get_packet_port())
-		
-		qq += str(q_PacketPeerUDP.is_listening())
-		#qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
-		#qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
-		#qq += str(q_PacketPeerUDP.listen( 0, "Gol", randi()%50))
-		#qq += str(q_PacketPeerUDP.set_dest_address( "Pestka", 0 ))
-		#qq += str(q_PacketPeerUDP.wait())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_PacketPeerUDP : PacketPeerUDP = PacketPeerUDP.new()
+			
 			q_PacketPeerUDP.close()
 			
 			qq += str(q_PacketPeerUDP.get_packet_ip())
 			qq += str(q_PacketPeerUDP.get_packet_port())
 			
 			qq += str(q_PacketPeerUDP.is_listening())
-			qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
-			qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
-			qq += str(q_PacketPeerUDP.listen( randi() % 1000 - 500, "Gol", randi() % 1000 - 500))
-			qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",randi() % 1000 - 500))
-			qq += str(q_PacketPeerUDP.wait())
+			#qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
+			#qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
+			#qq += str(q_PacketPeerUDP.listen( 0, "Gol", randi()%50))
+			#qq += str(q_PacketPeerUDP.set_dest_address( "Pestka", 0 ))
+			#qq += str(q_PacketPeerUDP.wait())
+			
+			if Autoload.WRONG_BUGS:
+				q_PacketPeerUDP.close()
+				
+				qq += str(q_PacketPeerUDP.get_packet_ip())
+				qq += str(q_PacketPeerUDP.get_packet_port())
+				
+				qq += str(q_PacketPeerUDP.is_listening())
+				qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
+				qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
+				qq += str(q_PacketPeerUDP.listen( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Gol", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_PacketPeerUDP.wait())

@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualShaderNodeGlobalExpression : VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
-		
-		q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+				
+			var q_VisualShaderNodeGlobalExpression : VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
+			
 			q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)

@@ -13,19 +13,20 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set("params/bias",randf() * 50)
-		set("params/damping",randf() * 50)
-		set("params/impulse_clamp",randf() * 50)
-
-		if Autoload.WRONG_BUGS:
-			set("params/bias",randf() * 1000 - 500)
-			set("params/damping",randf() * 1000 - 500)
-			set("params/impulse_clamp",randf() * 1000 - 500)
-	else: #RANDI
-		if randi() % 2 == 1:
-			set("params/bias",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("params/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("params/impulse_clamp",randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set("params/bias",randf() * 50)
+			set("params/damping",randf() * 50)
+			set("params/impulse_clamp",randf() * 50)
+	
+			if Autoload.WRONG_BUGS:
+				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/impulse_clamp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		else: #RANDI
+			if randi() % 2 == 1:
+				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("params/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("params/impulse_clamp",randf() * Autoload.RANGE - Autoload.RANGE / 2)

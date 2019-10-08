@@ -13,14 +13,23 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_AudioEffectSpectrumAnalyzer : AudioEffectSpectrumAnalyzer = AudioEffectSpectrumAnalyzer.new()
-		
-		q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * 50)
-		q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * 50)
-		q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % AudioEffectSpectrumAnalyzer.FFT_SIZE_MAX)
-		
-		if Autoload.WRONG_BUGS:
-			q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * 1000 - 500)
-			q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * 1000 - 500)
-			q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * 50)
+			q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * 50)
+			q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % AudioEffectSpectrumAnalyzer.FFT_SIZE_MAX)
+			
+			if Autoload.WRONG_BUGS:
+				q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_AudioEffectSpectrumAnalyzer.set_buffer_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_AudioEffectSpectrumAnalyzer.set_fft_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)

@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualScriptPreload : VisualScriptPreload = VisualScriptPreload.new()
-		
-		q_VisualScriptPreload.set_preload(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		
-		if Autoload.WRONG_BUGS:
+			var q_VisualScriptPreload : VisualScriptPreload = VisualScriptPreload.new()
+			
 			q_VisualScriptPreload.set_preload(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptPreload.set_preload(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

@@ -15,8 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_PlaneShape : PlaneShape = PlaneShape.new()
-		
-		q_PlaneShape.set_plane(Plane(randf() * 50,randf() * 50,randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
-			q_PlaneShape.set_plane(Plane(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+		if !Autoload.RANDI:
+			
+			q_PlaneShape.set_plane(Plane(randf() * 50,randf() * 50,randf() * 50,randf() * 50))
+			
+			if Autoload.WRONG_BUGS:
+				q_PlaneShape.set_plane(Plane(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_PlaneShape.set_plane(Plane(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))

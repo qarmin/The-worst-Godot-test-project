@@ -15,12 +15,20 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_CameraTexture : CameraTexture = CameraTexture.new()
-		
-		q_CameraTexture.set_camera_feed_id(randi()%50)
-		q_CameraTexture.set_which_feed(randi() % 3)
-		q_CameraTexture.set_camera_active(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			q_CameraTexture.set_camera_feed_id(randi() % 1000 - 500)
-			q_CameraTexture.set_which_feed(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_CameraTexture.set_camera_feed_id(randi()%50)
+			q_CameraTexture.set_which_feed(randi() % 3)
 			q_CameraTexture.set_camera_active(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				q_CameraTexture.set_camera_feed_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_CameraTexture.set_which_feed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_CameraTexture.set_camera_active(bool(randi()%2))
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_CameraTexture.set_camera_feed_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_CameraTexture.set_which_feed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_CameraTexture.set_camera_active(bool(randi()%2))

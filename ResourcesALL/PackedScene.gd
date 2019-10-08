@@ -15,14 +15,25 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_PackedScene : PackedScene = PackedScene.new()
-		
-		qq += str(q_PackedScene.can_instance())
-		qq += str(q_PackedScene.get_state())
-		#qq += str(q_PackedScene.instance( randi() % 3 ).queue_free()) # GenEditState
-		qq += str(q_PackedScene.pack( self ))
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			qq += str(q_PackedScene.can_instance())
 			qq += str(q_PackedScene.get_state())
-			qq += str(q_PackedScene.instance( randi() % 1000 - 500 ).queue_free()) # GenEditState
+			#qq += str(q_PackedScene.instance( randi() % 3 ).queue_free()) # GenEditState
 			qq += str(q_PackedScene.pack( self ))
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_PackedScene.can_instance())
+				qq += str(q_PackedScene.get_state())
+				qq += str(q_PackedScene.instance( randi() % Autoload.RANGE - Autoload.RANGE / 2 ).queue_free()) # GenEditState
+				qq += str(q_PackedScene.pack( self ))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_PackedScene.can_instance())
+			if randi() % 2 == 1:
+				qq += str(q_PackedScene.get_state())
+			if randi() % 2 == 1:
+				qq += str(q_PackedScene.instance( randi() % Autoload.RANGE - Autoload.RANGE / 2 ).queue_free()) # GenEditState
+			if randi() % 2 == 1:
+				qq += str(q_PackedScene.pack( self ))

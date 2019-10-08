@@ -13,31 +13,32 @@ func _process(delta) -> void:
 		
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
 		var occluder_polygon : OccluderPolygon2D = OccluderPolygon2D.new()
-		occluder_polygon.set_closed(bool(randi()%2))
-		occluder_polygon.set_cull_mode((randi()%3))
-		occluder_polygon.set_polygon([Vector2(randf() * -50,randf() * 50),Vector2(randf() * -50,randf() * 50),Vector2(randf() * -50,randf() * 50)])
-		set_occluder_polygon(occluder_polygon)
-		set_occluder_light_mask(randi()%5)
 		
-		if Autoload.WRONG_BUGS:
-			occluder_polygon = OccluderPolygon2D.new()
+		if !Autoload.RANDI:
+			
 			occluder_polygon.set_closed(bool(randi()%2))
-			occluder_polygon.set_cull_mode(randi() % 1000 - 500)
-			occluder_polygon.set_polygon([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
+			occluder_polygon.set_cull_mode((randi()%3))
+			occluder_polygon.set_polygon([Vector2(randf() * -50,randf() * 50),Vector2(randf() * -50,randf() * 50),Vector2(randf() * -50,randf() * 50)])
 			set_occluder_polygon(occluder_polygon)
-			set_occluder_light_mask(randi() % 1000 - 500)
-
-	else: #RANDI
-		var occluder_polygon : OccluderPolygon2D = OccluderPolygon2D.new()
-		if randi() % 2 == 1:
-			occluder_polygon.set_closed(bool(randi()%2))
-		if randi() % 2 == 1:
-			occluder_polygon.set_cull_mode(randi() % 1000 - 500)
-		if randi() % 2 == 1:
-			occluder_polygon.set_polygon([Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)])
-		if randi() % 2 == 1:
-			set_occluder_polygon(occluder_polygon)
-		if randi() % 2 == 1:
-			set_occluder_light_mask(randi() % 1000 - 500)
+			set_occluder_light_mask(randi()%5)
+			
+			if Autoload.WRONG_BUGS:
+				occluder_polygon = OccluderPolygon2D.new()
+				occluder_polygon.set_closed(bool(randi()%2))
+				occluder_polygon.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				occluder_polygon.set_polygon([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)])
+				set_occluder_polygon(occluder_polygon)
+				set_occluder_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				occluder_polygon.set_closed(bool(randi()%2))
+			if randi() % 2 == 1:
+				occluder_polygon.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				occluder_polygon.set_polygon([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)])
+			if randi() % 2 == 1:
+				set_occluder_polygon(occluder_polygon)
+			if randi() % 2 == 1:
+				set_occluder_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)

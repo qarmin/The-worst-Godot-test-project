@@ -15,12 +15,21 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_InputEventAction : InputEventAction = InputEventAction.new()
-		
-		q_InputEventAction.set_action("Mina")
-		q_InputEventAction.set_pressed(bool(randi()%2))
-		q_InputEventAction.set_strength(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_InputEventAction.set_action("Mina")
-			q_InputEventAction.set_pressed(bool(randi()%2))
-			q_InputEventAction.set_strength(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+				
+				q_InputEventAction.set_action("Mina")
+				q_InputEventAction.set_pressed(bool(randi()%2))
+				q_InputEventAction.set_strength(randf() * 50)
+				
+				if Autoload.WRONG_BUGS:
+					q_InputEventAction.set_action("Mina")
+					q_InputEventAction.set_pressed(bool(randi()%2))
+					q_InputEventAction.set_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+					q_InputEventAction.set_action("Mina")
+			if randi() % 2 == 1:
+					q_InputEventAction.set_pressed(bool(randi()%2))
+			if randi() % 2 == 1:
+					q_InputEventAction.set_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)

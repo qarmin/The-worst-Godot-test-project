@@ -13,24 +13,25 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		clear_current()
-		qq += str(get_listener_transform())
-		qq += str(is_current())
-		make_current()
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			clear_current()
 			qq += str(get_listener_transform())
 			qq += str(is_current())
 			make_current()
-
-	else: #RANDI
-		if randi() % 2 == 1:
-			clear_current()
-		if randi() % 2 == 1:
-			qq += str(get_listener_transform())
-		if randi() % 2 == 1:
-			qq += str(is_current())
-		if randi() % 2 == 1:
-			make_current()
+			
+			if Autoload.WRONG_BUGS:
+				clear_current()
+				qq += str(get_listener_transform())
+				qq += str(is_current())
+				make_current()
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				clear_current()
+			if randi() % 2 == 1:
+				qq += str(get_listener_transform())
+			if randi() % 2 == 1:
+				qq += str(is_current())
+			if randi() % 2 == 1:
+				make_current()

@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 #SPAM
 #		var q_WebSocketServer : WebSocketServer = WebSocketServer.new()
 #
@@ -27,12 +29,12 @@ func _process(delta) -> void:
 #		q_WebSocketServer.stop()
 #
 #		if Autoload.WRONG_BUGS:
-#			q_WebSocketServer.disconnect_peer( randi() % 1000 - 500, randi() % 1000 - 500, "Jeden" )
+#			q_WebSocketServer.disconnect_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, "Jeden" )
 #
-#			qq += str(q_WebSocketServer.get_peer_address( randi() % 1000 - 500 ))
-#			qq += str(q_WebSocketServer.get_peer_port( randi() % 1000 - 500 ))
+#			qq += str(q_WebSocketServer.get_peer_address( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_WebSocketServer.get_peer_port( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 #
-#			qq += str(q_WebSocketServer.has_peer( randi() % 1000 - 500 ))
+#			qq += str(q_WebSocketServer.has_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 #			qq += str(q_WebSocketServer.is_listening())
-#			qq += str(q_WebSocketServer.listen( randi() % 1000 - 500, PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
+#			qq += str(q_WebSocketServer.listen( randi() % Autoload.RANGE - Autoload.RANGE / 2, PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
 #			q_WebSocketServer.stop()

@@ -33,16 +33,16 @@ func _process(delta) -> void:
 		stop()
 		
 		if Autoload.WRONG_BUGS:
-			set_audio_track(randi() % 1000 - 500)
+			set_audio_track(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_stream(load("res://RES/VideoStreamWebm.tres"))
-			set_volume_db(randf() * 1000 - 500)
-			set_volume(randf() * 1000 - 500)
+			set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_volume(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			set_autoplay(bool(randi()%2))
 			set_paused(bool(randi()%2))
 			set_expand(bool(randi()%2))
-			set_buffering_msec(randi() % 1000 - 500)
-			set_stream_position(randf() * 1000 - 500)
-			set_bus(str(randf() * 1000 - 500))
+			set_buffering_msec(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_stream_position(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_bus(str(randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			
 			qq += str(get_stream_name())
 			qq += str(get_video_texture())
@@ -51,13 +51,13 @@ func _process(delta) -> void:
 			stop()
 	else: #RANDI
 		if randi() % 2 == 1:
-			set_audio_track(randi() % 1000 - 500)
+			set_audio_track(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_stream(load("res://RES/VideoStreamWebm.tres"))
 		if randi() % 2 == 1:
-			set_volume_db(randf() * 1000 - 500)
+			set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_volume(randf() * 1000 - 500)
+			set_volume(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_autoplay(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -65,11 +65,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_expand(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_buffering_msec(randi() % 1000 - 500)
+			set_buffering_msec(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_stream_position(randf() * 1000 - 500)
+			set_stream_position(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_bus(str(randf() * 1000 - 500))
+			set_bus(str(randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			
 		if randi() % 2 == 1:
 			qq += str(get_stream_name())

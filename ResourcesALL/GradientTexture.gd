@@ -13,12 +13,18 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_GradientTexture : GradientTexture = GradientTexture.new()
-		
-		q_GradientTexture.set_gradient(Gradient.new())
-		q_GradientTexture.set_width(randi()%50)
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_GradientTexture.set_gradient(Gradient.new())
-			q_GradientTexture.set_width(randi() % 1000 - 500)
+			q_GradientTexture.set_width(randi()%50)
+			
+			if Autoload.WRONG_BUGS:
+				q_GradientTexture.set_gradient(Gradient.new())
+				q_GradientTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_GradientTexture.set_gradient(Gradient.new())
+			if randi() % 2 == 1:
+				q_GradientTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)

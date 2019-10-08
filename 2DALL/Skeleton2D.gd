@@ -13,13 +13,14 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		qq +=  str(get_skeleton())
-		
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			qq +=  str(get_skeleton())
-
-	else: #RANDI
-		if randi() % 2 == 1:
-			qq +=  str(get_skeleton())
+			
+			
+			if Autoload.WRONG_BUGS:
+				qq +=  str(get_skeleton())
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq +=  str(get_skeleton())

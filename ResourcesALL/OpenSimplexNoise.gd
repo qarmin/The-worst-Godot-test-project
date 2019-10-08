@@ -13,36 +13,66 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_OpenSimplexNoise : OpenSimplexNoise = OpenSimplexNoise.new()
-		
-		q_OpenSimplexNoise.set_seed(randi()%50)
-		q_OpenSimplexNoise.set_octaves(randi()%50)
-		q_OpenSimplexNoise.set_period(randf() * 50)
-		q_OpenSimplexNoise.set_persistence(randf() * 50)
-		q_OpenSimplexNoise.set_lacunarity(randf() * 50)
-		
-		#qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
-		qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10  ))
-		qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 ,randf() * 10  ))
-		qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 ,randf() * 10 )))
-		qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 ,randf() * 10 ,randf() * 10 ))
-		qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 ,randf() * 10 ,randf() * 10 )))
-		qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 ,randf() * 10 ,randf() * 10 ,randf() * 10  ))
-		#qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))
-		
-		if Autoload.WRONG_BUGS:
-			q_OpenSimplexNoise.set_seed(randi() % 1000 - 500)
-			q_OpenSimplexNoise.set_octaves(randi() % 1000 - 500)
-			q_OpenSimplexNoise.set_period(randf() * 1000 - 500)
-			q_OpenSimplexNoise.set_persistence(randf() * 1000 - 500)
-			q_OpenSimplexNoise.set_lacunarity(randf() * 1000 - 500)
 			
-			qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
-			qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10 - 5 ))
-			qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 - 5,randf() * 10 - 5 ))
-			qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
-			qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))
-			qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5)))
-			qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5 ))
-			qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))
+		var q_OpenSimplexNoise : OpenSimplexNoise = OpenSimplexNoise.new()
+		if !Autoload.RANDI:
+			
+			q_OpenSimplexNoise.set_seed(randi()%50)
+			q_OpenSimplexNoise.set_octaves(randi()%50)
+			q_OpenSimplexNoise.set_period(randf() * 50)
+			q_OpenSimplexNoise.set_persistence(randf() * 50)
+			q_OpenSimplexNoise.set_lacunarity(randf() * 50)
+			
+			#qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
+			qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10  ))
+			qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 ,randf() * 10  ))
+			qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 ,randf() * 10 )))
+			qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 ,randf() * 10 ,randf() * 10 ))
+			qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 ,randf() * 10 ,randf() * 10 )))
+			qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 ,randf() * 10 ,randf() * 10 ,randf() * 10  ))
+			#qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))
+			
+			if Autoload.WRONG_BUGS:
+				q_OpenSimplexNoise.set_seed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_OpenSimplexNoise.set_octaves(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_OpenSimplexNoise.set_period(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_OpenSimplexNoise.set_persistence(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_OpenSimplexNoise.set_lacunarity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				
+				qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
+				qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10 - 5 ))
+				qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 - 5,randf() * 10 - 5 ))
+				qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
+				qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))
+				qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5)))
+				qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5 ))
+				qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_OpenSimplexNoise.set_seed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_OpenSimplexNoise.set_octaves(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_OpenSimplexNoise.set_period(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_OpenSimplexNoise.set_persistence(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_OpenSimplexNoise.set_lacunarity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10 - 5 ))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 - 5,randf() * 10 - 5 ))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5)))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5 ))
+			if randi() % 2 == 1:
+				qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))

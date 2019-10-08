@@ -13,16 +13,17 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_TCP_Server : TCP_Server = TCP_Server.new()
-		
-		qq += str(q_TCP_Server.is_connection_available())
-		#qq += str(q_TCP_Server.listen( randi()%50, "Zero" ))
-		q_TCP_Server.stop()
-		qq += str(q_TCP_Server.take_connection())
-		
-		if Autoload.WRONG_BUGS:
+			var q_TCP_Server : TCP_Server = TCP_Server.new()
+			
 			qq += str(q_TCP_Server.is_connection_available())
-			qq += str(q_TCP_Server.listen( randi() % 1000 - 500, "Zero" ))
+			#qq += str(q_TCP_Server.listen( randi()%50, "Zero" ))
 			q_TCP_Server.stop()
 			qq += str(q_TCP_Server.take_connection())
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_TCP_Server.is_connection_available())
+				qq += str(q_TCP_Server.listen( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Zero" ))
+				q_TCP_Server.stop()
+				qq += str(q_TCP_Server.take_connection())

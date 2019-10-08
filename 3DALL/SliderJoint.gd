@@ -13,95 +13,96 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set("linear_limit/upper_distance",randf() * 50)
-		set("linear_limit/lower_distance",randf() * 50)
-		set("linear_limit/softness",randf() * 50)
-		set("linear_limit/restitution",randf() * 50)
-		set("linear_limit/damping",randf() * 50)
-		set("linear_motion/softness",randf() * 50)
-		set("linear_motion/restitution",randf() * 50)
-		set("linear_motion/damping",randf() * 50)
-		set("linear_ortho/softness",randf() * 50)
-		set("linear_ortho/restitution",randf() * 50)
-		set("linear_ortho/damping",randf() * 50)
-		set("angular_limit/upper_angle",randf() * 50)
-		set("angular_limit/lower_angle",randf() * 50)
-		set("angular_limit/softness",randf() * 50)
-		set("angular_limit/restitution",randf() * 50)
-		set("angular_limit/damping",randf() * 50)
-		set("angular_motion/softness",randf() * 50)
-		set("angular_motion/restitution",randf() * 50)
-		set("angular_motion/damping",randf() * 50)
-		set("angular_ortho/softness",randf() * 50)
-		set("angular_ortho/restitution",randf() * 50)
-		set("angular_ortho/damping",randf() * 50)
-
-		if Autoload.WRONG_BUGS:
-			set("linear_limit/upper_distance",randf() * 1000 - 500)
-			set("linear_limit/lower_distance",randf() * 1000 - 500)
-			set("linear_limit/softness",randf() * 1000 - 500)
-			set("linear_limit/restitution",randf() * 1000 - 500)
-			set("linear_limit/damping",randf() * 1000 - 500)
-			set("linear_motion/softness",randf() * 1000 - 500)
-			set("linear_motion/restitution",randf() * 1000 - 500)
-			set("linear_motion/damping",randf() * 1000 - 500)
-			set("linear_ortho/softness",randf() * 1000 - 500)
-			set("linear_ortho/restitution",randf() * 1000 - 500)
-			set("linear_ortho/damping",randf() * 1000 - 500)
-			set("angular_limit/upper_angle",randf() * 1000 - 500)
-			set("angular_limit/lower_angle",randf() * 1000 - 500)
-			set("angular_limit/softness",randf() * 1000 - 500)
-			set("angular_limit/restitution",randf() * 1000 - 500)
-			set("angular_limit/damping",randf() * 1000 - 500)
-			set("angular_motion/softness",randf() * 1000 - 500)
-			set("angular_motion/restitution",randf() * 1000 - 500)
-			set("angular_motion/damping",randf() * 1000 - 500)
-			set("angular_ortho/softness",randf() * 1000 - 500)
-			set("angular_ortho/restitution",randf() * 1000 - 500)
-			set("angular_ortho/damping",randf() * 1000 - 500)
-	else: #RANDI
-		if randi() % 2 == 1:
-			set("linear_limit/upper_distance",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_limit/lower_distance",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_limit/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_limit/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_limit/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_motion/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_motion/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_motion/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_ortho/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_ortho/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("linear_ortho/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/upper_angle",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/lower_angle",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_motion/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_motion/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_motion/damping",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_ortho/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_ortho/restitution",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_ortho/damping",randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set("linear_limit/upper_distance",randf() * 50)
+			set("linear_limit/lower_distance",randf() * 50)
+			set("linear_limit/softness",randf() * 50)
+			set("linear_limit/restitution",randf() * 50)
+			set("linear_limit/damping",randf() * 50)
+			set("linear_motion/softness",randf() * 50)
+			set("linear_motion/restitution",randf() * 50)
+			set("linear_motion/damping",randf() * 50)
+			set("linear_ortho/softness",randf() * 50)
+			set("linear_ortho/restitution",randf() * 50)
+			set("linear_ortho/damping",randf() * 50)
+			set("angular_limit/upper_angle",randf() * 50)
+			set("angular_limit/lower_angle",randf() * 50)
+			set("angular_limit/softness",randf() * 50)
+			set("angular_limit/restitution",randf() * 50)
+			set("angular_limit/damping",randf() * 50)
+			set("angular_motion/softness",randf() * 50)
+			set("angular_motion/restitution",randf() * 50)
+			set("angular_motion/damping",randf() * 50)
+			set("angular_ortho/softness",randf() * 50)
+			set("angular_ortho/restitution",randf() * 50)
+			set("angular_ortho/damping",randf() * 50)
+	
+			if Autoload.WRONG_BUGS:
+				set("linear_limit/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motion/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motion/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motion/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_ortho/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_ortho/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_ortho/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motion/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motion/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motion/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_ortho/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_ortho/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_ortho/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		else: #RANDI
+			if randi() % 2 == 1:
+				set("linear_limit/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_limit/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_limit/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_limit/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_motion/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_motion/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_motion/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_ortho/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_ortho/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("linear_ortho/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_motion/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_motion/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_motion/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_ortho/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_ortho/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_ortho/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)

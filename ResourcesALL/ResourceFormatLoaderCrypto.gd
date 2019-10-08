@@ -13,8 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_ResourceFormatLoaderCrypto : ResourceFormatLoaderCrypto = ResourceFormatLoaderCrypto.new()
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

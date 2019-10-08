@@ -13,19 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_GDNativeLibrary : GDNativeLibrary = GDNativeLibrary.new()
-		
-		q_GDNativeLibrary.set_config_file(ConfigFile.new())
-		q_GDNativeLibrary.set_load_once(bool(randi()%2))
-		q_GDNativeLibrary.set_singleton(bool(randi()%2))
-		q_GDNativeLibrary.set_symbol_prefix("Prefixus")
-		q_GDNativeLibrary.set_reloadable(bool(randi()%2))
-		
-		qq += str(q_GDNativeLibrary.get_current_dependencies())
-		qq += str(q_GDNativeLibrary.get_current_library_path())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_GDNativeLibrary.set_config_file(ConfigFile.new())
 			q_GDNativeLibrary.set_load_once(bool(randi()%2))
 			q_GDNativeLibrary.set_singleton(bool(randi()%2))
@@ -34,3 +25,30 @@ func _process(delta) -> void:
 			
 			qq += str(q_GDNativeLibrary.get_current_dependencies())
 			qq += str(q_GDNativeLibrary.get_current_library_path())
+			
+			if Autoload.WRONG_BUGS:
+				q_GDNativeLibrary.set_config_file(ConfigFile.new())
+				q_GDNativeLibrary.set_load_once(bool(randi()%2))
+				q_GDNativeLibrary.set_singleton(bool(randi()%2))
+				q_GDNativeLibrary.set_symbol_prefix("Prefixus")
+				q_GDNativeLibrary.set_reloadable(bool(randi()%2))
+				
+				qq += str(q_GDNativeLibrary.get_current_dependencies())
+				qq += str(q_GDNativeLibrary.get_current_library_path())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_GDNativeLibrary.set_config_file(ConfigFile.new())
+			if randi() % 2 == 1:
+				q_GDNativeLibrary.set_load_once(bool(randi()%2))
+			if randi() % 2 == 1:
+				q_GDNativeLibrary.set_singleton(bool(randi()%2))
+			if randi() % 2 == 1:
+				q_GDNativeLibrary.set_symbol_prefix("Prefixus")
+			if randi() % 2 == 1:
+				q_GDNativeLibrary.set_reloadable(bool(randi()%2))
+				
+			if randi() % 2 == 1:
+				qq += str(q_GDNativeLibrary.get_current_dependencies())
+			if randi() % 2 == 1:
+				qq += str(q_GDNativeLibrary.get_current_library_path())

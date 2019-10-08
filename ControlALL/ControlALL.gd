@@ -6,6 +6,9 @@ const TIME_TO_NEXT_NODE : float = 0.5
 var current_time_to_next_node : float = TIME_TO_NEXT_NODE
 var current_node : int = 0
 
+
+var ev : InputEventMouseButton = InputEventMouseButton.new()
+
 func _ready() -> void:
 	if !is_visible():
 		queue_free()
@@ -24,6 +27,14 @@ func _process(delta: float) -> void:
 		for i in get_children():
 			i.queue_free()
 		get_tree().quit()
+	
+	ev.pressed = true
+	ev.button_index = BUTTON_LEFT
+	ev.button_mask = BUTTON_LEFT
+	for i in range(10):
+		ev.position = Vector2(randi() % 2000, randi() % 1500)
+		Input.parse_input_event(ev)
+	
 	
 	current_time_to_next_node -= delta
 	if Autoload.USE_ONLY_ONE_NODE && current_time_to_next_node <= 0.0:

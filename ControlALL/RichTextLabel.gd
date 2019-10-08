@@ -56,10 +56,10 @@ func _process(delta) -> void:
 			clear()
 			set_use_bbcode(bool(randi()%2))
 			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
-			set_visible_characters(randi() % 1000 - 500)
-			set_percent_visible(randf() * 1000 - 500)
+			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_percent_visible(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			set_meta_underline(bool(randi()%2))
-			set_tab_size(randi() % 1000 - 500)
+			set_tab_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_text(str("\n\n\nafafas") + str(randi()%50))
 			set_scroll_active(bool(randi()%2))
 			set_scroll_follow(bool(randi()%2))
@@ -76,19 +76,19 @@ func _process(delta) -> void:
 			newline()
 			qq += str(parse_bbcode("\n\n\nafafas"))
 			pop()
-			push_align(randi() % 1000 - 500)
+			push_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_cell()
 			push_color(Color(randf(),randf(),randf(),randf()))
 			push_font(load("res://RES/DynamicFontasfasfawg.tres"))
-			push_indent(randi() % 1000 - 500)
-			push_list(randi() % 1000 - 500)
+			push_indent(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			push_list(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_meta(get_parent())
 			push_strikethrough()
-			push_table(randi() % 1000 - 500)
+			push_table(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_underline()
-			scroll_to_line(randi() % 1000 - 500)
-			qq += str(remove_line(randi() % 1000 - 500))
-			set_table_column_expand(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500)
+			scroll_to_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			qq += str(remove_line(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			set_table_column_expand(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2)
 
 	else: #RANDI
 		if randi() % 2 == 1:
@@ -98,13 +98,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
-			set_visible_characters(randi() % 1000 - 500)
+			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_percent_visible(randf() * 1000 - 500)
+			set_percent_visible(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_meta_underline(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_tab_size(randi() % 1000 - 500)
+			set_tab_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_text(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
@@ -138,7 +138,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			pop()
 		if randi() % 2 == 1:
-			push_align(randi() % 1000 - 500)
+			push_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			push_cell()
 		if randi() % 2 == 1:
@@ -146,20 +146,20 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			push_font(load("res://RES/DynamicFontasfasfawg.tres"))
 		if randi() % 2 == 1:
-			push_indent(randi() % 1000 - 500)
+			push_indent(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			push_list(randi() % 1000 - 500)
+			push_list(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			push_meta(get_parent())
 		if randi() % 2 == 1:
 			push_strikethrough()
 		if randi() % 2 == 1:
-			push_table(randi() % 1000 - 500)
+			push_table(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			push_underline()
 		if randi() % 2 == 1:
-			scroll_to_line(randi() % 1000 - 500)
+			scroll_to_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			qq += str(remove_line(randi() % 1000 - 500))
+			qq += str(remove_line(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			set_table_column_expand(randi() % 1000 - 500, bool(randi()%2), randi() % 1000 - 500)
+			set_table_column_expand(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2)

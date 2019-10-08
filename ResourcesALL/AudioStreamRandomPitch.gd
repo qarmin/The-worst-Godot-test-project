@@ -13,12 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_AudioStreamRandomPitch : AudioStreamRandomPitch = AudioStreamRandomPitch.new()
-		
-		#q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
-		q_AudioStreamRandomPitch.set_random_pitch(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
-			q_AudioStreamRandomPitch.set_random_pitch(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			#q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+			q_AudioStreamRandomPitch.set_random_pitch(randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+				q_AudioStreamRandomPitch.set_random_pitch(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_AudioStreamRandomPitch.set_audio_stream(AudioStream.new())
+			if randi() % 2 == 1:
+				q_AudioStreamRandomPitch.set_random_pitch(randf() * Autoload.RANGE - Autoload.RANGE / 2)

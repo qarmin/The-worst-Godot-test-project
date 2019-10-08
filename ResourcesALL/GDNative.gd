@@ -13,18 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_GDNative : GDNative = GDNative.new()
-		
-		q_GDNative.set_library(load("res://RES/GDNativeLibrary.tres"))
-		
-		#q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
-		#qq += str(q_GDNative.initialize())
-		#qq += str(q_GDNative.terminate())
-		
-		if Autoload.WRONG_BUGS:
-			q_GDNative.set_library(load("res://RES/GDNativeLibrary.tres"))
+		if !Autoload.RANDI:
 			
-			q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
-			qq += str(q_GDNative.initialize())
-			qq += str(q_GDNative.terminate())
+			var q_GDNative : GDNative = GDNative.new()
+			
+			q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",false))
+			
+			#q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
+			#qq += str(q_GDNative.initialize())
+			#qq += str(q_GDNative.terminate())
+			
+			if Autoload.WRONG_BUGS:
+				q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",true))
+				
+				q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
+				qq += str(q_GDNative.initialize())
+				qq += str(q_GDNative.terminate())

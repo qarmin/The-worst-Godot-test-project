@@ -13,30 +13,31 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_PoolRealArray : PoolRealArray
-		
-		q_PoolRealArray = PoolRealArray([randf() * 50])
-		
-		q_PoolRealArray.append(randf() * 50)
-		q_PoolRealArray.append_array(PoolRealArray([randi()%50]))
-		
-		#qq += str(q_PoolRealArray.insert( randi()%50, randf() * 50) )
-		q_PoolRealArray.invert()
-		q_PoolRealArray.push_back( randf() * 50 )
-		#q_PoolRealArray.remove( randi()%50)
-		q_PoolRealArray.resize( randi()%50)
-		#q_PoolRealArray.set(randi()%50, randf() * 50)
-		qq += str(q_PoolRealArray.size())
-		
-		if Autoload.WRONG_BUGS:
-			q_PoolRealArray.append(randf() * 1000 - 500)
-			q_PoolRealArray.append_array(PoolRealArray([randi() % 1000 - 500]))
+		if !Autoload.RANDI:
 			
-			qq += str(q_PoolRealArray.insert( randi() % 1000 - 500, randf() * 1000 - 500) )
+			var q_PoolRealArray : PoolRealArray
+			
+			q_PoolRealArray = PoolRealArray([randf() * 50])
+			
+			q_PoolRealArray.append(randf() * 50)
+			q_PoolRealArray.append_array(PoolRealArray([randi()%50]))
+			
+			#qq += str(q_PoolRealArray.insert( randi()%50, randf() * 50) )
 			q_PoolRealArray.invert()
-			q_PoolRealArray.push_back( randf() * 1000 - 500 )
-			q_PoolRealArray.remove( randi() % 1000 - 500)
-			q_PoolRealArray.resize( randi() % 1000 - 500)
-			q_PoolRealArray.set(randi() % 1000 - 500, randf() * 1000 - 500)
+			q_PoolRealArray.push_back( randf() * 50 )
+			#q_PoolRealArray.remove( randi()%50)
+			q_PoolRealArray.resize( randi()%50)
+			#q_PoolRealArray.set(randi()%50, randf() * 50)
 			qq += str(q_PoolRealArray.size())
+			
+			if Autoload.WRONG_BUGS:
+				q_PoolRealArray.append(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_PoolRealArray.append_array(PoolRealArray([randi() % Autoload.RANGE - Autoload.RANGE / 2]))
+				
+				qq += str(q_PoolRealArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+				q_PoolRealArray.invert()
+				q_PoolRealArray.push_back( randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+				q_PoolRealArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_PoolRealArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_PoolRealArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				qq += str(q_PoolRealArray.size())

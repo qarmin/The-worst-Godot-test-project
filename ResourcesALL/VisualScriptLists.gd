@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_VisualScriptLists : VisualScriptLists = VisualScriptLists.new()
 #		q_VisualScriptLists.add_input_data_port(randi()%50, "Mniejsza połowa", randi()%50)
@@ -25,11 +27,11 @@ func _process(delta) -> void:
 #		q_VisualScriptLists.set_output_data_port_type(randi()%50, randi()%50)
 #
 #		if Autoload.WRONG_BUGS:
-#			q_VisualScriptLists.add_input_data_port(randi() % 1000 - 500, "Mniejsza połowa", randi() % 1000 - 500)
-#			q_VisualScriptLists.add_output_data_port(randi() % 1000 - 500, "Mniejsza połowa", randi() % 1000 - 500)
-#			q_VisualScriptLists.remove_input_data_port(randi() % 1000 - 500)
-#			q_VisualScriptLists.remove_output_data_port(randi() % 1000 - 500)
-#			q_VisualScriptLists.set_input_data_port_name(randi() % 1000 - 500, "Mniejsza połowa")
-#			q_VisualScriptLists.set_input_data_port_type(randi() % 1000 - 500, randi() % 1000 - 500)
-#			q_VisualScriptLists.set_output_data_port_name(randi() % 1000 - 500, "Mniejsza połowa")
-#			q_VisualScriptLists.set_output_data_port_type(randi() % 1000 - 500, randi() % 1000 - 500)
+#			q_VisualScriptLists.add_input_data_port(randi() % Autoload.RANGE - Autoload.RANGE / 2, "Mniejsza połowa", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_VisualScriptLists.add_output_data_port(randi() % Autoload.RANGE - Autoload.RANGE / 2, "Mniejsza połowa", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_VisualScriptLists.remove_input_data_port(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_VisualScriptLists.remove_output_data_port(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_VisualScriptLists.set_input_data_port_name(randi() % Autoload.RANGE - Autoload.RANGE / 2, "Mniejsza połowa")
+#			q_VisualScriptLists.set_input_data_port_type(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_VisualScriptLists.set_output_data_port_name(randi() % Autoload.RANGE - Autoload.RANGE / 2, "Mniejsza połowa")
+#			q_VisualScriptLists.set_output_data_port_type(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)

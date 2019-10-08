@@ -28,13 +28,13 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_draw_center(bool(randi()%2))
-			set_region_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
-			set("patch_margin_left", randi() % 1000 - 500)
-			set("patch_margin_top", randi() % 1000 - 500)
-			set("patch_margin_right", randi() % 1000 - 500)
-			set("patch_margin_bottom", randi() % 1000 - 500)
-			set_h_axis_stretch_mode(randi() % 1000 - 500)
-			set_v_axis_stretch_mode(randi() % 1000 - 500)
+			set_region_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set("patch_margin_left", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_top", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_right", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_bottom", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 
 	else: #RANDI
 		if randi() % 2 == 1:
@@ -42,16 +42,16 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_draw_center(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			set_region_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 		if randi() % 2 == 1:
-			set("patch_margin_left", randi() % 1000 - 500)
+			set("patch_margin_left", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set("patch_margin_top", randi() % 1000 - 500)
+			set("patch_margin_top", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set("patch_margin_right", randi() % 1000 - 500)
+			set("patch_margin_right", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set("patch_margin_bottom", randi() % 1000 - 500)
+			set("patch_margin_bottom", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_h_axis_stretch_mode(randi() % 1000 - 500)
+			set_h_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_v_axis_stretch_mode(randi() % 1000 - 500)
+			set_v_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)

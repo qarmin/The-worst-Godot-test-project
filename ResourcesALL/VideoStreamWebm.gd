@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
-		
-		qq += str(q_VideoStreamWebm.get_file())
-		q_VideoStreamWebm.set_file( "Paleta" )
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
+			
 			qq += str(q_VideoStreamWebm.get_file())
 			q_VideoStreamWebm.set_file( "Paleta" )
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_VideoStreamWebm.get_file())
+				q_VideoStreamWebm.set_file( "Paleta" )

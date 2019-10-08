@@ -13,25 +13,26 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_target_path("Roman")
-		set_speed(randf() * 50)
-		set_interpolation_enabled(bool(randi()%2))
-		set_target(get_parent())
-		
-
-		if Autoload.WRONG_BUGS:
-			set_target_path("Romanagasgfg")
-			set_speed(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set_target_path("Roman")
+			set_speed(randf() * 50)
 			set_interpolation_enabled(bool(randi()%2))
-			set_target(self)
-
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_target_path("Romanagasgfg")
-		if randi() % 2 == 1:
-			set_speed(randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set_interpolation_enabled(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_target(self)
+			set_target(get_parent())
+			
+	
+			if Autoload.WRONG_BUGS:
+				set_target_path("Romanagasgfg")
+				set_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_interpolation_enabled(bool(randi()%2))
+				set_target(self)
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_target_path("Romanagasgfg")
+			if randi() % 2 == 1:
+				set_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_interpolation_enabled(bool(randi()%2))
+			if randi() % 2 == 1:
+				set_target(self)

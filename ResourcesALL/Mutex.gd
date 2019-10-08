@@ -13,14 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_Mutex : Mutex = Mutex.new()
-		
-		q_Mutex.lock()
-		qq += str(q_Mutex.try_lock())
-		q_Mutex.unlock()
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_Mutex : Mutex = Mutex.new()
+			
 			q_Mutex.lock()
 			qq += str(q_Mutex.try_lock())
 			q_Mutex.unlock()
+			
+			if Autoload.WRONG_BUGS:
+				q_Mutex.lock()
+				qq += str(q_Mutex.try_lock())
+				q_Mutex.unlock()

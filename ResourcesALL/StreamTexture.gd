@@ -15,8 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_StreamTexture : StreamTexture = StreamTexture.new()
-		
-		#q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")
-		
-		if Autoload.WRONG_BUGS:
-			qq += str(q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		if !Autoload.RANDI:
+			
+			#q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualScriptBuiltinFunc : VisualScriptBuiltinFunc = VisualScriptBuiltinFunc.new()
-		
-		q_VisualScriptBuiltinFunc.set_func(randi() % q_VisualScriptBuiltinFunc.FUNC_MAX) # BuiltinFunc
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptBuiltinFunc.set_func(randi() % 1000 - 500) # BuiltinFunc
+		if !Autoload.RANDI:
+			
+			var q_VisualScriptBuiltinFunc : VisualScriptBuiltinFunc = VisualScriptBuiltinFunc.new()
+			
+			q_VisualScriptBuiltinFunc.set_func(randi() % q_VisualScriptBuiltinFunc.FUNC_MAX) # BuiltinFunc
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptBuiltinFunc.set_func(randi() % Autoload.RANGE - Autoload.RANGE / 2) # BuiltinFunc

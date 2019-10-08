@@ -15,16 +15,29 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_SphereMesh : SphereMesh = SphereMesh.new()
-		
-		q_SphereMesh.set_radius(randf() * 50)
-		q_SphereMesh.set_height(randf() * 50)
-		q_SphereMesh.set_radial_segments(randi()%50)
-		q_SphereMesh.set_rings(randi()%10)
-		q_SphereMesh.set_is_hemisphere(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			q_SphereMesh.set_radius(randf() * 1000 - 500)
-			q_SphereMesh.set_height(randf() * 1000 - 500)
-			q_SphereMesh.set_radial_segments(randi()%10 - 8)
-			q_SphereMesh.set_rings(randi()%50 - 25)
+		if !Autoload.RANDI:
+			
+			q_SphereMesh.set_radius(randf() * 50)
+			q_SphereMesh.set_height(randf() * 50)
+			q_SphereMesh.set_radial_segments(randi()%50)
+			q_SphereMesh.set_rings(randi()%10)
 			q_SphereMesh.set_is_hemisphere(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				q_SphereMesh.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_SphereMesh.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_SphereMesh.set_radial_segments(randi()%10 - 8)
+				q_SphereMesh.set_rings(randi()%15 - 7)
+				q_SphereMesh.set_is_hemisphere(bool(randi()%2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_SphereMesh.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_SphereMesh.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_SphereMesh.set_radial_segments(randi()%10 - 8)
+			if randi() % 2 == 1:
+				q_SphereMesh.set_rings(randi()%15 - 7)
+			if randi() % 2 == 1:
+				q_SphereMesh.set_is_hemisphere(bool(randi()%2))

@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualScriptMathConstant : VisualScriptMathConstant = VisualScriptMathConstant.new()
-		
-		q_VisualScriptMathConstant.set_math_constant(randi() % q_VisualScriptMathConstant.MATH_CONSTANT_MAX)
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptMathConstant.set_math_constant(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			var q_VisualScriptMathConstant : VisualScriptMathConstant = VisualScriptMathConstant.new()
+			
+			q_VisualScriptMathConstant.set_math_constant(randi() % q_VisualScriptMathConstant.MATH_CONSTANT_MAX)
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptMathConstant.set_math_constant(randi() % Autoload.RANGE - Autoload.RANGE / 2)

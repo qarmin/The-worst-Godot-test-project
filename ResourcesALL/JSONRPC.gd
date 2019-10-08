@@ -13,28 +13,29 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_JSONRPC : JSONRPC = JSONRPC.new()
-
-		qq += str(q_JSONRPC.make_notification("Zbyt", randi()%50))
-		qq += str(q_JSONRPC.make_request("Zbyt", randi()%50, randi()%50))
-		qq += str(q_JSONRPC.make_response(randi()%50, randi()%50))
-		qq += str(q_JSONRPC.make_response_error(randi()%50, "MESSAGE", randi()%50))
-		
-		qq += str(q_JSONRPC.process_action(randi()%50, bool(randi()%2)))
-		qq += str(q_JSONRPC.process_string("Za"))
-		
-		q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
-
-		if Autoload.WRONG_BUGS:
-			qq += str(q_JSONRPC.make_notification("Zbyt", randi() % 1000 - 500))
-			qq += str(q_JSONRPC.make_request("Zbyt", randi() % 1000 - 500, randi() % 1000 - 500))
-			qq += str(q_JSONRPC.make_response(randi() % 1000 - 500, randi() % 1000 - 500))
-			qq += str(q_JSONRPC.make_response_error(randi() % 1000 - 500, "MESSAGE", randi() % 1000 - 500))
+		if !Autoload.RANDI:
 			
-			qq += str(q_JSONRPC.process_action(randi() % 1000 - 500, bool(randi()%2)))
+			var q_JSONRPC : JSONRPC = JSONRPC.new()
+	
+			qq += str(q_JSONRPC.make_notification("Zbyt", randi()%50))
+			qq += str(q_JSONRPC.make_request("Zbyt", randi()%50, randi()%50))
+			qq += str(q_JSONRPC.make_response(randi()%50, randi()%50))
+			qq += str(q_JSONRPC.make_response_error(randi()%50, "MESSAGE", randi()%50))
+			
+			qq += str(q_JSONRPC.process_action(randi()%50, bool(randi()%2)))
 			qq += str(q_JSONRPC.process_string("Za"))
 			
 			q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
+	
+			if Autoload.WRONG_BUGS:
+				qq += str(q_JSONRPC.make_notification("Zbyt", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_JSONRPC.make_request("Zbyt", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_JSONRPC.make_response(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_JSONRPC.make_response_error(randi() % Autoload.RANGE - Autoload.RANGE / 2, "MESSAGE", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				
+				qq += str(q_JSONRPC.process_action(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2)))
+				qq += str(q_JSONRPC.process_string("Za"))
+				
+				q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
 		
-		q_JSONRPC.free()
+			q_JSONRPC.free()

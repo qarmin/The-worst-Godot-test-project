@@ -121,41 +121,41 @@ func _process(delta) -> void:
 			## With Errors
 			if Autoload.WRONG_BUGS:
 				set_sprite_frames(load("res://RES/SpriteFrames.tres"))
-				set_frame(randi() % 1000 - 500)
+				set_frame(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_animation("afqwgqagagasfqw")
-				set_speed_scale(randf() * 1000 - 500)
+				set_speed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				_set_playing(bool(randi()%2))
 				set_centered(bool(randi()%2))
-				set_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				set_flip_h(bool(randi()%2))
 				set_flip_v(bool(randi()%2))
 				stop()
 				play("qwtdfaf", bool(randi()%2))
 			
 				## Node2D
-				set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				set_rotation(randf() * 1000 - 500)
-				set_rotation_degrees(randf() * 1000 - 500)
-				set_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				set_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-				set_global_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				set_global_rotation(randf() * 1000 - 500)
-				set_global_rotation_degrees(randf() * 1000 - 500)
-				set_global_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				set_global_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-				set_z_index(randi() % 1000 - 500)
+				set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				set_global_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_global_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_global_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_global_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_global_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				set_z_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_z_as_relative(bool(randi()%2))
-				apply_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				qq += str(get_angle_to(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				apply_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(get_angle_to(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 				qq += str(get_relative_transform_to_parent(node_temp))
-				global_translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				look_at(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-				move_local_x(randf() * 1000 - 500,bool(randi()%2))
-				move_local_y(randf() * 1000 - 500,bool(randi()%2))
-				rotate(randf() * 1000 - 500)
-				qq += str(to_global(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-				qq += str(to_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
-				translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				global_translate(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				look_at(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				move_local_x(randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+				move_local_y(randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+				rotate(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				qq += str(to_global(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				qq += str(to_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				translate(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				
 				# Canvas Item
 				set_visible(bool(randi()%2))
@@ -163,15 +163,15 @@ func _process(delta) -> void:
 				set_self_modulate(Color(randf(),randf(),randf(),randf()))
 				set_draw_behind_parent(bool(randi()%2))
 				_set_on_top(bool(randi()%2))
-				set_light_mask(randi() % 1000 - 500)
+				set_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_material(load("res://RES/SpatialMaterial.tres"))
 				set_use_parent_material(bool(randi()%2))
 				
 				###_draw()
-				###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),"Q","D",Color(randf(),randf(),randf(),randf()))
-				###draw_circle(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),randf() * 1000 - 500,Color(randf(),randf(),randf(),randf()))
-				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
-				#draw_line(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500), Color(randf(),randf(),randf(),randf()))
+				###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),"Q","D",Color(randf(),randf(),randf(),randf()))
+				###draw_circle(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+				#draw_line(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Color(randf(),randf(),randf(),randf()))
 				###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
 				###draw_circle(Vector2(randf() * 50,randf() * 50),randf() * 50,Color(randf(),randf(),randf(),randf()))
 				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
@@ -214,7 +214,7 @@ func _process(delta) -> void:
 				qq += str(is_transform_notification_enabled())
 				qq += str(is_visible_in_tree())
 				
-				qq += str(make_canvas_position_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				qq += str(make_canvas_position_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 				qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
 				
 				set_as_toplevel(bool(randi()%2))
@@ -231,17 +231,17 @@ func _process(delta) -> void:
 			if randi()%2 == 1:
 				set_sprite_frames(load("res://RES/SpriteFrames.tres"))
 			if randi()%2 == 1:
-				set_frame(randi() % 1000 - 500)
+				set_frame(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
 				set_animation("afqwgqagagasfqw")
 			if randi()%2 == 1:
-				set_speed_scale(randf() * 1000 - 500)
+				set_speed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
 				_set_playing(bool(randi()%2))
 			if randi()%2 == 1:
 				set_centered(bool(randi()%2))
 			if randi()%2 == 1:
-				set_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
 				set_flip_h(bool(randi()%2))
 			if randi()%2 == 1:
@@ -253,51 +253,51 @@ func _process(delta) -> void:
 			
 				## Node2D
 			if randi()%2 == 1:
-				set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				set_rotation(randf() * 1000 - 500)
+				set_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				set_rotation_degrees(randf() * 1000 - 500)
+				set_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				set_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				set_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				set_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
-				set_global_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_global_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				set_global_rotation(randf() * 1000 - 500)
+				set_global_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				set_global_rotation_degrees(randf() * 1000 - 500)
+				set_global_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				set_global_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				set_global_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				set_global_transform(Transform2D(Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500),Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				set_global_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
-				set_z_index(randi() % 1000 - 500)
+				set_z_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
 				set_z_as_relative(bool(randi()%2))
 			if randi()%2 == 1:
-				apply_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				apply_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				qq += str(get_angle_to(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				qq += str(get_angle_to(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
 				qq += str(get_relative_transform_to_parent(node_temp))
 			if randi()%2 == 1:
-				global_translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				global_translate(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				look_at(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				look_at(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi()%2 == 1:
-				move_local_x(randf() * 1000 - 500,bool(randi()%2))
+				move_local_x(randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			if randi()%2 == 1:
-				move_local_y(randf() * 1000 - 500,bool(randi()%2))
+				move_local_y(randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			if randi()%2 == 1:
-				rotate(randf() * 1000 - 500)
+				rotate(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				qq += str(to_global(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				qq += str(to_global(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
-				qq += str(to_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				qq += str(to_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
-				translate(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+				translate(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				
 				# Canvas Item
 			if randi()%2 == 1:
@@ -311,7 +311,7 @@ func _process(delta) -> void:
 			if randi()%2 == 1:
 				_set_on_top(bool(randi()%2))
 			if randi()%2 == 1:
-				set_light_mask(randi() % 1000 - 500)
+				set_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
 				set_material(load("res://RES/SpatialMaterial.tres"))
 			if randi()%2 == 1:
@@ -356,7 +356,7 @@ func _process(delta) -> void:
 				qq += str(is_visible_in_tree())
 				
 			if randi()%2 == 1:
-				qq += str(make_canvas_position_local(Vector2(randf() * 1000 - 500,randf() * 1000 - 500)))
+				qq += str(make_canvas_position_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
 				qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
 				

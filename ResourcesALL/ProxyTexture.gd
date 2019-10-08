@@ -13,10 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_ProxyTexture : ProxyTexture = ProxyTexture.new()
-		
-		q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			
+			if Autoload.WRONG_BUGS:
+				q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_ProxyTexture.set_base(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))

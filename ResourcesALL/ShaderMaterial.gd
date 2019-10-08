@@ -15,20 +15,35 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_ShaderMaterial : ShaderMaterial = ShaderMaterial.new()
-		
-		q_ShaderMaterial.set_shader(Shader.new())
-		
-		qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
-		qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
-		qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
-		
-		q_ShaderMaterial.set_shader_param( "Krokiew", randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_ShaderMaterial.set_shader(Shader.new())
 			
 			qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
 			qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
 			qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
 			
-			q_ShaderMaterial.set_shader_param( "Krokiew", randf() * 1000 - 500)
+			q_ShaderMaterial.set_shader_param( "Krokiew", randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_ShaderMaterial.set_shader(Shader.new())
+				
+				qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
+				qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
+				qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
+				
+				q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_ShaderMaterial.set_shader(Shader.new())
+				
+			if randi() % 2 == 1:
+				qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
+			if randi() % 2 == 1:
+				qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
+			if randi() % 2 == 1:
+				qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
+				
+			if randi() % 2 == 1:
+				q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)

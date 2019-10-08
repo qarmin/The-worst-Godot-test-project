@@ -15,12 +15,21 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_MeshTexture : MeshTexture = MeshTexture.new()
-		
-		q_MeshTexture.set_mesh(Mesh.new())
-		q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		q_MeshTexture.set_image_size(Vector2(randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_MeshTexture.set_mesh(Mesh.new())
 			q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			q_MeshTexture.set_image_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			q_MeshTexture.set_image_size(Vector2(randf() * 50,randf() * 50))
+			
+			if Autoload.WRONG_BUGS:
+				q_MeshTexture.set_mesh(Mesh.new())
+				q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				q_MeshTexture.set_image_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_MeshTexture.set_mesh(Mesh.new())
+			if randi() % 2 == 1:
+				q_MeshTexture.set_base_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			if randi() % 2 == 1:
+				q_MeshTexture.set_image_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))

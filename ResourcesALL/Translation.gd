@@ -13,18 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_Translation : Translation = Translation.new()
-		
-		q_Translation.set_locale("pl")
-		
-		q_Translation.add_message( "Bolaczka", "Pomysl" )
-		q_Translation.erase_message( "Historia" )
-		qq += str(q_Translation.get_message( "Geralt" ))
-		qq += str(q_Translation.get_message_count())
-		qq += str(q_Translation.get_message_list())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_Translation.set_locale("pl")
 			
 			q_Translation.add_message( "Bolaczka", "Pomysl" )
@@ -32,3 +24,26 @@ func _process(delta) -> void:
 			qq += str(q_Translation.get_message( "Geralt" ))
 			qq += str(q_Translation.get_message_count())
 			qq += str(q_Translation.get_message_list())
+			
+			if Autoload.WRONG_BUGS:
+				q_Translation.set_locale("pl")
+				
+				q_Translation.add_message( "Bolaczka", "Pomysl" )
+				q_Translation.erase_message( "Historia" )
+				qq += str(q_Translation.get_message( "Geralt" ))
+				qq += str(q_Translation.get_message_count())
+				qq += str(q_Translation.get_message_list())
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_Translation.set_locale("pl")
+				
+			if randi() % 2 == 1:
+				q_Translation.add_message( "Bolaczka", "Pomysl" )
+			if randi() % 2 == 1:
+				q_Translation.erase_message( "Historia" )
+			if randi() % 2 == 1:
+				qq += str(q_Translation.get_message( "Geralt" ))
+			if randi() % 2 == 1:
+				qq += str(q_Translation.get_message_count())
+			if randi() % 2 == 1:
+				qq += str(q_Translation.get_message_list())

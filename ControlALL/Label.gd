@@ -33,15 +33,15 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_text(str(bool(randi()%2)))
-			set_align(randi() % 1000 - 500)
-			set_valign(randi() % 1000 - 500)
+			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_valign(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_autowrap(bool(randi()%2))
 			set_clip_text(bool(randi()%2))
 			set_uppercase(bool(randi()%2))
-			set_visible_characters(randi() % 1000 - 500)
-			set_percent_visible(randi() % 1000 - 500)
-			set_lines_skipped(randi() % 1000 - 500)
-			set_max_lines_visible(randi() % 1000 - 500)
+			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_percent_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_lines_skipped(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_max_lines_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 			qq += str(get_line_count())
 			qq += str(get_line_height())
@@ -52,9 +52,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(bool(randi()%2)))
 		if randi() % 2 == 1:
-			set_align(randi() % 1000 - 500)
+			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_valign(randi() % 1000 - 500)
+			set_valign(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_autowrap(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -62,13 +62,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_uppercase(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_visible_characters(randi() % 1000 - 500)
+			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_percent_visible(randi() % 1000 - 500)
+			set_percent_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_lines_skipped(randi() % 1000 - 500)
+			set_lines_skipped(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_max_lines_visible(randi() % 1000 - 500)
+			set_max_lines_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 		if randi() % 2 == 1:
 			qq += str(get_line_count())

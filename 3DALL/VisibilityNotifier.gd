@@ -13,15 +13,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_aabb(AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
-		qq += str(is_on_screen())
-		
-		if Autoload.WRONG_BUGS:
-			set_aabb(AABB(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500),Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
+		if !Autoload.RANDI:
+			
+			set_aabb(AABB(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 			qq += str(is_on_screen())
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_aabb(AABB(Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500),Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)))
-		if randi() % 2 == 1:
-			qq += str(is_on_screen())
+			
+			if Autoload.WRONG_BUGS:
+				set_aabb(AABB(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				qq += str(is_on_screen())
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_aabb(AABB(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			if randi() % 2 == 1:
+				qq += str(is_on_screen())

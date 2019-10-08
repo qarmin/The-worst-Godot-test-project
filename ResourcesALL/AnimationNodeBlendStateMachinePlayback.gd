@@ -13,18 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_AnimationNodeStateMachinePlayback : AnimationNodeStateMachinePlayback = AnimationNodeStateMachinePlayback.new()
-		
-		qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
-		qq += str(q_AnimationNodeStateMachinePlayback.get_travel_path())
-		
-		qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
-		q_AnimationNodeStateMachinePlayback.start( "Karamba" )
-		q_AnimationNodeStateMachinePlayback.stop()
-		q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
 			qq += str(q_AnimationNodeStateMachinePlayback.get_travel_path())
 			
@@ -32,3 +24,27 @@ func _process(delta) -> void:
 			q_AnimationNodeStateMachinePlayback.start( "Karamba" )
 			q_AnimationNodeStateMachinePlayback.stop()
 			q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
+				qq += str(q_AnimationNodeStateMachinePlayback.get_travel_path())
+				
+				qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
+				q_AnimationNodeStateMachinePlayback.start( "Karamba" )
+				q_AnimationNodeStateMachinePlayback.stop()
+				q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_AnimationNodeStateMachinePlayback.get_current_node())
+			if randi() % 2 == 1:
+				qq += str(q_AnimationNodeStateMachinePlayback.get_travel_path())
+				
+			if randi() % 2 == 1:
+				qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
+			if randi() % 2 == 1:
+				q_AnimationNodeStateMachinePlayback.start( "Karamba" )
+			if randi() % 2 == 1:
+				q_AnimationNodeStateMachinePlayback.stop()
+			if randi() % 2 == 1:
+				q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )

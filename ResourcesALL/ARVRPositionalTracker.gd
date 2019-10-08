@@ -13,7 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		if !Autoload.RANDI:
+			pass
 #		var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
 #
 #		q_ARVRPositionalTracker.set_rumble(randf() * 50)
@@ -30,7 +31,7 @@ func _process(delta) -> void:
 #		qq += str(q_ARVRPositionalTracker.get_type())
 #
 #		if Autoload.WRONG_BUGS:
-#			q_ARVRPositionalTracker.set_rumble(randf() * 1000 - 500)
+#			q_ARVRPositionalTracker.set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 #
 #			qq += str(q_ARVRPositionalTracker.get_hand())
 #			qq += str(q_ARVRPositionalTracker.get_joy_id())

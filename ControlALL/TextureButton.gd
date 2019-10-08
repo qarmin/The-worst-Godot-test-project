@@ -32,7 +32,7 @@ func _process(delta) -> void:
 			set_focused_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_click_mask(BitMap.new())
 			set_expand(bool(randi()%2))
-			set_stretch_mode(randi() % 1000 - 500)
+			set_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 
 	else: #RANDI
 		if randi() % 2 == 1:
@@ -50,4 +50,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_expand(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_stretch_mode(randi() % 1000 - 500)
+			set_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)

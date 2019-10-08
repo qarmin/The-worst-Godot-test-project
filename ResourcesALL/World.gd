@@ -13,18 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_World : World = World.new()
-		
-		q_World.set_environment(Environment.new())
-		q_World.set_fallback_environment(Environment.new())
-		qq += str(q_World.get_space())
-		qq += str(q_World.get_scenario())
-		qq += str(q_World.get_direct_space_state())
-		
-		if Autoload.WRONG_BUGS:
+			var q_World : World = World.new()
+			
 			q_World.set_environment(Environment.new())
 			q_World.set_fallback_environment(Environment.new())
 			qq += str(q_World.get_space())
 			qq += str(q_World.get_scenario())
 			qq += str(q_World.get_direct_space_state())
+			
+			if Autoload.WRONG_BUGS:
+				q_World.set_environment(Environment.new())
+				q_World.set_fallback_environment(Environment.new())
+				qq += str(q_World.get_space())
+				qq += str(q_World.get_scenario())
+				qq += str(q_World.get_direct_space_state())

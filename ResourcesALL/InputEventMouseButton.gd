@@ -13,16 +13,27 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_InputEventMouseButton : InputEventMouseButton = InputEventMouseButton.new()
-		
-		q_InputEventMouseButton.set_factor(randf() * 50)
-		q_InputEventMouseButton.set_button_index(randi()%50)
-		q_InputEventMouseButton.set_pressed(bool(randi()%2))
-		q_InputEventMouseButton.set_doubleclick(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			q_InputEventMouseButton.set_factor(randf() * 1000 - 500)
-			q_InputEventMouseButton.set_button_index(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_InputEventMouseButton.set_factor(randf() * 50)
+			q_InputEventMouseButton.set_button_index(randi()%50)
 			q_InputEventMouseButton.set_pressed(bool(randi()%2))
 			q_InputEventMouseButton.set_doubleclick(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				q_InputEventMouseButton.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_InputEventMouseButton.set_button_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_InputEventMouseButton.set_pressed(bool(randi()%2))
+				q_InputEventMouseButton.set_doubleclick(bool(randi()%2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_InputEventMouseButton.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_InputEventMouseButton.set_button_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_InputEventMouseButton.set_pressed(bool(randi()%2))
+			if randi() % 2 == 1:
+				q_InputEventMouseButton.set_doubleclick(bool(randi()%2))

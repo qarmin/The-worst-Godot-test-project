@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_Semaphore : Semaphore = Semaphore.new()
-		
-		qq += str(q_Semaphore.post())
-		qq += str(q_Semaphore.wait())
-		
-		if Autoload.WRONG_BUGS:
+			var q_Semaphore : Semaphore = Semaphore.new()
+			
 			qq += str(q_Semaphore.post())
 			qq += str(q_Semaphore.wait())
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_Semaphore.post())
+				qq += str(q_Semaphore.wait())

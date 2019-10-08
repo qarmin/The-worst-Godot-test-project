@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualShaderNodeVec3Constant : VisualShaderNodeVec3Constant = VisualShaderNodeVec3Constant.new()
-		
-		q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 50,randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500))
+			var q_VisualShaderNodeVec3Constant : VisualShaderNodeVec3Constant = VisualShaderNodeVec3Constant.new()
+			
+			q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * 50,randf() * 50,randf() * 50))
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeVec3Constant.set_constant(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))

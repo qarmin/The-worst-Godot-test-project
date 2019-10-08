@@ -13,13 +13,14 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualShaderNodeCompare : VisualShaderNodeCompare = VisualShaderNodeCompare.new()
-		
-		q_VisualShaderNodeCompare.set_comparsion_type(randi() % 4) # ComparsionType
-		q_VisualShaderNodeCompare.set_function(randi()%6) # Function
-		q_VisualShaderNodeCompare.set_condition(randi() % 2) # Condition
-		if Autoload.WRONG_BUGS:
-			q_VisualShaderNodeCompare.set_comparsion_type(randi()%50) # ComparsionType
-			q_VisualShaderNodeCompare.set_function(randi()%50) # Function
-			q_VisualShaderNodeCompare.set_condition(randi()%50) # Condition
+			var q_VisualShaderNodeCompare : VisualShaderNodeCompare = VisualShaderNodeCompare.new()
+			
+			q_VisualShaderNodeCompare.set_comparsion_type(randi() % 4) # ComparsionType
+			q_VisualShaderNodeCompare.set_function(randi()%6) # Function
+			q_VisualShaderNodeCompare.set_condition(randi() % 2) # Condition
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeCompare.set_comparsion_type(randi()%50) # ComparsionType
+				q_VisualShaderNodeCompare.set_function(randi()%50) # Function
+				q_VisualShaderNodeCompare.set_condition(randi()%50) # Condition

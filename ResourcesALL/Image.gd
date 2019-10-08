@@ -13,7 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		if !Autoload.RANDI:
+			pass
+###BUG
 #		var q_Image : Image = Image.new()
 #
 #		#q_Image.blend_rect( Image.new(), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) )

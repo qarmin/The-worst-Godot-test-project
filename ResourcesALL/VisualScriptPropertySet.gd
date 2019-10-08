@@ -13,24 +13,25 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualScriptPropertySet : VisualScriptPropertySet = VisualScriptPropertySet.new()
-		
-		q_VisualScriptPropertySet.set_call_mode(randi() % 3) # CallMode
-		q_VisualScriptPropertySet.set_base_type("Nabzdryngolony")
-		q_VisualScriptPropertySet.set_base_script("Debilny Sposób")
-		q_VisualScriptPropertySet.set_basic_type(randi()%50)
-		q_VisualScriptPropertySet.set_base_path(".")
-		q_VisualScriptPropertySet.set_property("Adam")
-		q_VisualScriptPropertySet.set_index("Koniak")
-		q_VisualScriptPropertySet.set_assign_op(randi() % 11) # AssignOP
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptPropertySet.set_call_mode(randi() % 1000 - 500) # CallMode
+			var q_VisualScriptPropertySet : VisualScriptPropertySet = VisualScriptPropertySet.new()
+			
+			q_VisualScriptPropertySet.set_call_mode(randi() % 3) # CallMode
 			q_VisualScriptPropertySet.set_base_type("Nabzdryngolony")
 			q_VisualScriptPropertySet.set_base_script("Debilny Sposób")
-			q_VisualScriptPropertySet.set_basic_type(randi() % 1000 - 500)
+			q_VisualScriptPropertySet.set_basic_type(randi()%50)
 			q_VisualScriptPropertySet.set_base_path(".")
 			q_VisualScriptPropertySet.set_property("Adam")
 			q_VisualScriptPropertySet.set_index("Koniak")
-			q_VisualScriptPropertySet.set_assign_op(randi() % 1000 - 500) # AssignOP
+			q_VisualScriptPropertySet.set_assign_op(randi() % 11) # AssignOP
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptPropertySet.set_call_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CallMode
+				q_VisualScriptPropertySet.set_base_type("Nabzdryngolony")
+				q_VisualScriptPropertySet.set_base_script("Debilny Sposób")
+				q_VisualScriptPropertySet.set_basic_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_VisualScriptPropertySet.set_base_path(".")
+				q_VisualScriptPropertySet.set_property("Adam")
+				q_VisualScriptPropertySet.set_index("Koniak")
+				q_VisualScriptPropertySet.set_assign_op(randi() % Autoload.RANGE - Autoload.RANGE / 2) # AssignOP

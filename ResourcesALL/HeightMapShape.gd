@@ -13,14 +13,23 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_HeightMapShape : HeightMapShape = HeightMapShape.new()
-		
-		q_HeightMapShape.set_map_width(randi()%50)
-		q_HeightMapShape.set_map_depth(randi()%50)
-		q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))
-		
-		if Autoload.WRONG_BUGS:
-			q_HeightMapShape.set_map_width(randi() % 1000 - 500)
-			q_HeightMapShape.set_map_depth(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_HeightMapShape.set_map_width(randi()%50)
+			q_HeightMapShape.set_map_depth(randi()%50)
 			q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))
+			
+			if Autoload.WRONG_BUGS:
+				q_HeightMapShape.set_map_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_HeightMapShape.set_map_depth(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_HeightMapShape.set_map_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_HeightMapShape.set_map_depth(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))

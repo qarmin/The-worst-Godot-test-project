@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualScriptVariableSet : VisualScriptVariableSet = VisualScriptVariableSet.new()
-		
-		q_VisualScriptVariableSet.set_variable("Małopolska")
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_VisualScriptVariableSet : VisualScriptVariableSet = VisualScriptVariableSet.new()
+			
 			q_VisualScriptVariableSet.set_variable("Małopolska")
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptVariableSet.set_variable("Małopolska")

@@ -15,10 +15,17 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_CylinderShape : CylinderShape = CylinderShape.new()
-		
-		q_CylinderShape.set_radius(randf() * 50)
-		q_CylinderShape.set_height(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_CylinderShape.set_radius(randf() * 1000 - 500)
-			q_CylinderShape.set_height(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_CylinderShape.set_radius(randf() * 50)
+			q_CylinderShape.set_height(randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_CylinderShape.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_CylinderShape.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_CylinderShape.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_CylinderShape.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)

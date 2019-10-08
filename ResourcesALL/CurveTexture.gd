@@ -13,12 +13,18 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_CurveTexture : CurveTexture = CurveTexture.new()
-		
-		q_CurveTexture.set_width(randi()%50 + 32)
-		q_CurveTexture.set_curve(Curve.new())
-		
-		if Autoload.WRONG_BUGS:
-			q_CurveTexture.set_width(randi() % 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_CurveTexture.set_width(randi()%50 + 32)
 			q_CurveTexture.set_curve(Curve.new())
+			
+			if Autoload.WRONG_BUGS:
+				q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_CurveTexture.set_curve(Curve.new())
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_CurveTexture.set_curve(Curve.new())

@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_SceneState : SceneState = SceneState.new()
 #
@@ -37,6 +39,6 @@ func _process(delta) -> void:
 #		q_SceneState.get_node_type( 0 )
 #
 #		q_SceneState.is_node_instance_placeholder( 0 )
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

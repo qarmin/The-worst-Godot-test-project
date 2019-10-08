@@ -13,14 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualShaderNodeExpression : VisualShaderNodeExpression = VisualShaderNodeExpression.new()
-		
-		q_VisualShaderNodeExpression.set_expression("Uderzenie")
-		
-		q_VisualShaderNodeExpression.build()
-		
-		if Autoload.WRONG_BUGS:
+			var q_VisualShaderNodeExpression : VisualShaderNodeExpression = VisualShaderNodeExpression.new()
+			
 			q_VisualShaderNodeExpression.set_expression("Uderzenie")
 			
 			q_VisualShaderNodeExpression.build()
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeExpression.set_expression("Uderzenie")
+				
+				q_VisualShaderNodeExpression.build()

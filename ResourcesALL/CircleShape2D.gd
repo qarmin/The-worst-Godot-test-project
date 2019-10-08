@@ -13,10 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_CircleShape2D : CircleShape2D = CircleShape2D.new()
-		
-		q_CircleShape2D.set_radius(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_CircleShape2D.set_radius(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_CircleShape2D.set_radius(randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_CircleShape2D.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_CircleShape2D.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)

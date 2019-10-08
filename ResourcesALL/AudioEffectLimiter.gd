@@ -13,16 +13,27 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_AudioEffectLimiter : AudioEffectLimiter = AudioEffectLimiter.new()
-		
-		q_AudioEffectLimiter.set_ceiling_db(randf() * 50)
-		q_AudioEffectLimiter.set_threshold_db(randf() * 50)
-		q_AudioEffectLimiter.set_soft_clip_db(randf() * 50)
-		q_AudioEffectLimiter.set_soft_clip_ratio(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_AudioEffectLimiter.set_ceiling_db(randf() * 1000 - 500)
-			q_AudioEffectLimiter.set_threshold_db(randf() * 1000 - 500)
-			q_AudioEffectLimiter.set_soft_clip_db(randf() * 1000 - 500)
-			q_AudioEffectLimiter.set_soft_clip_ratio(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_AudioEffectLimiter.set_ceiling_db(randf() * 50)
+			q_AudioEffectLimiter.set_threshold_db(randf() * 50)
+			q_AudioEffectLimiter.set_soft_clip_db(randf() * 50)
+			q_AudioEffectLimiter.set_soft_clip_ratio(randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_AudioEffectLimiter.set_ceiling_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_AudioEffectLimiter.set_threshold_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_AudioEffectLimiter.set_soft_clip_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_AudioEffectLimiter.set_soft_clip_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_AudioEffectLimiter.set_ceiling_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_AudioEffectLimiter.set_threshold_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_AudioEffectLimiter.set_soft_clip_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_AudioEffectLimiter.set_soft_clip_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)

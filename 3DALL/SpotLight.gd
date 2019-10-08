@@ -13,24 +13,25 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set("spot_range",randf() * 50)
-		set("spot_attenuation",randf() * 50)
-		set("spot_angle",randf() * 50)
-		set("spot_angle_attenuation",randf() * 50)
-		
-		
-		if Autoload.WRONG_BUGS:
-			set("spot_range",randf() * 1000 - 500)
-			set("spot_attenuation",randf() * 1000 - 500)
-			set("spot_angle",randf() * 1000 - 500)
-			set("spot_angle_attenuation",randf() * 1000 - 500)
-	else: #RANDI
-		if randi() % 2 == 1:
-			set("spot_range",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("spot_attenuation",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("spot_angle",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("spot_angle_attenuation",randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set("spot_range",randf() * 50)
+			set("spot_attenuation",randf() * 50)
+			set("spot_angle",randf() * 50)
+			set("spot_angle_attenuation",randf() * 50)
+			
+			
+			if Autoload.WRONG_BUGS:
+				set("spot_range",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("spot_attenuation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("spot_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("spot_angle_attenuation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		else: #RANDI
+			if randi() % 2 == 1:
+				set("spot_range",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("spot_attenuation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("spot_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("spot_angle_attenuation",randf() * Autoload.RANGE - Autoload.RANGE / 2)

@@ -13,10 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_AudioEffectPitchShift : AudioEffectPitchShift = AudioEffectPitchShift.new()
-		
-		q_AudioEffectPitchShift.set_pitch_scale(randf() * 50)
-		
-		if Autoload.WRONG_BUGS:
-			q_AudioEffectPitchShift.set_pitch_scale(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			q_AudioEffectPitchShift.set_pitch_scale(randf() * 50)
+			
+			if Autoload.WRONG_BUGS:
+				q_AudioEffectPitchShift.set_pitch_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_AudioEffectPitchShift.set_pitch_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)

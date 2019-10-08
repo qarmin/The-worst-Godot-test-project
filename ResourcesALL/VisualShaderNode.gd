@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_VisualShaderNode : VisualShaderNode = VisualShaderNode.new()
 #
@@ -21,6 +23,6 @@ func _process(delta) -> void:
 #
 #		q_VisualShaderNode.get_input_port_default_value( randi()%50)
 #		q_VisualShaderNode.set_input_port_default_value( randi()%50, randi()%50)
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

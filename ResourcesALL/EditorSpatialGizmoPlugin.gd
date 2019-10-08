@@ -11,9 +11,11 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+#	if counter <= 0:
+#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#		if !Autoload.RANDI:
+#			pass
+#
 #		var q_EditorSpatialGizmoPlugin : EditorSpatialGizmoPlugin = EditorSpatialGizmoPlugin.new()
 #
 #		qq += str(q_EditorSpatialGizmoPlugin.can_be_hidden())

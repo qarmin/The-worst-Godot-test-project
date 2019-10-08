@@ -13,13 +13,14 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-# warning-ignore:unassigned_variable
-		var q_RID : RID
-		
-		#q_RID = RID()
-		qq += str(q_RID.get_id())
-		
-		if Autoload.WRONG_BUGS:
+	# warning-ignore:unassigned_variable
+			var q_RID : RID
+			
 			#q_RID = RID()
 			qq += str(q_RID.get_id())
+			
+			if Autoload.WRONG_BUGS:
+				#q_RID = RID()
+				qq += str(q_RID.get_id())

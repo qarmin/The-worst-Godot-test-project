@@ -27,9 +27,9 @@ func _process(delta) -> void:
 			## Slider
 			set_editable(bool(randi() % 2))
 			set_scrollable(bool(randi() % 2))
-			set_ticks(randi() % 1000 - 500)
+			set_ticks(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_ticks_on_borders(bool(randi() % 2))
-			set_focus_mode(randi() % 1000 - 500)
+			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 
 	else: #RANDI
 		if randi() % 2 == 1:
@@ -37,8 +37,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_scrollable(bool(randi() % 2))
 		if randi() % 2 == 1:
-			set_ticks(randi() % 1000 - 500)
+			set_ticks(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_ticks_on_borders(bool(randi() % 2))
 		if randi() % 2 == 1:
-			set_focus_mode(randi() % 1000 - 500)
+			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)

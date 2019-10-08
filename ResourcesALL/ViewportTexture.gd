@@ -13,10 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_ViewportTexture : ViewportTexture = ViewportTexture.new()
-		
-		q_ViewportTexture.set_viewport_path_in_scene(".")
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_ViewportTexture.set_viewport_path_in_scene(".")
+			
+			if Autoload.WRONG_BUGS:
+				q_ViewportTexture.set_viewport_path_in_scene(".")
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_ViewportTexture.set_viewport_path_in_scene(".")

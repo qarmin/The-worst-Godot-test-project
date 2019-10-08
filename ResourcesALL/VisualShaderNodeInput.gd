@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualShaderNodeInput : VisualShaderNodeInput = VisualShaderNodeInput.new()
-		
-		q_VisualShaderNodeInput.set_input_name("Szkoła")
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_VisualShaderNodeInput : VisualShaderNodeInput = VisualShaderNodeInput.new()
+			
 			q_VisualShaderNodeInput.set_input_name("Szkoła")
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeInput.set_input_name("Szkoła")

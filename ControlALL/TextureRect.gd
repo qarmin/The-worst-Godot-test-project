@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_expand(bool(randi()%2))
-			set_stretch_mode(randi() % 1000 - 500)
+			set_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_flip_h(bool(randi()%2))
 			set_flip_v(bool(randi()%2))
 		
@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_expand(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_stretch_mode(randi() % 1000 - 500)
+			set_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_flip_h(bool(randi()%2))
 		if randi() % 2 == 1:

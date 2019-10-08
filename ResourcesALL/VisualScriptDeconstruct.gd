@@ -13,10 +13,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualScriptDeconstruct : VisualScriptDeconstruct = VisualScriptDeconstruct.new()
-		
-		q_VisualScriptDeconstruct.set_deconstruct_type(randi()%27)  # Variant_MAX
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptDeconstruct.set_deconstruct_type(randi() % 1000 - 500)  # Variant_MAX
+			var q_VisualScriptDeconstruct : VisualScriptDeconstruct = VisualScriptDeconstruct.new()
+			
+			q_VisualScriptDeconstruct.set_deconstruct_type(randi()%27)  # Variant_MAX
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptDeconstruct.set_deconstruct_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)  # Variant_MAX

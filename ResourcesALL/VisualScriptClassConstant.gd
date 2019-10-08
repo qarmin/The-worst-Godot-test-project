@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualScriptClassConstant : VisualScriptClassConstant = VisualScriptClassConstant.new()
-		
-		q_VisualScriptClassConstant.set_base_type("String")
-		q_VisualScriptClassConstant.set_class_constant("Vector2")
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptClassConstant.set_base_type("Kekin")
-			q_VisualScriptClassConstant.set_class_constant("Osoba")
+			var q_VisualScriptClassConstant : VisualScriptClassConstant = VisualScriptClassConstant.new()
+			
+			q_VisualScriptClassConstant.set_base_type("String")
+			q_VisualScriptClassConstant.set_class_constant("Vector2")
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptClassConstant.set_base_type("Kekin")
+				q_VisualScriptClassConstant.set_class_constant("Osoba")

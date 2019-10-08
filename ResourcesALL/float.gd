@@ -13,15 +13,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-# warning-ignore:unused_variable
-		var q_float : float
-
-		q_float = float(bool(randi()%2))
-		q_float = float(randf() * 50)
-		q_float = float("4.6")
-
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+	# warning-ignore:unused_variable
+			var q_float : float
+	
 			q_float = float(bool(randi()%2))
-			q_float = float(randi() % 1000 - 500)
-			q_float = float("4afasfa6")
+			q_float = float(randf() * 50)
+			q_float = float("4.6")
+	
+			if Autoload.WRONG_BUGS:
+				q_float = float(bool(randi()%2))
+				q_float = float(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_float = float("4afasfa6")

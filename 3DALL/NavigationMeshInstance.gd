@@ -13,16 +13,17 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
-		set_enabled(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
 			set_enabled(bool(randi()%2))
-
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
-		if randi() % 2 == 1:
-			set_enabled(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
+				set_enabled(bool(randi()%2))
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_navigation_mesh(load("res://RES/NavigationMesh.tres"))
+			if randi() % 2 == 1:
+				set_enabled(bool(randi()%2))

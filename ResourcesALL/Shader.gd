@@ -15,21 +15,35 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		var q_Shader : Shader = Shader.new()
-		
-		q_Shader.set_code("KOD")
-		
-		qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
-		qq += str(q_Shader.get_mode())
-		
-		qq += str(q_Shader.has_param( "Spoko" ))
-#		q_Shader.set_default_texture_param( "Rozwiazac", load("res://RES/Sprite" + str(randi()%4 + 1) + ".png") )
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+				
 			q_Shader.set_code("KOD")
 			
 			qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
 			qq += str(q_Shader.get_mode())
 			
 			qq += str(q_Shader.has_param( "Spoko" ))
-			q_Shader.set_default_texture_param( "Rozwiazac", load("res://RES/Sprite" + str(randi()%4 + 1) + ".png") )
-		
+	#		q_Shader.set_default_texture_param( "Rozwiazac", load("res://RES/Sprite" + str(randi()%4 + 1) + ".png") )
+			
+			if Autoload.WRONG_BUGS:
+				q_Shader.set_code("KOD")
+				
+				qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
+				qq += str(q_Shader.get_mode())
+				
+				qq += str(q_Shader.has_param( "Spoko" ))
+				q_Shader.set_default_texture_param( "Rozwiazac", load("res://RES/Sprite" + str(randi()%4 + 1) + ".png") )
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_Shader.set_code("KOD")
+				
+			if randi() % 2 == 1:
+				qq += str(q_Shader.get_default_texture_param( "Cieniowanie" ))
+			if randi() % 2 == 1:
+				qq += str(q_Shader.get_mode())
+				
+			if randi() % 2 == 1:
+				qq += str(q_Shader.has_param( "Spoko" ))
+			if randi() % 2 == 1:
+				q_Shader.set_default_texture_param( "Rozwiazac", load("res://RES/Sprite" + str(randi()%4 + 1) + ".png") )

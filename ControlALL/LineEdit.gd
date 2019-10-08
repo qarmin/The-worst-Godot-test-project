@@ -42,26 +42,26 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_text(str(randf()))
-			set_align(randi() % 1000 - 500)
-			set_max_length(randi() % 1000 - 500)
+			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_max_length(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_editable(bool(randi()%2))
 			set_secret(bool(randi()%2))
 			set_secret_character(str(randi()%10))
 			set_expand_to_text_length(bool(randi()%2))
-			set_focus_mode(randi() % 1000 - 500)
+			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_context_menu_enabled(bool(randi()%2))
 			set_clear_button_enabled(bool(randi()%2))
 			set_placeholder(str(randf()))
-			set_placeholder_alpha(randf() * 1000 - 500)
+			set_placeholder_alpha(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			cursor_set_blink_enabled(bool(randi()%2))
-			cursor_set_blink_speed(randf() * 1000 - 500)
-			set_cursor_position(randi() % 1000 - 500)
+			cursor_set_blink_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_cursor_position(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 			append_at_cursor(str(randf()))
 			deselect()
 			qq += str(get_menu())
-			qq += str(menu_option(randi() % 1000 - 500))#HMMM A LITTLE TOO SLOW
-			select(randi() % 1000 - 500,randi() % 1000 - 500)
+			qq += str(menu_option(randi() % Autoload.RANGE - Autoload.RANGE / 2))#HMMM A LITTLE TOO SLOW
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			select_all()
 			
 			clear()
@@ -70,9 +70,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(randf()))
 		if randi() % 2 == 1:
-			set_align(randi() % 1000 - 500)
+			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_max_length(randi() % 1000 - 500)
+			set_max_length(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_editable(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -82,7 +82,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_expand_to_text_length(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_focus_mode(randi() % 1000 - 500)
+			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_context_menu_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -90,13 +90,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_placeholder(str(randf()))
 		if randi() % 2 == 1:
-			set_placeholder_alpha(randf() * 1000 - 500)
+			set_placeholder_alpha(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			cursor_set_blink_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			cursor_set_blink_speed(randf() * 1000 - 500)
+			cursor_set_blink_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_cursor_position(randi() % 1000 - 500)
+			set_cursor_position(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 		if randi() % 2 == 1:
 			append_at_cursor(str(randf()))
@@ -105,9 +105,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_menu())
 		if randi() % 2 == 1:
-			qq += str(menu_option(randi() % 1000 - 500))#HMMM A LITTLE TOO SLOW
+			qq += str(menu_option(randi() % Autoload.RANGE - Autoload.RANGE / 2))#HMMM A LITTLE TOO SLOW
 		if randi() % 2 == 1:
-			select(randi() % 1000 - 500,randi() % 1000 - 500)
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			select_all()
 			

@@ -70,55 +70,55 @@ func _process(delta) -> void:
 		clear()
 		
 		if Autoload.WRONG_BUGS:
-			set_select_mode(randi() % 1000 - 500)
+			set_select_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_allow_reselect(bool(randi()%2))
 			set_allow_rmb_select(bool(randi()%2))
-			set_max_text_lines(randi() % 1000 - 500)
+			set_max_text_lines(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_auto_height(bool(randi()%2))
-			set_max_columns(randi() % 1000 - 500)
+			set_max_columns(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_same_column_width(bool(randi()%2))
-			set_fixed_column_width(randi() % 1000 - 500)
-			set_icon_mode(randi() % 1000 - 500)
-			set_icon_scale(randf() * 1000 - 500)
-			set_fixed_icon_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_fixed_column_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_icon_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_icon_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_fixed_icon_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			add_icon_item(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
-			add_item(str(randi() % 1000 - 500),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
 			ensure_current_is_visible()
-			qq += str(get_item_at_position(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2)))
+			qq += str(get_item_at_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),bool(randi()%2)))
 			qq += str(get_item_count())
-			qq += str(get_item_custom_bg_color(randi() % 1000 - 500))
-			qq += str(get_item_custom_fg_color(randi() % 1000 - 500))
-			qq += str(get_item_icon(randi() % 1000 - 500))
-			qq += str(get_item_icon_modulate(randi() % 1000 - 500))
-			qq += str(get_item_icon_region(randi() % 1000 - 500))
-			qq += str(get_item_metadata(randi() % 1000 - 500))
-			qq += str(get_item_text(randi() % 1000 - 500))
-			qq += str(get_item_tooltip(randi() % 1000 - 500))
+			qq += str(get_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(get_selected_items())
 			qq += str(get_v_scroll())
 			qq += str(is_anything_selected())
-			qq += str(is_item_disabled(randi() % 1000 - 500))
-			qq += str(is_item_icon_transposed(randi() % 1000 - 500))
-			qq += str(is_item_selectable(randi() % 1000 - 500))
-			qq += str(is_item_tooltip_enabled(randi() % 1000 - 500))
-			qq += str(is_selected(randi() % 1000 - 500))
-			move_item(randi() % 1000 - 500,randi() % 1000 - 500)
-			remove_item(randi() % 1000 - 500)
-			select(randi() % 1000 - 500,bool(randi()%2))
-			set_item_custom_bg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
-			set_item_custom_fg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
-			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
-			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
-			set_item_icon_modulate(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
-			set_item_icon_region(randi() % 1000 - 500,Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
-			set_item_icon_transposed(randi() % 1000 - 500,bool(randi()%2))
-			set_item_metadata(randi() % 1000 - 500,popup_temp)
-			set_item_selectable(randi() % 1000 - 500,bool(randi()%2))
-			set_item_text(randi() % 1000 - 500,str(bool(randi()%2)))
-			set_item_tooltip(randi() % 1000 - 500,str(bool(randi()%2)))
-			set_item_tooltip_enabled(randi() % 1000 - 500,bool(randi()%2))
+			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_selected(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			move_item(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+			set_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+			set_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2,Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,popup_temp)
+			set_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
+			set_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
+			set_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			sort_items_by_text()
-			unselect(randi() % 1000 - 500)
+			unselect(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			unselect_all()
 			clear()
 			
@@ -130,53 +130,53 @@ func _process(delta) -> void:
 		var popup_temp : Popup = Popup.new()
 		
 		if randi() % 2 == 1:
-			set_select_mode(randi() % 1000 - 500)
+			set_select_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_allow_reselect(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_allow_rmb_select(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_max_text_lines(randi() % 1000 - 500)
+			set_max_text_lines(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_auto_height(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_max_columns(randi() % 1000 - 500)
+			set_max_columns(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_same_column_width(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_fixed_column_width(randi() % 1000 - 500)
+			set_fixed_column_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_icon_mode(randi() % 1000 - 500)
+			set_icon_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_icon_scale(randf() * 1000 - 500)
+			set_icon_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_fixed_icon_size(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
+			set_fixed_icon_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			add_icon_item(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
 		if randi() % 2 == 1:
-			add_item(str(randi() % 1000 - 500),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
 		if randi() % 2 == 1:
 			ensure_current_is_visible()
 		if randi() % 2 == 1:
-			qq += str(get_item_at_position(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),bool(randi()%2)))
+			qq += str(get_item_at_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),bool(randi()%2)))
 		if randi() % 2 == 1:
 			qq += str(get_item_count())
 		if randi() % 2 == 1:
-			qq += str(get_item_custom_bg_color(randi() % 1000 - 500))
+			qq += str(get_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_custom_fg_color(randi() % 1000 - 500))
+			qq += str(get_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_icon(randi() % 1000 - 500))
+			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_icon_modulate(randi() % 1000 - 500))
+			qq += str(get_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_icon_region(randi() % 1000 - 500))
+			qq += str(get_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_metadata(randi() % 1000 - 500))
+			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_text(randi() % 1000 - 500))
+			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(get_item_tooltip(randi() % 1000 - 500))
+			qq += str(get_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(get_selected_items())
 		if randi() % 2 == 1:
@@ -184,49 +184,49 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_anything_selected())
 		if randi() % 2 == 1:
-			qq += str(is_item_disabled(randi() % 1000 - 500))
+			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_item_icon_transposed(randi() % 1000 - 500))
+			qq += str(is_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_item_selectable(randi() % 1000 - 500))
+			qq += str(is_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_item_tooltip_enabled(randi() % 1000 - 500))
+			qq += str(is_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_selected(randi() % 1000 - 500))
+			qq += str(is_selected(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			move_item(randi() % 1000 - 500,randi() % 1000 - 500)
+			move_item(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			remove_item(randi() % 1000 - 500)
+			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			select(randi() % 1000 - 500,bool(randi()%2))
+			select(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_custom_bg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+			set_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_item_custom_fg_color(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+			set_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_item_disabled(randi() % 1000 - 500,bool(randi()%2))
+			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_icon(randi() % 1000 - 500,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
-			set_item_icon_modulate(randi() % 1000 - 500,Color(randf(),randf(),randf(),randf()))
+			set_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_item_icon_region(randi() % 1000 - 500,Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
+			set_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2,Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 		if randi() % 2 == 1:
-			set_item_icon_transposed(randi() % 1000 - 500,bool(randi()%2))
+			set_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_metadata(randi() % 1000 - 500,popup_temp)
+			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,popup_temp)
 		if randi() % 2 == 1:
-			set_item_selectable(randi() % 1000 - 500,bool(randi()%2))
+			set_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_text(randi() % 1000 - 500,str(bool(randi()%2)))
+			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
 		if randi() % 2 == 1:
-			set_item_tooltip(randi() % 1000 - 500,str(bool(randi()%2)))
+			set_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
 		if randi() % 2 == 1:
-			set_item_tooltip_enabled(randi() % 1000 - 500,bool(randi()%2))
+			set_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
 			sort_items_by_text()
 		if randi() % 2 == 1:
-			unselect(randi() % 1000 - 500)
+			unselect(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			unselect_all()
 		if randi() % 2 == 1:

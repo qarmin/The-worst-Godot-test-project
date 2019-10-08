@@ -13,50 +13,51 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set("params/bias",randf() * 50)
-		set("angular_limit/enable",bool(randi()%2))
-		set("angular_limit/upper",randf() * 50)
-		set("angular_limit/lower",randf() * 50)
-		set("angular_limit/bias",randf() * 50)
-		set("angular_limit/softness",randf() * 50)
-		set("angular_limit/relaxation",randf() * 50)
-		set("motor/enable",bool(randi()%2))
-		set("motor/target_velocity",randf() * 50)
-		set("motor/max_impulse",randf() * 50)
-		
-		
-		
-		if Autoload.WRONG_BUGS:
-		
-			set("params/bias",randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set("params/bias",randf() * 50)
 			set("angular_limit/enable",bool(randi()%2))
-			set("angular_limit/upper",randf() * 1000 - 500)
-			set("angular_limit/lower",randf() * 1000 - 500)
-			set("angular_limit/bias",randf() * 1000 - 500)
-			set("angular_limit/softness",randf() * 1000 - 500)
-			set("angular_limit/relaxation",randf() * 1000 - 500)
+			set("angular_limit/upper",randf() * 50)
+			set("angular_limit/lower",randf() * 50)
+			set("angular_limit/bias",randf() * 50)
+			set("angular_limit/softness",randf() * 50)
+			set("angular_limit/relaxation",randf() * 50)
 			set("motor/enable",bool(randi()%2))
-			set("motor/target_velocity",randf() * 1000 - 500)
-			set("motor/max_impulse",randf() * 1000 - 500)
-	else: #RANDI
-		if randi() % 2 == 1:
-			set("params/bias",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/enable",bool(randi()%2))
-		if randi() % 2 == 1:
-			set("angular_limit/upper",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/lower",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/bias",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/softness",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("angular_limit/relaxation",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("motor/enable",bool(randi()%2))
-		if randi() % 2 == 1:
-			set("motor/target_velocity",randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set("motor/max_impulse",randf() * 1000 - 500)
+			set("motor/target_velocity",randf() * 50)
+			set("motor/max_impulse",randf() * 50)
+			
+			
+			
+			if Autoload.WRONG_BUGS:
+			
+				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/enable",bool(randi()%2))
+				set("angular_limit/upper",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/lower",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/relaxation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("motor/enable",bool(randi()%2))
+				set("motor/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("motor/max_impulse",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		else: #RANDI
+			if randi() % 2 == 1:
+				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/enable",bool(randi()%2))
+			if randi() % 2 == 1:
+				set("angular_limit/upper",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/lower",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("angular_limit/relaxation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("motor/enable",bool(randi()%2))
+			if randi() % 2 == 1:
+				set("motor/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set("motor/max_impulse",randf() * Autoload.RANGE - Autoload.RANGE / 2)

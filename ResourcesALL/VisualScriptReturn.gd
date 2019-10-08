@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualScriptReturn : VisualScriptReturn = VisualScriptReturn.new()
-		
-		q_VisualScriptReturn.set_enable_return_value(bool(randi()%2))
-		q_VisualScriptReturn.set_return_type(randi()%50)
-		
-		if Autoload.WRONG_BUGS:
+			var q_VisualScriptReturn : VisualScriptReturn = VisualScriptReturn.new()
+			
 			q_VisualScriptReturn.set_enable_return_value(bool(randi()%2))
-			q_VisualScriptReturn.set_return_type(randi() % 1000 - 500)
+			q_VisualScriptReturn.set_return_type(randi()%50)
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptReturn.set_enable_return_value(bool(randi()%2))
+				q_VisualScriptReturn.set_return_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)

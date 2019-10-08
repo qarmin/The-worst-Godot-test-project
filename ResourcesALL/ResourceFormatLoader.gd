@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_ResourceFormatLoader : ResourceFormatLoader = ResourceFormatLoader.new()
 		
@@ -22,6 +24,6 @@ func _process(delta) -> void:
 #		q_ResourceFormatLoader.handles_type( "Przekroczyć" )
 #		q_ResourceFormatLoader.load( "res://Groźny.txt", "res://Uspokoić.png" )
 #		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txt", "Pojawoia" )
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

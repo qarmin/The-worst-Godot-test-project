@@ -4,6 +4,8 @@ randf() * 1000 - 500
 Vector2(randf() * 1000 - 500, randf() * 1000 - 500)
 Vector3(randf() * 1000 - 500, randf() * 1000 - 500, randf() * 1000 - 500)
 
+randi() % Autoload.RANGE - Autoload.RANGE / 2
+randf() * Autoload.RANGE - Autoload.RANGE / 2
 
 Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 
@@ -36,5 +38,9 @@ var qq : String = ""
 qq += str(
 qq = qq
 
-	else: #RANDI
-		if randi() % 2 == 1:
+		else: #RANDI
+			if randi() % 2 == 1:
+
+	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:

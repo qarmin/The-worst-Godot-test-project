@@ -13,21 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_StreamPeerBuffer : StreamPeerBuffer = StreamPeerBuffer.new()
-		
-		q_StreamPeerBuffer.set_data_array(PoolByteArray([11,124,1241,24,21,214,12,11]))
-		
-		q_StreamPeerBuffer.clear()
-		qq += str(q_StreamPeerBuffer.duplicate())
-		
-		qq += str(q_StreamPeerBuffer.get_position())
-		qq += str(q_StreamPeerBuffer.get_size())
-		
-		q_StreamPeerBuffer.resize( randi()%50)
-		q_StreamPeerBuffer.seek( 0 )
-		
-		if Autoload.WRONG_BUGS:
+			var q_StreamPeerBuffer : StreamPeerBuffer = StreamPeerBuffer.new()
+			
 			q_StreamPeerBuffer.set_data_array(PoolByteArray([11,124,1241,24,21,214,12,11]))
 			
 			q_StreamPeerBuffer.clear()
@@ -36,5 +25,17 @@ func _process(delta) -> void:
 			qq += str(q_StreamPeerBuffer.get_position())
 			qq += str(q_StreamPeerBuffer.get_size())
 			
-			q_StreamPeerBuffer.resize( randi() % 1000 - 500)
-			q_StreamPeerBuffer.seek( randi() % 1000 - 500 )
+			q_StreamPeerBuffer.resize( randi()%50)
+			q_StreamPeerBuffer.seek( 0 )
+			
+			if Autoload.WRONG_BUGS:
+				q_StreamPeerBuffer.set_data_array(PoolByteArray([11,124,1241,24,21,214,12,11]))
+				
+				q_StreamPeerBuffer.clear()
+				qq += str(q_StreamPeerBuffer.duplicate())
+				
+				qq += str(q_StreamPeerBuffer.get_position())
+				qq += str(q_StreamPeerBuffer.get_size())
+				
+				q_StreamPeerBuffer.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_StreamPeerBuffer.seek( randi() % Autoload.RANGE - Autoload.RANGE / 2 )

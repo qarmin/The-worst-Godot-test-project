@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualShaderNodeCubeMap : VisualShaderNodeCubeMap = VisualShaderNodeCubeMap.new()
-		
-		q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
-		q_VisualShaderNodeCubeMap.set_texture_type(randi() % 3) #TextureType
-		
-		if Autoload.WRONG_BUGS:
+			var q_VisualShaderNodeCubeMap : VisualShaderNodeCubeMap = VisualShaderNodeCubeMap.new()
+			
 			q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
-			q_VisualShaderNodeCubeMap.set_texture_type(randi() % 1000 - 500) #TextureType
+			q_VisualShaderNodeCubeMap.set_texture_type(randi() % 3) #TextureType
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
+				q_VisualShaderNodeCubeMap.set_texture_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) #TextureType

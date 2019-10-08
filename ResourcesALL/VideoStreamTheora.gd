@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VideoStreamTheora : VideoStreamTheora = VideoStreamTheora.new()
-		
-		qq += str(q_VideoStreamTheora.get_file())
-		q_VideoStreamTheora.set_file( "Pewnosc" )
-		
-		if Autoload.WRONG_BUGS:
+			var q_VideoStreamTheora : VideoStreamTheora = VideoStreamTheora.new()
+			
 			qq += str(q_VideoStreamTheora.get_file())
 			q_VideoStreamTheora.set_file( "Pewnosc" )
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_VideoStreamTheora.get_file())
+				q_VideoStreamTheora.set_file( "Pewnosc" )

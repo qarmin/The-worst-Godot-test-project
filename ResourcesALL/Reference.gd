@@ -12,16 +12,26 @@ func _process(delta) -> void:
 	qq = qq
 	
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		var q_Reference : Reference = Reference.new()
 		
-#		var q_Reference : Reference = Reference.new()
-#
-#		qq += str(q_Reference.init_ref())
-#		qq += str(q_Reference.reference())
-#		qq += str(q_Reference.unreference())
-#
-#		if Autoload.WRONG_BUGS:
-#
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
+
 #			qq += str(q_Reference.init_ref())
 #			qq += str(q_Reference.reference())
 #			qq += str(q_Reference.unreference())
+#
+#			if Autoload.WRONG_BUGS:
+#
+#				qq += str(q_Reference.init_ref())
+#				qq += str(q_Reference.reference())
+#				qq += str(q_Reference.unreference())
+#
+#		else: #RANDI
+#			if randi() % 2 == 1:
+#				qq += str(q_Reference.init_ref())
+#			if randi() % 2 == 1:
+#				qq += str(q_Reference.reference())
+#			if randi() % 2 == 1:
+#				qq += str(q_Reference.unreference())

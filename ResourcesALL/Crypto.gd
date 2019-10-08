@@ -13,15 +13,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_Crypto : Crypto = Crypto.new()
-		
-		qq += str(q_Crypto.generate_random_bytes(randi()%50))
-		#qq += str(q_Crypto.generate_rsa(randi()%50))
-		#qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
-		
-		
-		if Autoload.WRONG_BUGS:
-			qq += str(q_Crypto.generate_random_bytes(randi() % 1000 - 500))
-			qq += str(q_Crypto.generate_rsa(randi() % 1000 - 500))
-			qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
+			var q_Crypto : Crypto = Crypto.new()
+			
+			qq += str(q_Crypto.generate_random_bytes(randi()%50))
+			#qq += str(q_Crypto.generate_rsa(randi()%50))
+			#qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
+			
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_Crypto.generate_random_bytes(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_Crypto.generate_rsa(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))

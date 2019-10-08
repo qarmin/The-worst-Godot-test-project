@@ -25,21 +25,21 @@ func _process(delta) -> void:
 		#register_text_enter(
 		
 		if Autoload.WRONG_BUGS:
-			set_text(str(randi() % 1000 - 500))
+			set_text(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			set_hide_on_ok(bool(randi()%2))
-			#LEAK qq += str(add_button(str(randi() % 1000 - 500), bool(randi()%2)))
-			#LEAK qq += str(add_cancel(str(randi() % 1000 - 500)))
+			#LEAK qq += str(add_button(str(randi() % Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2)))
+			#LEAK qq += str(add_cancel(str(randi() % Autoload.RANGE - Autoload.RANGE / 2)))
 			qq += str(get_label())
 			qq += str(get_ok())
 			register_text_enter(self)
 
 	else: #RANDI
 		if randi() % 2 == 1:
-			set_text(str(randi() % 1000 - 500))
+			set_text(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			set_hide_on_ok(bool(randi()%2))
-			#LEAK qq += str(add_button(str(randi() % 1000 - 500), bool(randi()%2)))
-			#LEAK qq += str(add_cancel(str(randi() % 1000 - 500)))
+			#LEAK qq += str(add_button(str(randi() % Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2)))
+			#LEAK qq += str(add_cancel(str(randi() % Autoload.RANGE - Autoload.RANGE / 2)))
 		if randi() % 2 == 1:
 			qq += str(get_label())
 		if randi() % 2 == 1:

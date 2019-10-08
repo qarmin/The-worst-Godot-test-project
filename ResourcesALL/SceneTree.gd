@@ -13,6 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
+			pass
 		
 #		var q_SceneTree : SceneTree = SceneTree.new()
 #
@@ -69,6 +71,6 @@ func _process(delta) -> void:
 #		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Vector2(randf() * 50,randf() * 50), randf() * 50 )#StretchMode, StretchAspect
 #
 #		q_SceneTree.queue_delete(self)
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

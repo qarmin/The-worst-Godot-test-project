@@ -13,12 +13,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_VisualShaderNodeTextureUniform : VisualShaderNodeTextureUniform = VisualShaderNodeTextureUniform.new()
-		
-		q_VisualShaderNodeTextureUniform.set_texture_type(randi() % 4) # Texture
-		q_VisualShaderNodeTextureUniform.set_color_default(randi() % 2) # ColorDefault
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualShaderNodeTextureUniform.set_texture_type(randi() % 1000 - 500) # Texture
-			q_VisualShaderNodeTextureUniform.set_color_default(randi() % 1000 - 500) # ColorDefault
+			var q_VisualShaderNodeTextureUniform : VisualShaderNodeTextureUniform = VisualShaderNodeTextureUniform.new()
+			
+			q_VisualShaderNodeTextureUniform.set_texture_type(randi() % 4) # Texture
+			q_VisualShaderNodeTextureUniform.set_color_default(randi() % 2) # ColorDefault
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeTextureUniform.set_texture_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Texture
+				q_VisualShaderNodeTextureUniform.set_color_default(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ColorDefault

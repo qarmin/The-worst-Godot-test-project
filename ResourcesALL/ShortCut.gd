@@ -13,20 +13,21 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_ShortCut : ShortCut = ShortCut.new()
-		
-		#q_ShortCut.set_shortcut(InputEvent.new())
-		
-		qq += str(q_ShortCut.get_as_text())
-		
-		#qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
-		qq += str(q_ShortCut.is_valid())
-		
-		if Autoload.WRONG_BUGS:
-			q_ShortCut.set_shortcut(InputEvent.new())
+			var q_ShortCut : ShortCut = ShortCut.new()
+			
+			#q_ShortCut.set_shortcut(InputEvent.new())
 			
 			qq += str(q_ShortCut.get_as_text())
 			
-			qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+			#qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
 			qq += str(q_ShortCut.is_valid())
+			
+			if Autoload.WRONG_BUGS:
+				q_ShortCut.set_shortcut(InputEvent.new())
+				
+				qq += str(q_ShortCut.get_as_text())
+				
+				qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+				qq += str(q_ShortCut.is_valid())

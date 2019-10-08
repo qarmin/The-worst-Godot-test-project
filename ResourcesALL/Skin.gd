@@ -13,29 +13,30 @@ func _process(delta) ->  void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_Skin : Skin = Skin.new()
-		
-		q_Skin.add_bind(randi()%50, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
-		#q_Skin.clear_binds() TO END
-		#qq += str(q_Skin.get_bind_bone(randi()%50))
-		qq += str(q_Skin.get_bind_count())
-		#qq += str(q_Skin.get_bind_pose(randi()%50))
-		#q_Skin.set_bind_bone(randi()%50, randi()%50)
-		q_Skin.set_bind_count(randi()%50) 
-		#q_Skin.set_bind_pose(randi()%50, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
-		
-		q_Skin.clear_binds()# CLEAR
-
-		
-		if Autoload.WRONG_BUGS:
-			q_Skin.add_bind(randi() % 1000 - 500, Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
+		if !Autoload.RANDI:
+			
+			var q_Skin : Skin = Skin.new()
+			
+			q_Skin.add_bind(randi()%50, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 			#q_Skin.clear_binds() TO END
-			qq += str(q_Skin.get_bind_bone(randi() % 1000 - 500)) 
+			#qq += str(q_Skin.get_bind_bone(randi()%50))
 			qq += str(q_Skin.get_bind_count())
-			qq += str(q_Skin.get_bind_pose(randi() % 1000 - 500))
-			q_Skin.set_bind_bone(randi() % 1000 - 500, randi() % 1000 - 500)
-			q_Skin.set_bind_count(randi() % 1000 - 500) 
-			q_Skin.set_bind_pose(randi() % 1000 - 500, Transform(Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500),Vector3(randf() * 1000 - 500,randf() * 1000 - 500,randf() * 1000 - 500)))
-
+			#qq += str(q_Skin.get_bind_pose(randi()%50))
+			#q_Skin.set_bind_bone(randi()%50, randi()%50)
+			q_Skin.set_bind_count(randi()%50) 
+			#q_Skin.set_bind_pose(randi()%50, Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
+			
 			q_Skin.clear_binds()# CLEAR
+	
+			
+			if Autoload.WRONG_BUGS:
+				q_Skin.add_bind(randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				#q_Skin.clear_binds() TO END
+				qq += str(q_Skin.get_bind_bone(randi() % Autoload.RANGE - Autoload.RANGE / 2)) 
+				qq += str(q_Skin.get_bind_count())
+				qq += str(q_Skin.get_bind_pose(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				q_Skin.set_bind_bone(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_Skin.set_bind_count(randi() % Autoload.RANGE - Autoload.RANGE / 2) 
+				q_Skin.set_bind_pose(randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+	
+				q_Skin.clear_binds()# CLEAR

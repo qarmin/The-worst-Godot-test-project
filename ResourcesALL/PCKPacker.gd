@@ -13,14 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if !Autoload.RANDI:
 		
-		var q_PCKPacker : PCKPacker = PCKPacker.new()
-		
-		qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
-		#qq += str(q_PCKPacker.flush( bool(randi()%2)))
-		qq += str(q_PCKPacker.pck_start( "Krzywy",  randi()%50))
-		
-		if Autoload.WRONG_BUGS:
+			var q_PCKPacker : PCKPacker = PCKPacker.new()
+			
 			qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
-			qq += str(q_PCKPacker.flush( bool(randi()%2)))
-			qq += str(q_PCKPacker.pck_start( "Krzywy",  randi() % 1000 - 500))
+			#qq += str(q_PCKPacker.flush( bool(randi()%2)))
+			qq += str(q_PCKPacker.pck_start( "Krzywy",  randi()%50))
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
+				qq += str(q_PCKPacker.flush( bool(randi()%2)))
+				qq += str(q_PCKPacker.pck_start( "Krzywy",  randi() % Autoload.RANGE - Autoload.RANGE / 2))

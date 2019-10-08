@@ -11,51 +11,51 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		#set_bitmask(load("res://RES/Bitmap.tres"))
-		set_shape(load("res://RES/CircleShape2D.tres"))
-		set_shape_centered(bool(randi()%2))
-		set_shape_visible(bool(randi()%2))
-		set_passby_press(bool(randi()%2))
-		set_action(str(randi()%2412))
-		set_visibility_mode(randi()%2)
-		
-		qq += str(is_pressed())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
 			
 			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			set_bitmask(load("res://RES/Bitmap.tres"))
+			#set_bitmask(load("res://RES/Bitmap.tres"))
 			set_shape(load("res://RES/CircleShape2D.tres"))
 			set_shape_centered(bool(randi()%2))
 			set_shape_visible(bool(randi()%2))
 			set_passby_press(bool(randi()%2))
-			set_action(str(randi() % 1000 - 500))
-			set_visibility_mode(randi() % 1000 - 500)
+			set_action(str(randi()%2412))
+			set_visibility_mode(randi()%2)
 			
 			qq += str(is_pressed())
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		if randi() % 2 == 1:
-			set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-		if randi() % 2 == 1:
-			set_bitmask(load("res://RES/Bitmap.tres"))
-		if randi() % 2 == 1:
-			set_shape(load("res://RES/CircleShape2D.tres"))
-		if randi() % 2 == 1:
-			set_shape_centered(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_shape_visible(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_passby_press(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_action(str(randi() % 1000 - 500))
-		if randi() % 2 == 1:
-			set_visibility_mode(randi() % 1000 - 500)
+			
+			if Autoload.WRONG_BUGS:
+				
+				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_bitmask(load("res://RES/Bitmap.tres"))
+				set_shape(load("res://RES/CircleShape2D.tres"))
+				set_shape_centered(bool(randi()%2))
+				set_shape_visible(bool(randi()%2))
+				set_passby_press(bool(randi()%2))
+				set_action(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				set_visibility_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				
+				qq += str(is_pressed())
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			if randi() % 2 == 1:
+				set_texture_pressed(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			if randi() % 2 == 1:
+				set_bitmask(load("res://RES/Bitmap.tres"))
+			if randi() % 2 == 1:
+				set_shape(load("res://RES/CircleShape2D.tres"))
+			if randi() % 2 == 1:
+				set_shape_centered(bool(randi()%2))
+			if randi() % 2 == 1:
+				set_shape_visible(bool(randi()%2))
+			if randi() % 2 == 1:
+				set_passby_press(bool(randi()%2))
+			if randi() % 2 == 1:
+				set_action(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_visibility_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)

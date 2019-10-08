@@ -13,28 +13,29 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		if !Autoload.RANDI:
+			
 #		var q_TranslationServer : TranslationServer 
-		
-		TranslationServer.add_translation(Translation.new())
-		TranslationServer.clear()
-
-		qq += str(TranslationServer.get_loaded_locales())
-		qq += str(TranslationServer.get_locale())
-		qq += str(TranslationServer.get_locale_name("pl"))
-
-		TranslationServer.remove_translation(Translation.new())
-		TranslationServer.set_locale("pl")
-		qq += str(TranslationServer.translate("pls"))
-		
-		if Autoload.WRONG_BUGS:
-			TranslationServer.add_translation(load("res://RES/Translation.tres"))
+			
+			TranslationServer.add_translation(Translation.new())
 			TranslationServer.clear()
 	
 			qq += str(TranslationServer.get_loaded_locales())
 			qq += str(TranslationServer.get_locale())
 			qq += str(TranslationServer.get_locale_name("pl"))
 	
-			TranslationServer.remove_translation(load("res://RES/Translation.tres"))
+			TranslationServer.remove_translation(Translation.new())
 			TranslationServer.set_locale("pl")
 			qq += str(TranslationServer.translate("pls"))
+			
+			if Autoload.WRONG_BUGS:
+				TranslationServer.add_translation(load("res://RES/Translation.tres"))
+				TranslationServer.clear()
+		
+				qq += str(TranslationServer.get_loaded_locales())
+				qq += str(TranslationServer.get_locale())
+				qq += str(TranslationServer.get_locale_name("pl"))
+		
+				TranslationServer.remove_translation(load("res://RES/Translation.tres"))
+				TranslationServer.set_locale("pl")
+				qq += str(TranslationServer.translate("pls"))

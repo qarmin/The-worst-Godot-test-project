@@ -13,14 +13,23 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_InputEventScreenTouch : InputEventScreenTouch = InputEventScreenTouch.new()
-		
-		q_InputEventScreenTouch.set_index(randi()%50)
-		q_InputEventScreenTouch.set_position(Vector2(randf() * 50,randf() * 50))
-		q_InputEventScreenTouch.set_pressed(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			q_InputEventScreenTouch.set_index(randi() % 1000 - 500)
-			q_InputEventScreenTouch.set_position(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+		if !Autoload.RANDI:
+			
+			q_InputEventScreenTouch.set_index(randi()%50)
+			q_InputEventScreenTouch.set_position(Vector2(randf() * 50,randf() * 50))
 			q_InputEventScreenTouch.set_pressed(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				q_InputEventScreenTouch.set_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_InputEventScreenTouch.set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				q_InputEventScreenTouch.set_pressed(bool(randi()%2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_InputEventScreenTouch.set_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_InputEventScreenTouch.set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_InputEventScreenTouch.set_pressed(bool(randi()%2))

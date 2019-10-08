@@ -13,12 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_ButtonGroup : ButtonGroup = ButtonGroup.new()
-		
-		qq += str(q_ButtonGroup.get_buttons())
-		qq += str(q_ButtonGroup.get_pressed_button())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			qq += str(q_ButtonGroup.get_buttons())
 			qq += str(q_ButtonGroup.get_pressed_button())
+			
+			if Autoload.WRONG_BUGS:
+				qq += str(q_ButtonGroup.get_buttons())
+				qq += str(q_ButtonGroup.get_pressed_button())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_ButtonGroup.get_buttons())
+			if randi() % 2 == 1:
+				qq += str(q_ButtonGroup.get_pressed_button())

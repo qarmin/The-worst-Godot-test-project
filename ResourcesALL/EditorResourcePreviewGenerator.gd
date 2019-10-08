@@ -13,7 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		if !Autoload.RANDI:
+			pass
 #		var q_EditorResourcePreviewGenerator : EditorResourcePreviewGenerator = EditorResourcePreviewGenerator.new()
 #
 #		q_EditorResourcePreviewGenerator.can_generate_small_preview()

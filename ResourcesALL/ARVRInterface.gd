@@ -13,7 +13,8 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		if !Autoload.RANDI:
+			pass
 #		var q_ARVRInterface : ARVRInterface = ARVRInterface.new()
 #
 #		q_ARVRInterface.set_is_primary(bool(randi()%2))

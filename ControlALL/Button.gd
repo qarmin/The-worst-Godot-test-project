@@ -46,16 +46,16 @@ func _process(delta) -> void:
 			set_button_icon(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_flat(bool(randi()%2))
 			set_clip_text(bool(randi()%2))
-			set_text_align(randi() % 1000 - 500)
+			set_text_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 			# BaseButton
 			set_disabled(bool(randi()%2))
 			set_toggle_mode(bool(randi()%2))
 			set_shortcut_in_tooltip(bool(randi()%2))
 			set_pressed(bool(randi()%2))
-			set_action_mode(randi() % 1000 - 500) #ActionMODE
-			set_button_mask(randi() % 1000 - 500)
-			set_enabled_focus_mode(randi() % 1000 - 500) #FocusMode
+			set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ActionMODE
+			set_button_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_enabled_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FocusMode
 			set_keep_pressed_outside(bool(randi()%2))
 			set_shortcut(ShortCut.new())
 			set_button_group(ButtonGroup.new())
@@ -75,7 +75,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_clip_text(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_text_align(randi() % 1000 - 500)
+			set_text_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
 			# BaseButton
 		if randi() % 2 == 1:
@@ -87,11 +87,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_action_mode(randi() % 1000 - 500) #ActionMODE
+			set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ActionMODE
 		if randi() % 2 == 1:
-			set_button_mask(randi() % 1000 - 500)
+			set_button_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_enabled_focus_mode(randi() % 1000 - 500) #FocusMode
+			set_enabled_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FocusMode
 		if randi() % 2 == 1:
 			set_keep_pressed_outside(bool(randi()%2))
 		if randi() % 2 == 1:

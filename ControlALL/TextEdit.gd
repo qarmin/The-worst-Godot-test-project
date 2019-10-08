@@ -95,31 +95,31 @@ func _process(delta) -> void:
 			set_override_selected_font_color(bool(randi()%2))
 			set_context_menu_enabled(bool(randi()%2))
 			set_smooth_scroll_enable(bool(randi()%2))
-			set_v_scroll_speed(randf() * 1000 - 500)
+			set_v_scroll_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			set_hiding_enabled(bool(randi()%2))
 			set_wrap_enabled(bool(randi()%2))
 			cursor_set_block_mode(bool(randi()%2))
 			cursor_set_blink_enabled(bool(randi()%2))
-			cursor_set_blink_speed(randf() * 1000 - 500)
+			cursor_set_blink_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			set_right_click_moves_caret(bool(randi()%2))
 			
 			add_color_region("aqwfqwfqw", "qascqw", Color(randf(),randf(),randf(),randf()),bool(randi()%2))
 			add_keyword_color("sffqwfasfasfqw", Color(randf(),randf(),randf(),randf()))
-			qq += str(can_fold(randi() % 1000 - 500))
+			qq += str(can_fold(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			clear_colors()
 			clear_undo_history()
 			copy()
 			qq += str(cursor_get_column())
 			qq += str(cursor_get_line())
-			cursor_set_column(randi() % 1000 - 500)
-			cursor_set_line(randi() % 1000 - 500)
+			cursor_set_column(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			cursor_set_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			cut()
 			deselect()
 			fold_all_lines()
-			fold_line(randi() % 1000 - 500)
+			fold_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			qq += str(get_breakpoints())
 			#qq += str(get_keyword_color("sfafq"))
-			qq += str(get_line(randi() % 1000 - 500))
+			qq += str(get_line(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(get_line_count())
 			qq += str(get_menu())
 			if is_selection_active():
@@ -130,16 +130,16 @@ func _process(delta) -> void:
 				qq += str(get_selection_to_line())
 			#qq += str(get_word_under_cursor())
 			qq += str(has_keyword_color("sfaqwffq"))
-			insert_text_at_cursor(str(randi() % 1000 - 500))
-			qq += str(is_folded(randi() % 1000 - 500))
-			qq += str(is_line_hidden(randi() % 1000 - 500))
+			insert_text_at_cursor(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_folded(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_line_hidden(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(is_selection_active())
 			#menu_option(randi() % MENU_MAX)
 			paste()
 			redo()
 			remove_breakpoints()
 			#qq += str(search("asf", randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
-			#select(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500)
+			#select(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			select_all()
 			set_line_as_hidden(get_line_count(),bool(randi()%2))
 			toggle_fold_line(get_line_count())
@@ -175,7 +175,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_smooth_scroll_enable(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_v_scroll_speed(randf() * 1000 - 500)
+			set_v_scroll_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_hiding_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -185,7 +185,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			cursor_set_blink_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			cursor_set_blink_speed(randf() * 1000 - 500)
+			cursor_set_blink_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			set_right_click_moves_caret(bool(randi()%2))
 			
@@ -194,7 +194,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_keyword_color("sffqwfasfasfqw", Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			qq += str(can_fold(randi() % 1000 - 500))
+			qq += str(can_fold(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			clear_colors()
 		if randi() % 2 == 1:
@@ -206,9 +206,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(cursor_get_line())
 		if randi() % 2 == 1:
-			cursor_set_column(randi() % 1000 - 500)
+			cursor_set_column(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			cursor_set_line(randi() % 1000 - 500)
+			cursor_set_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			cut()
 		if randi() % 2 == 1:
@@ -216,13 +216,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			fold_all_lines()
 		if randi() % 2 == 1:
-			fold_line(randi() % 1000 - 500)
+			fold_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			qq += str(get_breakpoints())
 		if randi() % 2 == 1:
 			qq += str(get_keyword_color("sfafq"))
 		if randi() % 2 == 1:
-			qq += str(get_line(randi() % 1000 - 500))
+			qq += str(get_line(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(get_line_count())
 		if randi() % 2 == 1:
@@ -241,11 +241,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(has_keyword_color("sfaqwffq"))
 		if randi() % 2 == 1:
-			insert_text_at_cursor(str(randi() % 1000 - 500))
+			insert_text_at_cursor(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_folded(randi() % 1000 - 500))
+			qq += str(is_folded(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(is_line_hidden(randi() % 1000 - 500))
+			qq += str(is_line_hidden(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(is_selection_active())
 			#menu_option(randi() % MENU_MAX)
@@ -256,7 +256,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			remove_breakpoints()
 			#qq += str(search("asf", randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
-			#select(randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500,randi() % 1000 - 500)
+			#select(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			select_all()
 		if randi() % 2 == 1:

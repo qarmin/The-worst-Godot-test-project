@@ -13,50 +13,51 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_length(randf() * 50)
-		set_rest_length(randf() * 50)
-		set_stiffness(randf() * 50)
-		set_damping(randf() * 16)
-		set_exclude_nodes_from_collision(bool(randi()%2))
-		
-		# Joint2D
-		set_node_a("../RigidBody2D")
-		set_node_b("../KinematicBody2D")
-		set_bias(randf() * 50)
-		set_exclude_nodes_from_collision(bool(randi()%2))
-		
-		
-		if Autoload.WRONG_BUGS:
-			set_length(randf() * 1000 - 500)
-			set_rest_length(randf() * 1000 - 500)
-			set_stiffness(randf() * 1000 - 500)
-			set_damping(randf() * 1000 - 500)
+		if !Autoload.RANDI:
+			
+			set_length(randf() * 50)
+			set_rest_length(randf() * 50)
+			set_stiffness(randf() * 50)
+			set_damping(randf() * 16)
 			set_exclude_nodes_from_collision(bool(randi()%2))
 			
 			# Joint2D
-			set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
-			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
-			set_bias(randf() * 1000 - 500)
-			set_exclude_nodes_from_collision(bool(randi()%2))
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_length(randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set_rest_length(randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set_stiffness(randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set_damping(randf() * 1000 - 500)
-		if randi() % 2 == 1:
+			set_node_a("../RigidBody2D")
+			set_node_b("../KinematicBody2D")
+			set_bias(randf() * 50)
 			set_exclude_nodes_from_collision(bool(randi()%2))
 			
-			# Joint2D
-		if randi() % 2 == 1:
-			set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
-		if randi() % 2 == 1:
-			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
-		if randi() % 2 == 1:
-			set_bias(randf() * 1000 - 500)
-		if randi() % 2 == 1:
-			set_exclude_nodes_from_collision(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_rest_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_stiffness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_damping(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_exclude_nodes_from_collision(bool(randi()%2))
+				
+				# Joint2D
+				set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+				set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_exclude_nodes_from_collision(bool(randi()%2))
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_rest_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_stiffness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_damping(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_exclude_nodes_from_collision(bool(randi()%2))
+				
+				# Joint2D
+			if randi() % 2 == 1:
+				set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+			if randi() % 2 == 1:
+				set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+			if randi() % 2 == 1:
+				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				set_exclude_nodes_from_collision(bool(randi()%2))

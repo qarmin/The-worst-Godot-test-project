@@ -23,9 +23,9 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			set_exclusive(bool(randi()%2))
-			popup(Rect2(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),Vector2(randf() * 1000 - 500, randf() * 1000 - 500)))
-			popup_centered(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			popup_centered_clamped(Vector2(randf() * 1000 - 500, randf() * 1000 - 500),randf())
-			popup_centered_minsize(Vector2(randf() * 1000 - 500, randf() * 1000 - 500))
-			popup_centered_ratio(randf() * 1000 - 500)
+			popup(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			popup_centered(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			popup_centered_clamped(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),randf())
+			popup_centered_minsize(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			popup_centered_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			

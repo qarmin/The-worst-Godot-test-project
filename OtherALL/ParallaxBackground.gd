@@ -14,18 +14,33 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_scroll_offset(Vector2(randf() * 50,randf() * 50))
-		set_scroll_base_offset(Vector2(randf() * 50,randf() * 50))
-		set_scroll_base_scale(Vector2(randf() * 50,randf() * 50))
-		set_limit_begin(Vector2(randf() * 50,randf() * 50))
-		set_limit_end(Vector2(randf() * 50,randf() * 50))
-		set_ignore_camera_zoom(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			set_scroll_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			set_scroll_base_offset(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			set_scroll_base_scale(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			set_limit_begin(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
-			set_limit_end(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+		if !Autoload.RANDI:
+			
+			set_scroll_offset(Vector2(randf() * 50,randf() * 50))
+			set_scroll_base_offset(Vector2(randf() * 50,randf() * 50))
+			set_scroll_base_scale(Vector2(randf() * 50,randf() * 50))
+			set_limit_begin(Vector2(randf() * 50,randf() * 50))
+			set_limit_end(Vector2(randf() * 50,randf() * 50))
 			set_ignore_camera_zoom(bool(randi()%2))
+			
+			if Autoload.WRONG_BUGS:
+				set_scroll_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_scroll_base_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_scroll_base_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_limit_begin(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_limit_end(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				set_ignore_camera_zoom(bool(randi()%2))
+	
+		else: #RANDI
+			if randi() % 2 == 1:
+				set_scroll_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_scroll_base_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_scroll_base_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_limit_begin(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_limit_end(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				set_ignore_camera_zoom(bool(randi()%2))

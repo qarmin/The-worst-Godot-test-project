@@ -13,14 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		var q_VisualScriptComment : VisualScriptComment = VisualScriptComment.new()
-		
-		q_VisualScriptComment.set_title("Koń")
-		q_VisualScriptComment.set_description("Zwierzę")
-		q_VisualScriptComment.set_size(Vector2(randf() * 50,randf() * 50))
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
+			var q_VisualScriptComment : VisualScriptComment = VisualScriptComment.new()
+			
 			q_VisualScriptComment.set_title("Koń")
 			q_VisualScriptComment.set_description("Zwierzę")
-			q_VisualScriptComment.set_size(Vector2(randf() * 1000 - 500,randf() * 1000 - 500))
+			q_VisualScriptComment.set_size(Vector2(randf() * 50,randf() * 50))
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptComment.set_title("Koń")
+				q_VisualScriptComment.set_description("Zwierzę")
+				q_VisualScriptComment.set_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))

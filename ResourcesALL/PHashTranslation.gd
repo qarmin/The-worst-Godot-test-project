@@ -13,10 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+			
 		var q_PHashTranslation : PHashTranslation = PHashTranslation.new()
-		
-		q_PHashTranslation.generate( Translation.new())
-		
-		if Autoload.WRONG_BUGS:
+		if !Autoload.RANDI:
+			
 			q_PHashTranslation.generate( Translation.new())
+			
+			if Autoload.WRONG_BUGS:
+				q_PHashTranslation.generate( Translation.new())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_PHashTranslation.generate( Translation.new())
