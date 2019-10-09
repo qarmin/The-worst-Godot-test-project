@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_UPNPDevice : UPNPDevice = UPNPDevice.new()
+		var q_UPNPDevice : UPNPDevice = UPNPDevice.new()
+		if !Autoload.RANDI:
 			
 			q_UPNPDevice.set_description_url(str(randi()%50))
 			q_UPNPDevice.set_service_type(str(randi()%50))
@@ -40,4 +40,26 @@ func _process(delta) -> void:
 				qq += str(q_UPNPDevice.add_port_mapping( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, str(randi() % Autoload.RANGE - Autoload.RANGE / 2), str(randi() % Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 				qq += str(q_UPNPDevice.delete_port_mapping( randi() % Autoload.RANGE - Autoload.RANGE / 2, str(randi() % Autoload.RANGE - Autoload.RANGE / 2) ))
 				qq += str(q_UPNPDevice.is_valid_gateway())
+				qq += str(q_UPNPDevice.query_external_address())
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_description_url(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_service_type(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_igd_control_url(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_igd_service_type(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_igd_our_addr(str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				q_UPNPDevice.set_igd_status(randi() % Autoload.RANGE - Autoload.RANGE / 2)#IGD STATUS
+				
+			if randi() % 2 == 1:
+				qq += str(q_UPNPDevice.add_port_mapping( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, str(randi() % Autoload.RANGE - Autoload.RANGE / 2), str(randi() % Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			if randi() % 2 == 1:
+				qq += str(q_UPNPDevice.delete_port_mapping( randi() % Autoload.RANGE - Autoload.RANGE / 2, str(randi() % Autoload.RANGE - Autoload.RANGE / 2) ))
+			if randi() % 2 == 1:
+				qq += str(q_UPNPDevice.is_valid_gateway())
+			if randi() % 2 == 1:
 				qq += str(q_UPNPDevice.query_external_address())

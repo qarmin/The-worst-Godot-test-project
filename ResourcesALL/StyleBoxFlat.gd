@@ -13,7 +13,7 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		#BUGGG
 		var q_StyleBoxFlat : StyleBoxFlat = StyleBoxFlat.new()
 		if !Autoload.RANDI:
 			

@@ -73,7 +73,7 @@ func _process(delta) -> void:
 			#q_Image.resize_to_po2( bool(randi()%2))
 	
 			#qq += str(q_Image.rgbe_to_srgb())
-			#qq += str(q_Image.save_png( "res://lafar.png" ))
+			#qq += str(q_Image.save_png( "res://lafar" ))
 	
 			#q_Image.set_pixel( randi()%50, randi()%50,Color(randf(),randf(),randf(),randf()))
 			#q_Image.set_pixelv( Vector2(randf() * 50,randf() * 50),Color(randf(),randf(),randf(),randf()))
@@ -142,7 +142,7 @@ func _process(delta) -> void:
 				q_Image.resize_to_po2( bool(randi()%2))
 	
 				qq += str(q_Image.rgbe_to_srgb())
-				qq += str(q_Image.save_png( "res://lafar.png" ))
+				qq += str(q_Image.save_png( "res://lafar" ))
 	
 #				q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
 #				q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))
@@ -254,7 +254,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				qq += str(q_Image.rgbe_to_srgb())
 			if randi() % 2 == 1:
-				qq += str(q_Image.save_png( "res://lafar.png" ))
+				qq += str(q_Image.save_png( "res://lafar" ))
 	
 #			if randi() % 2 == 1:
 #				q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))

@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_PacketPeerStream : PacketPeerStream = PacketPeerStream.new()
+		var q_PacketPeerStream : PacketPeerStream = PacketPeerStream.new()
+		if !Autoload.RANDI:
 			
 			q_PacketPeerStream.set_input_buffer_max_size(randi()%50)
 			q_PacketPeerStream.set_output_buffer_max_size(randi()%50)
@@ -24,4 +24,12 @@ func _process(delta) -> void:
 			if Autoload.WRONG_BUGS:
 				q_PacketPeerStream.set_input_buffer_max_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				q_PacketPeerStream.set_output_buffer_max_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_PacketPeerStream.set_stream_peer(StreamPeer.new())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_PacketPeerStream.set_input_buffer_max_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_PacketPeerStream.set_output_buffer_max_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
 				q_PacketPeerStream.set_stream_peer(StreamPeer.new())

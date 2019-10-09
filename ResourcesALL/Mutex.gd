@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_Mutex : Mutex = Mutex.new()
+		var q_Mutex : Mutex = Mutex.new()
+		if !Autoload.RANDI:
 			
 			q_Mutex.lock()
 			qq += str(q_Mutex.try_lock())
@@ -24,4 +24,11 @@ func _process(delta) -> void:
 			if Autoload.WRONG_BUGS:
 				q_Mutex.lock()
 				qq += str(q_Mutex.try_lock())
+				q_Mutex.unlock()
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_Mutex.lock()
+			if randi() % 2 == 1:
+				qq += str(q_Mutex.try_lock())
+			if randi() % 2 == 1:
 				q_Mutex.unlock()

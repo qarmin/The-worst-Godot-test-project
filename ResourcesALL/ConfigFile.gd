@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_ConfigFile : ConfigFile = ConfigFile.new()
+		var q_ConfigFile : ConfigFile = ConfigFile.new()
+		if !Autoload.RANDI:
 			
 			q_ConfigFile.erase_section( "Sekcja" )
 			
@@ -27,7 +27,7 @@ func _process(delta) -> void:
 			qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
 			
 			#qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
-			### q_ConfigFile.save( "res://Close.png" )
+			q_ConfigFile.save( "res://Close.txt" )
 			q_ConfigFile.set_value( "Sekcja", "Klucz", String())
 			
 			if Autoload.WRONG_BUGS:
@@ -41,5 +41,26 @@ func _process(delta) -> void:
 				qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
 				
 				qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
-				### q_ConfigFile.save( "res://Close.png" )
+				q_ConfigFile.save( "res://Close.txt" )
+				q_ConfigFile.set_value( "Sekcja", "Klucz", String())
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_ConfigFile.erase_section( "Sekcja2" )
+				
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.get_section_keys( "Sekcja" ))
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.get_sections())
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.get_value( "Sekcja", "Klucz", String() ))
+				
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.has_section( "Sekcja" ))
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
+				
+			if randi() % 2 == 1:
+				qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
+				q_ConfigFile.save( "res://Close.txt" )
+			if randi() % 2 == 1:
 				q_ConfigFile.set_value( "Sekcja", "Klucz", String())

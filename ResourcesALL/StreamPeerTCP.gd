@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
+		var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
+		if !Autoload.RANDI:
 			
 			#qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", 0 ))
 			q_StreamPeerTCP.disconnect_from_host()
@@ -36,4 +36,21 @@ func _process(delta) -> void:
 				qq += str(q_StreamPeerTCP.get_status())
 				
 				qq += str(q_StreamPeerTCP.is_connected_to_host())
+				q_StreamPeerTCP.set_no_delay( bool(randi()%2))
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			if randi() % 2 == 1:
+				q_StreamPeerTCP.disconnect_from_host()
+				
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerTCP.get_connected_host())
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerTCP.get_connected_port())
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerTCP.get_status())
+				
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerTCP.is_connected_to_host())
+			if randi() % 2 == 1:
 				q_StreamPeerTCP.set_no_delay( bool(randi()%2))

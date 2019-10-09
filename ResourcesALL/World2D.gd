@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_World2D : World2D = World2D.new()
+		var q_World2D : World2D = World2D.new()
+		if !Autoload.RANDI:
 			
 			qq += str(q_World2D.get_canvas())
 			qq += str(q_World2D.get_space())
@@ -24,4 +24,12 @@ func _process(delta) -> void:
 			if Autoload.WRONG_BUGS:
 				qq += str(q_World2D.get_canvas())
 				qq += str(q_World2D.get_space())
+				qq += str(q_World2D.get_direct_space_state())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_World2D.get_canvas())
+			if randi() % 2 == 1:
+				qq += str(q_World2D.get_space())
+			if randi() % 2 == 1:
 				qq += str(q_World2D.get_direct_space_state())

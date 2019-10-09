@@ -13,11 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_VisualShaderNodeVectorDerivativeFunc : VisualShaderNodeVectorDerivativeFunc = VisualShaderNodeVectorDerivativeFunc.new()
+		var q_VisualShaderNodeVectorDerivativeFunc : VisualShaderNodeVectorDerivativeFunc = VisualShaderNodeVectorDerivativeFunc.new()
+		if !Autoload.RANDI:
 			
 			q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % 3) #Function
 			
 			if Autoload.WRONG_BUGS:
+				q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Function
+
+		else: #RANDI
+			if randi() % 2 == 1:
 				q_VisualShaderNodeVectorDerivativeFunc.set_function(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Function

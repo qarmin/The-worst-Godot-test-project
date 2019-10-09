@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_WebSocketPeer : WebSocketPeer = WebSocketPeer.new()
+		var q_WebSocketPeer : WebSocketPeer = WebSocketPeer.new()
+		if !Autoload.RANDI:
 			
 			q_WebSocketPeer.close( randi()%50, "Świadomość" )
 			
@@ -33,5 +33,19 @@ func _process(delta) -> void:
 				qq += str(q_WebSocketPeer.get_write_mode())
 				
 				qq += str(q_WebSocketPeer.is_connected_to_host())
-				q_WebSocketPeer.set_write_mode( randi()%50 )#WriteMode
+				q_WebSocketPeer.set_write_mode( randi()%Autoload.RANGE - Autoload.RANGE / 2 )#WriteMode
+				qq += str(q_WebSocketPeer.was_string_packet())
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_WebSocketPeer.get_connected_host())
+			if randi() % 2 == 1:
+				qq += str(q_WebSocketPeer.get_connected_port())
+			if randi() % 2 == 1:
+				qq += str(q_WebSocketPeer.get_write_mode())
+				
+			if randi() % 2 == 1:
+				qq += str(q_WebSocketPeer.is_connected_to_host())
+			if randi() % 2 == 1:
+				q_WebSocketPeer.set_write_mode( randi()%Autoload.RANGE - Autoload.RANGE / 2 )#WriteMode
+			if randi() % 2 == 1:
 				qq += str(q_WebSocketPeer.was_string_packet())

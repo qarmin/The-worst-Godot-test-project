@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_JSONParseResult : JSONParseResult = JSONParseResult.new()
+		var q_JSONParseResult : JSONParseResult = JSONParseResult.new()
+		if !Autoload.RANDI:
 			
 			q_JSONParseResult.set_error(randi() % 48) #ERROR
 			q_JSONParseResult.set_error_string("Bądź drzewem")
@@ -26,4 +26,14 @@ func _process(delta) -> void:
 				q_JSONParseResult.set_error(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ERROR
 				q_JSONParseResult.set_error_string("Bądź drzewem")
 				q_JSONParseResult.set_error_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_JSONParseResult.set_result("Rezultat")
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_JSONParseResult.set_error(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ERROR
+			if randi() % 2 == 1:
+				q_JSONParseResult.set_error_string("Bądź drzewem")
+			if randi() % 2 == 1:
+				q_JSONParseResult.set_error_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
 				q_JSONParseResult.set_result("Rezultat")

@@ -1100,78 +1100,103 @@ visible = false
 script = ExtResource( 330 )
 
 [node name="RichTextEffects" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 430 )
 
 [node name="Shader" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 376 )
 
 [node name="VisualShader" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 381 )
 
 [node name="ShortCut" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 357 )
 
 [node name="Skin" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 431 )
 
 [node name="SpriteFrames" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 314 )
 
 [node name="StyleBox_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 378 )
 
 [node name="StyleBoxEmpty_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 361 )
 
 [node name="StyleBoxFlat" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 367 )
 
 [node name="StyleBoxLine" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 415 )
 
 [node name="StyleBoxTexture" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 386 )
 
 [node name="TextFile_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 370 )
 
 [node name="TextureLayered_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 391 )
 
 [node name="Texture3D_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 380 )
 
 [node name="TextureArray_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 387 )
 
 [node name="Theme" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 338 )
 
 [node name="TileSet" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 382 )
 
 [node name="VideoStream_NOTHING" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 359 )
 
 [node name="VideoStreamGDNative" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 355 )
 
 [node name="VideoStreamTheora" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 358 )
 
 [node name="VideoStreamWebm" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 372 )
 
 [node name="VisualScriptNode_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 86 )
 
 [node name="VisualScriptBasicTypeConstant" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 80 )
 
 [node name="VisualScriptBuiltinFunc" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 79 )
 
 [node name="VisualScriptClassConstant" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 78 )
 
 [node name="VisualScriptComment" type="Node2D" parent="."]
@@ -1318,10 +1343,6 @@ script = ExtResource( 95 )
 visible = false
 script = ExtResource( 126 )
 
-[node name="VisualScriptVariableSet" type="Node2D" parent="."]
-visible = false
-script = ExtResource( 54 )
-
 [node name="VisualScriptWhile_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 128 )
@@ -1389,6 +1410,10 @@ script = ExtResource( 87 )
 [node name="VisualShaderNodeCompare" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 435 )
+
+[node name="VisualScriptVariableSet" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 54 )
 
 [node name="VisualShaderNodeCubeMap" type="Node2D" parent="."]
 visible = false
@@ -1501,10 +1526,6 @@ script = ExtResource( 117 )
 [node name="VisualShaderNodeDecompose_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 61 )
-
-[node name="VisualShaderNodeTransformFunc" type="Node2D" parent="."]
-visible = false
-script = ExtResource( 68 )
 
 [node name="VisualShaderNodeTransformMult" type="Node2D" parent="."]
 visible = false
@@ -1678,6 +1699,10 @@ script = ExtResource( 404 )
 visible = false
 script = ExtResource( 377 )
 
+[node name="VisualShaderNodeTransformFunc" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 68 )
+
 [node name="EditorSceneImporterAssimp_CANT" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 163 )
@@ -1786,7 +1811,7 @@ script = ExtResource( 160 )
 visible = false
 script = ExtResource( 175 )
 
-[node name="WebSocketServer" type="Node2D" parent="."]
+[node name="WebSocketServer_SPAM" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 166 )
 
@@ -1890,7 +1915,7 @@ script = ExtResource( 169 )
 visible = false
 script = ExtResource( 145 )
 
-[node name="Semaphore" type="Node2D" parent="."]
+[node name="Semaphore_DONT_USE" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 144 )
 
@@ -1966,7 +1991,7 @@ script = ExtResource( 412 )
 visible = false
 script = ExtResource( 140 )
 
-[node name="ARVRPositionalTracker_LEAK" type="Node2D" parent="."]
+[node name="ARVRPositionalTracker" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 310 )
 
@@ -2014,7 +2039,7 @@ script = ExtResource( 172 )
 visible = false
 script = ExtResource( 302 )
 
-[node name="EditorNavigationMeshGenerator" type="Node2D" parent="."]
+[node name="EditorNavigationMeshGenerator_BUG" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 388 )
 
@@ -2066,7 +2091,7 @@ script = ExtResource( 452 )
 visible = false
 script = ExtResource( 350 )
 
-[node name="MainLoop_LEAK" type="Node2D" parent="."]
+[node name="MainLoop" type="Node2D" parent="."]
 visible = false
 script = ExtResource( 351 )
 
@@ -2075,71 +2100,54 @@ visible = false
 script = ExtResource( 397 )
 
 [node name="OS_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 396 )
 
 [node name="Performance_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 385 )
 
 [node name="Physics2DDirectBodyState_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 384 )
 
 [node name="Physics2DDirectBodyStateSW_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 329 )
 
 [node name="Physics2DDirectSpaceState_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 156 )
 
 [node name="Physics2DDirectSpaceStateSW_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 315 )
 
 [node name="Physics2DServer_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 421 )
 
 [node name="Physics2DServerSW_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 317 )
 
 [node name="ProjectSettings_JUST_DONT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 406 )
 
 [node name="ResourceLoader_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 303 )
 
 [node name="ResourceSaver_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 336 )
 
 [node name="TranslationServer" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 373 )
 
 [node name="TreeItem_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 366 )
 
-[node name="UndoRedo_LEAK" type="Node2D" parent="."]
-visible = false
+[node name="UndoRedo" type="Node2D" parent="."]
 script = ExtResource( 422 )
 
 [node name="VisualScriptEditor_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 309 )
 
 [node name="VisualServer_CANT" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 424 )
 
 [node name="Array" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 423 )
 
 [node name="Basis" type="Node2D" parent="."]

@@ -13,13 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_VisualScriptInputAction : VisualScriptInputAction = VisualScriptInputAction.new()
+		var q_VisualScriptInputAction : VisualScriptInputAction = VisualScriptInputAction.new()
+		if !Autoload.RANDI:
 			
 			q_VisualScriptInputAction.set_action_name("Akcja")
 			q_VisualScriptInputAction.set_action_mode(randi() % 4) # Mode
 			
 			if Autoload.WRONG_BUGS:
 				q_VisualScriptInputAction.set_action_name("Akcja")
+				q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_VisualScriptInputAction.set_action_name("Akcja")
+			if randi() % 2 == 1:
 				q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode

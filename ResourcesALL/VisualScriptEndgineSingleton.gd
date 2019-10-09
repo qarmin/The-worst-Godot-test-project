@@ -13,12 +13,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			pass
 		
 		var q_VisualScriptEngineSingleton : VisualScriptEngineSingleton = VisualScriptEngineSingleton.new()
+		if !Autoload.RANDI:
 		
-		q_VisualScriptEngineSingleton.set_singleton("asf")
-		
-		if Autoload.WRONG_BUGS:
-			q_VisualScriptEngineSingleton.set_singleton("ase")
+			q_VisualScriptEngineSingleton.set_singleton("asf")
+			
+			if Autoload.WRONG_BUGS:
+				q_VisualScriptEngineSingleton.set_singleton("ase")
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_VisualScriptEngineSingleton.set_singleton("ase")

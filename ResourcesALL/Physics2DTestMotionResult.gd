@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_Physics2DTestMotionResult : Physics2DTestMotionResult = Physics2DTestMotionResult.new()
+		var q_Physics2DTestMotionResult : Physics2DTestMotionResult = Physics2DTestMotionResult.new()
+		if !Autoload.RANDI:
 			
 			qq += str(q_Physics2DTestMotionResult.get_motion())
 			qq += str(q_Physics2DTestMotionResult.get_motion_remainder())
@@ -36,4 +36,24 @@ func _process(delta) -> void:
 				qq += str(q_Physics2DTestMotionResult.get_collider_id())
 				qq += str(q_Physics2DTestMotionResult.get_collider_rid())
 				qq += str(q_Physics2DTestMotionResult.get_collider())
+				qq += str(q_Physics2DTestMotionResult.get_collider_shape())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_motion())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_motion_remainder())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collision_point())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collision_normal())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collider_velocity())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collider_id())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collider_rid())
+			if randi() % 2 == 1:
+				qq += str(q_Physics2DTestMotionResult.get_collider())
+			if randi() % 2 == 1:
 				qq += str(q_Physics2DTestMotionResult.get_collider_shape())

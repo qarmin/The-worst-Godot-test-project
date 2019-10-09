@@ -37,23 +37,23 @@ func _process(delta) -> void:
 		
 		#q_NetworkedMultiplayerENet.set_bind_ip( "Koszulka")
 		
-#		if Autoload.WRONG_BUGS:
-#			var q_NetworkedMultiplayerENet : NetworkedMultiplayerENet = NetworkedMultiplayerENet.new()
-#			q_NetworkedMultiplayerENet.set_compression_mode(randi() % 10 - 5) #CompressionMode
-#			q_NetworkedMultiplayerENet.set_transfer_channel(randi() % 10 - 5)
-#			q_NetworkedMultiplayerENet.set_channel_count(randi() % 10 - 5)
-#			q_NetworkedMultiplayerENet.set_always_ordered(bool(randi()%2))
-#
-#			q_NetworkedMultiplayerENet.close_connection( randi() % 10 - 5)
-#
-#			qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5 ))
-#			qq += str(q_NetworkedMultiplayerENet.create_server( randi() % 10 - 5,randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5))
-#
-#			q_NetworkedMultiplayerENet.disconnect_peer( randi() % 10 - 5, bool(randi()%2))
-#
-#			qq += str(q_NetworkedMultiplayerENet.get_last_packet_channel())
-#			qq += str(q_NetworkedMultiplayerENet.get_packet_channel())
-##			qq += str(q_NetworkedMultiplayerENet.get_peer_address( randi() % 10 - 5))
-##			qq += str(q_NetworkedMultiplayerENet.get_peer_port( randi() % 10 - 5))
-##
-##			q_NetworkedMultiplayerENet.set_bind_ip( "Koszulka")
+		if Autoload.WRONG_BUGS:
+			var q_NetworkedMultiplayerENet : NetworkedMultiplayerENet = NetworkedMultiplayerENet.new()
+			q_NetworkedMultiplayerENet.set_compression_mode(randi() % 10 - 5) #CompressionMode
+			q_NetworkedMultiplayerENet.set_transfer_channel(randi() % 10 - 5)
+			q_NetworkedMultiplayerENet.set_channel_count(randi() % 10 - 5)
+			q_NetworkedMultiplayerENet.set_always_ordered(bool(randi()%2))
+
+			q_NetworkedMultiplayerENet.close_connection( randi() % 10 - 5)
+
+			qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5 ))
+			qq += str(q_NetworkedMultiplayerENet.create_server( randi() % 10 - 5,randi() % 10 - 5, randi() % 10 - 5, randi() % 10 - 5))
+
+			q_NetworkedMultiplayerENet.disconnect_peer( randi() % 10 - 5, bool(randi()%2))
+
+			qq += str(q_NetworkedMultiplayerENet.get_last_packet_channel())
+			qq += str(q_NetworkedMultiplayerENet.get_packet_channel())
+			qq += str(q_NetworkedMultiplayerENet.get_peer_address( randi() % 10 - 5))
+			qq += str(q_NetworkedMultiplayerENet.get_peer_port( randi() % 10 - 5))
+
+			q_NetworkedMultiplayerENet.set_bind_ip( "Koszulka")

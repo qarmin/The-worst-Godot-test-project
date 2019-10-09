@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_HashingContext : HashingContext = HashingContext.new()
+		var q_HashingContext : HashingContext = HashingContext.new()
+		if !Autoload.RANDI:
 			#qq += str(q_HashingContext.finish())
 			qq += str(q_HashingContext.start(randi()%3)) #HashType
 			qq += str(q_HashingContext.update(PoolByteArray([124,12,412,412,412,412,412,421,4])))
@@ -23,4 +23,12 @@ func _process(delta) -> void:
 			if Autoload.WRONG_BUGS:
 				qq += str(q_HashingContext.finish())
 				qq += str(q_HashingContext.start(randi() % Autoload.RANGE - Autoload.RANGE / 2)) #HashType
+				qq += str(q_HashingContext.update(PoolByteArray([124,12,412,412,412,412,412,421,4])))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_HashingContext.finish())
+			if randi() % 2 == 1:
+				qq += str(q_HashingContext.start(randi() % Autoload.RANGE - Autoload.RANGE / 2)) #HashType
+			if randi() % 2 == 1:
 				qq += str(q_HashingContext.update(PoolByteArray([124,12,412,412,412,412,412,421,4])))

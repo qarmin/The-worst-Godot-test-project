@@ -13,13 +13,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_VisualScriptYield : VisualScriptYield = VisualScriptYield.new()
+		var q_VisualScriptYield : VisualScriptYield = VisualScriptYield.new()
+		if !Autoload.RANDI:
 			
 			q_VisualScriptYield.set_yield_mode(randi() % 3 + 1) #Yield mode
 			q_VisualScriptYield.set_wait_time(randi()%50)
 			
 			if Autoload.WRONG_BUGS:
 				q_VisualScriptYield.set_yield_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Yield mode
+				q_VisualScriptYield.set_wait_time(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_VisualScriptYield.set_yield_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Yield mode
+			if randi() % 2 == 1:
 				q_VisualScriptYield.set_wait_time(randi() % Autoload.RANGE - Autoload.RANGE / 2)

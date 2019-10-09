@@ -3,19 +3,19 @@ extends Node2D
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
-func _process(delta) -> void:
-	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			pass
-		
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#func _process(delta) -> void:
+#	counter -= delta
+#	var qq : String = ""
+#	qq = qq
+#
+#	if counter <= 0:
+#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#		if !Autoload.RANDI:
+#			pass
+#
 #		var q_VisualServer : VisualServer = VisualServer.new()
 #
 #		VisualServer.black_bars_set_images(
@@ -373,6 +373,6 @@ func _process(delta) -> void:
 #		VisualServer.viewport_set_usage(
 #		VisualServer.viewport_set_use_arvr(
 #		VisualServer.viewport_set_vflip(
-		
-		if Autoload.WRONG_BUGS:
-			pass
+#
+#		if Autoload.WRONG_BUGS:
+#			pass

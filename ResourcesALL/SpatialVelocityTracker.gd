@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_SpatialVelocityTracker : SpatialVelocityTracker = SpatialVelocityTracker.new()
+		var q_SpatialVelocityTracker : SpatialVelocityTracker = SpatialVelocityTracker.new()
+		if !Autoload.RANDI:
 			
 			q_SpatialVelocityTracker.set_track_physics_step(bool(randi()%2))
 			
@@ -28,4 +28,15 @@ func _process(delta) -> void:
 				
 				qq += str(q_SpatialVelocityTracker.get_tracked_linear_velocity())
 				q_SpatialVelocityTracker.reset( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+				q_SpatialVelocityTracker.update_position( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_SpatialVelocityTracker.set_track_physics_step(bool(randi()%2))
+				
+			if randi() % 2 == 1:
+				qq += str(q_SpatialVelocityTracker.get_tracked_linear_velocity())
+			if randi() % 2 == 1:
+				q_SpatialVelocityTracker.reset( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
 				q_SpatialVelocityTracker.update_position( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))

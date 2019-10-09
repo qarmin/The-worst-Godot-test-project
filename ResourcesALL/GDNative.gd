@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_GDNative : GDNative = GDNative.new()
+		var q_GDNative : GDNative = GDNative.new()
+		if !Autoload.RANDI:
 			
 			q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",false))
 			
@@ -28,4 +28,15 @@ func _process(delta) -> void:
 				
 				q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
 				qq += str(q_GDNative.initialize())
+				qq += str(q_GDNative.terminate())
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",true))
+				
+			if randi() % 2 == 1:
+				q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
+			if randi() % 2 == 1:
+				qq += str(q_GDNative.initialize())
+			if randi() % 2 == 1:
 				qq += str(q_GDNative.terminate())

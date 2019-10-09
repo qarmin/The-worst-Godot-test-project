@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_RegExMatch : RegExMatch = RegExMatch.new()
+		var q_RegExMatch : RegExMatch = RegExMatch.new()
+		if !Autoload.RANDI:
 			
 			qq += str(q_RegExMatch.get_subject())
 			qq += str(q_RegExMatch.get_names())
@@ -34,4 +34,21 @@ func _process(delta) -> void:
 				qq += str(q_RegExMatch.get_end( String() ))
 				qq += str(q_RegExMatch.get_group_count())
 				qq += str(q_RegExMatch.get_start( String() ))
+				qq += str(q_RegExMatch.get_string( String() ))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_subject())
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_names())
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_strings())
+				
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_end( String() ))
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_group_count())
+			if randi() % 2 == 1:
+				qq += str(q_RegExMatch.get_start( String() ))
+			if randi() % 2 == 1:
 				qq += str(q_RegExMatch.get_string( String() ))

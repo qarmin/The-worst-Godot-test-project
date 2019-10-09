@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_VisualScriptYieldSignal : VisualScriptYieldSignal = VisualScriptYieldSignal.new()
+		var q_VisualScriptYieldSignal : VisualScriptYieldSignal = VisualScriptYieldSignal.new()
+		if !Autoload.RANDI:
 			
 			q_VisualScriptYieldSignal.set_call_mode(randi() % 3) # CallMode
 			q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
@@ -26,4 +26,14 @@ func _process(delta) -> void:
 				q_VisualScriptYieldSignal.set_call_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CallMode
 				q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
 				q_VisualScriptYieldSignal.set_base_path(".2f")
+				q_VisualScriptYieldSignal.set_signal("Podwodny")
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_VisualScriptYieldSignal.set_call_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CallMode
+			if randi() % 2 == 1:
+				q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
+			if randi() % 2 == 1:
+				q_VisualScriptYieldSignal.set_base_path(".2f")
+			if randi() % 2 == 1:
 				q_VisualScriptYieldSignal.set_signal("Podwodny")

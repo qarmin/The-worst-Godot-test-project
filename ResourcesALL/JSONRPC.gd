@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_JSONRPC : JSONRPC = JSONRPC.new()
+		var q_JSONRPC : JSONRPC = JSONRPC.new()
+		if !Autoload.RANDI:
 	
 			qq += str(q_JSONRPC.make_notification("Zbyt", randi()%50))
 			qq += str(q_JSONRPC.make_request("Zbyt", randi()%50, randi()%50))
@@ -37,5 +37,27 @@ func _process(delta) -> void:
 				qq += str(q_JSONRPC.process_string("Za"))
 				
 				q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
+		
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.make_notification("Zbyt", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.make_request("Zbyt", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.make_response(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.make_response_error(randi() % Autoload.RANGE - Autoload.RANGE / 2, "MESSAGE", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+				
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.process_action(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2)))
+			if randi() % 2 == 1:
+				qq += str(q_JSONRPC.process_string("Za"))
+				
+			if randi() % 2 == 1:
+				q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
+		
+		
+		
+		
 		
 			q_JSONRPC.free()

@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_StreamPeerSSL : StreamPeerSSL = StreamPeerSSL.new()
+		var q_StreamPeerSSL : StreamPeerSSL = StreamPeerSSL.new()
+		if !Autoload.RANDI:
 			
 			q_StreamPeerSSL.set_blocking_handshake_enabled(bool(randi()%2))
 			
@@ -30,4 +30,16 @@ func _process(delta) -> void:
 				qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
 				q_StreamPeerSSL.disconnect_from_stream()
 				qq += str(q_StreamPeerSSL.get_status())
+				q_StreamPeerSSL.poll()
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerSSL.accept_stream( StreamPeer.new(),CryptoKey.new(),X509Certificate.new(),X509Certificate.new()))
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeer.new(), bool(randi()%2), "Komputery" ))
+			if randi() % 2 == 1:
+				q_StreamPeerSSL.disconnect_from_stream()
+			if randi() % 2 == 1:
+				qq += str(q_StreamPeerSSL.get_status())
+			if randi() % 2 == 1:
 				q_StreamPeerSSL.poll()

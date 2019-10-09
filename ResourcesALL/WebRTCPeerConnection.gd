@@ -13,6 +13,7 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		var q_WebRTCPeerConnection : WebRTCPeerConnection = WebRTCPeerConnection.new()
 		if !Autoload.RANDI:
 		
 #
@@ -32,7 +33,6 @@ func _process(delta) -> void:
 #			qq += str(q_WebRTCPeerConnection.set_remote_description( "Osiem", "Ramię" ))
 			
 			if Autoload.WRONG_BUGS:
-				var q_WebRTCPeerConnection : WebRTCPeerConnection = WebRTCPeerConnection.new()
 				qq += str(q_WebRTCPeerConnection.add_ice_candidate( "Rozciągnięcie", randi() % Autoload.RANGE - Autoload.RANGE / 2, "Kropierz" ))
 				q_WebRTCPeerConnection.close()
 		
@@ -46,4 +46,28 @@ func _process(delta) -> void:
 				qq += str(q_WebRTCPeerConnection.poll())
 		
 				qq += str(q_WebRTCPeerConnection.set_local_description( "Osiem", "Ramię" ))
+				qq += str(q_WebRTCPeerConnection.set_remote_description( "Osiem", "Ramię" ))
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.add_ice_candidate( "Rozciągnięcie", randi() % Autoload.RANGE - Autoload.RANGE / 2, "Kropierz" ))
+			if randi() % 2 == 1:
+				q_WebRTCPeerConnection.close()
+		
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.create_data_channel("Marko Polo", {"Bułat":"Czeka"}))
+		
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.create_offer())
+		
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.get_connection_state())
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.initialize( {"Śmieszno":"Jednak Nie"}))
+		
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.poll())
+		
+			if randi() % 2 == 1:
+				qq += str(q_WebRTCPeerConnection.set_local_description( "Osiem", "Ramię" ))
+			if randi() % 2 == 1:
 				qq += str(q_WebRTCPeerConnection.set_remote_description( "Osiem", "Ramię" ))

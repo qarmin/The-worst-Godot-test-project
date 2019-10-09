@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_RegEx : RegEx = RegEx.new()
+		var q_RegEx : RegEx = RegEx.new()
+		if !Autoload.RANDI:
 			
 			q_RegEx.clear()
 			qq += str(q_RegEx.compile( "Prosto" ))
@@ -44,4 +44,28 @@ func _process(delta) -> void:
 				qq += str(q_RegEx.search( "Napedzać", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 				qq += str(q_RegEx.search_all( "Napedzać", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 				
+				qq += str(q_RegEx.sub( "Napedzać", "Obraz", bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_RegEx.clear()
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.compile( "Prosto" ))
+				
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.get_group_count())
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.get_names())
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.get_pattern())
+				
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.is_valid())
+				
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.search( "Napedzać", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			if randi() % 2 == 1:
+				qq += str(q_RegEx.search_all( "Napedzać", randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+				
+			if randi() % 2 == 1:
 				qq += str(q_RegEx.sub( "Napedzać", "Obraz", bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))

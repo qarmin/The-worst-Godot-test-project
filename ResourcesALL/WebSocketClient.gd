@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_WebSocketClient : WebSocketClient = WebSocketClient.new()
+		var q_WebSocketClient : WebSocketClient = WebSocketClient.new()
+		if !Autoload.RANDI:
 			
 			q_WebSocketClient.set_verify_ssl_enabled(bool(randi()%2))
 			
@@ -23,4 +23,16 @@ func _process(delta) -> void:
 			q_WebSocketClient.disconnect_from_host( randi()%50, "Liga" )
 			
 			if Autoload.WRONG_BUGS:
-				pass
+				q_WebSocketClient.set_verify_ssl_enabled(bool(randi()%2))
+				
+				qq += str(q_WebSocketClient.connect_to_url( "Walka", PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
+				q_WebSocketClient.disconnect_from_host( randi()%Autoload.RANGE - Autoload.RANGE / 2, "Liga" )
+
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_WebSocketClient.set_verify_ssl_enabled(bool(randi()%2))
+				
+			if randi() % 2 == 1:
+				qq += str(q_WebSocketClient.connect_to_url( "Walka", PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
+			if randi() % 2 == 1:
+				q_WebSocketClient.disconnect_from_host( randi()%Autoload.RANGE - Autoload.RANGE / 2, "Liga" )
