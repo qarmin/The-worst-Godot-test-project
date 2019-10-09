@@ -29,11 +29,12 @@ func _process(delta) -> void:
 				qq += str(q_PackedScene.pack( self ))
 
 		else: #RANDI
+			q_PackedScene = PackedScene.new()
 			if randi() % 2 == 1:
 				qq += str(q_PackedScene.can_instance())
 			if randi() % 2 == 1:
 				qq += str(q_PackedScene.get_state())
-			if randi() % 2 == 1:
-				qq += str(q_PackedScene.instance( randi() % Autoload.RANGE - Autoload.RANGE / 2 ).queue_free()) # GenEditState
+#			if randi() % 2 == 1:
+#				qq += str(q_PackedScene.instance( randi() % Autoload.RANGE - Autoload.RANGE / 2 ).queue_free()) # GenEditState
 			if randi() % 2 == 1:
 				qq += str(q_PackedScene.pack( self ))

@@ -17,7 +17,7 @@ func _ready():
 #			pass
 #		var q_PanoramaSky : PanoramaSky = PanoramaSky.new()
 #
-#		q_PanoramaSky.set_panorama(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#		q_PanoramaSky.set_panorama(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

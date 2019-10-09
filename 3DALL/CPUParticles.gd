@@ -54,7 +54,7 @@ func _process(delta) -> void:
 			
 			for i in range(PARAM_MAX):
 				set_param(i,randf() * 2)
-				set_param_curve(i,load("res://RES/Curve" + str(randi()%2+1) + ".tres"))
+				set_param_curve(i,Autoload.loadA("res://RES/Curve" + str(randi()%2+1) + ".tres",false))
 				set_param_randomness(i,randf())
 				
 			var particles : Particles = Particles.new()
@@ -344,7 +344,7 @@ func _process(delta) -> void:
 				set_gravity(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 	
 				set_param(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_param_curve(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Curve" + str(randi()%3+1) + ".tres"))
+				set_param_curve(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Curve" + str(randi()%3+1) + ".tres"))
 				set_param_randomness(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 	
 				particles = Particles.new()
@@ -669,7 +669,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_param(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set_param_curve(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Curve" + str(randi()%3+1) + ".tres"))
+				set_param_curve(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Curve" + str(randi()%3+1) + ".tres"))
 			if randi() % 2 == 1:
 				set_param_randomness(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 	

@@ -29,13 +29,13 @@ func _process(delta) -> void:
 			qq += str(TranslationServer.translate("pls"))
 			
 			if Autoload.WRONG_BUGS:
-				TranslationServer.add_translation(load("res://RES/Translation.tres"))
+				TranslationServer.add_translation(Autoload.loadA("res://RES/Translation.tres",false))
 				TranslationServer.clear()
 		
 				qq += str(TranslationServer.get_loaded_locales())
 				qq += str(TranslationServer.get_locale())
 				qq += str(TranslationServer.get_locale_name("pl"))
 		
-				TranslationServer.remove_translation(load("res://RES/Translation.tres"))
+				TranslationServer.remove_translation(Autoload.loadA("res://RES/Translation.tres"))
 				TranslationServer.set_locale("pl")
 				qq += str(TranslationServer.translate("pls"))

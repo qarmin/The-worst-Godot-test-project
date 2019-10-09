@@ -28,8 +28,8 @@ func _process(delta) -> void:
 		set_icon_mode(randi()%2)
 		set_icon_scale(randf() * 50)
 		set_fixed_icon_size(Vector2(randf() * 50,randf() * 50))
-		add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
-		add_item(str(randi()%50),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+		add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false),bool(randi()%2))
+		add_item(str(randi()%50),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false),bool(randi()%2))
 		ensure_current_is_visible()
 		qq += str(get_item_at_position(Vector2(randf() * 50,randf() * 50),bool(randi()%2)))
 		qq += str(get_item_count())
@@ -55,7 +55,7 @@ func _process(delta) -> void:
 		set_item_custom_bg_color(0,Color(randf(),randf(),randf(),randf()))
 		set_item_custom_fg_color(0,Color(randf(),randf(),randf(),randf()))
 		set_item_disabled(0,bool(randi()%2))
-		set_item_icon(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_item_icon(0,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		set_item_icon_modulate(0,Color(randf(),randf(),randf(),randf()))
 		set_item_icon_region(0,Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 		set_item_icon_transposed(0,bool(randi()%2))
@@ -81,8 +81,8 @@ func _process(delta) -> void:
 			set_icon_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_icon_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			set_fixed_icon_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			add_icon_item(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
-			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
 			ensure_current_is_visible()
 			qq += str(get_item_at_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),bool(randi()%2)))
 			qq += str(get_item_count())
@@ -108,7 +108,7 @@ func _process(delta) -> void:
 			set_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 			set_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 			set_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2,Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			set_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
@@ -152,9 +152,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_fixed_icon_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			add_icon_item(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 		if randi() % 2 == 1:
-			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
+			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"),bool(randi()%2))
 		if randi() % 2 == 1:
 			ensure_current_is_visible()
 		if randi() % 2 == 1:
@@ -206,7 +206,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
 			set_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:

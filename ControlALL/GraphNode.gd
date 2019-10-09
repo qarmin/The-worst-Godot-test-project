@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		set_selected(bool(randi()%2))
 		set_comment(bool(randi()%2))
 		set_overlay(randi()%3)
-		set_slot(0, bool(randi()%2), 0, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi()%3, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_slot(0, bool(randi()%2), 0, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi()%3, Color(randf(),randf(),randf(),randf()), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png,false"))
 		clear_slot(0)
 		clear_all_slots()
 		#qq += str(get_connection_input_color(0))
@@ -49,7 +49,7 @@ func _process(delta) -> void:
 			set_selected(bool(randi()%2))
 			set_comment(bool(randi()%2))
 			set_overlay(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
+			set_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
 			clear_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			clear_all_slots()
 			qq += str(get_connection_input_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
@@ -83,7 +83,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_overlay(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			set_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
+			set_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))#Not in position
 		if randi() % 2 == 1:
 			clear_slot(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

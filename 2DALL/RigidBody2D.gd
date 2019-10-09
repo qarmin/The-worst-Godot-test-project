@@ -21,7 +21,7 @@ func _physics_process(delta) -> void:
 			set_weight(randf() * 50)
 			#Deprecated set_friction(randf())
 			#Deprecated set_bounce(randf())
-			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+			set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres",false))
 			set_gravity_scale(randf() * 50)
 			set_use_custom_integrator(bool(randi()%2))
 			set_continuous_collision_detection_mode(randi()%3)
@@ -62,7 +62,7 @@ func _physics_process(delta) -> void:
 				set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_gravity_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+				set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres"))
 				set_use_custom_integrator(bool(randi()%2))
 				set_continuous_collision_detection_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_max_contacts_reported(randi() % Autoload.RANGE - Autoload.RANGE / 2)
@@ -105,7 +105,7 @@ func _physics_process(delta) -> void:
 			if randi() % 2 == 1:
 				set_gravity_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+				set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres"))
 			if randi() % 2 == 1:
 				set_use_custom_integrator(bool(randi()%2))
 			if randi() % 2 == 1:

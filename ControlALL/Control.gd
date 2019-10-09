@@ -45,7 +45,7 @@ func _process(delta) -> void:
 		set_h_size_flags(randi()%50)
 		set_v_size_flags(randi()%50)
 		set_stretch_ratio(randf() * 50)
-		set_theme(load("res://RES/Theme.tres"))
+		set_theme(Autoload.loadA("res://RES/Theme.tres",false))
 		
 		### qq += str(_clips_input())
 		### qq += str(_get_minimum_size())
@@ -54,10 +54,10 @@ func _process(delta) -> void:
 		accept_event()
 		add_color_override("Godotte", Color())
 		add_constant_override("Środek", randi()%50)
-		add_font_override("Świerszcz", load("res://RES/DynamicFont1.tres"))
-		add_icon_override("Godotte", load("res://RES/Sprite3.png"))
-		add_shader_override("Godotte", load("res://RES/VisualShader.tres"))
-		add_stylebox_override("Godotte", load("res://RES/StyleBoxTexture.tres"))
+		add_font_override("Świerszcz", Autoload.loadA("res://RES/DynamicFont1.tres",false))
+		add_icon_override("Godotte", Autoload.loadA("res://RES/Sprite3.png",false))
+		add_shader_override("Godotte", Autoload.loadA("res://RES/VisualShader.tres",false))
+		add_stylebox_override("Godotte", Autoload.loadA("res://RES/StyleBoxTexture.tres",false))
 		### qq += str(can_drop_data(Vector2(randf() * 50,randf() * 50), "Hehe"))
 		### drop_data(Vector2(randf() * 50,randf() * 50), randf() * 50)
 		#force_drag("data: Variant", self)
@@ -136,7 +136,7 @@ func _process(delta) -> void:
 #			set_h_size_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 #			set_v_size_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 #			set_stretch_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-#			set_theme(load("res://RES/Theme.tres"))
+#			set_theme(Autoload.loadA("res://RES/Theme.tres"))
 #
 #			### qq += str(_clips_input())
 #			### qq += str(_get_minimum_size())
@@ -145,10 +145,10 @@ func _process(delta) -> void:
 #			accept_event()
 #			add_color_override("Godotte", Color())
 #			add_constant_override("Środek", randi() % Autoload.RANGE - Autoload.RANGE / 2)
-#			add_font_override("Świerszcz", load("res://RES/DynamicFont1.tres"))
-#			add_icon_override("Godotte", load("res://RES/Sprite3.png"))
-#			add_shader_override("Godotte", load("res://RES/VisualShader.tres"))
-#			add_stylebox_override("Godotte", load("res://RES/StyleBoxTexture.tres"))
+#			add_font_override("Świerszcz", Autoload.loadA("res://RES/DynamicFont1.tres"))
+#			add_icon_override("Godotte", Autoload.loadA("res://RES/Sprite3.png"))
+#			add_shader_override("Godotte", Autoload.loadA("res://RES/VisualShader.tres"))
+#			add_stylebox_override("Godotte", Autoload.loadA("res://RES/StyleBoxTexture.tres"))
 #			### qq += str(can_drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), "Hehe"))
 #			### drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
 #			force_drag("data: Variant", self)
@@ -248,7 +248,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_stretch_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 #		if randi() % 2 == 1:
-#			set_theme(load("res://RES/Theme.tres"))
+#			set_theme(Autoload.loadA("res://RES/Theme.tres"))
 #
 #			### qq += str(_clips_input())
 #			### qq += str(_get_minimum_size())
@@ -261,13 +261,13 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			add_constant_override("Środek", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 #		if randi() % 2 == 1:
-#			add_font_override("Świerszcz", load("res://RES/DynamicFont1.tres"))
+#			add_font_override("Świerszcz", Autoload.loadA("res://RES/DynamicFont1.tres"))
 #		if randi() % 2 == 1:
-#			add_icon_override("Godotte", load("res://RES/Sprite3.png"))
+#			add_icon_override("Godotte", Autoload.loadA("res://RES/Sprite3.png"))
 #		if randi() % 2 == 1:
-#			add_shader_override("Godotte", load("res://RES/VisualShader.tres"))
+#			add_shader_override("Godotte", Autoload.loadA("res://RES/VisualShader.tres"))
 #		if randi() % 2 == 1:
-#			add_stylebox_override("Godotte", load("res://RES/StyleBoxTexture.tres"))
+#			add_stylebox_override("Godotte", Autoload.loadA("res://RES/StyleBoxTexture.tres"))
 #			### qq += str(can_drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), "Hehe"))
 #			### drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
 #		if randi() % 2 == 1:

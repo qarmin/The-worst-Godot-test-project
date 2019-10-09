@@ -19,7 +19,7 @@ func _physics_process(delta) -> void:
 			set_constant_angular_velocity(randf() * 50)
 			#Deprecated set_friction(randf())
 			#Deprecated set_bounce(randf())
-			set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+			set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres",false))
 			
 			if Autoload.WRONG_BUGS:
 						
@@ -27,7 +27,7 @@ func _physics_process(delta) -> void:
 				set_constant_angular_velocity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+				set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres"))
 				
 		else: #RANDI
 			if randi() % 2 == 1:
@@ -39,4 +39,4 @@ func _physics_process(delta) -> void:
 			if randi() % 2 == 1:
 				set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set_physics_material_override(load("res://RES/PhysicsMaterial.tres"))
+				set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres"))

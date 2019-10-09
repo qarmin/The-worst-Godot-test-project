@@ -89,7 +89,7 @@ func _process(delta) -> void:
 				
 				q_MeshDataTool.set_edge_meta( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				q_MeshDataTool.set_face_meta( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_MeshDataTool.set_material( load("res://RES/SpatialMaterial.tres"))
+				q_MeshDataTool.set_material( Autoload.loadA("res://RES/SpatialMaterial.tres"))
 				q_MeshDataTool.set_vertex( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				q_MeshDataTool.set_vertex_bones( randi() % Autoload.RANGE - Autoload.RANGE / 2, PoolIntArray([11,124,1241,24,21,214,12,11]))
 				q_MeshDataTool.set_vertex_color( randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()) )

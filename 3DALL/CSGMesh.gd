@@ -15,14 +15,14 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if !Autoload.RANDI:
 			
-			#set_mesh(load("res://RES/CubeMesh.tres"))
-			set_material(load("res://RES/SpatialMaterial.tres"))
+			#set_mesh(Autoload.loadA("res://RES/CubeMesh.tres",false))
+			set_material(Autoload.loadA("res://RES/SpatialMaterial.tres",false))
 			
 			if Autoload.WRONG_BUGS:
-				set_mesh(load("res://RES/CubeMesh.tres"))
-				set_material(load("res://RES/SpatialMaterial.tres"))
+				set_mesh(Autoload.loadA("res://RES/CubeMesh.tres"))
+				set_material(Autoload.loadA("res://RES/SpatialMaterial.tres"))
 		else: #RANDI
 			if randi() % 2 == 1:
-				set_mesh(load("res://RES/CubeMesh.tres"))
+				set_mesh(Autoload.loadA("res://RES/CubeMesh.tres"))
 			if randi() % 2 == 1:
-				set_material(load("res://RES/SpatialMaterial.tres"))
+				set_material(Autoload.loadA("res://RES/SpatialMaterial.tres"))

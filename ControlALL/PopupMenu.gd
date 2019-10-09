@@ -22,10 +22,10 @@ func _process(delta) -> void:
 		set_submenu_popup_delay(randf() / 5.0)
 		add_check_item(str(randi()%50000), -1, randi()%50)
 		add_check_shortcut(ShortCut.new(), -1, bool(randi()%2))
-		add_icon_check_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), -1, randi()%50)
-		add_icon_check_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), -1, randi()%50)
-		add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), -1, randi()%50)
-		add_icon_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), -1, randi()%50)
+		add_icon_check_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), str(randi()%50000), -1, randi()%50)
+		add_icon_check_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), ShortCut.new(), -1, randi()%50)
+		add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), str(randi()%50000), -1, randi()%50)
+		add_icon_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), ShortCut.new(), -1, randi()%50)
 		add_item(str(randi()%50000), -1, randi()%50)
 		add_radio_check_item(str(randi()%50000), -1, randi()%50)
 		add_radio_check_shortcut(ShortCut.new(), -1, bool(randi()%2))
@@ -57,7 +57,7 @@ func _process(delta) -> void:
 		set_item_as_separator(0,bool(randi()%2))
 		set_item_checked(0,bool(randi()%2))
 		set_item_disabled(0,bool(randi()%2))
-		set_item_icon(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_item_icon(0,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		set_item_id(0,randi()%5)
 		set_item_metadata(0,PoolByteArray([]))
 		set_item_multistate(0,randi()%5)
@@ -78,10 +78,10 @@ func _process(delta) -> void:
 			set_submenu_popup_delay(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			add_check_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			add_check_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
-			add_icon_check_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			add_icon_check_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			add_icon_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_check_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_check_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			add_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			add_radio_check_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			add_radio_check_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
@@ -113,7 +113,7 @@ func _process(delta) -> void:
 			set_item_as_separator(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			set_item_checked(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,PoolByteArray([12,55,1,5,12,5215,215]))
 			set_item_multistate(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
@@ -142,13 +142,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_check_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
 		if randi() % 2 == 1:
-			add_icon_check_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_check_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			add_icon_check_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_check_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			add_icon_item(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			add_icon_shortcut(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_icon_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
 			add_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
@@ -212,7 +212,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		if randi() % 2 == 1:
 			set_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

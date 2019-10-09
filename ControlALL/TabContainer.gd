@@ -19,7 +19,7 @@ func _process(delta) -> void:
 #
 #		set_popup(popup_menu_temp)
 #		#set_tab_disabled(0,bool(randi()%2))
-#		#set_tab_icon(0,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#		#set_tab_icon(0,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 #		#set_tab_title(0,str(randi()%50))
 #		set_tabs_rearrange_group(0)
 #
@@ -42,7 +42,7 @@ func _process(delta) -> void:
 #		if Autoload.WRONG_BUGS:
 #			set_popup(popup_menu_temp)
 #			set_tab_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-#			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #			set_tab_title(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 #			set_tabs_rearrange_group(0)
 #
@@ -70,7 +70,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_tab_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 #		if randi() % 2 == 1:
 #			set_tab_title(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 #		if randi() % 2 == 1:

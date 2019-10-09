@@ -13,9 +13,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_Theme : Theme = Theme.new()
+		var q_Theme : Theme = Theme.new()
+		if !Autoload.RANDI:
 			
 			#q_Theme.set_default_font(Font.new())
 			
@@ -91,4 +91,72 @@ func _process(delta) -> void:
 				q_Theme.set_constant( "Ballada", "Wyniki", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				q_Theme.set_font( "Ballada", "Wyniki", Font.new() )
 				q_Theme.set_icon( "Ballada", "Wyniki", Texture.new())
+				q_Theme.set_stylebox( "Ballada", "Wyniki", StyleBox.new() )
+		else: #RANDI
+			if randi() % 2 == 1:
+				q_Theme.set_default_font(Font.new())
+				
+			if randi() % 2 == 1:
+				q_Theme.clear()
+			if randi() % 2 == 1:
+				q_Theme.clear_color( "Ballada", "Wyniki" )
+			if randi() % 2 == 1:
+				q_Theme.clear_constant( "Ballada", "Wyniki" )
+			if randi() % 2 == 1:
+				q_Theme.clear_font( "Ballada", "Wyniki" )
+			if randi() % 2 == 1:
+				q_Theme.clear_icon( "Ballada", "Wyniki" )
+			if randi() % 2 == 1:
+				q_Theme.clear_stylebox( "Ballada", "Wyniki" )
+				
+			if randi() % 2 == 1:
+				q_Theme.copy_default_theme()
+			if randi() % 2 == 1:
+				q_Theme.copy_theme( Theme.new() )
+				
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_color( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_color_list( "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_constant( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_constant_list( "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_font( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_font_list( "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_icon( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_icon_list( "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_stylebox( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_stylebox_list( "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_stylebox_types())
+			if randi() % 2 == 1:
+				qq += str(q_Theme.get_type_list( "Wyniki" ))
+				
+			if randi() % 2 == 1:
+				qq += str(q_Theme.has_color( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.has_constant( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.has_font( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.has_icon( "Ballada", "Wyniki" ))
+			if randi() % 2 == 1:
+				qq += str(q_Theme.has_stylebox( "Ballada", "Wyniki" ))
+				
+			if randi() % 2 == 1:
+				q_Theme.set_color( "Ballada", "Wyniki", Color(randf(),randf(),randf(),randf()))
+			if randi() % 2 == 1:
+				q_Theme.set_constant( "Ballada", "Wyniki", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
+				q_Theme.set_font( "Ballada", "Wyniki", Font.new() )
+			if randi() % 2 == 1:
+				q_Theme.set_icon( "Ballada", "Wyniki", Texture.new())
+			if randi() % 2 == 1:
 				q_Theme.set_stylebox( "Ballada", "Wyniki", StyleBox.new() )

@@ -13,13 +13,18 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_VideoStreamGDNative : VideoStreamGDNative = VideoStreamGDNative.new()
+		var q_VideoStreamGDNative : VideoStreamGDNative = VideoStreamGDNative.new()
+		if !Autoload.RANDI:
 			
 			qq += str(q_VideoStreamGDNative.get_file())
 			q_VideoStreamGDNative.set_file( "res://Heg.mp4")
 			
 			if Autoload.WRONG_BUGS:
 				qq += str(q_VideoStreamGDNative.get_file())
+				q_VideoStreamGDNative.set_file( "res://Heg.mp4")
+		else: #RANDI
+			if randi() % 2 == 1:
+				qq += str(q_VideoStreamGDNative.get_file())
+			if randi() % 2 == 1:
 				q_VideoStreamGDNative.set_file( "res://Heg.mp4")

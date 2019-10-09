@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		if !Autoload.RANDI:
 			var node_temp : Node = load("res://RES/Node.tscn").instance()
 			
-			set_sprite_frames(load("res://RES/SpriteFrames.tres"))
+			set_sprite_frames(Autoload.loadA("res://RES/SpriteFrames.tres",false))
 			set_frame(randi()%3)
 			set_animation("default")
 			set_speed_scale(randf() * 50)
@@ -60,13 +60,13 @@ func _process(delta) -> void:
 			set_draw_behind_parent(bool(randi()%2))
 			_set_on_top(bool(randi()%2))
 			set_light_mask(randi()%50)
-			set_material(load("res://RES/SpatialMaterial.tres"))
+			set_material(Autoload.loadA("res://RES/SpatialMaterial.tres",false))
 			set_use_parent_material(bool(randi()%2))
 			
 			###_draw()
-			###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
+			###draw_char(Autoload.loadA("res://RES/DynamicFont1.tres",false),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
 			###draw_circle(Vector2(randf() * 50,randf() * 50),randf() * 50,Color(randf(),randf(),randf(),randf()))
-			###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+			###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false),bool(randi()%2))
 			###draw_line(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50), Color(randf(),randf(),randf(),randf()))
 			###draw_mesh(
 			###draw_multiline(
@@ -107,7 +107,7 @@ func _process(delta) -> void:
 			qq += str(is_visible_in_tree())
 			
 			qq += str(make_canvas_position_local(Vector2(randf() * 50,randf() * 50)))
-			qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
+			qq += str(make_input_local(Autoload.loadA("res://RES/InputEventAction.tres",false)))
 			
 			set_as_toplevel(bool(randi()%2))
 			set_notify_local_transform(bool(randi()%2))
@@ -120,7 +120,7 @@ func _process(delta) -> void:
 			
 			## With Errors
 			if Autoload.WRONG_BUGS:
-				set_sprite_frames(load("res://RES/SpriteFrames.tres"))
+				set_sprite_frames(Autoload.loadA("res://RES/SpriteFrames.tres"))
 				set_frame(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_animation("afqwgqagagasfqw")
 				set_speed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
@@ -164,17 +164,17 @@ func _process(delta) -> void:
 				set_draw_behind_parent(bool(randi()%2))
 				_set_on_top(bool(randi()%2))
 				set_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_material(load("res://RES/SpatialMaterial.tres"))
+				set_material(Autoload.loadA("res://RES/SpatialMaterial.tres"))
 				set_use_parent_material(bool(randi()%2))
 				
 				###_draw()
-				###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),"Q","D",Color(randf(),randf(),randf(),randf()))
+				###draw_char(Autoload.loadA("res://RES/DynamicFont1.tres"),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),"Q","D",Color(randf(),randf(),randf(),randf()))
 				###draw_circle(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
-				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 				#draw_line(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Color(randf(),randf(),randf(),randf()))
-				###draw_char(load("res://RES/DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
+				###draw_char(Autoload.loadA("res://RES/DynamicFont1.tres"),Vector2(randf() * 50,randf() * 50),"Q","D",Color(randf(),randf(),randf(),randf()))
 				###draw_circle(Vector2(randf() * 50,randf() * 50),randf() * 50,Color(randf(),randf(),randf(),randf()))
-				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+				###draw_colored_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]), Color(randf(),randf(),randf(),randf()), PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
 				###draw_line(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50), Color(randf(),randf(),randf(),randf()))
 				###draw_mesh(
 				###draw_multiline(
@@ -215,7 +215,7 @@ func _process(delta) -> void:
 				qq += str(is_visible_in_tree())
 				
 				qq += str(make_canvas_position_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
-				qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
+				qq += str(make_input_local(Autoload.loadA("res://RES/InputEventAction.tres")))
 				
 				set_as_toplevel(bool(randi()%2))
 				set_notify_local_transform(bool(randi()%2))
@@ -229,7 +229,7 @@ func _process(delta) -> void:
 			var node_temp : Node = load("res://RES/Node.tscn").instance()
 			
 			if randi()%2 == 1:
-				set_sprite_frames(load("res://RES/SpriteFrames.tres"))
+				set_sprite_frames(Autoload.loadA("res://RES/SpriteFrames.tres"))
 			if randi()%2 == 1:
 				set_frame(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
@@ -313,7 +313,7 @@ func _process(delta) -> void:
 			if randi()%2 == 1:
 				set_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi()%2 == 1:
-				set_material(load("res://RES/SpatialMaterial.tres"))
+				set_material(Autoload.loadA("res://RES/SpatialMaterial.tres"))
 			if randi()%2 == 1:
 				set_use_parent_material(bool(randi()%2))
 				
@@ -358,7 +358,7 @@ func _process(delta) -> void:
 			if randi()%2 == 1:
 				qq += str(make_canvas_position_local(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 			if randi()%2 == 1:
-				qq += str(make_input_local(load("res://RES/InputEventAction.tres")))
+				qq += str(make_input_local(Autoload.loadA("res://RES/InputEventAction.tres")))
 				
 			if randi()%2 == 1:
 				set_as_toplevel(bool(randi()%2))

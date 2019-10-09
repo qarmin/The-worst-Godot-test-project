@@ -28,8 +28,8 @@ func _process(delta) -> void:
 			set_fractional_delta(bool(randi()%2))
 			set_use_local_coordinates(bool(randi()%2))
 			set_draw_order(randi()%2)
-			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			set_normalmap(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
+			set_normalmap(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			set_emission_shape(randi()%5)
 			set_emission_sphere_radius(randf() * 50)
 			set_emission_rect_extents(Vector2(randf() * 50,randf() * 50))
@@ -42,14 +42,14 @@ func _process(delta) -> void:
 			set_gravity(Vector2(randf() * 50,randf() * 50))
 			set("local_coords", bool(randi()%2))
 			set("draw_order", randi()%2)
-			set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
-			set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+			set("texture", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false)))
+			set("normalmap", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false)))
 			set("emission_shape", randi()%5)
 			set("flag_align_y", bool(randi()%2))
 			
 			for j in range(12): # range(12):
 				set_param(j,randf() * 2)
-				set_param_curve(j,load("res://RES/Curve" + str(randi()%2+1) + ".tres"))
+				set_param_curve(j,Autoload.loadA("res://RES/Curve" + str(randi()%2+1) + ".tres",false))
 				set_param_randomness(j,randf())
 				
 				
@@ -66,8 +66,8 @@ func _process(delta) -> void:
 				set_fractional_delta(bool(randi()%2))
 				set_use_local_coordinates(bool(randi()%2))
 				set_draw_order(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_texture(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
-				set_normalmap(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+				set_normalmap(Autoload.loadA("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
 				set_emission_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_emission_sphere_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_emission_rect_extents(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
@@ -80,14 +80,14 @@ func _process(delta) -> void:
 				set_gravity(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				set("local_coords", bool(randi()%2))
 				set("draw_order", randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
-				set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+				set("texture", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+				set("normalmap", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 				set("emission_shape", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set("flag_align_y", bool(randi()%2))
 				
 				for j in range(12): # range(12):
 					set_param(j,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-					set_param_curve(j,load("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
+					set_param_curve(j,Autoload.loadA("res://RES/Curve" + str(randi() % 4 + 1) + ".tres"))
 					set_param_randomness(j,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		else: #RANDI
 			if randi() % 2 == 1:
@@ -115,9 +115,9 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_draw_order(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set_texture(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
 			if randi() % 2 == 1:
-				set_normalmap(load("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
+				set_normalmap(Autoload.loadA("res://RES/Sprite" + str(randi()% 4 + 1) + ".png"))
 			if randi() % 2 == 1:
 				set_emission_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
@@ -143,9 +143,9 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set("draw_order", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set("texture", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+				set("texture", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 			if randi() % 2 == 1:
-				set("normalmap", (load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
+				set("normalmap", (Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")))
 			if randi() % 2 == 1:
 				set("emission_shape", randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
@@ -154,5 +154,5 @@ func _process(delta) -> void:
 			for j in range(12): # range(12):
 				if randi() % 2 == 1:
 					set_param(j,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-					set_param_curve(j,load("res://RES/Curve" + str(randi() % 2 + 1) + ".tres"))
+					set_param_curve(j,Autoload.loadA("res://RES/Curve" + str(randi() % 2 + 1) + ".tres"))
 					set_param_randomness(j,randf() * Autoload.RANGE - Autoload.RANGE / 2)

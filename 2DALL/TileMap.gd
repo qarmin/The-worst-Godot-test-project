@@ -18,7 +18,7 @@ func _process(delta) -> void:
 			clear()
 			#BUG fix_invalid_tiles()
 			set_mode(randi()%3)
-			set_tileset(load("res://RES/Tileset.tres"))
+			set_tileset(Autoload.loadA("res://RES/Tileset.tres",false))
 			set_cell_size(Vector2(randf() * 50 + 10,randf() * 50 + 10))
 			set_custom_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 			set_half_offset(randi()%5)
@@ -58,7 +58,7 @@ func _process(delta) -> void:
 				clear()
 				#BUG fix_invalid_tiles()
 				set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_tileset(load("res://RES/Tileset.tres"))
+				set_tileset(Autoload.loadA("res://RES/Tileset.tres"))
 				set_cell_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				set_custom_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 				set_half_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2)
@@ -102,7 +102,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				set_tileset(load("res://RES/Tileset.tres"))
+				set_tileset(Autoload.loadA("res://RES/Tileset.tres"))
 			if randi() % 2 == 1:
 				set_cell_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
@@ -162,8 +162,8 @@ func _process(delta) -> void:
 				set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 			if randi() % 2 == 1:
 				update_bitmask_area(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				update_bitmask_region(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#SPAM			if randi() % 2 == 1:
+#				update_bitmask_region(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
 				update_dirty_quadrants()
 			if randi() % 2 == 1:

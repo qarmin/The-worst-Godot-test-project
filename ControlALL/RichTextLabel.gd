@@ -27,7 +27,7 @@ func _process(delta) -> void:
 		set_scroll_follow(bool(randi()%2))
 		set_selection_enabled(bool(randi()%2))
 		set_override_selected_font_color(bool(randi()%2))
-		add_image(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		add_image(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		add_text(str("\n\n\nafafas") + str(randi()%50))
 		qq += str(append_bbcode(str("\n\n\nafafas") + str(randi()%50)))
 		qq += str(get_content_height())
@@ -41,7 +41,7 @@ func _process(delta) -> void:
 		push_align(randi()%4)
 		#push_cell()
 		push_color(Color(randf(),randf(),randf(),randf()))
-		push_font(load("res://RES/DynamicFont1.tres"))
+		push_font(Autoload.loadA("res://RES/DynamicFont1.tres",false))
 		push_indent(randi()%6)
 		push_list(randi()%3)
 		push_meta(get_parent())
@@ -65,7 +65,7 @@ func _process(delta) -> void:
 			set_scroll_follow(bool(randi()%2))
 			set_selection_enabled(bool(randi()%2))
 			set_override_selected_font_color(bool(randi()%2))
-			add_image(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			add_image(Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			add_text(str("\n\n\nafafas") + str(randi()%50))
 			qq += str(append_bbcode(str("\n\n\nafafas") + str(randi()%50)))
 			qq += str(get_content_height())
@@ -79,7 +79,7 @@ func _process(delta) -> void:
 			push_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_cell()
 			push_color(Color(randf(),randf(),randf(),randf()))
-			push_font(load("res://RES/DynamicFontasfasfawg.tres"))
+			push_font(Autoload.loadA("res://RES/DynamicFontasfasfawg.tres"))
 			push_indent(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_list(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			push_meta(get_parent())
@@ -116,7 +116,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_override_selected_font_color(bool(randi()%2))
 		if randi() % 2 == 1:
-			add_image(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			add_image(Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
 			add_text(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
@@ -144,7 +144,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			push_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			push_font(load("res://RES/DynamicFontasfasfawg.tres"))
+			push_font(Autoload.loadA("res://RES/DynamicFontasfasfawg.tres"))
 		if randi() % 2 == 1:
 			push_indent(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

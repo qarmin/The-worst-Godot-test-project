@@ -24,7 +24,7 @@ func _process(delta) -> void:
 	
 			q_BitmapFont.add_char( randi()%50, randi()%50, Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50), randf() * 50)
 			q_BitmapFont.add_kerning_pair( randi()%50, randi()%50,randi()%50)
-			q_BitmapFont.add_texture( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			
 			q_BitmapFont.clear()
 			#if Autoload.SLOW_FUNCTIONS:
@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		
 				q_BitmapFont.add_char( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				q_BitmapFont.add_kerning_pair( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_BitmapFont.add_texture( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 				q_BitmapFont.clear()
 				if Autoload.SLOW_FUNCTIONS:
@@ -69,7 +69,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_BitmapFont.add_kerning_pair( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				q_BitmapFont.add_texture( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 			if randi() % 2 == 1:
 				q_BitmapFont.clear()

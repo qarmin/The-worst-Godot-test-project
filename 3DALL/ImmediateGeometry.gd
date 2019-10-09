@@ -17,7 +17,7 @@ func _process(delta) -> void:
 #
 #			add_sphere(randi()%50,randi()%50,randf() * 50,bool(randi()%2))
 #			add_vertex(Vector3(randf() * 50,randf() * 50,randf() * 50))
-#			begin(randi() % 7,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#			begin(randi() % 7,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false)) # PrimitiveType
 #			clear()
 #			end()
 #			set_color(Color(randf(),randf(),randf(),randf()))
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 #			if Autoload.WRONG_BUGS:
 #				add_sphere(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 #				add_vertex(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-#				begin(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#				begin(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
 #				clear()
 #				end()
 #				set_color(Color(randf(),randf(),randf(),randf()))
@@ -44,7 +44,7 @@ func _process(delta) -> void:
 #			if randi() % 2 == 1:
 #				add_vertex(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 #			if randi() % 2 == 1:
-#				begin(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#				begin(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
 #			if randi() % 2 == 1:
 #				clear()
 #			if randi() % 2 == 1:

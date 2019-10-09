@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if !Autoload.RANDI:
 			
-			#set_stream(load("res://RES/AudioStreamGenerator.tres"))
+			#set_stream(Autoload.loadA("res://RES/AudioStreamGenerator.tres",false))
 			set_volume_db(randf() * 50)
 			set_pitch_scale(randf() * 50)
 			_set_playing(bool(randi()%2))
@@ -33,7 +33,7 @@ func _process(delta) -> void:
 			qq += str(get_stream_playback())
 			
 			if Autoload.WRONG_BUGS:
-				set_stream(load("res://RES/AudioStreamGenerator.tres"))
+				set_stream(Autoload.loadA("res://RES/AudioStreamGenerator.tres"))
 				set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_pitch_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				_set_playing(bool(randi()%2))
@@ -48,7 +48,7 @@ func _process(delta) -> void:
 				stop()
 		else: #RANDI
 			if randi() % 2 == 1:
-				set_stream(load("res://RES/AudioStreamGenerator.tres"))
+				set_stream(Autoload.loadA("res://RES/AudioStreamGenerator.tres"))
 			if randi() % 2 == 1:
 				set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:

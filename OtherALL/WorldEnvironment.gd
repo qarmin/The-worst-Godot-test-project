@@ -16,13 +16,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if !Autoload.RANDI:
 			
-			#set_environment(load("default_env" + str(randi() % 2)+".tres"))
+			#set_environment(Autoload.loadA("default_env" + str(randi() % 2)+".tres",false))
 			
 			if Autoload.WRONG_BUGS:
 				if Autoload.SLOW_FUNCTIONS:
-					set_environment(load("res://RES/default_env" + str(randi() % 2)+".tres"))
+					set_environment(Autoload.loadA("res://RES/default_env" + str(randi() % 2)+".tres"))
 	
 		else: #RANDI
 			if randi() % 2 == 1:
 				if Autoload.SLOW_FUNCTIONS:
-					set_environment(load("res://RES/default_env" + str(randi() % 2)+".tres"))
+					set_environment(Autoload.loadA("res://RES/default_env" + str(randi() % 2)+".tres"))

@@ -63,7 +63,7 @@ func _physics_process(delta) -> void:
 			#remove_shape_owner(0)
 			
 			qq += str(shape_find_owner(0))
-			#shape_owner_add_shape(0,load("res://RES/CircleShape2D.tres"))
+			#shape_owner_add_shape(0,Autoload.loadA("res://RES/CircleShape2D.tres",false))
 			#shape_owner_clear_shapes(0)
 			qq += str(shape_owner_get_owner(0))
 			qq += str(shape_owner_get_shape(0,0))
@@ -129,7 +129,7 @@ func _physics_process(delta) -> void:
 				remove_shape_owner(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				
 				qq += str(shape_find_owner(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-				shape_owner_add_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/CircleShape2D.tres"))
+				shape_owner_add_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/CircleShape2D.tres"))
 				shape_owner_clear_shapes(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				qq += str(shape_owner_get_owner(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 				qq += str(shape_owner_get_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
@@ -217,7 +217,7 @@ func _physics_process(delta) -> void:
 			if randi() % 2 == 1:
 				qq += str(shape_find_owner(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
-				shape_owner_add_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/CircleShape2D.tres"))
+				shape_owner_add_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/CircleShape2D.tres"))
 			if randi() % 2 == 1:
 				shape_owner_clear_shapes(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:

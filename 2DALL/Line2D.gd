@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			set_points(PoolVector2Array([Vector2(randf(), randf()),Vector2(randf(), -randf()),Vector2(-randf(), randf())]))
 			set_width(randf() * 50)
 			set_default_color(Color(randf(),randf(),randf(),randf()))
-			set_gradient(load("res://RES/Gradient" + str(randi()%1 + 1) + ".tres"))
-			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_gradient(Autoload.loadA("res://RES/Gradient" + str(randi()%1 + 1) + ".tres",false))
+			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			set_texture_mode(randi()%3)
 			set_joint_mode(randi()%3)
 			set_begin_cap_mode(randi()%3)
@@ -38,8 +38,8 @@ func _process(delta) -> void:
 				set_points(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
 				set_width(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_default_color(Color(randf(),randf(),randf(),randf()))
-				set_gradient(load("res://RES/Gradient1.tres"))
-				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_gradient(Autoload.loadA("res://RES/Gradient1.tres"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				set_texture_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_joint_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				set_begin_cap_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
@@ -62,9 +62,9 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_default_color(Color(randf(),randf(),randf(),randf()))
 			if randi() % 2 == 1:
-				set_gradient(load("res://RES/Gradient1.tres"))
+				set_gradient(Autoload.loadA("res://RES/Gradient1.tres"))
 			if randi() % 2 == 1:
-				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			if randi() % 2 == 1:
 				set_texture_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:

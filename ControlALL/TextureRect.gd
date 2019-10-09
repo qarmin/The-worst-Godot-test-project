@@ -15,14 +15,14 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		set_expand(bool(randi()%2))
 		set_stretch_mode(randi()%8)
 		set_flip_h(bool(randi()%2))
 		set_flip_v(bool(randi()%2))
 		
 		if Autoload.WRONG_BUGS:
-			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_expand(bool(randi()%2))
 			set_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			set_flip_h(bool(randi()%2))
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		
 	else: #RANDI
 		if randi() % 2 == 1:
-			set_texture(load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
 			set_expand(bool(randi()%2))
 		if randi() % 2 == 1:

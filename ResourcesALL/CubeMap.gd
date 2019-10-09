@@ -23,7 +23,7 @@ func _process(delta) -> void:
 			qq += str(q_CubeMap.get_height())
 			qq += str(q_CubeMap.get_side(randi() % 6))# Side
 			qq += str(q_CubeMap.get_width())
-			#q_CubeMap.set_side( randi() % 6, load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))# Side
+			#q_CubeMap.set_side( randi() % 6, Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1,false) + ".png"))# Side
 	
 			if Autoload.WRONG_BUGS:
 				q_CubeMap.set_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FLAGS 
@@ -33,7 +33,7 @@ func _process(delta) -> void:
 				qq += str(q_CubeMap.get_height())
 				qq += str(q_CubeMap.get_side(randi() % Autoload.RANGE - Autoload.RANGE / 2))# Side
 				qq += str(q_CubeMap.get_width())
-				q_CubeMap.set_side( randi() % Autoload.RANGE - Autoload.RANGE / 2, load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))# Side
+				q_CubeMap.set_side( randi() % Autoload.RANGE - Autoload.RANGE / 2, Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",true))# Side
 
 		else: #RANDI
 			if randi() % 2 == 1:
@@ -50,4 +50,4 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				qq += str(q_CubeMap.get_width())
 			if randi() % 2 == 1:
-				q_CubeMap.set_side( randi() % Autoload.RANGE - Autoload.RANGE / 2, load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))# Side
+				q_CubeMap.set_side( randi() % Autoload.RANGE - Autoload.RANGE / 2, Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",true))# Side

@@ -17,7 +17,7 @@ func _process(delta) -> void:
 			
 			set_enabled(bool(randi()%2))
 			set_editor_only(bool(randi()%2))
-			set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			set_texture_offset(Vector2(randf() * 50,randf() * 50))
 			set_texture_scale(randf() * 50)
 			set_color(Color(randf(),randf(),randf(),randf()))
@@ -39,7 +39,7 @@ func _process(delta) -> void:
 			if Autoload.WRONG_BUGS:
 				set_enabled(bool(randi()%2))
 				set_editor_only(bool(randi()%2))
-				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				set_texture_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				set_texture_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				set_color(Color(randf(),randf(),randf(),randf()))
@@ -63,7 +63,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_editor_only(bool(randi()%2))
 			if randi() % 2 == 1:
-				set_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			if randi() % 2 == 1:
 				set_texture_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:

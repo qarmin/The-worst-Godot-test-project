@@ -15,11 +15,11 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if !Autoload.RANDI:
 			
-			set_curve(load("res://RES/Curve2D1.tres"))
+			set_curve(Autoload.loadA("res://RES/Curve2D1.tres",false))
 			
 			if Autoload.WRONG_BUGS:
-				set_curve(load("res://RES/Curve2D1.tres"))
+				set_curve(Autoload.loadA("res://RES/Curve2D1.tres"))
 	
 		else: #RANDI
 			if randi() % 2 == 1:
-				set_curve(load("res://RES/Curve2D1.tres"))
+				set_curve(Autoload.loadA("res://RES/Curve2D1.tres"))

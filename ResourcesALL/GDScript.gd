@@ -67,7 +67,7 @@ func _process(delta) -> void:
 			qq += str(len(String("asf")))
 			qq += str(lerp(randf() * 50,randf() * 50,randf() * 50))
 			qq += str(linear2db(randf() * 50))
-			qq += str(load("res://RES/Sprite1.png"))
+			qq += str(Autoload.loadA("res://RES/Sprite1.png",false))
 			qq += str(log(randf() * 50))
 			qq += str(max(randf() * 50,randf() * 50))
 			qq += str(min(randf() * 50,randf() * 50))
@@ -186,7 +186,7 @@ func _process(delta) -> void:
 				qq += str(len(String("asf")))
 				qq += str(lerp(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				qq += str(linear2db(randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(load("res://RES/Sprite1.png"))
+				qq += str(Autoload.loadA("res://RES/Sprite1.png"))
 				qq += str(log(randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				qq += str(max(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				qq += str(min(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
@@ -341,7 +341,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				qq += str(linear2db(randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
-				qq += str(load("res://RES/Sprite1.png"))
+				qq += str(Autoload.loadA("res://RES/Sprite1.png"))
 			if randi() % 2 == 1:
 				qq += str(log(randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:

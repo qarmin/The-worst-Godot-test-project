@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		if !Autoload.RANDI:
 			
 			#q_BitMap.create(Vector2(randf() * 50,randf() * 50))
-			#q_BitMap.create_from_image_alpha( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * 50)
+			#q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false),randf() * 50)
 			
 			#qq += str(q_BitMap.get_bit(Vector2(randf() * 50,randf() * 50)))
 			qq += str(q_BitMap.get_size())
@@ -32,7 +32,7 @@ func _process(delta) -> void:
 			
 			if Autoload.WRONG_BUGS:
 				q_BitMap.create(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_BitMap.create_from_image_alpha( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				
 				qq += str(q_BitMap.get_bit(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 				qq += str(q_BitMap.get_size())
@@ -48,7 +48,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_BitMap.create(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
-				q_BitMap.create_from_image_alpha( load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				
 			if randi() % 2 == 1:
 				qq += str(q_BitMap.get_bit(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))

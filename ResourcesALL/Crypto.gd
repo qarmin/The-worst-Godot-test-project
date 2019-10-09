@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 			qq += str(q_Crypto.generate_random_bytes(randi()%50))
 			#qq += str(q_Crypto.generate_rsa(randi()%50))
-			#qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
+			#qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("res://RES/CryptoKey.tres",false), "Szczekacz", "W koło", "Sia"))
 			
 			
 			if Autoload.WRONG_BUGS:
 				qq += str(q_Crypto.generate_random_bytes(randi() % Autoload.RANGE - Autoload.RANGE / 2))
 				qq += str(q_Crypto.generate_rsa(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(q_Crypto.generate_self_signed_certificate(load("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
+				qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))

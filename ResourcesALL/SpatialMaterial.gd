@@ -38,7 +38,7 @@ func _process(delta) -> void:
 			q_SpatialMaterial.set_particles_anim_v_frames(randi()%50)
 			q_SpatialMaterial.set_particles_anim_loop(bool(randi()%2))
 			q_SpatialMaterial.set_albedo(Color(randf(),randf(),randf(),randf()))
-			q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			q_SpatialMaterial.set_metallic(randf() * 50)
 			q_SpatialMaterial.set_specular(randf() * 50)
 			q_SpatialMaterial.set_metallic_texture_channel(randi() % 5)#TextureChannel
@@ -98,7 +98,7 @@ func _process(delta) -> void:
 				q_SpatialMaterial.set_particles_anim_v_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				q_SpatialMaterial.set_particles_anim_loop(bool(randi()%2))
 				q_SpatialMaterial.set_albedo(Color(randf(),randf(),randf(),randf()))
-				q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",true))
 				q_SpatialMaterial.set_metallic(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				q_SpatialMaterial.set_specular(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				q_SpatialMaterial.set_metallic_texture_channel(randi() % Autoload.RANGE - Autoload.RANGE / 2)#TextureChannel
@@ -176,7 +176,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_SpatialMaterial.set_albedo(Color(randf(),randf(),randf(),randf()))
 			if randi() % 2 == 1:
-				q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",true))
 			if randi() % 2 == 1:
 				q_SpatialMaterial.set_metallic(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:

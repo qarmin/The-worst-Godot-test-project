@@ -17,7 +17,7 @@ func _process(delta) -> void:
 			
 			set_keep_aspect_mode(randi()%2)
 			set_cull_mask(randi()%20)
-			set_environment(load("res://RES/default_env" + str(randi() %2 + 1) + ".tres"))
+			set_environment(Autoload.loadA("res://RES/default_env" + str(randi() %2 + 1) + ".tres",false))
 			set_h_offset(randf() * 50)
 			set_v_offset(randf() * 50)
 			set_doppler_tracking(randi()%3)

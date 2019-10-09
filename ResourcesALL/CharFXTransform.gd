@@ -23,7 +23,7 @@ func _process(delta) -> void:
 			q_CharFXTransform.set_visibility(bool(randi()%2))
 			q_CharFXTransform.set_offset(Vector2(randf() * 50,randf() * 50))
 			q_CharFXTransform.set_color(Color(randf(),randf(),randf(),randf()))
-			q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : load("res://RES/default_env1.tres")})
+			q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : Autoload.loadA("res://RES/default_env1.tres",false)})
 			q_CharFXTransform.set_character(randi()%50)
 			
 			q_CharFXTransform.get_value_or("PRGORAM", randi()% 50)
@@ -35,7 +35,7 @@ func _process(delta) -> void:
 				q_CharFXTransform.set_visibility(bool(randi()%2))
 				q_CharFXTransform.set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				q_CharFXTransform.set_color(Color(randf(),randf(),randf(),randf()))
-				q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : load("res://RES/default_env1.tres")})
+				q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : Autoload.loadA("res://RES/default_env1.tres")})
 				q_CharFXTransform.set_character(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				
 				q_CharFXTransform.get_value_or("PRGORAM", randi() % Autoload.RANGE - Autoload.RANGE / 2)

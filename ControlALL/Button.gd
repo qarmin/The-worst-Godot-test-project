@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		set_text(str(randi()%50000))
-		set_button_icon(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_button_icon(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		set_flat(bool(randi()%2))
 		set_clip_text(bool(randi()%2))
 		set_text_align(randi()%3)
@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		if Autoload.WRONG_BUGS:
 			
 			set_text(str(randi()%50000))
-			set_button_icon(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_button_icon(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			set_flat(bool(randi()%2))
 			set_clip_text(bool(randi()%2))
 			set_text_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
@@ -69,7 +69,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(randi()%50000))
 		if randi() % 2 == 1:
-			set_button_icon(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_button_icon(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 		if randi() % 2 == 1:
 			set_flat(bool(randi()%2))
 		if randi() % 2 == 1:

@@ -38,22 +38,22 @@ func _process(delta) -> void:
 			pm.set_render_priority(randi()%200 - 100)
 			pm.set_next_pass(ParticlesMaterial.new())
 			CT.set_width(randi()%10 + 50)
-			CT.set_curve(load("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
+			CT.set_curve(Autoload.loadA("res://RES/Curve" + str(randi()%3 + 1) + ".tres",false))
 			pm.set_trail_divisor(randi()%12)
 			pm.set_trail_size_modifier(CT)
-			pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
+			pm.set_trail_color_modifier(Autoload.loadA("res://RES/Gradient1.tres",false))
 			pm.set_emission_shape(randi()%5)
 			pm.set_emission_sphere_radius(randf() * 50)
 			pm.set_emission_box_extents(Vector3(randf() * 50,randf() * 50,randf() * 50))
-			pm.set_emission_point_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			pm.set_emission_normal_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-			pm.set_emission_color_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			pm.set_emission_point_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
+			pm.set_emission_normal_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
+			pm.set_emission_color_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			pm.set_emission_point_count(randi()%50)
 			pm.set_spread(randf() * 360)
 			pm.set_flatness(randf())
 			pm.set_gravity(Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))
 			pm.set_color(Color(randf(),randf(),randf(),randf()))
-			pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			pm.set_color_ramp(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			
 			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,bool(randi()%2))
 			pm.set_flag(pm.FLAG_ROTATE_Y ,bool(randi()%2))
@@ -63,7 +63,7 @@ func _process(delta) -> void:
 			for j in range(11): # range(12):
 				pm.set_param(j,randf() * 2)
 				pm.set_param_randomness(j,randf())
-				pm.set_param_texture(j,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_param_texture(j,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 			
 			set_process_material(pm)
 			
@@ -90,28 +90,28 @@ func _process(delta) -> void:
 				pm.set_render_priority(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_next_pass(ParticlesMaterial.new())
 				CT.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				CT.set_curve(load("res://RES/Curve1.tres"))
+				CT.set_curve(Autoload.loadA("res://RES/Curve1.tres"))
 				pm.set_trail_divisor(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_trail_size_modifier(CT)
-				pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
+				pm.set_trail_color_modifier(Autoload.loadA("res://RES/Gradient1.tres"))
 				pm.set_emission_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_emission_sphere_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_emission_box_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				pm.set_emission_point_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-				pm.set_emission_normal_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
-				pm.set_emission_color_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_point_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_normal_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_color_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				pm.set_emission_point_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_spread(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_flatness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_gravity(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 				pm.set_color(Color(randf(),randf(),randf(),randf()))
-				pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_color_ramp(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 				pm.set_flag(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 				
 				pm.set_param(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 				pm.set_param_randomness(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				pm.set_param_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_param_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 				set_process_material(pm)
 				
@@ -155,13 +155,13 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				CT.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				CT.set_curve(load("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
+				CT.set_curve(Autoload.loadA("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
 			if randi() % 2 == 1:
 				pm.set_trail_divisor(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
 				pm.set_trail_size_modifier(CT)
 			if randi() % 2 == 1:
-				pm.set_trail_color_modifier(load("res://RES/Gradient1.tres"))
+				pm.set_trail_color_modifier(Autoload.loadA("res://RES/Gradient1.tres"))
 			if randi() % 2 == 1:
 				pm.set_emission_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
@@ -169,11 +169,11 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				pm.set_emission_box_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
-				pm.set_emission_point_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_point_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			if randi() % 2 == 1:
-				pm.set_emission_normal_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_normal_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			if randi() % 2 == 1:
-				pm.set_emission_color_texture(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_emission_color_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 			if randi() % 2 == 1:
 				pm.set_emission_point_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
@@ -185,7 +185,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				pm.set_color(Color(randf(),randf(),randf(),randf()))
 			if randi() % 2 == 1:
-				pm.set_color_ramp(load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_color_ramp(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 			if randi() % 2 == 1:
 				pm.set_flag(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
@@ -195,7 +195,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				pm.set_param_randomness(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:
-				pm.set_param_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+				pm.set_param_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
 				
 			if randi() % 2 == 1:
 				restart()

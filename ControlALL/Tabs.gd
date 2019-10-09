@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		for _i in range(10):
-			add_tab(str(randf()),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			add_tab(str(randf()),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		ensure_tab_visible(randi() % get_tab_count())
 		qq += str(get_offset_buttons_visible())
 		qq += str(get_select_with_rmb())
@@ -40,7 +40,7 @@ func _process(delta) -> void:
 		
 		set_select_with_rmb(bool(randi()%2))
 		set_tab_disabled(randi() % get_tab_count(),bool(randi()%2))
-		set_tab_icon(randi() % get_tab_count(),load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+		set_tab_icon(randi() % get_tab_count(),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
 		set_tab_title(randi() % get_tab_count(),str(randi()%50))
 		set_tabs_rearrange_group(randi()%50)
 		
@@ -49,7 +49,7 @@ func _process(delta) -> void:
 		
 		if Autoload.WRONG_BUGS:
 			for _i in range(10):
-				add_tab(str(randf()),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+				add_tab(str(randf()),Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			ensure_tab_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			qq += str(get_offset_buttons_visible())
 			qq += str(get_select_with_rmb())
@@ -73,7 +73,7 @@ func _process(delta) -> void:
 			
 			set_select_with_rmb(bool(randi()%2))
 			set_tab_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 			set_tab_title(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi()%50))
 			set_tabs_rearrange_group(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 			
@@ -81,8 +81,9 @@ func _process(delta) -> void:
 				remove_tab(randi() % get_tab_count())
 
 	else: #RANDI
-		for _i in range(10):
-			add_tab(str(randf()),load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+		if randi() % 2 == 1:
+			for _i in range(10):
+				add_tab(str(randf()),Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
 			ensure_tab_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
@@ -125,7 +126,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tab_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
 		if randi() % 2 == 1:
-			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,load("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
+			set_tab_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%10 + 1) + ".png"))
 		if randi() % 2 == 1:
 			set_tab_title(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi()%50))
 		if randi() % 2 == 1:

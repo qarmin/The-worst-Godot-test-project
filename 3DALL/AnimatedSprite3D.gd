@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		if !Autoload.RANDI:
 			
 			for i in range(4):
-				SF.add_frame("default",load("res://RES/Sprite" + str(i + 1) + ".png"),-1)
+				SF.add_frame("default",Autoload.loadA("res://RES/Sprite" + str(i + 1) + ".png",false),-1)
 			
 			set_sprite_frames(SF)
 			set_animation("default")
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 	
 			if Autoload.WRONG_BUGS:
 				for i in range(4):
-					SF.add_frame(str(randi() % 1000000),load("res://RES/Sprite" + str(i + 1) + ".png"),randi() % Autoload.RANGE - Autoload.RANGE / 2)
+					SF.add_frame(str(randi() % 1000000),Autoload.loadA("res://RES/Sprite" + str(i + 1) + ".png"),randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				
 				set_sprite_frames(SF)
 				set_animation("default")
@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		else: #RANDI
 			if randi() % 2 == 1:
 				for i in range(4):
-					SF.add_frame(str(randi() % 1000000),load("res://RES/Sprite" + str(i + 1) + ".png"),randi() % Autoload.RANGE - Autoload.RANGE / 2)
+					SF.add_frame(str(randi() % 1000000),Autoload.loadA("res://RES/Sprite" + str(i + 1) + ".png"),randi() % Autoload.RANGE - Autoload.RANGE / 2)
 				
 			if randi() % 2 == 1:
 				set_sprite_frames(SF)
