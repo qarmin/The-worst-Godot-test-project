@@ -13,61 +13,28 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_subdiv(randi() % (SUBDIV_MAX)) # Subdiv
-			set_extents(Vector3(randf() * 50,randf() * 50,randf() * 50))
-			set_dynamic_range(randi()%50)
-			set_energy(randf() * 50)
-			set_propagation(randf() * 50)
-			set_bias(randf() * 50)
-			set_normal_bias(randf() * 50)
+
+		if randi() % 2 == 1:
+			set_subdiv(randi() % 10 - 50) # Subdiv
+		if randi() % 2 == 1:
+			set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			set_dynamic_range(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_propagation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_normal_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			set_interior(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_compress(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_probe_data(GIProbeData.new())
 			
 			if Autoload.SLOW_FUNCTIONS:
 				bake(self, bool(randi()%2))
 				debug_bake()
-			
-			if Autoload.WRONG_BUGS:
-				set_subdiv(randi() % 10 - 50) # Subdiv
-				set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				set_dynamic_range(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_propagation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_normal_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_interior(bool(randi()%2))
-				set_compress(bool(randi()%2))
-				set_probe_data(GIProbeData.new())
-				
-				if Autoload.SLOW_FUNCTIONS:
-					bake(self, bool(randi()%2))
-					debug_bake()
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_subdiv(randi() % 10 - 50) # Subdiv
-			if randi() % 2 == 1:
-				set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				set_dynamic_range(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_propagation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_normal_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_interior(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_compress(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_probe_data(GIProbeData.new())
-				
-				if Autoload.SLOW_FUNCTIONS:
-					bake(self, bool(randi()%2))
-					debug_bake()

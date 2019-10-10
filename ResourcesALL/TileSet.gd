@@ -77,7 +77,7 @@ func _process(delta) -> void:
 			qq += str(q_TileSet.get_tiles_ids())
 			
 		if randi() % 2 == 1:
-			q_TileSet.tile_add_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, Shape2D.new(), Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), bool(randi()%2), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_TileSet.tile_add_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, RectangleShape2D.new(), Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), bool(randi()%2), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			qq += str(q_TileSet.tile_get_light_occluder( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 		if randi() % 2 == 1:
@@ -137,7 +137,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_region( randi() % Autoload.RANGE - Autoload.RANGE / 2, Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Shape2D.new() )
+			q_TileSet.tile_set_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, RectangleShape2D.new() )
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_shape_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
 		if randi() % 2 == 1:
@@ -147,7 +147,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_shape_transform( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shapes( randi() % Autoload.RANGE - Autoload.RANGE / 2, [Shape.new(),Shape.new()])
+			q_TileSet.tile_set_shapes( randi() % Autoload.RANGE - Autoload.RANGE / 2, [BoxShape.new(),BoxShape.new()])
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_texture( randi() % Autoload.RANGE - Autoload.RANGE / 2, Texture.new() )
 		if randi() % 2 == 1:

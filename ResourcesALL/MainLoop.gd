@@ -42,5 +42,5 @@ func _process(delta) -> void:
 			qq += str(q_MainLoop.iteration( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
 
 
-
-		
+func delete_node():
+	q_MainLoop.free()

@@ -27,7 +27,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			CT.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:
-			CT.set_curve(Autoload.loadA("res://RES/Curve" + str(randi()%3 + 1) + ".tres"))
+			CT.set_curve(Autoload.loadA("res://RES/Curve.tres"))
 		if randi() % 2 == 1:
 			q_ParticlesMaterial.set_trail_divisor(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

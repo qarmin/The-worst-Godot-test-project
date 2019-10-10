@@ -1,7 +1,0 @@
-[gd_resource type="Curve" format=2]
-
-[resource]
-min_value = -443.69
-max_value = 247.36
-bake_resolution = 75
-_data = [ Vector2( 0.151046, 41.7035 ), 0.0, 12196.0, 0, 0, Vector2( 0.337366, -311.008 ), -1863.57, -1863.57, 0, 0, Vector2( 0.596318, -231.952 ), 2750.99, 2750.99, 0, 0, Vector2( 0.710004, 66.0285 ), -4951.77, 0.0, 0, 0 ]

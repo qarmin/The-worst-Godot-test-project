@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_NodePath : NodePath
+var q_NodePath : NodePath = NodePath(".")
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

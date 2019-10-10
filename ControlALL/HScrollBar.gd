@@ -16,48 +16,10 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		# ScrollBar
-		set_custom_step(randf() * 50)
-		
-		# Range
-		set_min(randf() * 50)
-		set_max(randf() * 50)
-		set_step(randf() * 50)
-		set_page(randf() * 50)
-		set_value(randf() * 50)
-		set_as_ratio(randf() * 50)
-		set_exp_ratio(bool(randi()%2))
-		set_use_rounded_values(bool(randi()%2))
-		set_allow_greater(bool(randi()%2))
-		set_allow_lesser(bool(randi()%2))
-		
-		share(self)
-		unshare()
-		
-		if Autoload.WRONG_BUGS:
-			# ScrollBar
-			set_custom_step(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			
-			# Range
-			set_min(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_max(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_step(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_page(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_value(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_as_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_exp_ratio(bool(randi()%2))
-			set_use_rounded_values(bool(randi()%2))
-			set_allow_greater(bool(randi()%2))
-			set_allow_lesser(bool(randi()%2))
-			
-			share(self)
-			unshare()
-
-	else: #RANDI
 		if randi() % 2 == 1:
-			# ScrollBar
 			set_custom_step(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			
-			# Range
+		# Range
 		if randi() % 2 == 1:
 			set_min(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

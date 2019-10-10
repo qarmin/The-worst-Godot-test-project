@@ -13,99 +13,45 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_width(randf() * 50)
-			set_height(randf() * 50)
-			set_depth(randf() * 50)
+
+		if randi() % 2 == 1:
+			set_width(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())
 			
 			# CSGPrimivive
+		if randi() % 2 == 1:
 			set_invert_faces(bool(randi()%2))
 			
 			# CSGShape
-			set_operation(randi() % 3) # OPERATION
-			set_snap(randf() * 50)
+		if randi() % 2 == 1:
+			set_operation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # OPERATION
+		if randi() % 2 == 1:
+			set_snap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			set_calculate_tangents(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_use_collision(bool(randi()%2))
-			set_collision_layer(randi()%50000)
-			set_collision_mask(randi()%50000)
+		if randi() % 2 == 1:
+			set_collision_layer(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
 			
-			qq += str(get_collision_layer_bit(randi() % 20))
-			qq += str(get_collision_mask_bit(randi() % 20))
+		if randi() % 2 == 1:
+			qq += str(get_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			qq += str(get_meshes())
 			
+		if randi() % 2 == 1:
 			qq += str(is_root_shape())
 			
-			set_collision_layer_bit(randi() % 20,bool(randi()%2))
-			set_collision_mask_bit(randi() % 20,bool(randi()%2))
-			
-			
-			if Autoload.WRONG_BUGS:
-				set_width(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_material(SpatialMaterial.new())
-				
-				# CSGPrimivive
-				set_invert_faces(bool(randi()%2))
-				
-				# CSGShape
-				set_operation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # OPERATION
-				set_snap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_calculate_tangents(bool(randi()%2))
-				set_use_collision(bool(randi()%2))
-				set_collision_layer(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
-				set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
-				
-				qq += str(get_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(get_meshes())
-				
-				qq += str(is_root_shape())
-				
-				set_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-				set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_width(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_material(SpatialMaterial.new())
-				
-				# CSGPrimivive
-			if randi() % 2 == 1:
-				set_invert_faces(bool(randi()%2))
-				
-				# CSGShape
-			if randi() % 2 == 1:
-				set_operation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # OPERATION
-			if randi() % 2 == 1:
-				set_snap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_calculate_tangents(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_use_collision(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_collision_layer(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
-				
-			if randi() % 2 == 1:
-				qq += str(get_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				qq += str(get_meshes())
-				
-			if randi() % 2 == 1:
-				qq += str(is_root_shape())
-				
-			if randi() % 2 == 1:
-				set_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
-			if randi() % 2 == 1:
-				set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+		if randi() % 2 == 1:
+			set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))

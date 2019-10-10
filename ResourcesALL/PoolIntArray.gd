@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolIntArray : PoolIntArray
+var q_PoolIntArray : PoolIntArray = PoolIntArray([124])
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -15,6 +15,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
+		if randi() % 2 == 1:
+			q_PoolIntArray = PoolIntArray([124])
 		
 		if randi() % 2 == 1:
 			q_PoolIntArray.append(randi() % Autoload.RANGE - Autoload.RANGE / 2)

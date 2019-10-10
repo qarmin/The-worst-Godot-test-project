@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Quat : Quat
+var q_Quat : Quat = Quat(Basis( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
 				q_Quat = Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_Quat = Quat(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#			if randi() % 2 == 1:
+#				q_Quat = Quat(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			if randi() % 2 == 1:
 				q_Quat = Quat(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			if randi() % 2 == 1:

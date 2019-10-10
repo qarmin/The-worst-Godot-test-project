@@ -47,8 +47,8 @@ func _process(delta) -> void:
 			qq += str(q_AnimationNodeBlendSpace2D.get_triangle_count())
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeBlendSpace2D.get_triangle_point( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.remove_blend_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#	BUG	if randi() % 2 == 1:
+#			q_AnimationNodeBlendSpace2D.remove_blend_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace2D.remove_triangle( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
 		if randi() % 2 == 1:

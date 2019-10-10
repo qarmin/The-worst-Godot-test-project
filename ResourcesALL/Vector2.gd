@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Vector2 : Vector2
+var q_Vector2 : Vector2 = Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

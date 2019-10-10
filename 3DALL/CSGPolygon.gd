@@ -13,62 +13,30 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			set_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
-			#set_mode(randi() % 3) # Mode
-			set_depth(randf() * 50)
-			set_spin_degrees(randf() * 50)
-			set_spin_sides(randi()%15 + 3)
-			set_path_node(".")
-			set_path_interval(randf() * 50)
-			set_path_rotation(randi() % 3) # PathRotation
+		if randi() % 2 == 1:
+			set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+		if randi() % 2 == 1:
+			set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
+		if randi() % 2 == 1:
+			set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_spin_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_spin_sides(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_path_node(".hityuf")
+		if randi() % 2 == 1:
+			set_path_interval(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_path_rotation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # PathRotation
+		if randi() % 2 == 1:
 			set_path_local(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_path_continuous_u(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_path_joined(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_smooth_faces(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())
-			
-			
-			if Autoload.WRONG_BUGS:
-				set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
-				set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
-				set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_spin_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_spin_sides(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_path_node(".hityuf")
-				set_path_interval(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_path_rotation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # PathRotation
-				set_path_local(bool(randi()%2))
-				set_path_continuous_u(bool(randi()%2))
-				set_path_joined(bool(randi()%2))
-				set_smooth_faces(bool(randi()%2))
-				set_material(SpatialMaterial.new())
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
-			if randi() % 2 == 1:
-				set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
-			if randi() % 2 == 1:
-				set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_spin_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_spin_sides(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_path_node(".hityuf")
-			if randi() % 2 == 1:
-				set_path_interval(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_path_rotation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # PathRotation
-			if randi() % 2 == 1:
-				set_path_local(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_path_continuous_u(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_path_joined(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_smooth_faces(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_material(SpatialMaterial.new())

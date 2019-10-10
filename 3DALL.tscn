@@ -233,7 +233,7 @@ script = ExtResource( 2 )
 [node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
 script = ExtResource( 5 )
 
-[node name="ARVRCamera" type="ARVRCamera" parent="ARVROrigin"]
+[node name="ARVRCamera_NOTHING" type="ARVRCamera" parent="ARVROrigin"]
 size = 16004.7
 script = ExtResource( 4 )
 
@@ -254,7 +254,7 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 1 )
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 13 )
 
@@ -310,7 +310,7 @@ sides = 5
 material = SubResource( 11 )
 script = ExtResource( 23 )
 
-[node name="CSGCombiner" type="CSGCombiner" parent="."]
+[node name="CSGCombiner_NOTHING" type="CSGCombiner" parent="."]
 operation = 1
 script = ExtResource( 17 )
 
@@ -465,10 +465,10 @@ script = ExtResource( 48 )
 [node name="PathFollow" type="PathFollow" parent="."]
 script = ExtResource( 48 )
 
-[node name="Position3D" type="Position3D" parent="."]
+[node name="Position3D_NOTHING" type="Position3D" parent="."]
 script = ExtResource( 54 )
 
-[node name="Camera 2" type="Camera" parent="."]
+[node name="Camera_DEFAULT_CAMERA" type="Camera" parent="."]
 current = true
 script = ExtResource( 16 )
 

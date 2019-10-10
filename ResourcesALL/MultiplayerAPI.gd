@@ -1,11 +1,14 @@
 extends Node2D
 
 var q_MultiplayerAPI : MultiplayerAPI = MultiplayerAPI.new()
+var q_temp0 : Node = load("res://RES/Node.tscn").instance()
+
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	add_child(q_temp0)
 
 func _process(delta) -> void:
 	counter -= delta
@@ -16,15 +19,16 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if randi() % 2 == 1:
 			q_MultiplayerAPI = MultiplayerAPI.new()
-			
+			q_temp0.queue_free()
+			q_temp0 = load("res://RES/Node.tscn").instance()
+			add_child(q_temp0)
 		
-		var q_temp0 : Node = load("res://RES/Node.tscn").instance()
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_allow_object_decoding(bool(randi()%2))
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_refuse_new_network_connections(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_MultiplayerAPI.set_network_peer(NetworkedMultiplayerPeer.new())
+			q_MultiplayerAPI.set_network_peer(NetworkedMultiplayerENet.new())
 			
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.clear()
@@ -47,4 +51,5 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_root_node( q_temp0 )
 			
-		q_temp0.queue_free()
+func delete_node():
+	q_temp0.queue_free()

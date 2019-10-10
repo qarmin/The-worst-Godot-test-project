@@ -15,11 +15,5 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_use_top_left(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			set_use_top_left(bool(randi()%2))
-		
-	else: #RANDI
 		if randi() % 2 == 1:
 			set_use_top_left(bool(randi()%2))

@@ -14,18 +14,16 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_exclusive(bool(randi()%2))
-		popup(Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
-		popup_centered(Vector2(randf() * 50,randf() * 50))
-		popup_centered_clamped(Vector2(randf() * 50,randf() * 50),randf())
-		popup_centered_minsize(Vector2(randf() * 5,randf() * 5))
-		popup_centered_ratio(randf())
-		
-		if Autoload.WRONG_BUGS:
+		if randi() % 2 == 1:
 			set_exclusive(bool(randi()%2))
+		if randi() % 2 == 1:
 			popup(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+		if randi() % 2 == 1:
 			popup_centered(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			popup_centered_clamped(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),randf())
+		if randi() % 2 == 1:
 			popup_centered_minsize(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			popup_centered_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 			

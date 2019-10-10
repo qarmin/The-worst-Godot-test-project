@@ -43,7 +43,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Animation.audio_track_get_key_stream(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
-			qq += str(q_Animation.audio_track_insert_key(1,randf() * Autoload.RANGE - Autoload.RANGE / 2,AudioStream.new(),randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Animation.audio_track_insert_key(1,randf() * Autoload.RANGE - Autoload.RANGE / 2,AudioStreamGenerator.new(),randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 		if randi() % 2 == 1:
 			q_Animation.audio_track_set_key_end_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

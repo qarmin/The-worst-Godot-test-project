@@ -25,6 +25,6 @@ func _process(delta) -> void:
 			qq += str(q_ShortCut.get_as_text())
 			
 		if randi() % 2 == 1:
-			qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+			qq += str(q_ShortCut.is_shortcut(InputEventAction.new()))
 		if randi() % 2 == 1:
 			qq += str(q_ShortCut.is_valid())

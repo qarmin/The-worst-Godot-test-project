@@ -14,8 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if randi() % 2 == 1:
-			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
+#	LEAK	if randi() % 2 == 1:
+#			q_ARVRPositionalTracker.free()
+#			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
 		
 		if randi() % 2 == 1:
 			q_ARVRPositionalTracker.set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
@@ -41,5 +42,5 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_ARVRPositionalTracker.get_type())
 		
-		
-		q_ARVRPositionalTracker.free()
+func delete_node():
+	q_ARVRPositionalTracker.free()

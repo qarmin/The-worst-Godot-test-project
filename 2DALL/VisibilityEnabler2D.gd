@@ -13,13 +13,6 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_enabler(randi() % 6,bool(randi()%2)) # Enabler
-				
-			if Autoload.WRONG_BUGS:
-				set_enabler(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))# Enabler
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_enabler(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))# Enabler
+
+		if randi() % 2 == 1:
+			set_enabler(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))# Enabler

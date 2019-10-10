@@ -1,0 +1,9 @@
+[gd_resource type="Curve3D" format=2]
+
+[resource]
+bake_interval = 9.2
+_data = {
+"points": PoolVector3Array(  ),
+"tilts": PoolRealArray(  )
+}
+up_vector_enabled = false

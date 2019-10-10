@@ -13,12 +13,6 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
+		
+		if randi() % 2 == 1:
 			set_bone_name("AFs")
-			
-			if Autoload.WRONG_BUGS:
-				set_bone_name("AFs")
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_bone_name("AFs")

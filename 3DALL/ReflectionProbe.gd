@@ -13,58 +13,28 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_update_mode(randi() % 2) #UpdateMode
-			set_intensity(randf() * 50)
-			set_max_distance(randf() * 50)
-			set_extents(Vector3(randf() * 50,randf() * 50,randf() * 50))
-			set_origin_offset(Vector3(randf() * 50,randf() * 50,randf() * 50))
+
+		if randi() % 2 == 1:
+			set_update_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #UpdateMode
+		if randi() % 2 == 1:
+			set_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_max_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			set_origin_offset(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			set_enable_box_projection(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_enable_shadows(bool(randi()%2))
-			set_cull_mask(randi()%50)
+		if randi() % 2 == 1:
+			set_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			set_as_interior(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_interior_ambient(Color(randf(),randf(),randf(),randf()))
-			set_interior_ambient_energy(randf() * 50)
-			set_interior_ambient_probe_contribution(randf() * 50)
-			
-			
-			if Autoload.WRONG_BUGS:
-				set_update_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #UpdateMode
-				set_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_max_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				set_origin_offset(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				set_enable_box_projection(bool(randi()%2))
-				set_enable_shadows(bool(randi()%2))
-				set_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				set_as_interior(bool(randi()%2))
-				set_interior_ambient(Color(randf(),randf(),randf(),randf()))
-				set_interior_ambient_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_interior_ambient_probe_contribution(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_update_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #UpdateMode
-			if randi() % 2 == 1:
-				set_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_max_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				set_origin_offset(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				set_enable_box_projection(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_enable_shadows(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_as_interior(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_interior_ambient(Color(randf(),randf(),randf(),randf()))
-			if randi() % 2 == 1:
-				set_interior_ambient_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_interior_ambient_probe_contribution(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_interior_ambient_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_interior_ambient_probe_contribution(randf() * Autoload.RANGE - Autoload.RANGE / 2)

@@ -15,40 +15,6 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_text(str(bool(randi()%2)))
-		set_align(randi()%4)
-		set_valign(randi()%4)
-		set_autowrap(bool(randi()%2))
-		set_clip_text(bool(randi()%2))
-		set_uppercase(bool(randi()%2))
-		set_visible_characters(randi()%50)
-		set_percent_visible(randi()%50)
-		set_lines_skipped(randi()%50)
-		set_max_lines_visible(randi()%50)
-		
-		qq += str(get_line_count())
-		qq += str(get_line_height())
-		qq += str(get_total_character_count())
-		qq += str(get_visible_line_count())
-		
-		if Autoload.WRONG_BUGS:
-			set_text(str(bool(randi()%2)))
-			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_valign(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_autowrap(bool(randi()%2))
-			set_clip_text(bool(randi()%2))
-			set_uppercase(bool(randi()%2))
-			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_percent_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_lines_skipped(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_max_lines_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			
-			qq += str(get_line_count())
-			qq += str(get_line_height())
-			qq += str(get_total_character_count())
-			qq += str(get_visible_line_count())
-
-	else: #RANDI
 		if randi() % 2 == 1:
 			set_text(str(bool(randi()%2)))
 		if randi() % 2 == 1:

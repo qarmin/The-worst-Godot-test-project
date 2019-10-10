@@ -82,6 +82,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Theme.set_font( "Ballada", "Wyniki", Font.new() )
 		if randi() % 2 == 1:
-			q_Theme.set_icon( "Ballada", "Wyniki", Texture.new())
+			q_Theme.set_icon( "Ballada", "Wyniki", ImageTexture.new())
 		if randi() % 2 == 1:
 			q_Theme.set_stylebox( "Ballada", "Wyniki", StyleBox.new() )

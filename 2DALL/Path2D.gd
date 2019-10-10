@@ -13,13 +13,5 @@ func _process(delta) -> void:
 
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_curve(Autoload.loadA("res://RES/Curve2D1.tres",false))
-			
-			if Autoload.WRONG_BUGS:
-				set_curve(Autoload.loadA("res://RES/Curve2D1.tres"))
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_curve(Autoload.loadA("res://RES/Curve2D1.tres"))
+		if randi() % 2 == 1:
+			set_curve(Autoload.loadA("res://RES/Curve2D.tres"))

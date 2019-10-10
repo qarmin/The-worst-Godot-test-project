@@ -14,40 +14,7 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
-		set_mode_overrides_title(bool(randi()%2))
-		set_mode(randi()%5)
-		set_access(randi()%3)
-		set_filters(PoolStringArray(["*.png ; PNG Images","*.gd ; GD Script"]))
-		set_show_hidden_files(bool(randi()%2))
-		set_current_dir("res://" + str(randi()%50))
-		set_current_file("res://" + str(randi()%50))
-		set_current_path("res://" + str(randi()%50))
-		clear_filters()
-		add_filter("*.png ; PNG Images")
-		deselect_items()
-		qq += str(get_line_edit())
-		qq += str(get_vbox())
-		invalidate()
-		
-		
-		if Autoload.WRONG_BUGS:
-			set_mode_overrides_title(bool(randi()%2))
-			set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_access(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_filters(PoolStringArray(["*.pqfqwfng ; PNG Imagesqwfqw","*.gqwfqwfd ; GD Script"]))
-			set_show_hidden_files(bool(randi()%2))
-			set_current_dir("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			set_current_file("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			set_current_path("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			clear_filters()
-			add_filter("*.pnqwfg ; PNG Images")
-			deselect_items()
-			qq += str(get_line_edit())
-			qq += str(get_vbox())
-			invalidate()
 
-	else: #RANDI
 		if randi() % 2 == 1:
 			set_mode_overrides_title(bool(randi()%2))
 		if randi() % 2 == 1:

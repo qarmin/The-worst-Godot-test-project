@@ -13,33 +13,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_anchor_id(randi()%50 + 4)
+		
+		if randi() % 2 == 1:
+			set_anchor_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			qq += str(get_anchor_name())
+		if randi() % 2 == 1:
 			qq += str(get_is_active())
+		if randi() % 2 == 1:
 			qq += str(get_mesh())
+		if randi() % 2 == 1:
 			qq += str(get_plane())
+		if randi() % 2 == 1:
 			qq += str(get_size())
-			
-			if Autoload.WRONG_BUGS:
-				set_anchor_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				qq += str(get_anchor_name())
-				qq += str(get_is_active())
-				qq += str(get_mesh())
-				qq += str(get_plane())
-				qq += str(get_size())
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_anchor_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				qq += str(get_anchor_name())
-			if randi() % 2 == 1:
-				qq += str(get_is_active())
-			if randi() % 2 == 1:
-				qq += str(get_mesh())
-			if randi() % 2 == 1:
-				qq += str(get_plane())
-			if randi() % 2 == 1:
-				qq += str(get_size())

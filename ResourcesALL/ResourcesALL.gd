@@ -1,6 +1,6 @@
 extends Node2D
 
-const TIME_TO_ACTIVATE : Vector2 = Vector2(0.1,0.2)
+const TIME_TO_ACTIVATE : Vector2 = Vector2(0.01,0.02)
 var counter_to_delete : int = 10000000000
 const TIME_TO_NEXT_NODE : float = 0.5
 var current_time_to_next_node : float = TIME_TO_NEXT_NODE
@@ -17,6 +17,8 @@ func _ready() -> void:
 		if Autoload.USE_ONLY_ONE_NODE:
 			i.set_process(false)
 		if !i.is_visible():
+			if i.has_method("delete_node"):
+				i.delete_node()
 			i.queue_free()
 
 func _process(delta: float) -> void:

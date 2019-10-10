@@ -13,13 +13,6 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
+
+		if randi() % 2 == 1:
 			set_curve(Curve3D.new())
-	
-			if Autoload.WRONG_BUGS:
-				set_curve(Curve3D.new())
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_curve(Curve3D.new())

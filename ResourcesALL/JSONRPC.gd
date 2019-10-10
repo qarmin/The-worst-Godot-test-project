@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if randi() % 2 == 1:
-			q_JSONRPC.free()
-			q_JSONRPC = JSONRPC.new()
+#		if randi() % 2 == 1:
+#	LEAK		q_JSONRPC.free()
+#			q_JSONRPC = JSONRPC.new()
 			
 		
 		if randi() % 2 == 1:
@@ -36,3 +36,5 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
 		
+func delete_node():
+	q_JSONRPC.free()

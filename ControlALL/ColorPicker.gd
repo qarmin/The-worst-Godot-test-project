@@ -17,63 +17,29 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_pick_color(Color(randf(),randf(),randf(),randf()))
-		set_edit_alpha(bool(randi()%2))
-		set_raw_mode(bool(randi()%2))
-		set_deferred_mode(bool(randi()%2))
-		set_presets_enabled(bool(randi()%2))
-		set_presets_visible(bool(randi()%2))
-		add_preset(Color(randf(),randf(),randf(),randf()))
-		qq += str(erase_preset(get_presets()[0]))
-		
-		# BoxContainer
-		
-		set_alignment(randi() % 3)
-# LEAK	
-#		add_spacer(bool(randi()%2))
-#
-#		for i in range (default_number_of_children,get_child_count()):
-#			get_child(i).queue_free()
-		
-		if Autoload.WRONG_BUGS:
+		if randi() % 2 == 1:
 			set_pick_color(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
 			set_edit_alpha(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_raw_mode(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_deferred_mode(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_presets_enabled(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_presets_visible(bool(randi()%2))
+		if randi() % 2 == 1:
 			add_preset(Color(randf(),randf(),randf(),randf()))
+		if randi() % 2 == 1:
 			qq += str(erase_preset(Color(randf(),randf(),randf(),randf())))
 			
 			# BoxContainer
 			
+		if randi() % 2 == 1:
 			set_alignment(randi() % Autoload.RANGE - Autoload.RANGE / 2) # alignmode
-
 #LEAK
 #			add_spacer(bool(randi()%2))
 #
 #			for i in range (default_number_of_children,get_child_count()):
 #				get_child(i).queue_free()
-
-	else: #RANDI
-		if randi() % 2 == 1:
-			set_pick_color(Color(randf(),randf(),randf(),randf()))
-		if randi() % 2 == 1:
-			set_edit_alpha(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_raw_mode(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_deferred_mode(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_presets_enabled(bool(randi()%2))
-		if randi() % 2 == 1:
-			set_presets_visible(bool(randi()%2))
-		if randi() % 2 == 1:
-			add_preset(Color(randf(),randf(),randf(),randf()))
-		if randi() % 2 == 1:
-			qq += str(erase_preset(Color(randf(),randf(),randf(),randf())))
-			
-			# BoxContainer
-			
-		if randi() % 2 == 1:
-			set_alignment(randi() % Autoload.RANGE - Autoload.RANGE / 2) # alignmode

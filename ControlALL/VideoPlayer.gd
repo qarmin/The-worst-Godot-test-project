@@ -15,41 +15,6 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_audio_track(randi()%50)
-		#set_stream(Autoload.loadA("res://RES/VideoStreamWebm.tres",false))
-		set_volume_db(randf() * 50)
-		set_volume(randf() * 50)
-		set_autoplay(bool(randi()%2))
-		set_paused(bool(randi()%2))
-		set_expand(bool(randi()%2))
-		set_buffering_msec(randi()%50)
-		set_stream_position(randf() * 50)
-		set_bus(str(randf() * 50))
-		
-		qq += str(get_stream_name())
-		qq += str(get_video_texture())
-		qq += str(is_playing())
-		play()
-		stop()
-		
-		if Autoload.WRONG_BUGS:
-			set_audio_track(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_stream(Autoload.loadA("res://RES/VideoStreamWebm.tres"))
-			set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_volume(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_autoplay(bool(randi()%2))
-			set_paused(bool(randi()%2))
-			set_expand(bool(randi()%2))
-			set_buffering_msec(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			set_stream_position(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			set_bus(str(randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			
-			qq += str(get_stream_name())
-			qq += str(get_video_texture())
-			qq += str(is_playing())
-			play()
-			stop()
-	else: #RANDI
 		if randi() % 2 == 1:
 			set_audio_track(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 		if randi() % 2 == 1:

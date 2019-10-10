@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolColorArray : PoolColorArray
+var q_PoolColorArray : PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

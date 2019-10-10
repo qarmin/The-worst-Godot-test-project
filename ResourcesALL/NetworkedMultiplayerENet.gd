@@ -30,8 +30,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet.close_connection( randi() % Autoload.RANGE - Autoload.RANGE / 2)
 	
-		if randi() % 2 == 1:
-			qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#		if randi() % 2 == 1:
+#	LEAK		qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 		if randi() % 2 == 1:
 			qq += str(q_NetworkedMultiplayerENet.create_server( randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
 	

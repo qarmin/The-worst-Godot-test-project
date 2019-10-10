@@ -1,5 +1,5 @@
 extends Node2D
-
+#
 #var q_Reference : Reference = Reference.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
@@ -17,7 +17,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
 #		if randi() % 2 == 1:
-#			q_Reference.free()
+#			q_Reference.unreference()
 #			q_Reference = Reference.new()
 #
 #		if randi() % 2 == 1:
@@ -26,3 +26,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			qq += str(q_Reference.reference())
 #		if randi() % 2 == 1:
 #			qq += str(q_Reference.unreference())
+#
+#
+#func delete_node():
+#	q_Reference.unreference()

@@ -13,21 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_softness(randf() *  10)
-			set_bias(randf() * 0.8)
+
+		if randi() % 2 == 1:
+			set_softness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			set_exclude_nodes_from_collision(bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				set_softness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_exclude_nodes_from_collision(bool(randi()%2))
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_softness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_exclude_nodes_from_collision(bool(randi()%2))

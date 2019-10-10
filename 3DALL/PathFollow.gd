@@ -13,37 +13,18 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set_offset(randf() * 50)
-			set_unit_offset(randf() * 50)
-			set_h_offset(randf() * 50)
-			set_v_offset(randf() * 50)
-			set_rotation_mode(randi() % 5) # ENUM RotationMode
+
+		if randi() % 2 == 1:
+			set_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_unit_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			set_rotation_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ENUM RotationMode
+		if randi() % 2 == 1:
 			set_cubic_interpolation(bool(randi()%2))
+		if randi() % 2 == 1:
 			set_loop(bool(randi()%2))
-	
-			if Autoload.WRONG_BUGS:
-				set_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_unit_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_rotation_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ENUM RotationMode
-				set_cubic_interpolation(bool(randi()%2))
-				set_loop(bool(randi()%2))
-	
-		else: #RANDI
-			if randi() % 2 == 1:
-				set_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_unit_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				set_rotation_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ENUM RotationMode
-			if randi() % 2 == 1:
-				set_cubic_interpolation(bool(randi()%2))
-			if randi() % 2 == 1:
-				set_loop(bool(randi()%2))

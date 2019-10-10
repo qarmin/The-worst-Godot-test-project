@@ -32,10 +32,10 @@ func _process(delta) -> void:
 #			q_Image.bumpmap_to_normalmap( randf() * 10 - 5)
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
-		if randi() % 2 == 1:
-			qq += str(q_Image.compress( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * 10 - 5)) #compressMode, #CompressSource
-		if randi() % 2 == 1:
-			q_Image.convert(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Format
+#	BUG	if randi() % 2 == 1:
+#			qq += str(q_Image.compress( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * 10 - 5)) #compressMode, #CompressSource
+#		if randi() % 2 == 1:
+#			q_Image.convert(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Format
 		if randi() % 2 == 1:
 			q_Image.copy_from( Image.new() )
 

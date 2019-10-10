@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolVector3Array : PoolVector3Array
+var q_PoolVector3Array : PoolVector3Array = PoolVector3Array([randf() * Autoload.RANGE - Autoload.RANGE / 2])
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

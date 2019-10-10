@@ -1,13 +1,11 @@
 extends Node
 
-const WRONG_BUGS : bool = false
 const BASIC_COUTER : int = -10# smaller than 0 doesn't exit project
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 const USE_ONLY_ONE_NODE : bool = false#true
 const RANDI : bool = true# random functions execution
 
-
-const RANGE : int = 10000
+const RANGE : int = 10
 
 var file : File = File.new()
 
@@ -15,8 +13,6 @@ func _ready():
 	if file.open("user://dane.txt",File.WRITE) != OK:
 		printerr("AAAAAAAAAAA")
 		get_tree().quit()
-
-
 
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_accept"):
@@ -29,7 +25,7 @@ func save_to_file(message : String) -> void:
 
 func loadA(var name : String, var random : bool = true):
 	if random == true && randi() % 2 == 1: # 50% szans
-		return load(names[randi() % names.size()])
+		return load("res://RES/" + names[randi() % names.size()])
 	else:
 		return load(name)
 	
@@ -39,18 +35,14 @@ var names : Array = ["ArrayMesh.tres",
 "CircleShape2D.tres",
 "CryptoKey.tres",
 "CubeMesh.tres",
-"Curve1.tres",
-"Curve2D1.tres",
-"Curve2D.tres",
-"Curve2.tres",
-"Curve3.tres",
 "Curve.tres",
-"default_env1.tres",
-"default_env2.tres",
-"DynamicFont1.tres",
+"Curve2D.tres",
+"Curve3D.tres",
+"DefaultEnv.tres",
+"DynamicFont.tres",
 "FreeMono.otf",
 "GDNativeLibrary.tres",
-"Gradient1.tres",
+"Gradient.tres",
 "InputEventAction.tres",
 "Multimesh.tres",
 "NavigationMesh.tres",

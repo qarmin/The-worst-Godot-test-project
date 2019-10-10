@@ -36,8 +36,8 @@ func _process(delta) -> void:
 			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_node( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_position( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.remove_blend_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#	BUG	if randi() % 2 == 1:
+#			q_AnimationNodeBlendSpace1D.remove_blend_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace1D.set_blend_point_node( randi() % Autoload.RANGE - Autoload.RANGE / 2, AnimationRootNode.new() )
 		if randi() % 2 == 1:

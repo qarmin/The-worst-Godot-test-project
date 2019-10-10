@@ -58,24 +58,14 @@ animations = [ {
 "name": "New Anim",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
-"loop": true,
-"name": "New Anim 5",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
-"loop": false,
-"name": "New Anim 3",
-"speed": 5.0
-}, {
 "frames": [  ],
 "loop": true,
 "name": "New Anim 1",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 7",
+"name": "New Anim 4",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 10 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
@@ -85,12 +75,22 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
-"name": "New Anim 4",
+"name": "New Anim 5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 9 ) ],
+"loop": true,
+"name": "New Anim 7",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 10 ) ],
 "loop": true,
 "name": "New Anim 2",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 10 ), ExtResource( 9 ), ExtResource( 5 ) ],
+"loop": false,
+"name": "New Anim 3",
 "speed": 5.0
 } ]
 
@@ -138,7 +138,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 1 )
-frame = 23
+frame = 40
 playing = true
 script = ExtResource( 7 )
 
@@ -254,6 +254,7 @@ occluder = SubResource( 5 )
 script = ExtResource( 21 )
 
 [node name="Line2D_BUG" type="Line2D" parent="."]
+visible = false
 script = ExtResource( 22 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
@@ -301,7 +302,7 @@ script = ExtResource( 45 )
 skeleton = NodePath("../Skeleton2D")
 script = ExtResource( 28 )
 
-[node name="Position2D" type="Position2D" parent="."]
+[node name="Position2D_NOTHING" type="Position2D" parent="."]
 script = ExtResource( 29 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
@@ -345,4 +346,5 @@ script = ExtResource( 34 )
 script = ExtResource( 36 )
 
 [node name="YSort" type="YSort" parent="."]
+visible = false
 script = ExtResource( 37 )

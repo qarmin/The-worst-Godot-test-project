@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpriteFrames.add_animation( "Gadajacy Pies" )
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_frame( "Gadajacy Pies", Texture.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_SpriteFrames.add_frame( "Gadajacy Pies", ImageTexture.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
 			
 		if randi() % 2 == 1:
 			q_SpriteFrames.clear( "Stos" )

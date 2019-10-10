@@ -15,12 +15,6 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_percent_visible(bool(randi()%2))
-		
-		if Autoload.WRONG_BUGS:
-			set_percent_visible(bool(randi()%2))
-
-	else: #RANDI
 		if randi() % 2 == 1:
 			set_percent_visible(bool(randi()%2))
 			

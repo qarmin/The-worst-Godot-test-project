@@ -59,9 +59,10 @@ func _process(delta) -> void:
 			
 		if randi() % 2 == 1:
 			q_NavigationMesh.add_polygon( PoolIntArray([125125.125,12512.1251,122.124]))
-			#MOVED q_NavigationMesh.clear_polygons()
 		if randi() % 2 == 1:
-			q_NavigationMesh.create_from_mesh(CubeMesh.new())
+			q_NavigationMesh.clear_polygons()
+#	BUG	if randi() % 2 == 1:
+#			q_NavigationMesh.create_from_mesh(CubeMesh.new())
 			
 		if randi() % 2 == 1:
 			qq += str(q_NavigationMesh.get_collision_mask_bit( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
@@ -72,5 +73,3 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_NavigationMesh.get_vertices())
 			
-		if randi() % 2 == 1:
-			q_NavigationMesh.clear_polygons() #MOVED
