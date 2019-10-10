@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_InputEventMagnifyGesture : InputEventMagnifyGesture = InputEventMagnifyGesture.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,15 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_InputEventMagnifyGesture = InputEventMagnifyGesture.new()
 			
-		var q_InputEventMagnifyGesture : InputEventMagnifyGesture = InputEventMagnifyGesture.new()
-		if !Autoload.RANDI:
-			
-			q_InputEventMagnifyGesture.set_factor(randf() * 50)
-			
-			if Autoload.WRONG_BUGS:
-				q_InputEventMagnifyGesture.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_InputEventMagnifyGesture.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		
+		if randi() % 2 == 1:
+			q_InputEventMagnifyGesture.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)

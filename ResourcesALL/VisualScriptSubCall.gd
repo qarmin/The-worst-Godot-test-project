@@ -13,12 +13,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
-#
 #		var q_VisualScriptSubCall : VisualScriptSubCall = VisualScriptSubCall.new()
 #
 #		q_VisualScriptSubCall._subcall( randi()%50)
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

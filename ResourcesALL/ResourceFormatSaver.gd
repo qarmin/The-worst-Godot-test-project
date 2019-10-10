@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_ResourceFormatSaver : ResourceFormatSaver = ResourceFormatSaver.new()
 #
@@ -22,5 +20,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_ResourceFormatSaver.recognize( Resource.new() )
 #		q_ResourceFormatSaver.save( "user://Zapis.png", Resource.new(), randi() % 127 )
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

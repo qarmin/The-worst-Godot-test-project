@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VisualScriptFunctionState : VisualScriptFunctionState = VisualScriptFunctionState.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,30 +14,16 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VisualScriptFunctionState = VisualScriptFunctionState.new()
 			
-		var q_VisualScriptFunctionState : VisualScriptFunctionState = VisualScriptFunctionState.new()
-		if !Autoload.RANDI:
-			
-			#var q_temp : Node = load("res://RES/Node.tscn").instance()
-			#q_VisualScriptFunctionState.connect_to_signal( q_temp, "Widać", ["Gra"] )
-			#q_temp.queue_free()
+		
+		var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
+		if randi() % 2 == 1:
+			q_VisualScriptFunctionState.connect_to_signal( q_temp_0, "Widać", ["Gra"] )
+		if randi() % 2 == 1:
 			qq += str(q_VisualScriptFunctionState.is_valid())
-			#q_VisualScriptFunctionState.resume( ["Dino"] )
+		if randi() % 2 == 1:
+			q_VisualScriptFunctionState.resume( ["Dino"] )
 			
-			if Autoload.WRONG_BUGS:
-				var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
-				q_VisualScriptFunctionState.connect_to_signal( q_temp_0, "Widać", ["Gra"] )
-				q_temp_0.queue_free()
-				qq += str(q_VisualScriptFunctionState.is_valid())
-				q_VisualScriptFunctionState.resume( ["Dino"] )
-
-		else: #RANDI
-			var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
-			if randi() % 2 == 1:
-				q_VisualScriptFunctionState.connect_to_signal( q_temp_0, "Widać", ["Gra"] )
-			if randi() % 2 == 1:
-				qq += str(q_VisualScriptFunctionState.is_valid())
-			if randi() % 2 == 1:
-				q_VisualScriptFunctionState.resume( ["Dino"] )
-				
-			q_temp_0.queue_free()
+		q_temp_0.queue_free()

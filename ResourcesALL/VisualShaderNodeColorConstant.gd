@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VisualShaderNodeColorConstant : VisualShaderNodeColorConstant = VisualShaderNodeColorConstant.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,15 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VisualShaderNodeColorConstant = VisualShaderNodeColorConstant.new()
 		
-		var q_VisualShaderNodeColorConstant : VisualShaderNodeColorConstant = VisualShaderNodeColorConstant.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))
-			
-			if Autoload.WRONG_BUGS:
-				q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))

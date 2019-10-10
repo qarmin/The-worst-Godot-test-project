@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Physics2DDirectSpaceState : Physics2DDirectSpaceState = Physics2DDirectSpaceState.new()
 #
@@ -27,5 +25,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Physics2DDirectSpaceState.intersect_ray( Vector2(randf() * 50,randf() * 50), Vector2(randf() * 50,randf() * 50), [124,214,214,124,214,214,2], randi()%50, bool(randi()%2), bool(randi()%2) ))
 #		qq += str(q_Physics2DDirectSpaceState.intersect_shape( Physics2DShapeQueryParameters.new(), randi()%50))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

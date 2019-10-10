@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_PoolVector3Array : PoolVector3Array
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,33 +14,26 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-			var q_PoolVector3Array : PoolVector3Array
+		
+		if randi() % 2 == 1:
+			q_PoolVector3Array = PoolVector3Array([randf() * Autoload.RANGE - Autoload.RANGE / 2])
 			
-			q_PoolVector3Array = PoolVector3Array([randf() * 50])
+		if randi() % 2 == 1:
+			q_PoolVector3Array.append(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			q_PoolVector3Array.append_array(PoolVector3Array([Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
 			
-			q_PoolVector3Array.append(Vector3(randf() * 50,randf() * 50,randf() * 50))
-			q_PoolVector3Array.append_array(PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50)]))
-			
-			#qq += str(q_PoolVector3Array.insert( randi()%50, Vector3(randf() * 50,randf() * 50,randf() * 50)) )
+		if randi() % 2 == 1:
+			qq += str(q_PoolVector3Array.insert( randi() % 10 - 5, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) )
+		if randi() % 2 == 1:
 			q_PoolVector3Array.invert()
-			q_PoolVector3Array.push_back( Vector3(randf() * 50,randf() * 50,randf() * 50) )
-			#q_PoolVector3Array.remove( randi()%50)
-			q_PoolVector3Array.resize( randi()%50)
-			#q_PoolVector3Array.set(randi()%50, Vector3(randf() * 50,randf() * 50,randf() * 50))
+		if randi() % 2 == 1:
+			q_PoolVector3Array.push_back( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+		if randi() % 2 == 1:
+			q_PoolVector3Array.remove( randi() % 10 - 5)
+		if randi() % 2 == 1:
+			q_PoolVector3Array.resize( randi() % 10 - 5)
+		if randi() % 2 == 1:
+			q_PoolVector3Array.set(randi() % 10 - 5, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
 			qq += str(q_PoolVector3Array.size())
-			
-			if Autoload.WRONG_BUGS:
-				q_PoolVector3Array = PoolVector3Array([randf() * Autoload.RANGE - Autoload.RANGE / 2])
-				
-				q_PoolVector3Array.append(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_PoolVector3Array.append_array(PoolVector3Array([Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
-				
-				qq += str(q_PoolVector3Array.insert( randi() % 10 - 5, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) )
-				q_PoolVector3Array.invert()
-				q_PoolVector3Array.push_back( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
-				q_PoolVector3Array.remove( randi() % 10 - 5)
-				q_PoolVector3Array.resize( randi() % 10 - 5)
-				q_PoolVector3Array.set(randi() % 10 - 5, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(q_PoolVector3Array.size())

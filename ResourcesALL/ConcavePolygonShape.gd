@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_ConcavePolygonShape : ConcavePolygonShape = ConcavePolygonShape.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_ConcavePolygonShape = ConcavePolygonShape.new()
 			
-		var q_ConcavePolygonShape : ConcavePolygonShape = ConcavePolygonShape.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_ConcavePolygonShape.get_faces())
-			#q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)]))
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_ConcavePolygonShape.get_faces())
-				q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2),Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)]))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_ConcavePolygonShape.get_faces())
-			if randi() % 2 == 1:
-				q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2),Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)]))
+		if randi() % 2 == 1:
+			q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2),Vector3(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)]))

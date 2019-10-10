@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_Color : Color
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,49 +14,44 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_Color : Color
-			
-			q_Color = Color( Color.cyan)
-			q_Color = Color( randi()%50)
-			q_Color = Color( randf() * 50, randf() * 50, randf() * 50 )
-			q_Color = Color( randf() * 50, randf() * 50, randf() * 50, randf() * 50 )
-			
-			qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
-			qq += str(q_Color.contrasted())
-			qq += str(q_Color.darkened( randf() * 50 ))
-			qq += str(q_Color.from_hsv( randf() * 50, randf() * 50, randf() * 50, randf() * 50 ))
-			#Deprecated q_Color.gray()
-			qq += str(q_Color.inverted())
-			qq += str(q_Color.lightened( randf() * 50 ))
-			
-			qq += str(q_Color.to_abgr32())
-			qq += str(q_Color.to_abgr64())
-			qq += str(q_Color.to_argb32())
-			qq += str(q_Color.to_argb64())
-			qq += str(q_Color.to_html(bool(randi()%2)))
-			qq += str(q_Color.to_rgba32())
-			qq += str(q_Color.to_rgba64())
-			
-			if Autoload.WRONG_BUGS:
+		
+		if randi() % 2 == 1:
+			if randi() % 2 == 1:
 				q_Color = Color( Color.cyan)
+			if randi() % 2 == 1:
 				q_Color = Color( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			if randi() % 2 == 1:
 				q_Color = Color( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+			if randi() % 2 == 1:
 				q_Color = Color( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
-				
-				qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
-				qq += str(q_Color.contrasted())
-				qq += str(q_Color.darkened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_Color.from_hsv( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_Color.gray())
-				qq += str(q_Color.inverted())
-				qq += str(q_Color.lightened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
-				
-				qq += str(q_Color.to_abgr32())
-				qq += str(q_Color.to_abgr64())
-				qq += str(q_Color.to_argb32())
-				qq += str(q_Color.to_argb64())
-				qq += str(q_Color.to_html(bool(randi()%2)))
-				qq += str(q_Color.to_rgba32())
-				qq += str(q_Color.to_rgba64())
+			
+		if randi() % 2 == 1:
+			qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
+		if randi() % 2 == 1:
+			qq += str(q_Color.contrasted())
+		if randi() % 2 == 1:
+			qq += str(q_Color.darkened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
+			qq += str(q_Color.from_hsv( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
+			qq += str(q_Color.gray())
+		if randi() % 2 == 1:
+			qq += str(q_Color.inverted())
+		if randi() % 2 == 1:
+			qq += str(q_Color.lightened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_abgr32())
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_abgr64())
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_argb32())
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_argb64())
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_html(bool(randi()%2)))
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_rgba32())
+		if randi() % 2 == 1:
+			qq += str(q_Color.to_rgba64())

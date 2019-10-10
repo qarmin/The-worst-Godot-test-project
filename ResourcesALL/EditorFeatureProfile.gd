@@ -13,9 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
-#
 #		var q_EditorFeatureProfile : EditorFeatureProfile = EditorFeatureProfile.new()
 #
 #		q_EditorFeatureProfile.get_feature_name( randi() % EditorFeatureProfile.FEATURE_MAX ) #Feature
@@ -33,5 +30,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorFeatureProfile.set_disable_class_property( "7D", "Mysz", bool(randi()%2) )
 #		q_EditorFeatureProfile.set_disable_feature( randi() % EditorFeatureProfile.FEATURE_MAX, bool(randi()%2) )#Feature
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

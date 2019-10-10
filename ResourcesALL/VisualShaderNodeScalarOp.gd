@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VisualShaderNodeScalarOp : VisualShaderNodeScalarOp = VisualShaderNodeScalarOp.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,15 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VisualShaderNodeScalarOp = VisualShaderNodeScalarOp.new()
 			
-		var q_VisualShaderNodeScalarOp : VisualShaderNodeScalarOp = VisualShaderNodeScalarOp.new()
-		if !Autoload.RANDI:
-			
-			q_VisualShaderNodeScalarOp.set_operator(randi() %10) #Operator
-			
-			if Autoload.WRONG_BUGS:
-				q_VisualShaderNodeScalarOp.set_operator(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Operator
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_VisualShaderNodeScalarOp.set_operator(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Operator
+		
+		if randi() % 2 == 1:
+			q_VisualShaderNodeScalarOp.set_operator(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Operator

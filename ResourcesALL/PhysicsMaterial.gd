@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,27 +14,15 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_PhysicsMaterial = PhysicsMaterial.new()
 		
-		var q_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
-		if !Autoload.RANDI:
-			
-			q_PhysicsMaterial.set_friction(randf() * 50)
+		
+		if randi() % 2 == 1:
+			q_PhysicsMaterial.set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			q_PhysicsMaterial.set_rough(bool(randi()%2))
-			q_PhysicsMaterial.set_bounce(randf() * 50)
+		if randi() % 2 == 1:
+			q_PhysicsMaterial.set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			q_PhysicsMaterial.set_absorbent(bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				q_PhysicsMaterial.set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_PhysicsMaterial.set_rough(bool(randi()%2))
-				q_PhysicsMaterial.set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_PhysicsMaterial.set_absorbent(bool(randi()%2))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_PhysicsMaterial.set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_PhysicsMaterial.set_rough(bool(randi()%2))
-			if randi() % 2 == 1:
-				q_PhysicsMaterial.set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_PhysicsMaterial.set_absorbent(bool(randi()%2))

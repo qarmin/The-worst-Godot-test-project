@@ -13,13 +13,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
-#
 #		var q_EditorResourceConversionPlugin : EditorResourceConversionPlugin = EditorResourceConversionPlugin.new()
 #
 #		q_EditorResourceConversionPlugin._convert( Resource.new() )
 #		q_EditorResourceConversionPlugin._converts_to()
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

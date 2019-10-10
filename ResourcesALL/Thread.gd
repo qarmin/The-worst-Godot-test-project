@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_Thread : Thread = Thread.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -14,34 +15,21 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_Thread = Thread.new()
 		
-		var q_Thread : Thread = Thread.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_Thread.get_id())
+		if randi() % 2 == 1:
 			qq += str(q_Thread.is_active())
-			#var q_temp : Node = load("res://RES/Node.tscn").instance()
-			#qq += str(q_Thread.start( q_temp, "Hiszpania", String(), randi() %3 ))#Priority
-			#q_temp.queue_free()
-			#q_Thread.wait_to_finish()
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_Thread.get_id())
-				qq += str(q_Thread.is_active())
-				#var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
-				qq += str(q_Thread.start(self, "Hiszpania", String(), randi() % Autoload.RANGE - Autoload.RANGE / 2 ))#Priority
-				#q_temp_0.queue_free()
+			#var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
+		if randi() % 2 == 1:
+			qq += str(q_Thread.start(self, "Hiszpania", String(), randi() % Autoload.RANGE - Autoload.RANGE / 2 ))#Priority
+			#q_temp_0.queue_free()
+		if randi() % 2 == 1:
 			q_Thread.wait_to_finish()
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_Thread.get_id())
-			if randi() % 2 == 1:
-				qq += str(q_Thread.is_active())
-				#var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
-			if randi() % 2 == 1:
-				qq += str(q_Thread.start(self, "Hiszpania", String(), randi() % Autoload.RANGE - Autoload.RANGE / 2 ))#Priority
-				#q_temp_0.queue_free()
-			if randi() % 2 == 1:
-				q_Thread.wait_to_finish()
+			
+			
 func Hiszpania(var Wychodzi : String) -> void:
 	print(Wychodzi)

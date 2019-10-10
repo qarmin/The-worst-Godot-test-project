@@ -3,8 +3,8 @@ extends Node2D
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 #func _process(delta) -> void:
 #	counter -= delta
@@ -13,8 +13,6 @@ func _ready():
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_InputEvent : InputEvent = InputEvent.new()
 #
@@ -32,5 +30,3 @@ func _ready():
 #		qq += str(q_InputEvent.shortcut_match( InputEvent.new()))
 #		qq += str(q_InputEvent.xformed_by( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) ))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

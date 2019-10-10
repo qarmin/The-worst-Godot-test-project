@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_OccluderPolygon2D : OccluderPolygon2D = OccluderPolygon2D.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,23 +14,13 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_OccluderPolygon2D = OccluderPolygon2D.new()
 			
-		var q_OccluderPolygon2D : OccluderPolygon2D = OccluderPolygon2D.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			q_OccluderPolygon2D.set_closed(bool(randi()%2))
-			q_OccluderPolygon2D.set_cull_mode(randi() %3) # CullMode
-			q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)]))
-			
-			if Autoload.WRONG_BUGS:
-				q_OccluderPolygon2D.set_closed(bool(randi()%2))
-				q_OccluderPolygon2D.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CullMode
-				q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_OccluderPolygon2D.set_closed(bool(randi()%2))
-			if randi() % 2 == 1:
-				q_OccluderPolygon2D.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CullMode
-			if randi() % 2 == 1:
-				q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+		if randi() % 2 == 1:
+			q_OccluderPolygon2D.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CullMode
+		if randi() % 2 == 1:
+			q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))

@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VisualScriptClassConstant : VisualScriptClassConstant = VisualScriptClassConstant.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VisualScriptClassConstant = VisualScriptClassConstant.new()
 		
-		var q_VisualScriptClassConstant : VisualScriptClassConstant = VisualScriptClassConstant.new()
-		if !Autoload.RANDI:
-			
-			q_VisualScriptClassConstant.set_base_type("String")
-			q_VisualScriptClassConstant.set_class_constant("Vector2")
-			
-			if Autoload.WRONG_BUGS:
-				q_VisualScriptClassConstant.set_base_type("Kekin")
-				q_VisualScriptClassConstant.set_class_constant("Osoba")
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_VisualScriptClassConstant.set_base_type("Kekin")
-			if randi() % 2 == 1:
-				q_VisualScriptClassConstant.set_class_constant("Osoba")
+		
+		if randi() % 2 == 1:
+			q_VisualScriptClassConstant.set_base_type("Kekin")
+		if randi() % 2 == 1:
+			q_VisualScriptClassConstant.set_class_constant("Osoba")

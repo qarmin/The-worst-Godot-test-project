@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,14 +14,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
+#		if randi() % 2 == 1:
+#			q_EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 #
-#		var q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 #
-#		#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
-#		q_EditorNavigationMeshGenerator.clear(Autoload.loadA("res://RES/NavigationMesh.tres"),false)
-#
-#		if Autoload.WRONG_BUGS:
 #			#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
 #			q_EditorNavigationMeshGenerator.clear(Autoload.loadA("res://RES/NavigationMesh.tres") )

@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_EncodedObjectAsID : EncodedObjectAsID = EncodedObjectAsID.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_EncodedObjectAsID = EncodedObjectAsID.new()
 		
-		var q_EncodedObjectAsID : EncodedObjectAsID = EncodedObjectAsID.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_EncodedObjectAsID.get_object_id())
-			q_EncodedObjectAsID.set_object_id(randi()%50)
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_EncodedObjectAsID.get_object_id())
-				q_EncodedObjectAsID.set_object_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_EncodedObjectAsID.get_object_id())
-			if randi() % 2 == 1:
-				q_EncodedObjectAsID.set_object_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_EncodedObjectAsID.set_object_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)

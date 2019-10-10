@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_ClassDB : ClassDB = ClassDB.new()
 #
@@ -43,5 +41,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#qq += str(q_ClassDB.is_class_enabled("String"))
 #		qq += str(q_ClassDB.is_parent_class("String","String"))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

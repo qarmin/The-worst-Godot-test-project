@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #		var q_EditorSceneImporter : EditorSceneImporter = EditorSceneImporter.new()
 #
 #		q_EditorSceneImporter._get_extensions()
@@ -26,5 +24,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorSceneImporter.import_animation_from_other_importer( "Świerzb", randi()%50, randi()%50 )
 #		q_EditorSceneImporter.import_scene_from_other_importer( "Świerzb", randi()%50, randi()%50 )
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

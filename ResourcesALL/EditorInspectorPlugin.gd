@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #		var q_EditorInspectorPlugin : EditorInspectorPlugin = EditorInspectorPlugin.new()
 #
 #		q_EditorInspectorPlugin.can_handle( self )
@@ -27,5 +25,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorInspectorPlugin.add_property_editor( "Wiadomość", Control.new() )
 #		q_EditorInspectorPlugin.add_property_editor_for_multiple_properties( "Wiadomo", PoolStringArray(["qwr","saf"]), Control.new() )
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

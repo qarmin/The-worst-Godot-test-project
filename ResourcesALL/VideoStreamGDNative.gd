@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VideoStreamGDNative : VideoStreamGDNative = VideoStreamGDNative.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,18 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VideoStreamGDNative = VideoStreamGDNative.new()
 			
-		var q_VideoStreamGDNative : VideoStreamGDNative = VideoStreamGDNative.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_VideoStreamGDNative.get_file())
+		if randi() % 2 == 1:
 			q_VideoStreamGDNative.set_file( "res://Heg.mp4")
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_VideoStreamGDNative.get_file())
-				q_VideoStreamGDNative.set_file( "res://Heg.mp4")
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_VideoStreamGDNative.get_file())
-			if randi() % 2 == 1:
-				q_VideoStreamGDNative.set_file( "res://Heg.mp4")

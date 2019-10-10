@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_NoiseTexture : NoiseTexture = NoiseTexture.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,35 +14,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
-		var q_NoiseTexture : NoiseTexture = NoiseTexture.new()
-		if !Autoload.RANDI:
-			
-			q_NoiseTexture.set_width(randi()%50)
-			q_NoiseTexture.set_height(randi()%50)
-			q_NoiseTexture.set_seamless(bool(randi()%2))
-			q_NoiseTexture.set_as_normalmap(bool(randi()%2))
-			q_NoiseTexture.set_bump_strength(randf() * 50)
-			q_NoiseTexture.set_noise(OpenSimplexNoise.new())
-			
-			if Autoload.WRONG_BUGS:
-				q_NoiseTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_NoiseTexture.set_height(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_NoiseTexture.set_seamless(bool(randi()%2))
-				q_NoiseTexture.set_as_normalmap(bool(randi()%2))
-				q_NoiseTexture.set_bump_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_NoiseTexture.set_noise(OpenSimplexNoise.new())
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_height(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_seamless(bool(randi()%2))
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_as_normalmap(bool(randi()%2))
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_bump_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_NoiseTexture.set_noise(OpenSimplexNoise.new())
+#BUG
+#		if randi() % 2 == 1:
+#			q_NoiseTexture = NoiseTexture.new()
+#
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_height(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_seamless(bool(randi()%2))
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_as_normalmap(bool(randi()%2))
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_bump_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+#		if randi() % 2 == 1:
+#			q_NoiseTexture.set_noise(OpenSimplexNoise.new())

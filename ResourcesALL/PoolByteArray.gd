@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_PoolByteArray : PoolByteArray
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,47 +14,39 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_PoolByteArray : PoolByteArray
-			
+		
+		if randi() % 2 == 1:
 			q_PoolByteArray = PoolByteArray([Color()])
 			
-			q_PoolByteArray.append(randi()%50)
-			q_PoolByteArray.append_array(PoolByteArray([randi()%50]))
+		if randi() % 2 == 1:
+			q_PoolByteArray.append(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_PoolByteArray.append_array(PoolByteArray([randi() % Autoload.RANGE - Autoload.RANGE / 2]))
 			
-			qq += str(q_PoolByteArray.compress(randi() % 4)) # File.CompressionMode
-			#qq += str(q_PoolByteArray.decompress(randi()%50,randi() % 4))
+		if randi() % 2 == 1:
+			qq += str(q_PoolByteArray.compress(randi() % Autoload.RANGE - Autoload.RANGE / 2)) # File.CompressionMode
+		if randi() % 2 == 1:
+			qq += str(q_PoolByteArray.decompress(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
 			
+		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.get_string_from_ascii())
+		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.get_string_from_utf8())
 			
-			#qq += str(q_PoolByteArray.insert( randi()%50, randi()%50) )
+		if randi() % 2 == 1:
+			qq += str(q_PoolByteArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) )
+		if randi() % 2 == 1:
 			q_PoolByteArray.invert()
-			q_PoolByteArray.push_back( randi()%50 )
-			#q_PoolByteArray.remove( randi()%50)
-			q_PoolByteArray.resize( randi()%50)
-			#q_PoolByteArray.set(randi()%50, randi()%50)
+		if randi() % 2 == 1:
+			q_PoolByteArray.push_back( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+		if randi() % 2 == 1:
+			q_PoolByteArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_PoolByteArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_PoolByteArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.size())
-			#qq += str(q_PoolByteArray.subarray(randi()%50,randi()%50))
-			
-			if Autoload.WRONG_BUGS:
-				q_PoolByteArray = PoolByteArray([Color()])
-				
-				q_PoolByteArray.append(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_PoolByteArray.append_array(PoolByteArray([randi() % Autoload.RANGE - Autoload.RANGE / 2]))
-				
-				qq += str(q_PoolByteArray.compress(randi() % Autoload.RANGE - Autoload.RANGE / 2)) # File.CompressionMode
-				qq += str(q_PoolByteArray.decompress(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
-				
-				qq += str(q_PoolByteArray.get_string_from_ascii())
-				qq += str(q_PoolByteArray.get_string_from_utf8())
-				
-				qq += str(q_PoolByteArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) )
-				q_PoolByteArray.invert()
-				q_PoolByteArray.push_back( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
-				q_PoolByteArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_PoolByteArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_PoolByteArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				qq += str(q_PoolByteArray.size())
-				qq += str(q_PoolByteArray.subarray(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			qq += str(q_PoolByteArray.subarray(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))

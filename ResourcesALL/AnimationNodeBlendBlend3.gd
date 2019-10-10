@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_AnimationNodeBlend3 : AnimationNodeBlend3 = AnimationNodeBlend3.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -14,14 +15,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
-		var q_AnimationNodeBlend3 : AnimationNodeBlend3 = AnimationNodeBlend3.new()
-		if !Autoload.RANDI:
+		if randi() % 2 == 1:
+			q_AnimationNodeBlend3 = AnimationNodeBlend3.new()
 			
+		if randi() % 2 == 1:
 			q_AnimationNodeBlend3.set_use_sync(bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				q_AnimationNodeBlend3.set_use_sync(bool(randi()%2))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_AnimationNodeBlend3.set_use_sync(bool(randi()%2))

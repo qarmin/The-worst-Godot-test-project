@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_ShortCut : ShortCut = ShortCut.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,33 +14,17 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_ShortCut = ShortCut.new()
 		
-		var q_ShortCut : ShortCut = ShortCut.new()
-		if !Autoload.RANDI:
+		
+		if randi() % 2 == 1:
+			q_ShortCut.set_shortcut(InputEvent.new())
 			
-			#q_ShortCut.set_shortcut(InputEvent.new())
-			
+		if randi() % 2 == 1:
 			qq += str(q_ShortCut.get_as_text())
 			
-			#qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+		if randi() % 2 == 1:
+			qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
+		if randi() % 2 == 1:
 			qq += str(q_ShortCut.is_valid())
-			
-			if Autoload.WRONG_BUGS:
-				q_ShortCut.set_shortcut(InputEvent.new())
-				
-				qq += str(q_ShortCut.get_as_text())
-				
-				qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
-				qq += str(q_ShortCut.is_valid())
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_ShortCut.set_shortcut(InputEvent.new())
-				
-			if randi() % 2 == 1:
-				qq += str(q_ShortCut.get_as_text())
-				
-			if randi() % 2 == 1:
-				qq += str(q_ShortCut.is_shortcut( InputEvent.new()))
-			if randi() % 2 == 1:
-				qq += str(q_ShortCut.is_valid())

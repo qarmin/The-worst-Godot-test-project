@@ -3,9 +3,9 @@ extends Node2D
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
 #func _process(delta) -> void:
 #	counter -= delta
 #	var qq : String = ""
@@ -15,10 +15,5 @@ func _ready():
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
 #		var q_AudioEffectBandPassFilter : AudioEffectBandPassFilter = AudioEffectBandPassFilter.new()
-#		if !Autoload.RANDI:
-#
-#			if Autoload.WRONG_BUGS:
-#				pass
-#
-#		else: #RANDI
+#		
 #			if randi() % 2 == 1:

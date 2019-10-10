@@ -1,5 +1,7 @@
 extends Node2D
 
+# warning-ignore:unused_variable
+var q_bool : bool 
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,18 +15,12 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-# warning-ignore:unused_variable
-			var q_bool : bool 
-	
-			q_bool = bool(randi()%50)
+		
+		if randi() % 2 == 1:
+			q_bool = bool(randi() % Autoload.RANGE - Autoload.RANGE / 2)
 # warning-ignore:narrowing_conversion
-			q_bool = bool(randf() * 50)
-			q_bool = bool("false")
-	
-			if Autoload.WRONG_BUGS:
-				q_bool = bool(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-# warning-ignore:narrowing_conversion
-				q_bool = bool(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_bool = bool("asfaf")
+		if randi() % 2 == 1:
+			q_bool = bool(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_bool = bool("asfaf")

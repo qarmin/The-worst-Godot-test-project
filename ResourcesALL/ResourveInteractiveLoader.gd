@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_ResourveInteractiveLoader : ResourveInteractiveLoader = ResourveInteractiveLoader.new()
 #
@@ -25,5 +23,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_ResourveInteractiveLoader.poll()
 #		q_ResourveInteractiveLoader.wait()
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

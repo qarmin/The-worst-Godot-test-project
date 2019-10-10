@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_CryptoKey : CryptoKey = CryptoKey.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,18 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_CryptoKey = CryptoKey.new()
 		
-		var q_CryptoKey : CryptoKey = CryptoKey.new()
-		if !Autoload.RANDI:
-			#qq += str(q_CryptoKey.load("Lelele"))
-			#qq += str(q_CryptoKey.save("gqwrw"))
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_CryptoKey.load("Lelele"))
-				qq += str(q_CryptoKey.save("gqwrw"))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_CryptoKey.load("Lelele"))
-			if randi() % 2 == 1:
-				qq += str(q_CryptoKey.save("gqwrw"))
+		
+		if randi() % 2 == 1:
+			qq += str(q_CryptoKey.load("Lelele"))
+		if randi() % 2 == 1:
+			qq += str(q_CryptoKey.save("gqwrw"))

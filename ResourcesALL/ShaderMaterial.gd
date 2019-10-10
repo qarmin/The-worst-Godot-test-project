@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_ShaderMaterial : ShaderMaterial = ShaderMaterial.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,37 +14,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_ShaderMaterial = ShaderMaterial.new()
 		
-		var q_ShaderMaterial : ShaderMaterial = ShaderMaterial.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			q_ShaderMaterial.set_shader(Shader.new())
 			
+		if randi() % 2 == 1:
 			qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
+		if randi() % 2 == 1:
 			qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
+		if randi() % 2 == 1:
 			qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
 			
-			q_ShaderMaterial.set_shader_param( "Krokiew", randf() * 50)
-			
-			if Autoload.WRONG_BUGS:
-				q_ShaderMaterial.set_shader(Shader.new())
-				
-				qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
-				qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
-				qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
-				
-				q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_ShaderMaterial.set_shader(Shader.new())
-				
-			if randi() % 2 == 1:
-				qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
-			if randi() % 2 == 1:
-				qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
-			if randi() % 2 == 1:
-				qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
-				
-			if randi() % 2 == 1:
-				q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)

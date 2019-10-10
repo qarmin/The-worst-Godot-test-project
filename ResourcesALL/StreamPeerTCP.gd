@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,44 +14,23 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_StreamPeerTCP = StreamPeerTCP.new()
 		
-		var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
-		if !Autoload.RANDI:
-			
-			#qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", 0 ))
+		
+		if randi() % 2 == 1:
+			qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
 			q_StreamPeerTCP.disconnect_from_host()
 			
+		if randi() % 2 == 1:
 			qq += str(q_StreamPeerTCP.get_connected_host())
+		if randi() % 2 == 1:
 			qq += str(q_StreamPeerTCP.get_connected_port())
+		if randi() % 2 == 1:
 			qq += str(q_StreamPeerTCP.get_status())
 			
+		if randi() % 2 == 1:
 			qq += str(q_StreamPeerTCP.is_connected_to_host())
-			#q_StreamPeerTCP.set_no_delay( bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				q_StreamPeerTCP.disconnect_from_host()
-				
-				qq += str(q_StreamPeerTCP.get_connected_host())
-				qq += str(q_StreamPeerTCP.get_connected_port())
-				qq += str(q_StreamPeerTCP.get_status())
-				
-				qq += str(q_StreamPeerTCP.is_connected_to_host())
-				q_StreamPeerTCP.set_no_delay( bool(randi()%2))
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				q_StreamPeerTCP.disconnect_from_host()
-				
-			if randi() % 2 == 1:
-				qq += str(q_StreamPeerTCP.get_connected_host())
-			if randi() % 2 == 1:
-				qq += str(q_StreamPeerTCP.get_connected_port())
-			if randi() % 2 == 1:
-				qq += str(q_StreamPeerTCP.get_status())
-				
-			if randi() % 2 == 1:
-				qq += str(q_StreamPeerTCP.is_connected_to_host())
-			if randi() % 2 == 1:
-				q_StreamPeerTCP.set_no_delay( bool(randi()%2))
+		if randi() % 2 == 1:
+			q_StreamPeerTCP.set_no_delay( bool(randi()%2))

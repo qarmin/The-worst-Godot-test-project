@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Marshalls : Marshalls = Marshalls.new()
 #
@@ -26,5 +24,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Marshalls.utf8_to_base64("asfqwfasfasfasfas"))
 #		qq += str(q_Marshalls.variant_to_base64(String(),bool(randi()%2)))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

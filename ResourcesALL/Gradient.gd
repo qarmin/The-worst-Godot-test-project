@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_Gradient : Gradient = Gradient.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,66 +14,32 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_Gradient = Gradient.new()
 			
-		var q_Gradient : Gradient = Gradient.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			q_Gradient.set_offsets(PoolRealArray([125125.125,12512.1251,122.124]))
+		if randi() % 2 == 1:
 			q_Gradient.set_colors(PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]))
 			
 			for _i in range(4):
-				q_Gradient.add_point( randf() * 50,Color(randf(),randf(),randf(),randf()) )
+				if randi() % 2 == 1:
+					q_Gradient.add_point( randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()) )
 				
-			qq += str(q_Gradient.get_color( 0 ))
-			qq += str(q_Gradient.get_offset( 0 ))
+		if randi() % 2 == 1:
+			qq += str(q_Gradient.get_color(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
+			qq += str(q_Gradient.get_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
 			qq += str(q_Gradient.get_point_count())
 			
-			qq += str(q_Gradient.interpolate(randf() * 50))
-			q_Gradient.remove_point( 0 )
+		if randi() % 2 == 1:
+			qq += str(q_Gradient.interpolate(randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			q_Gradient.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
 			
-			q_Gradient.set_color( 0, Color(randf(),randf(),randf(),randf()) )
-			q_Gradient.set_offset( 0,randf() * 50)
-			
-			if Autoload.WRONG_BUGS:
-				q_Gradient.set_offsets(PoolRealArray([125125.125,12512.1251,122.124]))
-				q_Gradient.set_colors(PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]))
-				
-				for _i in range(4):
-					q_Gradient.add_point( randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()) )
-					
-				qq += str(q_Gradient.get_color(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_Gradient.get_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_Gradient.get_point_count())
-				
-				qq += str(q_Gradient.interpolate(randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_Gradient.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
-				
-				q_Gradient.set_color(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()) )
-				q_Gradient.set_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_Gradient.set_offsets(PoolRealArray([125125.125,12512.1251,122.124]))
-			if randi() % 2 == 1:
-				q_Gradient.set_colors(PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]))
-				
-				for _i in range(4):
-					if randi() % 2 == 1:
-						q_Gradient.add_point( randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()) )
-					
-			if randi() % 2 == 1:
-				qq += str(q_Gradient.get_color(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				qq += str(q_Gradient.get_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				qq += str(q_Gradient.get_point_count())
-				
-			if randi() % 2 == 1:
-				qq += str(q_Gradient.interpolate(randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				q_Gradient.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
-				
-			if randi() % 2 == 1:
-				q_Gradient.set_color(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()) )
-			if randi() % 2 == 1:
-				q_Gradient.set_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_Gradient.set_color(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()) )
+		if randi() % 2 == 1:
+			q_Gradient.set_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)

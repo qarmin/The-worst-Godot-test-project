@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VideoStreamTheora : VideoStreamTheora = VideoStreamTheora.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,18 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VideoStreamTheora = VideoStreamTheora.new()
 		
-		var q_VideoStreamTheora : VideoStreamTheora = VideoStreamTheora.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_VideoStreamTheora.get_file())
+		if randi() % 2 == 1:
 			q_VideoStreamTheora.set_file( "Pewnosc" )
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_VideoStreamTheora.get_file())
-				q_VideoStreamTheora.set_file( "Pewnosc" )
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_VideoStreamTheora.get_file())
-			if randi() % 2 == 1:
-				q_VideoStreamTheora.set_file( "Pewnosc" )

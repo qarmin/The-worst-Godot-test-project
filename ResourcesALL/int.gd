@@ -1,5 +1,7 @@
 extends Node2D
 
+# warning-ignore:unused_variable
+var q_int : int
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,16 +15,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-	# warning-ignore:unused_variable
-			var q_int : int
-	
+		
+		if randi() % 2 == 1:
 			q_int = int(bool(randi()%2))
-			q_int = int(randf() * 50)
-			q_int = int("14")
-	
-			if Autoload.WRONG_BUGS:
-				q_int = int(bool(randi()%2))
-				q_int = int(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_int = int("fasf14")
+		if randi() % 2 == 1:
+			q_int = int(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_int = int("fasf14")

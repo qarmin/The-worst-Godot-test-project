@@ -3,19 +3,17 @@ extends Node2D
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
-func _process(delta) -> void:
-	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			pass
-		
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#func _process(delta) -> void:
+#	counter -= delta
+#	var qq : String = ""
+#	qq = qq
+#
+#	if counter <= 0:
+#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
 #		var q_Nil 
 #
 #		q_Nil = Nil( PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]) )
@@ -45,5 +43,3 @@ func _process(delta) -> void:
 #		q_Nil = Nil( randi()%50)
 #		q_Nil = Nil( bool(randi()%2))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

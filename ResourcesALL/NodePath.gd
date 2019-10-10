@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_NodePath : NodePath
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,31 +14,25 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 			
-			var q_NodePath : NodePath
-			
+		
+		if randi() % 2 == 1:
 			q_NodePath = NodePath(".")
 			
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_as_property_path())
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_concatenated_subnames())
-			qq += str(q_NodePath.get_name( 0))
+		if randi() % 2 == 1:
+			qq += str(q_NodePath.get_name( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_name_count())
-			#qq += str(q_NodePath.get_subname(0 ))
+		if randi() % 2 == 1:
+			qq += str(q_NodePath.get_subname(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_subname_count())
 			
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.is_absolute())
+		if randi() % 2 == 1:
 			qq += str(q_NodePath.is_empty())
-			
-			if Autoload.WRONG_BUGS:
-				q_NodePath = NodePath(".")
-				
-				qq += str(q_NodePath.get_as_property_path())
-				qq += str(q_NodePath.get_concatenated_subnames())
-				qq += str(q_NodePath.get_name( randi() % Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(q_NodePath.get_name_count())
-				qq += str(q_NodePath.get_subname(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_NodePath.get_subname_count())
-				
-				qq += str(q_NodePath.is_absolute())
-				qq += str(q_NodePath.is_empty())

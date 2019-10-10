@@ -13,49 +13,22 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-#		var q_TranslationServer : TranslationServer 
-			
-			TranslationServer.add_translation(Translation.new())
+		
+		if randi() % 2 == 1:
+			TranslationServer.add_translation(Autoload.loadA("res://RES/Translation.tres",false))
+		if randi() % 2 == 1:
 			TranslationServer.clear()
 	
+		if randi() % 2 == 1:
 			qq += str(TranslationServer.get_loaded_locales())
+		if randi() % 2 == 1:
 			qq += str(TranslationServer.get_locale())
+		if randi() % 2 == 1:
 			qq += str(TranslationServer.get_locale_name("pl"))
 	
-			TranslationServer.remove_translation(Translation.new())
+		if randi() % 2 == 1:
+			TranslationServer.remove_translation(Autoload.loadA("res://RES/Translation.tres"))
+		if randi() % 2 == 1:
 			TranslationServer.set_locale("pl")
+		if randi() % 2 == 1:
 			qq += str(TranslationServer.translate("pls"))
-			
-			if Autoload.WRONG_BUGS:
-				TranslationServer.add_translation(Autoload.loadA("res://RES/Translation.tres",false))
-				TranslationServer.clear()
-		
-				qq += str(TranslationServer.get_loaded_locales())
-				qq += str(TranslationServer.get_locale())
-				qq += str(TranslationServer.get_locale_name("pl"))
-		
-				TranslationServer.remove_translation(Autoload.loadA("res://RES/Translation.tres"))
-				TranslationServer.set_locale("pl")
-				qq += str(TranslationServer.translate("pls"))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				TranslationServer.add_translation(Autoload.loadA("res://RES/Translation.tres",false))
-			if randi() % 2 == 1:
-				TranslationServer.clear()
-		
-			if randi() % 2 == 1:
-				qq += str(TranslationServer.get_loaded_locales())
-			if randi() % 2 == 1:
-				qq += str(TranslationServer.get_locale())
-			if randi() % 2 == 1:
-				qq += str(TranslationServer.get_locale_name("pl"))
-		
-			if randi() % 2 == 1:
-				TranslationServer.remove_translation(Autoload.loadA("res://RES/Translation.tres"))
-			if randi() % 2 == 1:
-				TranslationServer.set_locale("pl")
-			if randi() % 2 == 1:
-				qq += str(TranslationServer.translate("pls"))

@@ -13,12 +13,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Performance : Performance = Performance.new()
 #
 #		qq += str(q_Performance.get_monitor(randi() % Performance.MONITOR_MAX))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

@@ -1,5 +1,7 @@
 extends Node2D
 
+			
+var q_VisualScriptInputAction : VisualScriptInputAction = VisualScriptInputAction.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +15,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
-		var q_VisualScriptInputAction : VisualScriptInputAction = VisualScriptInputAction.new()
-		if !Autoload.RANDI:
-			
+		if randi() % 2 == 1:
+			q_VisualScriptInputAction = VisualScriptInputAction.new()
+		
+		if randi() % 2 == 1:
 			q_VisualScriptInputAction.set_action_name("Akcja")
-			q_VisualScriptInputAction.set_action_mode(randi() % 4) # Mode
-			
-			if Autoload.WRONG_BUGS:
-				q_VisualScriptInputAction.set_action_name("Akcja")
-				q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_VisualScriptInputAction.set_action_name("Akcja")
-			if randi() % 2 == 1:
-				q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
+		if randi() % 2 == 1:
+			q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode

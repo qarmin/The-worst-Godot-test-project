@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Input : Input = Input.new()
 #
@@ -64,5 +62,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_Input.stop_joy_vibration(randi()%50)
 #		#q_Input.warp_mouse_position(Vector2(randf() * 50,randf() * 50))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

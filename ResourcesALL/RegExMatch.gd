@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_RegExMatch : RegExMatch = RegExMatch.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,42 +14,22 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_RegExMatch = RegExMatch.new()
 			
-		var q_RegExMatch : RegExMatch = RegExMatch.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_subject())
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_names())
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_strings())
 			
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_end( String() ))
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_group_count())
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_start( String() ))
+		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_string( String() ))
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_RegExMatch.get_subject())
-				qq += str(q_RegExMatch.get_names())
-				qq += str(q_RegExMatch.get_strings())
-				
-				qq += str(q_RegExMatch.get_end( String() ))
-				qq += str(q_RegExMatch.get_group_count())
-				qq += str(q_RegExMatch.get_start( String() ))
-				qq += str(q_RegExMatch.get_string( String() ))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_subject())
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_names())
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_strings())
-				
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_end( String() ))
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_group_count())
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_start( String() ))
-			if randi() % 2 == 1:
-				qq += str(q_RegExMatch.get_string( String() ))

@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_AnimationNodeAnimation : AnimationNodeAnimation = AnimationNodeAnimation.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,14 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		var q_AnimationNodeAnimation : AnimationNodeAnimation = AnimationNodeAnimation.new()
-		if !Autoload.RANDI:
+		if randi() % 2 == 1:
+			q_AnimationNodeAnimation = AnimationNodeAnimation.new()
 			
+			
+		if randi() % 2 == 1:
 			q_AnimationNodeAnimation.set_animation("Lewandowski")
-			
-			if Autoload.WRONG_BUGS:
-				q_AnimationNodeAnimation.set_animation("Lewandowski")
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_AnimationNodeAnimation.set_animation("Lewandowski")

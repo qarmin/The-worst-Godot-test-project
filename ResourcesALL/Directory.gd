@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_Directory : Directory = Directory.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,101 +14,49 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_Directory = Directory.new()
 			
-		var q_Directory : Directory = Directory.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_Directory.change_dir( "Ścieżka" ))
-			#qq += str(q_Directory.copy( "Dominuje", "Walka" ))
+		if randi() % 2 == 1:
+			qq += str(q_Directory.copy( "Dominuje", "Walka" ))
+		if randi() % 2 == 1:
 			qq += str(q_Directory.current_is_dir())
+		if randi() % 2 == 1:
 			qq += str(q_Directory.dir_exists( "res://Pmr.png" ))
+		if randi() % 2 == 1:
 			qq += str(q_Directory.file_exists( "res://Pmr.png" ))
 			
+		if randi() % 2 == 1:
 			qq += str(q_Directory.get_current_dir())
+		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
 				qq += str(q_Directory.get_current_drive())
-			#qq += str(q_Directory.get_drive( randi()%50))
+		if randi() % 2 == 1:
+			qq += str(q_Directory.get_drive( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
 			qq += str(q_Directory.get_drive_count())
+		if randi() % 2 == 1:
 			qq += str(q_Directory.get_next())
+		if randi() % 2 == 1:
 			qq += str(q_Directory.get_space_left())
 			
+		if randi() % 2 == 1:
 			qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
+		if randi() % 2 == 1:
 			q_Directory.list_dir_end()
 			
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_Directory.make_dir( "res://Pmr.png" ))
-				qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
-				
-				qq += str(q_Directory.open( "res://Pmr.png" ))
-				qq += str(q_Directory.remove( "res://Pmr.png" ))
-				qq += str(q_Directory.rename( "Dominuje", "Walka" ))
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_Directory.change_dir( "Ścieżka" ))
-				qq += str(q_Directory.copy( "Dominuje", "Walka" ))
-				qq += str(q_Directory.current_is_dir())
-				qq += str(q_Directory.dir_exists( "res://Pmr.png" ))
-				qq += str(q_Directory.file_exists( "res://Pmr.png" ))
-				
-				qq += str(q_Directory.get_current_dir())
-				if Autoload.SLOW_FUNCTIONS:
-					qq += str(q_Directory.get_current_drive())
-				qq += str(q_Directory.get_drive( randi() % Autoload.RANGE - Autoload.RANGE / 2))
-				qq += str(q_Directory.get_drive_count())
-				qq += str(q_Directory.get_next())
-				qq += str(q_Directory.get_space_left())
-				
-				qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
-				q_Directory.list_dir_end()
-				
-				if Autoload.SLOW_FUNCTIONS:
+				if randi() % 2 == 1:
 					qq += str(q_Directory.make_dir( "res://Pmr.png" ))
+				if randi() % 2 == 1:
 					qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
 					
+				if randi() % 2 == 1:
 					qq += str(q_Directory.open( "res://Pmr.png" ))
+				if randi() % 2 == 1:
 					qq += str(q_Directory.remove( "res://Pmr.png" ))
+				if randi() % 2 == 1:
 					qq += str(q_Directory.rename( "Dominuje", "Walka" ))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_Directory.change_dir( "Ścieżka" ))
-			if randi() % 2 == 1:
-				qq += str(q_Directory.copy( "Dominuje", "Walka" ))
-			if randi() % 2 == 1:
-				qq += str(q_Directory.current_is_dir())
-			if randi() % 2 == 1:
-				qq += str(q_Directory.dir_exists( "res://Pmr.png" ))
-			if randi() % 2 == 1:
-				qq += str(q_Directory.file_exists( "res://Pmr.png" ))
-				
-			if randi() % 2 == 1:
-				qq += str(q_Directory.get_current_dir())
-			if randi() % 2 == 1:
-				if Autoload.SLOW_FUNCTIONS:
-					qq += str(q_Directory.get_current_drive())
-			if randi() % 2 == 1:
-				qq += str(q_Directory.get_drive( randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				qq += str(q_Directory.get_drive_count())
-			if randi() % 2 == 1:
-				qq += str(q_Directory.get_next())
-			if randi() % 2 == 1:
-				qq += str(q_Directory.get_space_left())
-				
-			if randi() % 2 == 1:
-				qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
-			if randi() % 2 == 1:
-				q_Directory.list_dir_end()
-				
-				if Autoload.SLOW_FUNCTIONS:
-					if randi() % 2 == 1:
-						qq += str(q_Directory.make_dir( "res://Pmr.png" ))
-					if randi() % 2 == 1:
-						qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
-						
-					if randi() % 2 == 1:
-						qq += str(q_Directory.open( "res://Pmr.png" ))
-					if randi() % 2 == 1:
-						qq += str(q_Directory.remove( "res://Pmr.png" ))
-					if randi() % 2 == 1:
-						qq += str(q_Directory.rename( "Dominuje", "Walka" ))

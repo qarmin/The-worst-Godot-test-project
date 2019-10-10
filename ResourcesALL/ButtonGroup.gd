@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_ButtonGroup : ButtonGroup = ButtonGroup.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_ButtonGroup = ButtonGroup.new()
 			
-		var q_ButtonGroup : ButtonGroup = ButtonGroup.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			qq += str(q_ButtonGroup.get_buttons())
+		if randi() % 2 == 1:
 			qq += str(q_ButtonGroup.get_pressed_button())
-			
-			if Autoload.WRONG_BUGS:
-				qq += str(q_ButtonGroup.get_buttons())
-				qq += str(q_ButtonGroup.get_pressed_button())
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				qq += str(q_ButtonGroup.get_buttons())
-			if randi() % 2 == 1:
-				qq += str(q_ButtonGroup.get_pressed_button())

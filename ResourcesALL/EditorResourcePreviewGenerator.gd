@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #		var q_EditorResourcePreviewGenerator : EditorResourcePreviewGenerator = EditorResourcePreviewGenerator.new()
 #
 #		q_EditorResourcePreviewGenerator.can_generate_small_preview()
@@ -23,5 +21,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorResourcePreviewGenerator.generate_small_preview_automatically()
 #		q_EditorResourcePreviewGenerator.handles( "To pułapka!!" )
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

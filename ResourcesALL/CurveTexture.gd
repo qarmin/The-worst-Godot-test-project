@@ -1,5 +1,6 @@
 extends Node2D
 
+#var q_CurveTexture : CurveTexture = CurveTexture.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -11,20 +12,12 @@ func _process(delta) -> void:
 	var qq : String = ""
 	qq = qq
 	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
-		var q_CurveTexture : CurveTexture = CurveTexture.new()
-		if !Autoload.RANDI:
-			
-			q_CurveTexture.set_width(randi()%50 + 32)
-			q_CurveTexture.set_curve(Curve.new())
-			
-			if Autoload.WRONG_BUGS:
-				q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_CurveTexture.set_curve(Curve.new())
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_CurveTexture.set_curve(Curve.new())
+#	if counter <= 0:
+#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#		if randi() % 2 == 1:
+#			q_CurveTexture = CurveTexture.new()
+#
+#		if randi() % 2 == 1:
+#			q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#		if randi() % 2 == 1:
+#			q_CurveTexture.set_curve(Curve.new())

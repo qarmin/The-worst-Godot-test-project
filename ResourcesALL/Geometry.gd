@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Geometry : Geometry = Geometry.new()
 #
@@ -63,5 +61,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(Geometry.triangulate_delaunay_2d(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)])))
 #		qq += str(Geometry.triangulate_polygon(PoolVector2Array([Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)])))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

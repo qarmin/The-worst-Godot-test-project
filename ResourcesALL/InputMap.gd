@@ -13,9 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
-#
 #		var q_InputMap : InputMap = InputMap.new()
 #
 #		#InputMap.action_add_event("Geralt",InputEvent.new())
@@ -34,5 +31,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(InputMap.has_action("Zlap"))
 #		InputMap.load_from_globals()
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

@@ -17,10 +17,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			pass
 #
 #		var q_SkinReference : SkinReference = SkinReference.new()
-#
-#		qq += str(q_SkinReference.get_skeleton())
-#		qq += str(q_SkinReference.get_skin())
-#
-#		if Autoload.WRONG_BUGS:
 #			qq += str(q_SkinReference.get_skeleton())
 #			qq += str(q_SkinReference.get_skin())

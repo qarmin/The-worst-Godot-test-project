@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_RayShape : RayShape = RayShape.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,19 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_RayShape = RayShape.new()
 			
-		var q_RayShape : RayShape = RayShape.new()
-		if !Autoload.RANDI:
-			
-			q_RayShape.set_length(randf() * 50)
+		
+		if randi() % 2 == 1:
+			q_RayShape.set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			q_RayShape.set_slips_on_slope(bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				q_RayShape.set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				q_RayShape.set_slips_on_slope(bool(randi()%2))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_RayShape.set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_RayShape.set_slips_on_slope(bool(randi()%2))

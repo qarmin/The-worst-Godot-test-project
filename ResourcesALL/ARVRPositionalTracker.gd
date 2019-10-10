@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,60 +14,32 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
-		if !Autoload.RANDI:
-			
-			q_ARVRPositionalTracker.set_rumble(randf() * 50)
-	
-			qq += str(q_ARVRPositionalTracker.get_hand())
-			qq += str(q_ARVRPositionalTracker.get_joy_id())
-			qq += str(q_ARVRPositionalTracker.get_mesh())
-			qq += str(q_ARVRPositionalTracker.get_name())
-			qq += str(q_ARVRPositionalTracker.get_orientation())
-			qq += str(q_ARVRPositionalTracker.get_position())
-			qq += str(q_ARVRPositionalTracker.get_tracks_orientation())
-			qq += str(q_ARVRPositionalTracker.get_tracks_position())
-			qq += str(q_ARVRPositionalTracker.get_transform( bool(randi()%2)))
-			qq += str(q_ARVRPositionalTracker.get_type())
-	
-			if Autoload.WRONG_BUGS:
-				q_ARVRPositionalTracker.set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-	
-				qq += str(q_ARVRPositionalTracker.get_hand())
-				qq += str(q_ARVRPositionalTracker.get_joy_id())
-				qq += str(q_ARVRPositionalTracker.get_mesh())
-				qq += str(q_ARVRPositionalTracker.get_name())
-				qq += str(q_ARVRPositionalTracker.get_orientation())
-				qq += str(q_ARVRPositionalTracker.get_position())
-				qq += str(q_ARVRPositionalTracker.get_tracks_orientation())
-				qq += str(q_ARVRPositionalTracker.get_tracks_position())
-				qq += str(q_ARVRPositionalTracker.get_transform( bool(randi()%2)))
-				qq += str(q_ARVRPositionalTracker.get_type())
+		if randi() % 2 == 1:
+			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
 		
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_ARVRPositionalTracker.set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_ARVRPositionalTracker.set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
 
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_hand())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_joy_id())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_mesh())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_name())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_orientation())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_position())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_tracks_orientation())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_tracks_position())
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_transform( bool(randi()%2)))
-			if randi() % 2 == 1:
-				qq += str(q_ARVRPositionalTracker.get_type())
-			
-			
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_hand())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_joy_id())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_mesh())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_name())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_orientation())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_position())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_tracks_orientation())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_tracks_position())
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_transform( bool(randi()%2)))
+		if randi() % 2 == 1:
+			qq += str(q_ARVRPositionalTracker.get_type())
+		
+		
 		q_ARVRPositionalTracker.free()

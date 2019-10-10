@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_AnimationNodeStateMachine : AnimationNodeStateMachine = AnimationNodeStateMachine.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -14,97 +15,50 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
-		var q_AnimationNodeStateMachine : AnimationNodeStateMachine = AnimationNodeStateMachine.new()
-		if !Autoload.RANDI:
-			
-			q_AnimationNodeStateMachine.add_node( "Nuda", AnimationNode.new(), Vector2(randf() * 50,randf() * 50))
-			#q_AnimationNodeStateMachine.add_transition( "Levele", "Muszyna", AnimationNodeStateMachineTransition.new())
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine = AnimationNodeStateMachine.new()
+		
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.add_node( "Nuda", AnimationNode.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.add_transition( "Levele", "Muszyna", AnimationNodeStateMachineTransition.new())
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_end_node())
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_graph_offset())
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_node( "Nuda" ))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_node_name( AnimationNode.new()))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_node_position( "Nuda" ))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_start_node())
-			#qq += str(q_AnimationNodeStateMachine.get_transition( randi()%50 ))
+		if randi() % 2 == 1:
+			qq += str(q_AnimationNodeStateMachine.get_transition( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.get_transition_count())
-			#qq += str(q_AnimationNodeStateMachine.get_transition_from( randi()%50 ))
-			#qq += str(q_AnimationNodeStateMachine.get_transition_to( randi()%50 ))
+		if randi() % 2 == 1:
+			qq += str(q_AnimationNodeStateMachine.get_transition_from( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
+			qq += str(q_AnimationNodeStateMachine.get_transition_to( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.has_node( "Nuda" ))
+		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachine.has_transition( "Levele", "Muszyna" ))
-			#q_AnimationNodeStateMachine.remove_node( "Nuda" )
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.remove_node( "Nuda" )
+		if randi() % 2 == 1:
 			q_AnimationNodeStateMachine.remove_transition( "Levele", "Muszyna" )
-			#q_AnimationNodeStateMachine.remove_transition_by_index(randi()%50 )
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.remove_transition_by_index(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+		if randi() % 2 == 1:
 			q_AnimationNodeStateMachine.rename_node( "Nuda", "He he" )
-			#q_AnimationNodeStateMachine.set_end_node( "Nuda" )
-			q_AnimationNodeStateMachine.set_graph_offset( Vector2(randf() * 50,randf() * 50))
-			#q_AnimationNodeStateMachine.set_node_position( "Nuda", Vector2(randf() * 50,randf() * 50))
-			#q_AnimationNodeStateMachine.set_start_node( "Nuda" )
-			
-			if Autoload.WRONG_BUGS:
-				q_AnimationNodeStateMachine.add_node( "Nuda", AnimationNode.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_AnimationNodeStateMachine.add_transition( "Levele", "Muszyna", AnimationNodeStateMachineTransition.new())
-				qq += str(q_AnimationNodeStateMachine.get_end_node())
-				qq += str(q_AnimationNodeStateMachine.get_graph_offset())
-				qq += str(q_AnimationNodeStateMachine.get_node( "Nuda" ))
-				qq += str(q_AnimationNodeStateMachine.get_node_name( AnimationNode.new()))
-				qq += str(q_AnimationNodeStateMachine.get_node_position( "Nuda" ))
-				qq += str(q_AnimationNodeStateMachine.get_start_node())
-				qq += str(q_AnimationNodeStateMachine.get_transition( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_AnimationNodeStateMachine.get_transition_count())
-				qq += str(q_AnimationNodeStateMachine.get_transition_from( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_AnimationNodeStateMachine.get_transition_to( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-				qq += str(q_AnimationNodeStateMachine.has_node( "Nuda" ))
-				qq += str(q_AnimationNodeStateMachine.has_transition( "Levele", "Muszyna" ))
-				q_AnimationNodeStateMachine.remove_node( "Nuda" )
-				q_AnimationNodeStateMachine.remove_transition( "Levele", "Muszyna" )
-				q_AnimationNodeStateMachine.remove_transition_by_index(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
-				q_AnimationNodeStateMachine.rename_node( "Nuda", "He he" )
-				q_AnimationNodeStateMachine.set_end_node( "Nuda" )
-				q_AnimationNodeStateMachine.set_graph_offset( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_AnimationNodeStateMachine.set_node_position( "Nuda", Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-				q_AnimationNodeStateMachine.set_start_node( "Nuda" )
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.add_node( "Nuda", AnimationNode.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.add_transition( "Levele", "Muszyna", AnimationNodeStateMachineTransition.new())
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_end_node())
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_graph_offset())
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_node( "Nuda" ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_node_name( AnimationNode.new()))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_node_position( "Nuda" ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_start_node())
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_transition( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_transition_count())
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_transition_from( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.get_transition_to( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.has_node( "Nuda" ))
-			if randi() % 2 == 1:
-				qq += str(q_AnimationNodeStateMachine.has_transition( "Levele", "Muszyna" ))
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.remove_node( "Nuda" )
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.remove_transition( "Levele", "Muszyna" )
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.remove_transition_by_index(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
-				q_AnimationNodeStateMachine.rename_node( "Nuda", "He he" )
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.set_end_node( "Nuda" )
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.set_graph_offset( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.set_node_position( "Nuda", Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
-			if randi() % 2 == 1:
-				q_AnimationNodeStateMachine.set_start_node( "Nuda" )
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.set_end_node( "Nuda" )
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.set_graph_offset( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.set_node_position( "Nuda", Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		if randi() % 2 == 1:
+			q_AnimationNodeStateMachine.set_start_node( "Nuda" )

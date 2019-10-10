@@ -3,8 +3,8 @@ extends Node2D
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 #func _process(delta) -> void:
 #	counter -= delta
@@ -13,12 +13,8 @@ func _ready():
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_Sky : Sky = Sky.new()
 #
 #		q_Sky.set_radiance_size(randi() % Sky.RADIANCE_SIZE_MAX) # RadianceSize
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

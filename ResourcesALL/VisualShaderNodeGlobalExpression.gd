@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_VisualShaderNodeGlobalExpression : VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,15 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
 				
-		var q_VisualShaderNodeGlobalExpression : VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
-		if !Autoload.RANDI:
-			
+		
+		if randi() % 2 == 1:
 			q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)
-			
-			if Autoload.WRONG_BUGS:
-				q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)

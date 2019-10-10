@@ -1,5 +1,6 @@
 extends Node2D
 
+var q_CanvasItemMaterial : CanvasItemMaterial = CanvasItemMaterial.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,35 +14,19 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_CanvasItemMaterial = CanvasItemMaterial.new()
 		
-		var q_CanvasItemMaterial : CanvasItemMaterial = CanvasItemMaterial.new()
-		if !Autoload.RANDI:
-			
-			q_CanvasItemMaterial.set_blend_mode( randi() % 5) #BlendMode
-			q_CanvasItemMaterial.set_light_mode(randi() % 3) # LightMode
+		
+		if randi() % 2 == 1:
+			q_CanvasItemMaterial.set_blend_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #BlendMode
+		if randi() % 2 == 1:
+			q_CanvasItemMaterial.set_light_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # LightMode
+		if randi() % 2 == 1:
 			q_CanvasItemMaterial.set_particles_animation(bool(randi()%2))
-			q_CanvasItemMaterial.set_particles_anim_h_frames(randi()%50)
-			q_CanvasItemMaterial.set_particles_anim_v_frames(randi()%50)
+		if randi() % 2 == 1:
+			q_CanvasItemMaterial.set_particles_anim_h_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
+			q_CanvasItemMaterial.set_particles_anim_v_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		if randi() % 2 == 1:
 			q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))
-			
-			if Autoload.WRONG_BUGS:
-				q_CanvasItemMaterial.set_blend_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #BlendMode
-				q_CanvasItemMaterial.set_light_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # LightMode
-				q_CanvasItemMaterial.set_particles_animation(bool(randi()%2))
-				q_CanvasItemMaterial.set_particles_anim_h_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_CanvasItemMaterial.set_particles_anim_v_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-				q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))
-
-		else: #RANDI
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_blend_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #BlendMode
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_light_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # LightMode
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_particles_animation(bool(randi()%2))
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_particles_anim_h_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_particles_anim_v_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-			if randi() % 2 == 1:
-				q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))

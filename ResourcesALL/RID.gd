@@ -1,5 +1,7 @@
 extends Node2D
 
+# warning-ignore:unassigned_variable
+var q_RID : RID
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -13,14 +15,7 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
 		
-	# warning-ignore:unassigned_variable
-			var q_RID : RID
-			
+		if randi() % 2 == 1:
 			#q_RID = RID()
 			qq += str(q_RID.get_id())
-			
-			if Autoload.WRONG_BUGS:
-				#q_RID = RID()
-				qq += str(q_RID.get_id())

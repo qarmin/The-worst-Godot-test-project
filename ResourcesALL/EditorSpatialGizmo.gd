@@ -5,7 +5,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 #func _ready():
 #	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+#
 #func _process(delta) -> void:
 #	counter -= delta
 #	var qq : String = ""
@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_EditorSpatialGizmo : EditorSpatialGizmo = EditorSpatialGizmo.new()
 #
@@ -40,5 +38,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorSpatialGizmo.set_hidden(bool(randi()%2))
 #		q_EditorSpatialGizmo.set_spatial_node( Node.new())
 #
-#		if Autoload.WRONG_BUGS:
-#			pass
