@@ -19,41 +19,41 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_animation( "Gadajacy Pies" )
+			q_SpriteFrames.add_animation( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_frame( "Gadajacy Pies", ImageTexture.new(), Autoload.get_randi() )
+			q_SpriteFrames.add_frame( Autoload.get_string(), ImageTexture.new(), Autoload.get_randi() )
 			
 		if randi() % 2 == 1:
-			q_SpriteFrames.clear( "Stos" )
+			q_SpriteFrames.clear( Autoload.get_string() )
 		if randi() % 2 == 1:
 			q_SpriteFrames.clear_all()
 
 		if randi() % 2 == 1:
-			qq += str(q_SpriteFrames.get_animation_loop( "Gadajacy Pies" ))
+			qq += str(q_SpriteFrames.get_animation_loop( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_SpriteFrames.get_animation_names())
 		if randi() % 2 == 1:
-			qq += str(q_SpriteFrames.get_animation_speed( "Gadajacy Pies" ))
+			qq += str(q_SpriteFrames.get_animation_speed( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_SpriteFrames.get_frame( "Gadajacy Pies", 0 ))
+			qq += str(q_SpriteFrames.get_frame( Autoload.get_string(), 0 ))
 		if randi() % 2 == 1:
-			qq += str(q_SpriteFrames.get_frame_count( "Gadajacy Pies" ))
+			qq += str(q_SpriteFrames.get_frame_count( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_SpriteFrames.has_animation( "Gadajacy Pies" ))
+			qq += str(q_SpriteFrames.has_animation( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			q_SpriteFrames.remove_animation( "Gadajacy Pies" )
+			q_SpriteFrames.remove_animation( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_SpriteFrames.remove_frame( "Gadajacy Pies", 0 )
+			q_SpriteFrames.remove_frame( Autoload.get_string(), 0 )
 			
 		if randi() % 2 == 1:
-			q_SpriteFrames.rename_animation( "Gadajacy Pies", "Stos" )
+			q_SpriteFrames.rename_animation( Autoload.get_string(), Autoload.get_string() )
 			
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_animation_loop( "Stos", bool(randi()%2))
+			q_SpriteFrames.set_animation_loop( Autoload.get_string(), bool(randi()%2))
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_animation_speed( "Stos", Autoload.get_randf())
+			q_SpriteFrames.set_animation_speed( Autoload.get_string(), Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_frame( "Stos", Autoload.get_randi(), Texture.new() )
+			q_SpriteFrames.set_frame( Autoload.get_string(), Autoload.get_randi(), Texture.new() )
 			

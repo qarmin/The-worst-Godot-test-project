@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-				q_InputEventAction.set_action("Mina")
+				q_InputEventAction.set_action(Autoload.get_string())
 		if randi() % 2 == 1:
 				q_InputEventAction.set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:

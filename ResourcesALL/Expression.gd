@@ -24,13 +24,13 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			qq += str(q_Expression.execute( ["Indeksy"], q_temp0, bool(randi()%2)))
+			qq += str(q_Expression.execute( [Autoload.get_string()], q_temp0, bool(randi()%2)))
 		if randi() % 2 == 1:
 			qq += str(q_Expression.get_error_text())
 		if randi() % 2 == 1:
 			qq += str(q_Expression.has_execute_failed())
 		if randi() % 2 == 1:
-			qq += str(q_Expression.parse( "Zaginiony", PoolStringArray(["Parapetówa"]) ))
+			qq += str(q_Expression.parse( Autoload.get_string(), PoolStringArray([Autoload.get_string()]) ))
 			
 func delete_node():
 	q_temp0.queue_free()

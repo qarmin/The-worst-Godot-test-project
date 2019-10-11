@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_attenuation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bus("ŹcŻΩŒno")
+			set_bus(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_area_mask(Autoload.get_randi())
 		if randi() % 2 == 1:

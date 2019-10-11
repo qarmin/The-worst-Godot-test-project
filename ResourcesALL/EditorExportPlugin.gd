@@ -16,17 +16,17 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_EditorExportPlugin : EditorExportPlugin = EditorExportPlugin.new()
 #
-#		### q_EditorExportPlugin._export_begin( PoolStringArray(["125125.125","12512.1251","122.124"]), bool(randi()%2), "Spustoszenie", randi()%50 )
+#		### q_EditorExportPlugin._export_begin( PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), bool(randi()%2), Autoload.get_string(), randi()%50 )
 #		### q_EditorExportPlugin._export_end()
-#		### q_EditorExportPlugin._export_file( "Spustoszenie", "Ajrisz", PoolStringArray(["125125.125","12512.1251","122.124"]))
+#		### q_EditorExportPlugin._export_file( Autoload.get_string(), Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]))
 #
-#		q_EditorExportPlugin.add_file( "Spustoszenie", PoolByteArray([11,124,1241,24,21,214,12,11]), bool(randi()%2) )
-#		q_EditorExportPlugin.add_ios_bundle_file( "Spustoszenie" )
-#		q_EditorExportPlugin.add_ios_cpp_code( "Wyspa" )
-#		q_EditorExportPlugin.add_ios_framework( "Spustoszenie" )
-#		q_EditorExportPlugin.add_ios_linker_flags( "Flagi")
-#		q_EditorExportPlugin.add_ios_plist_content( "Coś")
-#		q_EditorExportPlugin.add_shared_object( "Spustoszenie", PoolStringArray(["125125.125","12512.1251","122.124"]) )
+#		q_EditorExportPlugin.add_file( Autoload.get_string(), PoolByteArray([11,124,1241,24,21,214,12,11]), bool(randi()%2) )
+#		q_EditorExportPlugin.add_ios_bundle_file( Autoload.get_string() )
+#		q_EditorExportPlugin.add_ios_cpp_code( Autoload.get_string() )
+#		q_EditorExportPlugin.add_ios_framework( Autoload.get_string() )
+#		q_EditorExportPlugin.add_ios_linker_flags( Autoload.get_string())
+#		q_EditorExportPlugin.add_ios_plist_content( Autoload.get_string())
+#		q_EditorExportPlugin.add_shared_object( Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]) )
 #
 #		q_EditorExportPlugin.skip()
 #

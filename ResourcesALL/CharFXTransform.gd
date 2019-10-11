@@ -31,9 +31,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : Autoload.loadA("res://RES/default_env1.tres")})
+			q_CharFXTransform.set_environment({Autoload.get_string() : Autoload.get_string()})
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_character(Autoload.get_randi())
 			
 		if randi() % 2 == 1:
-			q_CharFXTransform.get_value_or("PRGORAM", Autoload.get_randi())
+			q_CharFXTransform.get_value_or(Autoload.get_string(), Autoload.get_randi())

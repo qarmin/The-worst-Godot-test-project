@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Crypto.generate_rsa(Autoload.get_randi()))
 #BUG		if randi() % 2 == 1:
-#			qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("res://RES/CryptoKey.tres"), "Szczekacz", "W koło", "Sia"))
+#			qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("res://RES/CryptoKey.tres"), Autoload.get_string(), Autoload.get_string(), Autoload.get_string()))

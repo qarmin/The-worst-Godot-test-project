@@ -16,11 +16,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Marshalls : Marshalls = Marshalls.new()
 #
-#		qq += str(q_Marshalls.base64_to_raw("asfqwfasfasfasfas"))
-#		qq += str(q_Marshalls.base64_to_utf8("asfqwfasfasfasfas"))
-#		qq += str(q_Marshalls.base64_to_variant("asfqwfasfasfasfas",bool(randi()%2)))
+#		qq += str(q_Marshalls.base64_to_raw(Autoload.get_string()))
+#		qq += str(q_Marshalls.base64_to_utf8(Autoload.get_string()))
+#		qq += str(q_Marshalls.base64_to_variant(Autoload.get_string(),bool(randi()%2)))
 #
 #		qq += str(q_Marshalls.raw_to_base64(PoolByteArray([1221,124,12421,4])))
-#		qq += str(q_Marshalls.utf8_to_base64("asfqwfasfasfasfas"))
+#		qq += str(q_Marshalls.utf8_to_base64(Autoload.get_string()))
 #		qq += str(q_Marshalls.variant_to_base64(String(),bool(randi()%2)))
 #

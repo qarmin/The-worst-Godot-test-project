@@ -31,7 +31,7 @@ func _process(delta) -> void:
 			q_NetworkedMultiplayerENet.close_connection( Autoload.get_randi())
 	
 #		if randi() % 2 == 1:
-#	LEAK		qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
+#	LEAK		qq += str(q_NetworkedMultiplayerENet.create_client(Autoload.get_string(),Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			qq += str(q_NetworkedMultiplayerENet.create_server( Autoload.get_randi(),Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi()))
 	
@@ -48,4 +48,4 @@ func _process(delta) -> void:
 			qq += str(q_NetworkedMultiplayerENet.get_peer_port( Autoload.get_randi()))
 	
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.set_bind_ip( "Koszulka")
+			q_NetworkedMultiplayerENet.set_bind_ip( Autoload.get_string())

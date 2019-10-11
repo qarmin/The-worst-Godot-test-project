@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_CryptoKey.load("Lelele"))
+			qq += str(q_CryptoKey.load("res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_CryptoKey.save("gqwrw"))
+			qq += str(q_CryptoKey.save("res://TEMP/" + Autoload.get_string()))

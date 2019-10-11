@@ -21,15 +21,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_call_mode(Autoload.get_randi()) # CallMode
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_base_type("Miałem")
+			q_VisualScriptFunctionCall.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_base_script("Hrom")
+			q_VisualScriptFunctionCall.set_base_script(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_singleton("QQQr")
+			q_VisualScriptFunctionCall.set_singleton(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_basic_type(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_base_path("wq.")
+			q_VisualScriptFunctionCall.set_base_path(Autoload.get_string())
 #	BUG	if randi() % 2 == 1:
 #			q_VisualScriptFunctionCall.set_function("Rzsafym")
 		if randi() % 2 == 1:

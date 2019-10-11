@@ -21,7 +21,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_ARVRServer.set_primary_interface(ARVRInterface.new())
 #
 #		q_ARVRServer.center_on_hmd( randi() % 3, bool(randi()%2) ) #RotationMode
-#		qq += str(q_ARVRServer.find_interface( "Dziadek" ))
+#		qq += str(q_ARVRServer.find_interface( Autoload.get_string() ))
 #
 #		qq += str(q_ARVRServer.get_hmd_transform())
 #		qq += str(q_ARVRServer.get_interface( randi()%50 ))

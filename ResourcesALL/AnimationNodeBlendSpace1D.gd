@@ -26,7 +26,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace1D.set_snap(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_value_label("Jakas wartosc")
+			q_AnimationNodeBlendSpace1D.set_value_label(Autoload.get_string())
 			
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace1D.add_blend_point( AnimationRootNode.new(), Autoload.get_randf(), Autoload.get_randi() )

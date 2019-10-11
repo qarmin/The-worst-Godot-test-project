@@ -16,9 +16,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_FuncRef : FuncRef = FuncRef.new()
 #
-#		q_FuncRef.call_func("Dzieli")
+#		q_FuncRef.call_func(Autoload.get_string())
 #		q_FuncRef.is_valid()
 #
-#		q_FuncRef.set_function( "Kurek" )
+#		q_FuncRef.set_function( Autoload.get_string() )
 #		q_FuncRef.set_instance( Node.new() )
 #

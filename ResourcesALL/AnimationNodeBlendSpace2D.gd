@@ -27,9 +27,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace2D.set_snap(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.set_x_label("Buty")
+			q_AnimationNodeBlendSpace2D.set_x_label(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.set_y_label("Szalwia")
+			q_AnimationNodeBlendSpace2D.set_y_label(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace2D.set_blend_mode(Autoload.get_randi()) #BlendMode
 			

@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_remote_node("/root/2fwwL")
+			set_remote_node(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_use_global_coordinates(bool(randi()%2))
 		if randi() % 2 == 1:

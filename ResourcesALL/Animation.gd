@@ -32,9 +32,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Animation.animation_track_get_key_animation(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_Animation.animation_track_insert_key(1,Autoload.get_randf(),"Kropierz"))
+			qq += str(q_Animation.animation_track_insert_key(1,Autoload.get_randf(),Autoload.get_string()))
 		if randi() % 2 == 1:
-			q_Animation.animation_track_set_key_animation(Autoload.get_randi(),Autoload.get_randi(),"Krowa")
+			q_Animation.animation_track_set_key_animation(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_string())
 			
 		if randi() % 2 == 1:
 			qq += str(q_Animation.audio_track_get_key_end_offset(Autoload.get_randi(),Autoload.get_randi()))

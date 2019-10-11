@@ -31,4 +31,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioEffectCompressor.set_mix(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_sidechain("Jedrzejczyk")
+			q_AudioEffectCompressor.set_sidechain(Autoload.get_string())

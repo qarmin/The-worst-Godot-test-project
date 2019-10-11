@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_sprite_frames(Autoload.loadA("res://RES/SpriteFrames.tres"))
 		if randi() % 2 == 1:
-			set_animation("default")
+			set_animation(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_frame(bool(randi()%2))
 		if randi() % 2 == 1:

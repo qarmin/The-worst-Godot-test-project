@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_float = float(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_float = float("4afasfa6")
+			q_float = float(Autoload.get_string())

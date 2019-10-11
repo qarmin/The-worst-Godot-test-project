@@ -44,11 +44,11 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_String = String( Color(randf(),randf(),randf(),randf()))
 			if randi() % 2 == 1:
-				q_String = String( NodePath("asf."))
+				q_String = String( NodePath(Autoload.get_string()))
 			if randi() % 2 == 1:
 				q_String = String( RID())
 			if randi() % 2 == 1:
-				q_String = String( {"Ouo": 15, "Kompresja": 124})
+				q_String = String( {Autoload.get_string(): 15, Autoload.get_string(): 124})
 			if randi() % 2 == 1:
 				q_String = String( [124,214,214,124,214,214,2])
 			if randi() % 2 == 1:
@@ -58,7 +58,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_String = String( PoolRealArray([Autoload.get_randf()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolStringArray(["60"]))
+				q_String = String( PoolStringArray([Autoload.get_string()]))
 			if randi() % 2 == 1:
 				q_String = String( PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf())]))
 			if randi() % 2 == 1:
@@ -67,7 +67,7 @@ func _process(delta) -> void:
 				q_String = String( PoolColorArray([Color(randf(),randf(),randf(),randf())]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.begins_with( "Krwawy Bieg"))
+			qq += str(q_String.begins_with( Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(q_String.bigrams())
 		if randi() % 2 == 1:
@@ -77,25 +77,25 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.capitalize())
 		if randi() % 2 == 1:
-			qq += str(q_String.casecmp_to( "Krew i Wino" ))
+			qq += str(q_String.casecmp_to( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.dedent())
 		if randi() % 2 == 1:
 			qq += str(q_String.empty())
 		if randi() % 2 == 1:
-			qq += str(q_String.ends_with( "Fanfary i Kwiaty" ))
+			qq += str(q_String.ends_with( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.erase( Autoload.get_randi(),Autoload.get_randi()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.find( "Za Honor! Za Toussaint!", Autoload.get_randi()))
+			qq += str(q_String.find( Autoload.get_string(), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_String.find_last( "Nie mogę cię zostawić" ))
+			qq += str(q_String.find_last( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.findn( "Winna Wojna", Autoload.get_randi()))
+			qq += str(q_String.findn( Autoload.get_string(), Autoload.get_randi()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.format( "Kupcy Novigradu", "Vivienne" ))
+			qq += str(q_String.format( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.get_base_dir())
@@ -117,16 +117,16 @@ func _process(delta) -> void:
 			qq += str(q_String.http_unescape())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.insert( Autoload.get_randi(), "Co leży niewidoczne" ))
+			qq += str(q_String.insert( Autoload.get_randi(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.is_abs_path())
 		if randi() % 2 == 1:
 			qq += str(q_String.is_rel_path())
 		if randi() % 2 == 1:
-			qq += str(q_String.is_subsequence_of( "Mandragora" ))
+			qq += str(q_String.is_subsequence_of( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.is_subsequence_ofi( "Księżyc ponad górą Gorgona" ))
+			qq += str(q_String.is_subsequence_ofi( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.is_valid_filename())
 		if randi() % 2 == 1:
@@ -149,12 +149,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.length())
 		if randi() % 2 == 1:
-			qq += str(q_String.lstrip( "Bestia z Beauclair" ))
+			qq += str(q_String.lstrip( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.match( "Pani Jeziora" ))
+			qq += str(q_String.match( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.matchn( "Syanna" ))
+			qq += str(q_String.matchn( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.md5_buffer())
@@ -162,7 +162,7 @@ func _process(delta) -> void:
 			qq += str(q_String.md5_text())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.nocasecmp_to( "Poszukiwanie Cecilia Bellant" ))
+			qq += str(q_String.nocasecmp_to( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.ord_at( Autoload.get_randi()))
 			
@@ -177,24 +177,24 @@ func _process(delta) -> void:
 			qq += str(q_String.percent_encode())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.plus_file( "Zbliża się polowanie" ))
+			qq += str(q_String.plus_file( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.replace( "Emhyr var Emreis", "Geralt of Rivia" ))
+			qq += str(q_String.replace( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.replacen( "Emhyr var Emreis", "Geralt of Rivia" ))
+			qq += str(q_String.replacen( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.rfind( "Emhyr var Emreis", Autoload.get_randi()))
+			qq += str(q_String.rfind( Autoload.get_string(), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_String.rfindn( "Emhyr var Emreis", Autoload.get_randi()))
+			qq += str(q_String.rfindn( Autoload.get_string(), Autoload.get_randi()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.right( Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_String.rsplit( "Srebry dla potworów...", bool(randi()%2), Autoload.get_randi()))
+			qq += str(q_String.rsplit( Autoload.get_string(), bool(randi()%2), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_String.rstrip( "... Stalowy dla ludzi" ))
+			qq += str(q_String.rstrip( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.sha256_buffer())
@@ -202,12 +202,12 @@ func _process(delta) -> void:
 			qq += str(q_String.sha256_text())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.similarity( "Witaj Imlerith" ))
+			qq += str(q_String.similarity( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.split( "Srebry dla potworów...", bool(randi()%2), Autoload.get_randi()))
+			qq += str(q_String.split( Autoload.get_string(), bool(randi()%2), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_String.split_floats( "Srebry dla potworów...",bool(randi()%2) ))
+			qq += str(q_String.split_floats( Autoload.get_string(),bool(randi()%2) ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.strip_edges( bool(randi()%2),bool(randi()%2)))
@@ -231,9 +231,9 @@ func _process(delta) -> void:
 			qq += str(q_String.to_utf8())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.trim_prefix( "Kaer Morhen" ))
+			qq += str(q_String.trim_prefix( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.trim_suffix( "Oczy Wilka" ))
+			qq += str(q_String.trim_suffix( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.xml_escape())

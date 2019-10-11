@@ -170,8 +170,8 @@ func _process(delta) -> void:
 #
 #				#Node
 #				set_pause_mode(randi() % (PAUSE_MODE_PROCESS + 1))
-#				set_name(str("asfafqwa") + str(randi() % 2541252))
-#				set_filename(str("asfafqwa") + str(randi() % 2541252))
+#				set_name(str(Autoload.get_string()) + str(randi() % 2541252))
+#				set_filename(str(Autoload.get_string()) + str(randi() % 2541252))
 #				set_owner(get_parent())
 #				qq += str(get_multiplayer())
 #				set_custom_multiplayer(MultiplayerAPI.new())
@@ -190,15 +190,15 @@ func _process(delta) -> void:
 #						break 
 #					add_child(TextureButton.new(),bool(randi()%2))
 #				add_child_below_node(get_child(Autoload.get_randi()),get_child(Autoload.get_randi()),bool(randi()%2))
-#				add_to_group("asfqwtg",bool(randi()%2))
+#				add_to_group(Autoload.get_string(),bool(randi()%2))
 #
 #				qq += str(can_process())
 #				var nooo : Node = duplicate(Autoload.get_randi()) # DuplicateFlags
 #				if nooo != null:
 #					nooo.queue_free()
 #
-#				qq += str(find_node("asfqgwq",bool(randi()%2),bool(randi()%2)))
-#				qq += str(find_parent("fqwfqwgf a"))
+#				qq += str(find_node(Autoload.get_string(),bool(randi()%2),bool(randi()%2)))
+#				qq += str(find_parent(Autoload.get_string()))
 #
 #				qq += str(get_child(Autoload.get_randi()))
 #				qq += str(get_child_count())
@@ -206,9 +206,9 @@ func _process(delta) -> void:
 #				qq += str(get_groups())
 #				qq += str(get_index())
 #				qq += str(get_network_master())
-#				qq += str(get_node(NodePath("./CPUParticasfasfales_ALL")))
-#				qq += str(get_node_and_resource(NodePath("./CPUPartasfasfasficles_ALL")))
-#				qq += str(get_node_or_null(NodePath("./CPUPaasfasfacles_ALL")))
+#				qq += str(get_node(NodePath(Autoload.get_string())))
+#				qq += str(get_node_and_resource(NodePath(Autoload.get_string())))
+#				qq += str(get_node_or_null(NodePath(Autoload.get_string())))
 #				qq += str(get_parent())
 #				qq += str(get_path())
 #				qq += str(get_path_to(get_parent()))
@@ -219,13 +219,13 @@ func _process(delta) -> void:
 #				qq += str(get_tree())
 #				qq += str(get_viewport())
 #
-#				qq += str(has_node(NodePath("awgasfafaagfa")))
-#				qq += str(has_node_and_resource(NodePath("awgfasfasfagfa")))
+#				qq += str(has_node(NodePath(Autoload.get_string())))
+#				qq += str(has_node_and_resource(NodePath(Autoload.get_string())))
 #
 #				qq += str(is_a_parent_of(self))
 #				qq += str(is_displayed_folded())
 #				qq += str(is_greater_than(get_parent()))
-#				qq += str(is_in_group("asfafqaw"))
+#				qq += str(is_in_group(Autoload.get_string()))
 #				qq += str(is_inside_tree())
 #				qq += str(is_network_master())
 #				qq += str(is_physics_processing())
@@ -243,7 +243,7 @@ func _process(delta) -> void:
 #				###print_tree()
 #				###print_tree_pretty()
 #
-#				propagate_call("asfafqwtgq",["asfqwag"],bool(randi()%2))
+#				propagate_call(Autoload.get_string(),[Autoload.get_string()],bool(randi()%2))
 #				propagate_notification(Autoload.get_randi())
 #
 #				###queue_free()
@@ -256,22 +256,22 @@ func _process(delta) -> void:
 #				if cn >= 0 && cn < get_child_count():
 #					remove_child(child_number)
 #					child_number.queue_free()
-#				remove_from_group("asfqwtg")
+#				remove_from_group(Autoload.get_string())
 #
 #				replace_by(get_child(Autoload.get_randi()),bool(randi()%2))
 #				request_ready()
 #
-#				qq += str(rpc("asfqwgag"))
-#				rpc_config("agfqwege",Autoload.get_randi())
-#				qq += str(rpc_id(Autoload.get_randi(),"asfqwqt"))
-#				qq += str(rpc_unreliable("asfqwgtq"))
-#				qq += str(rpc_unreliable_id(Autoload.get_randi(),"asfqwfqw"))
+#				qq += str(rpc(Autoload.get_string()))
+#				rpc_config(Autoload.get_string(),Autoload.get_randi())
+#				qq += str(rpc_id(Autoload.get_randi(),Autoload.get_string()))
+#				qq += str(rpc_unreliable(Autoload.get_string()))
+#				qq += str(rpc_unreliable_id(Autoload.get_randi(),Autoload.get_string()))
 #
-#				rset("afqwfasf", CubeMesh.new())
-#				rset_config("agfqwege",Autoload.get_randi())
-#				rset_id(Autoload.get_randi(), "faqawfwqa",CubeMesh.new())
-#				rset_unreliable("asfqwgtq", CubeMesh.new())
-#				rset_unreliable_id(Autoload.get_randi(),"asfqwfqw",CubeMesh.new())
+#				rset(Autoload.get_string(), CubeMesh.new())
+#				rset_config(Autoload.get_string(),Autoload.get_randi())
+#				rset_id(Autoload.get_randi(), Autoload.get_string(),CubeMesh.new())
+#				rset_unreliable(Autoload.get_string(), CubeMesh.new())
+#				rset_unreliable_id(Autoload.get_randi(),Autoload.get_string(),CubeMesh.new())
 #
 #				set_display_folded(bool(randi()%2))
 #				set_network_master(Autoload.get_randi(),bool(randi()%2))
@@ -287,46 +287,46 @@ func _process(delta) -> void:
 #
 #
 #				#Object
-#				###qq += str(_get("astaf"))
+#				###qq += str(_get(Autoload.get_string()))
 #				###qq += str(_get_property_list())
 #				###_init()
 #				###_notification(randi()%50)
-#				###qq += str(_set("SAasa",TextEdit.new()))
+#				###qq += str(_set(Autoload.get_string(),TextEdit.new()))
 #				###qq += str(_to_string())
 #
-#				add_user_signal("asfqasffq" + str(counter_temp))
+#				add_user_signal(Autoload.get_string() + str(counter_temp))
 #
-#				qq += str(call("empty"))
-#				qq += str(call_deferred("empty"))
-#				qq += str(callv("empty2",[Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()]))
+#				qq += str(call(Autoload.get_string()))
+#				qq += str(call_deferred(Autoload.get_string()))
+#				qq += str(callv(Autoload.get_string(),[Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()]))
 #
 #				qq += str(can_translate_messages())
-#				qq += str(connect("script_changed",self,"get",["emfafpty"],Autoload.get_randi())) # ConnectFlags
-#				disconnect("script_c1251hanged",self,"get")
-#				qq += str(emit_signal("script_ch125anged"))
+#				qq += str(connect(Autoload.get_string(),self,Autoload.get_string(),[Autoload.get_string()],Autoload.get_randi())) # ConnectFlags
+#				disconnect(Autoload.get_string(),self,Autoload.get_string())
+#				qq += str(emit_signal(Autoload.get_string()))
 #				###free()
 #
-#				qq += str(get("afasfq"))
+#				qq += str(get(Autoload.get_string()))
 #				qq += str(get_class())
 #				qq += str(get_incoming_connections())
-#				qq += str(get_indexed("asfafqw"))
+#				qq += str(get_indexed(Autoload.get_string()))
 #				qq += str(get_instance_id())
-#				if.has_meta("asfqwfag"):
-#					qq += str(get_meta("asfqwfag"))
+#				if.has_meta(Autoload.get_string()):
+#					qq += str(get_meta(Autoload.get_string()))
 #				qq += str(get_meta_list())
 #				qq += str(get_method_list())
 #				qq += str(get_property_list())
 #				qq += str(get_script())
-#				qq += str(get_signal_connection_list("script_changed"))
+#				qq += str(get_signal_connection_list(Autoload.get_string()))
 #				qq += str(get_signal_list())
 #
-#				qq += str(has_meta("asfasfas"))
-#				qq += str(has_method("asfasfas"))
-#				qq += str(has_user_signal("asfasfas"))
+#				qq += str(has_meta(Autoload.get_string()))
+#				qq += str(has_method(Autoload.get_string()))
+#				qq += str(has_user_signal(Autoload.get_string()))
 #
 #				qq += str(is_blocking_signals())
-#				qq += str(is_class("asfasfas"))
-#				qq += str(is_connected("script_changed",self,"get"))
+#				qq += str(is_class(Autoload.get_string()))
+#				qq += str(is_connected(Autoload.get_string(),self,Autoload.get_string()))
 #				qq += str(is_queued_for_deletion())
 #
 #				#Better do not touch this BUG
@@ -336,16 +336,16 @@ func _process(delta) -> void:
 #				#		notification(i,bool(randi()%2))
 #				###notification(randi()%1000,bool(randi()%2))
 #				property_list_changed_notify()
-#				remove_meta("afqwqwasfaar")
+#				remove_meta(Autoload.get_string())
 #
-#				set("qfafaasffdc",CubeMesh.new())
+#				set(Autoload.get_string(),CubeMesh.new())
 #				set_block_signals(bool(randi()%2))
-#				set_deferred("asasfafqwfq",CubeMesh.new())
-#				set_indexed("asfasfqwfqw",CubeMesh.new())
+#				set_deferred(Autoload.get_string(),CubeMesh.new())
+#				set_indexed(Autoload.get_string(),CubeMesh.new())
 #				set_message_translation(bool(randi()%2))
-#				set_meta("fsafassfafwqa", CubeMesh.new())
+#				set_meta(Autoload.get_string(), CubeMesh.new())
 #				#set_script(Reference.new())
 #
 #				qq += str(to_string())
-#				qq += str(tr("asfqwasfasfqwt        "))
+#				qq += str(tr(Autoload.get_string()))
 				

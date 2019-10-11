@@ -44,36 +44,36 @@ func _process(delta) -> void:
 			q_Array.back()
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch( "Nie", bool(randi()%2)))
+			qq += str(q_Array.bsearch( Autoload.get_string(), bool(randi()%2)))
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch_custom( "Nie", q_temp, "Jesion", bool(randi()%2)))
+			qq += str(q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), bool(randi()%2)))
 
 		if randi() % 2 == 1:
 			q_Array.clear()
 		if randi() % 2 == 1:
-			qq += str(q_Array.count( "Nie" ))
+			qq += str(q_Array.count( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_Array.duplicate( bool(randi()%2)))
 		if randi() % 2 == 1:
 			qq += str(q_Array.empty())
 		if randi() % 2 == 1:
-			q_Array.erase( "Nie" )
+			q_Array.erase( Autoload.get_string() )
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.find( "Jesiotr", Autoload.get_randi()))
+			qq += str(q_Array.find( Autoload.get_string(), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_Array.find_last( "Nie" ))
+			qq += str(q_Array.find_last( Autoload.get_string() ))
 
 		if randi() % 2 == 1:
 			q_Array.front()
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.has( "Nie" ))
+			qq += str(q_Array.has( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_Array.hash())
 
 		if randi() % 2 == 1:
-			q_Array.insert( Autoload.get_randi(), "Nie") 
+			q_Array.insert( Autoload.get_randi(), Autoload.get_string()) 
 		if randi() % 2 == 1:
 			q_Array.invert()
 		if randi() % 2 == 1:
@@ -87,16 +87,16 @@ func _process(delta) -> void:
 			q_Array.pop_front()
 
 		if randi() % 2 == 1:
-			q_Array.push_back( "Nie" )
+			q_Array.push_back( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_Array.push_front( "Nie" )
+			q_Array.push_front( Autoload.get_string() )
 
 		if randi() % 2 == 1:
 			q_Array.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_Array.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			qq += str(q_Array.rfind( "Nie", Autoload.get_randi()))
+			qq += str(q_Array.rfind( Autoload.get_string(), Autoload.get_randi()))
 		if randi() % 2 == 1:
 			q_Array.shuffle()
 		if randi() % 2 == 1:
@@ -108,5 +108,5 @@ func _process(delta) -> void:
 			q_Array.sort_custom( q_temp, "Ram" )
 
 func delete_node():
-	print("AA")
+	print(Autoload.get_string())
 	q_temp.queue_free()

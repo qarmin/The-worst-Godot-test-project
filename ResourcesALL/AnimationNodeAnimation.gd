@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeAnimation.set_animation("Lewandowski")
+			q_AnimationNodeAnimation.set_animation(Autoload.get_string())

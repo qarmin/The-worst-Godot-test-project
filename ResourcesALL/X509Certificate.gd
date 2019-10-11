@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			qq += str(q_X509Certificate.load("rasrs"))
+			qq += str(q_X509Certificate.load("res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_X509Certificate.save("rasrs"))
+			qq += str(q_X509Certificate.save("res://TEMP/" + Autoload.get_string()))

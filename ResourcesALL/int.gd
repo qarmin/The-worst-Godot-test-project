@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_int = int(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_int = int("fasf14")
+			q_int = int(Autoload.get_string())

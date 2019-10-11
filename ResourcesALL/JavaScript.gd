@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_JavaScript : JavaScript = JavaScript.new()
 #
-#		qq += str(q_JavaScript.eval("17",bool(randi()%2)))
+#		qq += str(q_JavaScript.eval(Autoload.get_string(),bool(randi()%2)))
 #

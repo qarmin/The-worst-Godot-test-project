@@ -16,10 +16,10 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_ResourceFormatLoader : ResourceFormatLoader = ResourceFormatLoader.new()
 #		
-#		q_ResourceFormatLoader.get_dependencies( "res://Groźny.txt", "Niechlujny" )
+#		q_ResourceFormatLoader.get_dependencies( "res://Groźny.txtAutoload.get_string() )
 #		q_ResourceFormatLoader.get_recognized_extensions()
 #		q_ResourceFormatLoader.get_resource_type( "res://Groźny.txt" )
-#		q_ResourceFormatLoader.handles_type( "Przekroczyć" )
-#		q_ResourceFormatLoader.load( "res://Groźny.txt", "res://Uspokoić.png" )
-#		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txt", "Pojawoia" )
+#		q_ResourceFormatLoader.handles_type( Autoload.get_string() )
+#		q_ResourceFormatLoader.load( "res://Groźny.txtAutoload.get_string() )
+#		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txtAutoload.get_string() )
 #

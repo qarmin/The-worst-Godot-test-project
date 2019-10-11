@@ -19,14 +19,14 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Translation.set_locale("pl")
+			q_Translation.set_locale(Autoload.get_string())
 			
 		if randi() % 2 == 1:
-			q_Translation.add_message( "Bolaczka", "Pomysl" )
+			q_Translation.add_message( Autoload.get_string(), Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_Translation.erase_message( "Historia" )
+			q_Translation.erase_message( Autoload.get_string() )
 		if randi() % 2 == 1:
-			qq += str(q_Translation.get_message( "Geralt" ))
+			qq += str(q_Translation.get_message( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_Translation.get_message_count())
 		if randi() % 2 == 1:

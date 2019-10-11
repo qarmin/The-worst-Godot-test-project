@@ -24,11 +24,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(TranslationServer.get_locale())
 		if randi() % 2 == 1:
-			qq += str(TranslationServer.get_locale_name("pl"))
+			qq += str(TranslationServer.get_locale_name(Autoload.get_string()))
 	
 		if randi() % 2 == 1:
 			TranslationServer.remove_translation(Autoload.loadA("res://RES/Translation.tres"))
 		if randi() % 2 == 1:
-			TranslationServer.set_locale("pl")
+			TranslationServer.set_locale(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(TranslationServer.translate("pls"))
+			qq += str(TranslationServer.translate(Autoload.get_string()))

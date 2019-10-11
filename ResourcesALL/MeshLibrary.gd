@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.create_item(Autoload.get_randi())
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.find_item_by_name("Dokumenty"))
+			qq += str(q_MeshLibrary.find_item_by_name(Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_MeshLibrary.get_item_list())
@@ -46,7 +46,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_mesh(Autoload.get_randi(),CubeMesh.new())
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_name(Autoload.get_randi(),"Kukurydza")
+			q_MeshLibrary.set_item_name(Autoload.get_randi(),Autoload.get_string())
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_navmesh(Autoload.get_randi(),NavigationMesh.new())
 		if randi() % 2 == 1:

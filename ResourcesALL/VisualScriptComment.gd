@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptComment.set_title("Koń")
+			q_VisualScriptComment.set_title(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptComment.set_description("Zwierzę")
+			q_VisualScriptComment.set_description(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_VisualScriptComment.set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))

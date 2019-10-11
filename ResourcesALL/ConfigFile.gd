@@ -19,22 +19,23 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_ConfigFile.erase_section( "Sekcja2" )
+			q_ConfigFile.erase_section( Autoload.get_string() )
 			
 		if randi() % 2 == 1:
-			qq += str(q_ConfigFile.get_section_keys( "Sekcja" ))
+			qq += str(q_ConfigFile.get_section_keys( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_ConfigFile.get_sections())
 		if randi() % 2 == 1:
-			qq += str(q_ConfigFile.get_value( "Sekcja", "Klucz", String() ))
+			qq += str(q_ConfigFile.get_value( Autoload.get_string(), Autoload.get_string(), String() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_ConfigFile.has_section( "Sekcja" ))
+			qq += str(q_ConfigFile.has_section( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_ConfigFile.has_section_key( "Sekcja", "Klucz" ))
+			qq += str(q_ConfigFile.has_section_key( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
-			q_ConfigFile.save( "res://Close.txt" )
 		if randi() % 2 == 1:
-			q_ConfigFile.set_value( "Sekcja", "Klucz", String())
+			q_ConfigFile.save( "res://TEMP/ConfigFile.txt" )
+		if randi() % 2 == 1:
+			q_ConfigFile.set_value( Autoload.get_string(), Autoload.get_string(), String())

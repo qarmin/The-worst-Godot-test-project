@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_VideoStreamWebm.get_file())
 		if randi() % 2 == 1:
-			q_VideoStreamWebm.set_file( "Paleta" )
+			q_VideoStreamWebm.set_file( Autoload.get_string() )

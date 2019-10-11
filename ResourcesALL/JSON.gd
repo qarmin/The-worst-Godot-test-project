@@ -16,6 +16,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_JSON : JSON = JSON.new()
 #
-#		qq += str(q_JSON.parse("Konceptualny"))
-#		qq += str(q_JSON.print("Brzeczyszczykiewicz","lekolody",bool(randi()%2)))
+#		qq += str(q_JSON.parse(Autoload.get_string()))
+#		qq += str(q_JSON.print(Autoload.get_string(),Autoload.get_string(),bool(randi()%2)))
 #

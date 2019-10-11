@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_PCKPacker.add_file( "Znam", "Spotkanie" ))
+			qq += str(q_PCKPacker.add_file( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_PCKPacker.flush( bool(randi()%2)))
 #	LEAK	if randi() % 2 == 1:
-#			qq += str(q_PCKPacker.pck_start( "Krzywy",  Autoload.get_randi()))
+#			qq += str(q_PCKPacker.pck_start( "res://TEMP/PCKPacker",  Autoload.get_randi()))

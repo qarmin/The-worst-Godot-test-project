@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_access(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_filters(PoolStringArray(["*.pqfqwfng ; PNG Imagesqwfqw","*.gqwfqwfd ; GD Script"]))
+			set_filters(PoolStringArray([Autoload.get_string(),Autoload.get_string()]))
 		if randi() % 2 == 1:
 			set_show_hidden_files(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			clear_filters()
 		if randi() % 2 == 1:
-			add_filter("*.pnqwfg ; PNG Images")
+			add_filter(Autoload.get_string())
 		if randi() % 2 == 1:
 			deselect_items()
 		if randi() % 2 == 1:

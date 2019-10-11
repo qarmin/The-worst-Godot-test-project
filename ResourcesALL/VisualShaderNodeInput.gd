@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeInput.set_input_name("Szkoła")
+			q_VisualShaderNodeInput.set_input_name(Autoload.get_string())

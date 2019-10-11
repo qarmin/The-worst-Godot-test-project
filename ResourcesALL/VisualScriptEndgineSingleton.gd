@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptEngineSingleton.set_singleton("ase")
+			q_VisualScriptEngineSingleton.set_singleton(Autoload.get_string())

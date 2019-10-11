@@ -18,14 +18,14 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Script : Script = Script.new()
 #
-#		q_Script.set_source_code("Tak")
+#		q_Script.set_source_code(Autoload.get_string())
 #
 #		qq += str(q_Script.can_instance())
 #
 #		qq += str(q_Script.get_base_script())
 #		qq += str(q_Script.get_instance_base_type())
 #
-#		qq += str(q_Script.has_script_signal( "Brzeczy" ))
+#		qq += str(q_Script.has_script_signal( Autoload.get_string() ))
 #		qq += str(q_Script.has_source_code())
 #
 #		qq += str(q_Script.instance_has( self ))

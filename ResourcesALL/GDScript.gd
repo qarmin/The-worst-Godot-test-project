@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			print("asf")
+			print(Autoload.get_string())
 		if randi() % 2 == 1:
 			qq += str(Color8(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
@@ -60,7 +60,7 @@ func _process(delta) -> void:
 			
 		if randi() % 2 == 1:
 			qq += str(deg2rad(Autoload.get_randf()))
-			#qq += str(dict2inst({"asfaf":12,"asfqw": 2156}))
+			#qq += str(dict2inst({Autoload.get_string():12,Autoload.get_string(): 2156}))
 		if randi() % 2 == 1:
 			qq += str(ease(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
@@ -72,11 +72,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(fposmod(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			qq += str(funcref(self,"_ready"))
+			qq += str(funcref(self,Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_stack())
 		if randi() % 2 == 1:
-			qq += str(hash(String("asf")))
+			qq += str(hash(String(Autoload.get_string())))
 			
 			#qq += str(inst2dict(Texture.new()))
 		if randi() % 2 == 1:
@@ -96,7 +96,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_zero_approx(Autoload.get_randf()))
 		if randi() % 2 == 1:
-			qq += str(len(String("asf")))
+			qq += str(len(String(Autoload.get_string())))
 		if randi() % 2 == 1:
 			qq += str(lerp(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
@@ -123,24 +123,24 @@ func _process(delta) -> void:
 			qq += str(preload("res://RES/Sprite.png"))
 			
 		if randi() % 2 == 1:
-			print("safwaw")
+			print(Autoload.get_string())
 		if randi() % 2 == 1:
-			print_debug("asfqwg")
+			print_debug(Autoload.get_string())
 		if randi() % 2 == 1:
 			print_stack()
 		if randi() % 2 == 1:
-			printerr("asfqwg")
+			printerr(Autoload.get_string())
 		if randi() % 2 == 1:
-			printraw("asfqwg")
+			printraw(Autoload.get_string())
 		if randi() % 2 == 1:
-			prints("asfqwg")
+			prints(Autoload.get_string())
 		if randi() % 2 == 1:
-			printt("asfqwg")
+			printt(Autoload.get_string())
 			
 		if randi() % 2 == 1:
-			push_error("asfqwg")
+			push_error(Autoload.get_string())
 		if randi() % 2 == 1:
-			push_warning("asfqwg")
+			push_warning(Autoload.get_string())
 			
 		if randi() % 2 == 1:
 			qq += str(rad2deg(Autoload.get_randf()))
@@ -185,7 +185,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(str(2152153))
 		if randi() % 2 == 1:
-			qq += str(str2var("asfqwgqgqfa"))
+			qq += str(str2var(Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(tan(Autoload.get_randf()))
@@ -193,20 +193,20 @@ func _process(delta) -> void:
 			qq += str(tanh(Autoload.get_randf()))
 			
 		if randi() % 2 == 1:
-			qq += str(to_json(String("asfasqw")))
+			qq += str(to_json(String(Autoload.get_string())))
 			
 		if randi() % 2 == 1:
-			qq += str(type_exists("asfqwqa"))
+			qq += str(type_exists(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(typeof(String("adgqwfadf")))
+			qq += str(typeof(String(Autoload.get_string())))
 			
 		if randi() % 2 == 1:
-			qq += str(validate_json("asfqwfasf"))
+			qq += str(validate_json(Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(var2bytes(bool(randi()%2)))
 		if randi() % 2 == 1:
-			qq += str(var2str(String("adgqwfadf")))
+			qq += str(var2str(String(Autoload.get_string())))
 		if randi() % 2 == 1:
 			qq += str(weakref(get_parent()))
 			

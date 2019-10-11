@@ -75,7 +75,7 @@ func _process(delta) -> void:
 			qq += str(q_File.is_open())
 			
 		if randi() % 2 == 1:
-			qq += str(q_File.open( "res://Qwerty.txt", randi() % 30 - 10))#randi() % 7 + 1))
+			qq += str(q_File.open( "res://TEMP/" + Autoload.get_string(), randi() % 30 - 10))#randi() % 7 + 1))
 		###q_File.open_compressed( "res://RES/Sprite1.png", randi() % 7 + 1, randi() % 4 )#ModeFlags, CompressionMode
 		###q_File.open_encrypted( "res://RES/Sprite1.png", randi() % 7 + 1, PoolByteArray([11,124,1241,24,21,214,12,11]))#ModeFlags
 		###q_File.open_encrypted_with_pass( "res://RES/Sprite1.png", randi() % 7 + 1, "res://RES/Sprite1.png" )#ModeFlags
@@ -104,10 +104,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_File.store_line( "Rzeka" )
 		if randi() % 2 == 1:
-			q_File.store_pascal_string( "Spiewajace puzony" )
+			q_File.store_pascal_string( Autoload.get_string() )
 		if randi() % 2 == 1:
 			q_File.store_real( randf() * 50 )
 		if randi() % 2 == 1:
-			q_File.store_string( "Napraw to" )
+			q_File.store_string( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_File.store_var( "QK", bool(randi()%2))
+			q_File.store_var( Autoload.get_string(), bool(randi()%2))

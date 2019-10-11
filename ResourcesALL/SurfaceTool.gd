@@ -56,7 +56,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.create_from( Mesh.new(), Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_randi(), "Mapa" )
+			q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_randi(), Autoload.get_string() )
 			
 		if randi() % 2 == 1:
 			q_SurfaceTool.deindex()

@@ -34,8 +34,8 @@ func _process(delta) -> void:
 				set_param(randi() % 30 - 15, Autoload.get_randf())
 				
 				#Joint
-				set_node_a("qwfq")
-				set_node_b(".safa")
+				set_node_a(Autoload.get_string())
+				set_node_b(Autoload.get_string())
 				set_solver_priority(Autoload.get_randi())
 				set_exclude_nodes_from_collision(bool(randi()%2))
 		else: #RANDI
@@ -48,9 +48,9 @@ func _process(delta) -> void:
 				
 				#Joint
 			if randi() % 2 == 1:
-				set_node_a("qwfq")
+				set_node_a(Autoload.get_string())
 			if randi() % 2 == 1:
-				set_node_b(".safa")
+				set_node_b(Autoload.get_string())
 			if randi() % 2 == 1:
 				set_solver_priority(Autoload.get_randi())
 			if randi() % 2 == 1:

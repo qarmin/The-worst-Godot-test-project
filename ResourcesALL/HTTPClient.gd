@@ -26,7 +26,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_HTTPClient.close()
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.connect_to_host( "Szczur", Autoload.get_randi(), bool(randi()%2), bool(randi()%2) ))
+			qq += str(q_HTTPClient.connect_to_host( Autoload.get_string(), Autoload.get_randi(), bool(randi()%2), bool(randi()%2) ))
 	
 		if randi() % 2 == 1:
 			qq += str(q_HTTPClient.get_response_body_length())
@@ -46,16 +46,16 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			qq += str(q_HTTPClient.poll())
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.query_string_from_dict( {"Ouo": Autoload.get_randi(), "Kompresja": 124}))
+			qq += str(q_HTTPClient.query_string_from_dict( {Autoload.get_string(): Autoload.get_randi(), Autoload.get_string(): 124}))
 		if randi() % 2 == 1:
 			qq += str(q_HTTPClient.read_response_body_chunk())
 			
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.request( Autoload.get_randi(), "Strona", PoolStringArray(["Tak","Nie","Być może"]), "Coś innego" ))#Method
+			qq += str(q_HTTPClient.request( Autoload.get_randi(), Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), Autoload.get_string() ))#Method
 		if randi() % 2 == 1:
 			qq += str(q_HTTPClient.read_response_body_chunk())
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.request_raw( Autoload.get_randi(), "Strona", PoolStringArray(["Tak","Nie","Być może"]), PoolByteArray([11,124,1241,24,21,214,12,11]) ))#Method
+			qq += str(q_HTTPClient.request_raw( Autoload.get_randi(), Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), PoolByteArray([11,124,1241,24,21,214,12,11]) ))#Method
 			
 		if randi() % 2 == 1:
 			q_HTTPClient.set_read_chunk_size( Autoload.get_randi() )

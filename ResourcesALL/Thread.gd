@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Thread.is_active())
 #	LEAK	if randi() % 2 == 1:
-#			qq += str(q_Thread.start(self, "Hiszpania", String(), Autoload.get_randi() ))#Priority
+#			qq += str(q_Thread.start(self, Autoload.get_string(), String(), Autoload.get_randi() ))#Priority
 		if randi() % 2 == 1:
 			q_Thread.wait_to_finish()
 			

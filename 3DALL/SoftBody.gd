@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_collision_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_parent_collision_ignore(".asfasfa")
+			set_parent_collision_ignore(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_simulation_precision(Autoload.get_randi())
 		if randi() % 2 == 1:

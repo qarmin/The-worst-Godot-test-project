@@ -26,8 +26,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeStateMachinePlayback.is_playing())
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachinePlayback.start( "Karamba" )
+			q_AnimationNodeStateMachinePlayback.start( Autoload.get_string() )
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachinePlayback.stop()
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachinePlayback.travel( "Kraknow" )
+			q_AnimationNodeStateMachinePlayback.travel( Autoload.get_string() )

@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeExpression.set_expression("Uderzenie")
+			q_VisualShaderNodeExpression.set_expression(Autoload.get_string())
 			
 		if randi() % 2 == 1:
 			q_VisualShaderNodeExpression.build()

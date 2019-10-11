@@ -69,7 +69,7 @@ func _process(delta) -> void:
 				q_TileSet.create_tile(i)
 
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.find_tile_by_name( "Hehemot" ))
+			qq += str(q_TileSet.find_tile_by_name( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_TileSet.get_last_unused_tile_id())
@@ -125,7 +125,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_modulate( Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_name( Autoload.get_randi(), "Niesio" )
+			q_TileSet.tile_set_name( Autoload.get_randi(), Autoload.get_string() )
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_navigation_polygon( Autoload.get_randi(), NavigationPolygon.new() )
 		if randi() % 2 == 1:

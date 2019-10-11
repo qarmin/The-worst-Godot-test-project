@@ -35,15 +35,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			clear_connections()
 		if randi() % 2 == 1:
-			qq += str(connect_node("qwfqafvasfqw",Autoload.get_randi(),"qwgfewgregser",Autoload.get_randi()))
+			qq += str(connect_node(Autoload.get_string(),Autoload.get_randi(),Autoload.get_string(),Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(disconnect_node("qwtqwagae",Autoload.get_randi(),"fqasfqwgfqw",Autoload.get_randi()))
+			qq += str(disconnect_node(Autoload.get_string(),Autoload.get_randi(),Autoload.get_string(),Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_connection_list())
 		if randi() % 2 == 1:
 			qq += str(get_zoom_hbox())
 		if randi() % 2 == 1:
-			qq += str(is_node_connected("qqwtqwdaff",Autoload.get_randi(),"fqqwqwrqwt",Autoload.get_randi()))
+			qq += str(is_node_connected(Autoload.get_string(),Autoload.get_randi(),Autoload.get_string(),Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(is_valid_connection_type(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
@@ -53,6 +53,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			remove_valid_right_disconnect_type(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_connection_activity("qwtqwa",Autoload.get_randi(),"qwfqwfa",Autoload.get_randi(),Autoload.get_randf())
+			set_connection_activity(Autoload.get_string(),Autoload.get_randi(),Autoload.get_string(),Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_selected(get_parent().get_child(randi() % get_parent().get_child_count()))

@@ -697,6 +697,7 @@ script = ExtResource( 223 )
 script = ExtResource( 224 )
 
 [node name="AudioStreamOGGVorbis" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 231 )
 
 [node name="AudioStreamRandomPitch" type="Node2D" parent="."]
@@ -1759,7 +1760,6 @@ script = ExtResource( 416 )
 script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]

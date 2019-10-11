@@ -30,7 +30,7 @@ func _process(delta) -> void:
 			q_BakedLightmapData.set_octree(PoolByteArray([11,124,1241,24,21,214,12,11]))
 			
 		if randi() % 2 == 1:
-			q_BakedLightmapData.add_user( ".", Autoload.loadA("res://RES/Sprite.png"), Autoload.get_randi())
+			q_BakedLightmapData.add_user( Autoload.get_string(), Autoload.loadA("res://RES/Sprite.png"), Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_BakedLightmapData.clear_users()
 		if randi() % 2 == 1:

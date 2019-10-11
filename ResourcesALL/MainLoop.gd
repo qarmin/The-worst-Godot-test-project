@@ -18,12 +18,12 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_MainLoop.free()
 #			q_MainLoop = MainLoop.new()
 #
-		#q_MainLoop._drop_files( PoolStringArray(["Tak","Nie","Być może"]), 0 )
+		#q_MainLoop._drop_files( PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), 0 )
 		#q_MainLoop._finalize()
 		#q_MainLoop._idle( Autoload.get_randf() )
 		#q_MainLoop._initialize()
 		#q_MainLoop._input_event( InputEvent.new() )
-		#q_MainLoop._input_text( "Niefajnie" )
+		#q_MainLoop._input_text( Autoload.get_string() )
 		#q_MainLoop._iteration( Autoload.get_randf() )
 #
 #		if randi() % 2 == 1:
@@ -36,7 +36,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		if randi() % 2 == 1:
 #			q_MainLoop.input_event( InputEvent.new() )
 #		if randi() % 2 == 1:
-#			q_MainLoop.input_text( "Fanfary" )
+#			q_MainLoop.input_text( Autoload.get_string() )
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_MainLoop.iteration( Autoload.get_randf() ))

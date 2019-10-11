@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_out_of_range_mode(Autoload.get_randi()) #OutOfRangeMode
 		if randi() % 2 == 1:
-			set_bus(str("sgasfqw"))
+			set_bus(str(Autoload.get_string()))
 		if randi() % 2 == 1:
 			set_area_mask(Autoload.get_randi())
 		if randi() % 2 == 1:

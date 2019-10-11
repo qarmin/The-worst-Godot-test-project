@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_use_bbcode(bool(randi()%2))
 #	LEAK	if randi() % 2 == 1:
-#			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
+#			set_bbcode(str(Autoload.get_string()) + str(randi()%50))
 		if randi() % 2 == 1:
 			set_visible_characters(Autoload.get_randi())
 		if randi() % 2 == 1:
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tab_size(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_text(str("\n\n\nafafas") + str(randi()%50))
+			set_text(str(Autoload.get_string()) + str(randi()%50))
 		if randi() % 2 == 1:
 			set_scroll_active(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -42,9 +42,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_image(Autoload.loadA("res://RES/Sprite.png"))
 #	BUG	if randi() % 2 == 1:
-#			add_text(str("\n\n\nafafas") + str(randi()%50))
+#			add_text(str(Autoload.get_string()) + str(randi()%50))
 		if randi() % 2 == 1:
-			qq += str(append_bbcode(str("\n\n\nafafas") + str(randi()%50)))
+			qq += str(append_bbcode(str(Autoload.get_string()) + str(randi()%50)))
 		if randi() % 2 == 1:
 			qq += str(get_content_height())
 		if randi() % 2 == 1:
@@ -58,7 +58,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			newline()
 		if randi() % 2 == 1:
-			qq += str(parse_bbcode("\n\n\nafafas"))
+			qq += str(parse_bbcode(Autoload.get_string()))
 		if randi() % 2 == 1:
 			pop()
 		if randi() % 2 == 1:

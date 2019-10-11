@@ -17,6 +17,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_PackedDataContainer : PackedDataContainer = PackedDataContainer.new()
 #		
 #			if randi() % 2 == 1:
-#				qq += str(q_PackedDataContainer.pack(String("asfasf")))
+#				qq += str(q_PackedDataContainer.pack(String(Autoload.get_string())))
 #			if randi() % 2 == 1:
 #				qq += str(q_PackedDataContainer.size())

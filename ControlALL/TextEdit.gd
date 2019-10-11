@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_text("asfasf\nafq" + str(randf() * 50) + "sgerasfawfqaw\r\t\nafsaqw")
+			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_readonly(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -57,9 +57,9 @@ func _process(delta) -> void:
 			set_right_click_moves_caret(bool(randi()%2))
 			
 		if randi() % 2 == 1:
-			add_color_region("aqwfqwfqw", "qascqw", Color(randf(),randf(),randf(),randf()),bool(randi()%2))
+			add_color_region(Autoload.get_string(), Autoload.get_string(), Color(randf(),randf(),randf(),randf()),bool(randi()%2))
 		if randi() % 2 == 1:
-			add_keyword_color("sffqwfasfasfqw", Color(randf(),randf(),randf(),randf()))
+			add_keyword_color(Autoload.get_string(), Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
 			qq += str(can_fold(Autoload.get_randi()))
 		if randi() % 2 == 1:
@@ -87,7 +87,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_breakpoints())
 		if randi() % 2 == 1:
-			qq += str(get_keyword_color("sfafq"))
+			qq += str(get_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_line(Autoload.get_randi()))
 		if randi() % 2 == 1:
@@ -106,7 +106,7 @@ func _process(delta) -> void:
 			qq += str(get_selection_to_line())
 			#qq += str(get_word_under_cursor())
 		if randi() % 2 == 1:
-			qq += str(has_keyword_color("sfaqwffq"))
+			qq += str(has_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
 			insert_text_at_cursor(str(Autoload.get_randi()))
 		if randi() % 2 == 1:
@@ -122,7 +122,7 @@ func _process(delta) -> void:
 			redo()
 		if randi() % 2 == 1:
 			remove_breakpoints()
-			#qq += str(search("asf", randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
+			#qq += str(search(Autoload.get_string(), randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
 			#select(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi())
 		if randi() % 2 == 1:
 			select_all()

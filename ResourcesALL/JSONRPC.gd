@@ -20,21 +20,21 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_notification("Zbyt", Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_notification(Autoload.get_string(), Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_request("Zbyt", Autoload.get_randi(), Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_request(Autoload.get_string(), Autoload.get_randi(), Autoload.get_randi()))
 #		if randi() % 2 == 1:
 #			qq += str(q_JSONRPC.make_response(Autoload.get_randi(), Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_response_error(Autoload.get_randi(), "MESSAGE", Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_response_error(Autoload.get_randi(), Autoload.get_string(), Autoload.get_randi()))
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_JSONRPC.process_action(Autoload.get_randi(), bool(randi()%2)))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.process_string("Za"))
+#			qq += str(q_JSONRPC.process_string(Autoload.get_string()))
 #
 #		if randi() % 2 == 1:
-#			q_JSONRPC.set_scope("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAaaaaaaaaaaAA", self)
+#			q_JSONRPC.set_scope(Autoload.get_string(), self)
 #
 #func delete_node():
 #	q_JSONRPC.free()

@@ -68,7 +68,7 @@ func _physics_process(delta):
 		if randi() % 2 == 1:
 			set_capture_input_on_drag(bool(randi()%2))
 
-			###_input_event(get_parent().find_node("Camera"), InputEvent.new(), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randi())
+			###_input_event(get_parent().find_node(Autoload.get_string()), InputEvent.new(), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randi())
 
 		if randi() % 2 == 1:
 			qq += str(create_shape_owner(self))

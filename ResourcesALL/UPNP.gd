@@ -28,15 +28,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_UPNP.add_device( UPNPDevice.new() )
 		if randi() % 2 == 1:
-			qq += str(q_UPNP.add_port_mapping( Autoload.get_randi(), Autoload.get_randi(), "Kompot", "Ślęża", Autoload.get_randi() ))
+			qq += str(q_UPNP.add_port_mapping( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randi() ))
 			
 		if randi() % 2 == 1:
 			q_UPNP.clear_devices()
 		if randi() % 2 == 1:
-			qq += str(q_UPNP.delete_port_mapping( Autoload.get_randi(), "UDP" ))
+			qq += str(q_UPNP.delete_port_mapping( Autoload.get_randi(), Autoload.get_string() ))
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_UPNP.discover( Autoload.get_randi(), Autoload.get_randi(), "Pozycyjny" ))
+				qq += str(q_UPNP.discover( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_UPNP.get_device( Autoload.get_randi() ))

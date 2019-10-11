@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptVariableSet.set_variable("Małopolska")
+			q_VisualScriptVariableSet.set_variable(Autoload.get_string())

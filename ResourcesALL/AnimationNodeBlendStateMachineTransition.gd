@@ -23,7 +23,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition.set_auto_advance(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachineTransition.set_advance_condition("Nom")
+			q_AnimationNodeStateMachineTransition.set_advance_condition(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition.set_xfade_time(Autoload.get_randf())
 		if randi() % 2 == 1:

@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_ArrayMesh.regen_normalmaps()
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_find_by_name( "Bazylia" ))
+			qq += str(q_ArrayMesh.surface_find_by_name( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_ArrayMesh.surface_get_array_index_len( Autoload.get_randi() ))
 		if randi() % 2 == 1:
@@ -51,6 +51,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_ArrayMesh.surface_remove( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_ArrayMesh.surface_set_name( Autoload.get_randi(), "Majeranek")
+			q_ArrayMesh.surface_set_name( Autoload.get_randi(), Autoload.get_string())
 		if randi() % 2 == 1:
 			q_ArrayMesh.surface_update_region( Autoload.get_randi(), Autoload.get_randi(), PoolByteArray([124,12,412421421,214,124,2]))

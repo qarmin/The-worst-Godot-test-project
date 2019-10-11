@@ -121,7 +121,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Image.rgbe_to_srgb())
 		if randi() % 2 == 1:
-			qq += str(q_Image.save_png( "res://lafar" ))
+			qq += str(q_Image.save_png( "res://TEMP/Image" ))
 
 #		if randi() % 2 == 1:
 #			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))

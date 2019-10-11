@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_bool = bool(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_bool = bool("asfaf")
+			q_bool = bool(Autoload.get_string())

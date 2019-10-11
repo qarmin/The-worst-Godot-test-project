@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_StreamPeerTCP.connect_to_host( "Hosting", Autoload.get_randi() ))
+			qq += str(q_StreamPeerTCP.connect_to_host( Autoload.get_string(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			q_StreamPeerTCP.disconnect_from_host()
 			

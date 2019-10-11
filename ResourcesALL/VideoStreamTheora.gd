@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_VideoStreamTheora.get_file())
 		if randi() % 2 == 1:
-			q_VideoStreamTheora.set_file( "Pewnosc" )
+			q_VideoStreamTheora.set_file( Autoload.get_string() )

@@ -27,9 +27,9 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.get_current_line())
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.get_named_attribute_value( "Niecelnie" ))
+#			qq += str(q_XMLParser.get_named_attribute_value( Autoload.get_string() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.get_named_attribute_value_safe( "Praca" ))
+#			qq += str(q_XMLParser.get_named_attribute_value_safe( Autoload.get_string() ))
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.get_node_data())
 #		if randi() % 2 == 1:
@@ -40,12 +40,12 @@ func _process(delta) -> void:
 #			qq += str(q_XMLParser.get_node_type())
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.has_attribute( "Celny" ))
+#			qq += str(q_XMLParser.has_attribute( Autoload.get_string() ))
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.is_empty())
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.open( "Nawałnica" ))
+#			qq += str(q_XMLParser.open( Autoload.get_string() ))
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.open_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 #

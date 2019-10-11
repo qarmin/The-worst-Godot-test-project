@@ -23,11 +23,11 @@ func _process(delta) -> void:
 			add_child(q_temp_0)
 		
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionState.connect_to_signal( q_temp_0, "Widać", ["Gra"] )
+			q_VisualScriptFunctionState.connect_to_signal( q_temp_0, Autoload.get_string(), [Autoload.get_string()] )
 		if randi() % 2 == 1:
 			qq += str(q_VisualScriptFunctionState.is_valid())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionState.resume( ["Dino"] )
+			q_VisualScriptFunctionState.resume( [Autoload.get_string()] )
 			
 func delete_node():
 	q_temp_0.queue_free()

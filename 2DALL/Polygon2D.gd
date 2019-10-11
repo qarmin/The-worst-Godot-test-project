@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_texture_rotation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_skeleton("asfqwf")
+			set_skeleton(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_invert(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -49,7 +49,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_internal_vertex_count(Autoload.get_randi())
 		if randi() % 2 == 1:
-			add_bone("asfa",PoolRealArray([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
+			add_bone(Autoload.get_string(),PoolRealArray([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
 			erase_bone(Autoload.get_randi())
 		if randi() % 2 == 1:
 			clear_bones()
@@ -60,6 +60,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_bone_weights(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(set_bone_path(Autoload.get_randi(),"asfafsqwfq"))
+			qq += str(set_bone_path(Autoload.get_randi(),Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(set_bone_weights(Autoload.get_randi(),[Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))

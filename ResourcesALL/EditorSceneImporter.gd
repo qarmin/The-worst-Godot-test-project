@@ -18,9 +18,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorSceneImporter._get_extensions()
 #		q_EditorSceneImporter._get_import_flags()
 #
-#		q_EditorSceneImporter._import_animation( "Świerzb", randi()%50, randi()%50 )
-#		q_EditorSceneImporter._import_scene( "Świerzb", randi()%50, randi()%50 )
+#		q_EditorSceneImporter._import_animation( Autoload.get_string(), randi()%50, randi()%50 )
+#		q_EditorSceneImporter._import_scene( Autoload.get_string(), randi()%50, randi()%50 )
 #
-#		q_EditorSceneImporter.import_animation_from_other_importer( "Świerzb", randi()%50, randi()%50 )
-#		q_EditorSceneImporter.import_scene_from_other_importer( "Świerzb", randi()%50, randi()%50 )
+#		q_EditorSceneImporter.import_animation_from_other_importer( Autoload.get_string(), randi()%50, randi()%50 )
+#		q_EditorSceneImporter.import_scene_from_other_importer( Autoload.get_string(), randi()%50, randi()%50 )
 #

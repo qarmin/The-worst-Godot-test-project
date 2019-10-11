@@ -19,9 +19,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			qq += str(q_Directory.change_dir( "Ścieżka" ))
+			qq += str(q_Directory.change_dir( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.copy( "Dominuje", "Walka" ))
+			qq += str(q_Directory.copy( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_Directory.current_is_dir())
 		if randi() % 2 == 1:
@@ -59,4 +59,4 @@ func _process(delta) -> void:
 				if randi() % 2 == 1:
 					qq += str(q_Directory.remove( "res://Pmr.png" ))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.rename( "Dominuje", "Walka" ))
+					qq += str(q_Directory.rename( Autoload.get_string(), Autoload.get_string() ))

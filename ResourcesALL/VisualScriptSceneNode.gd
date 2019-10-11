@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptSceneNode.set_node_path("q.r")
+			q_VisualScriptSceneNode.set_node_path(Autoload.get_string())

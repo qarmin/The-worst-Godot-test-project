@@ -30,9 +30,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(Engine.get_license_info())
 #		qq += str(Engine.get_license_text())
 #		qq += str(Engine.get_main_loop())
-#		#qq += str(Engine.get_singleton("sfafas"))
+#		#qq += str(Engine.get_singleton(Autoload.get_string()))
 #		qq += str(Engine.get_version_info())
 #
-#		qq += str(Engine.has_singleton("asfasfqw"))
+#		qq += str(Engine.has_singleton(Autoload.get_string()))
 #		qq += str(Engine.is_in_physics_frame())
 #

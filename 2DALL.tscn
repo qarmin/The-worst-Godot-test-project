@@ -61,22 +61,12 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "New Anim 2",
+"name": "New Anim 1",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
 "name": "New Anim 4",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
-"loop": false,
-"name": "New Anim 3",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 3 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
@@ -86,7 +76,12 @@ animations = [ {
 }, {
 "frames": [  ],
 "loop": true,
-"name": "New Anim 1",
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
+"loop": true,
+"name": "New Anim 7",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
@@ -94,9 +89,14 @@ animations = [ {
 "name": "New Anim 5",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
+"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "New Anim 7",
+"name": "New Anim 2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
+"loop": false,
+"name": "New Anim 3",
 "speed": 5.0
 } ]
 
@@ -144,7 +144,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
-frame = 29
+frame = 42
 playing = true
 script = ExtResource( 7 )
 

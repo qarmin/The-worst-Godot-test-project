@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptEmitSignal.set_signal("Jednak z sensem")
+			q_VisualScriptEmitSignal.set_signal(Autoload.get_string())

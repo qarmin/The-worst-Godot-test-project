@@ -26,7 +26,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_PacketPeer.get_var( bool(randi()%2)))
 #
 #		qq += str(q_PacketPeer.put_packet( PoolByteArray([11,124,1241,24,21,214,12,11])))
-#		qq += str(q_PacketPeer.put_var("Świnia", bool(randi()%2)))
+#		qq += str(q_PacketPeer.put_var(Autoload.get_string(), bool(randi()%2)))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

@@ -29,12 +29,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_PacketPeerUDP.is_listening())
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.join_multicast_group( "Strzał", "Wycofanie" ))
+			qq += str(q_PacketPeerUDP.join_multicast_group( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
+			qq += str(q_PacketPeerUDP.leave_multicast_group( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.listen( Autoload.get_randi(), "Gol", Autoload.get_randi()))
+			qq += str(q_PacketPeerUDP.listen( Autoload.get_randi(), Autoload.get_string(), Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",Autoload.get_randi()))
+			qq += str(q_PacketPeerUDP.set_dest_address( Autoload.get_string(),Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_PacketPeerUDP.wait())

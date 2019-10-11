@@ -22,11 +22,11 @@ func _process(delta) -> void:
 			q_ShaderMaterial.set_shader(Shader.new())
 			
 		if randi() % 2 == 1:
-			qq += str(q_ShaderMaterial.get_shader_param( "Osiol"))
+			qq += str(q_ShaderMaterial.get_shader_param( Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_ShaderMaterial.property_can_revert( "Owies" ))
+			qq += str(q_ShaderMaterial.property_can_revert( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
+			qq += str(q_ShaderMaterial.property_get_revert( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			q_ShaderMaterial.set_shader_param( "Krokiew", Autoload.get_randf())
+			q_ShaderMaterial.set_shader_param( Autoload.get_string(), Autoload.get_randf())

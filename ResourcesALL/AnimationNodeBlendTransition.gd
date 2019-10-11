@@ -24,6 +24,6 @@ func _process(delta) -> void:
 			q_AnimationNodeTransition.set_cross_fade_time(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set("input_" + Autoload.get_string() +"/name",Autoload.get_string())
+			q_AnimationNodeTransition.set(Autoload.get_string(),Autoload.get_string())
 		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set("input_" + Autoload.get_string() +"/auto_advance",bool(randi()%2))
+			q_AnimationNodeTransition.set(Autoload.get_string(),bool(randi()%2))

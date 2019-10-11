@@ -16,8 +16,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_EditorFileSystemDirectory : EditorFileSystemDirectory = EditorFileSystemDirectory.new()
 #
-#		q_EditorFileSystemDirectory.find_dir_index( "Połowa" )
-#		q_EditorFileSystemDirectory.find_file_index( "Bramki" )
+#		q_EditorFileSystemDirectory.find_dir_index( Autoload.get_string() )
+#		q_EditorFileSystemDirectory.find_file_index( Autoload.get_string() )
 #
 #		q_EditorFileSystemDirectory.get_file( 0 )
 #		q_EditorFileSystemDirectory.get_file_count()

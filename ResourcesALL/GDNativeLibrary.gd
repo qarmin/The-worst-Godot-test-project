@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_GDNativeLibrary.set_singleton(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_GDNativeLibrary.set_symbol_prefix("Prefixus")
+			q_GDNativeLibrary.set_symbol_prefix(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_GDNativeLibrary.set_reloadable(bool(randi()%2))
 			

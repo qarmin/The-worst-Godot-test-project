@@ -21,8 +21,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptYieldSignal.set_call_mode(Autoload.get_randi()) # CallMode
 		if randi() % 2 == 1:
-			q_VisualScriptYieldSignal.set_base_type("Nabzdryngolony")
+			q_VisualScriptYieldSignal.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptYieldSignal.set_base_path(".2f")
+			q_VisualScriptYieldSignal.set_base_path(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptYieldSignal.set_signal("Podwodny")
+			q_VisualScriptYieldSignal.set_signal(Autoload.get_string())

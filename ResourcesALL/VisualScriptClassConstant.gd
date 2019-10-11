@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptClassConstant.set_base_type("Kekin")
+			q_VisualScriptClassConstant.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptClassConstant.set_class_constant("Osoba")
+			q_VisualScriptClassConstant.set_class_constant(Autoload.get_string())

@@ -17,7 +17,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_TextureLayered : TextureLayered = TextureLayered.new()
 #
 #		q_TextureLayered.set_flags(randi() % 7 ) # Flags
-#		q_TextureLayered._set_data({"asfasf":"asfafs"})
+#		q_TextureLayered._set_data({Autoload.get_string()})
 #
 #		q_TextureLayered.create( randi()%50, randi()%50, randi()%50, randi() % Image.FORMAT_MAX, randi() % 7 ) # Flags
 #

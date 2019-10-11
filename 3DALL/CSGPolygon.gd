@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_spin_sides(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_path_node(".hityuf")
+			set_path_node(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_path_interval(Autoload.get_randf())
 		if randi() % 2 == 1:

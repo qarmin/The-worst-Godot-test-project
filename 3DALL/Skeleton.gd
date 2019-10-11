@@ -22,7 +22,7 @@ func _process(delta) -> void:
 			bind_child_node_to_bone(Autoload.get_randi(),self)
 			#NA KONIEC clear_bones()
 		if randi() % 2 == 1:
-			qq += str(find_bone("asfqw"))
+			qq += str(find_bone(Autoload.get_string()))
 	
 		if randi() % 2 == 1:
 			qq += str(get_bone_count())

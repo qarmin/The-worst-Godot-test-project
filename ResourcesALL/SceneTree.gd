@@ -31,8 +31,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 ##		q_SceneTree.set_multiplayer(MultiplayerAPI.new())
 #		q_SceneTree.set_multiplayer_poll_enabled(bool(randi()%2))
 #
-#		q_SceneTree.call_group( "Żółć", "Wanna", "Kasza" )
-#		q_SceneTree.call_group_flags( randi() % 8, "Żółć", "Klucze", "Roman")#GroupCallFlags
+#		q_SceneTree.call_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_string() )
+#		q_SceneTree.call_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), "Roman")#GroupCallFlags
 #
 #		### q_SceneTree.change_scene( String path )
 #		### q_SceneTree.change_scene_to( PackedScene packed_scene )
@@ -43,17 +43,17 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#qq += str(q_SceneTree.get_network_connected_peers())
 #		#qq += str(q_SceneTree.get_network_unique_id())
 #		qq += str(q_SceneTree.get_node_count())
-#		qq += str(q_SceneTree.get_nodes_in_group( "Żółć" ))
+#		qq += str(q_SceneTree.get_nodes_in_group( Autoload.get_string() ))
 #		qq += str(q_SceneTree.get_rpc_sender_id())
 #
-#		qq += str(q_SceneTree.has_group( "Konewka"))
+#		qq += str(q_SceneTree.has_group( Autoload.get_string()))
 #		qq += str(q_SceneTree.has_network_peer())
 #
 #		qq += str(q_SceneTree.is_input_handled())
 #		#qq += str(q_SceneTree.is_network_server())
 #
-#		q_SceneTree.notify_group( "Żółć", bool(randi()%2))
-#		q_SceneTree.notify_group_flags( randi() % 8, "Żółć", bool(randi()%2)) #GroupCallFlags
+#		q_SceneTree.notify_group( Autoload.get_string(), bool(randi()%2))
+#		q_SceneTree.notify_group_flags( randi() % 8, Autoload.get_string(), bool(randi()%2)) #GroupCallFlags
 #
 ##		q_temp = load("res://RES/Node.tscn").instance()
 ##		q_SceneTree.queue_delete( Node.new() )
@@ -62,8 +62,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#qq += str(q_SceneTree.reload_current_scene())
 #
 #		q_SceneTree.set_auto_accept_quit( bool(randi()%2))
-#		q_SceneTree.set_group( "Żółć", "Źrebię", bool(randi()%2))
-#		q_SceneTree.set_group_flags( randi() % 8, "Żółć", "Źrebię", bool(randi()%2)) # GroupCallFlags
+#		q_SceneTree.set_group( Autoload.get_string(), Autoload.get_string(), bool(randi()%2))
+#		q_SceneTree.set_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), bool(randi()%2)) # GroupCallFlags
 #		q_SceneTree.set_input_as_handled()
 #		q_SceneTree.set_quit_on_go_back( bool(randi()%2))
 #		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Vector2(randf() * 50,randf() * 50), randf() * 50 )#StretchMode, StretchAspect

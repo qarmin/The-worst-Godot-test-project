@@ -15,4 +15,4 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_bone_name("AFs")
+			set_bone_name(Autoload.get_string())
