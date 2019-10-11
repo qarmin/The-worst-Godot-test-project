@@ -15,26 +15,26 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_update_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #UpdateMode
+			set_update_mode(Autoload.get_randi()) #UpdateMode
 		if randi() % 2 == 1:
-			set_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_intensity(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_max_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_max_distance(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_extents(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_origin_offset(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_origin_offset(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_enable_box_projection(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_enable_shadows(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_cull_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_as_interior(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_interior_ambient(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_interior_ambient_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_interior_ambient_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_interior_ambient_probe_contribution(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_interior_ambient_probe_contribution(Autoload.get_randf())

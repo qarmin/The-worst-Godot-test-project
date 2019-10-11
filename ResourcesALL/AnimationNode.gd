@@ -33,23 +33,23 @@ func _process(delta) -> void:
 			q_AnimationNode.add_input("Strzala")
 			
 		if randi() % 2 == 1:
-			q_AnimationNode.blend_animation( "Kolczan", randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+			q_AnimationNode.blend_animation( "Kolczan", Autoload.get_randf(), Autoload.get_randf(), bool(randi()%2), Autoload.get_randf() )
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNode.blend_input( 0, randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2) ))#FilterAction
+			qq += str(q_AnimationNode.blend_input( 0, Autoload.get_randf(), bool(randi()%2), Autoload.get_randf(), Autoload.get_randi(), bool(randi()%2) ))#FilterAction
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNode.blend_node( "Pra", AnimationNode.new(), randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2) ))#FilterAction
+			qq += str(q_AnimationNode.blend_node( "Pra", AnimationNode.new(), Autoload.get_randf(), bool(randi()%2), Autoload.get_randf(), Autoload.get_randi(), bool(randi()%2) ))#FilterAction
 			
 		if randi() % 2 == 1:
 			qq +=  str(q_AnimationNode.get_input_count())
 		if randi() % 2 == 1:
-			qq +=  str(q_AnimationNode.get_input_name( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq +=  str(q_AnimationNode.get_input_name( Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq +=  str(q_AnimationNode.get_parameter( "Wiem" ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNode.is_path_filtered( "." ))
 		if randi() % 2 == 1:
-			q_AnimationNode.remove_input( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNode.remove_input( Autoload.get_randi())
 			
 		if randi() % 2 == 1:
 			q_AnimationNode.set_filter_path( ".", bool(randi()%2))

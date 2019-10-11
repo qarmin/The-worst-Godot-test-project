@@ -19,25 +19,25 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_StyleBoxTexture.set_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_normal_map(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_StyleBoxTexture.set_normal_map(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_region_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_StyleBoxTexture.set_region_rect(Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_margin_size(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxTexture.set_margin_size(Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_expand_margin_size(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxTexture.set_expand_margin_size(Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_h_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #AxisStretchMode
+			q_StyleBoxTexture.set_h_axis_stretch_mode(Autoload.get_randi()) #AxisStretchMode
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_v_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #AxisStretchMode
+			q_StyleBoxTexture.set_v_axis_stretch_mode(Autoload.get_randi()) #AxisStretchMode
 		if randi() % 2 == 1:
 			q_StyleBoxTexture.set_modulate(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
 			q_StyleBoxTexture.set_draw_center(bool(randi()%2))
 			
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_expand_margin_all( randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxTexture.set_expand_margin_all( Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_expand_margin_individual( randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxTexture.set_expand_margin_individual( Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())

@@ -15,13 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_unit_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_unit_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_rotate(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -29,4 +29,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_loop(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_lookahead(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_lookahead(Autoload.get_randf())

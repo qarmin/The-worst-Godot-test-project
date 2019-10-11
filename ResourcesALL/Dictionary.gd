@@ -25,10 +25,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Dictionary.erase( "Klucze"))
 		if randi() % 2 == 1:
-			qq += str(q_Dictionary.get( randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Dictionary.get( Autoload.get_randi(),Autoload.get_randi()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_Dictionary.has( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Dictionary.has( Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_Dictionary.has_all( ["klucz", "nie"] ))
 		if randi() % 2 == 1:

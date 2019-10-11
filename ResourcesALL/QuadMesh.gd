@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_QuadMesh.set_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_QuadMesh.set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))

@@ -15,49 +15,49 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_anchor(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_anchor(Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_margin(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_margin(Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_h_grow_direction(randi() % Autoload.RANGE - Autoload.RANGE / 2) #GrowDirection
+			set_h_grow_direction(Autoload.get_randi()) #GrowDirection
 		if randi() % 2 == 1:
-			set_v_grow_direction(randi() % Autoload.RANGE - Autoload.RANGE / 2) #GrowDirection
+			set_v_grow_direction(Autoload.get_randi()) #GrowDirection
 		if randi() % 2 == 1:
-			_set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			_set_position(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			_set_global_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			_set_global_position(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			_set_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			_set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_custom_minimum_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_custom_minimum_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_rotation_degrees(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scale(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_pivot_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_pivot_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_clip_contents(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_tooltip("ToolTip")
 		if randi() % 2 == 1:
-			set_focus_neighbour(randi() % Autoload.RANGE - Autoload.RANGE / 2,NodePath("Toman"))
+			set_focus_neighbour(Autoload.get_randi(),NodePath("Toman"))
 		if randi() % 2 == 1:
 			set_focus_next(NodePath("Przechwycić"))
 		if randi() % 2 == 1:
 			set_focus_previous(NodePath("Bazylia"))
 		if randi() % 2 == 1:
-			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FocusMode
+			set_focus_mode(Autoload.get_randi()) #FocusMode
 		if randi() % 2 == 1:
-			set_mouse_filter(randi() % Autoload.RANGE - Autoload.RANGE / 2) #MouseFilter
+			set_mouse_filter(Autoload.get_randi()) #MouseFilter
 		if randi() % 2 == 1:
-			set_default_cursor_shape(randi() % Autoload.RANGE - Autoload.RANGE / 2) #CursorShape
+			set_default_cursor_shape(Autoload.get_randi()) #CursorShape
 		if randi() % 2 == 1:
-			set_h_size_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_size_flags(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_v_size_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_size_flags(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_stretch_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_stretch_ratio(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_theme(Autoload.loadA("res://RES/Theme.tres"))
 
@@ -70,7 +70,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_color_override("Godotte", Color())
 		if randi() % 2 == 1:
-			add_constant_override("Środek", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			add_constant_override("Środek", Autoload.get_randi())
 		if randi() % 2 == 1:
 			add_font_override("Świerszcz", Autoload.loadA("res://RES/DynamicFont.tres"))
 		if randi() % 2 == 1:
@@ -79,8 +79,8 @@ func _process(delta) -> void:
 			add_shader_override("Godotte", Autoload.loadA("res://RES/VisualShader.tres"))
 		if randi() % 2 == 1:
 			add_stylebox_override("Godotte", Autoload.loadA("res://RES/StyleBoxTexture.tres"))
-		### qq += str(can_drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), "Hehe"))
-		### drop_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
+		### qq += str(can_drop_data(Vector2(Autoload.get_randf(),Autoload.get_randf()), "Hehe"))
+		### drop_data(Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
 		if randi() % 2 == 1:
 			force_drag("data: Variant", self)
 		if randi() % 2 == 1:
@@ -92,8 +92,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_constant("Godotte", "Zrozum"))
 		if randi() % 2 == 1:
-			qq += str(get_cursor_shape(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
-		### qq += str(get_drag_data(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(get_cursor_shape(Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+		### qq += str(get_drag_data(Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			qq += str(get_end())
 		if randi() % 2 == 1:
@@ -117,7 +117,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_stylebox("Godotte", "Zrozum"))
 		if randi() % 2 == 1:
-			qq += str(get_tooltip(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(get_tooltip(Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			grab_click_focus()
 		if randi() % 2 == 1:
@@ -138,7 +138,7 @@ func _process(delta) -> void:
 			qq += str(has_icon("Godotte", "Zrozum"))
 		if randi() % 2 == 1:
 			qq += str(has_icon_override("Godotte"))
-		### qq += str(has_point(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+		### qq += str(has_point(Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			qq += str(has_shader_override("Godotte"))
 		if randi() % 2 == 1:
@@ -150,30 +150,30 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			release_focus()
 		if randi() % 2 == 1:
-			set_anchor(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), bool(randi()%2)) #MARGIN
+			set_anchor(Autoload.get_randi(), Autoload.get_randf(), bool(randi()%2), bool(randi()%2)) #MARGIN
 		if randi() % 2 == 1:
-			set_anchor_and_margin(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2)) # MARGIN
+			set_anchor_and_margin(Autoload.get_randi(), Autoload.get_randf(), Autoload.get_randf(), bool(randi()%2)) # MARGIN
 		if randi() % 2 == 1:
-			set_anchors_and_margins_preset(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) # LayoutPreset, LayoutPresetMode
+			set_anchors_and_margins_preset(Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi()) # LayoutPreset, LayoutPresetMode
 		if randi() % 2 == 1:
-			set_anchors_preset(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))# LayoutPreset
+			set_anchors_preset(Autoload.get_randi(), bool(randi()%2))# LayoutPreset
 		if randi() % 2 == 1:
-			set_begin(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_begin(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_drag_forwarding(self)
 		### set_drag_preview(self)
 		if randi() % 2 == 1:
-			set_end(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_end(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_global_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2))
+			set_global_position(Vector2(Autoload.get_randf(),Autoload.get_randf()), bool(randi()%2))
 		if randi() % 2 == 1:
-			set_margins_preset(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) # LayoutPreset, LayoutPresetMode
+			set_margins_preset(Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi()) # LayoutPreset, LayoutPresetMode
 		if randi() % 2 == 1:
-			set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2))
+			set_position(Vector2(Autoload.get_randf(),Autoload.get_randf()), bool(randi()%2))
 		if randi() % 2 == 1:
-			set_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_rotation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2))
+			set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()), bool(randi()%2))
 		if randi() % 2 == 1:
 			show_modal(bool(randi()%2))
-		### warp_mouse(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) #JUST NO!!!
+		### warp_mouse(Vector2(Autoload.get_randf(),Autoload.get_randf())) #JUST NO!!!

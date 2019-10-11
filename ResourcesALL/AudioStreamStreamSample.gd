@@ -21,15 +21,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioStreamSample.set_data(PoolByteArray([12421,421,421,4,124,214,214,12,4]))
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_format(randi() % Autoload.RANGE - Autoload.RANGE / 2)#
+			q_AudioStreamSample.set_format(Autoload.get_randi())#
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_loop_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)#LoopMode
+			q_AudioStreamSample.set_loop_mode(Autoload.get_randi())#LoopMode
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_loop_begin(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamSample.set_loop_begin(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_loop_end(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamSample.set_loop_end(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_mix_rate(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamSample.set_mix_rate(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_AudioStreamSample.set_stereo(bool(randi()%2))
 			

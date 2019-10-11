@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptConstant.set_constant_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) #VARIANT_MAX
+			q_VisualScriptConstant.set_constant_type(Autoload.get_randi()) #VARIANT_MAX
 		if randi() % 2 == 1:
-			q_VisualScriptConstant.set_constant_value(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_VisualScriptConstant.set_constant_value(Vector2(Autoload.get_randf(),Autoload.get_randf()))

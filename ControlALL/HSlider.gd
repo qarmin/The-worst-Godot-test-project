@@ -20,8 +20,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_scrollable(bool(randi() % 2))
 		if randi() % 2 == 1:
-			set_ticks(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_ticks(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_ticks_on_borders(bool(randi() % 2))
 		if randi() % 2 == 1:
-			set_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_focus_mode(Autoload.get_randi())

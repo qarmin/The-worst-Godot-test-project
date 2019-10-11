@@ -18,19 +18,19 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_mode_overrides_title(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_access(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_access(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_filters(PoolStringArray(["*.pqfqwfng ; PNG Imagesqwfqw","*.gqwfqwfd ; GD Script"]))
 		if randi() % 2 == 1:
 			set_show_hidden_files(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_current_dir("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			set_current_dir("res://" + str(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			set_current_file("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			set_current_file("res://" + str(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			set_current_path("res://" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			set_current_path("res://" + str(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			clear_filters()
 		if randi() % 2 == 1:

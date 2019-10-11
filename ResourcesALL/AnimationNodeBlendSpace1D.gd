@@ -20,25 +20,25 @@ func _process(delta) -> void:
 			
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_min_space(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeBlendSpace1D.set_min_space(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_max_space(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeBlendSpace1D.set_max_space(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_snap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeBlendSpace1D.set_snap(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace1D.set_value_label("Jakas wartosc")
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.add_blend_point( AnimationRootNode.new(), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_AnimationNodeBlendSpace1D.add_blend_point( AnimationRootNode.new(), Autoload.get_randf(), Autoload.get_randi() )
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_count())
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_node( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_node( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_position( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_AnimationNodeBlendSpace1D.get_blend_point_position( Autoload.get_randi() ))
 #	BUG	if randi() % 2 == 1:
-#			q_AnimationNodeBlendSpace1D.remove_blend_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_AnimationNodeBlendSpace1D.remove_blend_point( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_blend_point_node( randi() % Autoload.RANGE - Autoload.RANGE / 2, AnimationRootNode.new() )
+			q_AnimationNodeBlendSpace1D.set_blend_point_node( Autoload.get_randi(), AnimationRootNode.new() )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace1D.set_blend_point_position( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeBlendSpace1D.set_blend_point_position( Autoload.get_randi(), Autoload.get_randf())

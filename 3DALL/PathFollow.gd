@@ -15,15 +15,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_unit_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_unit_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_rotation_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ENUM RotationMode
+			set_rotation_mode(Autoload.get_randi()) # ENUM RotationMode
 		if randi() % 2 == 1:
 			set_cubic_interpolation(bool(randi()%2))
 		if randi() % 2 == 1:

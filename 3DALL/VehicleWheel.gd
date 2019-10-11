@@ -19,23 +19,23 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_use_as_steering(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_roll_influence(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_roll_influence(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_radius(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_suspension_rest_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_suspension_rest_length(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_friction_slip(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_friction_slip(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_suspension_travel(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_suspension_travel(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_suspension_stiffness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_suspension_stiffness(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_suspension_max_force(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_suspension_max_force(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_damping_compression(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_damping_compression(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_damping_relaxation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_damping_relaxation(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(get_rpm())

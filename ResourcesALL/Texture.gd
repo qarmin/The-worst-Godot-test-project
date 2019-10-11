@@ -19,11 +19,11 @@ func _process(delta) -> void:
 			q_Texture = ImageTexture.new()
 			
 		if randi() % 2 == 1:
-			q_Texture.draw(RID(),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Color(randf(),randf(),randf(),randf()),bool(randi()%2),ImageTexture.new())
+			q_Texture.draw(RID(),Vector2(Autoload.get_randf(), Autoload.get_randf()),Color(randf(),randf(),randf(),randf()),bool(randi()%2),ImageTexture.new())
 		if randi() % 2 == 1:
-			q_Texture.draw_rect(RID(),Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)),bool(randi()%2),Color(randf(),randf(),randf(),randf()),bool(randi()%2),ImageTexture.new())
+			q_Texture.draw_rect(RID(),Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())),bool(randi()%2),Color(randf(),randf(),randf(),randf()),bool(randi()%2),ImageTexture.new())
 		if randi() % 2 == 1:
-			q_Texture.draw_rect_region(RID(),Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)),Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)), Color(randf(),randf(),randf(),randf()), bool(randi()%2),ImageTexture.new(),bool(randi()%2))
+			q_Texture.draw_rect_region(RID(),Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())),Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())), Color(randf(),randf(),randf(),randf()), bool(randi()%2),ImageTexture.new(),bool(randi()%2))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Texture.get_data())

@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_RayShape2D.set_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_RayShape2D.set_length(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_RayShape2D.set_slips_on_slope(bool(randi()%2))

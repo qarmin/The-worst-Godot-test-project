@@ -19,19 +19,19 @@ func _process(delta) -> void:
 			q_AnimationNodeOneShot = AnimationNodeOneShot.new()
 		
 		if randi() % 2 == 1:
-			q_AnimationNodeOneShot.set_fadein_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeOneShot.set_fadein_time(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeOneShot.set_fadeout_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeOneShot.set_fadeout_time(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_autorestart(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_AnimationNodeOneShot.set_autorestart_delay(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeOneShot.set_autorestart_delay(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeOneShot.set_autorestart_random_delay(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeOneShot.set_autorestart_random_delay(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_use_sync(bool(randi()%2))
 			
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeOneShot.get_mix_mode())
 		if randi() % 2 == 1:
-			q_AnimationNodeOneShot.set_mix_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # MIX_MODE
+			q_AnimationNodeOneShot.set_mix_mode(Autoload.get_randi()) # MIX_MODE

@@ -29,22 +29,22 @@ func _process(delta) -> void:
 	
 			if Autoload.WRONG_BUGS:
 	
-				_set_swing_span(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				_set_twist_span(randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set_param(randi() % 30 - 15, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				_set_swing_span(Autoload.get_randf())
+				_set_twist_span(Autoload.get_randf())
+				set_param(randi() % 30 - 15, Autoload.get_randf())
 				
 				#Joint
 				set_node_a("qwfq")
 				set_node_b(".safa")
-				set_solver_priority(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				set_solver_priority(Autoload.get_randi())
 				set_exclude_nodes_from_collision(bool(randi()%2))
 		else: #RANDI
 			if randi() % 2 == 1:
-				_set_swing_span(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				_set_swing_span(Autoload.get_randf())
 			if randi() % 2 == 1:
-				_set_twist_span(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				_set_twist_span(Autoload.get_randf())
 			if randi() % 2 == 1:
-				set_param(randi() % 30 - 15, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set_param(randi() % 30 - 15, Autoload.get_randf())
 				
 				#Joint
 			if randi() % 2 == 1:
@@ -52,6 +52,6 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_node_b(".safa")
 			if randi() % 2 == 1:
-				set_solver_priority(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				set_solver_priority(Autoload.get_randi())
 			if randi() % 2 == 1:
 				set_exclude_nodes_from_collision(bool(randi()%2))

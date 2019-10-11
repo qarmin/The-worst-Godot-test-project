@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_CylinderShape.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CylinderShape.set_radius(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_CylinderShape.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CylinderShape.set_height(Autoload.get_randf())

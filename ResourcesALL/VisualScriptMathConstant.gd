@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptMathConstant.set_math_constant(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptMathConstant.set_math_constant(Autoload.get_randi())

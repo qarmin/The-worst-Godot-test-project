@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeVectorOp.set_operator(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Operator
+			q_VisualShaderNodeVectorOp.set_operator(Autoload.get_randi()) #Operator

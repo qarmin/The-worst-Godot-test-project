@@ -25,16 +25,16 @@ func _process(delta) -> void:
 			q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolColorArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf())) )
+			qq += str(q_PoolColorArray.insert( Autoload.get_randi(), Color(randf(),randf(),randf(),randf())) )
 		if randi() % 2 == 1:
 			q_PoolColorArray.invert()
 		if randi() % 2 == 1:
 			q_PoolColorArray.push_back( Color(randf(),randf(),randf(),randf()) )
 		if randi() % 2 == 1:
-			q_PoolColorArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolColorArray.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolColorArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolColorArray.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolColorArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()))
+			q_PoolColorArray.set(Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
 			qq += str(q_PoolColorArray.size())

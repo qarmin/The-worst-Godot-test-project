@@ -24,100 +24,100 @@ func _ready():
 #		if randi() % 2 == 1:
 #			set_hide_on_state_item_selection(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_submenu_popup_delay(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+#			set_submenu_popup_delay(Autoload.get_randf())
 #		if randi() % 2 == 1:
-#			add_check_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_check_item(str(randi()%50000), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_check_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
+#			add_check_shortcut(ShortCut.new(), Autoload.get_randi(), bool(randi()%2))
 #		if randi() % 2 == 1:
-#			add_icon_check_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_icon_check_item(Autoload.loadA("res://RES/Sprite.png"), str(randi()%50000), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_icon_check_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_icon_check_shortcut(Autoload.loadA("res://RES/Sprite.png"), ShortCut.new(), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_icon_item(Autoload.loadA("res://RES/Sprite.png"), str(randi()%50000), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_icon_shortcut(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"), ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_icon_shortcut(Autoload.loadA("res://RES/Sprite.png"), ShortCut.new(), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_item(str(randi()%50000), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_radio_check_item(str(randi()%50000), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			add_radio_check_item(str(randi()%50000), Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			add_radio_check_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
+#			add_radio_check_shortcut(ShortCut.new(), Autoload.get_randi(), bool(randi()%2))
 #		if randi() % 2 == 1:
 #			add_separator(str(randi()%50000))
 #		if randi() % 2 == 1:
-#			add_shortcut(ShortCut.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
+#			add_shortcut(ShortCut.new(), Autoload.get_randi(), bool(randi()%2))
 #		if randi() % 2 == 1:
 #			add_submenu_item(str(randi()%50000),str(randi()%50000))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_accelerator(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_accelerator(Autoload.get_randi()))
 #		if randi() % 2 == 1:
 #			qq += str(get_item_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_icon(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_id(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_index(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_index(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_metadata(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_shortcut(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_shortcut(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_submenu(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_submenu(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_text(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_tooltip(Autoload.get_randi()))
 #		if randi() % 2 == 1:
 #			qq += str(is_hide_on_window_lose_focus())
 #		if randi() % 2 == 1:
-#			qq += str(is_item_checkable(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_checkable(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_checked(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_checked(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_disabled(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_radio_checkable(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_radio_checkable(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_separator(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_separator(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_shortcut_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_shortcut_disabled(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			remove_item(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			set_hide_on_window_lose_focus(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_accelerator(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_item_accelerator(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			set_item_as_checkable(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_as_checkable(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_as_radio_checkable(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_as_radio_checkable(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_as_separator(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_as_separator(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_checked(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_checked(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_disabled(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#			set_item_icon(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png"))
 #		if randi() % 2 == 1:
-#			set_item_id(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_item_id(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,PoolByteArray([12,55,1,5,12,5215,215]))
+#			set_item_metadata(Autoload.get_randi(),PoolByteArray([12,55,1,5,12,5215,215]))
 #		if randi() % 2 == 1:
-#			set_item_multistate(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_item_multistate(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			set_item_shortcut(randi() % Autoload.RANGE - Autoload.RANGE / 2, ShortCut.new(), bool(randi()%2))
+#			set_item_shortcut(Autoload.get_randi(), ShortCut.new(), bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_shortcut_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_shortcut_disabled(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_submenu(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi()%50000))
+#			set_item_submenu(Autoload.get_randi(),str(randi()%50000))
 #		if randi() % 2 == 1:
-#			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi()%50000))
+#			set_item_text(Autoload.get_randi(),str(randi()%50000))
 #		if randi() % 2 == 1:
-#			set_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(randi()%50000))
+#			set_item_tooltip(Autoload.get_randi(),str(randi()%50000))
 #		if randi() % 2 == 1:
-#			toggle_item_checked(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			toggle_item_checked(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			toggle_item_multistate(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			toggle_item_multistate(Autoload.get_randi())

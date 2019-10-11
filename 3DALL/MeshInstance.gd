@@ -26,11 +26,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			create_trimesh_collision()
 		if randi() % 2 == 1:
-			qq += str(get_surface_material(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_surface_material(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_surface_material_count())
 		if randi() % 2 == 1:
-			set_surface_material(randi() % Autoload.RANGE - Autoload.RANGE / 2, SpatialMaterial.new())
+			set_surface_material(Autoload.get_randi(), SpatialMaterial.new())
 				
 #####################
 		if randi() % 2 == 1:

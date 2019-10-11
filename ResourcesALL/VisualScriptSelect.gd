@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptSelect.set_typed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptSelect.set_typed(Autoload.get_randi())

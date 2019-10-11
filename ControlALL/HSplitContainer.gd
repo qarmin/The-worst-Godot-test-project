@@ -20,6 +20,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_collapsed(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_dragger_visibility(randi() % Autoload.RANGE - Autoload.RANGE / 2)# draggervisibility
+			set_dragger_visibility(Autoload.get_randi())# draggervisibility
 		if randi() % 2 == 1:
 			clamp_split_offset()

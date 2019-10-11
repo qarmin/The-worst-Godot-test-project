@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_use_arvr(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_use_own_world(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_handle_input_locally(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_msaa(randi() % Autoload.RANGE - Autoload.RANGE / 2) # MSAA
+			set_msaa(Autoload.get_randi()) # MSAA
 		if randi() % 2 == 1:
 			set_hdr(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -38,17 +38,17 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_keep_3d_linear(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_usage(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Usage
+			set_usage(Autoload.get_randi()) # Usage
 		if randi() % 2 == 1:
 			set_use_render_direct_to_screen(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_debug_draw(randi() % Autoload.RANGE - Autoload.RANGE / 2) #DebugDraw
+			set_debug_draw(Autoload.get_randi()) #DebugDraw
 		if randi() % 2 == 1:
 			set_vflip(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_clear_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ClearMode
+			set_clear_mode(Autoload.get_randi()) #ClearMode
 		if randi() % 2 == 1:
-			set_update_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #UpdateMode
+			set_update_mode(Autoload.get_randi()) #UpdateMode
 		if randi() % 2 == 1:
 			set_as_audio_listener_2d(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -60,14 +60,14 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_snap_controls_to_pixels(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_shadow_atlas_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_shadow_atlas_size(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_shadow_atlas_quadrant_subdiv(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_shadow_atlas_quadrant_subdiv(Autoload.get_randi(),Autoload.get_randi())
 	
 		if randi() % 2 == 1:
-			set_canvas_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_canvas_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			set_global_canvas_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_global_canvas_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 	
 		if randi() % 2 == 1:
 			qq += str(find_world())
@@ -83,7 +83,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_mouse_position())
 		if randi() % 2 == 1:
-			qq += str(get_render_info(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_render_info(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_size_override())
 		if randi() % 2 == 1:
@@ -111,11 +111,11 @@ func _process(delta) -> void:
 			qq += str(is_size_override_stretch_enabled())
 	
 		if randi() % 2 == 1:
-			set_attach_to_screen_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_attach_to_screen_rect(Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			set_input_as_handled()
 		if randi() % 2 == 1:
-			set_size_override(bool(randi()%2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_size_override(bool(randi()%2),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_size_override_stretch(bool(randi()%2))
 	
@@ -124,4 +124,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			update_worlds()
 		# This move mouse and is irritating
-		### warp_mouse(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+		### warp_mouse(Vector2(Autoload.get_randf(),Autoload.get_randf()))

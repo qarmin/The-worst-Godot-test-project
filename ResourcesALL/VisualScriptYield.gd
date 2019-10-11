@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptYield.set_yield_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Yield mode
+			q_VisualScriptYield.set_yield_mode(Autoload.get_randi()) #Yield mode
 		if randi() % 2 == 1:
-			q_VisualScriptYield.set_wait_time(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptYield.set_wait_time(Autoload.get_randi())

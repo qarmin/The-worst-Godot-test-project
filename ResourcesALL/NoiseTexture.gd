@@ -19,14 +19,14 @@ func _process(delta) -> void:
 #			q_NoiseTexture = NoiseTexture.new()
 #
 #		if randi() % 2 == 1:
-#			q_NoiseTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_NoiseTexture.set_width(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_NoiseTexture.set_height(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_NoiseTexture.set_height(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			q_NoiseTexture.set_seamless(bool(randi()%2))
 #		if randi() % 2 == 1:
 #			q_NoiseTexture.set_as_normalmap(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			q_NoiseTexture.set_bump_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+#			q_NoiseTexture.set_bump_strength(Autoload.get_randf())
 #		if randi() % 2 == 1:
 #			q_NoiseTexture.set_noise(OpenSimplexNoise.new())

@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptBasicTypeConstant.set_basic_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptBasicTypeConstant.set_basic_type(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_VisualScriptBasicTypeConstant.set_basic_type_constant("Vector3")

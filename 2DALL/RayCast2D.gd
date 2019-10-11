@@ -23,9 +23,9 @@ func _process_physics(delta) -> void:
 		if randi() % 2 == 1:
 			set_exclude_parent_body(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_cast_to(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_cast_to(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_collide_with_areas(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -41,7 +41,7 @@ func _process_physics(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_collider_shape())
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_collision_mask_bit(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_collision_normal())
 		if randi() % 2 == 1:
@@ -53,4 +53,4 @@ func _process_physics(delta) -> void:
 		if randi() % 2 == 1:
 			remove_exception_rid(RID())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))

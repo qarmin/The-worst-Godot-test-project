@@ -16,14 +16,14 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_scroll_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scroll_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_scroll_base_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scroll_base_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_scroll_base_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scroll_base_scale(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_limit_begin(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_limit_begin(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_limit_end(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_limit_end(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_ignore_camera_zoom(bool(randi()%2))

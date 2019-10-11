@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_cell_size(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_cell_size(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_radius(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_zero_y(bool(randi()%2))

@@ -16,13 +16,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_under_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_under_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			set_over_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_over_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			set_progress_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_progress_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			set_fill_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_fill_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_tint_under(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
@@ -30,18 +30,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tint_progress(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_radial_initial_angle(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_radial_initial_angle(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_fill_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_fill_degrees(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_radial_center_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_radial_center_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_nine_patch_stretch(bool(randi()%2))
 		if randi() % 2 == 1:
-			set("stretch_margin_left",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("stretch_margin_left",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("stretch_margin_top",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("stretch_margin_top",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("stretch_margin_right",randi() % Autoload.RANGE - Autoload.RANGE / 20)
+			set("stretch_margin_right",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("stretch_margin_bottom",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("stretch_margin_bottom",Autoload.get_randi())

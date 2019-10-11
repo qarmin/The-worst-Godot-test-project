@@ -22,37 +22,37 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_draw_center(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_border_width(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_border_width(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_border_color(Color(randf(),randf(),randf(),randf()))
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_border_blend(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_corner_radius(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_corner_radius(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_corner_detail(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_corner_detail(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_expand_margin(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_expand_margin(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_shadow_color(Color(randf(),randf(),randf(),randf()))
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_shadow_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_shadow_size(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_shadow_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#			q_StyleBoxFlat.set_shadow_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_anti_aliased(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_aa_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_aa_size(Autoload.get_randi())
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_StyleBoxFlat.get_border_width_min())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_border_width_all( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_border_width_all( Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_corner_radius_all( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_StyleBoxFlat.set_corner_radius_all( Autoload.get_randi() )
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_corner_radius_individual( randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_corner_radius_individual( Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(), Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_expand_margin_all( randf() * Autoload.RANGE - Autoload.RANGE / 2)
+#			q_StyleBoxFlat.set_expand_margin_all( Autoload.get_randf())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_expand_margin_individual( randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_StyleBoxFlat.set_expand_margin_individual( Autoload.get_randf(),Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() )

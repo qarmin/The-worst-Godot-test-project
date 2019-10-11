@@ -15,12 +15,12 @@ func _physics_process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_constant_linear_velocity(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_constant_linear_velocity(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_constant_angular_velocity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_constant_angular_velocity(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_friction(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_bounce(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_physics_material_override(Autoload.loadA("res://RES/PhysicsMaterial.tres"))

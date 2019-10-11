@@ -17,4 +17,4 @@ func _process(delta) -> void:
 
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				set_environment(Autoload.loadA("res://RES/default_env" + str(randi() % 2)+".tres"))
+				set_environment(Autoload.loadA("res://RES/DefaultEnv.tres"))

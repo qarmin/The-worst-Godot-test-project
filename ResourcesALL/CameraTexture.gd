@@ -20,8 +20,8 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_CameraTexture.set_camera_feed_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CameraTexture.set_camera_feed_id(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_CameraTexture.set_which_feed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CameraTexture.set_which_feed(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_CameraTexture.set_camera_active(bool(randi()%2))

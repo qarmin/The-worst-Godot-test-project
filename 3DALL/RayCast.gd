@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_exclude_parent_body(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_cast_to(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_cast_to(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			set_collision_mask(randi()%500000)
 		if randi() % 2 == 1:
@@ -39,7 +39,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_collider_shape())
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_collision_mask_bit(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_collision_normal())
 		if randi() % 2 == 1:
@@ -51,4 +51,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			remove_exception_rid(RID())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))

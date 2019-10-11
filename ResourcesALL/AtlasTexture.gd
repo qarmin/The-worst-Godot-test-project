@@ -20,8 +20,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AtlasTexture.set_atlas(AnimatedTexture.new())
 		if randi() % 2 == 1:
-			q_AtlasTexture.set_region(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_AtlasTexture.set_region(Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_AtlasTexture.set_margin(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_AtlasTexture.set_margin(Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_AtlasTexture.set_filter_clip(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AtlasTexture.set_filter_clip(Autoload.get_randf())

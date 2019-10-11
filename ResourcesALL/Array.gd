@@ -60,7 +60,7 @@ func _process(delta) -> void:
 			q_Array.erase( "Nie" )
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.find( "Jesiotr", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Array.find( "Jesiotr", Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_Array.find_last( "Nie" ))
 
@@ -73,7 +73,7 @@ func _process(delta) -> void:
 			qq += str(q_Array.hash())
 
 		if randi() % 2 == 1:
-			q_Array.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Nie") 
+			q_Array.insert( Autoload.get_randi(), "Nie") 
 		if randi() % 2 == 1:
 			q_Array.invert()
 		if randi() % 2 == 1:
@@ -92,11 +92,11 @@ func _process(delta) -> void:
 			q_Array.push_front( "Nie" )
 
 		if randi() % 2 == 1:
-			q_Array.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Array.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_Array.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Array.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			qq += str(q_Array.rfind( "Nie", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Array.rfind( "Nie", Autoload.get_randi()))
 		if randi() % 2 == 1:
 			q_Array.shuffle()
 		if randi() % 2 == 1:

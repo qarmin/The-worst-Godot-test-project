@@ -19,23 +19,23 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_GIProbeData.set_bounds(AABB(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_GIProbeData.set_bounds(AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_GIProbeData.set_cell_size(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_cell_size(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_to_cell_xform(Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_GIProbeData.set_to_cell_xform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			q_GIProbeData.set_dynamic_data(PoolIntArray([11,124,1241,24,21,214,12,11]))
 		if randi() % 2 == 1:
-			q_GIProbeData.set_dynamic_range(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_dynamic_range(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_normal_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_normal_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_propagation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_GIProbeData.set_propagation(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_GIProbeData.set_interior(bool(randi()%2))
 		if randi() % 2 == 1:

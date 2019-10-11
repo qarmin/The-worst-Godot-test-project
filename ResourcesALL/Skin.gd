@@ -19,19 +19,19 @@ func _process(delta) ->  void:
 			
 		
 		if randi() % 2 == 1:
-			q_Skin.add_bind(randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_Skin.add_bind(Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			q_Skin.clear_binds()
 		if randi() % 2 == 1:
-			qq += str(q_Skin.get_bind_bone(randi() % Autoload.RANGE - Autoload.RANGE / 2)) 
+			qq += str(q_Skin.get_bind_bone(Autoload.get_randi())) 
 		if randi() % 2 == 1:
 			qq += str(q_Skin.get_bind_count())
 		if randi() % 2 == 1:
-			qq += str(q_Skin.get_bind_pose(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Skin.get_bind_pose(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			q_Skin.set_bind_bone(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Skin.set_bind_bone(Autoload.get_randi(), Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_Skin.set_bind_count(randi() % Autoload.RANGE - Autoload.RANGE / 2) 
+			q_Skin.set_bind_count(Autoload.get_randi()) 
 		if randi() % 2 == 1:
-			q_Skin.set_bind_pose(randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_Skin.set_bind_pose(Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 

@@ -16,7 +16,7 @@ func _ready():
 #
 #		var q_PrimitiveMesh : PrimitiveMesh = PrimitiveMesh.new()
 #			q_PrimitiveMesh.set_material(SpatialMaterial.new())
-#			q_PrimitiveMesh.set_custom_aabb(AABB(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+#			q_PrimitiveMesh.set_custom_aabb(AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 #			q_PrimitiveMesh.set_flip_faces(bool(randi()%2))
 #
 #			qq += str(q_PrimitiveMesh.get_mesh_arrays())

@@ -15,8 +15,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_motion_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_motion_scale(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_motion_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_motion_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_mirroring(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_mirroring(Vector2(Autoload.get_randf(), Autoload.get_randf()))

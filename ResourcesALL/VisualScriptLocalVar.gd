@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptLocalVar.set_var_name("Pawulon")
 		if randi() % 2 == 1:
-			q_VisualScriptLocalVar.set_var_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptLocalVar.set_var_type(Autoload.get_randi())

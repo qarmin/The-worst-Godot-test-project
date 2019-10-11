@@ -18,9 +18,9 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_bool = bool(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_bool = bool(Autoload.get_randi())
 # warning-ignore:narrowing_conversion
 		if randi() % 2 == 1:
-			q_bool = bool(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_bool = bool(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_bool = bool("asfaf")

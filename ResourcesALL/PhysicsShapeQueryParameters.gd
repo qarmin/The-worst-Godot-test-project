@@ -19,15 +19,15 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_PhysicsShapeQueryParameters.set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PhysicsShapeQueryParameters.set_collision_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_exclude([11,124,1241,24,21,214,12,11])
 		if randi() % 2 == 1:
-			q_PhysicsShapeQueryParameters.set_margin(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_PhysicsShapeQueryParameters.set_margin(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_shape_rid(RID())
 		if randi() % 2 == 1:
-			q_PhysicsShapeQueryParameters.set_transform(Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_PhysicsShapeQueryParameters.set_transform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_collide_with_bodies(bool(randi()%2))
 		if randi() % 2 == 1:

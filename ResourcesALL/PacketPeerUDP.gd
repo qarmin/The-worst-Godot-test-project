@@ -33,8 +33,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_PacketPeerUDP.leave_multicast_group( "Strzał", "Wycofanie" ))
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.listen( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Gol", randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_PacketPeerUDP.listen( Autoload.get_randi(), "Gol", Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_PacketPeerUDP.set_dest_address( "Pestka",Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_PacketPeerUDP.wait())

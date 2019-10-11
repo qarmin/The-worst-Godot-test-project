@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 	
 		if randi() % 2 == 1:
-			q_AudioStreamGenerator.set_mix_rate(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamGenerator.set_mix_rate(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioStreamGenerator.set_buffer_length(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamGenerator.set_buffer_length(Autoload.get_randf())

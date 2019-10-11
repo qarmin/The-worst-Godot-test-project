@@ -15,50 +15,50 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_shadow_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ShadowMode
+			set_shadow_mode(Autoload.get_randi()) # ShadowMode
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_split_1",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_split_1",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("directional_shadow_split_2",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_split_2",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("directional_shadow_split_3",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_split_3",Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_normal_bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_normal_bias",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("directional_shadow_bias_split_scale",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_bias_split_scale",Autoload.get_randf())
 				
 		if randi() % 2 == 1:
-			set_blend_splits(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ShadowDepthRange
+			set_blend_splits(Autoload.get_randi()) # ShadowDepthRange
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_max_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("directional_shadow_max_distance",Autoload.get_randf())
 			
 			# Light
 		if randi() % 2 == 1:
 			set_color(Color(randf(),randf(),randf(),randf()))
 			
 		if randi() % 2 == 1:
-			set("light_energy",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("light_energy",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("light_indirect_energy",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("light_indirect_energy",Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_negative(bool(randi()%2))
 		if randi() % 2 == 1:
-			set("light_specular",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("light_specular",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bake_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # BakeMode
+			set_bake_mode(Autoload.get_randi()) # BakeMode
 		if randi() % 2 == 1:
-			set_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_cull_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_shadow(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_shadow_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set("shadow_bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("shadow_bias",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("shadow_contact",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("shadow_contact",Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_shadow_reverse_cull_face(bool(randi()%2))
 		if randi() % 2 == 1:

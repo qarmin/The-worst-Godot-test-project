@@ -20,26 +20,26 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_Color = Color( Color.cyan)
 			if randi() % 2 == 1:
-				q_Color = Color( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				q_Color = Color( Autoload.get_randi())
 			if randi() % 2 == 1:
-				q_Color = Color( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+				q_Color = Color( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() )
 			if randi() % 2 == 1:
-				q_Color = Color( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+				q_Color = Color( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() )
 			
 		if randi() % 2 == 1:
 			qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
 		if randi() % 2 == 1:
 			qq += str(q_Color.contrasted())
 		if randi() % 2 == 1:
-			qq += str(q_Color.darkened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Color.darkened( Autoload.get_randf() ))
 		if randi() % 2 == 1:
-			qq += str(q_Color.from_hsv( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Color.from_hsv( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() ))
 		if randi() % 2 == 1:
 			qq += str(q_Color.gray())
 		if randi() % 2 == 1:
 			qq += str(q_Color.inverted())
 		if randi() % 2 == 1:
-			qq += str(q_Color.lightened( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Color.lightened( Autoload.get_randf() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Color.to_abgr32())

@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventScreenTouch.set_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventScreenTouch.set_index(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventScreenTouch.set_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_InputEventScreenTouch.set_position(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_InputEventScreenTouch.set_pressed(bool(randi()%2))

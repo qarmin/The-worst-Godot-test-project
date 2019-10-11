@@ -19,14 +19,14 @@ func _process(delta) -> void:
 			
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachineTransition.set_switch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # SwitchMode
+			q_AnimationNodeStateMachineTransition.set_switch_mode(Autoload.get_randi()) # SwitchMode
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition.set_auto_advance(bool(randi()%2))
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition.set_advance_condition("Nom")
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachineTransition.set_xfade_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeStateMachineTransition.set_xfade_time(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachineTransition.set_priority(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeStateMachineTransition.set_priority(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition.set_disabled(bool(randi()%2))

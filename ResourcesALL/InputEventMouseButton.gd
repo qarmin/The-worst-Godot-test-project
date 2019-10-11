@@ -19,9 +19,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_factor(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMouseButton.set_factor(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_button_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMouseButton.set_button_index(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_InputEventMouseButton.set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:

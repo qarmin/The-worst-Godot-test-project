@@ -15,21 +15,21 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			set_polygon(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]))
 		if randi() % 2 == 1:
-			set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
+			set_mode(Autoload.get_randi()) # Mode
 		if randi() % 2 == 1:
-			set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_depth(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_spin_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_spin_degrees(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_spin_sides(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_spin_sides(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_path_node(".hityuf")
 		if randi() % 2 == 1:
-			set_path_interval(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_path_interval(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_path_rotation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # PathRotation
+			set_path_rotation(Autoload.get_randi()) # PathRotation
 		if randi() % 2 == 1:
 			set_path_local(bool(randi()%2))
 		if randi() % 2 == 1:

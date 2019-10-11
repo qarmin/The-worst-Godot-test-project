@@ -18,6 +18,6 @@ func _process(delta) -> void:
 #			q_CurveTexture = CurveTexture.new()
 #
 #		if randi() % 2 == 1:
-#			q_CurveTexture.set_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_CurveTexture.set_width(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			q_CurveTexture.set_curve(Curve.new())

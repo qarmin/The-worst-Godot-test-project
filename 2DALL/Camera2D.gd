@@ -16,28 +16,28 @@ func _process(delta) -> void:
 		var viewport_temp : Viewport = Viewport.new()
 
 		if randi() % 2 == 1:
-			set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_anchor_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_anchor_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_rotating(bool(randi()%2))
 		if randi() % 2 == 1:
 			_set_current(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_zoom(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_zoom(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
 			if get_custom_viewport():
 				set_custom_viewport(viewport_temp)
 		if randi() % 2 == 1:
-			set_process_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_process_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("limit_left",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("limit_left",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("limit_top",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("limit_top",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("limit_right",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("limit_right",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("limit_bottom",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("limit_bottom",Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_limit_smoothing_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -47,19 +47,19 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_enable_follow_smoothing(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_follow_smoothing(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_follow_smoothing(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_v_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_h_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_offset(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("drag_margin_left",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("drag_margin_left",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("drag_margin_top",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("drag_margin_top",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("drag_margin_right",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("drag_margin_right",Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("drag_margin_bottom",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("drag_margin_bottom",Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_screen_drawing_enabled(bool(randi()%2))
 		if randi() % 2 == 1:

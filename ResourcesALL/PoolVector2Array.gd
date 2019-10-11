@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolVector2Array : PoolVector2Array = PoolVector2Array([randf() * Autoload.RANGE - Autoload.RANGE / 2])
+var q_PoolVector2Array : PoolVector2Array = PoolVector2Array([Autoload.get_randf()])
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,24 +17,24 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_PoolVector2Array = PoolVector2Array([randf() * Autoload.RANGE - Autoload.RANGE / 2])
+			q_PoolVector2Array = PoolVector2Array([Autoload.get_randf()])
 			
 		if randi() % 2 == 1:
-			q_PoolVector2Array.append(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_PoolVector2Array.append(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_PoolVector2Array.append_array(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			q_PoolVector2Array.append_array(PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf())]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolVector2Array.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) )
+			qq += str(q_PoolVector2Array.insert( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf())) )
 		if randi() % 2 == 1:
 			q_PoolVector2Array.invert()
 		if randi() % 2 == 1:
-			q_PoolVector2Array.push_back( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_PoolVector2Array.push_back( Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_PoolVector2Array.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolVector2Array.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolVector2Array.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolVector2Array.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolVector2Array.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_PoolVector2Array.set(Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			qq += str(q_PoolVector2Array.size())

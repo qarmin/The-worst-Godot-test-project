@@ -16,23 +16,23 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_layer(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_layer(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_rotation_degrees(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_rotation_degrees(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_rotation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_rotation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_scale(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scale(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_transform(Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			set_custom_viewport(get_parent())
 		if randi() % 2 == 1:
 			set_follow_viewport(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_follow_viewport_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_follow_viewport_scale(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(get_canvas())

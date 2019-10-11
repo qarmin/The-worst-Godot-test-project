@@ -18,9 +18,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_stream(AudioStream.new())
 		if randi() % 2 == 1:
-			set_volume_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_volume_db(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_pitch_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_pitch_scale(Autoload.get_randf())
 		if randi() % 2 == 1:
 			_set_playing(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -28,7 +28,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_stream_paused(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_mix_target(randi() % Autoload.RANGE - Autoload.RANGE / 2)# MixTarget
+			set_mix_target(Autoload.get_randi())# MixTarget
 		if randi() % 2 == 1:
 			set_bus("asfqwfafasfa")
 			
@@ -41,6 +41,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			play()
 		if randi() % 2 == 1:
-			seek(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			seek(Autoload.get_randf())
 		if randi() % 2 == 1:
 			stop()

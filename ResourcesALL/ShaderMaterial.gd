@@ -29,4 +29,4 @@ func _process(delta) -> void:
 			qq += str(q_ShaderMaterial.property_get_revert( "Krowa" ))
 			
 		if randi() % 2 == 1:
-			q_ShaderMaterial.set_shader_param( "Krokiew", randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_ShaderMaterial.set_shader_param( "Krokiew", Autoload.get_randf())

@@ -20,34 +20,34 @@ func _process(delta) -> void:
 			MM = MultiMesh.new()
 			
 		if randi() % 2 == 1:
-			MM.set_color_format(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			MM.set_color_format(Autoload.get_randi())
 		if randi() % 2 == 1:
-			MM.set_transform_format(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			MM.set_transform_format(Autoload.get_randi())
 		if randi() % 2 == 1:
-			MM.set_custom_data_format(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			MM.set_custom_data_format(Autoload.get_randi())
 		if randi() % 2 == 1:
 			MM.set_instance_count(randi() % 4 - 2)
 		if randi() % 2 == 1:
-			MM.set_visible_instance_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			MM.set_visible_instance_count(Autoload.get_randi())
 		if randi() % 2 == 1:
 			MM.set_mesh(CubeMesh.new())
 			
 		if randi() % 2 == 1:
 			qq += str(MM.get_aabb())
-			#BUG qq += str(MM.get_instance_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			#BUG qq += str(MM.get_instance_custom_data(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			#BUG qq += str(MM.get_instance_color(Autoload.get_randi()))
+			#BUG qq += str(MM.get_instance_custom_data(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(MM.get_instance_transform(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform_2d(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(MM.get_instance_transform_2d(Autoload.get_randi()))
 	
 		if randi() % 2 == 1:
-			MM.set_as_bulk_array(PoolRealArray([randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2]))
-			#BUG MM.set_instance_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
-			#BUG MM.set_instance_custom_data(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+			MM.set_as_bulk_array(PoolRealArray([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
+			#BUG MM.set_instance_color(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
+			#BUG MM.set_instance_custom_data(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			MM.set_instance_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2,Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			MM.set_instance_transform(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			MM.set_instance_transform_2d(randi() % Autoload.RANGE - Autoload.RANGE / 2,Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			MM.set_instance_transform_2d(Autoload.get_randi(),Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 			
 			set_multimesh(MM)

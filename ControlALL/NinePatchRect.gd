@@ -16,20 +16,20 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
 			set_draw_center(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_region_rect(Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
 		if randi() % 2 == 1:
-			set("patch_margin_left", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_left", Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("patch_margin_top", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_top", Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("patch_margin_right", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_right", Autoload.get_randi())
 		if randi() % 2 == 1:
-			set("patch_margin_bottom", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set("patch_margin_bottom", Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_h_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_axis_stretch_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_v_axis_stretch_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_axis_stretch_mode(Autoload.get_randi())

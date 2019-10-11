@@ -23,43 +23,43 @@ func _process(delta) -> void:
 		### q_TileSet._is_tile_bound( int drawn_id, int neighbor_id )
 			
 		if randi() % 2 == 1:
-			q_TileSet.autotile_clear_bitmask_map( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_TileSet.autotile_clear_bitmask_map( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_bitmask( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+			qq += str(q_TileSet.autotile_get_bitmask( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_bitmask_mode( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.autotile_get_bitmask_mode( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_icon_coordinate( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.autotile_get_icon_coordinate( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_light_occluder( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+			qq += str(q_TileSet.autotile_get_light_occluder( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_navigation_polygon( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+			qq += str(q_TileSet.autotile_get_navigation_polygon( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_size( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.autotile_get_size( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_spacing( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.autotile_get_spacing( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_subtile_priority( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+			qq += str(q_TileSet.autotile_get_subtile_priority( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.autotile_get_z_index( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+			qq += str(q_TileSet.autotile_get_z_index( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_bitmask( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 ) #AutotileBindings
+			q_TileSet.autotile_set_bitmask( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randi() ) #AutotileBindings
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_bitmask_mode( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) #BitmaskMode
+			q_TileSet.autotile_set_bitmask_mode( Autoload.get_randi(), Autoload.get_randi()) #BitmaskMode
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_icon_coordinate( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.autotile_set_icon_coordinate( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_light_occluder( randi() % Autoload.RANGE - Autoload.RANGE / 2, OccluderPolygon2D.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.autotile_set_light_occluder( Autoload.get_randi(), OccluderPolygon2D.new(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_navigation_polygon( randi() % Autoload.RANGE - Autoload.RANGE / 2, NavigationPolygon.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.autotile_set_navigation_polygon( Autoload.get_randi(), NavigationPolygon.new(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_size( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.autotile_set_size( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_spacing( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_TileSet.autotile_set_spacing( Autoload.get_randi(), Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_subtile_priority( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_TileSet.autotile_set_subtile_priority( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_TileSet.autotile_set_z_index( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_TileSet.autotile_set_z_index( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randi() )
 			
 		if randi() % 2 == 1:
 			q_TileSet.clear()
@@ -77,83 +77,83 @@ func _process(delta) -> void:
 			qq += str(q_TileSet.get_tiles_ids())
 			
 		if randi() % 2 == 1:
-			q_TileSet.tile_add_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, RectangleShape2D.new(), Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), bool(randi()%2), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_TileSet.tile_add_shape( Autoload.get_randi(), RectangleShape2D.new(), Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), bool(randi()%2), Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_light_occluder( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_light_occluder( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_material( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_material( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_modulate( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_modulate( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_name( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_name( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_navigation_polygon( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_navigation_polygon( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_navigation_polygon_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_navigation_polygon_offset( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_normal_map( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_normal_map( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_occluder_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_occluder_offset( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_region( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_region( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape_count( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape_count( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape_offset( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape_one_way( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape_one_way( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape_one_way_margin( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape_one_way_margin( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shape_transform( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shape_transform( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_shapes( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_shapes( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_texture( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_texture( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_texture_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_texture_offset( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_tile_mode( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_tile_mode( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_TileSet.tile_get_z_index( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_TileSet.tile_get_z_index( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_light_occluder( randi() % Autoload.RANGE - Autoload.RANGE / 2, OccluderPolygon2D.new())
+			q_TileSet.tile_set_light_occluder( Autoload.get_randi(), OccluderPolygon2D.new())
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_material( randi() % Autoload.RANGE - Autoload.RANGE / 2, ShaderMaterial.new() )
+			q_TileSet.tile_set_material( Autoload.get_randi(), ShaderMaterial.new() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_modulate( randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()))
+			q_TileSet.tile_set_modulate( Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_name( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Niesio" )
+			q_TileSet.tile_set_name( Autoload.get_randi(), "Niesio" )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_navigation_polygon( randi() % Autoload.RANGE - Autoload.RANGE / 2, NavigationPolygon.new() )
+			q_TileSet.tile_set_navigation_polygon( Autoload.get_randi(), NavigationPolygon.new() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_navigation_polygon_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.tile_set_navigation_polygon_offset( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_normal_map( randi() % Autoload.RANGE - Autoload.RANGE / 2, Texture.new() )
+			q_TileSet.tile_set_normal_map( Autoload.get_randi(), Texture.new() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_occluder_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.tile_set_occluder_offset( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_region( randi() % Autoload.RANGE - Autoload.RANGE / 2, Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_TileSet.tile_set_region( Autoload.get_randi(), Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, RectangleShape2D.new() )
+			q_TileSet.tile_set_shape( Autoload.get_randi(), Autoload.get_randi(), RectangleShape2D.new() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_TileSet.tile_set_shape_offset( Autoload.get_randi(), Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape_one_way( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2) )
+			q_TileSet.tile_set_shape_one_way( Autoload.get_randi(), Autoload.get_randi(), bool(randi()%2) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape_one_way_margin( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_TileSet.tile_set_shape_one_way_margin( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shape_transform( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) )
+			q_TileSet.tile_set_shape_transform( Autoload.get_randi(), Autoload.get_randi(), Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())) )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shapes( randi() % Autoload.RANGE - Autoload.RANGE / 2, [BoxShape.new(),BoxShape.new()])
+			q_TileSet.tile_set_shapes( Autoload.get_randi(), [BoxShape.new(),BoxShape.new()])
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_texture( randi() % Autoload.RANGE - Autoload.RANGE / 2, Texture.new() )
+			q_TileSet.tile_set_texture( Autoload.get_randi(), Texture.new() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_texture_offset( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_TileSet.tile_set_texture_offset( Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_tile_mode( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ) #TileMode
+			q_TileSet.tile_set_tile_mode( Autoload.get_randi(), Autoload.get_randi() ) #TileMode
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_z_index( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_TileSet.tile_set_z_index( Autoload.get_randi(), Autoload.get_randi() )
 			

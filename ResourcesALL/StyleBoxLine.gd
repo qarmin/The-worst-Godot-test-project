@@ -21,10 +21,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_StyleBoxLine.set_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_StyleBoxLine.set_grow_begin(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxLine.set_grow_begin(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_StyleBoxLine.set_grow_end(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxLine.set_grow_end(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_StyleBoxLine.set_thickness(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_StyleBoxLine.set_thickness(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_StyleBoxLine.set_vertical(bool(randi()%2))

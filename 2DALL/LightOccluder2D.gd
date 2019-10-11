@@ -18,10 +18,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			occluder_polygon.set_closed(bool(randi()%2))
 		if randi() % 2 == 1:
-			occluder_polygon.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			occluder_polygon.set_cull_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
-			occluder_polygon.set_polygon([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)])
+			occluder_polygon.set_polygon([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())])
 		if randi() % 2 == 1:
 			set_occluder_polygon(occluder_polygon)
 		if randi() % 2 == 1:
-			set_occluder_light_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_occluder_light_mask(Autoload.get_randi())

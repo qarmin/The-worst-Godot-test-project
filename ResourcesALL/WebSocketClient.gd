@@ -24,4 +24,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_WebSocketClient.connect_to_url( "Walka", PoolStringArray(["Tak","Nie","Być może"]), bool(randi()%2)))
 		if randi() % 2 == 1:
-			q_WebSocketClient.disconnect_from_host( randi()%Autoload.RANGE - Autoload.RANGE / 2, "Liga" )
+			q_WebSocketClient.disconnect_from_host( Autoload.get_randi(), "Liga" )

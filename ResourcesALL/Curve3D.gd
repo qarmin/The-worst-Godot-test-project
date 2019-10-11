@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				q_Curve3D.add_point( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+				q_Curve3D.add_point( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randi() )
 		if randi() % 2 == 1:
 			q_Curve3D.clear_points()
 
@@ -30,35 +30,35 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				qq += str(q_Curve3D.get_baked_points())
 			if randi() % 2 == 1:
-				qq += str(q_Curve3D.get_closest_offset( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+				qq += str(q_Curve3D.get_closest_offset( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
 			if randi() % 2 == 1:
-				qq += str(q_Curve3D.get_closest_point( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) ))
+				qq += str(q_Curve3D.get_closest_point( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
 		if randi() % 2 == 1:
 			qq += str(q_Curve3D.get_point_count())
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.get_point_in( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve3D.get_point_in( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.get_point_out( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve3D.get_point_out( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.get_point_position( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve3D.get_point_position( Autoload.get_randi() ))
 
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.interpolate( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve3D.interpolate( Autoload.get_randi(), Autoload.get_randf() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.interpolate_baked( randf() * Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2)))
+			qq += str(q_Curve3D.interpolate_baked( Autoload.get_randf(), bool(randi()%2)))
 		if randi() % 2 == 1:
-			qq += str(q_Curve3D.interpolatef( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve3D.interpolatef( Autoload.get_randf() ))
 
 		if randi() % 2 == 1:
-			q_Curve3D.remove_point( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_Curve3D.remove_point( Autoload.get_randi() )
 
 		if randi() % 2 == 1:
-			q_Curve3D.set_point_in( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_Curve3D.set_point_in( Autoload.get_randi(), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_Curve3D.set_point_out( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_Curve3D.set_point_out( Autoload.get_randi(), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_Curve3D.set_point_position( randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_Curve3D.set_point_position( Autoload.get_randi(), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
 
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:
-				qq += str(q_Curve3D.tessellate( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+				qq += str(q_Curve3D.tessellate( Autoload.get_randi(), Autoload.get_randf() ))

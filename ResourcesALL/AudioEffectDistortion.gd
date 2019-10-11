@@ -19,12 +19,12 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectDistortion.set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Mode
+			q_AudioEffectDistortion.set_mode(Autoload.get_randi()) #Mode
 		if randi() % 2 == 1:
-			q_AudioEffectDistortion.set_pre_gain(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDistortion.set_pre_gain(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDistortion.set_keep_hf_hz(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDistortion.set_keep_hf_hz(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDistortion.set_drive(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDistortion.set_drive(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDistortion.set_post_gain(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDistortion.set_post_gain(Autoload.get_randf())

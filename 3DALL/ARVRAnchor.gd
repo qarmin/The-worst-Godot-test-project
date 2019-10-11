@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_anchor_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_anchor_id(Autoload.get_randi())
 		if randi() % 2 == 1:
 			qq += str(get_anchor_name())
 		if randi() % 2 == 1:

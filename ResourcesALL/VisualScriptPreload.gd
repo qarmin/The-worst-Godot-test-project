@@ -18,4 +18,4 @@ func _process(delta) -> void:
 			q_VisualScriptPreload = VisualScriptPreload.new()
 		
 		if randi() % 2 == 1:
-			q_VisualScriptPreload.set_preload(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_VisualScriptPreload.set_preload(Autoload.loadA("res://RES/Sprite.png"))

@@ -32,7 +32,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorSpatialGizmoPlugin.add_material( "Monit", SpatialMaterial.new() )
 #
 #		q_EditorSpatialGizmoPlugin.create_handle_material( "Wonsz", bool(randi()%2))
-#		q_EditorSpatialGizmoPlugin.create_icon_material( "Bal", Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false), bool(randi()%2), Color(randf(),randf(),randf(),randf()))
+#		q_EditorSpatialGizmoPlugin.create_icon_material( "Bal", Autoload.loadA("res://RES/Sprite.png",false), bool(randi()%2), Color(randf(),randf(),randf(),randf()))
 #		q_EditorSpatialGizmoPlugin.create_material( "Ale", Color(randf(),randf(),randf(),randf()), bool(randi()%2), bool(randi()%2), bool(randi()%2) )
 #
 #		qq += str(q_EditorSpatialGizmoPlugin.get_material( "Mionsz", EditorSpatialGizmo.new() ))

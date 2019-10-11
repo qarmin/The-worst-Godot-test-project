@@ -18,11 +18,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			var q_IP : IP = IP.new()
 #
 #			q_IP.clear_cache("asfafsqwfas")
-#			q_IP.erase_resolve_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			q_IP.erase_resolve_item(Autoload.get_randi())
 #
 #			qq += str(q_IP.get_local_addresses())
-#			qq += str(q_IP.get_resolve_item_address(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-#			qq += str(q_IP.get_resolve_item_status(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(q_IP.get_resolve_item_address(Autoload.get_randi()))
+#			qq += str(q_IP.get_resolve_item_status(Autoload.get_randi()))
 #
-#			qq += str(q_IP.resolve_hostname("https://duckduckgo.com",randi() % Autoload.RANGE - Autoload.RANGE / 2))
-#			qq += str(q_IP.resolve_hostname_queue_item("https://duckduckgo.com",randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(q_IP.resolve_hostname("https://duckduckgo.com",Autoload.get_randi()))
+#			qq += str(q_IP.resolve_hostname_queue_item("https://duckduckgo.com",Autoload.get_randi()))

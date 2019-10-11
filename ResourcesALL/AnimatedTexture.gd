@@ -19,16 +19,16 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AnimatedTexture.set_frames(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimatedTexture.set_frames(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_AnimatedTexture.set_fps(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimatedTexture.set_fps(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			qq += str(q_AnimatedTexture.get_frame_delay(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AnimatedTexture.get_frame_delay(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AnimatedTexture.get_frame_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AnimatedTexture.get_frame_texture(Autoload.get_randi()))
 			
 		if randi() % 2 == 1:
-			q_AnimatedTexture.set_frame_delay(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimatedTexture.set_frame_delay(Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AnimatedTexture.set_frame_texture(randi() % Autoload.RANGE - Autoload.RANGE / 2,ImageTexture.new())
+			q_AnimatedTexture.set_frame_texture(Autoload.get_randi(),ImageTexture.new())

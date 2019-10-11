@@ -19,9 +19,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CapsuleMesh.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CapsuleMesh.set_radius(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_CapsuleMesh.set_mid_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CapsuleMesh.set_mid_height(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_CapsuleMesh.set_radial_segments(randi()%10 - 5)
 		if randi() % 2 == 1:

@@ -17,13 +17,13 @@ func _process(delta) -> void:
 		var q_VisualScriptPropertyGet : VisualScriptPropertyGet = VisualScriptPropertyGet.new()
 		
 		if randi() % 2 == 1:
-			q_VisualScriptPropertyGet.set_call_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CallMode
+			q_VisualScriptPropertyGet.set_call_mode(Autoload.get_randi()) # CallMode
 		if randi() % 2 == 1:
 			q_VisualScriptPropertyGet.set_base_type("Nabzdryngolony")
 		if randi() % 2 == 1:
 			q_VisualScriptPropertyGet.set_base_script("Debilny Sposób")
 		if randi() % 2 == 1:
-			q_VisualScriptPropertyGet.set_basic_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptPropertyGet.set_basic_type(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_VisualScriptPropertyGet.set_base_path(".w")
 		if randi() % 2 == 1:

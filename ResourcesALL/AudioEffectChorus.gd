@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_voice_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set_voice_count(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_dry(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set_dry(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_wet(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set_wet(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/delay_ms",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/delay_ms",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/rate_hz",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/rate_hz",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/depth_ms",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/depth_ms",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/level_db",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/level_db",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/cutoff_hz",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/cutoff_hz",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/pan",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/pan",Autoload.get_randf())

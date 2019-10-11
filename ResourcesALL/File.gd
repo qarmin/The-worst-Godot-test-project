@@ -39,7 +39,7 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			qq += str(q_File.get_as_text())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_buffer( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_File.get_buffer( Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_File.get_csv_line( "K" ))
 		if randi() % 2 == 1:
@@ -96,7 +96,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_File.store_buffer( PoolByteArray([11,124,1241,24,21,214,12,11]))
 		if randi() % 2 == 1:
-			q_File.store_csv_line( PoolStringArray([]), str(randi()%5000) )
+			q_File.store_csv_line( PoolStringArray([]), Autoload.get_string() )
 		if randi() % 2 == 1:
 			q_File.store_double( randf() * 50 )
 		if randi() % 2 == 1:

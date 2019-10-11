@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_TCP_Server.is_connection_available())
 		if randi() % 2 == 1:
-			qq += str(q_TCP_Server.listen( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Zero" ))
+			qq += str(q_TCP_Server.listen( Autoload.get_randi(), "Zero" ))
 		if randi() % 2 == 1:
 			q_TCP_Server.stop()
 		if randi() % 2 == 1:

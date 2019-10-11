@@ -19,18 +19,18 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			q_WebRTCMultiplayer.close()
 			
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.get_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_WebRTCMultiplayer.get_peer( Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			qq += str(q_WebRTCMultiplayer.get_peers())
 			
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.has_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_WebRTCMultiplayer.has_peer( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.initialize( randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2)))
+			qq += str(q_WebRTCMultiplayer.initialize( Autoload.get_randi(), bool(randi()%2)))
 		if randi() % 2 == 1:
-			q_WebRTCMultiplayer.remove_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_WebRTCMultiplayer.remove_peer( Autoload.get_randi() )

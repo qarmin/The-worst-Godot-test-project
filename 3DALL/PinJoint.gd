@@ -20,13 +20,13 @@ func _process(delta) -> void:
 			set("params/impulse_clamp",randf() * 50)
 	
 			if Autoload.WRONG_BUGS:
-				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("params/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("params/impulse_clamp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/bias",Autoload.get_randf())
+				set("params/damping",Autoload.get_randf())
+				set("params/impulse_clamp",Autoload.get_randf())
 		else: #RANDI
 			if randi() % 2 == 1:
-				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/bias",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("params/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("params/impulse_clamp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/impulse_clamp",Autoload.get_randf())

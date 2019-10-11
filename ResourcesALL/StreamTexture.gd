@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_StreamTexture.load("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			qq += str(q_StreamTexture.load("res://RES/Sprite.png"))

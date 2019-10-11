@@ -19,20 +19,20 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set_dry(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set_dry(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("tap" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/active",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("tap" + Autoload.get_string() + "/active",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("tap" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/delay_ms",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("tap" + Autoload.get_string() + "/delay_ms",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("tap" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/level_db",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("tap" + Autoload.get_string() + "/level_db",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("tap" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) + "/pan",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("tap" + Autoload.get_string() + "/pan",Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("feedback/delay_ms",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("feedback/delay_ms",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("feedback/level_db",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("feedback/level_db",Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectDelay.set("feedback/lowpass",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectDelay.set("feedback/lowpass",Autoload.get_randf())

@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeTexture.set_source(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Source
+			q_VisualShaderNodeTexture.set_source(Autoload.get_randi()) #Source
 		if randi() % 2 == 1:
 			q_VisualShaderNodeTexture.set_texture(CurveTexture.new())
 		if randi() % 2 == 1:
-			q_VisualShaderNodeTexture.set_texture_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) # TextureType
+			q_VisualShaderNodeTexture.set_texture_type(Autoload.get_randi()) # TextureType

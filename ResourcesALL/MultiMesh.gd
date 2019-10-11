@@ -19,36 +19,36 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_MultiMesh.set_color_format(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ColorFormat
+			q_MultiMesh.set_color_format(Autoload.get_randi()) #ColorFormat
 		if randi() % 2 == 1:
-			q_MultiMesh.set_transform_format(randi() % Autoload.RANGE - Autoload.RANGE / 2) #TransformFormat
+			q_MultiMesh.set_transform_format(Autoload.get_randi()) #TransformFormat
 		if randi() % 2 == 1:
-			q_MultiMesh.set_custom_data_format(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ColorDataFormat
+			q_MultiMesh.set_custom_data_format(Autoload.get_randi()) #ColorDataFormat
 		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_MultiMesh.set_instance_count(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_MultiMesh.set_visible_instance_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-		if randi() % 2 == 1:
-			q_MultiMesh.set_mesh(CubeMesh.new())
+			q_MultiMesh.set_visible_instance_count(Autoload.get_randi())
+#	BUG	if randi() % 2 == 1:
+#			q_MultiMesh.set_mesh(CubeMesh.new())
 			
 		if randi() % 2 == 1:
 			qq += str(q_MultiMesh.get_aabb())
+#	BUG	if randi() % 2 == 1:
+#			qq += str(q_MultiMesh.get_instance_color(Autoload.get_randi() ))
+#	BUG	if randi() % 2 == 1:
+#			qq += str(q_MultiMesh.get_instance_custom_data(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_MultiMesh.get_instance_color(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_MultiMesh.get_instance_transform(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_MultiMesh.get_instance_custom_data(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-		if randi() % 2 == 1:
-			qq += str(q_MultiMesh.get_instance_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
-		if randi() % 2 == 1:
-			qq += str(q_MultiMesh.get_instance_transform_2d(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_MultiMesh.get_instance_transform_2d(Autoload.get_randi() ))
 			
 		if randi() % 2 == 1:
 			q_MultiMesh.set_as_bulk_array( PoolRealArray([125125.125,12512.1251,122.124]))
+#	BUG	if randi() % 2 == 1:
+#			q_MultiMesh.set_instance_color(Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
+#	BUG	if randi() % 2 == 1:
+#			q_MultiMesh.set_instance_custom_data(Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_color(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()))
+			q_MultiMesh.set_instance_transform(Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_custom_data(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()))
-		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
-		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_transform_2d(randi() % Autoload.RANGE - Autoload.RANGE / 2,Transform2D(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * 50)))
+			q_MultiMesh.set_instance_transform_2d(Autoload.get_randi(),Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),randf() * 50)))

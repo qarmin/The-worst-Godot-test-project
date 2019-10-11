@@ -18,12 +18,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeTransition = AnimationNodeTransition.new()
 		
+#	SLOW	if randi() % 2 == 1:
+#			q_AnimationNodeTransition.set_enabled_inputs(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set_enabled_inputs(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set_cross_fade_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AnimationNodeTransition.set_cross_fade_time(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set("input_" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) +"/name",str(randf()))
+			q_AnimationNodeTransition.set("input_" + Autoload.get_string() +"/name",Autoload.get_string())
 		if randi() % 2 == 1:
-			q_AnimationNodeTransition.set("input_" + str(randi() % Autoload.RANGE - Autoload.RANGE / 2) +"/auto_advance",bool(randi()%2))
+			q_AnimationNodeTransition.set("input_" + Autoload.get_string() +"/auto_advance",bool(randi()%2))

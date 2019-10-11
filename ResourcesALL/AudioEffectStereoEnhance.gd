@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 	
 		if randi() % 2 == 1:
-			q_AudioEffectStereoEnhance.set_pan_pullout(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectStereoEnhance.set_pan_pullout(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectStereoEnhance.set_time_pullout(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectStereoEnhance.set_time_pullout(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectStereoEnhance.set_surround(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectStereoEnhance.set_surround(Autoload.get_randf())

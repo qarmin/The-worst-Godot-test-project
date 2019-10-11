@@ -18,23 +18,23 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			navpol.clear_polygons()
 		if randi() % 2 == 1:
-			navpol.add_outline_at_index(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]),randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			navpol.add_outline_at_index(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]),Autoload.get_randi())
 		if randi() % 2 == 1:
-			navpol.remove_outline(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			navpol.remove_outline(Autoload.get_randi())
 		if randi() % 2 == 1:
 			navpol.clear_outlines()
 		if randi() % 2 == 1:
-			navpol.add_outline(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			navpol.add_outline(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]))
 		if randi() % 2 == 1:
-			navpol.add_outline_at_index(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]),randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			navpol.add_outline_at_index(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]),Autoload.get_randi())
 		if randi() % 2 == 1:
 			navpol.add_polygon(PoolIntArray([randi()%14, randi()%30 + 14, randi()%100 + 35]))
 		if randi() % 2 == 1:
-			qq += str(navpol.get_outline(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(navpol.get_outline(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(navpol.get_outline_count())
 		if randi() % 2 == 1:
-			qq += str(navpol.get_polygon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(navpol.get_polygon(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(navpol.get_polygon_count())
 		if randi() % 2 == 1:
@@ -42,9 +42,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			navpol.make_polygons_from_outlines()
 		if randi() % 2 == 1:
-			navpol.set_outline(randi() % Autoload.RANGE - Autoload.RANGE / 2,PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			navpol.set_outline(Autoload.get_randi(),PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]))
 		if randi() % 2 == 1:
-			navpol.set_vertices(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			navpol.set_vertices(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]))
 
 		if randi() % 2 == 1:
 			set_enabled(bool(randi()%2))

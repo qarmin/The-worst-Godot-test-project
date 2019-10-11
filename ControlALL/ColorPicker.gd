@@ -37,7 +37,7 @@ func _process(delta) -> void:
 			# BoxContainer
 			
 		if randi() % 2 == 1:
-			set_alignment(randi() % Autoload.RANGE - Autoload.RANGE / 2) # alignmode
+			set_alignment(Autoload.get_randi()) # alignmode
 #LEAK
 #			add_spacer(bool(randi()%2))
 #

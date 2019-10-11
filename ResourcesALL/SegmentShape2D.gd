@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_SegmentShape2D.set_a(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SegmentShape2D.set_a(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_SegmentShape2D.set_b(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SegmentShape2D.set_b(Vector2(Autoload.get_randf(),Autoload.get_randf()))

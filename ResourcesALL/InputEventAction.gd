@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 				q_InputEventAction.set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:
-				q_InputEventAction.set_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_InputEventAction.set_strength(Autoload.get_randf())

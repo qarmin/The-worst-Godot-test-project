@@ -1,19 +1,19 @@
 extends Node2D
 
-var q_UndoRedo : UndoRedo = UndoRedo.new()
-var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
+#var q_UndoRedo : UndoRedo = UndoRedo.new()
+#var q_temp_0 : Node = load("res://RES/Node.tscn").instance()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	add_child(q_temp_0)
-
-func _process(delta) -> void:
-	counter -= delta
-	var qq : String = ""
-	qq = qq
-	#BUG
+#func _ready():
+#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#	add_child(q_temp_0)
+#
+#func _process(delta) -> void:
+#	counter -= delta
+#	var qq : String = ""
+#	qq = qq
+#	#BUG
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		if randi() % 2 == 1:
@@ -24,15 +24,15 @@ func _process(delta) -> void:
 #			add_child(q_temp_0)
 #
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_do_method( q_temp_0, "Ziemniaki", "QR" )
+#			q_UndoRedo.add_do_method( q_temp_0, Autoload.get_string(), Autoload.get_string() )
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_do_property( q_temp_0, "Ślizg", "Źdźbło" )
+#			q_UndoRedo.add_do_property( q_temp_0, Autoload.get_string(), Autoload.get_string() )
 #		if randi() % 2 == 1:
 #			q_UndoRedo.add_do_reference( q_temp_0 )
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_undo_method( q_temp_0, "Czkawka", "Grzać" )
+#			q_UndoRedo.add_undo_method( q_temp_0, Autoload.get_string(), Autoload.get_string() )
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_undo_property( q_temp_0, "Ćma", "Topić" )
+#			q_UndoRedo.add_undo_property( q_temp_0, Autoload.get_string(), Autoload.get_string() )
 #		if randi() % 2 == 1:
 #			q_UndoRedo.add_undo_reference( q_temp_0 )
 #
@@ -41,7 +41,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			q_UndoRedo.commit_action()
 #		if randi() % 2 == 1:
-#			q_UndoRedo.create_action( "Nazewnictwo", randi() % Autoload.RANGE - Autoload.RANGE / 2 )#MergeMode
+#			q_UndoRedo.create_action( Autoload.get_string(), Autoload.get_randi() )#MergeMode
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_UndoRedo.get_current_action_name())
@@ -54,10 +54,10 @@ func _process(delta) -> void:
 #			qq += str(q_UndoRedo.redo())
 #		if randi() % 2 == 1:
 #			qq += str(q_UndoRedo.undo())
-		
-		
-		
-func delete_node():
-	q_UndoRedo.free()
-	q_temp_0.queue_free()
-		
+#
+#
+#
+#func delete_node():
+#	q_UndoRedo.free()
+#	q_temp_0.queue_free()
+#

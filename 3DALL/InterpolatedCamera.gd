@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_target_path("Romanagasgfg")
 		if randi() % 2 == 1:
-			set_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_speed(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_interpolation_enabled(bool(randi()%2))
 		if randi() % 2 == 1:

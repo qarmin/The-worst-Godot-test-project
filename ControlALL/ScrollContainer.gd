@@ -18,13 +18,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_enable_h_scroll(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_h_scroll(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_h_scroll(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_enable_v_scroll(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_v_scroll(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_v_scroll(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_deadzone(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_deadzone(Autoload.get_randi())
 			
 		if randi() % 2 == 1:
 			qq += str(get_h_scrollbar())

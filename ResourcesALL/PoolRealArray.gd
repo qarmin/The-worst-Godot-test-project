@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			q_PoolRealArray = PoolRealArray([1.4])
 		
 		if randi() % 2 == 1:
-			q_PoolRealArray.append(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolRealArray.append(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_PoolRealArray.append_array(PoolRealArray([randi() % Autoload.RANGE - Autoload.RANGE / 2]))
+			q_PoolRealArray.append_array(PoolRealArray([Autoload.get_randi()]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolRealArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			qq += str(q_PoolRealArray.insert( Autoload.get_randi(), Autoload.get_randf()) )
 		if randi() % 2 == 1:
 			q_PoolRealArray.invert()
 		if randi() % 2 == 1:
-			q_PoolRealArray.push_back( randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+			q_PoolRealArray.push_back( Autoload.get_randf() )
 		if randi() % 2 == 1:
-			q_PoolRealArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolRealArray.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolRealArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolRealArray.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolRealArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolRealArray.set(Autoload.get_randi(), Autoload.get_randf())
 		if randi() % 2 == 1:
 			qq += str(q_PoolRealArray.size())

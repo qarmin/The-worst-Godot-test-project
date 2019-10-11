@@ -18,53 +18,53 @@ func _process(delta) -> void:
 #		var popup_temp : Popup = Popup.new()
 #
 #		if randi() % 2 == 1:
-#			set_select_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_select_mode(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			set_allow_reselect(bool(randi()%2))
 #		if randi() % 2 == 1:
 #			set_allow_rmb_select(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_max_text_lines(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_max_text_lines(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			set_auto_height(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_max_columns(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_max_columns(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			set_same_column_width(bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_fixed_column_width(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_fixed_column_width(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			set_icon_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			set_icon_mode(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			set_icon_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+#			set_icon_scale(Autoload.get_randf())
 #		if randi() % 2 == 1:
-#			set_fixed_icon_size(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#			set_fixed_icon_size(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 #		if randi() % 2 == 1:
-#			add_icon_item(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+#			add_icon_item(Autoload.loadA("res://RES/Sprite.png"),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			add_item(str(randi() % Autoload.RANGE - Autoload.RANGE / 2),Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),bool(randi()%2))
+#			add_item(str(Autoload.get_randi()),Autoload.loadA("res://RES/Sprite.png"),bool(randi()%2))
 #		if randi() % 2 == 1:
 #			ensure_current_is_visible()
 #		if randi() % 2 == 1:
-#			qq += str(get_item_at_position(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),bool(randi()%2)))
+#			qq += str(get_item_at_position(Vector2(Autoload.get_randf(), Autoload.get_randf()),bool(randi()%2)))
 #		if randi() % 2 == 1:
 #			qq += str(get_item_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_custom_bg_color(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_custom_fg_color(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_icon(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_icon_modulate(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_icon_region(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_metadata(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_text(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(get_item_tooltip(Autoload.get_randi()))
 #		if randi() % 2 == 1:
 #			qq += str(get_selected_items())
 #		if randi() % 2 == 1:
@@ -72,49 +72,49 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(is_anything_selected())
 #		if randi() % 2 == 1:
-#			qq += str(is_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_disabled(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_icon_transposed(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_selectable(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_item_tooltip_enabled(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			qq += str(is_selected(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(is_selected(Autoload.get_randi()))
 #		if randi() % 2 == 1:
-#			move_item(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			move_item(Autoload.get_randi(),Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			remove_item(Autoload.get_randi())
 #		if randi() % 2 == 1:
-#			select(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			select(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_custom_bg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+#			set_item_custom_bg_color(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
 #		if randi() % 2 == 1:
-#			set_item_custom_fg_color(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+#			set_item_custom_fg_color(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
 #		if randi() % 2 == 1:
-#			set_item_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_disabled(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_icon(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+#			set_item_icon(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png"))
 #		if randi() % 2 == 1:
-#			set_item_icon_modulate(randi() % Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()))
+#			set_item_icon_modulate(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
 #		if randi() % 2 == 1:
-#			set_item_icon_region(randi() % Autoload.RANGE - Autoload.RANGE / 2,Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+#			set_item_icon_region(Autoload.get_randi(),Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
 #		if randi() % 2 == 1:
-#			set_item_icon_transposed(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_icon_transposed(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_metadata(randi() % Autoload.RANGE - Autoload.RANGE / 2,popup_temp)
+#			set_item_metadata(Autoload.get_randi(),popup_temp)
 #		if randi() % 2 == 1:
-#			set_item_selectable(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_selectable(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
-#			set_item_text(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
+#			set_item_text(Autoload.get_randi(),str(bool(randi()%2)))
 #		if randi() % 2 == 1:
-#			set_item_tooltip(randi() % Autoload.RANGE - Autoload.RANGE / 2,str(bool(randi()%2)))
+#			set_item_tooltip(Autoload.get_randi(),str(bool(randi()%2)))
 #		if randi() % 2 == 1:
-#			set_item_tooltip_enabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#			set_item_tooltip_enabled(Autoload.get_randi(),bool(randi()%2))
 #		if randi() % 2 == 1:
 #			sort_items_by_text()
 #		if randi() % 2 == 1:
-#			unselect(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+#			unselect(Autoload.get_randi())
 #		if randi() % 2 == 1:
 #			unselect_all()
 #		if randi() % 2 == 1:

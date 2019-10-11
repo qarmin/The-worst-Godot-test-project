@@ -20,9 +20,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_DynamicFont.set_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_DynamicFont.set_size(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_DynamicFont.set_outline_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_DynamicFont.set_outline_size(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_DynamicFont.set_outline_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_DynamicFont.set_use_filter(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_DynamicFont.set_spacing(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_DynamicFont.set_spacing(Autoload.get_randi(),Autoload.get_randi())
 #	BUG	if randi() % 2 == 1:
 #			q_DynamicFont.set_font_data(DynamicFontData.new())
 			
@@ -38,11 +38,11 @@ func _process(delta) -> void:
 #			q_DynamicFont.add_fallback(DynamicFontData.new())
 			
 		if randi() % 2 == 1:
-			qq += str(q_DynamicFont.get_fallback( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_DynamicFont.get_fallback( Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_DynamicFont.get_fallback_count())
 			
 		if randi() % 2 == 1:
-			q_DynamicFont.remove_fallback( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_DynamicFont.remove_fallback( Autoload.get_randi() )
 #	BUG	if randi() % 2 == 1:
-#			q_DynamicFont.set_fallback( randi() % Autoload.RANGE - Autoload.RANGE / 2, DynamicFontData.new())
+#			q_DynamicFont.set_fallback( Autoload.get_randi(), DynamicFontData.new())

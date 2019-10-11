@@ -19,14 +19,14 @@ func _process(delta) -> void:
 			
 			
 		if randi() % 2 == 1:
-			q_ImageTexture.set_storage(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Storage
+			q_ImageTexture.set_storage(Autoload.get_randi()) #Storage
 		if randi() % 2 == 1:
-			q_ImageTexture.set_lossy_storage_quality(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_ImageTexture.set_lossy_storage_quality(Autoload.get_randf())
 
 		if randi() % 2 == 1:
-			q_ImageTexture.create(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % 6000 - 3000,randi() % Autoload.RANGE - Autoload.RANGE / 2) # Format
+			q_ImageTexture.create(Autoload.get_randi(),Autoload.get_randi(),randi() % 6000 - 3000,Autoload.get_randi()) # Format
 		if randi() % 2 == 1:
-			q_ImageTexture.create_from_image(Image.new(),randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_ImageTexture.create_from_image(Image.new(),Autoload.get_randi())
 
 		if randi() % 2 == 1:
 			qq += str(q_ImageTexture.get_format())
@@ -36,4 +36,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_ImageTexture.set_data(Image.new())
 		if randi() % 2 == 1:
-			q_ImageTexture.set_size_override(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_ImageTexture.set_size_override(Vector2(Autoload.get_randf(),Autoload.get_randf()))

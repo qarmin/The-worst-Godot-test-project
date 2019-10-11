@@ -21,12 +21,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_active(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_process_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #AnimationProcessMode
+			set_process_mode(Autoload.get_randi()) #AnimationProcessMode
 		if randi() % 2 == 1:
 			set_root_motion_track(".afs/aw")
 			
 		if randi() % 2 == 1:
-			advance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			advance(Autoload.get_randf())
 		if randi() % 2 == 1:
 			qq += str(get_root_motion_transform())
 		if randi() % 2 == 1:

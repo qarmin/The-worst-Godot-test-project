@@ -19,20 +19,20 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BitmapFont.set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_BitmapFont.set_height(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_BitmapFont.set_ascent(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_BitmapFont.set_ascent(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_BitmapFont.set_distance_field_hint(bool(randi()%2))
 		if randi() % 2 == 1:
 			q_BitmapFont.set_fallback(q_BitmapFont)
 	
 		if randi() % 2 == 1:
-			q_BitmapFont.add_char( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_BitmapFont.add_char( Autoload.get_randi(), Autoload.get_randi(), Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_BitmapFont.add_kerning_pair( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_BitmapFont.add_kerning_pair( Autoload.get_randi(), Autoload.get_randi(),Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite.png"))
 			
 		if randi() % 2 == 1:
 			q_BitmapFont.clear()
@@ -41,10 +41,10 @@ func _process(delta) -> void:
 				qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
 	
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_char_size( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_BitmapFont.get_char_size( Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_kerning_pair(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_BitmapFont.get_kerning_pair(Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_texture( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_BitmapFont.get_texture( Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			qq += str(q_BitmapFont.get_texture_count())

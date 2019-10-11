@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptInputAction.set_action_name("Akcja")
 		if randi() % 2 == 1:
-			q_VisualScriptInputAction.set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Mode
+			q_VisualScriptInputAction.set_action_mode(Autoload.get_randi()) # Mode

@@ -17,17 +17,17 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_subdiv(randi() % 10 - 50) # Subdiv
 		if randi() % 2 == 1:
-			set_extents(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_extents(Vector3(Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_dynamic_range(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_dynamic_range(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_propagation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_propagation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_normal_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_normal_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_interior(bool(randi()%2))
 		if randi() % 2 == 1:

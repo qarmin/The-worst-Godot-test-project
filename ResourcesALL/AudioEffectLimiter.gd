@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectLimiter.set_ceiling_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectLimiter.set_ceiling_db(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectLimiter.set_threshold_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectLimiter.set_threshold_db(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectLimiter.set_soft_clip_db(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectLimiter.set_soft_clip_db(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectLimiter.set_soft_clip_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectLimiter.set_soft_clip_ratio(Autoload.get_randf())

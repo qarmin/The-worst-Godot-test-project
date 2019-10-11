@@ -18,35 +18,38 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			q_PoolByteArray = PoolByteArray([Color()])
+
+		if randi() % 2 == 1:
+			q_PoolByteArray.append(Autoload.get_randi())
+		if randi() % 2 == 1:
+			q_PoolByteArray.append_array(PoolByteArray([]))
 			
 		if randi() % 2 == 1:
-			q_PoolByteArray.append(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-		if randi() % 2 == 1:
-			q_PoolByteArray.append_array(PoolByteArray([randi() % Autoload.RANGE - Autoload.RANGE / 2]))
-			
-		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.compress(randi() % Autoload.RANGE - Autoload.RANGE / 2)) # File.CompressionMode
+			qq += str(q_PoolByteArray.compress(Autoload.get_randi())) # File.CompressionMode
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_PoolByteArray.decompress(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
-			
+#			qq += str(q_PoolByteArray.decompress(Autoload.get_randi(),Autoload.get_randi()))
+
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.get_string_from_ascii())
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.get_string_from_utf8())
-			
+
+
 		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.insert( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2) )
+			qq += str(q_PoolByteArray.hex_encode())
+		if randi() % 2 == 1:
+			qq += str(q_PoolByteArray.insert( Autoload.get_randi(), Autoload.get_randi()) )
 		if randi() % 2 == 1:
 			q_PoolByteArray.invert()
 		if randi() % 2 == 1:
-			q_PoolByteArray.push_back( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_PoolByteArray.push_back( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_PoolByteArray.remove( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolByteArray.remove( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolByteArray.resize( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolByteArray.resize( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_PoolByteArray.set(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_PoolByteArray.set(Autoload.get_randi(), Autoload.get_randi())
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.size())
 		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.subarray(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_PoolByteArray.subarray(Autoload.get_randi(),Autoload.get_randi()))

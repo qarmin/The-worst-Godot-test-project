@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CircleShape2D.set_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CircleShape2D.set_radius(Autoload.get_randf())

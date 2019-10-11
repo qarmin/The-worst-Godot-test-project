@@ -28,6 +28,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_WebSocketPeer.is_connected_to_host())
 		if randi() % 2 == 1:
-			q_WebSocketPeer.set_write_mode( randi()%Autoload.RANGE - Autoload.RANGE / 2 )#WriteMode
+			q_WebSocketPeer.set_write_mode( Autoload.get_randi() )#WriteMode
 		if randi() % 2 == 1:
 			qq += str(q_WebSocketPeer.was_string_packet())

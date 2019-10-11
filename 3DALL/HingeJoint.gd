@@ -30,34 +30,34 @@ func _process(delta) -> void:
 			
 			if Autoload.WRONG_BUGS:
 			
-				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/bias",Autoload.get_randf())
 				set("angular_limit/enable",bool(randi()%2))
-				set("angular_limit/upper",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit/lower",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit/relaxation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/upper",Autoload.get_randf())
+				set("angular_limit/lower",Autoload.get_randf())
+				set("angular_limit/bias",Autoload.get_randf())
+				set("angular_limit/softness",Autoload.get_randf())
+				set("angular_limit/relaxation",Autoload.get_randf())
 				set("motor/enable",bool(randi()%2))
-				set("motor/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("motor/max_impulse",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("motor/target_velocity",Autoload.get_randf())
+				set("motor/max_impulse",Autoload.get_randf())
 		else: #RANDI
 			if randi() % 2 == 1:
-				set("params/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("params/bias",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_limit/enable",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_limit/upper",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/upper",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit/lower",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/lower",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit/bias",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/bias",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit/relaxation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit/relaxation",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("motor/enable",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("motor/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("motor/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("motor/max_impulse",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("motor/max_impulse",Autoload.get_randf())

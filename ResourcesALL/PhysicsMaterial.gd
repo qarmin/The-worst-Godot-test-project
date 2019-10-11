@@ -19,10 +19,10 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_PhysicsMaterial.set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_PhysicsMaterial.set_friction(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_PhysicsMaterial.set_rough(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_PhysicsMaterial.set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_PhysicsMaterial.set_bounce(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_PhysicsMaterial.set_absorbent(bool(randi()%2))

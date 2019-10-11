@@ -104,259 +104,259 @@ func _process(delta) -> void:
 			
 			if Autoload.WRONG_BUGS:
 				set("linear_limit_x/enabled",bool(randi()%2))
-				set("linear_limit_x/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_x/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_x/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_x/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/upper_distance",Autoload.get_randf())
+				set("linear_limit_x/lower_distance",Autoload.get_randf())
+				set("linear_limit_x/softness",Autoload.get_randf())
+				set("linear_limit_x/restitution",Autoload.get_randf())
+				set("linear_limit_x/damping",Autoload.get_randf())
 				set("linear_motor_x/enabled",bool(randi()%2))
-				set("linear_motor_x/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_motor_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_x/target_velocity",Autoload.get_randf())
+				set("linear_motor_x/force_limit",Autoload.get_randf())
 				set("linear_spring_x/enabled",bool(randi()%2))
-				set("linear_spring_x/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_x/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_x/stiffness",Autoload.get_randf())
+				set("linear_spring_x/damping",Autoload.get_randf())
+				set("linear_spring_x/equilibrium_point",Autoload.get_randf())
 				set("angular_limit_x/enabled",bool(randi()%2))
-				set("angular_limit_x/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_x/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/upper_angle",Autoload.get_randf())
+				set("angular_limit_x/lower_angle",Autoload.get_randf())
+				set("angular_limit_x/softness",Autoload.get_randf())
+				set("angular_limit_x/restitution",Autoload.get_randf())
+				set("angular_limit_x/damping",Autoload.get_randf())
+				set("angular_limit_x/force_limit",Autoload.get_randf())
+				set("angular_limit_x/erp",Autoload.get_randf())
 				set("angular_motor_x/enabled",bool(randi()%2))
-				set("angular_motor_x/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_motor_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_x/target_velocity",Autoload.get_randf())
+				set("angular_motor_x/force_limit",Autoload.get_randf())
 				set("angular_spring_x/enabled",bool(randi()%2))
-				set("angular_spring_x/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_x/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_x/stiffness",Autoload.get_randf())
+				set("angular_spring_x/damping",Autoload.get_randf())
+				set("angular_spring_x/equilibrium_point",Autoload.get_randf())
 				set("linear_limit_y/enabled",bool(randi()%2))
-				set("linear_limit_y/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_y/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_y/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_y/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/upper_distance",Autoload.get_randf())
+				set("linear_limit_y/lower_distance",Autoload.get_randf())
+				set("linear_limit_y/softness",Autoload.get_randf())
+				set("linear_limit_y/restitution",Autoload.get_randf())
+				set("linear_limit_y/damping",Autoload.get_randf())
 				set("linear_motor_y/enabled",bool(randi()%2))
-				set("linear_motor_y/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_motor_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_y/target_velocity",Autoload.get_randf())
+				set("linear_motor_y/force_limit",Autoload.get_randf())
 				set("linear_spring_y/enabled",bool(randi()%2))
-				set("linear_spring_y/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_y/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_y/stiffness",Autoload.get_randf())
+				set("linear_spring_y/damping",Autoload.get_randf())
+				set("linear_spring_y/equilibrium_point",Autoload.get_randf())
 				set("angular_limit_y/enabled",bool(randi()%2))
-				set("angular_limit_y/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_y/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/upper_angle",Autoload.get_randf())
+				set("angular_limit_y/lower_angle",Autoload.get_randf())
+				set("angular_limit_y/softness",Autoload.get_randf())
+				set("angular_limit_y/restitution",Autoload.get_randf())
+				set("angular_limit_y/damping",Autoload.get_randf())
+				set("angular_limit_y/force_limit",Autoload.get_randf())
+				set("angular_limit_y/erp",Autoload.get_randf())
 				set("angular_motor_y/enabled",bool(randi()%2))
-				set("angular_motor_y/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_motor_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_y/target_velocity",Autoload.get_randf())
+				set("angular_motor_y/force_limit",Autoload.get_randf())
 				set("angular_spring_y/enabled",bool(randi()%2))
-				set("angular_spring_y/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_y/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_y/stiffness",Autoload.get_randf())
+				set("angular_spring_y/damping",Autoload.get_randf())
+				set("angular_spring_y/equilibrium_point",Autoload.get_randf())
 				set("linear_limit_z/enabled",bool(randi()%2))
-				set("linear_limit_z/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_z/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_z/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_z/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_limit_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/upper_distance",Autoload.get_randf())
+				set("linear_limit_z/lower_distance",Autoload.get_randf())
+				set("linear_limit_z/softness",Autoload.get_randf())
+				set("linear_limit_z/restitution",Autoload.get_randf())
+				set("linear_limit_z/damping",Autoload.get_randf())
 				set("linear_motor_z/enabled",bool(randi()%2))
-				set("linear_motor_z/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_motor_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_z/target_velocity",Autoload.get_randf())
+				set("linear_motor_z/force_limit",Autoload.get_randf())
 				set("linear_spring_z/enabled",bool(randi()%2))
-				set("linear_spring_z/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("linear_spring_z/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_z/stiffness",Autoload.get_randf())
+				set("linear_spring_z/damping",Autoload.get_randf())
+				set("linear_spring_z/equilibrium_point",Autoload.get_randf())
 				set("angular_limit_z/enabled",bool(randi()%2))
-				set("angular_limit_z/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_limit_z/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/upper_angle",Autoload.get_randf())
+				set("angular_limit_z/lower_angle",Autoload.get_randf())
+				set("angular_limit_z/softness",Autoload.get_randf())
+				set("angular_limit_z/restitution",Autoload.get_randf())
+				set("angular_limit_z/damping",Autoload.get_randf())
+				set("angular_limit_z/force_limit",Autoload.get_randf())
+				set("angular_limit_z/erp",Autoload.get_randf())
 				set("angular_motor_z/enabled",bool(randi()%2))
-				set("angular_motor_z/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_motor_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_z/target_velocity",Autoload.get_randf())
+				set("angular_motor_z/force_limit",Autoload.get_randf())
 				set("angular_spring_z/enabled",bool(randi()%2))
-				set("angular_spring_z/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("angular_spring_z/equilibrium_pointint",randf() * Autoload.RANGE - Autoload.RANGE / 2)
-				set("precision",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_z/stiffness",Autoload.get_randf())
+				set("angular_spring_z/damping",Autoload.get_randf())
+				set("angular_spring_z/equilibrium_pointint",Autoload.get_randf())
+				set("precision",Autoload.get_randi())
 	
 		else: #RANDI
 			if randi() % 2 == 1:
 				set("linear_limit_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_limit_x/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/upper_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_x/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/lower_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_x/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_x/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_x/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_motor_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_motor_x/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_x/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_motor_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_x/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_spring_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_spring_x/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_x/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_x/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_x/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_x/equilibrium_point",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_limit_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_limit_x/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/upper_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/lower_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_x/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_x/erp",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_motor_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_motor_x/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_x/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_motor_x/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_x/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_spring_x/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_spring_x/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_x/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_x/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_x/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_x/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_x/equilibrium_point",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_limit_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_limit_y/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/upper_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_y/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/lower_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_y/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_y/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_y/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_motor_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_motor_y/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_y/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_motor_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_y/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_spring_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_spring_y/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_y/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_y/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_y/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_y/equilibrium_point",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_limit_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_limit_y/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/upper_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/lower_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_y/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_y/erp",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_motor_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_motor_y/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_y/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_motor_y/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_y/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_spring_y/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_spring_y/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_y/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_y/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_y/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_y/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_y/equilibrium_point",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_limit_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_limit_z/upper_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/upper_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_z/lower_distance",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/lower_distance",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_z/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_z/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_limit_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_limit_z/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_motor_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_motor_z/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_z/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_motor_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_motor_z/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("linear_spring_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("linear_spring_z/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_z/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_z/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("linear_spring_z/equilibrium_point",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("linear_spring_z/equilibrium_point",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_limit_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_limit_z/upper_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/upper_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/lower_angle",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/lower_angle",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/softness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/softness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/restitution",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/restitution",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_limit_z/erp",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_limit_z/erp",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_motor_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_motor_z/target_velocity",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_z/target_velocity",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_motor_z/force_limit",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_motor_z/force_limit",Autoload.get_randf())
 			if randi() % 2 == 1:
 				set("angular_spring_z/enabled",bool(randi()%2))
 			if randi() % 2 == 1:
-				set("angular_spring_z/stiffness",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_z/stiffness",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_z/damping",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_z/damping",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("angular_spring_z/equilibrium_pointint",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				set("angular_spring_z/equilibrium_pointint",Autoload.get_randf())
 			if randi() % 2 == 1:
-				set("precision",randi() % Autoload.RANGE - Autoload.RANGE / 2)
+				set("precision",Autoload.get_randi())

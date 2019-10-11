@@ -16,7 +16,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_OS : OS = OS.new()
 #
-#		q_OS.set_clipboard(str(randi() % 1000000))
+#		q_OS.set_clipboard(Autoload.get_string())
 #		#q_OS.set_current_screen(randi()%50)
 #		#q_OS.set_exit_code(randi()%50)
 #		q_OS.set_use_vsync(bool(randi()%2))

@@ -18,13 +18,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(randi()%50000))
 		if randi() % 2 == 1:
-			set_button_icon(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_button_icon(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
 			set_flat(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_clip_text(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_text_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_text_align(Autoload.get_randi())
 			
 			# BaseButton
 		if randi() % 2 == 1:
@@ -36,11 +36,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_action_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #ActionMODE
+			set_action_mode(Autoload.get_randi()) #ActionMODE
 		if randi() % 2 == 1:
-			set_button_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_button_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_enabled_focus_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FocusMode
+			set_enabled_focus_mode(Autoload.get_randi()) #FocusMode
 		if randi() % 2 == 1:
 			set_keep_pressed_outside(bool(randi()%2))
 		if randi() % 2 == 1:

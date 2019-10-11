@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_relative_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CharFXTransform.set_relative_index(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_absolute_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CharFXTransform.set_absolute_index(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_elapsed_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CharFXTransform.set_elapsed_time(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_visibility(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_CharFXTransform.set_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_environment({"asfasf" : "Cras", "SZ" : Autoload.loadA("res://RES/default_env1.tres")})
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_character(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CharFXTransform.set_character(Autoload.get_randi())
 			
 		if randi() % 2 == 1:
-			q_CharFXTransform.get_value_or("PRGORAM", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_CharFXTransform.get_value_or("PRGORAM", Autoload.get_randi())

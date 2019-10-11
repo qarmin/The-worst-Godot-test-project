@@ -19,33 +19,33 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.set_compression_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #CompressionMode
+			q_NetworkedMultiplayerENet.set_compression_mode(Autoload.get_randi()) #CompressionMode
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.set_transfer_channel(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_NetworkedMultiplayerENet.set_transfer_channel(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.set_channel_count(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_NetworkedMultiplayerENet.set_channel_count(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet.set_always_ordered(bool(randi()%2))
 	
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.close_connection( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_NetworkedMultiplayerENet.close_connection( Autoload.get_randi())
 	
 #		if randi() % 2 == 1:
-#	LEAK		qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#	LEAK		qq += str(q_NetworkedMultiplayerENet.create_client("Stabilnie",Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_NetworkedMultiplayerENet.create_server( randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_NetworkedMultiplayerENet.create_server( Autoload.get_randi(),Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi()))
 	
 		if randi() % 2 == 1:
-			q_NetworkedMultiplayerENet.disconnect_peer( randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2))
+			q_NetworkedMultiplayerENet.disconnect_peer( Autoload.get_randi(), bool(randi()%2))
 	
 		if randi() % 2 == 1:
 			qq += str(q_NetworkedMultiplayerENet.get_last_packet_channel())
 		if randi() % 2 == 1:
 			qq += str(q_NetworkedMultiplayerENet.get_packet_channel())
 		if randi() % 2 == 1:
-			qq += str(q_NetworkedMultiplayerENet.get_peer_address( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_NetworkedMultiplayerENet.get_peer_address( Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_NetworkedMultiplayerENet.get_peer_port( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_NetworkedMultiplayerENet.get_peer_port( Autoload.get_randi()))
 	
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet.set_bind_ip( "Koszulka")

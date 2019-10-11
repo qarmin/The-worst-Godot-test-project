@@ -19,38 +19,38 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_ArrayMesh.set_blend_shape_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # BlendShapeMode
+			q_ArrayMesh.set_blend_shape_mode(Autoload.get_randi()) # BlendShapeMode
 		if randi() % 2 == 1:
-			q_ArrayMesh.set_custom_aabb(AABB(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_ArrayMesh.set_custom_aabb(AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			q_ArrayMesh.add_blend_shape( "Rozmaryn" )
 		if randi() % 2 == 1:
-			q_ArrayMesh.add_surface_from_arrays( randi() % Autoload.RANGE - Autoload.RANGE / 2, [[214,124],[125,215]], [[214,124],[125,215]], randi() % 10000000) #PrimitiveType
+			q_ArrayMesh.add_surface_from_arrays( Autoload.get_randi(), [[214,124],[125,215]], [[214,124],[125,215]], randi() % 10000000) #PrimitiveType
 		if randi() % 2 == 1:
 			q_ArrayMesh.clear_blend_shapes()
 		if randi() % 2 == 1:
 			qq += str(q_ArrayMesh.get_blend_shape_count())
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.get_blend_shape_name( randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_ArrayMesh.get_blend_shape_name( Autoload.get_randi()))
 #SPAM		if randi() % 2 == 1:
-#			qq += str(q_ArrayMesh.lightmap_unwrap( Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)),randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(q_ArrayMesh.lightmap_unwrap( Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_ArrayMesh.regen_normalmaps()
 		if randi() % 2 == 1:
 			qq += str(q_ArrayMesh.surface_find_by_name( "Bazylia" ))
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_get_array_index_len( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_ArrayMesh.surface_get_array_index_len( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_get_array_len( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_ArrayMesh.surface_get_array_len( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_get_format( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_ArrayMesh.surface_get_format( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_get_name( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_ArrayMesh.surface_get_name( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_ArrayMesh.surface_get_primitive_type( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_ArrayMesh.surface_get_primitive_type( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			q_ArrayMesh.surface_remove( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_ArrayMesh.surface_remove( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_ArrayMesh.surface_set_name( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Majeranek")
+			q_ArrayMesh.surface_set_name( Autoload.get_randi(), "Majeranek")
 		if randi() % 2 == 1:
-			q_ArrayMesh.surface_update_region( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, PoolByteArray([124,12,412421421,214,124,2]))
+			q_ArrayMesh.surface_update_region( Autoload.get_randi(), Autoload.get_randi(), PoolByteArray([124,12,412421421,214,124,2]))

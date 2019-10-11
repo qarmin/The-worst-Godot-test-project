@@ -15,11 +15,11 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_width(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_width(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_height(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_depth(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_depth(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())
 			
@@ -29,22 +29,22 @@ func _process(delta) -> void:
 			
 			# CSGShape
 		if randi() % 2 == 1:
-			set_operation(randi() % Autoload.RANGE - Autoload.RANGE / 2) # OPERATION
+			set_operation(Autoload.get_randi()) # OPERATION
 		if randi() % 2 == 1:
-			set_snap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_snap(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_calculate_tangents(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_use_collision(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_collision_layer(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_layer(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_mask(Autoload.get_randi())
 			
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_collision_layer_bit(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_collision_mask_bit(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_meshes())
 			
@@ -52,6 +52,6 @@ func _process(delta) -> void:
 			qq += str(is_root_shape())
 			
 		if randi() % 2 == 1:
-			set_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_collision_layer_bit(Autoload.get_randi(),bool(randi()%2))
 		if randi() % 2 == 1:
-			set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))

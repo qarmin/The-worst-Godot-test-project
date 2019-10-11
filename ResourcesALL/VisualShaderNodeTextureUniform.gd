@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeTextureUniform.set_texture_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) # Texture
+			q_VisualShaderNodeTextureUniform.set_texture_type(Autoload.get_randi()) # Texture
 		if randi() % 2 == 1:
-			q_VisualShaderNodeTextureUniform.set_color_default(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ColorDefault
+			q_VisualShaderNodeTextureUniform.set_color_default(Autoload.get_randi()) # ColorDefault

@@ -15,11 +15,11 @@ func _process(delta) -> void:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
 #			if randi() % 2 == 1:
-#				add_sphere(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+#				add_sphere(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randf(),bool(randi()%2))
 #			if randi() % 2 == 1:
-#				add_vertex(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				add_vertex(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 #			if randi() % 2 == 1:
-#				begin(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png")) # PrimitiveType
+#				begin(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png")) # PrimitiveType
 #			if randi() % 2 == 1:
 #				clear()
 #			if randi() % 2 == 1:
@@ -27,10 +27,10 @@ func _process(delta) -> void:
 #			if randi() % 2 == 1:
 #				set_color(Color(randf(),randf(),randf(),randf()))
 #			if randi() % 2 == 1:
-#				set_normal(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				set_normal(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 #			if randi() % 2 == 1:
-#				set_tangent(Plane(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				set_tangent(Plane(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 #			if randi() % 2 == 1:
-#				set_uv(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				set_uv(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 #			if randi() % 2 == 1:
-#				set_uv2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				set_uv2(Vector2(Autoload.get_randf(),Autoload.get_randf()))

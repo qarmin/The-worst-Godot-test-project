@@ -19,15 +19,15 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_OpenSimplexNoise.set_seed(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_OpenSimplexNoise.set_seed(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_OpenSimplexNoise.set_octaves(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_OpenSimplexNoise.set_octaves(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_OpenSimplexNoise.set_period(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_OpenSimplexNoise.set_period(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_OpenSimplexNoise.set_persistence(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_OpenSimplexNoise.set_persistence(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_OpenSimplexNoise.set_lacunarity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_OpenSimplexNoise.set_lacunarity(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))

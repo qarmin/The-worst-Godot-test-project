@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_timer_process_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #TimerProcessMode
+			set_timer_process_mode(Autoload.get_randi()) #TimerProcessMode
 		if randi() % 2 == 1:
-			set_wait_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_wait_time(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_one_shot(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -31,6 +31,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_stopped())
 		if randi() % 2 == 1:
-			start(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			start(Autoload.get_randf())
 		if randi() % 2 == 1:
 			stop()

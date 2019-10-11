@@ -21,9 +21,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_InputEventKey.set_pressed(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_InputEventKey.set_scancode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #KeyList
+			q_InputEventKey.set_scancode(Autoload.get_randi()) #KeyList
 		if randi() % 2 == 1:
-			q_InputEventKey.set_unicode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventKey.set_unicode(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_InputEventKey.set_echo(bool(randi()%2))
 		if randi() % 2 == 1:

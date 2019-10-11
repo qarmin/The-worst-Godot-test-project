@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_InputEventJoypadButton.set_button_index(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventJoypadButton.set_button_index(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_InputEventJoypadButton.set_pressure(bool(randi()%2))
 		if randi() % 2 == 1:

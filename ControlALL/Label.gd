@@ -18,9 +18,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(bool(randi()%2)))
 		if randi() % 2 == 1:
-			set_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_align(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_valign(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_valign(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_autowrap(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -28,13 +28,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_uppercase(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_visible_characters(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_percent_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_percent_visible(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_lines_skipped(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_lines_skipped(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_max_lines_visible(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_max_lines_visible(Autoload.get_randi())
 			
 		if randi() % 2 == 1:
 			qq += str(get_line_count())

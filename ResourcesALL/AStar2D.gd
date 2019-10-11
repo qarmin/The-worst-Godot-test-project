@@ -17,49 +17,49 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AStar2D = AStar2D.new()
 			
-		###q_AStar2D._compute_cost(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
-		###q_AStar2D._estimate_cost(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+		###q_AStar2D._compute_cost(Autoload.get_randi(),Autoload.get_randi())
+		###q_AStar2D._estimate_cost(Autoload.get_randi(),Autoload.get_randi())
 	
 		if randi() % 2 == 1:
-			q_AStar2D.add_point(randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AStar2D.add_point(Autoload.get_randi(), Vector2(Autoload.get_randf(), Autoload.get_randf()), Autoload.get_randf())
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.are_points_connected(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.are_points_connected(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
 			q_AStar2D.clear()
 		if randi() % 2 == 1:
-			q_AStar2D.connect_points(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			q_AStar2D.connect_points(Autoload.get_randi(),Autoload.get_randi(),bool(randi()%2))
 		if randi() % 2 == 1:
-			q_AStar2D.disconnect_points(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AStar2D.disconnect_points(Autoload.get_randi(),Autoload.get_randi())
 
 		if randi() % 2 == 1:
 			qq += str(q_AStar2D.get_available_point_id())
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_closest_point(Vector2( randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(q_AStar2D.get_closest_point(Vector2( Autoload.get_randf(), Autoload.get_randf())))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_closest_position_in_segment(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(q_AStar2D.get_closest_position_in_segment(Vector2(Autoload.get_randf(), Autoload.get_randf())))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_id_path(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.get_id_path(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_point_connections(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.get_point_connections(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_point_path(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.get_point_path(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_point_position(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.get_point_position(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.get_point_weight_scale(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.get_point_weight_scale(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_AStar2D.get_points())
 
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.has_point(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.has_point(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar2D.is_point_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_AStar2D.is_point_disabled(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			q_AStar2D.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AStar2D.remove_point(Autoload.get_randi())
 
 		if randi() % 2 == 1:
-			q_AStar2D.set_point_disabled(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			q_AStar2D.set_point_disabled(Autoload.get_randi(),bool(randi()%2))
 		if randi() % 2 == 1:
-			q_AStar2D.set_point_position(randi() % Autoload.RANGE - Autoload.RANGE / 2,Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_AStar2D.set_point_position(Autoload.get_randi(),Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_AStar2D.set_point_weight_scale(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AStar2D.set_point_weight_scale(Autoload.get_randi(),Autoload.get_randf())

@@ -15,10 +15,10 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set("omni_range",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("omni_range",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set("omni_attenuation",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set("omni_attenuation",Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_shadow_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # ShadowMode
+			set_shadow_mode(Autoload.get_randi()) # ShadowMode
 		if randi() % 2 == 1:
-			set_shadow_detail(randi() % Autoload.RANGE - Autoload.RANGE / 2) # SkadowDetail
+			set_shadow_detail(Autoload.get_randi()) # SkadowDetail

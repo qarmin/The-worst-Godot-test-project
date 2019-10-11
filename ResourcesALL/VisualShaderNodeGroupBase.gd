@@ -8,6 +8,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 func _ready():
 	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+	add_child(q_control)
 
 func _process(delta) -> void:
 	counter -= delta
@@ -25,9 +26,9 @@ func _process(delta) -> void:
 
 		
 #	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.add_input_port( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, "Dżony" )
+#			q_VisualShaderNodeGroupBase.add_input_port( Autoload.get_randi(), Autoload.get_randi(), "Dżony" )
 #	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.add_output_port( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, "Ring" )
+#			q_VisualShaderNodeGroupBase.add_output_port( Autoload.get_randi(), Autoload.get_randi(), "Ring" )
 
 		if randi() % 2 == 1:
 			q_VisualShaderNodeGroupBase.clear_input_ports()
@@ -35,7 +36,7 @@ func _process(delta) -> void:
 			q_VisualShaderNodeGroupBase.clear_output_ports()
 
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_VisualShaderNodeGroupBase.get_control( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShaderNodeGroupBase.get_control( Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			qq += str(q_VisualShaderNodeGroupBase.get_free_input_port_id())
 		if randi() % 2 == 1:
@@ -52,32 +53,32 @@ func _process(delta) -> void:
 			qq += str(q_VisualShaderNodeGroupBase.get_size())
 
 		if randi() % 2 == 1:
-			qq += str(q_VisualShaderNodeGroupBase.has_input_port(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_VisualShaderNodeGroupBase.has_input_port(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_VisualShaderNodeGroupBase.has_output_port(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_VisualShaderNodeGroupBase.has_output_port(Autoload.get_randi()))
 
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.remove_input_port( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_VisualShaderNodeGroupBase.remove_input_port( Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.remove_output_port( randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_VisualShaderNodeGroupBase.remove_output_port( Autoload.get_randi() )
 
 
 #	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.set_control( q_control,randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_VisualShaderNodeGroupBase.set_control( q_control,Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.set_input_port_name( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Kapitan" )
+			q_VisualShaderNodeGroupBase.set_input_port_name( Autoload.get_randi(), "Kapitan" )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.set_input_port_type( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_VisualShaderNodeGroupBase.set_input_port_type( Autoload.get_randi(), Autoload.get_randi() )
 		if randi() % 2 == 1:
 			q_VisualShaderNodeGroupBase.set_inputs( "Wejścia" )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.set_output_port_name( randi() % Autoload.RANGE - Autoload.RANGE / 2, "Fajf" )
+			q_VisualShaderNodeGroupBase.set_output_port_name( Autoload.get_randi(), "Fajf" )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.set_output_port_type( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_VisualShaderNodeGroupBase.set_output_port_type( Autoload.get_randi(), Autoload.get_randi() )
 		if randi() % 2 == 1:
 			q_VisualShaderNodeGroupBase.set_outputs( "Wyjścia" )
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGroupBase.set_size( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_VisualShaderNodeGroupBase.set_size( Vector2(Autoload.get_randf(),Autoload.get_randf()) )
 
 func delete_node():
 	q_control.queue_free()

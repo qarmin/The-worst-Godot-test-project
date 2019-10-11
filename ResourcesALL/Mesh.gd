@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Mesh.create_convex_shape())
 		if randi() % 2 == 1:
-			qq += str(q_Mesh.create_outline( randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Mesh.create_outline( Autoload.get_randf()))
 		if randi() % 2 == 1:
 			qq += str(q_Mesh.create_trimesh_shape())
 		if randi() % 2 == 1:
@@ -30,10 +30,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Mesh.get_surface_count())
 		if randi() % 2 == 1:
-			qq += str(q_Mesh.surface_get_arrays( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Mesh.surface_get_arrays( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Mesh.surface_get_blend_shape_arrays( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Mesh.surface_get_blend_shape_arrays( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Mesh.surface_get_material( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Mesh.surface_get_material( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			q_Mesh.surface_set_material( randi() % Autoload.RANGE - Autoload.RANGE / 2, SpatialMaterial.new())
+			q_Mesh.surface_set_material( Autoload.get_randi(), SpatialMaterial.new())

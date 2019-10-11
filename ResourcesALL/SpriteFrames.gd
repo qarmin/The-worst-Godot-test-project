@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpriteFrames.add_animation( "Gadajacy Pies" )
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_frame( "Gadajacy Pies", ImageTexture.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_SpriteFrames.add_frame( "Gadajacy Pies", ImageTexture.new(), Autoload.get_randi() )
 			
 		if randi() % 2 == 1:
 			q_SpriteFrames.clear( "Stos" )
@@ -53,7 +53,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpriteFrames.set_animation_loop( "Stos", bool(randi()%2))
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_animation_speed( "Stos", randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_SpriteFrames.set_animation_speed( "Stos", Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_frame( "Stos", randi() % Autoload.RANGE - Autoload.RANGE / 2, Texture.new() )
+			q_SpriteFrames.set_frame( "Stos", Autoload.get_randi(), Texture.new() )
 			

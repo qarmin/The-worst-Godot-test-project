@@ -19,36 +19,36 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_editor_only(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			set_texture(Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			set_texture_offset(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_texture_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_texture_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_texture_scale(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_height(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_height(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_z_range_min(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_z_range_min(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_z_range_max(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_z_range_max(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_layer_range_min(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_layer_range_min(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_layer_range_max(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_layer_range_max(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_item_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_item_cull_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_shadow_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_shadow_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			set_shadow_buffer_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_shadow_buffer_size(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_shadow_smooth(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_shadow_smooth(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_item_shadow_cull_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_item_shadow_cull_mask(Autoload.get_randi())

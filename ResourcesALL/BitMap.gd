@@ -19,12 +19,12 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BitMap.create(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_BitMap.create(Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"),randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite.png"),Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			qq += str(q_BitMap.get_bit(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(q_BitMap.get_bit(Vector2(Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			qq += str(q_BitMap.get_size())
 		if randi() % 2 == 1:
@@ -33,9 +33,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_BitMap.grow_mask( randi() % 10 - 5, Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)))
 		if randi() % 2 == 1:
-			qq += str(q_BitMap.opaque_to_polygons(  Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_BitMap.opaque_to_polygons(  Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), Autoload.get_randf()))
 			
 		if randi() % 2 == 1:
-			q_BitMap.set_bit( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), bool(randi()%2))
+			q_BitMap.set_bit( Vector2(Autoload.get_randf(),Autoload.get_randf()), bool(randi()%2))
 		if randi() % 2 == 1:
-			q_BitMap.set_bit_rect( Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)), bool(randi()%2))
+			q_BitMap.set_bit_rect( Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), bool(randi()%2))

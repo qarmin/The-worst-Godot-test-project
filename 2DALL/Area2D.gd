@@ -16,40 +16,41 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_space_override_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_space_override_mode(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_gravity_is_point(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_gravity_distance_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_gravity_distance_scale(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_gravity_vector(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_gravity_vector(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_gravity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_gravity(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_linear_damp(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_linear_damp(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_angular_damp(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_angular_damp(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_priority(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_priority(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_monitoring(bool(randi()%2))
 		if randi() % 2 == 1:
 			set_monitorable(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_collision_layer(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_layer(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_collision_mask(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_mask(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_audio_bus_override(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_audio_bus_name("snocŒanosl")
+			set_audio_bus_name(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_collision_layer_bit(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2))
-		if randi() % 2 == 1:
-			if monitoring:
+			qq += str(get_collision_mask_bit(Autoload.get_randi()))
+		if monitoring:
+			if randi() % 2 == 1:
 				qq += str(get_overlapping_areas())
+			if randi() % 2 == 1:
 				qq += str(get_overlapping_bodies())
 		if randi() % 2 == 1:
 			qq += str(overlaps_area(self))
@@ -57,6 +58,6 @@ func _process(delta) -> void:
 			qq += str(overlaps_body(self))
 			
 		if randi() % 2 == 1:
-			set_collision_layer_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_layer_bit(Autoload.get_randi(),Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_collision_mask_bit(Autoload.get_randi(),Autoload.get_randi())

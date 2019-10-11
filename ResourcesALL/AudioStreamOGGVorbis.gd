@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioStreamOGGVorbis.set_loop(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_AudioStreamOGGVorbis.set_loop_offset(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioStreamOGGVorbis.set_loop_offset(Autoload.get_randf())

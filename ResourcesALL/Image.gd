@@ -33,16 +33,16 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.compress( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * 10 - 5)) #compressMode, #CompressSource
+#			qq += str(q_Image.compress( Autoload.get_randi(), Autoload.get_randi(), randf() * 10 - 5)) #compressMode, #CompressSource
 #		if randi() % 2 == 1:
-#			q_Image.convert(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Format
+#			q_Image.convert(Autoload.get_randi()) #Format
 		if randi() % 2 == 1:
 			q_Image.copy_from( Image.new() )
 
 		if randi() % 2 == 1:
-			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2 ) #Format
+			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), Autoload.get_randi() ) #Format
 		if randi() % 2 == 1:
-			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2 , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
+			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), Autoload.get_randi() , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
 
 		if randi() % 2 == 1:
 			q_Image.crop( randi() % 10 - 5, randi() % 10 - 5 )
@@ -114,7 +114,7 @@ func _process(delta) -> void:
 			q_Image.premultiply_alpha()
 
 		if randi() % 2 == 1:
-			q_Image.resize( randi() % 10 - 5, randi() % 10 - 5, Autoload.RANGE - Autoload.RANGE / 2)  #Interpolation
+			q_Image.resize( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_randi())  #Interpolation
 		if randi() % 2 == 1:
 			q_Image.resize_to_po2( bool(randi()%2))
 

@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		var q_WebRTCPeerConnection : WebRTCPeerConnection = WebRTCPeerConnection.new()
 		
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCPeerConnection.add_ice_candidate( "Rozciągnięcie", randi() % Autoload.RANGE - Autoload.RANGE / 2, "Kropierz" ))
+			qq += str(q_WebRTCPeerConnection.add_ice_candidate( "Rozciągnięcie", Autoload.get_randi(), "Kropierz" ))
 		if randi() % 2 == 1:
 			q_WebRTCPeerConnection.close()
 	

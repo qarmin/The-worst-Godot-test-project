@@ -26,4 +26,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptConstructor.set_constructor( {"as":25} )
 		if randi() % 2 == 1:
-			q_VisualScriptConstructor.set_constructor_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_VisualScriptConstructor.set_constructor_type(Autoload.get_randi())

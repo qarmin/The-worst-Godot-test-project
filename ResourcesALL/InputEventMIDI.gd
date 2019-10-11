@@ -19,18 +19,18 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_channel(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_channel(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_message(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_message(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_pitch(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_pitch(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_velocity(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_velocity(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_instrument(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_instrument(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_pressure(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_pressure(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_controller_number(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_controller_number(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_controller_value(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventMIDI.set_controller_value(Autoload.get_randi())

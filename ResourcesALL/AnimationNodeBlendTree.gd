@@ -22,11 +22,11 @@ func _process(delta) -> void:
 			q_AnimationNodeBlendTree.set_graph_offset(Vector2(randf() * 50,randf() * 50))
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.add_node( "Wezel", AnimationNode.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_AnimationNodeBlendTree.add_node( "Wezel", AnimationNode.new(), Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.connect_node( "Ksztyna", randi() % Autoload.RANGE - Autoload.RANGE / 2, "Barok" )
+			q_AnimationNodeBlendTree.connect_node( "Ksztyna", Autoload.get_randi(), "Barok" )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.disconnect_node( "Na niby", randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_AnimationNodeBlendTree.disconnect_node( "Na niby", Autoload.get_randi() )
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeBlendTree.get_node( "Piatek" ))
 		if randi() % 2 == 1:
@@ -38,4 +38,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendTree.rename_node( "lekolody", "Petarda" )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.set_node_position( "Źdźblo", Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_AnimationNodeBlendTree.set_node_position( "Źdźblo", Vector2(Autoload.get_randf(),Autoload.get_randf()))

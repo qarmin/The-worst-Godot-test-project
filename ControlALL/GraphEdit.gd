@@ -18,41 +18,41 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_right_disconnects(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_scroll_ofs(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_scroll_ofs(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_snap(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			set_snap(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_use_snap(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_zoom(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_zoom(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			add_valid_connection_type(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			add_valid_connection_type(Autoload.get_randi(),Autoload.get_randi())
 		if randi() % 2 == 1:
-			add_valid_left_disconnect_type(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2)
+			add_valid_left_disconnect_type(Autoload.get_randi())
 		if randi() % 2 == 1:
-			qq += str(add_valid_right_disconnect_type(randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(add_valid_right_disconnect_type(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			clear_connections()
 		if randi() % 2 == 1:
-			qq += str(connect_node("qwfqafvasfqw",randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2,"qwgfewgregser",randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(connect_node("qwfqafvasfqw",Autoload.get_randi(),"qwgfewgregser",Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(disconnect_node("qwtqwagae",randi() % Autoload.RANGE - Autoload.RANGE / 2,"fqasfqwgfqw",randi() % Autoload.RANGE - Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(disconnect_node("qwtqwagae",Autoload.get_randi(),"fqasfqwgfqw",Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_connection_list())
 		if randi() % 2 == 1:
 			qq += str(get_zoom_hbox())
 		if randi() % 2 == 1:
-			qq += str(is_node_connected("qqwtqwdaff",randi() % Autoload.RANGE - Autoload.RANGE / 2,"fqqwqwrqwt",randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_node_connected("qqwtqwdaff",Autoload.get_randi(),"fqqwqwrqwt",Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(is_valid_connection_type(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_valid_connection_type(Autoload.get_randi(),Autoload.get_randi()))
 		if randi() % 2 == 1:
-			remove_valid_connection_type(randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			remove_valid_connection_type(Autoload.get_randi(),Autoload.get_randi())
 		if randi() % 2 == 1:
-			remove_valid_left_disconnect_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			remove_valid_left_disconnect_type(Autoload.get_randi())
 		if randi() % 2 == 1:
-			remove_valid_right_disconnect_type(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			remove_valid_right_disconnect_type(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_connection_activity("qwtqwa",randi() % Autoload.RANGE - Autoload.RANGE / 2,"qwfqwfa",randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_connection_activity("qwtqwa",Autoload.get_randi(),"qwfqwfa",Autoload.get_randi(),Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_selected(get_parent().get_child(randi() % get_parent().get_child_count()))

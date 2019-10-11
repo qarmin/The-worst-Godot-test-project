@@ -19,16 +19,16 @@ func _process(delta) -> void:
 			clear()
 		if randi() % 2 == 1:
 			set_use_bbcode(bool(randi()%2))
+#	LEAK	if randi() % 2 == 1:
+#			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
-			set_bbcode(str("\n\n\nafafas") + str(randi()%50))
+			set_visible_characters(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_visible_characters(randi() % Autoload.RANGE - Autoload.RANGE / 2)
-		if randi() % 2 == 1:
-			set_percent_visible(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_percent_visible(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_meta_underline(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_tab_size(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_tab_size(Autoload.get_randi())
 		if randi() % 2 == 1:
 			set_text(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
@@ -40,7 +40,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_override_selected_font_color(bool(randi()%2))
 		if randi() % 2 == 1:
-			add_image(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			add_image(Autoload.loadA("res://RES/Sprite.png"))
 #	BUG	if randi() % 2 == 1:
 #			add_text(str("\n\n\nafafas") + str(randi()%50))
 		if randi() % 2 == 1:
@@ -62,7 +62,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			pop()
 		if randi() % 2 == 1:
-			push_align(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			push_align(Autoload.get_randi())
 		if randi() % 2 == 1:
 			push_cell()
 		if randi() % 2 == 1:
@@ -70,20 +70,20 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			push_font(Autoload.loadA("res://RES/DynamicFont.tres"))
 		if randi() % 2 == 1:
-			push_indent(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			push_indent(Autoload.get_randi())
 		if randi() % 2 == 1:
-			push_list(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			push_list(Autoload.get_randi())
 		if randi() % 2 == 1:
 			push_meta(get_parent())
 		if randi() % 2 == 1:
 			push_strikethrough()
 		if randi() % 2 == 1:
-			push_table(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			push_table(Autoload.get_randi())
 		if randi() % 2 == 1:
 			push_underline()
 		if randi() % 2 == 1:
-			scroll_to_line(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			scroll_to_line(Autoload.get_randi())
 		if randi() % 2 == 1:
-			qq += str(remove_line(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(remove_line(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			set_table_column_expand(randi() % Autoload.RANGE - Autoload.RANGE / 2, bool(randi()%2), randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_table_column_expand(Autoload.get_randi(), bool(randi()%2), Autoload.get_randi())

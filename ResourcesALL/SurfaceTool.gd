@@ -23,40 +23,40 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_color( Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_index( randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_SurfaceTool.add_index( Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_normal( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SurfaceTool.add_normal( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_smooth_group( bool(randi()%2))
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_tangent( Plane(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_SurfaceTool.add_tangent( Plane(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_triangle_fan( PoolVector3Array([Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]), PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), PoolVector3Array([Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]), [124,214,214,124,214,214,2] )
+			q_SurfaceTool.add_triangle_fan( PoolVector3Array([Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())]), PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]), PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]), PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]), PoolVector3Array([Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())]), [124,214,214,124,214,214,2] )
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_uv( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SurfaceTool.add_uv( Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_uv2( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SurfaceTool.add_uv2( Vector2(Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_vertex( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_SurfaceTool.add_vertex( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_weights( PoolRealArray([125125.125,12512.1251,122.124]))
 			
 		if randi() % 2 == 1:
-			q_SurfaceTool.append_from( Mesh.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_SurfaceTool.append_from( Mesh.new(), Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_SurfaceTool.begin( randi() % Autoload.RANGE - Autoload.RANGE / 2 )#PrimitiveType
+			q_SurfaceTool.begin( Autoload.get_randi() )#PrimitiveType
 		if randi() % 2 == 1:
 			q_SurfaceTool.clear()
 			
 		if randi() % 2 == 1:
-			qq += str(q_SurfaceTool.commit( ArrayMesh.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_SurfaceTool.commit( ArrayMesh.new(), Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_SurfaceTool.commit_to_arrays())
 			
 		if randi() % 2 == 1:
-			q_SurfaceTool.create_from( Mesh.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_SurfaceTool.create_from( Mesh.new(), Autoload.get_randi() )
 		if randi() % 2 == 1:
-			q_SurfaceTool.create_from_blend_shape( Mesh.new(), randi() % Autoload.RANGE - Autoload.RANGE / 2, "Mapa" )
+			q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_randi(), "Mapa" )
 			
 		if randi() % 2 == 1:
 			q_SurfaceTool.deindex()

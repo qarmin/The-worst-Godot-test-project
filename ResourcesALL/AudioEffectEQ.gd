@@ -21,6 +21,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_AudioEffectEQ.get_band_count())
 		if randi() % 2 == 1:
-			qq += str(q_AudioEffectEQ.get_band_gain_db( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_AudioEffectEQ.get_band_gain_db( Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			q_AudioEffectEQ.set_band_gain_db( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectEQ.set_band_gain_db( Autoload.get_randi(), Autoload.get_randi())

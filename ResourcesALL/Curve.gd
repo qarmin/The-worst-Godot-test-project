@@ -19,14 +19,14 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Curve.set_min_value(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Curve.set_min_value(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Curve.set_max_value(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Curve.set_max_value(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Curve.set_bake_resolution(randi() % 10 - 500)
 		if randi() % 2 == 1:
 			for _i in range(3):
-				qq += str(q_Curve.add_point( Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )) #TangentMode
+				qq += str(q_Curve.add_point( Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf(),Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi() )) #TangentMode
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
 				q_Curve.bake()
@@ -39,33 +39,33 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Curve.get_point_count())
 		if randi() % 2 == 1:
-			qq += str(q_Curve.get_point_left_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.get_point_left_mode(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve.get_point_left_tangent(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.get_point_left_tangent(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve.get_point_position(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.get_point_position(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve.get_point_right_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.get_point_right_mode(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve.get_point_right_tangent(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.get_point_right_tangent(Autoload.get_randi() ))
 
 		if randi() % 2 == 1:
-			qq += str(q_Curve.interpolate( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.interpolate( Autoload.get_randf() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve.interpolate_baked( randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.interpolate_baked( Autoload.get_randf() ))
 
 		if randi() % 2 == 1:
-			q_Curve.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Curve.remove_point(Autoload.get_randi())
 
 		if randi() % 2 == 1:
-			q_Curve.set_point_left_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )#TangentMode
+			q_Curve.set_point_left_mode(Autoload.get_randi(), Autoload.get_randi() )#TangentMode
 		if randi() % 2 == 1:
-			q_Curve.set_point_left_tangent(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Curve.set_point_left_tangent(Autoload.get_randi(), Autoload.get_randf())
 		if randi() % 2 == 1:
-			qq += str(q_Curve.set_point_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Curve.set_point_offset(Autoload.get_randi(), Autoload.get_randf() ))
 		if randi() % 2 == 1:
-			q_Curve.set_point_right_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )#TangentMode
+			q_Curve.set_point_right_mode(Autoload.get_randi(), Autoload.get_randi() )#TangentMode
 		if randi() % 2 == 1:
-			q_Curve.set_point_right_tangent(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+			q_Curve.set_point_right_tangent(Autoload.get_randi(), Autoload.get_randf() )
 		if randi() % 2 == 1:
-			q_Curve.set_point_value(randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2 )
+			q_Curve.set_point_value(Autoload.get_randi(), Autoload.get_randf() )

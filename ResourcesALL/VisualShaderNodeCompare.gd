@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeCompare.set_comparsion_type(randi()%Autoload.RANGE - Autoload.RANGE / 2) # ComparsionType
+			q_VisualShaderNodeCompare.set_comparsion_type(Autoload.get_randi()) # ComparsionType
 		if randi() % 2 == 1:
-			q_VisualShaderNodeCompare.set_function(randi()%Autoload.RANGE - Autoload.RANGE / 2) # Function
+			q_VisualShaderNodeCompare.set_function(Autoload.get_randi()) # Function
 		if randi() % 2 == 1:
-			q_VisualShaderNodeCompare.set_condition(randi()%Autoload.RANGE - Autoload.RANGE / 2) # Condition
+			q_VisualShaderNodeCompare.set_condition(Autoload.get_randi()) # Condition

@@ -18,26 +18,26 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_repeat(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_tween_process_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # TweenProcessMode
+			set_tween_process_mode(Autoload.get_randi()) # TweenProcessMode
 		if randi() % 2 == 1:
-			set_speed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_speed_scale(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
-			qq += str(follow_method(self,str(randf()),randf() * Autoload.RANGE - Autoload.RANGE / 2,self,str(randf()),randf() * Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)) # TransitionType, EaseType
+			qq += str(follow_method(self,Autoload.get_string(),Autoload.get_randf(),self,Autoload.get_string(),Autoload.get_randf(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randf())) # TransitionType, EaseType
 		if randi() % 2 == 1:
-			qq += str(follow_property(self,str(randf()),randf() * Autoload.RANGE - Autoload.RANGE / 2,self, str(randf()),randf() * Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))# TransitionType, EaseType
+			qq += str(follow_property(self,Autoload.get_string(),Autoload.get_randf(),self, Autoload.get_string(),Autoload.get_randf(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randf()))# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(get_runtime())
 			
 		if randi() % 2 == 1:
-			interpolate_callback(self, randf() * Autoload.RANGE - Autoload.RANGE / 2, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			interpolate_callback(self, Autoload.get_randf(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf())
 		if randi() % 2 == 1:
-			interpolate_deferred_callback(self, randf() * Autoload.RANGE - Autoload.RANGE / 2, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			interpolate_deferred_callback(self, Autoload.get_randf(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf())
 		if randi() % 2 == 1:
-			interpolate_method(self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)# TransitionType, EaseType
+			interpolate_method(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(),Autoload.get_randf())# TransitionType, EaseType
 		if randi() % 2 == 1:
-			interpolate_property(self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)# TransitionType, EaseType
+			interpolate_property(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(is_active())
@@ -65,9 +65,9 @@ func _process(delta) -> void:
 			qq += str(stop_all())
 
 		if randi() % 2 == 1:
-			targeting_method(self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)# TransitionType, EaseType
+			targeting_method(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
 		if randi() % 2 == 1:
-			targeting_property(self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), self, str(randf() * Autoload.RANGE - Autoload.RANGE / 2), str(randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)# TransitionType, EaseType
+			targeting_property(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(tell())

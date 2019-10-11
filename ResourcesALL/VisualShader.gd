@@ -19,37 +19,37 @@ func _process(delta) -> void:
 #
 # BUG
 #		if randi() % 2 == 1:
-#			q_VisualShader.add_node( randi() % Autoload.RANGE - Autoload.RANGE / 2, VisualShaderNode.new(), Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_VisualShader.add_node( Autoload.get_randi(), VisualShaderNode.new(), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randi() )
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.can_connect_nodes( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.can_connect_nodes( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.connect_nodes( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.connect_nodes( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
 #		if randi() % 2 == 1:
-#			q_VisualShader.connect_nodes_forced( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_VisualShader.connect_nodes_forced( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() )
 #
 #		if randi() % 2 == 1:
-#			q_VisualShader.disconnect_nodes( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_VisualShader.disconnect_nodes( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() )
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.get_node( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.get_node( Autoload.get_randi(), Autoload.get_randi() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.get_node_connections( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.get_node_connections( Autoload.get_randi() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.get_node_list( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.get_node_list( Autoload.get_randi() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.get_node_position( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.get_node_position( Autoload.get_randi(), Autoload.get_randi() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.get_valid_node_id( randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.get_valid_node_id( Autoload.get_randi() ))
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_VisualShader.is_node_connection( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+#			qq += str(q_VisualShader.is_node_connection( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randi() ))
 #		if randi() % 2 == 1:
 #			q_VisualShader.rebuild()
 #		if randi() % 2 == 1:
-#			q_VisualShader.remove_node( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+#			q_VisualShader.remove_node( Autoload.get_randi(), Autoload.get_randi() )
 #
 #		if randi() % 2 == 1:
-#			q_VisualShader.set_mode( randi() % Autoload.RANGE - Autoload.RANGE / 2 ) # Shader.Mode
+#			q_VisualShader.set_mode( Autoload.get_randi() ) # Shader.Mode
 #		if randi() % 2 == 1:
-#			q_VisualShader.set_node_position( randi() % Autoload.RANGE - Autoload.RANGE / 2, randi() % Autoload.RANGE - Autoload.RANGE / 2, Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+#			q_VisualShader.set_node_position( Autoload.get_randi(), Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )

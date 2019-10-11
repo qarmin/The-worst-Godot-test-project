@@ -15,8 +15,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_softness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_softness(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_exclude_nodes_from_collision(bool(randi()%2))

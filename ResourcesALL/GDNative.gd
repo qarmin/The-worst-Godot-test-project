@@ -22,7 +22,7 @@ func _process(delta) -> void:
 			q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",true))
 			
 		if randi() % 2 == 1:
-			q_GDNative.call_native( "Koncentracja", "Destylacja", ["Taka","Akcja"] )
+			q_GDNative.call_native( Autoload.get_string(), Autoload.get_string(), ["Taka","Akcja"] )
 		if randi() % 2 == 1:
 			qq += str(q_GDNative.initialize())
 		if randi() % 2 == 1:

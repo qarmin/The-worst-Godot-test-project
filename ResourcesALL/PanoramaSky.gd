@@ -15,5 +15,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_PanoramaSky : PanoramaSky = PanoramaSky.new()
 #
-#		q_PanoramaSky.set_panorama(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",false))
+#		q_PanoramaSky.set_panorama(Autoload.loadA("res://RES/Sprite.png",false))
 #

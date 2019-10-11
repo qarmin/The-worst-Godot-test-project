@@ -19,31 +19,31 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Environment.set_background(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_background(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_Environment.set_sky(Sky.new())
 		if randi() % 2 == 1:
-			q_Environment.set_sky_custom_fov(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_sky_custom_fov(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_sky_orientation(Basis(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_Environment.set_sky_orientation(Basis(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_Environment.set_sky_rotation(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_Environment.set_sky_rotation(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_Environment.set_sky_rotation_degrees(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			q_Environment.set_sky_rotation_degrees(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
 			q_Environment.set_bg_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_Environment.set_bg_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_bg_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_canvas_max_layer(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_canvas_max_layer(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_Environment.set_camera_feed_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_camera_feed_id(Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_Environment.set_ambient_light_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_Environment.set_ambient_light_energy(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ambient_light_energy(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ambient_light_sky_contribution(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ambient_light_sky_contribution(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_fog_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
@@ -51,126 +51,126 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Environment.set_fog_sun_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_Environment.set_fog_sun_amount(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_sun_amount(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_fog_depth_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_fog_depth_begin(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_depth_begin(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_fog_depth_end(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_depth_end(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_fog_depth_curve(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_depth_curve(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_fog_transmit_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_fog_transmit_curve(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_transmit_curve(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_fog_height_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_fog_height_min(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_height_min(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_fog_height_max(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_height_max(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_fog_height_curve(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_fog_height_curve(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_tonemapper( randi() % Autoload.RANGE - Autoload.RANGE / 2)#ToneMapper
+			q_Environment.set_tonemapper( Autoload.get_randi())#ToneMapper
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_exposure(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_exposure(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_white(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_white(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_tonemap_auto_exposure(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_auto_exposure_grey(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_auto_exposure_grey(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_auto_exposure_min(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_auto_exposure_min(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_auto_exposure_max(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_auto_exposure_max(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_tonemap_auto_exposure_speed(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_tonemap_auto_exposure_speed(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_ssr_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_ssr_max_steps(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssr_max_steps(Autoload.get_randi())
 		if randi() % 2 == 1:
-			q_Environment.set_ssr_fade_in(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssr_fade_in(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssr_fade_out(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssr_fade_out(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssr_depth_tolerance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssr_depth_tolerance(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_ssr_rough(bool(randi()%2))
 		if randi() % 2 == 1:
 			q_Environment.set_ssao_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_radius(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_radius(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_intensity(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_radius2(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_radius2(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_intensity2(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_intensity2(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_bias(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_bias(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_direct_light_affect(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_direct_light_affect(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_ao_channel_affect(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_ao_channel_affect(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_ssao_color(Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_quality(randi() % Autoload.RANGE - Autoload.RANGE / 2) #SSAO Quality
+			q_Environment.set_ssao_quality(Autoload.get_randi()) #SSAO Quality
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_blur(randi() % Autoload.RANGE - Autoload.RANGE / 2) # SSAO Blur
+			q_Environment.set_ssao_blur(Autoload.get_randi()) # SSAO Blur
 		if randi() % 2 == 1:
-			q_Environment.set_ssao_edge_sharpness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_ssao_edge_sharpness(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_dof_blur_far_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_far_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_far_distance(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_far_transition(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_far_transition(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_far_amount(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_far_amount(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_far_quality(randi() % Autoload.RANGE - Autoload.RANGE / 2) #DOFBlurQuality
+			q_Environment.set_dof_blur_far_quality(Autoload.get_randi()) #DOFBlurQuality
 		if randi() % 2 == 1:
 			q_Environment.set_dof_blur_near_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_near_distance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_near_distance(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_near_transition(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_near_transition(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_near_amount(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_dof_blur_near_amount(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_dof_blur_near_quality(randi() % Autoload.RANGE - Autoload.RANGE / 2) #DOFBlurQuality
+			q_Environment.set_dof_blur_near_quality(Autoload.get_randi()) #DOFBlurQuality
 		if randi() % 2 == 1:
 			q_Environment.set_glow_enabled(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_glow_level(randi() % Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2)) #VisualServer::MAX_GLOW_LEVELS
+			q_Environment.set_glow_level(Autoload.get_randi(),bool(randi()%2)) #VisualServer::MAX_GLOW_LEVELS
 		if randi() % 2 == 1:
-			q_Environment.set_glow_intensity(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_intensity(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_glow_strength(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_strength(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_glow_bloom(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_bloom(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_glow_blend_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Blend Mode
+			q_Environment.set_glow_blend_mode(Autoload.get_randi()) #Blend Mode
 		if randi() % 2 == 1:
-			q_Environment.set_glow_hdr_bleed_threshold(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_hdr_bleed_threshold(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_glow_hdr_luminance_cap(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_hdr_luminance_cap(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_glow_hdr_bleed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_glow_hdr_bleed_scale(Autoload.get_randf())
 		if randi() % 2 == 1:
 			q_Environment.set_glow_bicubic_upscale(bool(randi()%2))
 		if randi() % 2 == 1:
 			q_Environment.set_adjustment_enable(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_Environment.set_adjustment_brightness(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_adjustment_brightness(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_adjustment_contrast(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_adjustment_contrast(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_adjustment_saturation(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Environment.set_adjustment_saturation(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Environment.set_adjustment_color_correction(Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_Environment.set_adjustment_color_correction(Autoload.loadA("res://RES/Sprite.png"))

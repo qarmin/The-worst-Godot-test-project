@@ -21,6 +21,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_OccluderPolygon2D.set_closed(bool(randi()%2))
 		if randi() % 2 == 1:
-			q_OccluderPolygon2D.set_cull_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # CullMode
+			q_OccluderPolygon2D.set_cull_mode(Autoload.get_randi()) # CullMode
 		if randi() % 2 == 1:
-			q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)]))
+			q_OccluderPolygon2D.set_polygon(PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]))

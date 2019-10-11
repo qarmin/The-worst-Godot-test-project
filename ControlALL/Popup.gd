@@ -17,13 +17,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_exclusive(bool(randi()%2))
 		if randi() % 2 == 1:
-			popup(Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			popup(Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
 		if randi() % 2 == 1:
-			popup_centered(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			popup_centered(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			popup_centered_clamped(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),randf())
+			popup_centered_clamped(Vector2(Autoload.get_randf(), Autoload.get_randf()),randf())
 		if randi() % 2 == 1:
-			popup_centered_minsize(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			popup_centered_minsize(Vector2(Autoload.get_randf(), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			popup_centered_ratio(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			popup_centered_ratio(Autoload.get_randf())
 			

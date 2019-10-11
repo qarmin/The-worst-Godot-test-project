@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if randi() % 2 == 1:
-			set_controller_id(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			set_controller_id(Autoload.get_randi())
 		if randi() % 2 == 1:
-			set_rumble(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_rumble(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(get_controller_name())
@@ -25,10 +25,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_is_active())
 		if randi() % 2 == 1:
-			qq += str(get_joystick_axis(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(get_joystick_axis(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(get_joystick_id())
 		if randi() % 2 == 1:
 			qq += str(get_mesh())
 		if randi() % 2 == 1:
-			qq += str(is_button_pressed(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(is_button_pressed(Autoload.get_randi()))

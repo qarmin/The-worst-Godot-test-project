@@ -20,41 +20,41 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.clear()
 		if randi() % 2 == 1:
-			q_MeshLibrary.create_item(randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_MeshLibrary.create_item(Autoload.get_randi())
 		if randi() % 2 == 1:
 			qq += str(q_MeshLibrary.find_item_by_name("Dokumenty"))
 			
 		if randi() % 2 == 1:
 			qq += str(q_MeshLibrary.get_item_list())
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_mesh(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_mesh(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_name(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_name(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_navmesh(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_navmesh(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_navmesh_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_navmesh_transform(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_preview(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_preview(Autoload.get_randi()))
 		if randi() % 2 == 1:
-			qq += str(q_MeshLibrary.get_item_shapes(randi() % Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_MeshLibrary.get_item_shapes(Autoload.get_randi()))
 		if randi() % 2 == 1:
 			qq += str(q_MeshLibrary.get_last_unused_item_id())
 			
 			###MOVEDq_MeshLibrary.remove_item(
 			
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_mesh(randi() % Autoload.RANGE - Autoload.RANGE / 2,CubeMesh.new())
+			q_MeshLibrary.set_item_mesh(Autoload.get_randi(),CubeMesh.new())
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_name(randi() % Autoload.RANGE - Autoload.RANGE / 2,"Kukurydza")
+			q_MeshLibrary.set_item_name(Autoload.get_randi(),"Kukurydza")
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_navmesh(randi() % Autoload.RANGE - Autoload.RANGE / 2,NavigationMesh.new())
+			q_MeshLibrary.set_item_navmesh(Autoload.get_randi(),NavigationMesh.new())
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_navmesh_transform(randi() % Autoload.RANGE - Autoload.RANGE / 2,Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			q_MeshLibrary.set_item_navmesh_transform(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_preview(randi() % Autoload.RANGE - Autoload.RANGE / 2,Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png"))
+			q_MeshLibrary.set_item_preview(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png"))
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_shapes(randi() % Autoload.RANGE - Autoload.RANGE / 2,[BoxShape.new(),BoxShape.new()])
+			q_MeshLibrary.set_item_shapes(Autoload.get_randi(),[BoxShape.new(),BoxShape.new()])
 			
 		if randi() % 2 == 1:
-			q_MeshLibrary.remove_item(randi() % Autoload.RANGE - Autoload.RANGE / 2) #MOVED
+			q_MeshLibrary.remove_item(Autoload.get_randi()) #MOVED

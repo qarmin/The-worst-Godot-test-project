@@ -27,18 +27,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_current_animation_position())
 		if randi() % 2 == 1:
-			set_animation_process_mode(randi() % Autoload.RANGE - Autoload.RANGE / 2) # AnimationProcessMode
+			set_animation_process_mode(Autoload.get_randi()) # AnimationProcessMode
 		if randi() % 2 == 1:
-			set_default_blend_time(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_default_blend_time(Autoload.get_randf())
 		if randi() % 2 == 1:
 			set_active(bool(randi()%2))
 		if randi() % 2 == 1:
-			set_speed_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_speed_scale(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(add_animation("asfqwgfafas", Animation.new()))
 		if randi() % 2 == 1:
-			advance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			advance(Autoload.get_randf())
 		if randi() % 2 == 1:
 			qq += str(animation_get_next("asdfqfawgaf"))
 		if randi() % 2 == 1:
@@ -64,9 +64,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_playing())
 		if randi() % 2 == 1:
-			play("afafaf",randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			play("afafaf",Autoload.get_randf(),Autoload.get_randf(),bool(randi()%2))
 		if randi() % 2 == 1:
-			play_backwards("asfqwfa",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			play_backwards("asfqwfa",Autoload.get_randf())
 		if randi() % 2 == 1:
 			queue("asfasfasfxz")
 		if randi() % 2 == 1:
@@ -74,8 +74,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			rename_animation("afafwfqawfadvfds","asfqawasfas")
 		if randi() % 2 == 1:
-			seek(randf() * Autoload.RANGE - Autoload.RANGE / 2,bool(randi()%2))
+			seek(Autoload.get_randf(),bool(randi()%2))
 		if randi() % 2 == 1:
-			set_blend_time("afafwfqawfadvfds","asfqawasfas",randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_blend_time("afafwfqawfadvfds","asfqawasfas",Autoload.get_randf())
 		if randi() % 2 == 1:
 			stop(bool(randi()%2))

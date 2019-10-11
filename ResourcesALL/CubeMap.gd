@@ -19,17 +19,17 @@ func _process(delta) -> void:
 
 		
 		if randi() % 2 == 1:
-			q_CubeMap.set_flags(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FLAGS 
+			q_CubeMap.set_flags(Autoload.get_randi()) #FLAGS 
 		if randi() % 2 == 1:
-			q_CubeMap.set_storage(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Storage
+			q_CubeMap.set_storage(Autoload.get_randi()) #Storage
 		if randi() % 2 == 1:
-			q_CubeMap.set_lossy_storage_quality(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_CubeMap.set_lossy_storage_quality(Autoload.get_randf())
 
 		if randi() % 2 == 1:
 			qq += str(q_CubeMap.get_height())
 		if randi() % 2 == 1:
-			qq += str(q_CubeMap.get_side(randi() % Autoload.RANGE - Autoload.RANGE / 2))# Side
+			qq += str(q_CubeMap.get_side(Autoload.get_randi()))# Side
 		if randi() % 2 == 1:
 			qq += str(q_CubeMap.get_width())
 		if randi() % 2 == 1:
-			q_CubeMap.set_side( randi() % Autoload.RANGE - Autoload.RANGE / 2, Autoload.loadA("res://RES/Sprite" + str(randi()%4 + 1) + ".png",true))# Side
+			q_CubeMap.set_side( Autoload.get_randi(), Autoload.loadA("res://RES/Sprite.png",true))# Side

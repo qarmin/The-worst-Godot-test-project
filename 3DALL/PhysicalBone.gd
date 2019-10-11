@@ -15,21 +15,21 @@ func _physics_process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_joint_type(randi() % Autoload.RANGE - Autoload.RANGE / 2) #JOINT_TYPE
+			set_joint_type(Autoload.get_randi()) #JOINT_TYPE
 		if randi() % 2 == 1:
-			set_joint_offset(Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_joint_offset(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			set_body_offset(Transform(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			set_body_offset(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
-			set_mass(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_mass(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_weight(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_weight(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_friction(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_friction(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_bounce(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_bounce(Autoload.get_randf())
 		if randi() % 2 == 1:
-			set_gravity_scale(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			set_gravity_scale(Autoload.get_randf())
 			
 		if randi() % 2 == 1:
 			qq += str(get_bone_id())

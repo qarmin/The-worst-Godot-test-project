@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_PCKPacker.flush( bool(randi()%2)))
 #	LEAK	if randi() % 2 == 1:
-#			qq += str(q_PCKPacker.pck_start( "Krzywy",  randi() % Autoload.RANGE - Autoload.RANGE / 2))
+#			qq += str(q_PCKPacker.pck_start( "Krzywy",  Autoload.get_randi()))

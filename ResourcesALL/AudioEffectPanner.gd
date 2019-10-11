@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectPanner.set_pan(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectPanner.set_pan(Autoload.get_randf())

@@ -19,6 +19,6 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_physics_material_override(PhysicsMaterial.new())
 		if randi() % 2 == 1:
-			set_constant_linear_velocity(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_constant_linear_velocity(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 		if randi() % 2 == 1:
-			set_constant_angular_velocity(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			set_constant_angular_velocity(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))

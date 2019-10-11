@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventJoypadMotion.set_axis(randi() % Autoload.RANGE - Autoload.RANGE / 2) #JoystickList
+			q_InputEventJoypadMotion.set_axis(Autoload.get_randi()) #JoystickList
 		if randi() % 2 == 1:
-			q_InputEventJoypadMotion.set_axis_value(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_InputEventJoypadMotion.set_axis_value(Autoload.get_randf())

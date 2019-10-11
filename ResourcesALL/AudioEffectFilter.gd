@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectFilter.set_cutoff(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectFilter.set_cutoff(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectFilter.set_resonance(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectFilter.set_resonance(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectFilter.set_gain(randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_AudioEffectFilter.set_gain(Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_AudioEffectFilter.set_db(randi() % Autoload.RANGE - Autoload.RANGE / 2) #FilterDB
+			q_AudioEffectFilter.set_db(Autoload.get_randi()) #FilterDB

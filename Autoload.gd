@@ -5,7 +5,7 @@ const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance re
 const USE_ONLY_ONE_NODE : bool = false#true
 const RANDI : bool = true# random functions execution
 
-const RANGE : int = 10
+const RANGE : int = 2
 
 var file : File = File.new()
 
@@ -22,6 +22,28 @@ func save_to_file(message : String) -> void:
 	file.store_line(" ||| " + str(OS.get_time()["minute"]) + ":" + str(OS.get_time()["second"]) + " ||| " +message)
 	### TOO BIG SPAM file.store_string(message)
 	
+
+func get_randi() -> int:
+	return randi() % Autoload.RANGE - Autoload.RANGE / 2
+	
+func get_randf() -> float:
+	return randf() * Autoload.RANGE - Autoload.RANGE / 2
+
+const MAX_NUMBER : int = 10
+const NEWLINE : int = 3
+
+var temp_string : String
+
+func get_string() -> String:
+	temp_string = ""
+#	if randi() % 2 == 1:
+#		temp_string += str(randi() % MAX_NUMBER)
+#		for i in range(NEWLINE):
+#			temp_string += "\n"
+#	else: 
+	temp_string += str(randi() % MAX_NUMBER)
+		
+	return temp_string
 
 func loadA(var name : String, var random : bool = true):
 	if random == true && randi() % 2 == 1: # 50% szans
@@ -49,10 +71,7 @@ var names : Array = ["ArrayMesh.tres",
 "Node.tscn",
 "PhysicsMaterial.tres",
 "SpatialMaterial.tres",
-"Sprite1.png",
-"Sprite2.png",
-"Sprite3.png",
-"Sprite4.png",
+"Sprite.png",
 "SpriteFrames.tres",
 "StyleBoxTexture.tres",
 "Theme.tres",

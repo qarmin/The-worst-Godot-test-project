@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Quat : Quat = Quat(Basis( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+var q_Quat : Quat = Quat(Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -18,18 +18,18 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Quat = Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_Quat = Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())
 #			if randi() % 2 == 1:
-#				q_Quat = Quat(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2))
+#				q_Quat = Quat(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
 			if randi() % 2 == 1:
-				q_Quat = Quat(Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2),randf() * Autoload.RANGE - Autoload.RANGE / 2)
+				q_Quat = Quat(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randf())
 			if randi() % 2 == 1:
-				q_Quat = Quat(Basis( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+				q_Quat = Quat(Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.cubic_slerp( Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Quat.cubic_slerp( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			qq += str(q_Quat.dot( Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(q_Quat.dot( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
 		if randi() % 2 == 1:
 			qq += str(q_Quat.get_euler())
 		if randi() % 2 == 1:
@@ -46,14 +46,14 @@ func _process(delta) -> void:
 			qq += str(q_Quat.normalized())
 	
 		if randi() % 2 == 1:
-			q_Quat.set_axis_angle( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Quat.set_axis_angle( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
 		if randi() % 2 == 1:
-			q_Quat.set_euler( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2) )
+			q_Quat.set_euler( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.slerp( Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Quat.slerp( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
 		if randi() % 2 == 1:
-			qq += str(q_Quat.slerpni(Quat(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2), randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Quat.slerpni(Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.xform( Vector3(randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			qq += str(q_Quat.xform( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))

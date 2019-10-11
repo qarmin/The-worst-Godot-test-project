@@ -78,7 +78,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Theme.set_color( "Ballada", "Wyniki", Color(randf(),randf(),randf(),randf()))
 		if randi() % 2 == 1:
-			q_Theme.set_constant( "Ballada", "Wyniki", randi() % Autoload.RANGE - Autoload.RANGE / 2)
+			q_Theme.set_constant( "Ballada", "Wyniki", Autoload.get_randi())
 		if randi() % 2 == 1:
 			q_Theme.set_font( "Ballada", "Wyniki", Font.new() )
 		if randi() % 2 == 1:

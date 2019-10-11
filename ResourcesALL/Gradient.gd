@@ -25,21 +25,21 @@ func _process(delta) -> void:
 			
 			for _i in range(4):
 				if randi() % 2 == 1:
-					q_Gradient.add_point( randf() * Autoload.RANGE - Autoload.RANGE / 2,Color(randf(),randf(),randf(),randf()) )
+					q_Gradient.add_point( Autoload.get_randf(),Color(randf(),randf(),randf(),randf()) )
 				
 		if randi() % 2 == 1:
-			qq += str(q_Gradient.get_color(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Gradient.get_color(Autoload.get_randi() ))
 		if randi() % 2 == 1:
-			qq += str(q_Gradient.get_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2 ))
+			qq += str(q_Gradient.get_offset(Autoload.get_randi() ))
 		if randi() % 2 == 1:
 			qq += str(q_Gradient.get_point_count())
 			
 		if randi() % 2 == 1:
-			qq += str(q_Gradient.interpolate(randf() * Autoload.RANGE - Autoload.RANGE / 2))
+			qq += str(q_Gradient.interpolate(Autoload.get_randf()))
 		if randi() % 2 == 1:
-			q_Gradient.remove_point(randi() % Autoload.RANGE - Autoload.RANGE / 2 )
+			q_Gradient.remove_point(Autoload.get_randi() )
 			
 		if randi() % 2 == 1:
-			q_Gradient.set_color(randi() % Autoload.RANGE - Autoload.RANGE / 2, Color(randf(),randf(),randf(),randf()) )
+			q_Gradient.set_color(Autoload.get_randi(), Color(randf(),randf(),randf(),randf()) )
 		if randi() % 2 == 1:
-			q_Gradient.set_offset(randi() % Autoload.RANGE - Autoload.RANGE / 2,randf() * Autoload.RANGE - Autoload.RANGE / 2)
+			q_Gradient.set_offset(Autoload.get_randi(),Autoload.get_randf())

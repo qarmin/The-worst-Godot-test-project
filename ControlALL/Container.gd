@@ -18,4 +18,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			queue_sort()
 		if randi() % 2 == 1:
-			fit_child_in_rect(self, Rect2(Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2),Vector2(randf() * Autoload.RANGE - Autoload.RANGE / 2, randf() * Autoload.RANGE - Autoload.RANGE / 2)))
+			fit_child_in_rect(self, Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))

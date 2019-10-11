@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectRecord.set_format(randi() % Autoload.RANGE - Autoload.RANGE / 2) #Format
+			q_AudioEffectRecord.set_format(Autoload.get_randi()) #Format
 			
 		if randi() % 2 == 1:
 			qq += str(q_AudioEffectRecord.get_recording())
