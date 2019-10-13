@@ -19,12 +19,12 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectPhaser.set_range_min_hz(Autoload.get_randf())
+			q_AudioEffectPhaser.set_range_min_hz(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectPhaser.set_range_max_hz(Autoload.get_randf())
+			q_AudioEffectPhaser.set_range_max_hz(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectPhaser.set_rate_hz(Autoload.get_randf())
+			q_AudioEffectPhaser.set_rate_hz(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectPhaser.set_feedback(Autoload.get_randf())
+			q_AudioEffectPhaser.set_feedback(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectPhaser.set_depth(Autoload.get_randf())
+			q_AudioEffectPhaser.set_depth(Autoload.get_float())

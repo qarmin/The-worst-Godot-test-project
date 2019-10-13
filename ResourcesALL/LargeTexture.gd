@@ -18,22 +18,22 @@ func _process(delta) -> void:
 			q_LargeTexture = LargeTexture.new()
 		
 		if randi() % 2 == 1:
-			qq += str(q_LargeTexture.add_piece(Vector2(Autoload.get_randf(), Autoload.get_randf()),Autoload.loadA("res://RES/Sprite.png")))
+			qq += str(q_LargeTexture.add_piece(Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.loadA("Sprite.png")))
 			###MOVED q_LargeTexture.clear()
 			
 		if randi() % 2 == 1:
 			qq += str(q_LargeTexture.get_piece_count())
 		if randi() % 2 == 1:
-			qq += str(q_LargeTexture.get_piece_offset(Autoload.get_randi()))
+			qq += str(q_LargeTexture.get_piece_offset(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_LargeTexture.get_piece_texture(Autoload.get_randi()))
+			qq += str(q_LargeTexture.get_piece_texture(Autoload.get_int()))
 			
 		if randi() % 2 == 1:
-			q_LargeTexture.set_piece_offset(Autoload.get_randi(),Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			q_LargeTexture.set_piece_offset(Autoload.get_int(),Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			q_LargeTexture.set_piece_texture(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png"))
+			q_LargeTexture.set_piece_texture(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			q_LargeTexture.set_size(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			q_LargeTexture.set_size(Vector2(Autoload.get_float(), Autoload.get_float()))
 			
 		if randi() % 2 == 1:
 			q_LargeTexture.clear() ## At the end

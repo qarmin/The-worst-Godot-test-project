@@ -19,14 +19,14 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_File.set_endian_swap(bool(randi()%2))
+			q_File.set_endian_swap(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			q_File.close()
 		if randi() % 2 == 1:
 			qq += str(q_File.eof_reached())
 		if randi() % 2 == 1:
-			qq += str(q_File.file_exists( "res://RES/Sprite1.png" ))
+			qq += str(q_File.file_exists( "Sprite.png" ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_File.get_16())
@@ -39,7 +39,7 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			qq += str(q_File.get_as_text())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_buffer( Autoload.get_randi()))
+			qq += str(q_File.get_buffer( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_File.get_csv_line( "K" ))
 		if randi() % 2 == 1:
@@ -53,9 +53,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_File.get_line())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_md5( "res://RES/Sprite1.png"))
+			qq += str(q_File.get_md5( "Sprite.png"))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_modified_time( "res://RES/Sprite1.png" ))
+			qq += str(q_File.get_modified_time( "Sprite.png" ))
 #	BUG	if randi() % 2 == 1:
 #			qq += str(q_File.get_pascal_string())
 		if randi() % 2 == 1:
@@ -67,18 +67,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_File.get_real())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_sha256( "res://RES/Sprite1.png" ))
+			qq += str(q_File.get_sha256( "Sprite.png" ))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_var( bool(randi()%2)))
+			qq += str(q_File.get_var( Autoload.get_bool()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_File.is_open())
 			
 		if randi() % 2 == 1:
 			qq += str(q_File.open( "res://TEMP/" + Autoload.get_string(), randi() % 30 - 10))#randi() % 7 + 1))
-		###q_File.open_compressed( "res://RES/Sprite1.png", randi() % 7 + 1, randi() % 4 )#ModeFlags, CompressionMode
-		###q_File.open_encrypted( "res://RES/Sprite1.png", randi() % 7 + 1, PoolByteArray([11,124,1241,24,21,214,12,11]))#ModeFlags
-		###q_File.open_encrypted_with_pass( "res://RES/Sprite1.png", randi() % 7 + 1, "res://RES/Sprite1.png" )#ModeFlags
+		###q_File.open_compressed( "Sprite.png", randi() % 7 + 1, randi() % 4 )#ModeFlags, CompressionMode
+		###q_File.open_encrypted( "Sprite.png", randi() % 7 + 1, PoolByteArray([11,124,1241,24,21,214,12,11]))#ModeFlags
+		###q_File.open_encrypted_with_pass( "Sprite.png", randi() % 7 + 1, "Sprite.png" )#ModeFlags
 			
 		if randi() % 2 == 1:
 			q_File.seek( randi()%50 )
@@ -110,4 +110,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_File.store_string( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_File.store_var( Autoload.get_string(), bool(randi()%2))
+			q_File.store_var( Autoload.get_string(), Autoload.get_bool())

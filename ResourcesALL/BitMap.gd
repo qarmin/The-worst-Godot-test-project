@@ -19,12 +19,12 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BitMap.create(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_BitMap.create(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_BitMap.create_from_image_alpha( Autoload.loadA("res://RES/Sprite.png"),Autoload.get_randf())
+			q_BitMap.create_from_image_alpha( Autoload.loadA("Sprite.png"),Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			qq += str(q_BitMap.get_bit(Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(q_BitMap.get_bit(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			qq += str(q_BitMap.get_size())
 		if randi() % 2 == 1:
@@ -33,9 +33,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_BitMap.grow_mask( randi() % 10 - 5, Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)))
 		if randi() % 2 == 1:
-			qq += str(q_BitMap.opaque_to_polygons(  Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), Autoload.get_randf()))
+			qq += str(q_BitMap.opaque_to_polygons(  Autoload.get_rect2d(), Autoload.get_float()))
 			
 		if randi() % 2 == 1:
-			q_BitMap.set_bit( Vector2(Autoload.get_randf(),Autoload.get_randf()), bool(randi()%2))
+			q_BitMap.set_bit( Autoload.get_vector2(), Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_BitMap.set_bit_rect( Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), bool(randi()%2))
+			q_BitMap.set_bit_rect( Autoload.get_rect2d(), Autoload.get_bool())

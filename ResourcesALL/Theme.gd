@@ -76,9 +76,9 @@ func _process(delta) -> void:
 			qq += str(q_Theme.has_stylebox( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			q_Theme.set_color( Autoload.get_string(), Autoload.get_string(), Color(randf(),randf(),randf(),randf()))
+			q_Theme.set_color( Autoload.get_string(), Autoload.get_string(), Autoload.get_color())
 		if randi() % 2 == 1:
-			q_Theme.set_constant( Autoload.get_string(), Autoload.get_string(), Autoload.get_randi())
+			q_Theme.set_constant( Autoload.get_string(), Autoload.get_string(), Autoload.get_int())
 		if randi() % 2 == 1:
 			q_Theme.set_font( Autoload.get_string(), Autoload.get_string(), Font.new() )
 		if randi() % 2 == 1:

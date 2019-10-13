@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			q_PoolIntArray = PoolIntArray([124])
 		
 		if randi() % 2 == 1:
-			q_PoolIntArray.append(Autoload.get_randi())
+			q_PoolIntArray.append(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolIntArray.append_array(PoolIntArray([Autoload.get_randi()]))
+			q_PoolIntArray.append_array(PoolIntArray([Autoload.get_int()]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolIntArray.insert( Autoload.get_randi(), Autoload.get_randi()) )
+			qq += str(q_PoolIntArray.insert( Autoload.get_int(), Autoload.get_int()) )
 		if randi() % 2 == 1:
 			q_PoolIntArray.invert()
 		if randi() % 2 == 1:
-			q_PoolIntArray.push_back( Autoload.get_randi() )
+			q_PoolIntArray.push_back( Autoload.get_int() )
 		if randi() % 2 == 1:
-			q_PoolIntArray.remove( Autoload.get_randi())
+			q_PoolIntArray.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolIntArray.resize( Autoload.get_randi())
+			q_PoolIntArray.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolIntArray.set(Autoload.get_randi(), Autoload.get_randi())
+			q_PoolIntArray.set(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
 			qq += str(q_PoolIntArray.size())

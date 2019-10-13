@@ -15,15 +15,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_exclusive(bool(randi()%2))
+			set_exclusive(Autoload.get_bool())
 		if randi() % 2 == 1:
-			popup(Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			popup(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
-			popup_centered(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			popup_centered(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			popup_centered_clamped(Vector2(Autoload.get_randf(), Autoload.get_randf()),randf())
+			popup_centered_clamped(Vector2(Autoload.get_float(), Autoload.get_float()),randf())
 		if randi() % 2 == 1:
-			popup_centered_minsize(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			popup_centered_minsize(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			popup_centered_ratio(Autoload.get_randf())
+			popup_centered_ratio(Autoload.get_float())
 			

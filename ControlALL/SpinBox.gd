@@ -16,12 +16,12 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_align(Autoload.get_randi())
+			set_align(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_editable(bool(randi()%2))
+			set_editable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_prefix(str(Autoload.get_randi()))
+			set_prefix(str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_suffix(str(Autoload.get_randi()))
+			set_suffix(str(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_line_edit())

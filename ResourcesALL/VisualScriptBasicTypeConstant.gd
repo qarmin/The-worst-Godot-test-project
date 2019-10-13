@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptBasicTypeConstant.set_basic_type(Autoload.get_randi())
+			q_VisualScriptBasicTypeConstant.set_basic_type(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_VisualScriptBasicTypeConstant.set_basic_type_constant(Autoload.get_string())

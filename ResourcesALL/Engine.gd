@@ -16,7 +16,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Engine : Engine = Engine.new()
 #
-#		Engine.set_editor_hint(bool(randi()%2))
+#		Engine.set_editor_hint(Autoload.get_bool())
 #		#Engine.set_iterations_per_second(randi()%50)
 #		Engine.set_target_fps(randi()%50 + 40)
 #		Engine.set_time_scale(randf() + 1)

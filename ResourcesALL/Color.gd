@@ -20,26 +20,26 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_Color = Color( Color.cyan)
 			if randi() % 2 == 1:
-				q_Color = Color( Autoload.get_randi())
+				q_Color = Color( Autoload.get_int())
 			if randi() % 2 == 1:
-				q_Color = Color( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() )
+				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float() )
 			if randi() % 2 == 1:
-				q_Color = Color( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() )
+				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float() )
 			
 		if randi() % 2 == 1:
-			qq += str(q_Color.blend( Color(randf(),randf(),randf(),randf())))
+			qq += str(q_Color.blend( Autoload.get_color()))
 		if randi() % 2 == 1:
 			qq += str(q_Color.contrasted())
 		if randi() % 2 == 1:
-			qq += str(q_Color.darkened( Autoload.get_randf() ))
+			qq += str(q_Color.darkened( Autoload.get_float() ))
 		if randi() % 2 == 1:
-			qq += str(q_Color.from_hsv( Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf() ))
+			qq += str(q_Color.from_hsv( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float() ))
 		if randi() % 2 == 1:
 			qq += str(q_Color.gray())
 		if randi() % 2 == 1:
 			qq += str(q_Color.inverted())
 		if randi() % 2 == 1:
-			qq += str(q_Color.lightened( Autoload.get_randf() ))
+			qq += str(q_Color.lightened( Autoload.get_float() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Color.to_abgr32())
@@ -50,7 +50,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Color.to_argb64())
 		if randi() % 2 == 1:
-			qq += str(q_Color.to_html(bool(randi()%2)))
+			qq += str(q_Color.to_html(Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_Color.to_rgba32())
 		if randi() % 2 == 1:

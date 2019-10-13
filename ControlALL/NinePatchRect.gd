@@ -16,20 +16,20 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_draw_center(bool(randi()%2))
+			set_draw_center(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			set_region_rect(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
-			set("patch_margin_left", Autoload.get_randi())
+			set("patch_margin_left", Autoload.get_int())
 		if randi() % 2 == 1:
-			set("patch_margin_top", Autoload.get_randi())
+			set("patch_margin_top", Autoload.get_int())
 		if randi() % 2 == 1:
-			set("patch_margin_right", Autoload.get_randi())
+			set("patch_margin_right", Autoload.get_int())
 		if randi() % 2 == 1:
-			set("patch_margin_bottom", Autoload.get_randi())
+			set("patch_margin_bottom", Autoload.get_int())
 		if randi() % 2 == 1:
-			set_h_axis_stretch_mode(Autoload.get_randi())
+			set_h_axis_stretch_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_v_axis_stretch_mode(Autoload.get_randi())
+			set_v_axis_stretch_mode(Autoload.get_int())

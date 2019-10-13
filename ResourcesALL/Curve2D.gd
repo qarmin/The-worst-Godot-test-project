@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			for _i in range(5):
-				q_Curve2D.add_point( Vector2(Autoload.get_randf(),Autoload.get_randf()), Vector2(Autoload.get_randf(),Autoload.get_randf()), Vector2(Autoload.get_randf(),Autoload.get_randf()), -1 )
+				q_Curve2D.add_point( Autoload.get_vector2(), Autoload.get_vector2(), Autoload.get_vector2(), -1 )
 		if randi() % 2 == 1:
 			q_Curve2D.clear_points()
 
@@ -29,35 +29,35 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Curve2D.get_baked_points())
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.get_closest_offset( Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Curve2D.get_closest_offset( Autoload.get_vector2() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.get_closest_point( Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Curve2D.get_closest_point( Autoload.get_vector2() ))
 		if randi() % 2 == 1:
 			qq += str(q_Curve2D.get_point_count())
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.get_point_in(Autoload.get_randi() ))
+			qq += str(q_Curve2D.get_point_in(Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.get_point_out(Autoload.get_randi() ))
+			qq += str(q_Curve2D.get_point_out(Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.get_point_position(Autoload.get_randi() ))
+			qq += str(q_Curve2D.get_point_position(Autoload.get_int() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.interpolate(Autoload.get_randi(), Autoload.get_randf() ))
+			qq += str(q_Curve2D.interpolate(Autoload.get_int(), Autoload.get_float() ))
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.interpolate_baked( Autoload.get_randf(), bool(randi()%2)))
+			qq += str(q_Curve2D.interpolate_baked( Autoload.get_float(), Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(q_Curve2D.interpolatef( Autoload.get_randf() ))
+			qq += str(q_Curve2D.interpolatef( Autoload.get_float() ))
 			
 		if randi() % 2 == 1:
-			q_Curve2D.remove_point(Autoload.get_randi() )
+			q_Curve2D.remove_point(Autoload.get_int() )
 			
 		if randi() % 2 == 1:
-			q_Curve2D.set_point_in(Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
+			q_Curve2D.set_point_in(Autoload.get_int(), Autoload.get_vector2() )
 		if randi() % 2 == 1:
-			q_Curve2D.set_point_out(Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
+			q_Curve2D.set_point_out(Autoload.get_int(), Autoload.get_vector2() )
 		if randi() % 2 == 1:
-			q_Curve2D.set_point_position(Autoload.get_randi(), Vector2(Autoload.get_randf(),Autoload.get_randf()) )
+			q_Curve2D.set_point_position(Autoload.get_int(), Autoload.get_vector2() )
 			
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_Curve2D.tessellate( Autoload.get_randi(), Autoload.get_randf() ))
+				qq += str(q_Curve2D.tessellate( Autoload.get_int(), Autoload.get_float() ))

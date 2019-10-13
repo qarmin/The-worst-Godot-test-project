@@ -30,7 +30,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		qq += str(q_Script.instance_has( self ))
 #		qq += str(q_Script.is_tool())
-#		qq += str(q_Script.reload( bool(randi()%2) ))
+#		qq += str(q_Script.reload( Autoload.get_bool() ))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

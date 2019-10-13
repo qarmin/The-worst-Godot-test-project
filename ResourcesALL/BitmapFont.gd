@@ -19,32 +19,32 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BitmapFont.set_height(Autoload.get_randf())
+			q_BitmapFont.set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_BitmapFont.set_ascent(Autoload.get_randf())
+			q_BitmapFont.set_ascent(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_BitmapFont.set_distance_field_hint(bool(randi()%2))
+			q_BitmapFont.set_distance_field_hint(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_BitmapFont.set_fallback(q_BitmapFont)
 	
 		if randi() % 2 == 1:
-			q_BitmapFont.add_char( Autoload.get_randi(), Autoload.get_randi(), Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())), Vector2(Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
+			q_BitmapFont.add_char( Autoload.get_int(), Autoload.get_int(), Autoload.get_rect2d(), Autoload.get_vector2()
 		if randi() % 2 == 1:
-			q_BitmapFont.add_kerning_pair( Autoload.get_randi(), Autoload.get_randi(),Autoload.get_randi())
+			q_BitmapFont.add_kerning_pair( Autoload.get_int(), Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			q_BitmapFont.add_texture( Autoload.loadA("res://RES/Sprite.png"))
+			q_BitmapFont.add_texture( Autoload.loadA("Sprite.png"))
 			
 		if randi() % 2 == 1:
 			q_BitmapFont.clear()
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
+				qq += str(q_BitmapFont.create_from_fnt( "FreeMono.otf" ))
 	
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_char_size( Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_kerning_pair(Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_BitmapFont.get_texture( Autoload.get_randi() ))
+			qq += str(q_BitmapFont.get_texture( Autoload.get_int() ))
 		if randi() % 2 == 1:
 			qq += str(q_BitmapFont.get_texture_count())

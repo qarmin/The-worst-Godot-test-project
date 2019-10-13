@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AnimationNode.set_filter_enabled(bool(randi()%2))
+			q_AnimationNode.set_filter_enabled(Autoload.get_bool())
 			
 		### qq +=  str(q_AnimationNode.get_caption())
 		### qq +=  str(q_AnimationNode.get_child_by_name(Autoload.get_string()))
@@ -27,31 +27,31 @@ func _process(delta) -> void:
 		### qq +=  str(q_AnimationNode.get_parameter_default_value(Autoload.get_string()))
 		### qq +=  str(q_AnimationNode.get_parameter_list())
 		### qq +=  str(q_AnimationNode.has_filter())
-		### q_AnimationNode.process( randf() * 50, bool(randi()%2) )
+		### q_AnimationNode.process( randf() * 50, Autoload.get_bool() )
 			
 		if randi() % 2 == 1:
 			q_AnimationNode.add_input(Autoload.get_string())
 			
 		if randi() % 2 == 1:
-			q_AnimationNode.blend_animation( Autoload.get_string(), Autoload.get_randf(), Autoload.get_randf(), bool(randi()%2), Autoload.get_randf() )
+			q_AnimationNode.blend_animation( Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float() )
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNode.blend_input( 0, Autoload.get_randf(), bool(randi()%2), Autoload.get_randf(), Autoload.get_randi(), bool(randi()%2) ))#FilterAction
+			qq += str(q_AnimationNode.blend_input( 0, Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool() ))#FilterAction
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNode.blend_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_randf(), bool(randi()%2), Autoload.get_randf(), Autoload.get_randi(), bool(randi()%2) ))#FilterAction
+			qq += str(q_AnimationNode.blend_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool() ))#FilterAction
 			
 		if randi() % 2 == 1:
 			qq +=  str(q_AnimationNode.get_input_count())
 		if randi() % 2 == 1:
-			qq +=  str(q_AnimationNode.get_input_name( Autoload.get_randi()))
+			qq +=  str(q_AnimationNode.get_input_name( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq +=  str(q_AnimationNode.get_parameter( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNode.is_path_filtered( "." ))
 		if randi() % 2 == 1:
-			q_AnimationNode.remove_input( Autoload.get_randi())
+			q_AnimationNode.remove_input( Autoload.get_int())
 			
 		if randi() % 2 == 1:
-			q_AnimationNode.set_filter_path( ".", bool(randi()%2))
+			q_AnimationNode.set_filter_path( ".", Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_AnimationNode.set_parameter( Autoload.get_string(), String() )

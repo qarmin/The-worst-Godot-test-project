@@ -19,18 +19,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_skeleton_path(".")
 			
-		if randi() % 2 == 1:
-			create_convex_collision()
+#	BUG	if randi() % 2 == 1:
+#			create_convex_collision()
 		if randi() % 2 == 1:
 			create_debug_tangents()
 		if randi() % 2 == 1:
 			create_trimesh_collision()
 		if randi() % 2 == 1:
-			qq += str(get_surface_material(Autoload.get_randi()))
+			qq += str(get_surface_material(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_surface_material_count())
 		if randi() % 2 == 1:
-			set_surface_material(Autoload.get_randi(), SpatialMaterial.new())
+			set_surface_material(Autoload.get_int(), SpatialMaterial.new())
 				
 #####################
 		if randi() % 2 == 1:

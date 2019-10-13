@@ -20,6 +20,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshTexture.set_mesh(Mesh.new())
 		if randi() % 2 == 1:
-			q_MeshTexture.set_base_texture(Autoload.loadA("res://RES/Sprite.png"))
+			q_MeshTexture.set_base_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			q_MeshTexture.set_image_size(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			q_MeshTexture.set_image_size(Vector2(Autoload.get_float(), Autoload.get_float()))

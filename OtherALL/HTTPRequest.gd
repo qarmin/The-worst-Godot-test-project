@@ -18,11 +18,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_download_file("asfasasf")
 		if randi() % 2 == 1:
-			set_use_threads(bool(randi()%2))
+			set_use_threads(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_body_size_limit(Autoload.get_randi())
+			set_body_size_limit(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_max_redirects(Autoload.get_randi())
+			set_max_redirects(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			cancel_request()
@@ -35,4 +35,4 @@ func _process(delta) -> void:
 			qq += str(get_http_client_status())
 			
 		if randi() % 2 == 1:
-			qq += str(request("http://rfasfqw.sfasfasfasfa.asps/asfasfasa/fs", PoolStringArray(["asfasfqwfanfauisf","asfasfiasbfaus","asfqwfasf"]),bool(randi()%2), Autoload.get_randi(), "asfwfafsafs"))
+			qq += str(request("http://rfasfqw.sfasfasfasfa.asps/asfasfasa/fs", PoolStringArray(["asfasfqwfanfauisf","asfasfiasbfaus","asfqwfasf"]),Autoload.get_bool(), Autoload.get_int(), "asfwfafsafs"))

@@ -24,7 +24,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_Physics2DDirectBodyState.get_total_gravity()
 #		q_Physics2DDirectBodyState.set_angular_velocity(randf() * 50)
 #		q_Physics2DDirectBodyState.set_linear_velocity(Vector2(randf() * 50,randf() * 50))
-#		q_Physics2DDirectBodyState.set_sleep_state(bool(randi()%2))
+#		q_Physics2DDirectBodyState.set_sleep_state(Autoload.get_bool())
 #		q_Physics2DDirectBodyState.set_transform(Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
 #
 #		q_Physics2DDirectBodyState.add_central_force( Vector2(randf() * 50,randf() * 50) )

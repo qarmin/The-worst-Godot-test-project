@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptSequence.set_steps(Autoload.get_randi())
+			q_VisualScriptSequence.set_steps(Autoload.get_int())

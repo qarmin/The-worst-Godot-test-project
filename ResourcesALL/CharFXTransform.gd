@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_relative_index(Autoload.get_randi())
+			q_CharFXTransform.set_relative_index(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_absolute_index(Autoload.get_randi())
+			q_CharFXTransform.set_absolute_index(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_elapsed_time(Autoload.get_randf())
+			q_CharFXTransform.set_elapsed_time(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_visibility(bool(randi()%2))
+			q_CharFXTransform.set_visibility(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_CharFXTransform.set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_color(Color(randf(),randf(),randf(),randf()))
+			q_CharFXTransform.set_color(Autoload.get_color())
 		if randi() % 2 == 1:
 			q_CharFXTransform.set_environment({Autoload.get_string() : Autoload.get_string()})
 		if randi() % 2 == 1:
-			q_CharFXTransform.set_character(Autoload.get_randi())
+			q_CharFXTransform.set_character(Autoload.get_int())
 			
 		if randi() % 2 == 1:
-			q_CharFXTransform.get_value_or(Autoload.get_string(), Autoload.get_randi())
+			q_CharFXTransform.get_value_or(Autoload.get_string(), Autoload.get_int())

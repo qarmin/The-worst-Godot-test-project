@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMagnifyGesture.set_factor(Autoload.get_randf())
+			q_InputEventMagnifyGesture.set_factor(Autoload.get_float())

@@ -16,7 +16,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_StreamPeer : StreamPeer = StreamPeer.new()
 #
-#		q_StreamPeer.set_big_endian(bool(randi()%2))
+#		q_StreamPeer.set_big_endian(Autoload.get_bool())
 #
 #		q_StreamPeer.get_16()
 #		q_StreamPeer.get_32()
@@ -33,7 +33,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_StreamPeer.get_u64()
 #		q_StreamPeer.get_u8()
 #		q_StreamPeer.get_utf8_string( randi()%50 )
-#		q_StreamPeer.get_var( bool(randi()%2))
+#		q_StreamPeer.get_var( Autoload.get_bool())
 #
 #		q_StreamPeer.put_16(randi()%50)
 #		q_StreamPeer.put_32(randi()%50)
@@ -50,5 +50,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_StreamPeer.put_u64(randi()%50)
 #		q_StreamPeer.put_u8(randi()%50)
 #		q_StreamPeer.put_utf8_string( Autoload.get_string() )
-#		q_StreamPeer.put_var(bool(randi()%2))
+#		q_StreamPeer.put_var(Autoload.get_bool())
 #

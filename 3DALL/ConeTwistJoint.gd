@@ -24,27 +24,27 @@ func _process(delta) -> void:
 			set_node_a(".")
 			set_node_b(".")
 			set_solver_priority(randi()%50)
-			set_exclude_nodes_from_collision(bool(randi()%2))
+			set_exclude_nodes_from_collision(Autoload.get_bool())
 			
 	
 			if Autoload.WRONG_BUGS:
 	
-				_set_swing_span(Autoload.get_randf())
-				_set_twist_span(Autoload.get_randf())
-				set_param(randi() % 30 - 15, Autoload.get_randf())
+				_set_swing_span(Autoload.get_float())
+				_set_twist_span(Autoload.get_float())
+				set_param(randi() % 30 - 15, Autoload.get_float())
 				
 				#Joint
 				set_node_a(Autoload.get_string())
 				set_node_b(Autoload.get_string())
-				set_solver_priority(Autoload.get_randi())
-				set_exclude_nodes_from_collision(bool(randi()%2))
+				set_solver_priority(Autoload.get_int())
+				set_exclude_nodes_from_collision(Autoload.get_bool())
 		else: #RANDI
 			if randi() % 2 == 1:
-				_set_swing_span(Autoload.get_randf())
+				_set_swing_span(Autoload.get_float())
 			if randi() % 2 == 1:
-				_set_twist_span(Autoload.get_randf())
+				_set_twist_span(Autoload.get_float())
 			if randi() % 2 == 1:
-				set_param(randi() % 30 - 15, Autoload.get_randf())
+				set_param(randi() % 30 - 15, Autoload.get_float())
 				
 				#Joint
 			if randi() % 2 == 1:
@@ -52,6 +52,6 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				set_node_b(Autoload.get_string())
 			if randi() % 2 == 1:
-				set_solver_priority(Autoload.get_randi())
+				set_solver_priority(Autoload.get_int())
 			if randi() % 2 == 1:
-				set_exclude_nodes_from_collision(bool(randi()%2))
+				set_exclude_nodes_from_collision(Autoload.get_bool())

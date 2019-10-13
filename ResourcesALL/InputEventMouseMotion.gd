@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMouseMotion.set_relative(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventMouseMotion.set_relative(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_InputEventMouseMotion.set_speed(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventMouseMotion.set_speed(Autoload.get_vector2())

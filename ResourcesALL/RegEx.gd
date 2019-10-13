@@ -34,9 +34,9 @@ func _process(delta) -> void:
 			qq += str(q_RegEx.is_valid())
 			
 		if randi() % 2 == 1:
-			qq += str(q_RegEx.search( Autoload.get_string(), Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_RegEx.search( Autoload.get_string(), Autoload.get_int(), Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_RegEx.search_all( Autoload.get_string(), Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_RegEx.search_all( Autoload.get_string(), Autoload.get_int(), Autoload.get_int() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_RegEx.sub( Autoload.get_string(), Autoload.get_string(), bool(randi()%2), Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_RegEx.sub( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_int() ))

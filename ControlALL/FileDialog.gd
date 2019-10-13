@@ -16,21 +16,21 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_mode_overrides_title(bool(randi()%2))
+			set_mode_overrides_title(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_mode(Autoload.get_randi())
+			set_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_access(Autoload.get_randi())
+			set_access(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_filters(PoolStringArray([Autoload.get_string(),Autoload.get_string()]))
 		if randi() % 2 == 1:
-			set_show_hidden_files(bool(randi()%2))
+			set_show_hidden_files(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_current_dir("res://" + str(Autoload.get_randi()))
+			set_current_dir("res://" + str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_current_file("res://" + str(Autoload.get_randi()))
+			set_current_file("res://" + str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_current_path("res://" + str(Autoload.get_randi()))
+			set_current_path("res://" + str(Autoload.get_int()))
 		if randi() % 2 == 1:
 			clear_filters()
 		if randi() % 2 == 1:

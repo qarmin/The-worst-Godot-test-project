@@ -9,7 +9,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #	add_child(q_temp_0)
 #
-#func _process(delta) -> void:
+#func _process(delta) -> void:G
 #	counter -= delta
 #	var qq : String = ""
 #	qq = qq
@@ -37,11 +37,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_UndoRedo.add_undo_reference( q_temp_0 )
 #
 #		if randi() % 2 == 1:
-#			q_UndoRedo.clear_history( bool(randi()%2))
+#			q_UndoRedo.clear_history( Autoload.get_bool())
 #		if randi() % 2 == 1:
 #			q_UndoRedo.commit_action()
 #		if randi() % 2 == 1:
-#			q_UndoRedo.create_action( Autoload.get_string(), Autoload.get_randi() )#MergeMode
+#			q_UndoRedo.create_action( Autoload.get_string(), Autoload.get_int() )#MergeMode
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_UndoRedo.get_current_action_name())

@@ -15,6 +15,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_navigation_mesh(Autoload.loadA("res://RES/NavigationMesh.tres"))
+			set_navigation_mesh(Autoload.loadA("NavigationMesh.tres"))
 		if randi() % 2 == 1:
-			set_enabled(bool(randi()%2))
+			set_enabled(Autoload.get_bool())

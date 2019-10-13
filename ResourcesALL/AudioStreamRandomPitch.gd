@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioStreamRandomPitch.set_audio_stream(AudioStreamGenerator.new())
 		if randi() % 2 == 1:
-			q_AudioStreamRandomPitch.set_random_pitch(Autoload.get_randf())
+			q_AudioStreamRandomPitch.set_random_pitch(Autoload.get_float())

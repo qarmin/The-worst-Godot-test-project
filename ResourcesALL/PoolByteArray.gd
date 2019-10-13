@@ -20,14 +20,14 @@ func _process(delta) -> void:
 			q_PoolByteArray = PoolByteArray([Color()])
 
 		if randi() % 2 == 1:
-			q_PoolByteArray.append(Autoload.get_randi())
+			q_PoolByteArray.append(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_PoolByteArray.append_array(PoolByteArray([]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.compress(Autoload.get_randi())) # File.CompressionMode
+			qq += str(q_PoolByteArray.compress(Autoload.get_int())) # File.CompressionMode
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_PoolByteArray.decompress(Autoload.get_randi(),Autoload.get_randi()))
+#			qq += str(q_PoolByteArray.decompress(Autoload.get_int(),Autoload.get_int()))
 
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.get_string_from_ascii())
@@ -38,18 +38,18 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.hex_encode())
 		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.insert( Autoload.get_randi(), Autoload.get_randi()) )
+			qq += str(q_PoolByteArray.insert( Autoload.get_int(), Autoload.get_int()) )
 		if randi() % 2 == 1:
 			q_PoolByteArray.invert()
 		if randi() % 2 == 1:
-			q_PoolByteArray.push_back( Autoload.get_randi() )
+			q_PoolByteArray.push_back( Autoload.get_int() )
 		if randi() % 2 == 1:
-			q_PoolByteArray.remove( Autoload.get_randi())
+			q_PoolByteArray.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolByteArray.resize( Autoload.get_randi())
+			q_PoolByteArray.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolByteArray.set(Autoload.get_randi(), Autoload.get_randi())
+			q_PoolByteArray.set(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.size())
 		if randi() % 2 == 1:
-			qq += str(q_PoolByteArray.subarray(Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(q_PoolByteArray.subarray(Autoload.get_int(),Autoload.get_int()))

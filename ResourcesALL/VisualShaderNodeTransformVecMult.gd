@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeTransformVecMult.set_operator(Autoload.get_randi()) #Operator
+			q_VisualShaderNodeTransformVecMult.set_operator(Autoload.get_int()) #Operator

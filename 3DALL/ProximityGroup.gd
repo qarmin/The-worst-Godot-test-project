@@ -16,8 +16,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_group_name(str(randi()%50000))
 		if randi() % 2 == 1:
-			set_dispatch_mode(Autoload.get_randi()) # DispatchMode
+			set_dispatch_mode(Autoload.get_int()) # DispatchMode
 		if randi() % 2 == 1:
-			set_grid_radius(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_grid_radius(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			broadcast(str(randi()%50000), InputEventAction.new())

@@ -16,7 +16,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Nil 
 #
-#		q_Nil = Nil( PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())]) )
+#		q_Nil = Nil( PoolColorArray([Autoload.get_color(),Autoload.get_color()]) )
 #		q_Nil = Nil( PoolVector3Array() )
 #		q_Nil = Nil( PoolVector2Array() )
 #		q_Nil = Nil( PoolStringArray() )
@@ -41,5 +41,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_Nil = Nil( String() )
 #		q_Nil = Nil( float() )
 #		q_Nil = Nil( randi()%50)
-#		q_Nil = Nil( bool(randi()%2))
+#		q_Nil = Nil( Autoload.get_bool())
 #

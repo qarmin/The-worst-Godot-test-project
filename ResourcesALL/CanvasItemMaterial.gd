@@ -19,14 +19,14 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_blend_mode(Autoload.get_randi()) #BlendMode
+			q_CanvasItemMaterial.set_blend_mode(Autoload.get_int()) #BlendMode
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_light_mode(Autoload.get_randi()) # LightMode
+			q_CanvasItemMaterial.set_light_mode(Autoload.get_int()) # LightMode
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_particles_animation(bool(randi()%2))
+			q_CanvasItemMaterial.set_particles_animation(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_particles_anim_h_frames(Autoload.get_randi())
+			q_CanvasItemMaterial.set_particles_anim_h_frames(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_particles_anim_v_frames(Autoload.get_randi())
+			q_CanvasItemMaterial.set_particles_anim_v_frames(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_CanvasItemMaterial.set_particles_anim_loop(bool(randi()%2))
+			q_CanvasItemMaterial.set_particles_anim_loop(Autoload.get_bool())

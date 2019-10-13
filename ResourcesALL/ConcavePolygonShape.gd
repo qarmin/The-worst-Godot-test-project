@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_ConcavePolygonShape.get_faces())
 		if randi() % 2 == 1:
-			q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()),Vector3(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi())]))
+			q_ConcavePolygonShape.set_faces(PoolVector3Array([Vector3(Autoload.get_int(),Autoload.get_int(),Autoload.get_int()),Vector3(Autoload.get_int(),Autoload.get_int(),Autoload.get_int())]))

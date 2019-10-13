@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_SphereShape.set_radius(Autoload.get_randf())
+			q_SphereShape.set_radius(Autoload.get_float())

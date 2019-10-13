@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_DynamicFontData.set_antialiased(bool(randi()%2))
+			q_DynamicFontData.set_antialiased(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_DynamicFontData.set_hinting(Autoload.get_randi()) # Hinting
+			q_DynamicFontData.set_hinting(Autoload.get_int()) # Hinting
 		if randi() % 2 == 1:
-			q_DynamicFontData.set_font_path("res://RES/FreeMono.otf")
+			q_DynamicFontData.set_font_path("FreeMono.otf")

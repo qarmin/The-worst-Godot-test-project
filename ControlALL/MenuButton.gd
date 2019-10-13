@@ -16,8 +16,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_switch_on_hover(bool(randi()%2))
+			set_switch_on_hover(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_popup())
 		if randi() % 2 == 1:
-			set_disable_shortcuts(bool(randi()%2))
+			set_disable_shortcuts(Autoload.get_bool())

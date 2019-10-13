@@ -18,38 +18,38 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(randi()%50000))
 		if randi() % 2 == 1:
-			set_button_icon(Autoload.loadA("res://RES/Sprite.png"))
+			set_button_icon(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_flat(bool(randi()%2))
+			set_flat(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_clip_text(bool(randi()%2))
+			set_clip_text(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_text_align(Autoload.get_randi())
+			set_text_align(Autoload.get_int())
 			
 			# BaseButton
 		if randi() % 2 == 1:
-			set_disabled(bool(randi()%2))
+			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_toggle_mode(bool(randi()%2))
+			set_toggle_mode(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_shortcut_in_tooltip(bool(randi()%2))
+			set_shortcut_in_tooltip(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_pressed(bool(randi()%2))
+			set_pressed(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_action_mode(Autoload.get_randi()) #ActionMODE
+			set_action_mode(Autoload.get_int()) #ActionMODE
 		if randi() % 2 == 1:
-			set_button_mask(Autoload.get_randi())
+			set_button_mask(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_enabled_focus_mode(Autoload.get_randi()) #FocusMode
+			set_enabled_focus_mode(Autoload.get_int()) #FocusMode
 		if randi() % 2 == 1:
-			set_keep_pressed_outside(bool(randi()%2))
+			set_keep_pressed_outside(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_shortcut(ShortCut.new())
 		if randi() % 2 == 1:
 			set_button_group(ButtonGroup.new())
 			
 		#_pressed()
-		#_toggled(bool(randi()%2))
+		#_toggled(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_draw_mode())
 		if randi() % 2 == 1:

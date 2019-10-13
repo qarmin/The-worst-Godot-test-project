@@ -17,10 +17,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_remote_node(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_use_global_coordinates(bool(randi()%2))
+			set_use_global_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_position(bool(randi()%2))
+			set_update_position(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_rotation(bool(randi()%2))
+			set_update_rotation(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_scale(bool(randi()%2))
+			set_update_scale(Autoload.get_bool())

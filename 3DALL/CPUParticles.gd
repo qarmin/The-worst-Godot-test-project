@@ -26,60 +26,60 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		var particles : Particles = Particles.new()
 		if randi() % 2 == 1:
-			set_emitting(bool(randi()%2))
+			set_emitting(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_amount(randi() % 4 - 2)
 		if randi() % 2 == 1:
 			set_lifetime(randf() - 0.5)
 		if randi() % 2 == 1:
-			set_one_shot(bool(randi()%2))
+			set_one_shot(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_pre_process_time(randf() * 1 - 0.5)
 		if randi() % 2 == 1:
-			set_speed_scale(Autoload.get_randf())
+			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_explosiveness_ratio(Autoload.get_randf())
+			set_explosiveness_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_randomness_ratio(Autoload.get_randf())
+			set_randomness_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_fixed_fps(Autoload.get_randi())
+			set_fixed_fps(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_fractional_delta(bool(randi()%2))
+			set_fractional_delta(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_use_local_coordinates(bool(randi()%2))
+			set_use_local_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_draw_order(Autoload.get_randi())
+			set_draw_order(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_mesh(Mesh.new())
 		if randi() % 2 == 1:
-			set_emission_shape(Autoload.get_randi())
+			set_emission_shape(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_emission_sphere_radius(Autoload.get_randf())
+			set_emission_sphere_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_emission_box_extents(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_emission_box_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			set_emission_points(PoolVector3Array([Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())]))
+			set_emission_points(PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]))
 		if randi() % 2 == 1:
-			set_emission_normals(PoolVector3Array([Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())]))
+			set_emission_normals(PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]))
 		if randi() % 2 == 1:
-			set_emission_colors([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+			set_emission_colors([Autoload.get_color(),Autoload.get_color()])
 
 		if randi() % 2 == 1:
-			set_particle_flag(Autoload.get_randi(),bool(randi()%2))
+			set_particle_flag(Autoload.get_int(),Autoload.get_bool())
 				
 		if randi() % 2 == 1:
-			set_spread(Autoload.get_randf())
+			set_spread(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_flatness(Autoload.get_randf())
+			set_flatness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_gravity(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_gravity(Autoload.get_vector3())
 
 		if randi() % 2 == 1:
-			set_param(Autoload.get_randi(),Autoload.get_randf())
+			set_param(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			set_param_curve(Autoload.get_randi(),Autoload.loadA("res://RES/Curve.tres"))
+			set_param_curve(Autoload.get_int(),Autoload.loadA("Curve.tres"))
 		if randi() % 2 == 1:
-			set_param_randomness(Autoload.get_randi(),Autoload.get_randf())
+			set_param_randomness(Autoload.get_int(),Autoload.get_float())
 
 		if randi() % 2 == 1:
 			convert_from_particles(particles)
@@ -91,34 +91,34 @@ func _process(delta) -> void:
 #				##GeometryInstance
 #				set_material_override(SpatialMaterial.new())
 #				set_cast_shadows_setting(randi() % (SHADOW_CASTING_SETTING_SHADOWS_ONLY + 1))
-#				set_extra_cull_margin(Autoload.get_randf())
+#				set_extra_cull_margin(Autoload.get_float())
 #
-#				set_flag(Autoload.get_randi(),bool(randi()%2))
+#				set_flag(Autoload.get_int(),Autoload.get_bool())
 #
-#				set_lod_min_distance(Autoload.get_randf())
-#				set_lod_min_hysteresis(Autoload.get_randf())
-#				set_lod_max_distance(Autoload.get_randf())
-#				set_lod_max_hysteresis(Autoload.get_randf())
-#				set_custom_aabb(AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+#				set_lod_min_distance(Autoload.get_float())
+#				set_lod_min_hysteresis(Autoload.get_float())
+#				set_lod_max_distance(Autoload.get_float())
+#				set_lod_max_hysteresis(Autoload.get_float())
+#				set_custom_aabb(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
 #
 #				##VisualInstance
 #				set_layer_mask(randi() % 1000000)
 #				qq += str(get_aabb())
 #				qq += str(get_base())
 #				qq += str(get_instance())
-#				qq += str(get_layer_mask_bit(Autoload.get_randi()))
+#				qq += str(get_layer_mask_bit(Autoload.get_int()))
 #				qq += str(get_transformed_aabb())
 #				set_base(RID())
-#				set_layer_mask_bit(Autoload.get_randi(),bool(randi()%2))
+#				set_layer_mask_bit(Autoload.get_int(),Autoload.get_bool())
 #
 #				##Spatial
-#				set_global_transform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
-#				set_translation(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				set_rotation_degrees(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				set_rotation(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				set_scale(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				set_transform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
-#				set_visible(bool(randi()%2))
+#				set_global_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+#				set_translation(Autoload.get_vector3())
+#				set_rotation_degrees(Autoload.get_vector3())
+#				set_rotation(Autoload.get_vector3())
+#				set_scale(Autoload.get_vector3())
+#				set_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+#				set_visible(Autoload.get_bool())
 #				set_gizmo(SpatialGizmo.new())
 #
 #				force_update_transform()
@@ -126,9 +126,9 @@ func _process(delta) -> void:
 #				qq += str(get_parent_spatial())
 #				qq += str(get_world())
 #
-#				global_rotate(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randf())
-#				global_scale(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				global_translate(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+#				global_rotate(Autoload.get_vector3(),Autoload.get_float())
+#				global_scale(Autoload.get_vector3())
+#				global_translate(Autoload.get_vector3())
 #
 #				hide()
 #
@@ -138,33 +138,33 @@ func _process(delta) -> void:
 #				qq += str(is_transform_notification_enabled())
 #				qq += str(is_visible_in_tree())
 #
-#				look_at(Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215),Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215))
-#				look_at_from_position(Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215),Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215),Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215))
+#				look_at(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
+#				look_at_from_position(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
 #
 #				orthonormalize()
 #
-#				rotate(Vector3(Autoload.get_randf() + 150,Autoload.get_randf() + 100,Autoload.get_randf() + 15),Autoload.get_randf() + 10)
-#				rotate_object_local(Vector3(Autoload.get_randf() + 4,Autoload.get_randf() + 45,Autoload.get_randf() + 215),Autoload.get_randf())
-#				rotate_x(Autoload.get_randf())
-#				rotate_y(Autoload.get_randf())
-#				rotate_z(Autoload.get_randf())
+#				rotate(Vector3(Autoload.get_float() + 150,Autoload.get_float() + 100,Autoload.get_float() + 15),Autoload.get_float() + 10)
+#				rotate_object_local(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Autoload.get_float())
+#				rotate_x(Autoload.get_float())
+#				rotate_y(Autoload.get_float())
+#				rotate_z(Autoload.get_float())
 #
-#				scale_object_local(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+#				scale_object_local(Autoload.get_vector3())
 #
-#				set_as_toplevel(bool(randi()%2))
-#				set_disable_scale(bool(randi()%2))
+#				set_as_toplevel(Autoload.get_bool())
+#				set_disable_scale(Autoload.get_bool())
 #				set_identity()
-#				set_ignore_transform_notification(bool(randi()%2))
-#				set_notify_local_transform(bool(randi()%2))
-#				set_notify_transform(bool(randi()%2))
+#				set_ignore_transform_notification(Autoload.get_bool())
+#				set_notify_local_transform(Autoload.get_bool())
+#				set_notify_transform(Autoload.get_bool())
 #
 #				show()
 #
-#				qq += str(to_global(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
-#				qq += str(to_local(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+#				qq += str(to_global(Autoload.get_vector3()))
+#				qq += str(to_local(Autoload.get_vector3()))
 #
-#				translate(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
-#				translate_object_local(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+#				translate(Autoload.get_vector3())
+#				translate_object_local(Autoload.get_vector3())
 #
 #				update_gizmo()
 #
@@ -188,19 +188,19 @@ func _process(delta) -> void:
 #				for _i in range(10):
 #					if get_child_count() > 3:
 #						break 
-#					add_child(TextureButton.new(),bool(randi()%2))
-#				add_child_below_node(get_child(Autoload.get_randi()),get_child(Autoload.get_randi()),bool(randi()%2))
-#				add_to_group(Autoload.get_string(),bool(randi()%2))
+#					add_child(TextureButton.new(),Autoload.get_bool())
+#				add_child_below_node(get_child(Autoload.get_int()),get_child(Autoload.get_int()),Autoload.get_bool())
+#				add_to_group(Autoload.get_string(),Autoload.get_bool())
 #
 #				qq += str(can_process())
-#				var nooo : Node = duplicate(Autoload.get_randi()) # DuplicateFlags
+#				var nooo : Node = duplicate(Autoload.get_int()) # DuplicateFlags
 #				if nooo != null:
 #					nooo.queue_free()
 #
-#				qq += str(find_node(Autoload.get_string(),bool(randi()%2),bool(randi()%2)))
+#				qq += str(find_node(Autoload.get_string(),Autoload.get_bool(),Autoload.get_bool()))
 #				qq += str(find_parent(Autoload.get_string()))
 #
-#				qq += str(get_child(Autoload.get_randi()))
+#				qq += str(get_child(Autoload.get_int()))
 #				qq += str(get_child_count())
 #				qq += str(get_children())
 #				qq += str(get_groups())
@@ -236,54 +236,54 @@ func _process(delta) -> void:
 #				qq += str(is_processing_unhandled_input())
 #				qq += str(is_processing_unhandled_key_input())
 #
-#				move_child(get_child(Autoload.get_randi()),Autoload.get_randi())
+#				move_child(get_child(Autoload.get_int()),Autoload.get_int())
 #
 #				#This only spam output
 #				###print_stray_nodes()
 #				###print_tree()
 #				###print_tree_pretty()
 #
-#				propagate_call(Autoload.get_string(),[Autoload.get_string()],bool(randi()%2))
-#				propagate_notification(Autoload.get_randi())
+#				propagate_call(Autoload.get_string(),[Autoload.get_string()],Autoload.get_bool())
+#				propagate_notification(Autoload.get_int())
 #
 #				###queue_free()
 #				raise()
 #
 #				###remove_and_skip() ## ?
 #				var child_number = get_child(randi() % get_child_count())
-#				var cn = Autoload.get_randi()
+#				var cn = Autoload.get_int()
 #				child_number = get_child(cn)
 #				if cn >= 0 && cn < get_child_count():
 #					remove_child(child_number)
 #					child_number.queue_free()
 #				remove_from_group(Autoload.get_string())
 #
-#				replace_by(get_child(Autoload.get_randi()),bool(randi()%2))
+#				replace_by(get_child(Autoload.get_int()),Autoload.get_bool())
 #				request_ready()
 #
 #				qq += str(rpc(Autoload.get_string()))
-#				rpc_config(Autoload.get_string(),Autoload.get_randi())
-#				qq += str(rpc_id(Autoload.get_randi(),Autoload.get_string()))
+#				rpc_config(Autoload.get_string(),Autoload.get_int())
+#				qq += str(rpc_id(Autoload.get_int(),Autoload.get_string()))
 #				qq += str(rpc_unreliable(Autoload.get_string()))
-#				qq += str(rpc_unreliable_id(Autoload.get_randi(),Autoload.get_string()))
+#				qq += str(rpc_unreliable_id(Autoload.get_int(),Autoload.get_string()))
 #
 #				rset(Autoload.get_string(), CubeMesh.new())
-#				rset_config(Autoload.get_string(),Autoload.get_randi())
-#				rset_id(Autoload.get_randi(), Autoload.get_string(),CubeMesh.new())
+#				rset_config(Autoload.get_string(),Autoload.get_int())
+#				rset_id(Autoload.get_int(), Autoload.get_string(),CubeMesh.new())
 #				rset_unreliable(Autoload.get_string(), CubeMesh.new())
-#				rset_unreliable_id(Autoload.get_randi(),Autoload.get_string(),CubeMesh.new())
+#				rset_unreliable_id(Autoload.get_int(),Autoload.get_string(),CubeMesh.new())
 #
-#				set_display_folded(bool(randi()%2))
-#				set_network_master(Autoload.get_randi(),bool(randi()%2))
-#				set_physics_process(bool(randi()%2))
-#				set_physics_process_internal(bool(randi()%2))
-#				###set_process(bool(randi()%2))
-#				set_process_input(bool(randi()%2))
-#				set_process_internal(bool(randi()%2))
-#				###set_process_priority(Autoload.get_randi())
-#				set_process_unhandled_input(bool(randi()%2))
-#				set_process_unhandled_key_input(bool(randi()%2))
-#				set_scene_instance_load_placeholder(bool(randi()%2))
+#				set_display_folded(Autoload.get_bool())
+#				set_network_master(Autoload.get_int(),Autoload.get_bool())
+#				set_physics_process(Autoload.get_bool())
+#				set_physics_process_internal(Autoload.get_bool())
+#				###set_process(Autoload.get_bool())
+#				set_process_input(Autoload.get_bool())
+#				set_process_internal(Autoload.get_bool())
+#				###set_process_priority(Autoload.get_int())
+#				set_process_unhandled_input(Autoload.get_bool())
+#				set_process_unhandled_key_input(Autoload.get_bool())
+#				set_scene_instance_load_placeholder(Autoload.get_bool())
 #
 #
 #				#Object
@@ -298,10 +298,10 @@ func _process(delta) -> void:
 #
 #				qq += str(call(Autoload.get_string()))
 #				qq += str(call_deferred(Autoload.get_string()))
-#				qq += str(callv(Autoload.get_string(),[Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()]))
+#				qq += str(callv(Autoload.get_string(),[Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int()]))
 #
 #				qq += str(can_translate_messages())
-#				qq += str(connect(Autoload.get_string(),self,Autoload.get_string(),[Autoload.get_string()],Autoload.get_randi())) # ConnectFlags
+#				qq += str(connect(Autoload.get_string(),self,Autoload.get_string(),[Autoload.get_string()],Autoload.get_int())) # ConnectFlags
 #				disconnect(Autoload.get_string(),self,Autoload.get_string())
 #				qq += str(emit_signal(Autoload.get_string()))
 #				###free()
@@ -333,16 +333,16 @@ func _process(delta) -> void:
 #				#for i in range(2000):
 #				#	print(i)
 #				#	if (i != 10)&&(i != 11)&&(i != 41):
-#				#		notification(i,bool(randi()%2))
-#				###notification(randi()%1000,bool(randi()%2))
+#				#		notification(i,Autoload.get_bool())
+#				###notification(randi()%1000,Autoload.get_bool())
 #				property_list_changed_notify()
 #				remove_meta(Autoload.get_string())
 #
 #				set(Autoload.get_string(),CubeMesh.new())
-#				set_block_signals(bool(randi()%2))
+#				set_block_signals(Autoload.get_bool())
 #				set_deferred(Autoload.get_string(),CubeMesh.new())
 #				set_indexed(Autoload.get_string(),CubeMesh.new())
-#				set_message_translation(bool(randi()%2))
+#				set_message_translation(Autoload.get_bool())
 #				set_meta(Autoload.get_string(), CubeMesh.new())
 #				#set_script(Reference.new())
 #

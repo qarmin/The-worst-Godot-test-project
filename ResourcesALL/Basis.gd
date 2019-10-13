@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Basis : Basis = Basis( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
+var q_Basis : Basis = Basis( Autoload.get_quat() )
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -18,13 +18,13 @@ func _process(delta) -> void:
 	
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Basis = Basis( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
+				q_Basis = Basis( Autoload.get_quat() )
 			if randi() % 2 == 1:
-				q_Basis = Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+				q_Basis = Basis( Autoload.get_vector3())
 			if randi() % 2 == 1:
-				q_Basis = Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
+				q_Basis = Basis( Autoload.get_vector3(), Autoload.get_float())
 			if randi() % 2 == 1:
-				q_Basis = Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
+				q_Basis = Basis( Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_vector3() )
 			
 		if randi() % 2 == 1:
 			qq += str(q_Basis.determinant())
@@ -41,27 +41,27 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Basis.inverse())
 		if randi() % 2 == 1:
-			qq += str(q_Basis.is_equal_approx( q_Basis, Autoload.get_randf()))
+			qq += str(q_Basis.is_equal_approx( q_Basis, Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(q_Basis.orthonormalized())
 		if randi() % 2 == 1:
-			qq += str(q_Basis.rotated( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randf()))
+			qq += str(q_Basis.rotated( Autoload.get_vector3(),Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.scaled( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.scaled( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.slerp( q_Basis, Autoload.get_randf()))
+			qq += str(q_Basis.slerp( q_Basis, Autoload.get_float()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_Basis.tdotx( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.tdotx( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.tdoty( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.tdoty( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.tdotz( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.tdotz( Autoload.get_vector3() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Basis.transposed())
 			
 		if randi() % 2 == 1:
-			qq += str(q_Basis.xform( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.xform( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.xform_inv(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Basis.xform_inv(Autoload.get_vector3() ))

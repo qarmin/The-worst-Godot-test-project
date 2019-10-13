@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeVec3Constant.set_constant(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_VisualShaderNodeVec3Constant.set_constant(Autoload.get_vector3())

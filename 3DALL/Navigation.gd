@@ -16,24 +16,24 @@ func _process(delta) -> void:
 
 			#LEAK get_child(0).set_navigation_mesh(NavigationMesh.new())
 		if randi() % 2 == 1:
-			get_child(0).set_enabled(bool(randi()%2))
+			get_child(0).set_enabled(Autoload.get_bool())
 				
 		if randi() % 2 == 1:
-			set_up_vector(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_up_vector(Autoload.get_vector3())
 			
 		if randi() % 2 == 1:
-			qq += str(get_closest_point(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(get_closest_point(Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			qq += str(get_closest_point_normal(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(get_closest_point_normal(Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			qq += str(get_closest_point_owner(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(get_closest_point_owner(Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			qq += str(get_closest_point_to_segment(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),bool(randi()%2)))
+			qq += str(get_closest_point_to_segment(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(get_simple_path(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),bool(randi()%2)))
+			qq += str(get_simple_path(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_bool()))
 			
-			#LEAK qq += str(navmesh_add(NavigationMesh.new(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())), get_parent()))
+			#LEAK qq += str(navmesh_add(NavigationMesh.new(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()), get_parent()))
 		if randi() % 2 == 1:
-			navmesh_remove(Autoload.get_randi())
+			navmesh_remove(Autoload.get_int())
 		if randi() % 2 == 1:
-			navmesh_set_transform(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			navmesh_set_transform(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))

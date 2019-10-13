@@ -17,6 +17,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_title(str(randi()%50000))
 		if randi() % 2 == 1:
-			set_resizable(bool(randi() % 2))
+			set_resizable(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_close_button())

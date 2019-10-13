@@ -15,15 +15,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_length(Autoload.get_randf())
+			set_length(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_rest_length(Autoload.get_randf())
+			set_rest_length(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_stiffness(Autoload.get_randf())
+			set_stiffness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_damping(Autoload.get_randf())
+			set_damping(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_exclude_nodes_from_collision(bool(randi()%2))
+			set_exclude_nodes_from_collision(Autoload.get_bool())
 			
 			# Joint2D
 		if randi() % 2 == 1:
@@ -31,6 +31,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
 		if randi() % 2 == 1:
-			set_bias(Autoload.get_randf())
+			set_bias(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_exclude_nodes_from_collision(bool(randi()%2))
+			set_exclude_nodes_from_collision(Autoload.get_bool())

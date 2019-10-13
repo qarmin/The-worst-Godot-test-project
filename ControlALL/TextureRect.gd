@@ -16,12 +16,12 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_expand(bool(randi()%2))
+			set_expand(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_stretch_mode(Autoload.get_randi())
+			set_stretch_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_flip_h(bool(randi()%2))
+			set_flip_h(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_flip_v(bool(randi()%2))
+			set_flip_v(Autoload.get_bool())

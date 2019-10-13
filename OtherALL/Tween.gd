@@ -16,28 +16,28 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_repeat(bool(randi()%2))
+			set_repeat(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_tween_process_mode(Autoload.get_randi()) # TweenProcessMode
+			set_tween_process_mode(Autoload.get_int()) # TweenProcessMode
 		if randi() % 2 == 1:
-			set_speed_scale(Autoload.get_randf())
+			set_speed_scale(Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			qq += str(follow_method(self,Autoload.get_string(),Autoload.get_randf(),self,Autoload.get_string(),Autoload.get_randf(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randf())) # TransitionType, EaseType
+			qq += str(follow_method(self,Autoload.get_string(),Autoload.get_float(),self,Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float())) # TransitionType, EaseType
 		if randi() % 2 == 1:
-			qq += str(follow_property(self,Autoload.get_string(),Autoload.get_randf(),self, Autoload.get_string(),Autoload.get_randf(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randf()))# TransitionType, EaseType
+			qq += str(follow_property(self,Autoload.get_string(),Autoload.get_float(),self, Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float()))# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(get_runtime())
 			
 		if randi() % 2 == 1:
-			interpolate_callback(self, Autoload.get_randf(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf())
+			interpolate_callback(self, Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
-			interpolate_deferred_callback(self, Autoload.get_randf(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf())
+			interpolate_deferred_callback(self, Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
-			interpolate_method(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(),Autoload.get_randf())# TransitionType, EaseType
+			interpolate_method(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(),Autoload.get_float())# TransitionType, EaseType
 		if randi() % 2 == 1:
-			interpolate_property(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
+			interpolate_property(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(is_active())
@@ -56,7 +56,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(resume_all())
 		if randi() % 2 == 1:
-			set_active(bool(randi()%2))
+			set_active(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(start())
 		if randi() % 2 == 1:
@@ -65,9 +65,9 @@ func _process(delta) -> void:
 			qq += str(stop_all())
 
 		if randi() % 2 == 1:
-			targeting_method(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
+			targeting_method(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
 		if randi() % 2 == 1:
-			targeting_property(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_randf(), Autoload.get_randi(), Autoload.get_randi(), Autoload.get_randf())# TransitionType, EaseType
+			targeting_property(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
 			
 		if randi() % 2 == 1:
 			qq += str(tell())

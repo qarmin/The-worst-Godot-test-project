@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 #	BUG	if randi() % 2 == 1:
-#			q_HeightMapShape.set_map_width(Autoload.get_randi())
+#			q_HeightMapShape.set_map_width(Autoload.get_int())
 #		if randi() % 2 == 1:
-#			q_HeightMapShape.set_map_depth(Autoload.get_randi())
+#			q_HeightMapShape.set_map_depth(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_HeightMapShape.set_map_data(PoolRealArray([125125.125,12512.1251,122.124]))

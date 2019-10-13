@@ -15,51 +15,51 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_shadow_mode(Autoload.get_randi()) # ShadowMode
+			set_shadow_mode(Autoload.get_int()) # ShadowMode
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_split_1",Autoload.get_randf())
+			set("directional_shadow_split_1",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("directional_shadow_split_2",Autoload.get_randf())
+			set("directional_shadow_split_2",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("directional_shadow_split_3",Autoload.get_randf())
+			set("directional_shadow_split_3",Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_normal_bias",Autoload.get_randf())
+			set("directional_shadow_normal_bias",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("directional_shadow_bias_split_scale",Autoload.get_randf())
+			set("directional_shadow_bias_split_scale",Autoload.get_float())
 				
 		if randi() % 2 == 1:
-			set_blend_splits(Autoload.get_randi()) # ShadowDepthRange
+			set_blend_splits(Autoload.get_int()) # ShadowDepthRange
 			
 		if randi() % 2 == 1:
-			set("directional_shadow_max_distance",Autoload.get_randf())
+			set("directional_shadow_max_distance",Autoload.get_float())
 			
 			# Light
 		if randi() % 2 == 1:
-			set_color(Color(randf(),randf(),randf(),randf()))
+			set_color(Autoload.get_color())
 			
 		if randi() % 2 == 1:
-			set("light_energy",Autoload.get_randf())
+			set("light_energy",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("light_indirect_energy",Autoload.get_randf())
+			set("light_indirect_energy",Autoload.get_float())
 		if randi() % 2 == 1:
-			set_negative(bool(randi()%2))
+			set_negative(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set("light_specular",Autoload.get_randf())
+			set("light_specular",Autoload.get_float())
 		if randi() % 2 == 1:
-			set_bake_mode(Autoload.get_randi()) # BakeMode
+			set_bake_mode(Autoload.get_int()) # BakeMode
 		if randi() % 2 == 1:
-			set_cull_mask(Autoload.get_randi())
+			set_cull_mask(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_shadow(bool(randi()%2))
+			set_shadow(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_shadow_color(Color(randf(),randf(),randf(),randf()))
+			set_shadow_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set("shadow_bias",Autoload.get_randf())
+			set("shadow_bias",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("shadow_contact",Autoload.get_randf())
+			set("shadow_contact",Autoload.get_float())
 		if randi() % 2 == 1:
-			set_shadow_reverse_cull_face(bool(randi()%2))
+			set_shadow_reverse_cull_face(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_editor_only(bool(randi()%2))
+			set_editor_only(Autoload.get_bool())

@@ -17,24 +17,24 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_subdiv(randi() % 10 - 50) # Subdiv
 		if randi() % 2 == 1:
-			set_extents(Vector3(Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf()))
+			set_extents(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_dynamic_range(Autoload.get_randi())
+			set_dynamic_range(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_energy(Autoload.get_randf())
+			set_energy(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_propagation(Autoload.get_randf())
+			set_propagation(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_bias(Autoload.get_randf())
+			set_bias(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_normal_bias(Autoload.get_randf())
+			set_normal_bias(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_interior(bool(randi()%2))
+			set_interior(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_compress(bool(randi()%2))
+			set_compress(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_probe_data(GIProbeData.new())
 			
 			if Autoload.SLOW_FUNCTIONS:
-				bake(self, bool(randi()%2))
+				bake(self, Autoload.get_bool())
 				debug_bake()

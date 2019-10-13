@@ -16,12 +16,12 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_SceneTree : SceneTree = SceneTree.new()
 #
-#		q_SceneTree.set_debug_collisions_hint(bool(randi()%2))
-#		q_SceneTree.set_debug_navigation_hint(bool(randi()%2))
+#		q_SceneTree.set_debug_collisions_hint(Autoload.get_bool())
+#		q_SceneTree.set_debug_navigation_hint(Autoload.get_bool())
 #		q_SceneTree.set_pause(true)
 #		q_SceneTree.set_pause(false)
-#		#q_SceneTree.set_refuse_new_network_connections(bool(randi()%2))
-#		q_SceneTree.set_use_font_oversampling(bool(randi()%2))
+#		#q_SceneTree.set_refuse_new_network_connections(Autoload.get_bool())
+#		q_SceneTree.set_use_font_oversampling(Autoload.get_bool())
 ##		var q_temp : Node = load("res://RES/Node.tscn").instance()
 ##		q_SceneTree.set_edited_scene_root(Node.new())
 ##		q_temp.queue_free()
@@ -29,7 +29,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#q_SceneTree.set_network_peer(NetworkedMultiplayerPeer.new())
 #		qq += str(q_SceneTree.get_root())
 ##		q_SceneTree.set_multiplayer(MultiplayerAPI.new())
-#		q_SceneTree.set_multiplayer_poll_enabled(bool(randi()%2))
+#		q_SceneTree.set_multiplayer_poll_enabled(Autoload.get_bool())
 #
 #		q_SceneTree.call_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_string() )
 #		q_SceneTree.call_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), "Roman")#GroupCallFlags
@@ -37,7 +37,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		### q_SceneTree.change_scene( String path )
 #		### q_SceneTree.change_scene_to( PackedScene packed_scene )
 #
-#		qq += str(q_SceneTree.create_timer( randf() * 50, bool(randi()%2)))
+#		qq += str(q_SceneTree.create_timer( randf() * 50, Autoload.get_bool()))
 #
 #		qq += str(q_SceneTree.get_frame())
 #		#qq += str(q_SceneTree.get_network_connected_peers())
@@ -52,8 +52,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_SceneTree.is_input_handled())
 #		#qq += str(q_SceneTree.is_network_server())
 #
-#		q_SceneTree.notify_group( Autoload.get_string(), bool(randi()%2))
-#		q_SceneTree.notify_group_flags( randi() % 8, Autoload.get_string(), bool(randi()%2)) #GroupCallFlags
+#		q_SceneTree.notify_group( Autoload.get_string(), Autoload.get_bool())
+#		q_SceneTree.notify_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_bool()) #GroupCallFlags
 #
 ##		q_temp = load("res://RES/Node.tscn").instance()
 ##		q_SceneTree.queue_delete( Node.new() )
@@ -61,11 +61,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		### q_SceneTree.quit()
 #		#qq += str(q_SceneTree.reload_current_scene())
 #
-#		q_SceneTree.set_auto_accept_quit( bool(randi()%2))
-#		q_SceneTree.set_group( Autoload.get_string(), Autoload.get_string(), bool(randi()%2))
-#		q_SceneTree.set_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), bool(randi()%2)) # GroupCallFlags
+#		q_SceneTree.set_auto_accept_quit( Autoload.get_bool())
+#		q_SceneTree.set_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool())
+#		q_SceneTree.set_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), Autoload.get_bool()) # GroupCallFlags
 #		q_SceneTree.set_input_as_handled()
-#		q_SceneTree.set_quit_on_go_back( bool(randi()%2))
+#		q_SceneTree.set_quit_on_go_back( Autoload.get_bool())
 #		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Vector2(randf() * 50,randf() * 50), randf() * 50 )#StretchMode, StretchAspect
 #
 #		q_SceneTree.queue_delete(self)

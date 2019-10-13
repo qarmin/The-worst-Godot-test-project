@@ -19,6 +19,6 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_ConvexPolygonShape2D.set_points(PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]))
+			q_ConvexPolygonShape2D.set_points(PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]))
 		if randi() % 2 == 1:
-			q_ConvexPolygonShape2D.set_point_cloud( PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]))
+			q_ConvexPolygonShape2D.set_point_cloud( PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]))

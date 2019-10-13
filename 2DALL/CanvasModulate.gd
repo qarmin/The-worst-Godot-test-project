@@ -15,4 +15,4 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_color(Color(randf(),randf(),randf(),randf()))
+			set_color(Autoload.get_color())

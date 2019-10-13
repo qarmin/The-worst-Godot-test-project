@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventScreenDrag.set_index(Autoload.get_randi())
+			q_InputEventScreenDrag.set_index(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventScreenDrag.set_position(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventScreenDrag.set_position(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_InputEventScreenDrag.set_relative(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventScreenDrag.set_relative(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_InputEventScreenDrag.set_speed(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventScreenDrag.set_speed(Autoload.get_vector2())

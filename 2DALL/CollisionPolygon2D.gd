@@ -15,12 +15,12 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_build_mode(Autoload.get_randi()) # Enum BuildMode
+			set_build_mode(Autoload.get_int()) # Enum BuildMode
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]))
+			set_polygon(PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2()]))
 		if randi() % 2 == 1:
-			set_disabled(bool(randi()%2))
+			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_one_way_collision(bool(randi()%2))
+			set_one_way_collision(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_one_way_collision_margin(bool(randi()%2))
+			set_one_way_collision_margin(Autoload.get_bool())

@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_pick_color(Color(randf(),randf(),randf(),randf()))
+			set_pick_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_edit_alpha(bool(randi()%2))
+			set_edit_alpha(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_picker())
 		if randi() % 2 == 1:

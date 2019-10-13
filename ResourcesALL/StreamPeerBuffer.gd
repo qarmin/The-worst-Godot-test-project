@@ -32,6 +32,6 @@ func _process(delta) -> void:
 			qq += str(q_StreamPeerBuffer.get_size())
 			
 		if randi() % 2 == 1:
-			q_StreamPeerBuffer.resize( Autoload.get_randi())
+			q_StreamPeerBuffer.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_StreamPeerBuffer.seek( Autoload.get_randi() )
+			q_StreamPeerBuffer.seek( Autoload.get_int() )

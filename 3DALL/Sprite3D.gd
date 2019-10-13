@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
 			set_vframes(randi()%50 - 25)
 		if randi() % 2 == 1:
@@ -23,31 +23,31 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_frame(randi() % 100 - 50)
 		if randi() % 2 == 1:
-			set_region(bool(randi()%2))
+			set_region(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_region_rect(Rect2(Vector2(randf() * 100 - 50,randf() * 100 - 50),Vector2(randf() * 100 - 50,randf() * 100 - 50)))
 
 			#SPRITE BASED
 		if randi() % 2 == 1:
-			set_centered(bool(randi()%2))
+			set_centered(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_flip_h(bool(randi()%2))
+			set_flip_h(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_flip_v(bool(randi()%2))
+			set_flip_v(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_modulate(Color(randf(),randf(),randf(),randf()))
+			set_modulate(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_opacity(Autoload.get_randf())
+			set_opacity(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_pixel_size(Autoload.get_randf())
+			set_pixel_size(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_axis(Autoload.get_randi())
+			set_axis(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_draw_flag(Autoload.get_randi(),bool(randi()%2))
+			set_draw_flag(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_alpha_cut_mode(Autoload.get_randi())
+			set_alpha_cut_mode(Autoload.get_int())
 		if randi() % 2 == 1:
 			qq += str(generate_triangle_mesh())
 		if randi() % 2 == 1:

@@ -19,21 +19,21 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_PolygonPathFinder.find_path( Vector2(Autoload.get_randf(),Autoload.get_randf()), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_PolygonPathFinder.find_path( Autoload.get_vector2(), Autoload.get_vector2() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_PolygonPathFinder.get_bounds())
 		if randi() % 2 == 1:
-			qq += str(q_PolygonPathFinder.get_closest_point( Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_PolygonPathFinder.get_closest_point( Autoload.get_vector2() ))
 		if randi() % 2 == 1:
-			qq += str(q_PolygonPathFinder.get_intersections( Vector2(Autoload.get_randf(),Autoload.get_randf()), Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_PolygonPathFinder.get_intersections( Autoload.get_vector2(), Autoload.get_vector2() ))
 		if randi() % 2 == 1:
-			qq += str(q_PolygonPathFinder.get_point_penalty( Autoload.get_randi()))
+			qq += str(q_PolygonPathFinder.get_point_penalty( Autoload.get_int()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PolygonPathFinder.is_point_inside( Vector2(Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_PolygonPathFinder.is_point_inside( Autoload.get_vector2() ))
 			
 		if randi() % 2 == 1:
-			q_PolygonPathFinder.set_point_penalty(Autoload.get_randi(), Autoload.get_randf())
+			q_PolygonPathFinder.set_point_penalty(Autoload.get_int(), Autoload.get_float())
 		if randi() % 2 == 1:
-			q_PolygonPathFinder.setup( PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]), PoolIntArray ([11,124,1241,24,21,214,12,11]))
+			q_PolygonPathFinder.setup( PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]), PoolIntArray ([11,124,1241,24,21,214,12,11]))

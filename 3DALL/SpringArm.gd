@@ -15,13 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_randi())
+			set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_shape(BoxShape.new())
 		if randi() % 2 == 1:
-			set_length(Autoload.get_randf())
+			set_length(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_margin(Autoload.get_randf())
+			set_margin(Autoload.get_float())
 			
 		if randi() % 2 == 1:
 			add_excluded_object(RID())

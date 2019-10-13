@@ -17,29 +17,29 @@ func _process(delta) -> void:
 		
 		# ScrollBar
 		if randi() % 2 == 1:
-			set_custom_step(Autoload.get_randf())
+			set_custom_step(Autoload.get_float())
 			
 		# Range
 		if randi() % 2 == 1:
-			set_min(Autoload.get_randf())
+			set_min(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_max(Autoload.get_randf())
+			set_max(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_step(Autoload.get_randf())
+			set_step(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_page(Autoload.get_randf())
+			set_page(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_value(Autoload.get_randf())
+			set_value(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_as_ratio(Autoload.get_randf())
+			set_as_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_exp_ratio(bool(randi()%2))
+			set_exp_ratio(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_use_rounded_values(bool(randi()%2))
+			set_use_rounded_values(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_allow_greater(bool(randi()%2))
+			set_allow_greater(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_allow_lesser(bool(randi()%2))
+			set_allow_lesser(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			share(self)

@@ -15,36 +15,36 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_width(Autoload.get_randf())
+			set_width(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_height(Autoload.get_randf())
+			set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_depth(Autoload.get_randf())
+			set_depth(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())
 			
 			# CSGPrimivive
 		if randi() % 2 == 1:
-			set_invert_faces(bool(randi()%2))
+			set_invert_faces(Autoload.get_bool())
 			
 			# CSGShape
 		if randi() % 2 == 1:
-			set_operation(Autoload.get_randi()) # OPERATION
+			set_operation(Autoload.get_int()) # OPERATION
 		if randi() % 2 == 1:
-			set_snap(Autoload.get_randf())
+			set_snap(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_calculate_tangents(bool(randi()%2))
+			set_calculate_tangents(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_use_collision(bool(randi()%2))
+			set_use_collision(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_collision_layer(Autoload.get_randi())
+			set_collision_layer(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_randi())
+			set_collision_mask(Autoload.get_int())
 			
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(Autoload.get_randi()))
+			qq += str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_randi()))
+			qq += str(get_collision_mask_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_meshes())
 			
@@ -52,6 +52,6 @@ func _process(delta) -> void:
 			qq += str(is_root_shape())
 			
 		if randi() % 2 == 1:
-			set_collision_layer_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())

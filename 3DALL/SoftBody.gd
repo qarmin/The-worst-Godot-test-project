@@ -15,29 +15,29 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_collision_layer(Autoload.get_randi())
+			set_collision_layer(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_randi())
+			set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_parent_collision_ignore(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_simulation_precision(Autoload.get_randi())
+			set_simulation_precision(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_total_mass(Autoload.get_randf())
+			set_total_mass(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_linear_stiffness(Autoload.get_randf())
+			set_linear_stiffness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_areaAngular_stiffness(Autoload.get_randf())
+			set_areaAngular_stiffness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_volume_stiffness(Autoload.get_randf())
+			set_volume_stiffness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_pressure_coefficient(Autoload.get_randf())
+			set_pressure_coefficient(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_damping_coefficient(Autoload.get_randf())
+			set_damping_coefficient(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_drag_coefficient(Autoload.get_randf())
+			set_drag_coefficient(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_pose_matching_coefficient(Autoload.get_randf())
+			set_pose_matching_coefficient(Autoload.get_float())
 			
 		if randi() % 2 == 1:
 			add_collision_exception_with(self)
@@ -45,9 +45,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_collision_exceptions())
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(Autoload.get_randi()))
+			qq += str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_randi()))
+			qq += str(get_collision_mask_bit(Autoload.get_int()))
 			
 		if randi() % 2 == 1:
 			qq += str(is_ray_pickable())
@@ -55,8 +55,8 @@ func _process(delta) -> void:
 			remove_collision_exception_with(get_parent())
 			
 		if randi() % 2 == 1:
-			set_collision_layer_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_ray_pickable(bool(randi()%2))
+			set_ray_pickable(Autoload.get_bool())

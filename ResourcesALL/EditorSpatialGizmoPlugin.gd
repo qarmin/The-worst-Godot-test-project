@@ -31,9 +31,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
 #		q_EditorSpatialGizmoPlugin.add_material( Autoload.get_string(), SpatialMaterial.new() )
 #
-#		q_EditorSpatialGizmoPlugin.create_handle_material( Autoload.get_string(), bool(randi()%2))
-#		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), Autoload.loadA("res://RES/Sprite.png",false), bool(randi()%2), Color(randf(),randf(),randf(),randf()))
-#		q_EditorSpatialGizmoPlugin.create_material( Autoload.get_string(), Color(randf(),randf(),randf(),randf()), bool(randi()%2), bool(randi()%2), bool(randi()%2) )
+#		q_EditorSpatialGizmoPlugin.create_handle_material( Autoload.get_string(), Autoload.get_bool())
+#		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_bool(), Autoload.get_color())
+#		q_EditorSpatialGizmoPlugin.create_material( Autoload.get_string(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool() )
 #
 #		qq += str(q_EditorSpatialGizmoPlugin.get_material( Autoload.get_string(), EditorSpatialGizmo.new() ))
 #

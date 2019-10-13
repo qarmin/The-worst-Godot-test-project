@@ -16,15 +16,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_enable_h_scroll(bool(randi()%2))
+			set_enable_h_scroll(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_h_scroll(Autoload.get_randi())
+			set_h_scroll(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_enable_v_scroll(bool(randi()%2))
+			set_enable_v_scroll(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_v_scroll(Autoload.get_randi())
+			set_v_scroll(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_deadzone(Autoload.get_randi())
+			set_deadzone(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(get_h_scrollbar())

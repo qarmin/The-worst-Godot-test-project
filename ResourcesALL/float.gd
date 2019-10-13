@@ -17,8 +17,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			q_float = float(bool(randi()%2))
+			q_float = float(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_float = float(Autoload.get_randi())
+			q_float = float(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_float = float(Autoload.get_string())

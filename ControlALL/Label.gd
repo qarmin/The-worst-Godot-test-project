@@ -16,25 +16,25 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_text(str(bool(randi()%2)))
+			set_text(str(Autoload.get_bool()))
 		if randi() % 2 == 1:
-			set_align(Autoload.get_randi())
+			set_align(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_valign(Autoload.get_randi())
+			set_valign(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_autowrap(bool(randi()%2))
+			set_autowrap(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_clip_text(bool(randi()%2))
+			set_clip_text(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_uppercase(bool(randi()%2))
+			set_uppercase(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_visible_characters(Autoload.get_randi())
+			set_visible_characters(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_percent_visible(Autoload.get_randi())
+			set_percent_visible(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_lines_skipped(Autoload.get_randi())
+			set_lines_skipped(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_max_lines_visible(Autoload.get_randi())
+			set_max_lines_visible(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(get_line_count())

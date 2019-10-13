@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Quat : Quat = Quat(Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+var q_Quat : Quat = Quat(Basis( Autoload.get_vector3()))
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -18,18 +18,18 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Quat = Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())
+				q_Quat = Quat(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 #			if randi() % 2 == 1:
-#				q_Quat = Quat(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+#				q_Quat = Quat(Autoload.get_vector3())
 			if randi() % 2 == 1:
-				q_Quat = Quat(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Autoload.get_randf())
+				q_Quat = Quat(Autoload.get_vector3(),Autoload.get_float())
 			if randi() % 2 == 1:
-				q_Quat = Quat(Basis( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+				q_Quat = Quat(Basis( Autoload.get_vector3()))
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.cubic_slerp( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Quat.cubic_slerp( Autoload.get_quat(), Autoload.get_quat(), Autoload.get_quat(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(q_Quat.dot( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(q_Quat.dot( Autoload.get_quat()))
 		if randi() % 2 == 1:
 			qq += str(q_Quat.get_euler())
 		if randi() % 2 == 1:
@@ -46,14 +46,14 @@ func _process(delta) -> void:
 			qq += str(q_Quat.normalized())
 	
 		if randi() % 2 == 1:
-			q_Quat.set_axis_angle( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf())
+			q_Quat.set_axis_angle( Autoload.get_vector3(), Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Quat.set_euler( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) )
+			q_Quat.set_euler( Autoload.get_vector3() )
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.slerp( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Quat.slerp( Autoload.get_quat(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(q_Quat.slerpni(Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Quat.slerpni(Autoload.get_quat(), Autoload.get_float()))
 	
 		if randi() % 2 == 1:
-			qq += str(q_Quat.xform( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(q_Quat.xform( Autoload.get_vector3()))

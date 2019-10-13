@@ -44,23 +44,23 @@ func _process(delta) -> void:
 			q_Array.back()
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch( Autoload.get_string(), bool(randi()%2)))
+			qq += str(q_Array.bsearch( Autoload.get_string(), Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), bool(randi()%2)))
+			qq += str(q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), Autoload.get_bool()))
 
 		if randi() % 2 == 1:
 			q_Array.clear()
 		if randi() % 2 == 1:
 			qq += str(q_Array.count( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Array.duplicate( bool(randi()%2)))
+			qq += str(q_Array.duplicate( Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_Array.empty())
 		if randi() % 2 == 1:
 			q_Array.erase( Autoload.get_string() )
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.find( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_Array.find( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_Array.find_last( Autoload.get_string() ))
 
@@ -73,7 +73,7 @@ func _process(delta) -> void:
 			qq += str(q_Array.hash())
 
 		if randi() % 2 == 1:
-			q_Array.insert( Autoload.get_randi(), Autoload.get_string()) 
+			q_Array.insert( Autoload.get_int(), Autoload.get_string()) 
 		if randi() % 2 == 1:
 			q_Array.invert()
 		if randi() % 2 == 1:
@@ -92,11 +92,11 @@ func _process(delta) -> void:
 			q_Array.push_front( Autoload.get_string() )
 
 		if randi() % 2 == 1:
-			q_Array.remove( Autoload.get_randi())
+			q_Array.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_Array.resize( Autoload.get_randi())
+			q_Array.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			qq += str(q_Array.rfind( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_Array.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_Array.shuffle()
 		if randi() % 2 == 1:
@@ -105,8 +105,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Array.sort()
 		if randi() % 2 == 1:
-			q_Array.sort_custom( q_temp, "Ram" )
+			q_Array.sort_custom( q_temp, Autoload.get_string() )
 
 func delete_node():
-	print(Autoload.get_string())
 	q_temp.queue_free()

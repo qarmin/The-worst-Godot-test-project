@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpriteFrames.add_animation( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_frame( Autoload.get_string(), ImageTexture.new(), Autoload.get_randi() )
+			q_SpriteFrames.add_frame( Autoload.get_string(), ImageTexture.new(), Autoload.get_int() )
 			
 		if randi() % 2 == 1:
 			q_SpriteFrames.clear( Autoload.get_string() )
@@ -51,9 +51,9 @@ func _process(delta) -> void:
 			q_SpriteFrames.rename_animation( Autoload.get_string(), Autoload.get_string() )
 			
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_animation_loop( Autoload.get_string(), bool(randi()%2))
+			q_SpriteFrames.set_animation_loop( Autoload.get_string(), Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_animation_speed( Autoload.get_string(), Autoload.get_randf())
+			q_SpriteFrames.set_animation_speed( Autoload.get_string(), Autoload.get_float())
 		if randi() % 2 == 1:
-			q_SpriteFrames.set_frame( Autoload.get_string(), Autoload.get_randi(), Texture.new() )
+			q_SpriteFrames.set_frame( Autoload.get_string(), Autoload.get_int(), Texture.new() )
 			

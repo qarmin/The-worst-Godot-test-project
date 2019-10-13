@@ -23,6 +23,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_PackedScene.get_state())
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_PackedScene.instance( Autoload.get_randi() ).queue_free()) # GenEditState
+#			qq += str(q_PackedScene.instance( Autoload.get_int() ).queue_free()) # GenEditState
 		if randi() % 2 == 1:
 			qq += str(q_PackedScene.pack( self ))

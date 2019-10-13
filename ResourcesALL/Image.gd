@@ -33,16 +33,16 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.compress( Autoload.get_randi(), Autoload.get_randi(), randf() * 10 - 5)) #compressMode, #CompressSource
+#			qq += str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), randf() * 10 - 5)) #compressMode, #CompressSource
 #		if randi() % 2 == 1:
-#			q_Image.convert(Autoload.get_randi()) #Format
+#			q_Image.convert(Autoload.get_int()) #Format
 		if randi() % 2 == 1:
 			q_Image.copy_from( Image.new() )
 
+#	BUG	if randi() % 2 == 1:
+#			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() ) #Format
 		if randi() % 2 == 1:
-			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), Autoload.get_randi() ) #Format
-		if randi() % 2 == 1:
-			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, bool(randi()%2), Autoload.get_randi() , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
+			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
 
 		if randi() % 2 == 1:
 			q_Image.crop( randi() % 10 - 5, randi() % 10 - 5 )
@@ -53,8 +53,8 @@ func _process(delta) -> void:
 			qq += str(q_Image.detect_alpha())
 #	BUG	if randi() % 2 == 1:
 #			q_Image.expand_x2_hq2x()
-#		if randi() % 2 == 1:
-#			q_Image.fill( Color(randf(),randf(),randf(),randf()))
+#	BUG	if randi() % 2 == 1:
+#			q_Image.fill( Autoload.get_color())
 		if randi() % 2 == 1:
 			q_Image.fix_alpha_edges()
 
@@ -64,7 +64,7 @@ func _process(delta) -> void:
 			q_Image.flip_y()
 
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.generate_mipmaps( bool(randi()%2)))
+#			qq += str(q_Image.generate_mipmaps( Autoload.get_bool()))
 
 		if randi() % 2 == 1:
 			qq += str(q_Image.get_data())
@@ -98,7 +98,7 @@ func _process(delta) -> void:
 			qq += str(q_Image.is_invisible())
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.load( "res://RES/Sprite1.png" ))
+			qq += str(q_Image.load( "Sprite.png" ))
 		if randi() % 2 == 1:
 			qq += str(q_Image.load_jpg_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
 		if randi() % 2 == 1:
@@ -114,9 +114,9 @@ func _process(delta) -> void:
 			q_Image.premultiply_alpha()
 
 		if randi() % 2 == 1:
-			q_Image.resize( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_randi())  #Interpolation
+			q_Image.resize( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_int())  #Interpolation
 		if randi() % 2 == 1:
-			q_Image.resize_to_po2( bool(randi()%2))
+			q_Image.resize_to_po2( Autoload.get_bool())
 
 		if randi() % 2 == 1:
 			qq += str(q_Image.rgbe_to_srgb())
@@ -124,9 +124,9 @@ func _process(delta) -> void:
 			qq += str(q_Image.save_png( "res://TEMP/Image" ))
 
 #		if randi() % 2 == 1:
-#			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Color(randf(),randf(),randf(),randf()))
+#			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Autoload.get_color())
 #		if randi() % 2 == 1:
-#			q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Color(randf(),randf(),randf(),randf()))
+#			q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Autoload.get_color())
 
 		if randi() % 2 == 1:
 			q_Image.shrink_x2()

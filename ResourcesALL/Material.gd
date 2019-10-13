@@ -15,5 +15,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_Material : Material = Material.new()
 #
-#			q_Material.set_render_priority(Autoload.get_randi())
+#			q_Material.set_render_priority(Autoload.get_int())
 #			q_Material.set_next_pass(Material.new())

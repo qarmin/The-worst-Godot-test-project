@@ -21,9 +21,9 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.get_attribute_count())
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.get_attribute_name( Autoload.get_randi()))
+#			qq += str(q_XMLParser.get_attribute_name( Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.get_attribute_value( Autoload.get_randi()))
+#			qq += str(q_XMLParser.get_attribute_value( Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.get_current_line())
 #		if randi() % 2 == 1:
@@ -52,6 +52,6 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.read())
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.seek( Autoload.get_randi()))
+#			qq += str(q_XMLParser.seek( Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			q_XMLParser.skip_section()

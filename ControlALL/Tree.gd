@@ -16,19 +16,19 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_columns(Autoload.get_randi())
+			set_columns(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_allow_reselect(bool(randi()%2))
+			set_allow_reselect(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_allow_rmb_select(bool(randi()%2))
+			set_allow_rmb_select(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_hide_folding(bool(randi()%2))
+			set_hide_folding(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_hide_root(bool(randi()%2))
+			set_hide_root(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_drop_mode_flags(Autoload.get_randi())
+			set_drop_mode_flags(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_select_mode(Autoload.get_randi())
+			set_select_mode(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(are_column_titles_visible())
@@ -39,15 +39,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			ensure_cursor_is_visible()
 		if randi() % 2 == 1:
-			qq += str(get_column_at_position(Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			qq += str(get_column_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
-			qq += str(get_column_title(Autoload.get_randi()))
+			qq += str(get_column_title(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_column_width(Autoload.get_randi()))
+			qq += str(get_column_width(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_custom_popup_rect())
 		if randi() % 2 == 1:
-			qq += str(get_drop_section_at_position(Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			qq += str(get_drop_section_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
 			qq += str(get_edited())
 		if randi() % 2 == 1:
@@ -55,7 +55,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_item_area_rect(self))
 		if randi() % 2 == 1:
-			qq += str(get_item_at_position(Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			qq += str(get_item_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
 			qq += str(get_next_selected(self))
 		if randi() % 2 == 1:
@@ -69,10 +69,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_selected_column())
 		if randi() % 2 == 1:
-			set_column_expand(Autoload.get_randi(),bool(randi()%2))
+			set_column_expand(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_column_min_width(Autoload.get_randi(),Autoload.get_randi())
+			set_column_min_width(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_column_title(Autoload.get_randi(),str(randi()%50))
+			set_column_title(Autoload.get_int(),str(randi()%50))
 		if randi() % 2 == 1:
-			set_column_titles_visible(bool(randi()%2))
+			set_column_titles_visible(Autoload.get_bool())

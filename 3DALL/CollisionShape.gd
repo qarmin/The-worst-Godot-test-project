@@ -17,7 +17,7 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_shape(BoxShape.new())
 		if randi() % 2 == 1:
-			set_disabled(bool(randi()%2))
+			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
 			make_convex_from_brothers()
 		if randi() % 2 == 1:

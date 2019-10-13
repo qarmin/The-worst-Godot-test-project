@@ -19,9 +19,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_WebSocketClient.set_verify_ssl_enabled(bool(randi()%2))
+			q_WebSocketClient.set_verify_ssl_enabled(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
-			qq += str(q_WebSocketClient.connect_to_url( Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), bool(randi()%2)))
+			qq += str(q_WebSocketClient.connect_to_url( Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), Autoload.get_bool()))
 		if randi() % 2 == 1:
-			q_WebSocketClient.disconnect_from_host( Autoload.get_randi(), Autoload.get_string() )
+			q_WebSocketClient.disconnect_from_host( Autoload.get_int(), Autoload.get_string() )

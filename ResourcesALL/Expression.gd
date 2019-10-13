@@ -24,7 +24,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			qq += str(q_Expression.execute( [Autoload.get_string()], q_temp0, bool(randi()%2)))
+			qq += str(q_Expression.execute( [Autoload.get_string()], q_temp0, Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_Expression.get_error_text())
 		if randi() % 2 == 1:

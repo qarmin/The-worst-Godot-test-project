@@ -35,7 +35,7 @@ func _process(delta) -> void:
 			if Autoload.SLOW_FUNCTIONS:
 				qq += str(q_Directory.get_current_drive())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_drive( Autoload.get_randi()))
+			qq += str(q_Directory.get_drive( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_Directory.get_drive_count())
 		if randi() % 2 == 1:
@@ -44,7 +44,7 @@ func _process(delta) -> void:
 			qq += str(q_Directory.get_space_left())
 			
 		if randi() % 2 == 1:
-			qq += str(q_Directory.list_dir_begin( bool(randi()%2), bool(randi()%2) ))
+			qq += str(q_Directory.list_dir_begin( Autoload.get_bool(), Autoload.get_bool() ))
 		if randi() % 2 == 1:
 			q_Directory.list_dir_end()
 			

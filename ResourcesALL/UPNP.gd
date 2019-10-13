@@ -21,25 +21,25 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_UPNP.set_discover_multicast_if(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_UPNP.set_discover_local_port(Autoload.get_randi())
+			q_UPNP.set_discover_local_port(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_UPNP.set_discover_ipv6(bool(randi()%2))
+			q_UPNP.set_discover_ipv6(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			q_UPNP.add_device( UPNPDevice.new() )
 		if randi() % 2 == 1:
-			qq += str(q_UPNP.add_port_mapping( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_string(), Autoload.get_string(), Autoload.get_randi() ))
+			qq += str(q_UPNP.add_port_mapping( Autoload.get_int(), Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_int() ))
 			
 		if randi() % 2 == 1:
 			q_UPNP.clear_devices()
 		if randi() % 2 == 1:
-			qq += str(q_UPNP.delete_port_mapping( Autoload.get_randi(), Autoload.get_string() ))
+			qq += str(q_UPNP.delete_port_mapping( Autoload.get_int(), Autoload.get_string() ))
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_UPNP.discover( Autoload.get_randi(), Autoload.get_randi(), Autoload.get_string() ))
+				qq += str(q_UPNP.discover( Autoload.get_int(), Autoload.get_int(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_UPNP.get_device( Autoload.get_randi() ))
+			qq += str(q_UPNP.get_device( Autoload.get_int() ))
 		if randi() % 2 == 1:
 			qq += str(q_UPNP.get_device_count())
 		if randi() % 2 == 1:
@@ -48,6 +48,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_UPNP.query_external_address())
 		if randi() % 2 == 1:
-			q_UPNP.remove_device( Autoload.get_randi() )
+			q_UPNP.remove_device( Autoload.get_int() )
 		if randi() % 2 == 1:
-			q_UPNP.set_device( Autoload.get_randi(), UPNPDevice.new() )
+			q_UPNP.set_device( Autoload.get_int(), UPNPDevice.new() )

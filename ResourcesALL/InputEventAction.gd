@@ -21,6 +21,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 				q_InputEventAction.set_action(Autoload.get_string())
 		if randi() % 2 == 1:
-				q_InputEventAction.set_pressed(bool(randi()%2))
+				q_InputEventAction.set_pressed(Autoload.get_bool())
 		if randi() % 2 == 1:
-				q_InputEventAction.set_strength(Autoload.get_randf())
+				q_InputEventAction.set_strength(Autoload.get_float())

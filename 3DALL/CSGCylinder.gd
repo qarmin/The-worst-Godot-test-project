@@ -15,14 +15,14 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_radius(Autoload.get_randf())
+			set_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_height(Autoload.get_randf())
+			set_height(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_sides(randi()%5 + 4)
 		if randi() % 2 == 1:
-			set_cone(bool(randi()%2))
+			set_cone(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_smooth_faces(bool(randi()%2))
+			set_smooth_faces(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())

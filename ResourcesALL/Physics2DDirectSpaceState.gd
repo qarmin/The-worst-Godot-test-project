@@ -20,8 +20,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Physics2DDirectSpaceState.collide_shape( Physics2DShapeQueryParameters.new(), randi()%50))
 #		qq += str(q_Physics2DDirectSpaceState.get_rest_info( Physics2DShapeQueryParameters.new() ))
 #
-#		qq += str(q_Physics2DDirectSpaceState.intersect_point( Vector2(randf() * 50,randf() * 50), randi()%50, [124,214,214,124,214,214,2], randi()%50, bool(randi()%2), bool(randi()%2) ))
-#		qq += str(q_Physics2DDirectSpaceState.intersect_point_on_canvas( Vector2(randf() * 50,randf() * 50), randi()%50, randi()%50, [124,214,214,124,214,214,2], randi()%50, bool(randi()%2), bool(randi()%2) ))
-#		qq += str(q_Physics2DDirectSpaceState.intersect_ray( Vector2(randf() * 50,randf() * 50), Vector2(randf() * 50,randf() * 50), [124,214,214,124,214,214,2], randi()%50, bool(randi()%2), bool(randi()%2) ))
+#		qq += str(q_Physics2DDirectSpaceState.intersect_point( Vector2(randf() * 50,randf() * 50), randi()%50, [124,214,214,124,214,214,2], randi()%50, Autoload.get_bool(), Autoload.get_bool() ))
+#		qq += str(q_Physics2DDirectSpaceState.intersect_point_on_canvas( Vector2(randf() * 50,randf() * 50), randi()%50, randi()%50, [124,214,214,124,214,214,2], randi()%50, Autoload.get_bool(), Autoload.get_bool() ))
+#		qq += str(q_Physics2DDirectSpaceState.intersect_ray( Vector2(randf() * 50,randf() * 50), Vector2(randf() * 50,randf() * 50), [124,214,214,124,214,214,2], randi()%50, Autoload.get_bool(), Autoload.get_bool() ))
 #		qq += str(q_Physics2DDirectSpaceState.intersect_shape( Physics2DShapeQueryParameters.new(), randi()%50))
 #

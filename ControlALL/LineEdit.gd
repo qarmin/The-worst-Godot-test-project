@@ -18,33 +18,33 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(str(randf()))
 		if randi() % 2 == 1:
-			set_align(Autoload.get_randi())
+			set_align(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_max_length(Autoload.get_randi())
+			set_max_length(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_editable(bool(randi()%2))
+			set_editable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_secret(bool(randi()%2))
+			set_secret(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_secret_character(str(randi()%10))
 		if randi() % 2 == 1:
-			set_expand_to_text_length(bool(randi()%2))
+			set_expand_to_text_length(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_focus_mode(Autoload.get_randi())
+			set_focus_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_context_menu_enabled(bool(randi()%2))
+			set_context_menu_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_clear_button_enabled(bool(randi()%2))
+			set_clear_button_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_placeholder(str(randf()))
 		if randi() % 2 == 1:
-			set_placeholder_alpha(Autoload.get_randf())
+			set_placeholder_alpha(Autoload.get_float())
 		if randi() % 2 == 1:
-			cursor_set_blink_enabled(bool(randi()%2))
+			cursor_set_blink_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			cursor_set_blink_speed(Autoload.get_randf())
+			cursor_set_blink_speed(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_cursor_position(Autoload.get_randi())
+			set_cursor_position(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			append_at_cursor(str(randf()))
@@ -53,9 +53,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_menu())
 		if randi() % 2 == 1:
-			qq += str(menu_option(Autoload.get_randi()))#HMMM A LITTLE TOO SLOW
+			qq += str(menu_option(Autoload.get_int()))#HMMM A LITTLE TOO SLOW
 		if randi() % 2 == 1:
-			select(Autoload.get_randi(),Autoload.get_randi())
+			select(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
 			select_all()
 			

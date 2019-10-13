@@ -16,37 +16,37 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_space_override_mode(Autoload.get_randi())
+			set_space_override_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_gravity_is_point(bool(randi()%2))
+			set_gravity_is_point(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_gravity_distance_scale(Autoload.get_randf())
+			set_gravity_distance_scale(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_gravity_vector(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_gravity_vector(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_gravity(Autoload.get_randf())
+			set_gravity(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_linear_damp(Autoload.get_randf())
+			set_linear_damp(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_angular_damp(Autoload.get_randf())
+			set_angular_damp(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_priority(Autoload.get_randf())
+			set_priority(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_monitoring(bool(randi()%2))
+			set_monitoring(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_monitorable(bool(randi()%2))
+			set_monitorable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_collision_layer(Autoload.get_randi())
+			set_collision_layer(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_randi())
+			set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_audio_bus_override(bool(randi()%2))
+			set_audio_bus_override(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_audio_bus_name(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(Autoload.get_randi()))
+			qq += str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_randi()))
+			qq += str(get_collision_mask_bit(Autoload.get_int()))
 		if monitoring:
 			if randi() % 2 == 1:
 				qq += str(get_overlapping_areas())
@@ -58,6 +58,6 @@ func _process(delta) -> void:
 			qq += str(overlaps_body(self))
 			
 		if randi() % 2 == 1:
-			set_collision_layer_bit(Autoload.get_randi(),Autoload.get_randi())
+			set_collision_layer_bit(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(Autoload.get_randi(),Autoload.get_randi())
+			set_collision_mask_bit(Autoload.get_int(),Autoload.get_int())

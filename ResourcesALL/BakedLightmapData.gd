@@ -19,23 +19,23 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_bounds(AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			q_BakedLightmapData.set_bounds(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_cell_space_transform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			q_BakedLightmapData.set_cell_space_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_cell_subdiv(randi()%10 -5)
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_energy(Autoload.get_randf())
+			q_BakedLightmapData.set_energy(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_octree(PoolByteArray([11,124,1241,24,21,214,12,11]))
 			
 		if randi() % 2 == 1:
-			q_BakedLightmapData.add_user( Autoload.get_string(), Autoload.loadA("res://RES/Sprite.png"), Autoload.get_randi())
+			q_BakedLightmapData.add_user( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_int())
 		if randi() % 2 == 1:
 			q_BakedLightmapData.clear_users()
 		if randi() % 2 == 1:
 			qq += str(q_BakedLightmapData.get_user_count())
 		if randi() % 2 == 1:
-			qq += str(q_BakedLightmapData.get_user_lightmap( Autoload.get_randi()))
+			qq += str(q_BakedLightmapData.get_user_lightmap( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_BakedLightmapData.get_user_path( Autoload.get_randi()) )
+			qq += str(q_BakedLightmapData.get_user_path( Autoload.get_int()) )

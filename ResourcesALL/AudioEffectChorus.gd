@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_voice_count(Autoload.get_randi())
+			q_AudioEffectChorus.set_voice_count(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_dry(Autoload.get_randf())
+			q_AudioEffectChorus.set_dry(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set_wet(Autoload.get_randf())
+			q_AudioEffectChorus.set_wet(Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/delay_ms",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/delay_ms",Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/rate_hz",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/rate_hz",Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/depth_ms",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/depth_ms",Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/level_db",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/level_db",Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/cutoff_hz",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/cutoff_hz",Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectChorus.set("voice/" + str(Autoload.get_randi()) + "/pan",Autoload.get_randf())
+			q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/pan",Autoload.get_float())

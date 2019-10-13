@@ -15,51 +15,51 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_color(Color(randf(),randf(),randf(),randf()))
+			set_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_antialiased(bool(randi()%2))
+			set_antialiased(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_texture_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_texture_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_texture_scale(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_texture_scale(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_texture_rotation_degrees(Autoload.get_randf())
+			set_texture_rotation_degrees(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_texture_rotation(Autoload.get_randf())
+			set_texture_rotation(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_skeleton(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_invert(bool(randi()%2))
+			set_invert(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_invert_border(Autoload.get_randf())
+			set_invert_border(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_polygon([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())])
+			set_polygon([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
 		if randi() % 2 == 1:
-			set_uv([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())])
+			set_uv([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
 		if randi() % 2 == 1:
-			set_vertex_colors([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+			set_vertex_colors([Autoload.get_color(),Autoload.get_color()])
 		if randi() % 2 == 1:
-			set_polygons([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()])
+			set_polygons([Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()])
 		if randi() % 2 == 1:
-			_set_bones([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()])
+			_set_bones([Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()])
 		if randi() % 2 == 1:
-			set_internal_vertex_count(Autoload.get_randi())
+			set_internal_vertex_count(Autoload.get_int())
 		if randi() % 2 == 1:
-			add_bone(Autoload.get_string(),PoolRealArray([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
-			erase_bone(Autoload.get_randi())
+			add_bone(Autoload.get_string(),PoolRealArray([Autoload.get_float(),Autoload.get_float(),Autoload.get_float()]))
+			erase_bone(Autoload.get_int())
 		if randi() % 2 == 1:
 			clear_bones()
 		if randi() % 2 == 1:
 			qq += str(get_bone_count())
 		if randi() % 2 == 1:
-			qq += str(get_bone_path(Autoload.get_randi()))
+			qq += str(get_bone_path(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_weights(Autoload.get_randi()))
+			qq += str(get_bone_weights(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(set_bone_path(Autoload.get_randi(),Autoload.get_string()))
+			qq += str(set_bone_path(Autoload.get_int(),Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(set_bone_weights(Autoload.get_randi(),[Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
+			qq += str(set_bone_weights(Autoload.get_int(),[Autoload.get_float(),Autoload.get_float(),Autoload.get_float()]))

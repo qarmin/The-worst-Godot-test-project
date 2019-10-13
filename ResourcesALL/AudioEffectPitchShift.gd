@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectPitchShift.set_pitch_scale(Autoload.get_randf())
+			q_AudioEffectPitchShift.set_pitch_scale(Autoload.get_float())

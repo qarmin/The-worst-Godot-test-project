@@ -19,16 +19,16 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_threshold(Autoload.get_randf())
+			q_AudioEffectCompressor.set_threshold(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_ratio(Autoload.get_randf())
+			q_AudioEffectCompressor.set_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_gain(Autoload.get_randf())
+			q_AudioEffectCompressor.set_gain(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_attack_us(Autoload.get_randf())
+			q_AudioEffectCompressor.set_attack_us(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_release_ms(Autoload.get_randf())
+			q_AudioEffectCompressor.set_release_ms(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectCompressor.set_mix(Autoload.get_randf())
+			q_AudioEffectCompressor.set_mix(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_AudioEffectCompressor.set_sidechain(Autoload.get_string())

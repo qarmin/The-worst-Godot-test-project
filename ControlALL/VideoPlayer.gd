@@ -16,25 +16,25 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_audio_track(Autoload.get_randi())
+			set_audio_track(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_stream(Autoload.loadA("res://RES/VideoStreamWebm.tres"))
+			set_stream(Autoload.loadA("VideoStreamWebm.tres"))
 		if randi() % 2 == 1:
-			set_volume_db(Autoload.get_randf())
+			set_volume_db(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_volume(Autoload.get_randf())
+			set_volume(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_autoplay(bool(randi()%2))
+			set_autoplay(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_paused(bool(randi()%2))
+			set_paused(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_expand(bool(randi()%2))
+			set_expand(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_buffering_msec(Autoload.get_randi())
+			set_buffering_msec(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_stream_position(Autoload.get_randf())
+			set_stream_position(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_bus(str(Autoload.get_randf()))
+			set_bus(str(Autoload.get_float()))
 			
 		if randi() % 2 == 1:
 			qq += str(get_stream_name())

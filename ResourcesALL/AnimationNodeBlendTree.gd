@@ -22,11 +22,11 @@ func _process(delta) -> void:
 			q_AnimationNodeBlendTree.set_graph_offset(Vector2(randf() * 50,randf() * 50))
 			
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.add_node( Autoload.get_string(), AnimationNode.new(), Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_AnimationNodeBlendTree.add_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.connect_node( Autoload.get_string(), Autoload.get_randi(), Autoload.get_string() )
+			q_AnimationNodeBlendTree.connect_node( Autoload.get_string(), Autoload.get_int(), Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.disconnect_node( Autoload.get_string(), Autoload.get_randi() )
+			q_AnimationNodeBlendTree.disconnect_node( Autoload.get_string(), Autoload.get_int() )
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNodeBlendTree.get_node( Autoload.get_string() ))
 		if randi() % 2 == 1:
@@ -38,4 +38,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendTree.rename_node( Autoload.get_string(), Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.set_node_position( Autoload.get_string(), Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_AnimationNodeBlendTree.set_node_position( Autoload.get_string(), Autoload.get_vector2())

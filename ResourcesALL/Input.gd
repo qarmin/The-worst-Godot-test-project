@@ -19,7 +19,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_Input.action_press("Rafal",randf() * 50)
 #		q_Input.action_release("Roman")
 #
-#		q_Input.add_joy_mapping(Autoload.get_string(),bool(randi()%2))
+#		q_Input.add_joy_mapping(Autoload.get_string(),Autoload.get_bool())
 #
 #		qq += str(q_Input.get_accelerometer())
 #		qq += str(q_Input.get_action_strength(Autoload.get_string()))
@@ -49,14 +49,14 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Input.is_key_pressed(randi()%50))
 #		qq += str(q_Input.is_mouse_button_pressed(randi()%50))
 #
-#		q_Input.joy_connection_changed(randi()%50, bool(randi()%2), Autoload.get_string(), Autoload.get_string()) 
+#		q_Input.joy_connection_changed(randi()%50, Autoload.get_bool(), Autoload.get_string(), Autoload.get_string()) 
 #		#q_Input.parse_input_event(InputEvent.new())
 #		q_Input.remove_joy_mapping(Autoload.get_string())
 #
-#		#q_Input.set_custom_mouse_cursor(Autoload.loadA("res://RES/Sprite1.png",false), randi() % 17,Vector2(randf() * 50,randf() * 50)) #CursorShape
+#		#q_Input.set_custom_mouse_cursor(Autoload.loadA("Sprite.png"), randi() % 17,Vector2(randf() * 50,randf() * 50)) #CursorShape
 #		q_Input.set_default_cursor_shape(randi() % 17) #CursorShape
 #		q_Input.set_mouse_mode(randi() % 4) #MouseMode
-#		q_Input.set_use_accumulated_input(bool(randi()%2))
+#		q_Input.set_use_accumulated_input(Autoload.get_bool())
 #
 #		#q_Input.start_joy_vibration(randi()%50,randf() * 50,randf() * 50,randf() * 50)
 #		q_Input.stop_joy_vibration(randi()%50)

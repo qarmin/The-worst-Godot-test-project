@@ -18,31 +18,31 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_String = String( bool(randi()%2))
+				q_String = String( Autoload.get_bool())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_randi())
+				q_String = String( Autoload.get_int())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_randf())
+				q_String = String( Autoload.get_float())
 			if randi() % 2 == 1:
-				q_String = String( Vector2(Autoload.get_randf(),Autoload.get_randf()))
+				q_String = String( Autoload.get_vector2())
 			if randi() % 2 == 1:
-				q_String = String( Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+				q_String = String( Autoload.get_rect2d())
 			if randi() % 2 == 1:
-				q_String = String( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+				q_String = String( Autoload.get_vector3())
 			if randi() % 2 == 1:
-				q_String = String( Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+				q_String = String( Autoload.get_transform2d())
 			if randi() % 2 == 1:
-				q_String = String( Plane(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+				q_String = String( Autoload.get_plane())
 			if randi() % 2 == 1:
-				q_String = String( Quat(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+				q_String = String( Autoload.get_quat())
 			if randi() % 2 == 1:
-				q_String = String( AABB(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+				q_String = String( AABB(Autoload.get_vector3(),Autoload.get_vector3()))
 			if randi() % 2 == 1:
-				q_String = String( Basis(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+				q_String = String( Basis(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 			if randi() % 2 == 1:
-				q_String = String( Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+				q_String = String( Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 			if randi() % 2 == 1:
-				q_String = String( Color(randf(),randf(),randf(),randf()))
+				q_String = String( Autoload.get_color())
 			if randi() % 2 == 1:
 				q_String = String( NodePath(Autoload.get_string()))
 			if randi() % 2 == 1:
@@ -52,19 +52,19 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_String = String( [124,214,214,124,214,214,2])
 			if randi() % 2 == 1:
-				q_String = String( PoolByteArray([Autoload.get_randi()]))
+				q_String = String( PoolByteArray([Autoload.get_int()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolIntArray([Autoload.get_randi()]))
+				q_String = String( PoolIntArray([Autoload.get_int()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolRealArray([Autoload.get_randf()]))
+				q_String = String( PoolRealArray([Autoload.get_float()]))
 			if randi() % 2 == 1:
 				q_String = String( PoolStringArray([Autoload.get_string()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf())]))
+				q_String = String( PoolVector2Array([Autoload.get_vector2()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolVector3Array([Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())]))
+				q_String = String( PoolVector3Array([Autoload.get_vector3()]))
 			if randi() % 2 == 1:
-				q_String = String( PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+				q_String = String( PoolColorArray([Autoload.get_color()]))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.begins_with( Autoload.get_string()))
@@ -85,14 +85,14 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.ends_with( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.erase( Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(q_String.erase( Autoload.get_int(),Autoload.get_int()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.find( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_String.find( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.find_last( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.findn( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_String.findn( Autoload.get_string(), Autoload.get_int()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.format( Autoload.get_string(), Autoload.get_string() ))
@@ -117,7 +117,7 @@ func _process(delta) -> void:
 			qq += str(q_String.http_unescape())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.insert( Autoload.get_randi(), Autoload.get_string() ))
+			qq += str(q_String.insert( Autoload.get_int(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.is_abs_path())
@@ -132,7 +132,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.is_valid_float())
 		if randi() % 2 == 1:
-			qq += str(q_String.is_valid_hex_number( bool(randi()%2)))
+			qq += str(q_String.is_valid_hex_number( Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_String.is_valid_html_color())
 		if randi() % 2 == 1:
@@ -145,7 +145,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.json_escape())
 		if randi() % 2 == 1:
-			qq += str(q_String.left( Autoload.get_randi()))
+			qq += str(q_String.left( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.length())
 		if randi() % 2 == 1:
@@ -164,12 +164,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_String.nocasecmp_to( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_String.ord_at( Autoload.get_randi()))
+			qq += str(q_String.ord_at( Autoload.get_int()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.pad_decimals( Autoload.get_randi()))
+			qq += str(q_String.pad_decimals( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_String.pad_zeros( Autoload.get_randi()))
+			qq += str(q_String.pad_zeros( Autoload.get_int()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.percent_decode())
@@ -185,14 +185,14 @@ func _process(delta) -> void:
 			qq += str(q_String.replacen( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.rfind( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_String.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_String.rfindn( Autoload.get_string(), Autoload.get_randi()))
+			qq += str(q_String.rfindn( Autoload.get_string(), Autoload.get_int()))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.right( Autoload.get_randi()))
+			qq += str(q_String.right( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_String.rsplit( Autoload.get_string(), bool(randi()%2), Autoload.get_randi()))
+			qq += str(q_String.rsplit( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.rstrip( Autoload.get_string() ))
 			
@@ -205,17 +205,17 @@ func _process(delta) -> void:
 			qq += str(q_String.similarity( Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.split( Autoload.get_string(), bool(randi()%2), Autoload.get_randi()))
+			qq += str(q_String.split( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_String.split_floats( Autoload.get_string(),bool(randi()%2) ))
+			qq += str(q_String.split_floats( Autoload.get_string(),Autoload.get_bool() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.strip_edges( bool(randi()%2),bool(randi()%2)))
+			qq += str(q_String.strip_edges( Autoload.get_bool(),Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_String.strip_escapes())
 			
 		if randi() % 2 == 1:
-			qq += str(q_String.substr( Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(q_String.substr( Autoload.get_int(),Autoload.get_int()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.to_ascii())

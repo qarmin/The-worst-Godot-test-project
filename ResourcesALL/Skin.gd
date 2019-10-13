@@ -19,19 +19,19 @@ func _process(delta) ->  void:
 			
 		
 		if randi() % 2 == 1:
-			q_Skin.add_bind(Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			q_Skin.add_bind(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			q_Skin.clear_binds()
 		if randi() % 2 == 1:
-			qq += str(q_Skin.get_bind_bone(Autoload.get_randi())) 
+			qq += str(q_Skin.get_bind_bone(Autoload.get_int())) 
 		if randi() % 2 == 1:
 			qq += str(q_Skin.get_bind_count())
 		if randi() % 2 == 1:
-			qq += str(q_Skin.get_bind_pose(Autoload.get_randi()))
+			qq += str(q_Skin.get_bind_pose(Autoload.get_int()))
 		if randi() % 2 == 1:
-			q_Skin.set_bind_bone(Autoload.get_randi(), Autoload.get_randi())
+			q_Skin.set_bind_bone(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
-			q_Skin.set_bind_count(Autoload.get_randi()) 
+			q_Skin.set_bind_count(Autoload.get_int()) 
 		if randi() % 2 == 1:
-			q_Skin.set_bind_pose(Autoload.get_randi(), Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			q_Skin.set_bind_pose(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 

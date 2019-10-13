@@ -15,8 +15,8 @@ func _physics_process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_depth(Autoload.get_randf())
+			set_depth(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_disabled(bool(randi()%2))
+			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())]))
+			set_polygon(PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2()]))

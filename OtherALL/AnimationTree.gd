@@ -19,14 +19,14 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_animation_player("../AnimafqwfPlayer")
 		if randi() % 2 == 1:
-			set_active(bool(randi()%2))
+			set_active(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_process_mode(Autoload.get_randi()) #AnimationProcessMode
+			set_process_mode(Autoload.get_int()) #AnimationProcessMode
 		if randi() % 2 == 1:
 			set_root_motion_track(".afs/aw")
 			
 		if randi() % 2 == 1:
-			advance(Autoload.get_randf())
+			advance(Autoload.get_float())
 		if randi() % 2 == 1:
 			qq += str(get_root_motion_transform())
 		if randi() % 2 == 1:

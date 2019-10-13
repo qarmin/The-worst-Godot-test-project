@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolColorArray : PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+var q_PoolColorArray : PoolColorArray = PoolColorArray([Autoload.get_color(),Autoload.get_color()])
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,24 +17,24 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_PoolColorArray = PoolColorArray([Color(randf(),randf(),randf(),randf()),Color(randf(),randf(),randf(),randf())])
+			q_PoolColorArray = PoolColorArray([Autoload.get_color(),Autoload.get_color()])
 			
 		if randi() % 2 == 1:
-			q_PoolColorArray.append(Color(randf(),randf(),randf(),randf()))
+			q_PoolColorArray.append(Autoload.get_color())
 		if randi() % 2 == 1:
-			q_PoolColorArray.append_array(PoolColorArray([Color(randf(),randf(),randf(),randf())]))
+			q_PoolColorArray.append_array(PoolColorArray([Autoload.get_color()]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolColorArray.insert( Autoload.get_randi(), Color(randf(),randf(),randf(),randf())) )
+			qq += str(q_PoolColorArray.insert( Autoload.get_int(), Autoload.get_color()) )
 		if randi() % 2 == 1:
 			q_PoolColorArray.invert()
 		if randi() % 2 == 1:
-			q_PoolColorArray.push_back( Color(randf(),randf(),randf(),randf()) )
+			q_PoolColorArray.push_back( Autoload.get_color() )
 		if randi() % 2 == 1:
-			q_PoolColorArray.remove( Autoload.get_randi())
+			q_PoolColorArray.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolColorArray.resize( Autoload.get_randi())
+			q_PoolColorArray.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolColorArray.set(Autoload.get_randi(), Color(randf(),randf(),randf(),randf()))
+			q_PoolColorArray.set(Autoload.get_int(), Autoload.get_color())
 		if randi() % 2 == 1:
 			qq += str(q_PoolColorArray.size())

@@ -16,12 +16,12 @@ func _process(delta) -> void:
 		var occluder_polygon : OccluderPolygon2D = OccluderPolygon2D.new()
 
 		if randi() % 2 == 1:
-			occluder_polygon.set_closed(bool(randi()%2))
+			occluder_polygon.set_closed(Autoload.get_bool())
 		if randi() % 2 == 1:
-			occluder_polygon.set_cull_mode(Autoload.get_randi())
+			occluder_polygon.set_cull_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			occluder_polygon.set_polygon([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())])
+			occluder_polygon.set_polygon([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
 		if randi() % 2 == 1:
 			set_occluder_polygon(occluder_polygon)
 		if randi() % 2 == 1:
-			set_occluder_light_mask(Autoload.get_randi())
+			set_occluder_light_mask(Autoload.get_int())

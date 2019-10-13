@@ -19,4 +19,4 @@ func _process(delta) -> void:
 				
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeGlobalExpression.editable = bool(randi()%2)
+			q_VisualShaderNodeGlobalExpression.editable = Autoload.get_bool()

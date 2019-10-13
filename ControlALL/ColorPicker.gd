@@ -18,28 +18,28 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_pick_color(Color(randf(),randf(),randf(),randf()))
+			set_pick_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_edit_alpha(bool(randi()%2))
+			set_edit_alpha(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_raw_mode(bool(randi()%2))
+			set_raw_mode(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_deferred_mode(bool(randi()%2))
+			set_deferred_mode(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_presets_enabled(bool(randi()%2))
+			set_presets_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_presets_visible(bool(randi()%2))
+			set_presets_visible(Autoload.get_bool())
 		if randi() % 2 == 1:
-			add_preset(Color(randf(),randf(),randf(),randf()))
+			add_preset(Autoload.get_color())
 		if randi() % 2 == 1:
-			qq += str(erase_preset(Color(randf(),randf(),randf(),randf())))
+			qq += str(erase_preset(Autoload.get_color()))
 			
 			# BoxContainer
 			
 		if randi() % 2 == 1:
-			set_alignment(Autoload.get_randi()) # alignmode
+			set_alignment(Autoload.get_int()) # alignmode
 #LEAK
-#			add_spacer(bool(randi()%2))
+#			add_spacer(Autoload.get_bool())
 #
 #			for i in range (default_number_of_children,get_child_count()):
 #				get_child(i).queue_free()

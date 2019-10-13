@@ -19,13 +19,13 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptPropertySet.set_call_mode(Autoload.get_randi()) # CallMode
+			q_VisualScriptPropertySet.set_call_mode(Autoload.get_int()) # CallMode
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_base_script(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptPropertySet.set_basic_type(Autoload.get_randi())
+			q_VisualScriptPropertySet.set_basic_type(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_base_path(".")
 		if randi() % 2 == 1:
@@ -33,4 +33,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_index(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptPropertySet.set_assign_op(Autoload.get_randi()) # AssignOP
+			q_VisualScriptPropertySet.set_assign_op(Autoload.get_int()) # AssignOP

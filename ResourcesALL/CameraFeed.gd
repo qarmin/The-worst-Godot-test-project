@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_CameraFeed.set_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			q_CameraFeed.set_transform(Autoload.get_transform2d())
 			
 		if randi() % 2 == 1:
 			qq += str(q_CameraFeed.get_id())

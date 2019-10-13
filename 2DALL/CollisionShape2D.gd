@@ -17,8 +17,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_shape(CircleShape2D.new())
 		if randi() % 2 == 1:
-			set_disabled(bool(randi()%2))
+			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_one_way_collision(bool(randi()%2))
+			set_one_way_collision(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_one_way_collision_margin(bool(randi()%2))
+			set_one_way_collision_margin(Autoload.get_bool())

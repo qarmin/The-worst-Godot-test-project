@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptReturn.set_enable_return_value(bool(randi()%2))
+			q_VisualScriptReturn.set_enable_return_value(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_VisualScriptReturn.set_return_type(Autoload.get_randi())
+			q_VisualScriptReturn.set_return_type(Autoload.get_int())

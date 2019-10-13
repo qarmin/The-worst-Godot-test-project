@@ -34,7 +34,7 @@ func _process(delta) -> void:
 			qq += str(q_ConfigFile.has_section_key( Autoload.get_string(), Autoload.get_string() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_ConfigFile.load( "res://RES/Sprite1.png" ))
+			qq += str(q_ConfigFile.load( "Sprite.png" ))
 		if randi() % 2 == 1:
 			q_ConfigFile.save( "res://TEMP/ConfigFile.txt" )
 		if randi() % 2 == 1:

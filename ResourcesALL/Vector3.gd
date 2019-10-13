@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Vector3 : Vector3 = Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())
+var q_Vector3 : Vector3 = Autoload.get_vector3()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,30 +17,30 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Vector3 = Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())
+			q_Vector3 = Autoload.get_vector3()
 			
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.abs())
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.angle_to( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.angle_to( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.bounce( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(q_Vector3.bounce( Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.ceil())
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.cross( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.cross( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.cubic_interpolate( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Vector3.cubic_interpolate( Autoload.get_vector3(), Autoload.get_vector3(), Autoload.get_vector3(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.direction_to( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.direction_to( Autoload.get_vector3() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.distance_squared_to( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.distance_squared_to( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.distance_to( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.distance_to( Autoload.get_vector3() ))
 			
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.dot( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.dot( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.floor())
 		if randi() % 2 == 1:
@@ -54,30 +54,30 @@ func _process(delta) -> void:
 			qq += str(q_Vector3.length_squared())
 			
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.linear_interpolate( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Vector3.linear_interpolate( Autoload.get_vector3(), Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.max_axis())
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.min_axis())
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.move_toward( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Vector3.move_toward( Autoload.get_vector3(), Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.normalized())
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.outer( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.outer( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.project( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.project( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.reflect( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(q_Vector3.reflect( Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.rotated( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Vector3.rotated( Autoload.get_vector3(), Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.round())
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.slerp( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()), Autoload.get_randf()))
+			qq += str(q_Vector3.slerp( Autoload.get_vector3(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.slide( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.slide( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Vector3.snapped( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()) ))
+			qq += str(q_Vector3.snapped( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
 			qq += str(q_Vector3.to_diagonal_matrix())

@@ -15,8 +15,8 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_multimesh(Autoload.loadA("res://RES/Multimesh.tres"))
+			set_multimesh(Autoload.loadA("Multimesh.tres"))
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_normal_map(Autoload.loadA("res://RES/Sprite.png"))
+			set_normal_map(Autoload.loadA("Sprite.png"))

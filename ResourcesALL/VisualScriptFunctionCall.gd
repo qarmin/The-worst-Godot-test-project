@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_call_mode(Autoload.get_randi()) # CallMode
+			q_VisualScriptFunctionCall.set_call_mode(Autoload.get_int()) # CallMode
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -27,14 +27,14 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_singleton(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_basic_type(Autoload.get_randi())
+			q_VisualScriptFunctionCall.set_basic_type(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_base_path(Autoload.get_string())
 #	BUG	if randi() % 2 == 1:
 #			q_VisualScriptFunctionCall.set_function("Rzsafym")
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_use_default_args(Autoload.get_randi())
+			q_VisualScriptFunctionCall.set_use_default_args(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_validate(bool(randi()%2))
+			q_VisualScriptFunctionCall.set_validate(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_VisualScriptFunctionCall.set_rpc_call_mode(Autoload.get_randi()) #RPCCallMode
+			q_VisualScriptFunctionCall.set_rpc_call_mode(Autoload.get_int()) #RPCCallMode

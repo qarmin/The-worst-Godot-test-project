@@ -19,17 +19,17 @@ func _process(delta) -> void:
 
 		
 		if randi() % 2 == 1:
-			q_RandomNumberGenerator.set_seed(Autoload.get_randi())
+			q_RandomNumberGenerator.set_seed(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(q_RandomNumberGenerator.randf())
 		if randi() % 2 == 1:
-			qq += str(q_RandomNumberGenerator.randf_range( Autoload.get_randf(), Autoload.get_randf() ))
+			qq += str(q_RandomNumberGenerator.randf_range( Autoload.get_float(), Autoload.get_float() ))
 		if randi() % 2 == 1:
-			qq += str(q_RandomNumberGenerator.randfn( Autoload.get_randf(), Autoload.get_randf() ))
+			qq += str(q_RandomNumberGenerator.randfn( Autoload.get_float(), Autoload.get_float() ))
 		if randi() % 2 == 1:
 			qq += str(q_RandomNumberGenerator.randi())
 		if randi() % 2 == 1:
-			qq += str(q_RandomNumberGenerator.randi_range( Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_RandomNumberGenerator.randi_range( Autoload.get_int(), Autoload.get_int() ))
 		if randi() % 2 == 1:
 			q_RandomNumberGenerator.randomize()

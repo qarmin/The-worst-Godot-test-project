@@ -24,8 +24,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#DEPRECATED qq += str(ResourceLoader.has(Autoload.get_string()))
 #		qq += str(ResourceLoader.has_cached(Autoload.get_string()))
 #
-#		#qq += str(ResourceLoader.load(Autoload.get_string(),Autoload.get_string(), bool(randi() % 2)))
+#		#qq += str(ResourceLoader.load(Autoload.get_string(),Autoload.get_string(), Autoload.get_bool()))
 #		#qq += str(ResourceLoader.load_interactive(Autoload.get_string(),Autoload.get_string()))
 #
-#		ResourceLoader.set_abort_on_missing_resources(bool(randi() % 2))
+#		ResourceLoader.set_abort_on_missing_resources(Autoload.get_bool())
 #

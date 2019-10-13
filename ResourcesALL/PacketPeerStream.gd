@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_PacketPeerStream.set_input_buffer_max_size(Autoload.get_randi())
+			q_PacketPeerStream.set_input_buffer_max_size(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PacketPeerStream.set_output_buffer_max_size(Autoload.get_randi())
+			q_PacketPeerStream.set_output_buffer_max_size(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_PacketPeerStream.set_stream_peer(StreamPeer.new())

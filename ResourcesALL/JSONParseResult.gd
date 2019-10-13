@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_JSONParseResult.set_error(Autoload.get_randi()) #ERROR
+			q_JSONParseResult.set_error(Autoload.get_int()) #ERROR
 		if randi() % 2 == 1:
 			q_JSONParseResult.set_error_string(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_JSONParseResult.set_error_line(Autoload.get_randi())
+			q_JSONParseResult.set_error_line(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_JSONParseResult.set_result("Rezultat")

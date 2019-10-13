@@ -19,21 +19,21 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_mesh_library(MeshLibrary.new())
 		if randi() % 2 == 1:
-			set_cell_size(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_cell_size(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			set_octant_size(Autoload.get_randi())
+			set_octant_size(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_center_x(bool(randi()%2))
+			set_center_x(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_center_y(bool(randi()%2))
+			set_center_y(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_center_z(bool(randi()%2))
+			set_center_z(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_cell_scale(Autoload.get_randf())
+			set_cell_scale(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_collision_layer(Autoload.get_randi())
+			set_collision_layer(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_randi())
+			set_collision_mask(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			clear()
@@ -41,36 +41,36 @@ func _process(delta) -> void:
 			clear_baked_meshes()
 			
 		if randi() % 2 == 1:
-			qq += str(get_bake_mesh_instance(Autoload.get_randi()))
+			qq += str(get_bake_mesh_instance(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_bake_meshes())
 		if randi() % 2 == 1:
-			qq += str(get_cell_item(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(get_cell_item(Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_cell_item_orientation(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(get_cell_item_orientation(Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(Autoload.get_randi()))
+			qq += str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_randi()))
+			qq += str(get_collision_mask_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_meshes())
 		if randi() % 2 == 1:
 			qq += str(get_used_cells())
 			
 		if randi() % 2 == 1:
-			make_baked_meshes(bool(randi()%2), Autoload.get_randf())
+			make_baked_meshes(Autoload.get_bool(), Autoload.get_float())
 		if randi() % 2 == 1:
-			qq += str(map_to_world(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi()))
+			qq += str(map_to_world(Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
 			resource_changed(CubeMesh.new())
 			
 		if randi() % 2 == 1:
-			set_cell_item(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi())
+			set_cell_item(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_clip(bool(randi()%2),bool(randi()%2),Autoload.get_randi(), Autoload.get_randi())
+			set_clip(Autoload.get_bool(),Autoload.get_bool(),Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
-			set_collision_layer_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_collision_mask_bit(Autoload.get_randi(),bool(randi()%2))
+			set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
 			
 		if randi() % 2 == 1:
-			qq += str(world_to_map(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			qq += str(world_to_map(Autoload.get_vector3()))

@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_VisualScriptYieldSignal.set_call_mode(Autoload.get_randi()) # CallMode
+			q_VisualScriptYieldSignal.set_call_mode(Autoload.get_int()) # CallMode
 		if randi() % 2 == 1:
 			q_VisualScriptYieldSignal.set_base_type(Autoload.get_string())
 		if randi() % 2 == 1:

@@ -16,12 +16,12 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_editable(bool(randi() % 2))
+			set_editable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_scrollable(bool(randi() % 2))
+			set_scrollable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_ticks(Autoload.get_randi())
+			set_ticks(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_ticks_on_borders(bool(randi() % 2))
+			set_ticks_on_borders(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_focus_mode(Autoload.get_randi())
+			set_focus_mode(Autoload.get_int())

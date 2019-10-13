@@ -24,9 +24,9 @@ func _process(delta) -> void:
 			add_child(q_temp0)
 		
 		if randi() % 2 == 1:
-			q_MultiplayerAPI.set_allow_object_decoding(bool(randi()%2))
+			q_MultiplayerAPI.set_allow_object_decoding(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_MultiplayerAPI.set_refuse_new_network_connections(bool(randi()%2))
+			q_MultiplayerAPI.set_refuse_new_network_connections(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_network_peer(NetworkedMultiplayerENet.new())
 			
@@ -47,7 +47,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.poll()
 		if randi() % 2 == 1:
-			qq += str(q_MultiplayerAPI.send_bytes( PoolByteArray([11,124,1241,24,21,214,12,11]), Autoload.get_randi(), Autoload.get_randi() ))#TransferNode
+			qq += str(q_MultiplayerAPI.send_bytes( PoolByteArray([11,124,1241,24,21,214,12,11]), Autoload.get_int(), Autoload.get_int() ))#TransferNode
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_root_node( q_temp0 )
 			

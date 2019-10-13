@@ -15,21 +15,21 @@ func _physics_process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_joint_type(Autoload.get_randi()) #JOINT_TYPE
+			set_joint_type(Autoload.get_int()) #JOINT_TYPE
 		if randi() % 2 == 1:
-			set_joint_offset(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_joint_offset(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			set_body_offset(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_body_offset(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			set_mass(Autoload.get_randf())
+			set_mass(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_weight(Autoload.get_randf())
+			set_weight(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_friction(Autoload.get_randf())
+			set_friction(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_bounce(Autoload.get_randf())
+			set_bounce(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_gravity_scale(Autoload.get_randf())
+			set_gravity_scale(Autoload.get_float())
 			
 		if randi() % 2 == 1:
 			qq += str(get_bone_id())

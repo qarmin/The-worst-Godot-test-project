@@ -19,8 +19,8 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectSpectrumAnalyzer.set_buffer_length(Autoload.get_randf())
+			q_AudioEffectSpectrumAnalyzer.set_buffer_length(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(Autoload.get_randf())
+			q_AudioEffectSpectrumAnalyzer.set_tap_back_pos(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AudioEffectSpectrumAnalyzer.set_fft_size(Autoload.get_randi())
+			q_AudioEffectSpectrumAnalyzer.set_fft_size(Autoload.get_int())

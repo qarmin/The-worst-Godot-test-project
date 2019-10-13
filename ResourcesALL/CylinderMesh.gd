@@ -19,11 +19,11 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CylinderMesh.set_top_radius(Autoload.get_randf())
+			q_CylinderMesh.set_top_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CylinderMesh.set_bottom_radius(Autoload.get_randf())
+			q_CylinderMesh.set_bottom_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CylinderMesh.set_height(Autoload.get_randf())
+			q_CylinderMesh.set_height(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_CylinderMesh.set_radial_segments(randi()%10 - 8)
 		if randi() % 2 == 1:

@@ -21,13 +21,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_GDNativeLibrary.set_config_file(ConfigFile.new())
 		if randi() % 2 == 1:
-			q_GDNativeLibrary.set_load_once(bool(randi()%2))
+			q_GDNativeLibrary.set_load_once(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_GDNativeLibrary.set_singleton(bool(randi()%2))
+			q_GDNativeLibrary.set_singleton(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_GDNativeLibrary.set_symbol_prefix(Autoload.get_string())
 		if randi() % 2 == 1:
-			q_GDNativeLibrary.set_reloadable(bool(randi()%2))
+			q_GDNativeLibrary.set_reloadable(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			qq += str(q_GDNativeLibrary.get_current_dependencies())

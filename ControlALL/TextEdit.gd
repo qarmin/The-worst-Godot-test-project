@@ -18,50 +18,50 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_readonly(bool(randi()%2))
+			set_readonly(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_highlight_current_line(bool(randi()%2))
+			set_highlight_current_line(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_syntax_coloring(bool(randi()%2))
+			set_syntax_coloring(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_show_line_numbers(bool(randi()%2))
+			set_show_line_numbers(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_draw_tabs(bool(randi()%2))
+			set_draw_tabs(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_draw_spaces(bool(randi()%2))
+			set_draw_spaces(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_breakpoint_gutter_enabled(bool(randi()%2))
+			set_breakpoint_gutter_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_draw_fold_gutter(bool(randi()%2))
+			set_draw_fold_gutter(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_highlight_all_occurrences(bool(randi()%2))
+			set_highlight_all_occurrences(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_override_selected_font_color(bool(randi()%2))
+			set_override_selected_font_color(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_context_menu_enabled(bool(randi()%2))
+			set_context_menu_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_smooth_scroll_enable(bool(randi()%2))
+			set_smooth_scroll_enable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_v_scroll_speed(Autoload.get_randf())
+			set_v_scroll_speed(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_hiding_enabled(bool(randi()%2))
+			set_hiding_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_wrap_enabled(bool(randi()%2))
+			set_wrap_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			cursor_set_block_mode(bool(randi()%2))
+			cursor_set_block_mode(Autoload.get_bool())
 		if randi() % 2 == 1:
-			cursor_set_blink_enabled(bool(randi()%2))
+			cursor_set_blink_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			cursor_set_blink_speed(Autoload.get_randf())
+			cursor_set_blink_speed(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_right_click_moves_caret(bool(randi()%2))
+			set_right_click_moves_caret(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
-			add_color_region(Autoload.get_string(), Autoload.get_string(), Color(randf(),randf(),randf(),randf()),bool(randi()%2))
+			add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			add_keyword_color(Autoload.get_string(), Color(randf(),randf(),randf(),randf()))
+			add_keyword_color(Autoload.get_string(), Autoload.get_color())
 		if randi() % 2 == 1:
-			qq += str(can_fold(Autoload.get_randi()))
+			qq += str(can_fold(Autoload.get_int()))
 		if randi() % 2 == 1:
 			clear_colors()
 		if randi() % 2 == 1:
@@ -73,9 +73,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(cursor_get_line())
 		if randi() % 2 == 1:
-			cursor_set_column(Autoload.get_randi())
+			cursor_set_column(Autoload.get_int())
 		if randi() % 2 == 1:
-			cursor_set_line(Autoload.get_randi())
+			cursor_set_line(Autoload.get_int())
 		if randi() % 2 == 1:
 			cut()
 		if randi() % 2 == 1:
@@ -83,13 +83,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			fold_all_lines()
 		if randi() % 2 == 1:
-			fold_line(Autoload.get_randi())
+			fold_line(Autoload.get_int())
 		if randi() % 2 == 1:
 			qq += str(get_breakpoints())
 		if randi() % 2 == 1:
 			qq += str(get_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(get_line(Autoload.get_randi()))
+			qq += str(get_line(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_line_count())
 		if randi() % 2 == 1:
@@ -108,11 +108,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(has_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
-			insert_text_at_cursor(str(Autoload.get_randi()))
+			insert_text_at_cursor(str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_folded(Autoload.get_randi()))
+			qq += str(is_folded(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_line_hidden(Autoload.get_randi()))
+			qq += str(is_line_hidden(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(is_selection_active())
 			#menu_option(randi() % MENU_MAX)
@@ -123,11 +123,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			remove_breakpoints()
 			#qq += str(search(Autoload.get_string(), randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
-			#select(Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi(),Autoload.get_randi())
+			#select(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
 			select_all()
 		if randi() % 2 == 1:
-			set_line_as_hidden(get_line_count(),bool(randi()%2))
+			set_line_as_hidden(get_line_count(),Autoload.get_bool())
 		if randi() % 2 == 1:
 			toggle_fold_line(get_line_count())
 		if randi() % 2 == 1:

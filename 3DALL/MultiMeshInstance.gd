@@ -20,34 +20,34 @@ func _process(delta) -> void:
 			MM = MultiMesh.new()
 			
 		if randi() % 2 == 1:
-			MM.set_color_format(Autoload.get_randi())
+			MM.set_color_format(Autoload.get_int())
 		if randi() % 2 == 1:
-			MM.set_transform_format(Autoload.get_randi())
+			MM.set_transform_format(Autoload.get_int())
 		if randi() % 2 == 1:
-			MM.set_custom_data_format(Autoload.get_randi())
+			MM.set_custom_data_format(Autoload.get_int())
 		if randi() % 2 == 1:
 			MM.set_instance_count(randi() % 4 - 2)
 		if randi() % 2 == 1:
-			MM.set_visible_instance_count(Autoload.get_randi())
-		if randi() % 2 == 1:
-			MM.set_mesh(CubeMesh.new())
+			MM.set_visible_instance_count(Autoload.get_int())
+#	BUG	if randi() % 2 == 1:
+#			MM.set_mesh(CubeMesh.new())
 			
 		if randi() % 2 == 1:
 			qq += str(MM.get_aabb())
-			#BUG qq += str(MM.get_instance_color(Autoload.get_randi()))
-			#BUG qq += str(MM.get_instance_custom_data(Autoload.get_randi()))
+			#BUG qq += str(MM.get_instance_color(Autoload.get_int()))
+			#BUG qq += str(MM.get_instance_custom_data(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform(Autoload.get_randi()))
+			qq += str(MM.get_instance_transform(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform_2d(Autoload.get_randi()))
+			qq += str(MM.get_instance_transform_2d(Autoload.get_int()))
 	
 		if randi() % 2 == 1:
-			MM.set_as_bulk_array(PoolRealArray([Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()]))
-			#BUG MM.set_instance_color(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
-			#BUG MM.set_instance_custom_data(Autoload.get_randi(),Color(randf(),randf(),randf(),randf()))
+			MM.set_as_bulk_array(PoolRealArray([Autoload.get_float(),Autoload.get_float(),Autoload.get_float()]))
+			#BUG MM.set_instance_color(Autoload.get_int(),Autoload.get_color())
+			#BUG MM.set_instance_custom_data(Autoload.get_int(),Autoload.get_color())
 		if randi() % 2 == 1:
-			MM.set_instance_transform(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			MM.set_instance_transform(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			MM.set_instance_transform_2d(Autoload.get_randi(),Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			MM.set_instance_transform_2d(Autoload.get_int(),Autoload.get_transform2d())
 			
 			set_multimesh(MM)

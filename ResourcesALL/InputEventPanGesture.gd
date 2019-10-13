@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventPanGesture.set_delta(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_InputEventPanGesture.set_delta(Autoload.get_vector2())

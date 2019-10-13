@@ -26,7 +26,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_PhysicsDirectBodyState.get_principal_inertia_axes()
 #		q_PhysicsDirectBodyState.set_angular_velocity(Vector3(randf() * 50,randf() * 50,randf() * 50))
 #		q_PhysicsDirectBodyState.set_linear_velocity(Vector3(randf() * 50,randf() * 50,randf() * 50))
-#		q_PhysicsDirectBodyState.set_sleep_state(bool(randi()%2))
+#		q_PhysicsDirectBodyState.set_sleep_state(Autoload.get_bool())
 #		q_PhysicsDirectBodyState.set_transform(Transform(Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50),Vector3(randf() * 50,randf() * 50,randf() * 50)))
 #
 #		q_PhysicsDirectBodyState.add_central_force( Vector3(randf() * 50,randf() * 50,randf() * 50) )

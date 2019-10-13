@@ -15,7 +15,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer = NetworkedMultiplayerPeer.new()
 #
-#		q_NetworkedMultiplayerPeer.set_refuse_new_connections(bool(randi()%2))
+#		q_NetworkedMultiplayerPeer.set_refuse_new_connections(Autoload.get_bool())
 #		q_NetworkedMultiplayerPeer.set_transfer_mode(randi() % 3) #TransferMode
 #
 #		q_NetworkedMultiplayerPeer.get_connection_status()

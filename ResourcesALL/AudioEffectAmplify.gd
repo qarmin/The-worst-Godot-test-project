@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioEffectAmplify.set_volume_db(Autoload.get_randf())
+			q_AudioEffectAmplify.set_volume_db(Autoload.get_float())

@@ -19,17 +19,17 @@ func _process(delta) -> void:
 			q_MobileVRInterface = MobileVRInterface.new()
 			
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_eye_height(Autoload.get_randf())
+			q_MobileVRInterface.set_eye_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_iod(Autoload.get_randf())
+			q_MobileVRInterface.set_iod(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_display_width(Autoload.get_randf())
+			q_MobileVRInterface.set_display_width(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_display_to_lens(Autoload.get_randf())
+			q_MobileVRInterface.set_display_to_lens(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_oversample(Autoload.get_randf())
+			q_MobileVRInterface.set_oversample(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_k1(Autoload.get_randf())
+			q_MobileVRInterface.set_k1(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_MobileVRInterface.set_k2(Autoload.get_randf())
+			q_MobileVRInterface.set_k2(Autoload.get_float())
 				

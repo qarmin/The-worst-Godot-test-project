@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			for _i in range(10):
 				add_bone(str(randi() % 2525))
 		if randi() % 2 == 1:
-			bind_child_node_to_bone(Autoload.get_randi(),self)
+			bind_child_node_to_bone(Autoload.get_int(),self)
 			#NA KONIEC clear_bones()
 		if randi() % 2 == 1:
 			qq += str(find_bone(Autoload.get_string()))
@@ -27,22 +27,22 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_bone_count())
 		if randi() % 2 == 1:
-			qq += str(get_bone_custom_pose(Autoload.get_randi()))
+			qq += str(get_bone_custom_pose(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_global_pose(Autoload.get_randi()))
+			qq += str(get_bone_global_pose(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_name(Autoload.get_randi()))
+			qq += str(get_bone_name(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_parent(Autoload.get_randi()))
+			qq += str(get_bone_parent(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_pose(Autoload.get_randi()))
+			qq += str(get_bone_pose(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bone_rest(Autoload.get_randi()))
+			qq += str(get_bone_rest(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_bound_child_nodes_to_bone(Autoload.get_randi()))
+			qq += str(get_bound_child_nodes_to_bone(Autoload.get_int()))
 	
 		if randi() % 2 == 1:
-			qq += str(is_bone_rest_disabled(Autoload.get_randi()))
+			qq += str(is_bone_rest_disabled(Autoload.get_int()))
 		if randi() % 2 == 1:
 			localize_rests()
 	
@@ -55,20 +55,20 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			physical_bones_stop_simulation()
 		if randi() % 2 == 1:
-			set_bone_custom_pose(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_bone_custom_pose(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			set_bone_disable_rest(Autoload.get_randi(),bool(randi()%2))
+			set_bone_disable_rest(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_bone_parent(Autoload.get_randi(),Autoload.get_randi())
+			set_bone_parent(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_bone_pose(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_bone_pose(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			set_bone_rest(Autoload.get_randi(),Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_bone_rest(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 	
 		if randi() % 2 == 1:
-			unbind_child_node_from_bone(Autoload.get_randi(),self)
+			unbind_child_node_from_bone(Autoload.get_int(),self)
 #	LOOP BUG		if randi() % 2 == 1:
-#				unparent_bone_and_rest(Autoload.get_randi())
+#				unparent_bone_and_rest(Autoload.get_int())
 	
 		if randi() % 2 == 1:
 			clear_bones() # ZE SRODKA

@@ -16,6 +16,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_stretch(bool(randi()%2))
+			set_stretch(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_stretch_shrink(Autoload.get_randi())
+			set_stretch_shrink(Autoload.get_int())

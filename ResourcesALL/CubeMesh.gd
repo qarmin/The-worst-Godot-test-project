@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_CubeMesh.set_size(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_CubeMesh.set_size(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			q_CubeMesh.set_subdivide_width(randi() % 10 - 8) 
 		if randi() % 2 == 1:

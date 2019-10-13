@@ -19,10 +19,10 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_factor(Autoload.get_randf())
+			q_InputEventMouseButton.set_factor(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_button_index(Autoload.get_randi())
+			q_InputEventMouseButton.set_button_index(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_pressed(bool(randi()%2))
+			q_InputEventMouseButton.set_pressed(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_InputEventMouseButton.set_doubleclick(bool(randi()%2))
+			q_InputEventMouseButton.set_doubleclick(Autoload.get_bool())

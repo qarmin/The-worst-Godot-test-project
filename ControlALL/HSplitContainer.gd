@@ -18,8 +18,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_split_offset(randi()%50)
 		if randi() % 2 == 1:
-			set_collapsed(bool(randi()%2))
+			set_collapsed(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_dragger_visibility(Autoload.get_randi())# draggervisibility
+			set_dragger_visibility(Autoload.get_int())# draggervisibility
 		if randi() % 2 == 1:
 			clamp_split_offset()

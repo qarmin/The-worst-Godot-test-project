@@ -15,13 +15,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 					
 		if randi() % 2 == 1:
-			set_sprite_frames(Autoload.loadA("res://RES/SpriteFrames.tres"))
+			set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))
 		if randi() % 2 == 1:
 			set_animation(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_frame(bool(randi()%2))
+			set_frame(Autoload.get_bool())
 		if randi() % 2 == 1:
-			_set_playing(bool(randi()%2))
+			_set_playing(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(is_playing())
 		if randi() % 2 == 1:

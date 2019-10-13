@@ -14,16 +14,16 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
-		set_bake_cell_size(Autoload.get_randf())
-		set_bake_quality(Autoload.get_randi()) #BakeQuality
-		set_bake_mode(Autoload.get_randi()) #BakeMode
-		set_propagation(Autoload.get_randf())
-		set_energy(Autoload.get_randf())
-		set_hdr(bool(randi()%2))
-		set_extents(Vector3(Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf()))
-		set_capture_cell_size(Autoload.get_randf())
+		set_bake_cell_size(Autoload.get_float())
+		set_bake_quality(Autoload.get_int()) #BakeQuality
+		set_bake_mode(Autoload.get_int()) #BakeMode
+		set_propagation(Autoload.get_float())
+		set_energy(Autoload.get_float())
+		set_hdr(Autoload.get_bool())
+		set_extents(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+		set_capture_cell_size(Autoload.get_float())
 		set_image_path("res://qqq.png")
 		set_light_data(BakedLightmapData.new())
 	
-		###qq += str(bake(self,bool(randi()%2)))
+		###qq += str(bake(self,Autoload.get_bool()))
 		###debug_bake()

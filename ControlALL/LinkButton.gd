@@ -16,5 +16,5 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_text(str(Autoload.get_randi()))
-			set_underline_mode(Autoload.get_randi())
+			set_text(str(Autoload.get_int()))
+			set_underline_mode(Autoload.get_int())

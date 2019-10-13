@@ -29,4 +29,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Shader.has_param( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			q_Shader.set_default_texture_param( Autoload.get_string(), Autoload.loadA("res://RES/Sprite.png") )
+			q_Shader.set_default_texture_param( Autoload.get_string(), Autoload.loadA("Sprite.png") )

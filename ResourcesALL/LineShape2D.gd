@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_LineShape2D.set_normal(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_LineShape2D.set_normal(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_LineShape2D.set_d(Autoload.get_randf())
+			q_LineShape2D.set_d(Autoload.get_float())

@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeColorConstant.set_constant(Color(randf(),randf(),randf(),randf()))
+			q_VisualShaderNodeColorConstant.set_constant(Autoload.get_color())

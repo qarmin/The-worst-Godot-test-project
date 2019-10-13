@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
 		if randi() % 2 == 1:
-			q_VisualShaderNodeCubeMap.set_texture_type(Autoload.get_randi()) #TextureType
+			q_VisualShaderNodeCubeMap.set_texture_type(Autoload.get_int()) #TextureType

@@ -20,6 +20,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_PhysicsDirectSpaceState.collide_shape( PhysicsShapeQueryParameters.new(),randi()%50)
 #		q_PhysicsDirectSpaceState.get_rest_info( PhysicsShapeQueryParameters.new() )
 #
-#		q_PhysicsDirectSpaceState.intersect_ray( Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),[124,214,214,124,214,214,2], bool(randi()%2), bool(randi()%2), bool(randi()%2) )
+#		q_PhysicsDirectSpaceState.intersect_ray( Vector3(randf() * 50,randf() * 50,randf() * 50), Vector3(randf() * 50,randf() * 50,randf() * 50),[124,214,214,124,214,214,2], Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool() )
 #		q_PhysicsDirectSpaceState.intersect_shape( PhysicsShapeQueryParameters.new(), randi()%50)
 #

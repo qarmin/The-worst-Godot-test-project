@@ -20,27 +20,27 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tip_bone("asfasfasf")
 		if randi() % 2 == 1:
-			set_interpolation(Autoload.get_randf())
+			set_interpolation(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_target_transform(Transform(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()),Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf())))
+			set_target_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			set_override_tip_basis(bool(randi()%2))
+			set_override_tip_basis(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_use_magnet(bool(randi()%2))
+			set_use_magnet(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_magnet_position(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			set_magnet_position(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			set_target_node(".qwfqwfq")
 		if randi() % 2 == 1:
-			set_min_distance(Autoload.get_randf())
+			set_min_distance(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_max_iterations(Autoload.get_randi())
+			set_max_iterations(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(get_parent_skeleton())
 		if randi() % 2 == 1:
 			qq += str(is_running())
 		if randi() % 2 == 1:
-			start(bool(randi()%2))
+			start(Autoload.get_bool())
 		if randi() % 2 == 1:
 			stop()

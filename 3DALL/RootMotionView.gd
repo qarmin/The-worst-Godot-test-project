@@ -17,10 +17,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_animation_path(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_color(Color(randf(),randf(),randf(),randf()))
+			set_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_cell_size(Autoload.get_randf())
+			set_cell_size(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_radius(Autoload.get_randf())
+			set_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_zero_y(bool(randi()%2))
+			set_zero_y(Autoload.get_bool())

@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_collision_layer(Autoload.get_randi())
+			q_Physics2DShapeQueryParameters.set_collision_layer(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_Physics2DShapeQueryParameters.set_exclude([11,124,1241,24,21,214,12,11])
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_margin(Autoload.get_randf())
+			q_Physics2DShapeQueryParameters.set_margin(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_motion(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_Physics2DShapeQueryParameters.set_motion(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			q_Physics2DShapeQueryParameters.set_shape_rid(RID())
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_transform(Transform2D(Vector2(Autoload.get_randf(),randf() * 50),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),randf() * 50)))
+			q_Physics2DShapeQueryParameters.set_transform(Transform2D(Vector2(Autoload.get_float(),randf() * 50),Autoload.get_vector2(),Vector2(Autoload.get_float(),randf() * 50)))
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_collide_with_bodies(bool(randi()%2))
+			q_Physics2DShapeQueryParameters.set_collide_with_bodies(Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters.set_collide_with_areas(bool(randi()%2))
+			q_Physics2DShapeQueryParameters.set_collide_with_areas(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			q_Physics2DShapeQueryParameters.set_shape(BoxShape.new())

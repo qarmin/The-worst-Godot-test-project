@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			q_AnimationNodeBlend2 = AnimationNodeBlend2.new()
 		
 		if randi() % 2 == 1:
-			q_AnimationNodeBlend2.set_use_sync(bool(randi()%2))
+			q_AnimationNodeBlend2.set_use_sync(Autoload.get_bool())

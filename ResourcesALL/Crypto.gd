@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_Crypto.generate_random_bytes(Autoload.get_randi()))
+			qq += str(q_Crypto.generate_random_bytes(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_Crypto.generate_rsa(Autoload.get_randi()))
+			qq += str(q_Crypto.generate_rsa(Autoload.get_int()))
 #BUG		if randi() % 2 == 1:
-#			qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("res://RES/CryptoKey.tres"), Autoload.get_string(), Autoload.get_string(), Autoload.get_string()))
+#			qq += str(q_Crypto.generate_self_signed_certificate(Autoload.loadA("CryptoKey.tres"), Autoload.get_string(), Autoload.get_string(), Autoload.get_string()))

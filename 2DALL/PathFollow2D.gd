@@ -15,18 +15,18 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_offset(Autoload.get_randf())
+			set_offset(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_unit_offset(Autoload.get_randf())
+			set_unit_offset(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_h_offset(Autoload.get_randf())
+			set_h_offset(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_v_offset(Autoload.get_randf())
+			set_v_offset(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_rotate(bool(randi()%2))
+			set_rotate(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_cubic_interpolation(bool(randi()%2))
+			set_cubic_interpolation(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_loop(bool(randi()%2))
+			set_loop(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_lookahead(Autoload.get_randf())
+			set_lookahead(Autoload.get_float())

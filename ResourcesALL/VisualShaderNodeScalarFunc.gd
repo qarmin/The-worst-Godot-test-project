@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeScalarFunc.set_function(Autoload.get_randi()) #Function
+			q_VisualShaderNodeScalarFunc.set_function(Autoload.get_int()) #Function

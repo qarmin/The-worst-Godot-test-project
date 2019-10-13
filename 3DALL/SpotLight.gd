@@ -14,10 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if randi() % 2 == 1:
-			set("spot_range",Autoload.get_randf())
+			set("spot_range",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("spot_attenuation",Autoload.get_randf())
+			set("spot_attenuation",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("spot_angle",Autoload.get_randf())
+			set("spot_angle",Autoload.get_float())
 		if randi() % 2 == 1:
-			set("spot_angle_attenuation",Autoload.get_randf())
+			set("spot_angle_attenuation",Autoload.get_float())

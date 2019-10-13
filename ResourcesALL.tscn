@@ -1,4 +1,4 @@
-[gd_scene load_steps=453 format=2]
+[gd_scene load_steps=454 format=2]
 
 [ext_resource path="res://ResourcesALL/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://ResourcesALL/ResourcesALL.gd" type="Script" id=2]
@@ -452,6 +452,7 @@
 [ext_resource path="res://ResourcesALL/SkinReference.gd" type="Script" id=450]
 [ext_resource path="res://ResourcesALL/EditorVCSInterface.gd" type="Script" id=451]
 [ext_resource path="res://ResourcesALL/JSONRPC.gd" type="Script" id=452]
+[ext_resource path="res://ResourcesALL/AABB.gd" type="Script" id=453]
 
 [node name="Resources" type="Node2D"]
 script = ExtResource( 2 )
@@ -697,7 +698,6 @@ script = ExtResource( 223 )
 script = ExtResource( 224 )
 
 [node name="AudioStreamOGGVorbis" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 231 )
 
 [node name="AudioStreamRandomPitch" type="Node2D" parent="."]
@@ -1738,6 +1738,9 @@ script = ExtResource( 309 )
 [node name="VisualServer_CANT" type="Node2D" parent="."]
 script = ExtResource( 424 )
 
+[node name="AABB_MOVED" type="Node2D" parent="."]
+script = ExtResource( 453 )
+
 [node name="Array" type="Node2D" parent="."]
 script = ExtResource( 423 )
 
@@ -1759,25 +1762,32 @@ script = ExtResource( 416 )
 [node name="Plane" type="Node2D" parent="."]
 script = ExtResource( 417 )
 
-[node name="PoolByteArray" type="Node2D" parent="."]
+[node name="PoolByteArray_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 353 )
 
-[node name="PoolColorArray" type="Node2D" parent="."]
+[node name="PoolColorArray_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 347 )
 
-[node name="PoolIntArray" type="Node2D" parent="."]
+[node name="PoolIntArray_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 349 )
 
-[node name="PoolRealArray" type="Node2D" parent="."]
+[node name="PoolRealArray_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 320 )
 
-[node name="PoolStringArray" type="Node2D" parent="."]
+[node name="PoolStringArray_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 363 )
 
-[node name="PoolVector2Array" type="Node2D" parent="."]
+[node name="PoolVector2Array_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 418 )
 
-[node name="PoolVector3Array" type="Node2D" parent="."]
+[node name="PoolVector3Array_BUG" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 419 )
 
 [node name="Quat" type="Node2D" parent="."]

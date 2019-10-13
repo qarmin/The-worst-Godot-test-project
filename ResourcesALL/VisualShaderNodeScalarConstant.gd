@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualShaderNodeScalarConstant.set_constant(bool(randi()%2))
+			q_VisualShaderNodeScalarConstant.set_constant(Autoload.get_bool())

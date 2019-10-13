@@ -16,17 +16,17 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_normal_map(Autoload.loadA("res://RES/Sprite.png"))
+			set_normal_map(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_centered(bool(randi()%2))
+			set_centered(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_flip_h(bool(randi()%2))
+			set_flip_h(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_flip_v(bool(randi()%2))
+			set_flip_v(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_vframes(randi() % 10 - 5)
 		if randi() % 2 == 1:
@@ -34,12 +34,12 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_frame(randi() % 10 - 5)
 		if randi() % 2 == 1:
-			set_region(bool(randi()%2))
+			set_region(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			set_region_rect(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
-			set_region_filter_clip(bool(randi()%2))
+			set_region_filter_clip(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_rect())
 		if randi() % 2 == 1:
-			qq += str(is_pixel_opaque(Vector2(Autoload.get_randf(), Autoload.get_randf())))
+			qq += str(is_pixel_opaque(Vector2(Autoload.get_float(), Autoload.get_float())))

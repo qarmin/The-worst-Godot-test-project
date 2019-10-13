@@ -15,4 +15,4 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_enabler(Autoload.get_randi(),bool(randi()%2))
+			set_enabler(Autoload.get_int(),Autoload.get_bool())

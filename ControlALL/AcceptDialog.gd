@@ -15,11 +15,11 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_text(str(Autoload.get_randi()))
+			set_text(str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_hide_on_ok(bool(randi()%2))
-			#LEAK qq += str(add_button(str(Autoload.get_randi()), bool(randi()%2)))
-			#LEAK qq += str(add_cancel(str(Autoload.get_randi())))
+			set_hide_on_ok(Autoload.get_bool())
+			#LEAK qq += str(add_button(str(Autoload.get_int()), Autoload.get_bool()))
+			#LEAK qq += str(add_cancel(str(Autoload.get_int())))
 		if randi() % 2 == 1:
 			qq += str(get_label())
 		if randi() % 2 == 1:

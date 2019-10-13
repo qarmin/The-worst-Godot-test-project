@@ -19,9 +19,9 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_PrismMesh.set_left_to_right(Autoload.get_randf())
+			q_PrismMesh.set_left_to_right(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_PrismMesh.set_size(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_PrismMesh.set_size(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			q_PrismMesh.set_subdivide_width(randi() % 10 - 7) 
 		if randi() % 2 == 1:

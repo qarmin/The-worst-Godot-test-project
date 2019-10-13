@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Resource.set_local_to_scene(bool(randi()%2))
+			q_Resource.set_local_to_scene(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_Resource.set_path(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -27,7 +27,7 @@ func _process(delta) -> void:
 			
 			### q_Resource._setup_local_to_scene()
 		if randi() % 2 == 1:
-			qq += str(q_Resource.duplicate(bool(randi()%2)))
+			qq += str(q_Resource.duplicate(Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_Resource.get_local_scene())
 		if randi() % 2 == 1:

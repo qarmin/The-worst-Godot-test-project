@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BoxShape.set_extents(Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_BoxShape.set_extents(Autoload.get_vector3())

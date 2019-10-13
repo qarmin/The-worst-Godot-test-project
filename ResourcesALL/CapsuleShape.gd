@@ -19,6 +19,6 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_CapsuleShape.set_radius(Autoload.get_randf())
+			q_CapsuleShape.set_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CapsuleShape.set_height(Autoload.get_randf())
+			q_CapsuleShape.set_height(Autoload.get_float())

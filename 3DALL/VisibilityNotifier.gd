@@ -15,6 +15,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_aabb(AABB(Vector3(Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf()),Vector3(Autoload.get_randf(), Autoload.get_randf(), Autoload.get_randf())))
+			set_aabb(AABB(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()),Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float())))
 		if randi() % 2 == 1:
 			qq += str(is_on_screen())

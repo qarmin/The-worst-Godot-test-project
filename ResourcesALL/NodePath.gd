@@ -24,11 +24,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_concatenated_subnames())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_name( Autoload.get_randi()))
+			qq += str(q_NodePath.get_name( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_name_count())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_subname(Autoload.get_randi() ))
+			qq += str(q_NodePath.get_subname(Autoload.get_int() ))
 		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_subname_count())
 			

@@ -25,8 +25,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorFeatureProfile.load_from_file( Autoload.get_string() )
 #		q_EditorFeatureProfile.save_to_file( Autoload.get_string() )
 #
-#		q_EditorFeatureProfile.set_disable_class( Autoload.get_string(), bool(randi()%2) )
-#		q_EditorFeatureProfile.set_disable_class_editor( Autoload.get_string(), bool(randi()%2) )
-#		q_EditorFeatureProfile.set_disable_class_property( Autoload.get_string(), Autoload.get_string(), bool(randi()%2) )
-#		q_EditorFeatureProfile.set_disable_feature( randi() % EditorFeatureProfile.FEATURE_MAX, bool(randi()%2) )#Feature
+#		q_EditorFeatureProfile.set_disable_class( Autoload.get_string(), Autoload.get_bool() )
+#		q_EditorFeatureProfile.set_disable_class_editor( Autoload.get_string(), Autoload.get_bool() )
+#		q_EditorFeatureProfile.set_disable_class_property( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool() )
+#		q_EditorFeatureProfile.set_disable_feature( randi() % EditorFeatureProfile.FEATURE_MAX, Autoload.get_bool() )#Feature
 #

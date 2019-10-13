@@ -16,4 +16,4 @@ func _process(delta) -> void:
 		var q_VisualScriptBuiltinFunc : VisualScriptBuiltinFunc = VisualScriptBuiltinFunc.new()
 		
 		if randi() % 2 == 1:
-			q_VisualScriptBuiltinFunc.set_func(Autoload.get_randi()) # BuiltinFunc
+			q_VisualScriptBuiltinFunc.set_func(Autoload.get_int()) # BuiltinFunc

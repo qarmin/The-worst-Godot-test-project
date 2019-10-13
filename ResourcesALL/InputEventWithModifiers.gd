@@ -16,9 +16,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_InputEventWithModifiers : InputEventWithModifiers = InputEventWithModifiers.new()
 #
-#		q_InputEventWithModifiers.set_alt(bool(randi()%2))
-#		q_InputEventWithModifiers.set_shift(bool(randi()%2))
-#		q_InputEventWithModifiers.set_control(bool(randi()%2))
-#		q_InputEventWithModifiers.set_metakey(bool(randi()%2))
-#		q_InputEventWithModifiers.set_command(bool(randi()%2))
+#		q_InputEventWithModifiers.set_alt(Autoload.get_bool())
+#		q_InputEventWithModifiers.set_shift(Autoload.get_bool())
+#		q_InputEventWithModifiers.set_control(Autoload.get_bool())
+#		q_InputEventWithModifiers.set_metakey(Autoload.get_bool())
+#		q_InputEventWithModifiers.set_command(Autoload.get_bool())
 #

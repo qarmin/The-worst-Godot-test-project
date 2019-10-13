@@ -16,50 +16,50 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_title(str(Autoload.get_randi()))
+			set_title(str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_randf(), Autoload.get_randf()))
+			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			set_show_close_button(bool(randi()%2))
+			set_show_close_button(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_resizable(bool(randi()%2))
+			set_resizable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_selected(bool(randi()%2))
+			set_selected(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_comment(bool(randi()%2))
+			set_comment(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_overlay(Autoload.get_randi())
+			set_overlay(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_slot(Autoload.get_randi(), bool(randi()%2), Autoload.get_randi(), Color(randf(),randf(),randf(),randf()), bool(randi()%2), Autoload.get_randi(), Color(randf(),randf(),randf(),randf()), Autoload.loadA("res://RES/Sprite.png"), Autoload.loadA("res://RES/Sprite.png"))#Not in position
+			set_slot(Autoload.get_int(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), Autoload.loadA("Sprite.png"), Autoload.loadA("Sprite.png"))#Not in position
 		if randi() % 2 == 1:
-			clear_slot(Autoload.get_randi())
+			clear_slot(Autoload.get_int())
 		if randi() % 2 == 1:
 			clear_all_slots()
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_color(Autoload.get_randi()))
+			qq += str(get_connection_input_color(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_connection_input_count())
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_position(Autoload.get_randi()))
+			qq += str(get_connection_input_position(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_type(Autoload.get_randi()))
+			qq += str(get_connection_input_type(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_color(Autoload.get_randi()))
+			qq += str(get_connection_output_color(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_connection_output_count())
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_position(Autoload.get_randi()))
+			qq += str(get_connection_output_position(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_type(Autoload.get_randi()))
+			qq += str(get_connection_output_type(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_color_left(Autoload.get_randi()))
+			qq += str(get_slot_color_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_color_right(Autoload.get_randi()))
+			qq += str(get_slot_color_right(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_type_left(Autoload.get_randi()))
+			qq += str(get_slot_type_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_type_right(Autoload.get_randi()))
+			qq += str(get_slot_type_right(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_slot_enabled_left(Autoload.get_randi()))
+			qq += str(is_slot_enabled_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_slot_enabled_right(Autoload.get_randi()))
+			qq += str(is_slot_enabled_right(Autoload.get_int()))

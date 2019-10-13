@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptDeconstruct.set_deconstruct_type(Autoload.get_randi())  # Variant_MAX
+			q_VisualScriptDeconstruct.set_deconstruct_type(Autoload.get_int())  # Variant_MAX

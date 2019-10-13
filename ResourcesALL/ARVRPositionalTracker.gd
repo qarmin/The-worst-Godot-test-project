@@ -19,7 +19,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
 #
 #		if randi() % 2 == 1:
-#			q_ARVRPositionalTracker.set_rumble(Autoload.get_randf())
+#			q_ARVRPositionalTracker.set_rumble(Autoload.get_float())
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_ARVRPositionalTracker.get_hand())
@@ -38,7 +38,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		if randi() % 2 == 1:
 #			qq += str(q_ARVRPositionalTracker.get_tracks_position())
 #		if randi() % 2 == 1:
-#			qq += str(q_ARVRPositionalTracker.get_transform( bool(randi()%2)))
+#			qq += str(q_ARVRPositionalTracker.get_transform( Autoload.get_bool()))
 #		if randi() % 2 == 1:
 #			qq += str(q_ARVRPositionalTracker.get_type())
 #

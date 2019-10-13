@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_EncodedObjectAsID.get_object_id())
 		if randi() % 2 == 1:
-			q_EncodedObjectAsID.set_object_id(Autoload.get_randi())
+			q_EncodedObjectAsID.set_object_id(Autoload.get_int())

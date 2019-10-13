@@ -20,4 +20,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_GradientTexture.set_gradient(Gradient.new())
 		if randi() % 2 == 1:
-			q_GradientTexture.set_width(Autoload.get_randi())
+			q_GradientTexture.set_width(Autoload.get_int())

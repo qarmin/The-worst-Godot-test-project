@@ -19,11 +19,11 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_SpatialVelocityTracker.set_track_physics_step(bool(randi()%2))
+			q_SpatialVelocityTracker.set_track_physics_step(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			qq += str(q_SpatialVelocityTracker.get_tracked_linear_velocity())
 		if randi() % 2 == 1:
-			q_SpatialVelocityTracker.reset( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_SpatialVelocityTracker.reset( Autoload.get_vector3())
 		if randi() % 2 == 1:
-			q_SpatialVelocityTracker.update_position( Vector3(Autoload.get_randf(),Autoload.get_randf(),Autoload.get_randf()))
+			q_SpatialVelocityTracker.update_position( Autoload.get_vector3())

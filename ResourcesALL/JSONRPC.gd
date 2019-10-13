@@ -20,16 +20,16 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_notification(Autoload.get_string(), Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_notification(Autoload.get_string(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_request(Autoload.get_string(), Autoload.get_randi(), Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_request(Autoload.get_string(), Autoload.get_int(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_response(Autoload.get_randi(), Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_response(Autoload.get_int(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.make_response_error(Autoload.get_randi(), Autoload.get_string(), Autoload.get_randi()))
+#			qq += str(q_JSONRPC.make_response_error(Autoload.get_int(), Autoload.get_string(), Autoload.get_int()))
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_JSONRPC.process_action(Autoload.get_randi(), bool(randi()%2)))
+#			qq += str(q_JSONRPC.process_action(Autoload.get_int(), Autoload.get_bool()))
 #		if randi() % 2 == 1:
 #			qq += str(q_JSONRPC.process_string(Autoload.get_string()))
 #

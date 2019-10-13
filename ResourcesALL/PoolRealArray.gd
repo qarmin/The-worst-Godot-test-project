@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			q_PoolRealArray = PoolRealArray([1.4])
 		
 		if randi() % 2 == 1:
-			q_PoolRealArray.append(Autoload.get_randf())
+			q_PoolRealArray.append(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_PoolRealArray.append_array(PoolRealArray([Autoload.get_randi()]))
+			q_PoolRealArray.append_array(PoolRealArray([Autoload.get_int()]))
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolRealArray.insert( Autoload.get_randi(), Autoload.get_randf()) )
+			qq += str(q_PoolRealArray.insert( Autoload.get_int(), Autoload.get_float()) )
 		if randi() % 2 == 1:
 			q_PoolRealArray.invert()
 		if randi() % 2 == 1:
-			q_PoolRealArray.push_back( Autoload.get_randf() )
+			q_PoolRealArray.push_back( Autoload.get_float() )
 		if randi() % 2 == 1:
-			q_PoolRealArray.remove( Autoload.get_randi())
+			q_PoolRealArray.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolRealArray.resize( Autoload.get_randi())
+			q_PoolRealArray.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolRealArray.set(Autoload.get_randi(), Autoload.get_randf())
+			q_PoolRealArray.set(Autoload.get_int(), Autoload.get_float())
 		if randi() % 2 == 1:
 			qq += str(q_PoolRealArray.size())

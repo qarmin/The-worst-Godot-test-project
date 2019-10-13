@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_RectangleShape2D.set_extents(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_RectangleShape2D.set_extents(Autoload.get_vector2())

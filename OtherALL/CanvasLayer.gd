@@ -16,23 +16,23 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_layer(Autoload.get_randi())
+			set_layer(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_rotation_degrees(Autoload.get_randf())
+			set_rotation_degrees(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_rotation(Autoload.get_randf())
+			set_rotation(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_scale(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			set_scale(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			set_transform(Autoload.get_transform2d())
 		if randi() % 2 == 1:
 			set_custom_viewport(get_parent())
 		if randi() % 2 == 1:
-			set_follow_viewport(bool(randi()%2))
+			set_follow_viewport(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_follow_viewport_scale(Autoload.get_randf())
+			set_follow_viewport_scale(Autoload.get_float())
 			
 		if randi() % 2 == 1:
 			qq += str(get_canvas())

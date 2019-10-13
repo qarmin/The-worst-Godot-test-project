@@ -15,28 +15,28 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf()),Vector2(Autoload.get_randf(), Autoload.get_randf())]))
+			set_polygon(PoolVector2Array([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())]))
 		if randi() % 2 == 1:
-			set_mode(Autoload.get_randi()) # Mode
+			set_mode(Autoload.get_int()) # Mode
 		if randi() % 2 == 1:
-			set_depth(Autoload.get_randf())
+			set_depth(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_spin_degrees(Autoload.get_randf())
+			set_spin_degrees(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_spin_sides(Autoload.get_randi())
+			set_spin_sides(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_path_node(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_path_interval(Autoload.get_randf())
+			set_path_interval(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_path_rotation(Autoload.get_randi()) # PathRotation
+			set_path_rotation(Autoload.get_int()) # PathRotation
 		if randi() % 2 == 1:
-			set_path_local(bool(randi()%2))
+			set_path_local(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_path_continuous_u(bool(randi()%2))
+			set_path_continuous_u(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_path_joined(bool(randi()%2))
+			set_path_joined(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_smooth_faces(bool(randi()%2))
+			set_smooth_faces(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_material(SpatialMaterial.new())

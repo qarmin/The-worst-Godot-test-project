@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			q_AnimationNodeAdd2 = AnimationNodeAdd2.new()
 		
 		if randi() % 2 == 1:
-			q_AnimationNodeAdd2.set_use_sync(bool(randi()%2))
+			q_AnimationNodeAdd2.set_use_sync(Autoload.get_bool())

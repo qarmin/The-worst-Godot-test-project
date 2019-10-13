@@ -19,18 +19,18 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), Autoload.get_randi(), Autoload.get_randi() ))
+			qq += str(q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), Autoload.get_int(), Autoload.get_int() ))
 		if randi() % 2 == 1:
 			q_WebRTCMultiplayer.close()
 			
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.get_peer( Autoload.get_randi() ))
+			qq += str(q_WebRTCMultiplayer.get_peer( Autoload.get_int() ))
 		if randi() % 2 == 1:
 			qq += str(q_WebRTCMultiplayer.get_peers())
 			
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.has_peer( Autoload.get_randi() ))
+			qq += str(q_WebRTCMultiplayer.has_peer( Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCMultiplayer.initialize( Autoload.get_randi(), bool(randi()%2)))
+			qq += str(q_WebRTCMultiplayer.initialize( Autoload.get_int(), Autoload.get_bool()))
 		if randi() % 2 == 1:
-			q_WebRTCMultiplayer.remove_peer( Autoload.get_randi() )
+			q_WebRTCMultiplayer.remove_peer( Autoload.get_int() )

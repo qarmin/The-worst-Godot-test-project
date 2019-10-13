@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_GDNative.set_library(Autoload.loadA("res://RES/GDNativeLibrary.tres",true))
+			q_GDNative.set_library(Autoload.loadA("GDNativeLibrary.tres"))
 			
 		if randi() % 2 == 1:
 			q_GDNative.call_native( Autoload.get_string(), Autoload.get_string(), [Autoload.get_string(),Autoload.get_string()] )

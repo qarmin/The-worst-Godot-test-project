@@ -19,21 +19,21 @@ func _process(delta) -> void:
 			
 			
 		if randi() % 2 == 1:
-			q_ImageTexture.set_storage(Autoload.get_randi()) #Storage
+			q_ImageTexture.set_storage(Autoload.get_int()) #Storage
 		if randi() % 2 == 1:
-			q_ImageTexture.set_lossy_storage_quality(Autoload.get_randf())
+			q_ImageTexture.set_lossy_storage_quality(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			q_ImageTexture.create(Autoload.get_randi(),Autoload.get_randi(),randi() % 6000 - 3000,Autoload.get_randi()) # Format
+			q_ImageTexture.create(Autoload.get_int(),Autoload.get_int(),randi() % 6000 - 3000,Autoload.get_int()) # Format
 		if randi() % 2 == 1:
-			q_ImageTexture.create_from_image(Image.new(),Autoload.get_randi())
+			q_ImageTexture.create_from_image(Image.new(),Autoload.get_int())
 
 		if randi() % 2 == 1:
 			qq += str(q_ImageTexture.get_format())
 		if randi() % 2 == 1:
-			qq += str(q_ImageTexture.load("res://RES/Sprite1.png"))
+			qq += str(q_ImageTexture.load("Sprite.png"))
 
 		if randi() % 2 == 1:
 			q_ImageTexture.set_data(Image.new())
 		if randi() % 2 == 1:
-			q_ImageTexture.set_size_override(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			q_ImageTexture.set_size_override(Autoload.get_vector2())

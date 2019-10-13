@@ -15,20 +15,20 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_texture_pressed(Autoload.loadA("res://RES/Sprite.png"))
+			set_texture_pressed(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_bitmask(Autoload.loadA("res://RES/Bitmap.tres"))
+			set_bitmask(Autoload.loadA("Bitmap.tres"))
 		if randi() % 2 == 1:
-			set_shape(Autoload.loadA("res://RES/CircleShape2D.tres"))
+			set_shape(Autoload.loadA("CircleShape2D.tres"))
 		if randi() % 2 == 1:
-			set_shape_centered(bool(randi()%2))
+			set_shape_centered(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_shape_visible(bool(randi()%2))
+			set_shape_visible(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_passby_press(bool(randi()%2))
+			set_passby_press(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_action(str(Autoload.get_randi()))
+			set_action(str(Autoload.get_int()))
 		if randi() % 2 == 1:
-			set_visibility_mode(Autoload.get_randi())
+			set_visibility_mode(Autoload.get_int())

@@ -19,18 +19,18 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_channel(Autoload.get_randi())
+			q_InputEventMIDI.set_channel(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_message(Autoload.get_randi())
+			q_InputEventMIDI.set_message(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_pitch(Autoload.get_randi())
+			q_InputEventMIDI.set_pitch(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_velocity(Autoload.get_randi())
+			q_InputEventMIDI.set_velocity(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_instrument(Autoload.get_randi())
+			q_InputEventMIDI.set_instrument(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_pressure(Autoload.get_randi())
+			q_InputEventMIDI.set_pressure(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_controller_number(Autoload.get_randi())
+			q_InputEventMIDI.set_controller_number(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_InputEventMIDI.set_controller_value(Autoload.get_randi())
+			q_InputEventMIDI.set_controller_value(Autoload.get_int())

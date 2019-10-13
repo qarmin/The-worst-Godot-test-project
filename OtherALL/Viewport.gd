@@ -16,58 +16,58 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_use_arvr(bool(randi()%2))
+			set_use_arvr(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_size(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			set_size(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_use_own_world(bool(randi()%2))
+			set_use_own_world(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_world(World.new())
 		if randi() % 2 == 1:
 			set_world_2d(World2D.new())
 		if randi() % 2 == 1:
-			set_transparent_background(bool(randi()%2))
+			set_transparent_background(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_handle_input_locally(bool(randi()%2))
+			set_handle_input_locally(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_msaa(Autoload.get_randi()) # MSAA
+			set_msaa(Autoload.get_int()) # MSAA
 		if randi() % 2 == 1:
-			set_hdr(bool(randi()%2))
+			set_hdr(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_disable_3d(bool(randi()%2))
+			set_disable_3d(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_keep_3d_linear(bool(randi()%2))
+			set_keep_3d_linear(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_usage(Autoload.get_randi()) # Usage
+			set_usage(Autoload.get_int()) # Usage
 		if randi() % 2 == 1:
-			set_use_render_direct_to_screen(bool(randi()%2))
+			set_use_render_direct_to_screen(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_debug_draw(Autoload.get_randi()) #DebugDraw
+			set_debug_draw(Autoload.get_int()) #DebugDraw
 		if randi() % 2 == 1:
-			set_vflip(bool(randi()%2))
+			set_vflip(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_clear_mode(Autoload.get_randi()) #ClearMode
+			set_clear_mode(Autoload.get_int()) #ClearMode
 		if randi() % 2 == 1:
-			set_update_mode(Autoload.get_randi()) #UpdateMode
+			set_update_mode(Autoload.get_int()) #UpdateMode
 		if randi() % 2 == 1:
-			set_as_audio_listener_2d(bool(randi()%2))
+			set_as_audio_listener_2d(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_as_audio_listener(bool(randi()%2))
+			set_as_audio_listener(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_physics_object_picking(bool(randi()%2))
+			set_physics_object_picking(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_disable_input(bool(randi()%2))
+			set_disable_input(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_snap_controls_to_pixels(bool(randi()%2))
+			set_snap_controls_to_pixels(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_shadow_atlas_size(Autoload.get_randi())
+			set_shadow_atlas_size(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_shadow_atlas_quadrant_subdiv(Autoload.get_randi(),Autoload.get_randi())
+			set_shadow_atlas_quadrant_subdiv(Autoload.get_int(),Autoload.get_int())
 	
 		if randi() % 2 == 1:
-			set_canvas_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			set_canvas_transform(Autoload.get_transform2d())
 		if randi() % 2 == 1:
-			set_global_canvas_transform(Transform2D(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			set_global_canvas_transform(Autoload.get_transform2d())
 	
 		if randi() % 2 == 1:
 			qq += str(find_world())
@@ -83,7 +83,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_mouse_position())
 		if randi() % 2 == 1:
-			qq += str(get_render_info(Autoload.get_randi()))
+			qq += str(get_render_info(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(get_size_override())
 		if randi() % 2 == 1:
@@ -111,17 +111,17 @@ func _process(delta) -> void:
 			qq += str(is_size_override_stretch_enabled())
 	
 		if randi() % 2 == 1:
-			set_attach_to_screen_rect(Rect2(Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf())))
+			set_attach_to_screen_rect(Autoload.get_rect2d())
 		if randi() % 2 == 1:
 			set_input_as_handled()
 		if randi() % 2 == 1:
-			set_size_override(bool(randi()%2),Vector2(Autoload.get_randf(),Autoload.get_randf()),Vector2(Autoload.get_randf(),Autoload.get_randf()))
+			set_size_override(Autoload.get_bool(),Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_size_override_stretch(bool(randi()%2))
+			set_size_override_stretch(Autoload.get_bool())
 	
 		if randi() % 2 == 1:
 			unhandled_input(InputEvent.new())
 		if randi() % 2 == 1:
 			update_worlds()
 		# This move mouse and is irritating
-		### warp_mouse(Vector2(Autoload.get_randf(),Autoload.get_randf()))
+		### warp_mouse(Autoload.get_vector2())

@@ -19,11 +19,11 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_popup(popup_menu_temp)
 #		if randi() % 2 == 1:
-#			set_tab_disabled(Autoload.get_randi(),bool(randi()%2))
+#			set_tab_disabled(Autoload.get_int(),Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			set_tab_icon(Autoload.get_randi(),Autoload.loadA("res://RES/Sprite.png"))
+#			set_tab_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 #		if randi() % 2 == 1:
-#			set_tab_title(Autoload.get_randi(),str(Autoload.get_randi()))
+#			set_tab_title(Autoload.get_int(),str(Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			set_tabs_rearrange_group(0)
 #
@@ -34,23 +34,23 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(get_previous_tab())
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_control(Autoload.get_randi()))
+#			qq += str(get_tab_control(Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			qq += str(get_tab_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_disabled(Autoload.get_randi()))
+#			qq += str(get_tab_disabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_icon(Autoload.get_randi()))
+#			qq += str(get_tab_icon(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_title(Autoload.get_randi()))
+#			qq += str(get_tab_title(Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			qq += str(get_tabs_rearrange_group())
 #
 #		if randi() % 2 == 1:
-#			set_tab_align(Autoload.get_randi())
+#			set_tab_align(Autoload.get_int())
 #		if randi() % 2 == 1:
-#			set_current_tab(Autoload.get_randi())
+#			set_current_tab(Autoload.get_int())
 #		if randi() % 2 == 1:
-#			set_tabs_visible(bool(randi()%2))
+#			set_tabs_visible(Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			set_drag_to_rearrange_enabled(bool(randi()%2))
+#			set_drag_to_rearrange_enabled(Autoload.get_bool())

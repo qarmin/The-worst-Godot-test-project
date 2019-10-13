@@ -15,8 +15,8 @@ func _physics_process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_engine_force(Autoload.get_randf())
+			set_engine_force(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_brake(Autoload.get_randf())
+			set_brake(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_steering(Autoload.get_randf())
+			set_steering(Autoload.get_float())
