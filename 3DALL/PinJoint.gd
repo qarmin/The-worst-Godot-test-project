@@ -13,20 +13,10 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		if !Autoload.RANDI:
-			
-			set("params/bias",randf() * 50)
-			set("params/damping",randf() * 50)
-			set("params/impulse_clamp",randf() * 50)
-	
-			if Autoload.WRONG_BUGS:
-				set("params/bias",Autoload.get_float())
-				set("params/damping",Autoload.get_float())
-				set("params/impulse_clamp",Autoload.get_float())
-		else: #RANDI
-			if randi() % 2 == 1:
-				set("params/bias",Autoload.get_float())
-			if randi() % 2 == 1:
-				set("params/damping",Autoload.get_float())
-			if randi() % 2 == 1:
-				set("params/impulse_clamp",Autoload.get_float())
+
+		if randi() % 2 == 1:
+			set("params/bias",Autoload.get_float())
+		if randi() % 2 == 1:
+			set("params/damping",Autoload.get_float())
+		if randi() % 2 == 1:
+			set("params/impulse_clamp",Autoload.get_float())

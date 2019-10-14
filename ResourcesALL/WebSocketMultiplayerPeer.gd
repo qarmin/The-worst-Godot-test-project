@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_WebSocketMultiplayerPeer : WebSocketMultiplayerPeer = WebSocketMultiplayerPeer.new()
 #
 #		q_WebSocketMultiplayerPeer.get_peer( 0)
-#		q_WebSocketMultiplayerPeer.set_buffers( randi()%50, randi()%50, randi()%50, randi()%50 )
+#		q_WebSocketMultiplayerPeer.set_buffers( Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int() )
 #

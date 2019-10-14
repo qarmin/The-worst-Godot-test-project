@@ -15,7 +15,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
 #		var q_EditorVCSInterface : EditorVCSInterface = EditorVCSInterface.new()
-#			q_EditorVCSInterface.commit("Result")
+#			q_EditorVCSInterface.commit(Autoload.get_string())
 #
 #			qq += str(q_EditorVCSInterface.get_file_diff(Autoload.get_string()))
 #			qq += str(q_EditorVCSInterface.get_is_vcs_intialized())

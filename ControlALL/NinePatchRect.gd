@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_draw_center(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
+			set_region_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
 			set("patch_margin_left", Autoload.get_int())
 		if randi() % 2 == 1:

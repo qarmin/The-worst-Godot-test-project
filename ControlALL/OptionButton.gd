@@ -20,9 +20,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			_select_int(Autoload.get_int())
 		if randi() % 2 == 1:
-			add_icon_item(Autoload.loadA("Sprite.png"),str(Autoload.get_int()))
+			add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_string())
 		if randi() % 2 == 1:
-			add_item(str(Autoload.get_int()))
+			add_item(Autoload.get_string())
 		if randi() % 2 == 1:
 			qq += str(get_item_count())
 		if randi() % 2 == 1:
@@ -54,6 +54,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_item_metadata(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_item_text(Autoload.get_int(),str(Autoload.get_int()))
+			set_item_text(Autoload.get_int(),Autoload.get_string())
 		if randi() % 2 == 1:
 			remove_item(Autoload.get_int())

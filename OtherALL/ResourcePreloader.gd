@@ -16,16 +16,16 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			add_resource("qq", ImageTexture.new())
+			add_resource(Autoload.get_string(), ImageTexture.new())
 			
 		if randi() % 2 == 1:
-			qq += str(get_resource("qq"))
+			qq += str(get_resource(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_resource_list())
 			
 		if randi() % 2 == 1:
-			qq += str(has_resource("qasfq"))
+			qq += str(has_resource(Autoload.get_string()))
 		if randi() % 2 == 1:
-			rename_resource("qasq","asfd")
+			rename_resource(Autoload.get_string(),Autoload.get_string())
 		if randi() % 2 == 1:
-			remove_resource("ddaf") ## Zmiana kolejnosci
+			remove_resource(Autoload.get_string()) ## Zmiana kolejnosci

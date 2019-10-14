@@ -14,9 +14,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
-#		var q_InputEvent : InputEvent = InputEvent.new()
+#		var q_InputEvent : InputEvent = InputEventAction.new()
 #
-#		qq += str(q_InputEvent.accumulate( InputEvent.new() ))
+#		qq += str(q_InputEvent.accumulate( InputEventAction.new() ))
 #		qq += str(q_InputEvent.as_text())
 #		qq += str(q_InputEvent.get_action_strength( Autoload.get_string()))
 #
@@ -27,6 +27,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_InputEvent.is_echo())
 #		qq += str(q_InputEvent.is_pressed())
 #
-#		qq += str(q_InputEvent.shortcut_match( InputEvent.new()))
-#		qq += str(q_InputEvent.xformed_by( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) ))
+#		qq += str(q_InputEvent.shortcut_match( InputEventAction.new()))
+#		qq += str(q_InputEvent.xformed_by( Autoload.get_transform2d(), Autoload.get_vector2() ))
 #

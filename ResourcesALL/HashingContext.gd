@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_HashingContext.start(Autoload.get_int())) #HashType
 		if randi() % 2 == 1:
-			qq += str(q_HashingContext.update(PoolByteArray([124,12,412,412,412,412,412,421,4])))
+			qq += str(q_HashingContext.update(Autoload.get_poolbytearray()))

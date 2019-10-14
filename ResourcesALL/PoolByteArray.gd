@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolByteArray : PoolByteArray = PoolByteArray([Color()])
+var q_PoolByteArray : PoolByteArray = Autoload.get_poolbytearray()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,12 +17,12 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_PoolByteArray = PoolByteArray([Color()])
+			q_PoolByteArray = Autoload.get_poolbytearray()
 
 		if randi() % 2 == 1:
 			q_PoolByteArray.append(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PoolByteArray.append_array(PoolByteArray([]))
+			q_PoolByteArray.append_array(Autoload.get_poolbytearray())
 			
 		if randi() % 2 == 1:
 			qq += str(q_PoolByteArray.compress(Autoload.get_int())) # File.CompressionMode

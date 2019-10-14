@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_centered(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_flip_h(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -36,10 +36,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_region(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
+			set_region_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
 			set_region_filter_clip(Autoload.get_bool())
 		if randi() % 2 == 1:
 			qq += str(get_rect())
 		if randi() % 2 == 1:
-			qq += str(is_pixel_opaque(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(is_pixel_opaque(Autoload.get_vector2()))

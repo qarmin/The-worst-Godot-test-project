@@ -40,7 +40,7 @@ func _process(delta) -> void:
 			set_pose_matching_coefficient(Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			add_collision_exception_with(self)
+			add_collision_exception_with(Autoload.get_nodes(self))
 			
 		if randi() % 2 == 1:
 			qq += str(get_collision_exceptions())

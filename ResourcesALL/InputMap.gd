@@ -15,15 +15,15 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_InputMap : InputMap = InputMap.new()
 #
-#		#InputMap.action_add_event(Autoload.get_string(),InputEvent.new())
-#		#InputMap.action_erase_event(Autoload.get_string(),InputEvent.new())
+#		#InputMap.action_add_event(Autoload.get_string(),InputEventAction.new())
+#		#InputMap.action_erase_event(Autoload.get_string(),InputEventAction.new())
 #		#InputMap.action_erase_events(Autoload.get_string())
-#		#qq += str(InputMap.action_has_event(Autoload.get_string(),InputEvent.new()))
-#		#InputMap.action_set_deadzone(Autoload.get_string(),randf() * 50)
+#		#qq += str(InputMap.action_has_event(Autoload.get_string(),InputEventAction.new()))
+#		#InputMap.action_set_deadzone(Autoload.get_string(),Autoload.get_float())
 #
-#		InputMap.add_action(Autoload.get_string(),randf() * 50)
+#		InputMap.add_action(Autoload.get_string(),Autoload.get_float())
 #		#InputMap.erase_action(Autoload.get_string())
-#		#InputMap.event_is_action(InputEvent.new(),Autoload.get_string())
+#		#InputMap.event_is_action(InputEventAction.new(),Autoload.get_string())
 #
 #		qq += str(InputMap.get_action_list(Autoload.get_string()))
 #		qq += str(InputMap.get_actions())

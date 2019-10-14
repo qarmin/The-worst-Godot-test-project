@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		###q_AStar._estimate_cost(Autoload.get_int(),Autoload.get_int())
 	
 		if randi() % 2 == 1:
-			q_AStar.add_point(Autoload.get_int(), Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()), Autoload.get_float())
+			q_AStar.add_point(Autoload.get_int(), Autoload.get_vector3(), Autoload.get_float())
 		if randi() % 2 == 1:
 			qq += str(q_AStar.are_points_connected(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -35,9 +35,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_AStar.get_available_point_id())
 		if randi() % 2 == 1:
-			qq += str(q_AStar.get_closest_point(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float())))
+			qq += str(q_AStar.get_closest_point(Autoload.get_vector3()))
 		if randi() % 2 == 1:
-			qq += str(q_AStar.get_closest_position_in_segment(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float())))
+			qq += str(q_AStar.get_closest_position_in_segment(Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			qq += str(q_AStar.get_id_path(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -61,6 +61,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AStar.set_point_disabled(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_AStar.set_point_position(Autoload.get_int(),Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+			q_AStar.set_point_position(Autoload.get_int(),Autoload.get_vector3())
 		if randi() % 2 == 1:
 			q_AStar.set_point_weight_scale(Autoload.get_int(),Autoload.get_float())

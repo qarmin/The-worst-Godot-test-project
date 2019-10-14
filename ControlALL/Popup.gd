@@ -17,13 +17,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_exclusive(Autoload.get_bool())
 		if randi() % 2 == 1:
-			popup(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
+			popup(Autoload.get_rect2())
 		if randi() % 2 == 1:
-			popup_centered(Vector2(Autoload.get_float(), Autoload.get_float()))
+			popup_centered(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			popup_centered_clamped(Vector2(Autoload.get_float(), Autoload.get_float()),randf())
+			popup_centered_clamped(Autoload.get_vector2(),randf())
 		if randi() % 2 == 1:
-			popup_centered_minsize(Vector2(Autoload.get_float(), Autoload.get_float()))
+			popup_centered_minsize(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			popup_centered_ratio(Autoload.get_float())
 			

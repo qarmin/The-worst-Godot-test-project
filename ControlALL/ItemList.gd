@@ -38,7 +38,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_icon_scale(Autoload.get_float())
 #		if randi() % 2 == 1:
-#			set_fixed_icon_size(Vector2(Autoload.get_float(), Autoload.get_float()))
+#			set_fixed_icon_size(Autoload.get_vector2())
 #		if randi() % 2 == 1:
 #			add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_bool())
 #		if randi() % 2 == 1:
@@ -46,7 +46,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			ensure_current_is_visible()
 #		if randi() % 2 == 1:
-#			qq += str(get_item_at_position(Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_bool()))
+#			qq += str(get_item_at_position(Autoload.get_vector2(),Autoload.get_bool()))
 #		if randi() % 2 == 1:
 #			qq += str(get_item_count())
 #		if randi() % 2 == 1:
@@ -98,7 +98,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_item_icon_modulate(Autoload.get_int(),Autoload.get_color())
 #		if randi() % 2 == 1:
-#			set_item_icon_region(Autoload.get_int(),Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
+#			set_item_icon_region(Autoload.get_int(),Autoload.get_rect2())
 #		if randi() % 2 == 1:
 #			set_item_icon_transposed(Autoload.get_int(),Autoload.get_bool())
 #		if randi() % 2 == 1:

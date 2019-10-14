@@ -25,7 +25,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_PacketPeer.get_packet_error())
 #		qq += str(q_PacketPeer.get_var( Autoload.get_bool()))
 #
-#		qq += str(q_PacketPeer.put_packet( PoolByteArray([11,124,1241,24,21,214,12,11])))
+#		qq += str(q_PacketPeer.put_packet( Autoload.get_poolbytearray()))
 #		qq += str(q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool()))
 #
 #		if Autoload.WRONG_BUGS:

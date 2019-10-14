@@ -16,7 +16,7 @@ func _ready():
 #
 #		var q_PrimitiveMesh : PrimitiveMesh = PrimitiveMesh.new()
 #			q_PrimitiveMesh.set_material(SpatialMaterial.new())
-#			q_PrimitiveMesh.set_custom_aabb(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+#			q_PrimitiveMesh.set_custom_aabb(Autoload.get_aabb())
 #			q_PrimitiveMesh.set_flip_faces(Autoload.get_bool())
 #
 #			qq += str(q_PrimitiveMesh.get_mesh_arrays())

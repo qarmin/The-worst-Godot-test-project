@@ -81,7 +81,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshDataTool.set_vertex( Autoload.get_int(), Autoload.get_vector3())
 		if randi() % 2 == 1:
-			q_MeshDataTool.set_vertex_bones( Autoload.get_int(), PoolIntArray([11,124,1241,24,21,214,12,11]))
+			q_MeshDataTool.set_vertex_bones( Autoload.get_int(), Autoload.get_poolintarray())
 		if randi() % 2 == 1:
 			q_MeshDataTool.set_vertex_color( Autoload.get_int(), Autoload.get_color() )
 		if randi() % 2 == 1:
@@ -95,4 +95,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshDataTool.set_vertex_uv2( Autoload.get_int(), Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_MeshDataTool.set_vertex_weights( Autoload.get_int(), PoolRealArray([125125.125,12512.1251,122.124]))
+			q_MeshDataTool.set_vertex_weights( Autoload.get_int(), Autoload.get_poolrealarray())

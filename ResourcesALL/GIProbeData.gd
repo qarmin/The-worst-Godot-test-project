@@ -19,13 +19,13 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_GIProbeData.set_bounds(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+			q_GIProbeData.set_bounds(Autoload.get_aabb())
 		if randi() % 2 == 1:
 			q_GIProbeData.set_cell_size(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_to_cell_xform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_GIProbeData.set_to_cell_xform(Autoload.get_transform())
 		if randi() % 2 == 1:
-			q_GIProbeData.set_dynamic_data(PoolIntArray([11,124,1241,24,21,214,12,11]))
+			q_GIProbeData.set_dynamic_data(Autoload.get_poolintarray())
 		if randi() % 2 == 1:
 			q_GIProbeData.set_dynamic_range(Autoload.get_int())
 		if randi() % 2 == 1:

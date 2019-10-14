@@ -15,5 +15,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_VisualScriptSubCall : VisualScriptSubCall = VisualScriptSubCall.new()
 #
-#		q_VisualScriptSubCall._subcall( randi()%50)
+#		q_VisualScriptSubCall._subcall( Autoload.get_int())
 #

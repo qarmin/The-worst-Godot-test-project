@@ -14,10 +14,10 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if randi() % 2 == 1:
-			set_group_name(str(randi()%50000))
+			set_group_name(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_dispatch_mode(Autoload.get_int()) # DispatchMode
 		if randi() % 2 == 1:
 			set_grid_radius(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			broadcast(str(randi()%50000), InputEventAction.new())
+			broadcast(Autoload.get_string(), InputEventAction.new())

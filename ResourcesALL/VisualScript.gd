@@ -28,7 +28,7 @@ func _process(delta) -> void:
 			q_VisualScript.add_variable( Autoload.get_string(), Autoload.get_vector2(), Autoload.get_bool() )
 	
 		if randi() % 2 == 1:
-			q_VisualScript.custom_signal_add_argument( Autoload.get_string(), randi()%50, Autoload.get_string(), Autoload.get_int() )
+			q_VisualScript.custom_signal_add_argument( Autoload.get_string(), Autoload.get_int(), Autoload.get_string(), Autoload.get_int() )
 		if randi() % 2 == 1:
 			qq += str(q_VisualScript.custom_signal_get_argument_count( Autoload.get_string() ))
 		if randi() % 2 == 1:
@@ -40,7 +40,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScript.custom_signal_set_argument_name( Autoload.get_string(), Autoload.get_int(), Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_VisualScript.custom_signal_set_argument_type( Autoload.get_string(), Autoload.get_int(), randi()%50)
+			q_VisualScript.custom_signal_set_argument_type( Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
 			q_VisualScript.custom_signal_swap_argument( Autoload.get_string(), Autoload.get_int(), Autoload.get_int() )
 	

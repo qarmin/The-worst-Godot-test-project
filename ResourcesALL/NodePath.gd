@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_NodePath : NodePath = NodePath(".")
+var q_NodePath : NodePath = Autoload.get_nodepath(self)
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,7 +17,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_NodePath = NodePath(".")
+			q_NodePath = Autoload.get_nodepath(self)
 			
 		if randi() % 2 == 1:
 			qq += str(q_NodePath.get_as_property_path())

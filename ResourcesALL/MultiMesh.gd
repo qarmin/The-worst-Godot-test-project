@@ -43,12 +43,12 @@ func _process(delta) -> void:
 			qq += str(q_MultiMesh.get_instance_transform_2d(Autoload.get_int() ))
 			
 		if randi() % 2 == 1:
-			q_MultiMesh.set_as_bulk_array( PoolRealArray([125125.125,12512.1251,122.124]))
+			q_MultiMesh.set_as_bulk_array( Autoload.get_poolrealarray())
 #	BUG	if randi() % 2 == 1:
 #			q_MultiMesh.set_instance_color(Autoload.get_int(), Autoload.get_color())
 #	BUG	if randi() % 2 == 1:
 #			q_MultiMesh.set_instance_custom_data(Autoload.get_int(), Autoload.get_color())
 		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_transform(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_MultiMesh.set_instance_transform(Autoload.get_int(), Autoload.get_transform())
 		if randi() % 2 == 1:
-			q_MultiMesh.set_instance_transform_2d(Autoload.get_int(),Transform2D(Autoload.get_vector2(),Autoload.get_vector2(),Vector2(Autoload.get_float(),randf() * 50)))
+			q_MultiMesh.set_instance_transform_2d(Autoload.get_int(),Autoload.get_transform2d())

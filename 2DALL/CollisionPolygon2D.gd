@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_build_mode(Autoload.get_int()) # Enum BuildMode
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2()]))
+			set_polygon(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
 			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:

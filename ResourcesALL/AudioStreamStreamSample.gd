@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_AudioStreamSample.set_data(PoolByteArray([12421,421,421,4,124,214,214,12,4]))
+			q_AudioStreamSample.set_data(Autoload.get_poolbytearray())
 		if randi() % 2 == 1:
 			q_AudioStreamSample.set_format(Autoload.get_int())#
 		if randi() % 2 == 1:
@@ -33,4 +33,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioStreamSample.set_stereo(Autoload.get_bool())
 			
-			### qq += str(q_AudioStreamSample.save_to_wav("."))
+			### qq += str(q_AudioStreamSample.save_to_wav(Autoload.get_nodepath(self)))

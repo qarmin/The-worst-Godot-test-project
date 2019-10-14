@@ -47,7 +47,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.open( Autoload.get_string() ))
 #		if randi() % 2 == 1:
-#			qq += str(q_XMLParser.open_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
+#			qq += str(q_XMLParser.open_buffer( Autoload.get_poolbytearray()))
 #
 #		if randi() % 2 == 1:
 #			qq += str(q_XMLParser.read())

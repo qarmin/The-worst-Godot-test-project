@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_mix_target(Autoload.get_int())# MixTarget
 		if randi() % 2 == 1:
-			set_bus("asfqwfafasfa")
+			set_bus(Autoload.get_string())
 			
 			
 		if randi() % 2 == 1:

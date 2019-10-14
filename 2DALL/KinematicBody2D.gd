@@ -30,11 +30,11 @@ func _physics_process(delta) -> void:
 			qq += str(is_on_floor())
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(move_and_collide(Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool()))
-				qq += str(move_and_slide(Vector2(Autoload.get_float(), Autoload.get_float()), Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_bool(),Autoload.get_int(), Autoload.get_float(), Autoload.get_bool()))
-				qq += str(move_and_slide_with_snap(Vector2(Autoload.get_float(), Autoload.get_float()), Vector2(Autoload.get_float(), Autoload.get_float()), Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_bool(),Autoload.get_int(),Autoload.get_float(),Autoload.get_bool()))
+				qq += str(move_and_collide(Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool()))
+				qq += str(move_and_slide(Autoload.get_vector2(), Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_int(), Autoload.get_float(), Autoload.get_bool()))
+				qq += str(move_and_slide_with_snap(Autoload.get_vector2(), Autoload.get_vector2(), Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_int(),Autoload.get_float(),Autoload.get_bool()))
 				
-				qq += str(test_move( Transform2D(Autoload.get_float(), Vector2(Autoload.get_float(), Autoload.get_float())), Vector2(Autoload.get_float(), Autoload.get_float())))
+				qq += str(test_move( Autoload.get_transform2d(),Autoload.get_vector2(),Autoload.get_bool()))
 
 			# Physics Body
 		if randi() % 2 == 1:
@@ -65,7 +65,7 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_pickable(Autoload.get_bool())
 			
-			###_input_event(get_viewport(), InputEvent.new(), 0)
+			###_input_event(get_viewport(), InputEventAction.new(), 0)
 			
 		if randi() % 2 == 1:
 			qq += str(create_shape_owner(self))
@@ -110,4 +110,4 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			shape_owner_set_one_way_collision_margin(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			shape_owner_set_transform(Autoload.get_int(), Autoload.get_transform2())
+			shape_owner_set_transform(Autoload.get_int(), Autoload.get_transform2d())

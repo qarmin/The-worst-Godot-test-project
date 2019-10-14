@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Color : Color = Color( Color.cyan)
+var q_Color : Color = Color.cyan
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

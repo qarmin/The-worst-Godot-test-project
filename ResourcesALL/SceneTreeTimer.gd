@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_SceneTreeTimer : SceneTreeTimer = SceneTreeTimer.new()
 #
-#		q_SceneTreeTimer.set_time_left(randf() * 50)
+#		q_SceneTreeTimer.set_time_left(Autoload.get_float())
 #

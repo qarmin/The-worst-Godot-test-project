@@ -25,9 +25,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Directory.current_is_dir())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.dir_exists( "res://Pmr.png" ))
+			qq += str(q_Directory.dir_exists( "res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.file_exists( "res://Pmr.png" ))
+			qq += str(q_Directory.file_exists( "res://TEMP/" + Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Directory.get_current_dir())
@@ -50,13 +50,13 @@ func _process(delta) -> void:
 			
 			if Autoload.SLOW_FUNCTIONS:
 				if randi() % 2 == 1:
-					qq += str(q_Directory.make_dir( "res://Pmr.png" ))
+					qq += str(q_Directory.make_dir( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.make_dir_recursive( "res://Pmr.png" ))
+					qq += str(q_Directory.make_dir_recursive( "res://TEMP/" + Autoload.get_string()))
 					
 				if randi() % 2 == 1:
-					qq += str(q_Directory.open( "res://Pmr.png" ))
+					qq += str(q_Directory.open( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.remove( "res://Pmr.png" ))
+					qq += str(q_Directory.remove( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
 					qq += str(q_Directory.rename( Autoload.get_string(), Autoload.get_string() ))

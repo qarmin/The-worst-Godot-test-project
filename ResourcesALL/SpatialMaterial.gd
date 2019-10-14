@@ -55,7 +55,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpatialMaterial.set_albedo(Autoload.get_color())
 		if randi() % 2 == 1:
-			q_SpatialMaterial.set_texture(randi() % SpatialMaterial.TEXTURE_MAX,Autoload.loadA("Sprite.png")) #TextureParam
+			q_SpatialMaterial.set_texture(Autoload.get_int(),Autoload.loadA("Sprite.png")) #TextureParam
 		if randi() % 2 == 1:
 			q_SpatialMaterial.set_metallic(Autoload.get_float())
 		if randi() % 2 == 1:

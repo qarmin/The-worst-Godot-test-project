@@ -135,7 +135,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_occluder_offset( Autoload.get_int(), Autoload.get_vector2() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_region( Autoload.get_int(), Autoload.get_rect2d())
+			q_TileSet.tile_set_region( Autoload.get_int(), Autoload.get_rect2())
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_shape( Autoload.get_int(), Autoload.get_int(), RectangleShape2D.new() )
 		if randi() % 2 == 1:
@@ -147,7 +147,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_shape_transform( Autoload.get_int(), Autoload.get_int(), Autoload.get_transform2d() )
 		if randi() % 2 == 1:
-			q_TileSet.tile_set_shapes( Autoload.get_int(), [BoxShape.new(),BoxShape.new()])
+			q_TileSet.tile_set_shapes( Autoload.get_int(), Autoload.get_array())
 		if randi() % 2 == 1:
 			q_TileSet.tile_set_texture( Autoload.get_int(), Texture.new() )
 		if randi() % 2 == 1:

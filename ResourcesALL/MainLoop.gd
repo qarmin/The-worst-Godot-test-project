@@ -18,11 +18,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_MainLoop.free()
 #			q_MainLoop = MainLoop.new()
 #
-		#q_MainLoop._drop_files( PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), 0 )
+		#q_MainLoop._drop_files( Autoload.get_poolstringarray(), Autoload.get_int() )
 		#q_MainLoop._finalize()
 		#q_MainLoop._idle( Autoload.get_float() )
 		#q_MainLoop._initialize()
-		#q_MainLoop._input_event( InputEvent.new() )
+		#q_MainLoop._input_event( InputEventAction.new() )
 		#q_MainLoop._input_text( Autoload.get_string() )
 		#q_MainLoop._iteration( Autoload.get_float() )
 #
@@ -34,7 +34,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_MainLoop.init()
 #
 #		if randi() % 2 == 1:
-#			q_MainLoop.input_event( InputEvent.new() )
+#			q_MainLoop.input_event( InputEventAction.new() )
 #		if randi() % 2 == 1:
 #			q_MainLoop.input_text( Autoload.get_string() )
 #

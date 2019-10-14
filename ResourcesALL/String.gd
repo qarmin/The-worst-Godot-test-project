@@ -26,7 +26,7 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_vector2())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_rect2d())
+				q_String = String( Autoload.get_rect2())
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_vector3())
 			if randi() % 2 == 1:
@@ -36,35 +36,35 @@ func _process(delta) -> void:
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_quat())
 			if randi() % 2 == 1:
-				q_String = String( AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+				q_String = String( Autoload.get_aabb())
 			if randi() % 2 == 1:
-				q_String = String( Basis(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+				q_String = String( Autoload.get_basis())
 			if randi() % 2 == 1:
-				q_String = String( Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+				q_String = String( Autoload.get_transform())
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_color())
 			if randi() % 2 == 1:
-				q_String = String( NodePath(Autoload.get_string()))
+				q_String = String( Autoload.get_nodepath(self))
 			if randi() % 2 == 1:
 				q_String = String( RID())
 			if randi() % 2 == 1:
-				q_String = String( {Autoload.get_string(): 15, Autoload.get_string(): 124})
+				q_String = String( Autoload.get_dictionary())
 			if randi() % 2 == 1:
-				q_String = String( [124,214,214,124,214,214,2])
+				q_String = String( Autoload.get_array())
 			if randi() % 2 == 1:
-				q_String = String( PoolByteArray([Autoload.get_int()]))
+				q_String = String( Autoload.get_poolbytearray())
 			if randi() % 2 == 1:
-				q_String = String( PoolIntArray([Autoload.get_int()]))
+				q_String = String( Autoload.get_poolintarray())
 			if randi() % 2 == 1:
-				q_String = String( PoolRealArray([Autoload.get_float()]))
+				q_String = String( Autoload.get_poolrealarray())
 			if randi() % 2 == 1:
-				q_String = String( PoolStringArray([Autoload.get_string()]))
+				q_String = String( Autoload.get_poolstringarray())
 			if randi() % 2 == 1:
-				q_String = String( PoolVector2Array([Autoload.get_vector2()]))
+				q_String = String( Autoload.get_poolvector2array())
 			if randi() % 2 == 1:
-				q_String = String( PoolVector3Array([Autoload.get_vector3()]))
+				q_String = String( Autoload.get_poolvector3array())
 			if randi() % 2 == 1:
-				q_String = String( PoolColorArray([Autoload.get_color()]))
+				q_String = String( Autoload.get_poolcolorarray())
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.begins_with( Autoload.get_string()))

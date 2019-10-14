@@ -17,9 +17,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			
 			for _i in range(10):
-				add_bone(str(randi() % 2525))
+				add_bone(Autoload.get_string())
 		if randi() % 2 == 1:
-			bind_child_node_to_bone(Autoload.get_int(),self)
+			bind_child_node_to_bone(Autoload.get_int(),Autoload.get_nodes(self))
 			#NA KONIEC clear_bones()
 		if randi() % 2 == 1:
 			qq += str(find_bone(Autoload.get_string()))
@@ -55,15 +55,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			physical_bones_stop_simulation()
 		if randi() % 2 == 1:
-			set_bone_custom_pose(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_bone_custom_pose(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
 			set_bone_disable_rest(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_bone_parent(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_bone_pose(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_bone_pose(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
-			set_bone_rest(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_bone_rest(Autoload.get_int(),Autoload.get_transform())
 	
 		if randi() % 2 == 1:
 			unbind_child_node_from_bone(Autoload.get_int(),self)

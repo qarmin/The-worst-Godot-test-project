@@ -22,7 +22,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_access(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_filters(PoolStringArray([Autoload.get_string(),Autoload.get_string()]))
+			set_filters(Autoload.get_poolstringarray())
 		if randi() % 2 == 1:
 			set_show_hidden_files(Autoload.get_bool())
 		if randi() % 2 == 1:

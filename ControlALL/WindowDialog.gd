@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_title(str(randi()%50000))
+			set_title(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_resizable(Autoload.get_bool())
 		if randi() % 2 == 1:

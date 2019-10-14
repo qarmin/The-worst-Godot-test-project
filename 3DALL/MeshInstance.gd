@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_mesh(CubeMesh.new())
 		if randi() % 2 == 1:
-			set_skeleton_path(".")
+			set_skeleton_path(Autoload.get_nodepath(self))
 			
 #	BUG	if randi() % 2 == 1:
 #			create_convex_collision()

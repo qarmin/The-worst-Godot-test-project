@@ -111,7 +111,7 @@ func _process(delta) -> void:
 			qq += str(is_size_override_stretch_enabled())
 	
 		if randi() % 2 == 1:
-			set_attach_to_screen_rect(Autoload.get_rect2d())
+			set_attach_to_screen_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
 			set_input_as_handled()
 		if randi() % 2 == 1:
@@ -120,7 +120,7 @@ func _process(delta) -> void:
 			set_size_override_stretch(Autoload.get_bool())
 	
 		if randi() % 2 == 1:
-			unhandled_input(InputEvent.new())
+			unhandled_input(InputEventAction.new())
 		if randi() % 2 == 1:
 			update_worlds()
 		# This move mouse and is irritating

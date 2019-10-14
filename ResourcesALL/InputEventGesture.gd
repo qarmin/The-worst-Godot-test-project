@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_InputEventGesture : InputEventGesture = InputEventGesture.new()
 #
-#		q_InputEventGesture.set_position(Vector2(randf() * 50,randf() * 50))
+#		q_InputEventGesture.set_position(Autoload.get_vector2())
 #

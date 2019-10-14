@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_StreamPeerBuffer.set_data_array(PoolByteArray([11,124,1241,24,21,214,12,11]))
+			q_StreamPeerBuffer.set_data_array(Autoload.get_poolbytearray())
 			
 		if randi() % 2 == 1:
 			q_StreamPeerBuffer.clear()

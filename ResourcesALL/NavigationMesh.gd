@@ -58,7 +58,7 @@ func _process(delta) -> void:
 			q_NavigationMesh.set_filter_walkable_low_height_spans(Autoload.get_bool())
 			
 		if randi() % 2 == 1:
-			q_NavigationMesh.add_polygon( PoolIntArray([125125.125,12512.1251,122.124]))
+			q_NavigationMesh.add_polygon( Autoload.get_poolintarray())
 		if randi() % 2 == 1:
 			q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:

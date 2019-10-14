@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_download_file("asfasasf")
+			set_download_file(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_use_threads(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -35,4 +35,4 @@ func _process(delta) -> void:
 			qq += str(get_http_client_status())
 			
 		if randi() % 2 == 1:
-			qq += str(request("http://rfasfqw.sfasfasfasfa.asps/asfasfasa/fs", PoolStringArray(["asfasfqwfanfauisf","asfasfiasbfaus","asfqwfasf"]),Autoload.get_bool(), Autoload.get_int(), "asfwfafsafs"))
+			qq += str(request(Autoload.get_string(), Autoload.get_poolstringarray(),Autoload.get_bool(), Autoload.get_int(), Autoload.get_string()))

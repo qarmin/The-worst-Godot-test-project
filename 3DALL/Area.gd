@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_gravity_distance_scale(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_gravity_vector(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+			set_gravity_vector(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			set_gravity(Autoload.get_float())
 		if randi() % 2 == 1:

@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		var viewport_temp : Viewport = Viewport.new()
 
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_anchor_mode(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -24,7 +24,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			_set_current(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_zoom(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_zoom(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			if get_custom_viewport():
 				set_custom_viewport(viewport_temp)

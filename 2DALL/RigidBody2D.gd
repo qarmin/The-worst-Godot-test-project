@@ -43,7 +43,7 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_can_sleep(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_linear_velocity(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_linear_velocity(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_linear_damp(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -51,27 +51,27 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_angular_damp(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_applied_force(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_applied_force(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_applied_torque(Autoload.get_float())
 	
 			#_integrate_forces()
 	
 		if randi() % 2 == 1:
-			add_central_force(Vector2(Autoload.get_float(), Autoload.get_float()))
+			add_central_force(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			add_force(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()))
+			add_force(Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
 			add_torque(Autoload.get_float())
 		if randi() % 2 == 1:
-			apply_central_impulse(Vector2(Autoload.get_float(), Autoload.get_float()))
+			apply_central_impulse(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			apply_impulse(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()))
+			apply_impulse(Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
 			apply_torque_impulse(Autoload.get_float())
 	
 		if randi() % 2 == 1:
-			set_axis_velocity(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_axis_velocity(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(test_motion(Vector2(Autoload.get_float(), Autoload.get_float())))
+				qq += str(test_motion(Autoload.get_vector2()))

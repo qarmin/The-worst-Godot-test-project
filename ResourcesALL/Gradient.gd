@@ -19,9 +19,9 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Gradient.set_offsets(PoolRealArray([125125.125,12512.1251,122.124]))
+			q_Gradient.set_offsets(Autoload.get_poolrealarray())
 		if randi() % 2 == 1:
-			q_Gradient.set_colors(PoolColorArray([Autoload.get_color(),Autoload.get_color(),Autoload.get_color()]))
+			q_Gradient.set_colors(Autoload.get_poolcolorarray())
 			
 			for _i in range(4):
 				if randi() % 2 == 1:

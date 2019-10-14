@@ -15,15 +15,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if !Autoload.RANDI:
 			
-			_set_swing_span(randf() * 50)
-			_set_twist_span(randf() * 50)
+			_set_swing_span(Autoload.get_float())
+			_set_twist_span(Autoload.get_float())
 			for i in range(PARAM_MAX):
-				set_param(i, randf() * 50)
+				set_param(i, Autoload.get_float())
 			
 			#Joint
-			set_node_a(".")
-			set_node_b(".")
-			set_solver_priority(randi()%50)
+			set_node_a(Autoload.get_nodepath(self))
+			set_node_b(Autoload.get_nodepath(self))
+			set_solver_priority(Autoload.get_int())
 			set_exclude_nodes_from_collision(Autoload.get_bool())
 			
 	

@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_ShortCut.set_shortcut(InputEvent.new())
+			q_ShortCut.set_shortcut(InputEventAction.new())
 			
 		if randi() % 2 == 1:
 			qq += str(q_ShortCut.get_as_text())

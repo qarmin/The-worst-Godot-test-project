@@ -47,13 +47,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_emission_sphere_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_emission_rect_extents(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_emission_rect_extents(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_emission_points(PoolVector2Array([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())]))
+			set_emission_points(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
-			set_emission_normals(PoolVector2Array([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())]))
+			set_emission_normals(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
-			set_emission_colors(PoolColorArray([Autoload.get_color()]))
+			set_emission_colors(Autoload.get_poolcolorarray())
 		if randi() % 2 == 1:
 			set_particle_flag(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
@@ -61,7 +61,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_flatness(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_gravity(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_gravity(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set("local_coords", Autoload.get_bool())
 		if randi() % 2 == 1:

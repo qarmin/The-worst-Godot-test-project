@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_stream_position(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_bus(str(Autoload.get_float()))
+			set_bus(Autoload.get_string())
 			
 		if randi() % 2 == 1:
 			qq += str(get_stream_name())

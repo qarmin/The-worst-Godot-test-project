@@ -19,7 +19,7 @@ func _process(delta) -> void:
 			q_AnimationNodeBlendTree = AnimationNodeBlendTree.new()
 		
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.set_graph_offset(Vector2(randf() * 50,randf() * 50))
+			q_AnimationNodeBlendTree.set_graph_offset(Autoload.get_vector2())
 			
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendTree.add_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_vector2())

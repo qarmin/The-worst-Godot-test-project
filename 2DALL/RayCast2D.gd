@@ -23,7 +23,7 @@ func _process_physics(delta) -> void:
 		if randi() % 2 == 1:
 			set_exclude_parent_body(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_cast_to(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_cast_to(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:

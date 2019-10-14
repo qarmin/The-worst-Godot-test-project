@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_base_path(Autoload.get_string())
 #	BUG	if randi() % 2 == 1:
-#			q_VisualScriptFunctionCall.set_function("Rzsafym")
+#			q_VisualScriptFunctionCall.set_function(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionCall.set_use_default_args(Autoload.get_int())
 		if randi() % 2 == 1:

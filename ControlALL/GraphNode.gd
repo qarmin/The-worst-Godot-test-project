@@ -16,9 +16,9 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_title(str(Autoload.get_int()))
+			set_title(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_show_close_button(Autoload.get_bool())
 		if randi() % 2 == 1:

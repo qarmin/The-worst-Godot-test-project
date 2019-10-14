@@ -27,7 +27,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_basic_type(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_VisualScriptPropertySet.set_base_path(".")
+			q_VisualScriptPropertySet.set_base_path(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet.set_property(Autoload.get_string())
 		if randi() % 2 == 1:

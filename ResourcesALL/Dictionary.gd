@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Dictionary : Dictionary = {}
+var q_Dictionary : Dictionary = Autoload.get_dictionary()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -15,6 +15,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
+		if randi() % 2 == 1:
+			q_Dictionary = Autoload.get_dictionary()
 		
 		if randi() % 2 == 1:
 			q_Dictionary.clear()

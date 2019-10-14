@@ -23,4 +23,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_DynamicFontData.set_hinting(Autoload.get_int()) # Hinting
 		if randi() % 2 == 1:
-			q_DynamicFontData.set_font_path("FreeMono.otf")
+			q_DynamicFontData.set_font_path("res://RES/FreeMono.otf")

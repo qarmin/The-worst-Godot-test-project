@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_fractional_delta(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_visibility_rect(Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())))
+			set_visibility_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
 			set_use_local_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -64,7 +64,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			pm.set_emission_sphere_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			pm.set_emission_box_extents(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+			pm.set_emission_box_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			pm.set_emission_point_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
@@ -78,7 +78,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			pm.set_flatness(Autoload.get_float())
 		if randi() % 2 == 1:
-			pm.set_gravity(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+			pm.set_gravity(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			pm.set_color(Autoload.get_color())
 		if randi() % 2 == 1:

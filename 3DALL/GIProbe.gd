@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_subdiv(randi() % 10 - 50) # Subdiv
 		if randi() % 2 == 1:
-			set_extents(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+			set_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:
 			set_dynamic_range(Autoload.get_int())
 		if randi() % 2 == 1:

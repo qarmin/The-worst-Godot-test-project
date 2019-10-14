@@ -18,8 +18,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_AudioServer : AudioServer = AudioServer.new()
 #
-#		q_AudioServer.add_bus( randi()%50)
-#		q_AudioServer.add_bus_effect( 0, AudioEffect.new(),randi()%50)
+#		q_AudioServer.add_bus( Autoload.get_int())
+#		q_AudioServer.add_bus_effect( 0, AudioEffect.new(),Autoload.get_int())
 #
 #		q_AudioServer.capture_get_device()
 #		q_AudioServer.capture_get_device_list()
@@ -65,7 +65,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_AudioServer.set_bus_name( 0, Autoload.get_string() )
 #		q_AudioServer.set_bus_send( 0, Autoload.get_string() )
 #		q_AudioServer.set_bus_solo( 0, Autoload.get_bool())
-#		q_AudioServer.set_bus_volume_db( 0, randf() * 50)
+#		q_AudioServer.set_bus_volume_db( 0, Autoload.get_float())
 #		q_AudioServer.set_device( Autoload.get_string())
 #
 #		q_AudioServer.swap_bus_effects( 0, 0, 0 )

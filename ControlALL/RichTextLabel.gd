@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_use_bbcode(Autoload.get_bool())
 #	LEAK	if randi() % 2 == 1:
-#			set_bbcode(str(Autoload.get_string()) + str(randi()%50))
+#			set_bbcode(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_visible_characters(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tab_size(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_text(str(Autoload.get_string()) + str(randi()%50))
+			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_scroll_active(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -42,9 +42,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_image(Autoload.loadA("Sprite.png"))
 #	BUG	if randi() % 2 == 1:
-#			add_text(str(Autoload.get_string()) + str(randi()%50))
+#			add_text(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(append_bbcode(str(Autoload.get_string()) + str(randi()%50)))
+			qq += str(append_bbcode(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_content_height())
 		if randi() % 2 == 1:

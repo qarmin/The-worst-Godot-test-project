@@ -16,8 +16,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_EditorResourcePreviewGenerator : EditorResourcePreviewGenerator = EditorResourcePreviewGenerator.new()
 #
 #		q_EditorResourcePreviewGenerator.can_generate_small_preview()
-#		q_EditorResourcePreviewGenerator.generate( Resource.new(), Vector2(randf() * 50,randf() * 50))
-#		q_EditorResourcePreviewGenerator.generate_from_path( Autoload.get_string(), Vector2(randf() * 50,randf() * 50))
+#		q_EditorResourcePreviewGenerator.generate( Resource.new(), Autoload.get_vector2())
+#		q_EditorResourcePreviewGenerator.generate_from_path( Autoload.get_string(), Autoload.get_vector2())
 #		q_EditorResourcePreviewGenerator.generate_small_preview_automatically()
 #		q_EditorResourcePreviewGenerator.handles( Autoload.get_string() )
 #

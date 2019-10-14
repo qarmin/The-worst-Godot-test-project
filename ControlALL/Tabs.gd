@@ -64,7 +64,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tab_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_tab_title(Autoload.get_int(),str(randi()%50))
+			set_tab_title(Autoload.get_int(),Autoload.get_string())
 		if randi() % 2 == 1:
 			set_tabs_rearrange_group(Autoload.get_int())
 			

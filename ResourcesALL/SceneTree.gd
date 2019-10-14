@@ -32,12 +32,12 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_SceneTree.set_multiplayer_poll_enabled(Autoload.get_bool())
 #
 #		q_SceneTree.call_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_string() )
-#		q_SceneTree.call_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), "Roman")#GroupCallFlags
+#		q_SceneTree.call_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_string())#GroupCallFlags
 #
 #		### q_SceneTree.change_scene( String path )
 #		### q_SceneTree.change_scene_to( PackedScene packed_scene )
 #
-#		qq += str(q_SceneTree.create_timer( randf() * 50, Autoload.get_bool()))
+#		qq += str(q_SceneTree.create_timer( Autoload.get_float(), Autoload.get_bool()))
 #
 #		qq += str(q_SceneTree.get_frame())
 #		#qq += str(q_SceneTree.get_network_connected_peers())
@@ -66,7 +66,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_SceneTree.set_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), Autoload.get_bool()) # GroupCallFlags
 #		q_SceneTree.set_input_as_handled()
 #		q_SceneTree.set_quit_on_go_back( Autoload.get_bool())
-#		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Vector2(randf() * 50,randf() * 50), randf() * 50 )#StretchMode, StretchAspect
+#		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Autoload.get_vector2(), Autoload.get_float() )#StretchMode, StretchAspect
 #
 #		q_SceneTree.queue_delete(self)
 #

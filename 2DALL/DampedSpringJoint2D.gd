@@ -27,9 +27,9 @@ func _process(delta) -> void:
 			
 			# Joint2D
 		if randi() % 2 == 1:
-			set_node_a("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+			set_node_a(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
-			set_node_b("../" + get_parent().get_child(randi() % get_parent().get_child_count()).get_name())
+			set_node_b(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
 			set_bias(Autoload.get_float())
 		if randi() % 2 == 1:

@@ -17,4 +17,5 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			set_text(str(Autoload.get_int()))
+		if randi() % 2 == 1:
 			set_underline_mode(Autoload.get_int())

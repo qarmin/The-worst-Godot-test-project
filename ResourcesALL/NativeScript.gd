@@ -18,8 +18,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_NativeScript.set_class_name(Autoload.get_string())
 #		q_NativeScript.set_library(GDNativeLibrary.new())
-#		q_NativeScript.set_script_class_name(".")
-#		q_NativeScript.set_script_class_icon_path(".")
+#		q_NativeScript.set_script_class_name(Autoload.get_nodepath(self))
+#		q_NativeScript.set_script_class_icon_path(Autoload.get_nodepath(self))
 #
 #		qq += str(q_NativeScript.get_class_documentation())
 #		qq += str(q_NativeScript.get_method_documentation( Autoload.get_string() ))

@@ -18,7 +18,7 @@ func _process(delta) -> void:
 	
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Basis = AABB(Autoload.get_vector3(),Autoload.get_vector3())
+				q_Basis = Autoload.get_aabb()
 				
 			if randi() % 2 == 1:
 				q_Basis.encloses(Autoload.get_aabb())

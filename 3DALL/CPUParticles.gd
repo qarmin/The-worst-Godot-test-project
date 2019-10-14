@@ -58,9 +58,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_emission_box_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			set_emission_points(PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]))
+			set_emission_points(Autoload.get_poolvector3array())
 		if randi() % 2 == 1:
-			set_emission_normals(PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]))
+			set_emission_normals(Autoload.get_poolvector3array())
 		if randi() % 2 == 1:
 			set_emission_colors([Autoload.get_color(),Autoload.get_color()])
 
@@ -99,7 +99,7 @@ func _process(delta) -> void:
 #				set_lod_min_hysteresis(Autoload.get_float())
 #				set_lod_max_distance(Autoload.get_float())
 #				set_lod_max_hysteresis(Autoload.get_float())
-#				set_custom_aabb(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+#				set_custom_aabb(Autoload.get_aabb())
 #
 #				##VisualInstance
 #				set_layer_mask(randi() % 1000000)
@@ -112,12 +112,12 @@ func _process(delta) -> void:
 #				set_layer_mask_bit(Autoload.get_int(),Autoload.get_bool())
 #
 #				##Spatial
-#				set_global_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+#				set_global_transform(Autoload.get_transform())
 #				set_translation(Autoload.get_vector3())
 #				set_rotation_degrees(Autoload.get_vector3())
 #				set_rotation(Autoload.get_vector3())
 #				set_scale(Autoload.get_vector3())
-#				set_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+#				set_transform(Autoload.get_transform())
 #				set_visible(Autoload.get_bool())
 #				set_gizmo(SpatialGizmo.new())
 #
@@ -179,11 +179,11 @@ func _process(delta) -> void:
 #				###_exit_tree()
 #				###_enter_tree()
 #				###qq += str(_get_configuration_warning())
-#				###_input(InputEvent.new())
+#				###_input(InputEventAction.new())
 #				###_physics_process(0.0)
 #				###_process(0.0)
 #				###_ready()
-#				###_unhandled_input(InputEvent.new())
+#				###_unhandled_input(InputEventAction.new())
 #				###_unhandled_key_input(InputEventKey.new())
 #				for _i in range(10):
 #					if get_child_count() > 3:
@@ -206,9 +206,9 @@ func _process(delta) -> void:
 #				qq += str(get_groups())
 #				qq += str(get_index())
 #				qq += str(get_network_master())
-#				qq += str(get_node(NodePath(Autoload.get_string())))
-#				qq += str(get_node_and_resource(NodePath(Autoload.get_string())))
-#				qq += str(get_node_or_null(NodePath(Autoload.get_string())))
+#				qq += str(get_node(Autoload.get_nodepath(self)))
+#				qq += str(get_node_and_resource(Autoload.get_nodepath(self)))
+#				qq += str(get_node_or_null(Autoload.get_nodepath(self)))
 #				qq += str(get_parent())
 #				qq += str(get_path())
 #				qq += str(get_path_to(get_parent()))
@@ -219,8 +219,8 @@ func _process(delta) -> void:
 #				qq += str(get_tree())
 #				qq += str(get_viewport())
 #
-#				qq += str(has_node(NodePath(Autoload.get_string())))
-#				qq += str(has_node_and_resource(NodePath(Autoload.get_string())))
+#				qq += str(has_node(Autoload.get_nodepath(self)))
+#				qq += str(has_node_and_resource(Autoload.get_nodepath(self)))
 #
 #				qq += str(is_a_parent_of(self))
 #				qq += str(is_displayed_folded())
@@ -290,7 +290,7 @@ func _process(delta) -> void:
 #				###qq += str(_get(Autoload.get_string()))
 #				###qq += str(_get_property_list())
 #				###_init()
-#				###_notification(randi()%50)
+#				###_notification(Autoload.get_int())
 #				###qq += str(_set(Autoload.get_string(),TextEdit.new()))
 #				###qq += str(_to_string())
 #

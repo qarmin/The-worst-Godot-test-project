@@ -104,7 +104,8 @@ func _process(delta) -> void:
 			qq += str(get_selection_to_column())
 		if randi() % 2 == 1:
 			qq += str(get_selection_to_line())
-			#qq += str(get_word_under_cursor())
+		if randi() % 2 == 1:
+			qq += str(get_word_under_cursor())
 		if randi() % 2 == 1:
 			qq += str(has_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:

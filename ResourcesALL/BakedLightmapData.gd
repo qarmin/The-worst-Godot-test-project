@@ -19,15 +19,15 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_bounds(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+			q_BakedLightmapData.set_bounds(Autoload.get_aabb())
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_cell_space_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_BakedLightmapData.set_cell_space_transform(Autoload.get_transform())
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_cell_subdiv(randi()%10 -5)
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_energy(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_octree(PoolByteArray([11,124,1241,24,21,214,12,11]))
+			q_BakedLightmapData.set_octree(Autoload.get_poolbytearray())
 			
 		if randi() % 2 == 1:
 			q_BakedLightmapData.add_user( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_int())

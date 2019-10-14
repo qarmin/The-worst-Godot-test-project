@@ -42,7 +42,7 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() ) #Format
 		if randi() % 2 == 1:
-			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() , PoolByteArray([11,124,1241,24,21,214,12,11]))#Format
+			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() , Autoload.get_poolbytearray())#Format
 
 		if randi() % 2 == 1:
 			q_Image.crop( randi() % 10 - 5, randi() % 10 - 5 )
@@ -100,11 +100,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Image.load( "Sprite.png" ))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_jpg_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
+			qq += str(q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_png_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
+			qq += str(q_Image.load_png_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_webp_from_buffer( PoolByteArray([11,124,1241,24,21,214,12,11])))
+			qq += str(q_Image.load_webp_from_buffer( Autoload.get_poolbytearray()))
 
 		if randi() % 2 == 1:
 			q_Image.lock()

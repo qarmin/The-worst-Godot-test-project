@@ -26,29 +26,29 @@ func _ready():
 #		if randi() % 2 == 1:
 #			set_submenu_popup_delay(Autoload.get_float())
 #		if randi() % 2 == 1:
-#			add_check_item(str(randi()%50000), Autoload.get_int(), Autoload.get_int())
+#			add_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
 #			add_check_shortcut(ShortCut.new(), Autoload.get_int(), Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			add_icon_check_item(Autoload.loadA("Sprite.png"), str(randi()%50000), Autoload.get_int(), Autoload.get_int())
+#			add_icon_check_item(Autoload.loadA("Sprite.png"), Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
 #			add_icon_check_shortcut(Autoload.loadA("Sprite.png"), ShortCut.new(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
-#			add_icon_item(Autoload.loadA("Sprite.png"), str(randi()%50000), Autoload.get_int(), Autoload.get_int())
+#			add_icon_item(Autoload.loadA("Sprite.png"), Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
 #			add_icon_shortcut(Autoload.loadA("Sprite.png"), ShortCut.new(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
-#			add_item(str(randi()%50000), Autoload.get_int(), Autoload.get_int())
+#			add_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
-#			add_radio_check_item(str(randi()%50000), Autoload.get_int(), Autoload.get_int())
+#			add_radio_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
 #			add_radio_check_shortcut(ShortCut.new(), Autoload.get_int(), Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			add_separator(str(randi()%50000))
+#			add_separator(Autoload.get_string())
 #		if randi() % 2 == 1:
 #			add_shortcut(ShortCut.new(), Autoload.get_int(), Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			add_submenu_item(str(randi()%50000),str(randi()%50000))
+#			add_submenu_item(Autoload.get_string(),Autoload.get_string())
 #		if randi() % 2 == 1:
 #			qq += str(get_item_accelerator(Autoload.get_int()))
 #		if randi() % 2 == 1:
@@ -104,7 +104,7 @@ func _ready():
 #		if randi() % 2 == 1:
 #			set_item_id(Autoload.get_int(),Autoload.get_int())
 #		if randi() % 2 == 1:
-#			set_item_metadata(Autoload.get_int(),PoolByteArray([12,55,1,5,12,5215,215]))
+#			set_item_metadata(Autoload.get_int(),Autoload.get_poolbytearray())
 #		if randi() % 2 == 1:
 #			set_item_multistate(Autoload.get_int(),Autoload.get_int())
 #		if randi() % 2 == 1:
@@ -112,11 +112,11 @@ func _ready():
 #		if randi() % 2 == 1:
 #			set_item_shortcut_disabled(Autoload.get_int(),Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			set_item_submenu(Autoload.get_int(),str(randi()%50000))
+#			set_item_submenu(Autoload.get_int(),Autoload.get_string())
 #		if randi() % 2 == 1:
-#			set_item_text(Autoload.get_int(),str(randi()%50000))
+#			set_item_text(Autoload.get_int(),Autoload.get_string())
 #		if randi() % 2 == 1:
-#			set_item_tooltip(Autoload.get_int(),str(randi()%50000))
+#			set_item_tooltip(Autoload.get_int(),Autoload.get_string())
 #		if randi() % 2 == 1:
 #			toggle_item_checked(Autoload.get_int())
 #		if randi() % 2 == 1:

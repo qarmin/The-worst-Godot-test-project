@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Plane = Autoload.get_plane()
+				q_Plane = Plane(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 			if randi() % 2 == 1:
 				q_Plane = Plane(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3())
 			if randi() % 2 == 1:

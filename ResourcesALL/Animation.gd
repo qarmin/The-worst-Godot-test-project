@@ -32,7 +32,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Animation.animation_track_get_key_animation(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_Animation.animation_track_insert_key(1,Autoload.get_float(),Autoload.get_string()))
+			qq += str(q_Animation.animation_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_string()))
 		if randi() % 2 == 1:
 			q_Animation.animation_track_set_key_animation(Autoload.get_int(),Autoload.get_int(),Autoload.get_string())
 			
@@ -49,7 +49,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.audio_track_set_key_start_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),AudioStream.new())
+			q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),AudioStreamGenerator.new())
 			
 		if randi() % 2 == 1:
 			qq += str(q_Animation.bezier_track_get_key_in_handle(Autoload.get_int(),Autoload.get_int()))
@@ -72,7 +72,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.copy_track(Autoload.get_int(), Animation.new())
 		if randi() % 2 == 1:
-			qq += str(q_Animation.find_track("."))
+			qq += str(q_Animation.find_track(Autoload.get_nodepath(self)))
 		if randi() % 2 == 1:
 			qq += str(q_Animation.get_track_count())
 			
@@ -105,7 +105,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Animation.track_get_type(Autoload.get_int()))
 		if randi() % 2 == 1:
-			q_Animation.track_insert_key(Autoload.get_int(),Autoload.get_float(),String(),Autoload.get_float())
+			q_Animation.track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_string(),Autoload.get_float())
 		if randi() % 2 == 1:
 			qq += str(q_Animation.track_is_enabled(Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -135,11 +135,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.track_set_key_value(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Animation.track_set_path(Autoload.get_int(),".")
+			q_Animation.track_set_path(Autoload.get_int(),Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
 			q_Animation.track_swap(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			qq += str(q_Animation.transform_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_vector3(),Quat(Autoload.get_vector3(),Autoload.get_float()),Autoload.get_vector3()))
+			qq += str(q_Animation.transform_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_vector3(),Autoload.get_quat(),Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			qq += str(q_Animation.transform_track_interpolate(Autoload.get_int(),Autoload.get_float()))
 			

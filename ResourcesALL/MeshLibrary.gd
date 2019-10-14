@@ -50,11 +50,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_navmesh(Autoload.get_int(),NavigationMesh.new())
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_navmesh_transform(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_MeshLibrary.set_item_navmesh_transform(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_preview(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_shapes(Autoload.get_int(),[BoxShape.new(),BoxShape.new()])
+			q_MeshLibrary.set_item_shapes(Autoload.get_int(),Autoload.get_array())
 			
 		if randi() % 2 == 1:
 			q_MeshLibrary.remove_item(Autoload.get_int()) #MOVED

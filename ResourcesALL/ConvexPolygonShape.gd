@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_ConvexPolygonShape.set_points(PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]))
+			q_ConvexPolygonShape.set_points(Autoload.get_poolvector3array())

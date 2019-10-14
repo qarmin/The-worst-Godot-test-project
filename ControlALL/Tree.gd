@@ -39,7 +39,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			ensure_cursor_is_visible()
 		if randi() % 2 == 1:
-			qq += str(get_column_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(get_column_at_position(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			qq += str(get_column_title(Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -47,7 +47,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_custom_popup_rect())
 		if randi() % 2 == 1:
-			qq += str(get_drop_section_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(get_drop_section_at_position(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			qq += str(get_edited())
 		if randi() % 2 == 1:
@@ -55,7 +55,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_item_area_rect(self))
 		if randi() % 2 == 1:
-			qq += str(get_item_at_position(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(get_item_at_position(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			qq += str(get_next_selected(self))
 		if randi() % 2 == 1:
@@ -73,6 +73,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_column_min_width(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_column_title(Autoload.get_int(),str(randi()%50))
+			set_column_title(Autoload.get_int(),Autoload.get_string())
 		if randi() % 2 == 1:
 			set_column_titles_visible(Autoload.get_bool())

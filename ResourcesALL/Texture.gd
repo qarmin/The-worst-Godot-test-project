@@ -19,11 +19,11 @@ func _process(delta) -> void:
 			q_Texture = ImageTexture.new()
 			
 		if randi() % 2 == 1:
-			q_Texture.draw(RID(),Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_color(),Autoload.get_bool(),ImageTexture.new())
+			q_Texture.draw(RID(),Autoload.get_vector2(),Autoload.get_color(),Autoload.get_bool(),ImageTexture.new())
 		if randi() % 2 == 1:
-			q_Texture.draw_rect(RID(),Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())),Autoload.get_bool(),Autoload.get_color(),Autoload.get_bool(),ImageTexture.new())
+			q_Texture.draw_rect(RID(),Autoload.get_rect2(),Autoload.get_bool(),Autoload.get_color(),Autoload.get_bool(),ImageTexture.new())
 		if randi() % 2 == 1:
-			q_Texture.draw_rect_region(RID(),Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())),Rect2(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())), Autoload.get_color(), Autoload.get_bool(),ImageTexture.new(),Autoload.get_bool())
+			q_Texture.draw_rect_region(RID(),Autoload.get_rect2(),Autoload.get_rect2(), Autoload.get_color(), Autoload.get_bool(),ImageTexture.new(),Autoload.get_bool())
 			
 		if randi() % 2 == 1:
 			qq += str(q_Texture.get_data())

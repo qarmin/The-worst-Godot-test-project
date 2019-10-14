@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_cast_to(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			set_collision_mask(randi()%500000)
+			set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_collide_with_areas(Autoload.get_bool())
 		if randi() % 2 == 1:

@@ -36,7 +36,7 @@ func _physics_process(delta):
 				qq += str(move_and_slide(Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),randi()%10, randf(), Autoload.get_bool()))
 				qq += str(move_and_slide_with_snap(Autoload.get_vector3(), Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),randi()%10,randf(),Autoload.get_bool()))
 	
-				qq += str(test_move( Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()), Autoload.get_vector3(),Autoload.get_bool()))
+				qq += str(test_move( Autoload.get_transform(), Autoload.get_vector3(),Autoload.get_bool()))
 
 			# Physics Body
 		if randi() % 2 == 1:
@@ -68,7 +68,7 @@ func _physics_process(delta):
 		if randi() % 2 == 1:
 			set_capture_input_on_drag(Autoload.get_bool())
 
-			###_input_event(get_parent().find_node(Autoload.get_string()), InputEvent.new(), Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_int())
+			###_input_event(get_parent().find_node(Autoload.get_string()), InputEventAction.new(), Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_int())
 
 		if randi() % 2 == 1:
 			qq += str(create_shape_owner(self))
@@ -104,4 +104,4 @@ func _physics_process(delta):
 		if randi() % 2 == 1:
 			shape_owner_set_disabled(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			shape_owner_set_transform(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			shape_owner_set_transform(Autoload.get_int(), Autoload.get_transform())

@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_text(str(randi()%50000))
+			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_button_icon(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:

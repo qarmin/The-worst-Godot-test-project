@@ -72,4 +72,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_perspective(Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
-			qq += str(unproject_position(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float())))
+			qq += str(unproject_position(Autoload.get_vector3()))

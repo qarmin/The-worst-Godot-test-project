@@ -43,16 +43,16 @@ func _process(delta) -> void:
 			qq += str(is_active())
 			
 		if randi() % 2 == 1:
-			qq += str(remove(get_parent(), "asfasfafwfasf"))
+			qq += str(remove(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
 			qq += str(remove_all())
 			
 		if randi() % 2 == 1:
-			qq += str(reset(get_parent(), "asfaqtsfasf"))
+			qq += str(reset(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
 			qq += str(reset_all())
 		if randi() % 2 == 1:
-			qq += str(resume(get_parent(), "asf121asfasf"))
+			qq += str(resume(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
 			qq += str(resume_all())
 		if randi() % 2 == 1:
@@ -60,7 +60,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(start())
 		if randi() % 2 == 1:
-			qq += str(stop(get_parent(), "asf21rasfasf"))
+			qq += str(stop(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
 			qq += str(stop_all())
 

@@ -106,7 +106,7 @@ func get_rect2() -> Rect2:
 	return Rect2(get_vector2(),get_vector2())
 	
 func get_quat() -> Quat:
-	return Quat(get_vector3())
+	return Quat(get_vector3(),get_float())
 	
 func get_basis() -> Basis:
 	return Basis(get_vector3())

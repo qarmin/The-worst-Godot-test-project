@@ -21,11 +21,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_ArrayMesh.set_blend_shape_mode(Autoload.get_int()) # BlendShapeMode
 		if randi() % 2 == 1:
-			q_ArrayMesh.set_custom_aabb(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+			q_ArrayMesh.set_custom_aabb(Autoload.get_aabb())
 		if randi() % 2 == 1:
-			q_ArrayMesh.add_blend_shape( "Rozmaryn" )
+			q_ArrayMesh.add_blend_shape( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_ArrayMesh.add_surface_from_arrays( Autoload.get_int(), [[214,124],[125,215]], [[214,124],[125,215]], randi() % 10000000) #PrimitiveType
+			q_ArrayMesh.add_surface_from_arrays( Autoload.get_int(), Autoload.get_array(), Autoload.get_array(), Autoload.get_int()) #PrimitiveType
 		if randi() % 2 == 1:
 			q_ArrayMesh.clear_blend_shapes()
 		if randi() % 2 == 1:
@@ -33,7 +33,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_ArrayMesh.get_blend_shape_name( Autoload.get_int()))
 #SPAM		if randi() % 2 == 1:
-#			qq += str(q_ArrayMesh.lightmap_unwrap( Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()),Autoload.get_float()))
+#			qq += str(q_ArrayMesh.lightmap_unwrap( Autoload.get_transform(),Autoload.get_float()))
 		if randi() % 2 == 1:
 			q_ArrayMesh.regen_normalmaps()
 		if randi() % 2 == 1:
@@ -53,4 +53,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_ArrayMesh.surface_set_name( Autoload.get_int(), Autoload.get_string())
 		if randi() % 2 == 1:
-			q_ArrayMesh.surface_update_region( Autoload.get_int(), Autoload.get_int(), PoolByteArray([124,12,412421421,214,124,2]))
+			q_ArrayMesh.surface_update_region( Autoload.get_int(), Autoload.get_int(), Autoload.get_poolbytearray())

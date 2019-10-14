@@ -29,7 +29,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_WebRTCPeerConnection.get_connection_state())
 		if randi() % 2 == 1:
-			qq += str(q_WebRTCPeerConnection.initialize( {Autoload.get_string() : Autoload.get_string()}))
+			qq += str(q_WebRTCPeerConnection.initialize( Autoload.get_dictionary()))
 	
 		if randi() % 2 == 1:
 			qq += str(q_WebRTCPeerConnection.poll())

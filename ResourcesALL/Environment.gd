@@ -25,7 +25,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Environment.set_sky_custom_fov(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Environment.set_sky_orientation(Basis(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_Environment.set_sky_orientation(Autoload.get_basis())
 		if randi() % 2 == 1:
 			q_Environment.set_sky_rotation(Autoload.get_vector3())
 		if randi() % 2 == 1:

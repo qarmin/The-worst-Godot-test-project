@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(Color8(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(ColorN("rafqwwr",randf()))
+			qq += str(ColorN(Autoload.get_string(),Autoload.get_float()))
 			
 		if randi() % 2 == 1:
 			qq += str(abs(Autoload.get_float()))
@@ -34,7 +34,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(atan2(Autoload.get_float(),Autoload.get_float()))
 			
-			#qq += str(bytes2var(PoolByteArray([215,125,12,125,215,125,215,21]),Autoload.get_bool()))
+			#qq += str(bytes2var(Autoload.get_poolbytearray,Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(cartesian2polar(Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
@@ -60,7 +60,7 @@ func _process(delta) -> void:
 			
 		if randi() % 2 == 1:
 			qq += str(deg2rad(Autoload.get_float()))
-			#qq += str(dict2inst({Autoload.get_string():12,Autoload.get_string(): 2156}))
+			#qq += str(dict2inst(Autoload.get_dictionary()))
 		if randi() % 2 == 1:
 			qq += str(ease(Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
@@ -76,7 +76,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_stack())
 		if randi() % 2 == 1:
-			qq += str(hash(String(Autoload.get_string())))
+			qq += str(hash(Autoload.get_string()))
 			
 			#qq += str(inst2dict(Texture.new()))
 		if randi() % 2 == 1:
@@ -96,7 +96,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_zero_approx(Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(len(String(Autoload.get_string())))
+			qq += str(len(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(lerp(Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
@@ -114,7 +114,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(nearest_po2(randi()%50))
 		if randi() % 2 == 1:
-			qq += str(parse_json("asasgqewg,egainfaui"))
+			qq += str(parse_json(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(polar2cartesian(Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
@@ -156,7 +156,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			randomize()
 		if randi() % 2 == 1:
-			qq += str(range(Autoload.get_int(),Autoload.get_int(),randi()%500 + 1))
+			qq += str(range(Autoload.get_int(),Autoload.get_int(),randi()%600 + 1))
 		if randi() % 2 == 1:
 			qq += str(range_lerp(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
 			
@@ -193,12 +193,12 @@ func _process(delta) -> void:
 			qq += str(tanh(Autoload.get_float()))
 			
 		if randi() % 2 == 1:
-			qq += str(to_json(String(Autoload.get_string())))
+			qq += str(to_json(Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(type_exists(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(typeof(String(Autoload.get_string())))
+			qq += str(typeof(Autoload.get_string()))
 			
 		if randi() % 2 == 1:
 			qq += str(validate_json(Autoload.get_string()))
@@ -206,7 +206,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(var2bytes(Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(var2str(String(Autoload.get_string())))
+			qq += str(var2str(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(weakref(get_parent()))
 			

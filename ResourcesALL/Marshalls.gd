@@ -20,7 +20,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Marshalls.base64_to_utf8(Autoload.get_string()))
 #		qq += str(q_Marshalls.base64_to_variant(Autoload.get_string(),Autoload.get_bool()))
 #
-#		qq += str(q_Marshalls.raw_to_base64(PoolByteArray([1221,124,12421,4])))
+#		qq += str(q_Marshalls.raw_to_base64(Autoload.get_poolbytearray()))
 #		qq += str(q_Marshalls.utf8_to_base64(Autoload.get_string()))
 #		qq += str(q_Marshalls.variant_to_base64(String(),Autoload.get_bool()))
 #

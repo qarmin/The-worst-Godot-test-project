@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Basis : Basis = Basis( Autoload.get_quat() )
+var q_Basis : Basis = Autoload.get_basis()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -41,7 +41,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Basis.inverse())
 		if randi() % 2 == 1:
-			qq += str(q_Basis.is_equal_approx( q_Basis, Autoload.get_float()))
+			qq += str(q_Basis.is_equal_approx( Autoload.get_basis(), Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(q_Basis.orthonormalized())
 		if randi() % 2 == 1:
@@ -49,7 +49,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Basis.scaled( Autoload.get_vector3() ))
 		if randi() % 2 == 1:
-			qq += str(q_Basis.slerp( q_Basis, Autoload.get_float()))
+			qq += str(q_Basis.slerp( Autoload.get_basis(), Autoload.get_float()))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Basis.tdotx( Autoload.get_vector3() ))

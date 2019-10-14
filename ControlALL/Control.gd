@@ -39,13 +39,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_clip_contents(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_tooltip("ToolTip")
+			set_tooltip(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_focus_neighbour(Autoload.get_int(),NodePath("Toman"))
+			set_focus_neighbour(Autoload.get_int(),Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
-			set_focus_next(NodePath("Przechwycić"))
+			set_focus_next(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
-			set_focus_previous(NodePath("Bazylia"))
+			set_focus_previous(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
 			set_focus_mode(Autoload.get_int()) #FocusMode
 		if randi() % 2 == 1:
@@ -63,34 +63,34 @@ func _process(delta) -> void:
 
 		### qq += str(_clips_input())
 		### qq += str(_get_minimum_size())
-		### _gui_input(InputEvent.new())
+		### _gui_input(InputEventAction.new())
 		### qq += str(_make_custom_tooltip("Aha"))
 		if randi() % 2 == 1:
 			accept_event()
 		if randi() % 2 == 1:
-			add_color_override("Godotte", Color())
+			add_color_override(Autoload.get_string(), Autoload.get_color())
 		if randi() % 2 == 1:
-			add_constant_override("Środek", Autoload.get_int())
+			add_constant_override(Autoload.get_string(), Autoload.get_int())
 		if randi() % 2 == 1:
-			add_font_override("Świerszcz", Autoload.loadA("DynamicFont.tres"))
+			add_font_override(Autoload.get_string(), Autoload.loadA("DynamicFont.tres"))
 		if randi() % 2 == 1:
-			add_icon_override("Godotte", Autoload.loadA("Sprite.png"))
+			add_icon_override(Autoload.get_string(), Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			add_shader_override("Godotte", Autoload.loadA("VisualShader.tres"))
+			add_shader_override(Autoload.get_string(), Autoload.loadA("VisualShader.tres"))
 		if randi() % 2 == 1:
-			add_stylebox_override("Godotte", Autoload.loadA("StyleBoxTexture.tres"))
+			add_stylebox_override(Autoload.get_string(), Autoload.loadA("StyleBoxTexture.tres"))
 		### qq += str(can_drop_data(Autoload.get_vector2(), "Hehe"))
 		### drop_data(Autoload.get_vector2()
 		if randi() % 2 == 1:
-			force_drag("data: Variant", self)
+			force_drag(Autoload.get_string(), self)
 		if randi() % 2 == 1:
 			qq += str(get_begin())
 		if randi() % 2 == 1:
-			qq += str(get_color("Godotte", "Zrozum"))
+			qq += str(get_color(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_combined_minimum_size())
 		if randi() % 2 == 1:
-			qq += str(get_constant("Godotte", "Zrozum"))
+			qq += str(get_constant(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_cursor_shape(Autoload.get_vector2() ))
 		### qq += str(get_drag_data(Autoload.get_vector2()))
@@ -99,11 +99,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_focus_owner())
 		if randi() % 2 == 1:
-			qq += str(get_font("Godotte", "Zrozum"))
+			qq += str(get_font(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_global_rect())
 		if randi() % 2 == 1:
-			qq += str(get_icon("Godotte", "Zrozum"))
+			qq += str(get_icon(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_minimum_size())
 		if randi() % 2 == 1:
@@ -115,7 +115,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_rotation())
 		if randi() % 2 == 1:
-			qq += str(get_stylebox("Godotte", "Zrozum"))
+			qq += str(get_stylebox(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_tooltip(Autoload.get_vector2()))
 		if randi() % 2 == 1:
@@ -123,28 +123,28 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			grab_focus()
 		if randi() % 2 == 1:
-			qq += str(has_color("Godotte", "Zrozum"))
+			qq += str(has_color(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_color_override("Godotte"))
+			qq += str(has_color_override(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_constant("Godotte", "Zrozum"))
+			qq += str(has_constant(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_constant_override("Godotte"))
+			qq += str(has_constant_override(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(has_focus())
 		if randi() % 2 == 1:
-			qq += str(has_font_override("Godotte"))
+			qq += str(has_font_override(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_icon("Godotte", "Zrozum"))
+			qq += str(has_icon(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_icon_override("Godotte"))
+			qq += str(has_icon_override(Autoload.get_string()))
 		### qq += str(has_point(Autoload.get_vector2()))
 		if randi() % 2 == 1:
-			qq += str(has_shader_override("Godotte"))
+			qq += str(has_shader_override(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_stylebox("Godotte", "Zrozum"))
+			qq += str(has_stylebox(Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(has_stylebox_override("Godotte"))
+			qq += str(has_stylebox_override(Autoload.get_string()))
 		if randi() % 2 == 1:
 			minimum_size_changed()
 		if randi() % 2 == 1:

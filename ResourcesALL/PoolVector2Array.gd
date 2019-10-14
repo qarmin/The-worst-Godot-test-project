@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolVector2Array : PoolVector2Array = PoolVector2Array([Autoload.get_float()])
+var q_PoolVector2Array : PoolVector2Array = Autoload.get_poolvector2array()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -17,12 +17,12 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_PoolVector2Array = PoolVector2Array([Autoload.get_float()])
+			q_PoolVector2Array = Autoload.get_poolvector2array()
 			
 		if randi() % 2 == 1:
 			q_PoolVector2Array.append(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_PoolVector2Array.append_array(PoolVector2Array([Autoload.get_vector2()]))
+			q_PoolVector2Array.append_array(Autoload.get_poolvector2array())
 			
 		if randi() % 2 == 1:
 			qq += str(q_PoolVector2Array.insert( Autoload.get_int(), Autoload.get_vector2()) )

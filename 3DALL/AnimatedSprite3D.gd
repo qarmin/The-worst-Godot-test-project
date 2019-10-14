@@ -25,6 +25,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_playing())
 		if randi() % 2 == 1:
-			play(str(randi()%9))
+			play(Autoload.get_string())
 		if randi() % 2 == 1:
 			stop()

@@ -18,7 +18,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_right_disconnects(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_scroll_ofs(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_scroll_ofs(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_snap(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -55,4 +55,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_connection_activity(Autoload.get_string(),Autoload.get_int(),Autoload.get_string(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			set_selected(get_parent().get_child(randi() % get_parent().get_child_count()))
+			set_selected(Autoload.get_nodes(self))

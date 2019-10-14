@@ -19,7 +19,7 @@ func _process(delta) ->  void:
 			
 		
 		if randi() % 2 == 1:
-			q_Skin.add_bind(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_Skin.add_bind(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
 			q_Skin.clear_binds()
 		if randi() % 2 == 1:
@@ -33,5 +33,5 @@ func _process(delta) ->  void:
 		if randi() % 2 == 1:
 			q_Skin.set_bind_count(Autoload.get_int()) 
 		if randi() % 2 == 1:
-			q_Skin.set_bind_pose(Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_Skin.set_bind_pose(Autoload.get_int(), Autoload.get_transform())
 

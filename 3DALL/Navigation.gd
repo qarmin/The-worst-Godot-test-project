@@ -32,8 +32,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_simple_path(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_bool()))
 			
-			#LEAK qq += str(navmesh_add(NavigationMesh.new(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()), get_parent()))
+			#LEAK qq += str(navmesh_add(NavigationMesh.new(), Autoload.get_transform(), get_parent()))
 		if randi() % 2 == 1:
 			navmesh_remove(Autoload.get_int())
 		if randi() % 2 == 1:
-			navmesh_set_transform(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			navmesh_set_transform(Autoload.get_int(),Autoload.get_transform())

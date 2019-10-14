@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_bones( PoolIntArray([11,124,1241,24,21,214,12,11]))
+			q_SurfaceTool.add_bones( Autoload.get_poolintarray())
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_color( Autoload.get_color())
 		if randi() % 2 == 1:
@@ -31,7 +31,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_tangent( Autoload.get_plane() )
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_triangle_fan( PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]), PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]), PoolColorArray([Autoload.get_color(),Autoload.get_color()]), PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]), PoolVector3Array([Autoload.get_vector3(),Autoload.get_vector3()]), [124,214,214,124,214,214,2] )
+			q_SurfaceTool.add_triangle_fan( Autoload.get_poolvector3array(), Autoload.get_poolvector2array(), Autoload.get_poolcolorarray(), Autoload.get_poolvector2array(), Autoload.get_poolvector3array(), Autoload.get_array() )
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_uv( Autoload.get_vector2())
 		if randi() % 2 == 1:
@@ -39,10 +39,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_vertex( Autoload.get_vector3())
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_weights( PoolRealArray([125125.125,12512.1251,122.124]))
+			q_SurfaceTool.add_weights( Autoload.get_poolrealarray())
 			
 		if randi() % 2 == 1:
-			q_SurfaceTool.append_from( Mesh.new(), Autoload.get_int(), Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_SurfaceTool.append_from( Mesh.new(), Autoload.get_int(), Autoload.get_transform())
 		if randi() % 2 == 1:
 			q_SurfaceTool.begin( Autoload.get_int() )#PrimitiveType
 		if randi() % 2 == 1:

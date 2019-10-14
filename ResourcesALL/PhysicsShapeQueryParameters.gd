@@ -21,13 +21,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_collision_mask(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_PhysicsShapeQueryParameters.set_exclude([11,124,1241,24,21,214,12,11])
+			q_PhysicsShapeQueryParameters.set_exclude(Autoload.get_array())
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_margin(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_shape_rid(RID())
 		if randi() % 2 == 1:
-			q_PhysicsShapeQueryParameters.set_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			q_PhysicsShapeQueryParameters.set_transform(Autoload.get_transform())
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters.set_collide_with_bodies(Autoload.get_bool())
 		if randi() % 2 == 1:

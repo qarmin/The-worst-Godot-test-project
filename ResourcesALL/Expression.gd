@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Expression.has_execute_failed())
 		if randi() % 2 == 1:
-			qq += str(q_Expression.parse( Autoload.get_string(), PoolStringArray([Autoload.get_string()]) ))
+			qq += str(q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray() ))
 			
 func delete_node():
 	q_temp0.queue_free()

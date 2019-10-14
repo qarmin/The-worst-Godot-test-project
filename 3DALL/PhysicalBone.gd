@@ -17,9 +17,9 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_joint_type(Autoload.get_int()) #JOINT_TYPE
 		if randi() % 2 == 1:
-			set_joint_offset(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_joint_offset(Autoload.get_transform())
 		if randi() % 2 == 1:
-			set_body_offset(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_body_offset(Autoload.get_transform())
 		if randi() % 2 == 1:
 			set_mass(Autoload.get_float())
 		if randi() % 2 == 1:

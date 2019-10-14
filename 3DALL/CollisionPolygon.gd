@@ -19,4 +19,4 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_vector2()]))
+			set_polygon(Autoload.get_poolvector2array())

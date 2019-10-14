@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_fractional_delta(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_visibility_aabb(AABB(Autoload.get_vector3(),Autoload.get_vector3()))
+			set_visibility_aabb(Autoload.get_aabb())
 		if randi() % 2 == 1:
 			set_use_local_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:

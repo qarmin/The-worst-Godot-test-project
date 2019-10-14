@@ -17,9 +17,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_vframes(randi()%50 - 25)
+			set_vframes(randi() % 40 - 25)
 		if randi() % 2 == 1:
-			set_hframes(randi()%50 - 25)
+			set_hframes(randi() % 40 - 25)
 		if randi() % 2 == 1:
 			set_frame(randi() % 100 - 50)
 		if randi() % 2 == 1:

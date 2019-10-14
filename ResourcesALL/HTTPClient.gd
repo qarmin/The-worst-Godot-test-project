@@ -46,16 +46,16 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			qq += str(q_HTTPClient.poll())
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.query_string_from_dict( {Autoload.get_string(): Autoload.get_int(), Autoload.get_string(): 124}))
+			qq += str(q_HTTPClient.query_string_from_dict( Autoload.get_dictionary()))
 		if randi() % 2 == 1:
 			qq += str(q_HTTPClient.read_response_body_chunk())
 			
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.request( Autoload.get_int(), Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), Autoload.get_string() ))#Method
+			qq += str(q_HTTPClient.request( Autoload.get_int(), Autoload.get_string(), Autoload.get_poolstringarray(), Autoload.get_string() ))#Method
 		if randi() % 2 == 1:
 			qq += str(q_HTTPClient.read_response_body_chunk())
 		if randi() % 2 == 1:
-			qq += str(q_HTTPClient.request_raw( Autoload.get_int(), Autoload.get_string(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), PoolByteArray([11,124,1241,24,21,214,12,11]) ))#Method
+			qq += str(q_HTTPClient.request_raw( Autoload.get_int(), Autoload.get_string(), Autoload.get_poolstringarray(), Autoload.get_poolbytearray() ))#Method
 			
 		if randi() % 2 == 1:
 			q_HTTPClient.set_read_chunk_size( Autoload.get_int() )

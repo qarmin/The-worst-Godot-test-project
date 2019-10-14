@@ -24,5 +24,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #			qq += str(q_WebSocketServer.has_peer( Autoload.get_int() ))
 #			qq += str(q_WebSocketServer.is_listening())
-#			qq += str(q_WebSocketServer.listen( Autoload.get_int(), PoolStringArray([Autoload.get_string(),Autoload.get_string(),Autoload.get_string()]), Autoload.get_bool()))
+#			qq += str(q_WebSocketServer.listen( Autoload.get_int(), Autoload.get_poolstringarray(), Autoload.get_bool()))
 #			q_WebSocketServer.stop()

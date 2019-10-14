@@ -47,7 +47,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.poll()
 		if randi() % 2 == 1:
-			qq += str(q_MultiplayerAPI.send_bytes( PoolByteArray([11,124,1241,24,21,214,12,11]), Autoload.get_int(), Autoload.get_int() ))#TransferNode
+			qq += str(q_MultiplayerAPI.send_bytes( Autoload.get_poolbytearray()))#TransferNode
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_root_node( q_temp0 )
 			

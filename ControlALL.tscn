@@ -70,7 +70,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Control_BUG" type="Control" parent="."]
+[node name="Control" type="Control" parent="."]
 visible = false
 script = ExtResource( 3 )
 __meta__ = {

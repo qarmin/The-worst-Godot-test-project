@@ -42,11 +42,11 @@ func _process(delta) -> void:
 			qq += str(MM.get_instance_transform_2d(Autoload.get_int()))
 	
 		if randi() % 2 == 1:
-			MM.set_as_bulk_array(PoolRealArray([Autoload.get_float(),Autoload.get_float(),Autoload.get_float()]))
+			MM.set_as_bulk_array(Autoload.get_poolrealarray())
 			#BUG MM.set_instance_color(Autoload.get_int(),Autoload.get_color())
 			#BUG MM.set_instance_custom_data(Autoload.get_int(),Autoload.get_color())
 		if randi() % 2 == 1:
-			MM.set_instance_transform(Autoload.get_int(),Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			MM.set_instance_transform(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
 			MM.set_instance_transform_2d(Autoload.get_int(),Autoload.get_transform2d())
 			

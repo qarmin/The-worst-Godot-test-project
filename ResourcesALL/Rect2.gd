@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Rect2 : Rect2 = Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
+var q_Rect2 : Rect2 = Autoload.get_rect2()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -18,16 +18,16 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Rect2 = Autoload.get_rect2d()
+				q_Rect2 = Autoload.get_rect2()
 			if randi() % 2 == 1:
 				q_Rect2 = Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 	
 		if randi() % 2 == 1:
 			qq += str(q_Rect2.abs())
 		if randi() % 2 == 1:
-			qq += str(q_Rect2.clip( Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()) ))
+			qq += str(q_Rect2.clip( Autoload.get_rect2() ))
 		if randi() % 2 == 1:
-			qq += str(q_Rect2.encloses( Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()) ))
+			qq += str(q_Rect2.encloses( Autoload.get_rect2() ))
 		if randi() % 2 == 1:
 			qq += str(q_Rect2.expand( Autoload.get_vector2() ))
 		if randi() % 2 == 1:
@@ -46,7 +46,7 @@ func _process(delta) -> void:
 			qq += str(q_Rect2.has_point( Autoload.get_vector2() ))
 	
 		if randi() % 2 == 1:
-			qq += str(q_Rect2.intersects( Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()) ))
+			qq += str(q_Rect2.intersects( Autoload.get_rect2() ))
 		if randi() % 2 == 1:
-			qq += str(q_Rect2.merge( Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()) ))
+			qq += str(q_Rect2.merge( Autoload.get_rect2() ))
 

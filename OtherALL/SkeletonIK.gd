@@ -16,13 +16,13 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_root_bone("asfasfasf")
+			set_root_bone(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_tip_bone("asfasfasf")
+			set_tip_bone(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_interpolation(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_target_transform(Transform(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			set_target_transform(Autoload.get_transform())
 		if randi() % 2 == 1:
 			set_override_tip_basis(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_magnet_position(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			set_target_node(".qwfqwfq")
+			set_target_node(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_min_distance(Autoload.get_float())
 		if randi() % 2 == 1:

@@ -28,7 +28,7 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			q_VisualShaderNodeGroupBase.add_input_port( Autoload.get_int(), Autoload.get_int(), Autoload.get_string() )
 #	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.add_output_port( Autoload.get_int(), Autoload.get_int(), "Ring" )
+#			q_VisualShaderNodeGroupBase.add_output_port( Autoload.get_int(), Autoload.get_int(), Autoload.get_string() )
 
 		if randi() % 2 == 1:
 			q_VisualShaderNodeGroupBase.clear_input_ports()

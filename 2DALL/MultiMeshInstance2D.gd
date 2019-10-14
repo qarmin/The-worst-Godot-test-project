@@ -14,8 +14,8 @@ func _process(delta) -> void:
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-		if randi() % 2 == 1:
-			set_multimesh(Autoload.loadA("Multimesh.tres"))
+#	BUG	if randi() % 2 == 1:
+#			set_multimesh(Autoload.loadA("Multimesh.tres"))
 		if randi() % 2 == 1:
 			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:

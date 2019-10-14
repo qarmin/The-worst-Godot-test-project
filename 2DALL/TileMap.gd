@@ -24,9 +24,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_tileset(Autoload.loadA("Tileset.tres"))
 		if randi() % 2 == 1:
-			set_cell_size(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_cell_size(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_custom_transform(Transform2D(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()), Vector2(Autoload.get_float(), Autoload.get_float())))
+			set_custom_transform(Autoload.get_transform2d())
 		if randi() % 2 == 1:
 			set_half_offset(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -53,7 +53,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_cell_autotile_coord(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_cellv(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(get_cellv(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			qq += str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -71,20 +71,20 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(is_cell_y_flipped(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(map_to_world(Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_bool()))
+			qq += str(map_to_world(Autoload.get_vector2(),Autoload.get_bool()))
 		if randi() % 2 == 1:
-			set_cell(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool(),Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_cell(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_cellv(Vector2(Autoload.get_float(), Autoload.get_float()),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool())
+			set_cellv(Autoload.get_vector2(),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			update_bitmask_area(Vector2(Autoload.get_float(), Autoload.get_float()))
+			update_bitmask_area(Autoload.get_vector2())
 #SPAM	if randi() % 2 == 1:
-#			update_bitmask_region(Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()))
+#			update_bitmask_region(Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
 			update_dirty_quadrants()
 		if randi() % 2 == 1:
-			qq += str(world_to_map(Vector2(Autoload.get_float(), Autoload.get_float())))
+			qq += str(world_to_map(Autoload.get_vector2()))

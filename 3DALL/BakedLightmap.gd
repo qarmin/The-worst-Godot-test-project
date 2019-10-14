@@ -20,9 +20,9 @@ func _process(delta) -> void:
 		set_propagation(Autoload.get_float())
 		set_energy(Autoload.get_float())
 		set_hdr(Autoload.get_bool())
-		set_extents(Vector3(Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
+		set_extents(Autoload.get_vector3())
 		set_capture_cell_size(Autoload.get_float())
-		set_image_path("res://qqq.png")
+		set_image_path("res://TEMP/qqq")
 		set_light_data(BakedLightmapData.new())
 	
 		###qq += str(bake(self,Autoload.get_bool()))

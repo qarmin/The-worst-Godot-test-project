@@ -20,8 +20,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_editable(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_prefix(str(Autoload.get_int()))
+			set_prefix(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_suffix(str(Autoload.get_int()))
+			set_suffix(Autoload.get_string())
 		if randi() % 2 == 1:
 			qq += str(get_line_edit())

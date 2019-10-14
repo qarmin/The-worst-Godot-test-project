@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Quat : Quat = Quat(Basis( Autoload.get_vector3()))
+var q_Quat : Quat = Autoload.get_quat()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
@@ -22,9 +22,9 @@ func _process(delta) -> void:
 #			if randi() % 2 == 1:
 #				q_Quat = Quat(Autoload.get_vector3())
 			if randi() % 2 == 1:
-				q_Quat = Quat(Autoload.get_vector3(),Autoload.get_float())
+				q_Quat = Autoload.get_quat()
 			if randi() % 2 == 1:
-				q_Quat = Quat(Basis( Autoload.get_vector3()))
+				q_Quat = Quat(Autoload.get_basis())
 	
 		if randi() % 2 == 1:
 			qq += str(q_Quat.cubic_slerp( Autoload.get_quat(), Autoload.get_quat(), Autoload.get_quat(), Autoload.get_float()))

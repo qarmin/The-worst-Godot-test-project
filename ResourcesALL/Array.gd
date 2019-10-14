@@ -24,22 +24,22 @@ func _process(delta) -> void:
 
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Array = Array(PoolColorArray([Color()]))
+				q_Array = Array(Autoload.get_poolcolorarray())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolVector3Array([Color()]))
+				q_Array = Array(Autoload.get_poolvector3array())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolVector2Array([Color()]))
+				q_Array = Array(Autoload.get_poolvector2array())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolStringArray([Color()]))
+				q_Array = Array(Autoload.get_poolstringarray())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolRealArray([Color()]))
+				q_Array = Array(Autoload.get_poolrealarray())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolIntArray([Color()]))
+				q_Array = Array(Autoload.get_poolintarray())
 			if randi() % 2 == 1:
-				q_Array = Array(PoolByteArray([Color()]))
+				q_Array = Array(Autoload.get_poolbytearray())
 
 		if randi() % 2 == 1:
-			q_Array.append("Rosół")
+			q_Array.append(Autoload.get_string())
 		if randi() % 2 == 1:
 			q_Array.back()
 

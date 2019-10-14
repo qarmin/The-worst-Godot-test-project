@@ -26,10 +26,10 @@ func _process(delta) -> void:
 			qq += str(q_RegExMatch.get_strings())
 			
 		if randi() % 2 == 1:
-			qq += str(q_RegExMatch.get_end( String() ))
+			qq += str(q_RegExMatch.get_end( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_RegExMatch.get_group_count())
 		if randi() % 2 == 1:
-			qq += str(q_RegExMatch.get_start( String() ))
+			qq += str(q_RegExMatch.get_start( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_RegExMatch.get_string( String() ))
+			qq += str(q_RegExMatch.get_string( Autoload.get_string() ))

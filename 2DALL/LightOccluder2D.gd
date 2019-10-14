@@ -20,7 +20,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			occluder_polygon.set_cull_mode(Autoload.get_int())
 		if randi() % 2 == 1:
-			occluder_polygon.set_polygon([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
+			occluder_polygon.set_polygon(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
 			set_occluder_polygon(occluder_polygon)
 		if randi() % 2 == 1:

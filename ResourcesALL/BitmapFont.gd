@@ -28,7 +28,7 @@ func _process(delta) -> void:
 			q_BitmapFont.set_fallback(q_BitmapFont)
 	
 		if randi() % 2 == 1:
-			q_BitmapFont.add_char( Autoload.get_int(), Autoload.get_int(), Autoload.get_rect2d(), Autoload.get_vector2()
+			q_BitmapFont.add_char( Autoload.get_int(), Autoload.get_int(), Autoload.get_rect2(), Autoload.get_vector2())
 		if randi() % 2 == 1:
 			q_BitmapFont.add_kerning_pair( Autoload.get_int(), Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
@@ -38,7 +38,7 @@ func _process(delta) -> void:
 			q_BitmapFont.clear()
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_BitmapFont.create_from_fnt( "FreeMono.otf" ))
+				qq += str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
 	
 		if randi() % 2 == 1:
 			qq += str(q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int() ))

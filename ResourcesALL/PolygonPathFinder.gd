@@ -36,4 +36,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_PolygonPathFinder.set_point_penalty(Autoload.get_int(), Autoload.get_float())
 		if randi() % 2 == 1:
-			q_PolygonPathFinder.setup( PoolVector2Array([Autoload.get_vector2(),Autoload.get_vector2()]), PoolIntArray ([11,124,1241,24,21,214,12,11]))
+			q_PolygonPathFinder.setup( Autoload.get_poolvector2array(), Autoload.get_poolintarray())

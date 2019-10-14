@@ -26,5 +26,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorImportPlugin.get_resource_type()
 #		q_EditorImportPlugin.get_save_extension()
 #		q_EditorImportPlugin.get_visible_name()
-#		q_EditorImportPlugin.import( "res://Raas.pngAutoload.get_string(), {Autoload.get_string():24}, [25,String()], [Autoload.get_string()] )
+#		q_EditorImportPlugin.import( "res://Raas.pngAutoload.get_string(), {Autoload.get_string():24}, [25,Autoload.get_string()], [Autoload.get_string()] )
 #

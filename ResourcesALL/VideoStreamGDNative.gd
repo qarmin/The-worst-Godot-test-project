@@ -21,4 +21,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_VideoStreamGDNative.get_file())
 		if randi() % 2 == 1:
-			q_VideoStreamGDNative.set_file( "res://Heg.mp4")
+			q_VideoStreamGDNative.set_file( "res://TEMP/" +Autoload.get_string())

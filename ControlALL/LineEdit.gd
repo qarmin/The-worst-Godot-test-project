@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_text(str(randf()))
+			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_align(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -26,7 +26,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_secret(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_secret_character(str(randi()%10))
+			set_secret_character(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_expand_to_text_length(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -36,7 +36,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_clear_button_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_placeholder(str(randf()))
+			set_placeholder(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_placeholder_alpha(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -47,7 +47,7 @@ func _process(delta) -> void:
 			set_cursor_position(Autoload.get_int())
 			
 		if randi() % 2 == 1:
-			append_at_cursor(str(randf()))
+			append_at_cursor(Autoload.get_string())
 		if randi() % 2 == 1:
 			deselect()
 		if randi() % 2 == 1:

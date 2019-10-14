@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 			
 		if randi() % 2 == 1:
-			set_polygon(PoolVector2Array([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())]))
+			set_polygon(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
 			set_mode(Autoload.get_int()) # Mode
 		if randi() % 2 == 1:

@@ -19,7 +19,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_CameraServer.add_feed( CameraFeed.new())
 #		q_CameraServer.feeds()
 #
-#		q_CameraServer.get_feed( randi()%50)
+#		q_CameraServer.get_feed( Autoload.get_int())
 #		q_CameraServer.get_feed_count()
 #
 #		q_CameraServer.remove_feed( CameraFeed.new() )

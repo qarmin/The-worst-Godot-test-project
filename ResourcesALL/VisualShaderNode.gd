@@ -15,9 +15,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #		var q_VisualShaderNode : VisualShaderNode = VisualShaderNode.new()
 #
-#		q_VisualShaderNode.set_output_port_for_preview(randi()%50)
+#		q_VisualShaderNode.set_output_port_for_preview(Autoload.get_int())
 #		q_VisualShaderNode._set_default_input_values([124,214,124,214])
 #
-#		q_VisualShaderNode.get_input_port_default_value( randi()%50)
-#		q_VisualShaderNode.set_input_port_default_value( randi()%50, randi()%50)
+#		q_VisualShaderNode.get_input_port_default_value( Autoload.get_int())
+#		q_VisualShaderNode.set_input_port_default_value( Autoload.get_int(), Autoload.get_int())
 #

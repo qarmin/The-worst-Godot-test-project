@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Transform : Transform = Transform( Basis( Autoload.get_quat() ))
+var q_Transform : Transform = Autoload.get_transform()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 

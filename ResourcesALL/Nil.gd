@@ -40,6 +40,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_Nil = Nil( Vector2() )
 #		q_Nil = Nil( String() )
 #		q_Nil = Nil( float() )
-#		q_Nil = Nil( randi()%50)
+#		q_Nil = Nil( Autoload.get_int())
 #		q_Nil = Nil( Autoload.get_bool())
 #

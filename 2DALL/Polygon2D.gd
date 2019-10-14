@@ -17,15 +17,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_color(Autoload.get_color())
 		if randi() % 2 == 1:
-			set_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_antialiased(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_texture_offset(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_texture_offset(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			set_texture_scale(Vector2(Autoload.get_float(), Autoload.get_float()))
+			set_texture_scale(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_texture_rotation_degrees(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -37,19 +37,20 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_invert_border(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_polygon([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
+			set_polygon(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
-			set_uv([Vector2(Autoload.get_float(), Autoload.get_float()),Vector2(Autoload.get_float(), Autoload.get_float())])
+			set_uv(Autoload.get_poolvector2array())
 		if randi() % 2 == 1:
-			set_vertex_colors([Autoload.get_color(),Autoload.get_color()])
+			set_vertex_colors(Autoload.get_poolcolorarray())
 		if randi() % 2 == 1:
-			set_polygons([Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()])
+			set_polygons(Autoload.get_array())
 		if randi() % 2 == 1:
-			_set_bones([Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()])
+			_set_bones(Autoload.get_array())
 		if randi() % 2 == 1:
 			set_internal_vertex_count(Autoload.get_int())
 		if randi() % 2 == 1:
-			add_bone(Autoload.get_string(),PoolRealArray([Autoload.get_float(),Autoload.get_float(),Autoload.get_float()]))
+			add_bone(Autoload.get_string(),Autoload.get_poolrealarray())
+		if randi() % 2 == 1:
 			erase_bone(Autoload.get_int())
 		if randi() % 2 == 1:
 			clear_bones()

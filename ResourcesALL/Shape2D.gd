@@ -17,9 +17,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_Shape2D : Shape2D = Shape2D.new()
 #
 #		if Autoload.WRONG_BUGS:
-#			q_Shape2D.set_custom_solver_bias(randf() * 50)
+#			q_Shape2D.set_custom_solver_bias(Autoload.get_float())
 #
-#			qq += str(q_Shape2D.collide( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), CircleShape2D.new(), Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)) ))
-#			qq += str(q_Shape2D.collide_and_get_contacts( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), CircleShape2D.new(), Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)) ))
-#			qq += str(q_Shape2D.collide_with_motion( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50), CircleShape2D.new(), Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50)))
-#			qq += str(q_Shape2D.collide_with_motion_and_get_contacts( Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)),Vector2(randf() * 50,randf() * 50), CircleShape2D.new(), Transform2D(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)), Vector2(randf() * 50,randf() * 50) ))
+#			qq += str(q_Shape2D.collide( Autoload.get_transform2d(), CircleShape2D.new(), Autoload.get_transform2d() ))
+#			qq += str(q_Shape2D.collide_and_get_contacts( Autoload.get_transform2d(), CircleShape2D.new(), Autoload.get_transform2d() ))
+#			qq += str(q_Shape2D.collide_with_motion( Autoload.get_transform2d(), Autoload.get_vector2(), CircleShape2D.new(), Autoload.get_transform2d(), Autoload.get_vector2()))
+#			qq += str(q_Shape2D.collide_with_motion_and_get_contacts( Autoload.get_transform2d(),Autoload.get_vector2(), CircleShape2D.new(), Autoload.get_transform2d(), Autoload.get_vector2() ))

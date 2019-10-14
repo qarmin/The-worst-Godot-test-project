@@ -19,4 +19,4 @@ func _process(delta) -> void:
 			q_ViewportTexture = ViewportTexture.new()
 		
 		if randi() % 2 == 1:
-			q_ViewportTexture.set_viewport_path_in_scene(".")
+			q_ViewportTexture.set_viewport_path_in_scene(Autoload.get_nodepath(self))

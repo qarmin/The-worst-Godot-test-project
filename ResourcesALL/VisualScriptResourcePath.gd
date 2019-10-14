@@ -19,4 +19,4 @@ func _process(delta) -> void:
 		
 		
 		if randi() % 2 == 1:
-			q_VisualScriptResourcePath.set_resource_path("res://Spr22te1.png")
+			q_VisualScriptResourcePath.set_resource_path("res://TEMP/" + Autoload.get_string())

@@ -23,7 +23,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_StyleBoxTexture.set_normal_map(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			q_StyleBoxTexture.set_region_rect(Autoload.get_rect2d())
+			q_StyleBoxTexture.set_region_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
 			q_StyleBoxTexture.set_margin_size(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:

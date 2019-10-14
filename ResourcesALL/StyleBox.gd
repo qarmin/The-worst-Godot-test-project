@@ -17,9 +17,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_StyleBox : StyleBox = StyleBox.new()
 #
 #		for i in range(4):
-#			q_StyleBox.set_default_margin( i,randf() * 50 )#MARGIN
+#			q_StyleBox.set_default_margin( i,Autoload.get_float() )#MARGIN
 #
-#		q_StyleBox.draw( RID(), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50)))
+#		q_StyleBox.draw( RID(), Autoload.get_rect2())
 #
 #		qq += str(q_StyleBox.get_center_size())
 #		qq += str(q_StyleBox.get_current_item_drawn())
@@ -27,5 +27,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_StyleBox.get_minimum_size())
 #		qq += str(q_StyleBox.get_offset())
 #
-#		qq += str(q_StyleBox.test_mask( Vector2(randf() * 50,randf() * 50), Rect2(Vector2(randf() * 50,randf() * 50),Vector2(randf() * 50,randf() * 50))))
+#		qq += str(q_StyleBox.test_mask( Autoload.get_vector2(), Autoload.get_rect2()))
 #
