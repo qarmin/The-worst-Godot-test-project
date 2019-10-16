@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ResourcesALL.tscn"
+run/main_scene="res://3DALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -65,6 +65,7 @@ limits/debugger_stdout/max_warnings_per_second=5
 
 [physics]
 
+3d/physics_engine="GodotPhysics"
 3d/default_gravity_vector=Vector3( -0.23, -1.13, 0.34 )
 
 [rendering]
