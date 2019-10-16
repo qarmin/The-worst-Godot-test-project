@@ -3,8 +3,13 @@
 [ext_resource path="res://RES/FreeMono.otf" type="DynamicFontData" id=1]
 
 [resource]
-size = 12
+size = 62
+outline_size = 60
+outline_color = Color( 0.435294, 0.211765, 0.211765, 1 )
 use_mipmaps = true
 use_filter = true
-extra_spacing_top = 1
+extra_spacing_top = -59
+extra_spacing_bottom = -80
+extra_spacing_char = 50
+extra_spacing_space = 50
 font_data = ExtResource( 1 )

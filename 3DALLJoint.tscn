@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://3DALL/HingeJoint.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ConeTwistJoint.gd" type="Script" id=2]
 [ext_resource path="res://3DALL/SliderJoint.gd" type="Script" id=3]
 [ext_resource path="res://3DALL/PinJoint.gd" type="Script" id=4]
 [ext_resource path="res://3DALL/Generic6DOFJoint.gd" type="Script" id=5]
+[ext_resource path="res://3DALL/SoftBody.gd" type="Script" id=6]
+
+[sub_resource type="CubeMesh" id=1]
 
 [node name="Joint" type="Spatial"]
 
@@ -57,3 +60,8 @@ nodes/node_a = NodePath("../PhysicalBone")
 nodes/node_b = NodePath("../RigidBody")
 solver/priority = 8
 script = ExtResource( 2 )
+
+[node name="SoftBody" type="SoftBody" parent="."]
+mesh = SubResource( 1 )
+material/0 = null
+script = ExtResource( 6 )

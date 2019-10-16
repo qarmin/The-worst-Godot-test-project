@@ -1,0 +1,5 @@
+[gd_resource type="CameraTexture" format=2]
+
+[resource]
+camera_feed_id = -110
+which_feed = 100

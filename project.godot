@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://OtherALL.tscn"
+run/main_scene="res://SpatialMaterial.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -57,6 +57,11 @@ file_logging/max_log_files=30
 [memory]
 
 limits/message_queue/max_size_kb=131072
+
+[network]
+
+limits/debugger_stdout/max_errors_per_second=5
+limits/debugger_stdout/max_warnings_per_second=5
 
 [physics]
 

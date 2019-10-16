@@ -1,3 +1,13 @@
-[gd_resource type="CubeMesh" format=2]
+[gd_resource type="CubeMesh" load_steps=2 format=2]
+
+[sub_resource type="SpatialMaterial" id=1]
 
 [resource]
+lightmap_size_hint = Vector2( 1.14, 1.42 )
+material = SubResource( 1 )
+custom_aabb = AABB( -0.61, 0.53, 4.74, 1.35, 2.05, -5.75 )
+flip_faces = true
+size = Vector3( 2.91, -5.8, -2.97 )
+subdivide_width = 1
+subdivide_height = 1
+subdivide_depth = 1
