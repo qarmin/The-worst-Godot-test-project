@@ -17,5 +17,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_VisualScriptPreload = VisualScriptPreload.new()
 		
-		if randi() % 2 == 1:
-			q_VisualScriptPreload.set_preload(Autoload.loadA("Sprite.png"))
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				q_VisualScriptPreload.set_preload(Autoload.loadA("Sprite.png"))

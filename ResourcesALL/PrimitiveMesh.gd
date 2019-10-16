@@ -15,7 +15,7 @@ func _ready():
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 #
 #		var q_PrimitiveMesh : PrimitiveMesh = PrimitiveMesh.new()
-#			q_PrimitiveMesh.set_material(SpatialMaterial.new())
+#			q_PrimitiveMesh.set_material(Autoload.loadA("SpatialMaterial.tres"))
 #			q_PrimitiveMesh.set_custom_aabb(Autoload.get_aabb())
 #			q_PrimitiveMesh.set_flip_faces(Autoload.get_bool())
 #

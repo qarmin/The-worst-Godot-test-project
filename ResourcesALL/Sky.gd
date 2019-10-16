@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Sky : Sky = Sky.new()
 #
-#		q_Sky.set_radiance_size(randi() % Sky.RADIANCE_SIZE_MAX) # RadianceSize
+#		q_Sky.set_radiance_size(Autoload.get_int()) # RadianceSize
 #

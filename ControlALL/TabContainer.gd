@@ -25,7 +25,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_tab_title(Autoload.get_int(),str(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			set_tabs_rearrange_group(0)
+#			set_tabs_rearrange_group(Autoload.get_int())
 #
 #		if randi() % 2 == 1:
 #			qq += str(get_current_tab_control())

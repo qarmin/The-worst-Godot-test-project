@@ -19,19 +19,19 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_emitting(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_amount(randi()%4 - 2)
+			set_amount(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
-			set_lifetime(randf() - 0.5)
+			set_lifetime(min(Autoload.get_float(),1.0)) 
 		if randi() % 2 == 1:
 			set_one_shot(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_pre_process_time(randf() * 1 - 0.5)
+			set_pre_process_time(min(Autoload.get_float(),1.0)) 
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_explosiveness_ratio(randf())
+			set_explosiveness_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_randomness_ratio(randf())
+			set_randomness_ratio(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_fixed_fps(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -42,9 +42,8 @@ func _process(delta) -> void:
 			set_use_local_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_draw_order(Autoload.get_int())
-			# Luka na process_material ktnory jest na koncu
 		if randi() % 2 == 1:
-			set_draw_pass_mesh(Autoload.get_int(), CubeMesh.new())
+			set_draw_pass_mesh(Autoload.get_int(), Autoload.loadA("CubeMesh.tres"))
 			
 		if randi() % 2 == 1:
 			pm.set_render_priority(Autoload.get_int())

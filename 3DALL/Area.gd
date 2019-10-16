@@ -40,11 +40,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_audio_bus_override(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_audio_bus(str(Autoload.get_bool()))
+			set_audio_bus(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_use_reverb_bus(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_reverb_bus(str(Autoload.get_bool()))
+			set_reverb_bus(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_reverb_amount(Autoload.get_float()) 
 		if randi() % 2 == 1:

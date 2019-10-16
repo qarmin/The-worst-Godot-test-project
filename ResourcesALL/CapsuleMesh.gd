@@ -23,6 +23,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_CapsuleMesh.set_mid_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CapsuleMesh.set_radial_segments(randi()%10 - 5)
+			q_CapsuleMesh.set_radial_segments(min(Autoload.get_int(),5)) 
 		if randi() % 2 == 1:
-			q_CapsuleMesh.set_rings(randi()% 10 -5)
+			q_CapsuleMesh.set_rings(min(Autoload.get_int(),5)) 

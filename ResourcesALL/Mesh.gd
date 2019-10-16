@@ -36,4 +36,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Mesh.surface_get_material( Autoload.get_int() ))
 		if randi() % 2 == 1:
-			q_Mesh.surface_set_material( Autoload.get_int(), SpatialMaterial.new())
+			q_Mesh.surface_set_material( Autoload.get_int(), Autoload.loadA("SpatialMaterial.tres"))

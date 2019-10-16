@@ -17,10 +17,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_radius(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_radial_segments(randi() % 4 - 2)
+			set_radial_segments(min(Autoload.get_int(),3))
 		if randi() % 2 == 1:
-			set_rings(randi() % 4 - 2)
+			set_rings(min(Autoload.get_int(),3))
 		if randi() % 2 == 1:
 			set_smooth_faces(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_material(SpatialMaterial.new())
+			set_material(Autoload.loadA("SpatialMaterial.tres"))

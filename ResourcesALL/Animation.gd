@@ -43,13 +43,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Animation.audio_track_get_key_stream(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_Animation.audio_track_insert_key(1,Autoload.get_float(),AudioStreamGenerator.new(),Autoload.get_float(),Autoload.get_float()))
+			qq += str(q_Animation.audio_track_insert_key(1,Autoload.get_float(),Autoload.loadA("AudioStreamGenerator.tres"),Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
 			q_Animation.audio_track_set_key_end_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
 			q_Animation.audio_track_set_key_start_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),AudioStreamGenerator.new())
+			q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),Autoload.loadA("AudioStreamGenerator.tres"))
 			
 		if randi() % 2 == 1:
 			qq += str(q_Animation.bezier_track_get_key_in_handle(Autoload.get_int(),Autoload.get_int()))

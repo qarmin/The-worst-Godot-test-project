@@ -16,9 +16,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_VisualScriptNode : VisualScriptNode = VisualScriptNode.new()
 #
-#		q_VisualScriptNode.get_default_input_value( 0 )
+#		q_VisualScriptNode.get_default_input_value( Autoload.get_int() )
 #		q_VisualScriptNode.get_visual_script()
 #
 #		q_VisualScriptNode.ports_changed_notify()
-#		q_VisualScriptNode.set_default_input_value( 0, String() )
+#		q_VisualScriptNode.set_default_input_value( Autoload.get_int(), String() )
 #

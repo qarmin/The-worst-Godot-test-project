@@ -17,20 +17,17 @@ func _process(delta) -> void:
 		var MM : MultiMesh = MultiMesh.new()
 		
 		if randi() % 2 == 1:
-			MM = MultiMesh.new()
-			
-		if randi() % 2 == 1:
 			MM.set_color_format(Autoload.get_int())
 		if randi() % 2 == 1:
 			MM.set_transform_format(Autoload.get_int())
 		if randi() % 2 == 1:
 			MM.set_custom_data_format(Autoload.get_int())
 		if randi() % 2 == 1:
-			MM.set_instance_count(randi() % 4 - 2)
+			MM.set_instance_count(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
 			MM.set_visible_instance_count(Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			MM.set_mesh(CubeMesh.new())
+#			MM.set_mesh(Autoload.loadA("CubeMesh.tres"))
 			
 		if randi() % 2 == 1:
 			qq += str(MM.get_aabb())

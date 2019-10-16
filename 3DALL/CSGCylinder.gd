@@ -19,10 +19,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_sides(randi()%5 + 4)
+			set_sides(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
 			set_cone(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_smooth_faces(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_material(SpatialMaterial.new())
+			set_material(Autoload.loadA("SpatialMaterial.tres"))

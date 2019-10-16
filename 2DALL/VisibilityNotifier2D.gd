@@ -15,6 +15,6 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_rect(Autoload.get_rect2())
+			set_rect(Autoload.get_rect2f(10))
 		if randi() % 2 == 1:
 			qq += str(is_on_screen())

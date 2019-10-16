@@ -112,13 +112,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(move_toward(Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(nearest_po2(randi()%50))
+			qq += str(nearest_po2(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(parse_json(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(polar2cartesian(Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
-			qq += str(pow(randf() * 50,randf() * 50))
+			qq += str(pow(Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(preload("res://RES/Sprite.png"))
 			
@@ -136,15 +136,15 @@ func _process(delta) -> void:
 			prints(Autoload.get_string())
 		if randi() % 2 == 1:
 			printt(Autoload.get_string())
-			
+
 		if randi() % 2 == 1:
 			push_error(Autoload.get_string())
 		if randi() % 2 == 1:
 			push_warning(Autoload.get_string())
-			
+
 		if randi() % 2 == 1:
 			qq += str(rad2deg(Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(rand_range(Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
@@ -155,61 +155,62 @@ func _process(delta) -> void:
 			qq += str(randi())
 		if randi() % 2 == 1:
 			randomize()
-		if randi() % 2 == 1:
-			qq += str(range(Autoload.get_int(),Autoload.get_int(),randi()%600 + 1))
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				qq += str(range(Autoload.get_int(),Autoload.get_int(),max(Autoload.get_int(),1)))
 		if randi() % 2 == 1:
 			qq += str(range_lerp(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(round(Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(seed(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(sign(Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(sin(Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(sinh(Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(smoothstep(Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(sqrt(Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(step_decimals(Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(stepify(Autoload.get_float(),Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
-			qq += str(str(2152153))
+			qq += str(2152153)
 		if randi() % 2 == 1:
 			qq += str(str2var(Autoload.get_string()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(tan(Autoload.get_float()))
 		if randi() % 2 == 1:
 			qq += str(tanh(Autoload.get_float()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(to_json(Autoload.get_string()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(type_exists(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(typeof(Autoload.get_string()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(validate_json(Autoload.get_string()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(var2bytes(Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(var2str(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(weakref(get_parent()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(wrapf(Autoload.get_float(),Autoload.get_float(),Autoload.get_float()))
 		if randi() % 2 == 1:

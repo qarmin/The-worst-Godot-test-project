@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		
 		
 #		if randi() % 2 == 1:
-#	SPAM		qq += str(q_StreamPeerSSL.accept_stream( StreamPeerTCP.new(),CryptoKey.new(),X509Certificate.new(),X509Certificate.new()))
+#	SPAM		qq += str(q_StreamPeerSSL.accept_stream( StreamPeerTCP.new(),Autoload.loadA("CryptoKey.tres"),X509Certificate.new(),X509Certificate.new()))
 #		if randi() % 2 == 1:
 #	SPAM		qq += str(q_StreamPeerSSL.connect_to_stream( StreamPeerTCP.new(), Autoload.get_bool(), Autoload.get_string() ))
 		if randi() % 2 == 1:

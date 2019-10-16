@@ -13,12 +13,8 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_VisualShaderNodeUniform : VisualShaderNodeUniform = VisualShaderNodeUniform.new()
 #
 #		q_VisualShaderNodeUniform.set_uniform_name(Autoload.get_string())
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

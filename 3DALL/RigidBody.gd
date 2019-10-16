@@ -20,10 +20,10 @@ func _physics_process(delta) -> void:
 			set_mass(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_weight(Autoload.get_float())
-			#Deprecated set_friction(randf())
-			#Deprecated set_bounce(randf())
+			#Deprecated set_friction(Autoload.get_float())
+			#Deprecated set_bounce(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_physics_material_override(PhysicsMaterial.new())
+			set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))
 		if randi() % 2 == 1:
 			set_gravity_scale(Autoload.get_float())
 		if randi() % 2 == 1:

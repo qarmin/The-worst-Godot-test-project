@@ -18,8 +18,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNodeTransition = AnimationNodeTransition.new()
 		
-#	SLOW	if randi() % 2 == 1:
-#			q_AnimationNodeTransition.set_enabled_inputs(Autoload.get_int())
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				q_AnimationNodeTransition.set_enabled_inputs(Autoload.get_int())
+				
 		if randi() % 2 == 1:
 			q_AnimationNodeTransition.set_cross_fade_time(Autoload.get_float())
 			

@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_EditorScenePostImport : EditorScenePostImport = EditorScenePostImport.new()
 #
@@ -22,6 +20,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_EditorScenePostImport.get_source_file()
 #		q_EditorScenePostImport.get_source_folder()
-#
-#		if Autoload.WRONG_BUGS:
-#			pass

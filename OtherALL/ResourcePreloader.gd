@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			add_resource(Autoload.get_string(), ImageTexture.new())
+			add_resource(Autoload.get_string(), Autoload.loadA("Sprite.png"))
 			
 		if randi() % 2 == 1:
 			qq += str(get_resource(Autoload.get_string()))

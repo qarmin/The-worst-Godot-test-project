@@ -101,7 +101,7 @@ func _process(delta) -> void:
 			qq += str(gui_is_dragging())
 	
 		if randi() % 2 == 1:
-			input(InputEventAction.new())
+			input(Autoload.loadA("InputEventAction.tres"))
 	
 		if randi() % 2 == 1:
 			qq += str(is_input_handled())
@@ -120,8 +120,9 @@ func _process(delta) -> void:
 			set_size_override_stretch(Autoload.get_bool())
 	
 		if randi() % 2 == 1:
-			unhandled_input(InputEventAction.new())
-		if randi() % 2 == 1:
-			update_worlds()
+			unhandled_input(Autoload.loadA("InputEventAction.tres"))
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				update_worlds()
 		# This move mouse and is irritating
 		### warp_mouse(Autoload.get_vector2())

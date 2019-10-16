@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_subdiv(randi() % 10 - 50) # Subdiv
+			set_subdiv(min(Autoload.get_int(),10)) # Subdiv 
 		if randi() % 2 == 1:
 			set_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:

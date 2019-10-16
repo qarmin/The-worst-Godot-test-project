@@ -19,8 +19,9 @@ func _process(delta) -> void:
 			set_editable(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_scrollable(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_ticks(Autoload.get_int())
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				set_ticks(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_ticks_on_borders(Autoload.get_bool())
 		if randi() % 2 == 1:

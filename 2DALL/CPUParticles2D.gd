@@ -15,15 +15,15 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_amount(randi() % 4 - 2)
+			set_amount(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
 			restart()
 		if randi() % 2 == 1:
-			set_lifetime(randf() - 0.5)
+			set_lifetime(min(Autoload.get_float(),1.0))
 		if randi() % 2 == 1:
 			set_one_shot(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_pre_process_time(randf() * 1 - 0.5)
+			set_pre_process_time(min(Autoload.get_float(),1.0)) 
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:

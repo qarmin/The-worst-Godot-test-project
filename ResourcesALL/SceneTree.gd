@@ -53,7 +53,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		#qq += str(q_SceneTree.is_network_server())
 #
 #		q_SceneTree.notify_group( Autoload.get_string(), Autoload.get_bool())
-#		q_SceneTree.notify_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_bool()) #GroupCallFlags
+#		q_SceneTree.notify_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_bool()) #GroupCallFlags
 #
 ##		q_temp = load("res://RES/Node.tscn").instance()
 ##		q_SceneTree.queue_delete( Node.new() )
@@ -63,10 +63,10 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_SceneTree.set_auto_accept_quit( Autoload.get_bool())
 #		q_SceneTree.set_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool())
-#		q_SceneTree.set_group_flags( randi() % 8, Autoload.get_string(), Autoload.get_string(), Autoload.get_bool()) # GroupCallFlags
+#		q_SceneTree.set_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_bool()) # GroupCallFlags
 #		q_SceneTree.set_input_as_handled()
 #		q_SceneTree.set_quit_on_go_back( Autoload.get_bool())
-#		#q_SceneTree.set_screen_stretch( randi() % 3, randi() %5, Autoload.get_vector2(), Autoload.get_float() )#StretchMode, StretchAspect
+#		#q_SceneTree.set_screen_stretch( Autoload.get_int(), Autoload.get_int(), Autoload.get_vector2(), Autoload.get_float() )#StretchMode, StretchAspect
 #
 #		q_SceneTree.queue_delete(self)
 #

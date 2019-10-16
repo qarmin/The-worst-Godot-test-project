@@ -61,7 +61,7 @@ func _process(delta) -> void:
 			make_baked_meshes(Autoload.get_bool(), Autoload.get_float())
 		if randi() % 2 == 1:
 			qq += str(map_to_world(Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
-			resource_changed(CubeMesh.new())
+			resource_changed(Autoload.loadA("CubeMesh.tres"))
 			
 		if randi() % 2 == 1:
 			set_cell_item(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())

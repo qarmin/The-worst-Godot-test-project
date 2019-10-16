@@ -17,7 +17,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_NativeScript : NativeScript = NativeScript.new()
 #
 #		q_NativeScript.set_class_name(Autoload.get_string())
-#		q_NativeScript.set_library(GDNativeLibrary.new())
+#		q_NativeScript.set_library(Autoload.loadA("GDNativeLibrary.tres"))
 #		q_NativeScript.set_script_class_name(Autoload.get_nodepath(self))
 #		q_NativeScript.set_script_class_icon_path(Autoload.get_nodepath(self))
 #

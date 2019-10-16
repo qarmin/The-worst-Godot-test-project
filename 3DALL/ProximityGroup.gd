@@ -20,4 +20,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_grid_radius(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			broadcast(Autoload.get_string(), InputEventAction.new())
+			broadcast(Autoload.get_string(), Autoload.loadA("InputEventAction.tres"))

@@ -5,7 +5,7 @@ const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance re
 const USE_ONLY_ONE_NODE : bool = false#true
 const RANDI : bool = true# random functions execution
 
-const RANGE : int = 2
+const RANGE : int = 1000
 
 var file : File = File.new()
 
@@ -137,6 +137,21 @@ func get_dictionary() -> Dictionary: # Probably there is better solution
 func get_nodepath(var node : Node) -> NodePath:
 	return NodePath(".")
 
+######################VIRTUAL
+
+func get_inti(var max_value : int) -> int:
+	return int(min(randi(), max_value))
+	
+func get_floatf(var max_value : float) -> float:
+	return min(get_float(),max_value)
+	
+func get_vector2f(var max_value : float) -> Vector2:
+	return Vector2(get_floatf(max_value),get_floatf(max_value))
+	
+func get_rect2f(var max_value : float) -> Rect2:
+	return Rect2(get_vector2f(max_value),get_vector2f(max_value))
+
+################
 
 const MAX_NUMBER : int = 1
 const NEWLINE : int = 3
@@ -192,4 +207,9 @@ var names : Dictionary = {"ArrayMesh.tres" : ArrayMesh.new(),
 "Tileset.tres":TileSet.new(),
 "Translation.tres":Translation.new(),
 "VideoStreamWebm.tres":VideoStreamWebm.new(),
-"VisualShader.tres":VisualShader.new()}
+"VisualShader.tres":VisualShader.new(),
+
+"CapsuleShape.tres":CapsuleShape.new(),
+"RayShape.tres":RayShape.new(),
+"RayShape2D.tres":RayShape2D.new(),
+}

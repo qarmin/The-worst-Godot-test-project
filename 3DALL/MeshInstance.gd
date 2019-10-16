@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_mesh(CubeMesh.new())
+			set_mesh(Autoload.loadA("CubeMesh.tres"))
 		if randi() % 2 == 1:
 			set_skeleton_path(Autoload.get_nodepath(self))
 			
@@ -30,7 +30,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(get_surface_material_count())
 		if randi() % 2 == 1:
-			set_surface_material(Autoload.get_int(), SpatialMaterial.new())
+			set_surface_material(Autoload.get_int(), Autoload.loadA("SpatialMaterial.tres"))
 				
 #####################
 		if randi() % 2 == 1:

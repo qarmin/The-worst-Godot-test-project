@@ -18,5 +18,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_ResourceFormatSaver.get_recognized_extensions( Resource.new() )
 #		q_ResourceFormatSaver.recognize( Resource.new() )
-#		q_ResourceFormatSaver.save( Autoload.get_string(), Resource.new(), randi() % 127 )
+#		q_ResourceFormatSaver.save( Autoload.get_string(), Resource.new(), Autoload.get_int() )
 #

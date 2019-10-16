@@ -19,33 +19,33 @@ func _process(delta) -> void:
 			
 		
 		if randi() % 2 == 1:
-			q_Image.blend_rect( Image.new(), Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)), Vector2(randf() * 10 - 5,randf() * 10 - 5) )
+			q_Image.blend_rect( Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0) )
 		if randi() % 2 == 1:
-			q_Image.blend_rect_mask( Image.new(), Image.new(), Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)), Vector2(randf() * 10 - 5,randf() * 10 - 5) )
+			q_Image.blend_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0) )
 
 #	BUG	if randi() % 2 == 1:
-#			q_Image.blit_rect( Image.new(), Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)), Vector2(randf() * 10 - 5,randf() * 10 - 5) )
+#			q_Image.blit_rect( Image.new(), Autoload.get_rect2f(1000.0),Autoload.get_vector2f(1000.0))
 		if randi() % 2 == 1:
-			q_Image.blit_rect_mask( Image.new(), Image.new(), Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5)), Vector2(randf() * 10 - 5,randf() * 10 - 5) )
+			q_Image.blit_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0),Autoload.get_vector2f(1000.0) )
 
 #	BUG	if randi() % 2 == 1:
-#			q_Image.bumpmap_to_normalmap( randf() * 10 - 5)
+#			q_Image.bumpmap_to_normalmap( Autoload.get_floatf(1000.0))
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), randf() * 10 - 5)) #compressMode, #CompressSource
+#			qq += str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), Autoload.get_floatf(1000.0))) #compressMode, #CompressSource
 #		if randi() % 2 == 1:
 #			q_Image.convert(Autoload.get_int()) #Format
 		if randi() % 2 == 1:
 			q_Image.copy_from( Image.new() )
 
 #	BUG	if randi() % 2 == 1:
-#			q_Image.create( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() ) #Format
+#			q_Image.create( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() ) #Format
 		if randi() % 2 == 1:
-			q_Image.create_from_data( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_bool(), Autoload.get_int() , Autoload.get_poolbytearray())#Format
+			q_Image.create_from_data( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() , Autoload.get_poolbytearray())#Format
 
 		if randi() % 2 == 1:
-			q_Image.crop( randi() % 10 - 5, randi() % 10 - 5 )
+			q_Image.crop( Autoload.get_inti(101), Autoload.get_inti(101) )
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
 				qq += str(q_Image.decompress())
@@ -73,13 +73,13 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_Image.get_height())
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_mipmap_offset( randi() % 10 - 5 ))
+			qq += str(q_Image.get_mipmap_offset( Autoload.get_inti(101) ))
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.get_pixel( randi() % 10 - 5, randi() % 10 - 5 ))
+#			qq += str(q_Image.get_pixel( Autoload.get_inti(101), Autoload.get_inti(101) ))
 #		if randi() % 2 == 1:
-#			qq += str(q_Image.get_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
+#			qq += str(q_Image.get_pixelv( Autoload.get_vector2f(1000.0)))
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_rect( Rect2(Vector2(randf() * 10 - 5,randf() * 10 - 5),Vector2(randf() * 10 - 5,randf() * 10 - 5))))
+			qq += str(q_Image.get_rect( Autoload.get_rect2f(1000.0)))
 		if randi() % 2 == 1:
 			qq += str(q_Image.get_size())
 #	BUG	if randi() % 2 == 1:
@@ -114,7 +114,7 @@ func _process(delta) -> void:
 			q_Image.premultiply_alpha()
 
 		if randi() % 2 == 1:
-			q_Image.resize( randi() % 10 - 5, randi() % 10 - 5, Autoload.get_int())  #Interpolation
+			q_Image.resize( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_int())  #Interpolation
 		if randi() % 2 == 1:
 			q_Image.resize_to_po2( Autoload.get_bool())
 
@@ -124,9 +124,9 @@ func _process(delta) -> void:
 			qq += str(q_Image.save_png( "res://TEMP/Image" ))
 
 #		if randi() % 2 == 1:
-#			q_Image.set_pixel( randi() % 10 - 5, randi() % 10 - 5,Autoload.get_color())
+#			q_Image.set_pixel( Autoload.get_inti(101), Autoload.get_inti(101),Autoload.get_color())
 #		if randi() % 2 == 1:
-#			q_Image.set_pixelv( Vector2(randf() * 10 - 5,randf() * 10 - 5),Autoload.get_color())
+#			q_Image.set_pixelv( Autoload.get_vector2f(1000.0),Autoload.get_color())
 
 		if randi() % 2 == 1:
 			q_Image.shrink_x2()

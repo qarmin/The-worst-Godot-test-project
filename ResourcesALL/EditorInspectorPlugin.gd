@@ -19,7 +19,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorInspectorPlugin.parse_begin( self )
 #		q_EditorInspectorPlugin.parse_category( self, Autoload.get_string() )
 #		q_EditorInspectorPlugin.parse_end()
-#		q_EditorInspectorPlugin.parse_property( self, randi() % 100, Autoload.get_string(), randi() % 20, String(), Autoload.get_int() )
+#		q_EditorInspectorPlugin.parse_property( self, Autoload.get_int(), Autoload.get_string(), Autoload.get_int(), String(), Autoload.get_int() )
 #
 #		q_EditorInspectorPlugin.add_custom_control( Control.new() )
 #		q_EditorInspectorPlugin.add_property_editor( Autoload.get_string(), Control.new() )

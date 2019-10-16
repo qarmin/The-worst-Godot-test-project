@@ -16,11 +16,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		var q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer = NetworkedMultiplayerPeer.new()
 #
 #		q_NetworkedMultiplayerPeer.set_refuse_new_connections(Autoload.get_bool())
-#		q_NetworkedMultiplayerPeer.set_transfer_mode(randi() % 3) #TransferMode
+#		q_NetworkedMultiplayerPeer.set_transfer_mode(Autoload.get_int()) #TransferMode
 #
 #		q_NetworkedMultiplayerPeer.get_connection_status()
 #		q_NetworkedMultiplayerPeer.get_packet_peer()
 #		q_NetworkedMultiplayerPeer.get_unique_id()
 #		q_NetworkedMultiplayerPeer.poll()
-#		q_NetworkedMultiplayerPeer.set_target_peer( 0 )
+#		q_NetworkedMultiplayerPeer.set_target_peer( Autoload.get_int() )
 #

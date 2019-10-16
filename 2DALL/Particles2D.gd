@@ -19,13 +19,14 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_emitting(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_amount(randi()%4-2)
+			set_amount(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
-			set_lifetime(randf() - 0.5)
+			set_lifetime(min(Autoload.get_float(),1.0)) 
 		if randi() % 2 == 1:
 			set_one_shot(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_pre_process_time(randf() * 1 - 0.5)
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				set_pre_process_time(min(Autoload.get_float(),1.0)) 
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -85,20 +86,14 @@ func _process(delta) -> void:
 			pm.set_color_ramp(Autoload.loadA("Sprite.png"))
 			
 		if randi() % 2 == 1:
-			pm.set_flag(pm.FLAG_ALIGN_Y_TO_VELOCITY,Autoload.get_bool())
-		if randi() % 2 == 1:
-			pm.set_flag(pm.FLAG_ROTATE_Y ,Autoload.get_bool())
-		if randi() % 2 == 1:
-			pm.set_flag(pm.FLAG_DISABLE_Z,Autoload.get_bool())
+			pm.set_flag(Autoload.get_int(),Autoload.get_bool())
 			
-			
-			for j in range(12): # range(12):
-				if randi() % 2 == 1:
-					pm.set_param(j,Autoload.get_float())
-				if randi() % 2 == 1:
-					pm.set_param_randomness(j,Autoload.get_float())
-				if randi() % 2 == 1:
-					pm.set_param_texture(j,Autoload.loadA("Sprite.png"))
+		if randi() % 2 == 1:
+			pm.set_param(Autoload.get_int(),Autoload.get_float())
+		if randi() % 2 == 1:
+			pm.set_param_randomness(Autoload.get_int(),Autoload.get_float())
+		if randi() % 2 == 1:
+			pm.set_param_texture(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 			
 		if randi() % 2 == 1:
 			set_process_material(pm)

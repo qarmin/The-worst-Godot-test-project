@@ -16,5 +16,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_Performance : Performance = Performance.new()
 #
-#		qq += str(q_Performance.get_monitor(randi() % Performance.MONITOR_MAX))
+#		qq += str(q_Performance.get_monitor(Autoload.get_int())
 #

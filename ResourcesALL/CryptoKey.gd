@@ -21,4 +21,5 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_CryptoKey.load("res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_CryptoKey.save("res://TEMP/" + Autoload.get_string()))
+			if Autoload.SLOW_FUNCTIONS:
+				qq += str(q_CryptoKey.save("res://TEMP/" + Autoload.get_string()))

@@ -21,6 +21,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_PlaneMesh.set_size(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			q_PlaneMesh.set_subdivide_width(randi() % 10 - 8) 
+			q_PlaneMesh.set_subdivide_width(min(Autoload.get_int(),5)) 
 		if randi() % 2 == 1:
-			q_PlaneMesh.set_subdivide_depth(randi() % 10 - 8)
+			q_PlaneMesh.set_subdivide_depth(min(Autoload.get_int(),5)) 

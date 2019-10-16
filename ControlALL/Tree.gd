@@ -16,7 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		
 		if randi() % 2 == 1:
-			set_columns(Autoload.get_int())
+			set_columns(Autoload.get_inti(100))
 		if randi() % 2 == 1:
 			set_allow_reselect(Autoload.get_bool())
 		if randi() % 2 == 1:

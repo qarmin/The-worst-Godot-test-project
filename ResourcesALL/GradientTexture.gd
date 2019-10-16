@@ -18,6 +18,6 @@ func _process(delta) -> void:
 			q_GradientTexture = GradientTexture.new()
 			
 		if randi() % 2 == 1:
-			q_GradientTexture.set_gradient(Gradient.new())
+			q_GradientTexture.set_gradient(Autoload.loadA("Gradient.tres"))
 		if randi() % 2 == 1:
 			q_GradientTexture.set_width(Autoload.get_int())

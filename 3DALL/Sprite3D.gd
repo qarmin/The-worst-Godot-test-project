@@ -17,15 +17,15 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_vframes(randi() % 40 - 25)
+			set_vframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_hframes(randi() % 40 - 25)
+			set_hframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_frame(randi() % 100 - 50)
+			set_frame(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_region(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_region_rect(Rect2(Vector2(randf() * 100 - 50,randf() * 100 - 50),Vector2(randf() * 100 - 50,randf() * 100 - 50)))
+			set_region_rect(Autoload.get_rect2())
 
 			#SPRITE BASED
 		if randi() % 2 == 1:

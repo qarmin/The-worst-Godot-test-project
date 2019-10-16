@@ -35,7 +35,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimationNode.blend_animation( Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float() )
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNode.blend_input( 0, Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool() ))#FilterAction
+			qq += str(q_AnimationNode.blend_input( Autoload.get_int(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool() ))#FilterAction
 		if randi() % 2 == 1:
 			qq += str(q_AnimationNode.blend_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool() ))#FilterAction
 			

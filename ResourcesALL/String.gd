@@ -141,7 +141,7 @@ func _process(delta) -> void:
 			qq += str(q_String.is_valid_integer())
 		if randi() % 2 == 1:
 			qq += str(q_String.is_valid_ip_address())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.json_escape())
 		if randi() % 2 == 1:
@@ -150,73 +150,73 @@ func _process(delta) -> void:
 			qq += str(q_String.length())
 		if randi() % 2 == 1:
 			qq += str(q_String.lstrip( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.match( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.matchn( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.md5_buffer())
 		if randi() % 2 == 1:
 			qq += str(q_String.md5_text())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.nocasecmp_to( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.ord_at( Autoload.get_int()))
-			
+
 		if randi() % 2 == 1:
-			qq += str(q_String.pad_decimals( Autoload.get_int()))
+			qq += str(q_String.pad_decimals( Autoload.get_inti(100)))
 		if randi() % 2 == 1:
-			qq += str(q_String.pad_zeros( Autoload.get_int()))
+			qq += str(q_String.pad_zeros( Autoload.get_inti(100)))
 			
 		if randi() % 2 == 1:
 			qq += str(q_String.percent_decode())
 		if randi() % 2 == 1:
 			qq += str(q_String.percent_encode())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.plus_file( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.replace( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.replacen( Autoload.get_string(), Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.rfindn( Autoload.get_string(), Autoload.get_int()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.right( Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.rsplit( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.rstrip( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.sha256_buffer())
 		if randi() % 2 == 1:
 			qq += str(q_String.sha256_text())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.similarity( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.split( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_String.split_floats( Autoload.get_string(),Autoload.get_bool() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.strip_edges( Autoload.get_bool(),Autoload.get_bool()))
 		if randi() % 2 == 1:
 			qq += str(q_String.strip_escapes())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.substr( Autoload.get_int(),Autoload.get_int()))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.to_ascii())
 		if randi() % 2 == 1:
@@ -229,12 +229,12 @@ func _process(delta) -> void:
 			qq += str(q_String.to_upper())
 		if randi() % 2 == 1:
 			qq += str(q_String.to_utf8())
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.trim_prefix( Autoload.get_string() ))
 		if randi() % 2 == 1:
 			qq += str(q_String.trim_suffix( Autoload.get_string() ))
-			
+
 		if randi() % 2 == 1:
 			qq += str(q_String.xml_escape())
 		if randi() % 2 == 1:

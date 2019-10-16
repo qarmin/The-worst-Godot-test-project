@@ -31,4 +31,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AnimatedTexture.set_frame_delay(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
-			q_AnimatedTexture.set_frame_texture(Autoload.get_int(),ImageTexture.new())
+			q_AnimatedTexture.set_frame_texture(Autoload.get_int(),Autoload.loadA("Sprite.png"))

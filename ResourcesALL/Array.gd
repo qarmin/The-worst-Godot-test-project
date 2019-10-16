@@ -94,7 +94,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Array.remove( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_Array.resize( Autoload.get_int())
+			q_Array.resize( Autoload.get_inti(1000))
 		if randi() % 2 == 1:
 			qq += str(q_Array.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:

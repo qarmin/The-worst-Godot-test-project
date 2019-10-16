@@ -42,7 +42,7 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			add_item(str(Autoload.get_int()),Autoload.loadA("Sprite.png"),Autoload.get_bool())
+#			add_item(Autoload.get_string(),Autoload.loadA("Sprite.png"),Autoload.get_bool())
 #		if randi() % 2 == 1:
 #			ensure_current_is_visible()
 #		if randi() % 2 == 1:
@@ -106,9 +106,9 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			set_item_selectable(Autoload.get_int(),Autoload.get_bool())
 #		if randi() % 2 == 1:
-#			set_item_text(Autoload.get_int(),str(Autoload.get_bool()))
+#			set_item_text(Autoload.get_int(),Autoload.get_string())
 #		if randi() % 2 == 1:
-#			set_item_tooltip(Autoload.get_int(),str(Autoload.get_bool()))
+#			set_item_tooltip(Autoload.get_int(),Autoload.get_string())
 #		if randi() % 2 == 1:
 #			set_item_tooltip_enabled(Autoload.get_int(),Autoload.get_bool())
 #		if randi() % 2 == 1:

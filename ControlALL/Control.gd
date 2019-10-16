@@ -63,7 +63,7 @@ func _process(delta) -> void:
 
 		### qq += str(_clips_input())
 		### qq += str(_get_minimum_size())
-		### _gui_input(InputEventAction.new())
+		### _gui_input(Autoload.loadA("InputEventAction.tres"))
 		### qq += str(_make_custom_tooltip("Aha"))
 		if randi() % 2 == 1:
 			accept_event()

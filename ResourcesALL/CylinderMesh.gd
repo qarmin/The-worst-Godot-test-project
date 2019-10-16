@@ -25,6 +25,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_CylinderMesh.set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_CylinderMesh.set_radial_segments(randi()%10 - 8)
+			q_CylinderMesh.set_radial_segments(min(Autoload.get_int(),3))
 		if randi() % 2 == 1:
-			q_CylinderMesh.set_rings(randi()%10 - 8)
+			q_CylinderMesh.set_rings(min(Autoload.get_int(),3))

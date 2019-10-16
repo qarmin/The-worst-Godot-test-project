@@ -23,7 +23,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Curve.set_max_value(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_Curve.set_bake_resolution(randi() % 10 - 500)
+			q_Curve.set_bake_resolution(Autoload.get_int()) 
 		if randi() % 2 == 1:
 			for _i in range(3):
 				qq += str(q_Curve.add_point( Autoload.get_vector2(), Autoload.get_float(),Autoload.get_float(), Autoload.get_int(), Autoload.get_int() )) #TangentMode

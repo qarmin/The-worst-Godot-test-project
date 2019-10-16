@@ -28,12 +28,12 @@ func _process(delta: float) -> void:
 			i.queue_free()
 		get_tree().quit()
 	
-	ev.pressed = true
-	ev.button_index = BUTTON_LEFT
-	ev.button_mask = BUTTON_LEFT
-	for i in range(10):
-		ev.position = Vector2(randi() % 2000, randi() % 1500)
-		Input.parse_input_event(ev)
+#	ev.pressed = true
+#	ev.button_index = BUTTON_LEFT
+#	ev.button_mask = BUTTON_LEFT
+#	for i in range(10):
+#		ev.position = Vector2(randi() % 2000, randi() % 1500)
+#		Input.parse_input_event(ev)
 	
 	
 	current_time_to_next_node -= delta

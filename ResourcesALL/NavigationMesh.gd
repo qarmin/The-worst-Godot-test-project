@@ -62,7 +62,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:
-#			q_NavigationMesh.create_from_mesh(CubeMesh.new())
+#			q_NavigationMesh.create_from_mesh(Autoload.loadA("CubeMesh.tres"))
 			
 		if randi() % 2 == 1:
 			qq += str(q_NavigationMesh.get_collision_mask_bit( Autoload.get_int() ))

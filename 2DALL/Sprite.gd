@@ -28,11 +28,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_flip_v(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_vframes(randi() % 10 - 5)
+			set_vframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_hframes(randi() % 10 - 5)
+			set_hframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_frame(randi() % 10 - 5)
+			set_frame(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_region(Autoload.get_bool())
 		if randi() % 2 == 1:

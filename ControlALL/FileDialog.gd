@@ -26,11 +26,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_show_hidden_files(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_current_dir("res://" + str(Autoload.get_int()))
+			set_current_dir("res://TEMP/" + Autoload.get_string())
 		if randi() % 2 == 1:
-			set_current_file("res://" + str(Autoload.get_int()))
+			set_current_file("res://TEMP/" + Autoload.get_string())
 		if randi() % 2 == 1:
-			set_current_path("res://" + str(Autoload.get_int()))
+			set_current_path("res://TEMP/" + Autoload.get_string())
 		if randi() % 2 == 1:
 			clear_filters()
 		if randi() % 2 == 1:

@@ -21,9 +21,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshDataTool.clear()
 		if randi() % 2 == 1:
-			qq += str(q_MeshDataTool.commit_to_surface( ArrayMesh.new() ))
+			qq += str(q_MeshDataTool.commit_to_surface( Autoload.loadA("ArrayMesh.tres") ))
 		if randi() % 2 == 1:
-			qq += str(q_MeshDataTool.create_from_surface( ArrayMesh.new(), Autoload.get_int() ))
+			qq += str(q_MeshDataTool.create_from_surface( Autoload.loadA("ArrayMesh.tres"), Autoload.get_int() ))
 			
 		if randi() % 2 == 1:
 			qq += str(q_MeshDataTool.get_edge_count())

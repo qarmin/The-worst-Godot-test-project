@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SpriteFrames.add_animation( Autoload.get_string() )
 		if randi() % 2 == 1:
-			q_SpriteFrames.add_frame( Autoload.get_string(), ImageTexture.new(), Autoload.get_int() )
+			q_SpriteFrames.add_frame( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_int() )
 			
 		if randi() % 2 == 1:
 			q_SpriteFrames.clear( Autoload.get_string() )

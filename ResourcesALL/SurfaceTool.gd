@@ -49,7 +49,7 @@ func _process(delta) -> void:
 			q_SurfaceTool.clear()
 			
 		if randi() % 2 == 1:
-			qq += str(q_SurfaceTool.commit( ArrayMesh.new(), Autoload.get_int()))
+			qq += str(q_SurfaceTool.commit( Autoload.loadA("ArrayMesh.tres"), Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(q_SurfaceTool.commit_to_arrays())
 			
@@ -69,4 +69,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.index()
 		if randi() % 2 == 1:
-			q_SurfaceTool.set_material( SpatialMaterial.new() )
+			q_SurfaceTool.set_material( Autoload.loadA("SpatialMaterial.tres") )

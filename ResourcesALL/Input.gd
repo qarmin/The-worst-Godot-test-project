@@ -50,12 +50,12 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_Input.is_mouse_button_pressed(Autoload.get_int()))
 #
 #		q_Input.joy_connection_changed(Autoload.get_int(), Autoload.get_bool(), Autoload.get_string(), Autoload.get_string()) 
-#		#q_Input.parse_input_event(InputEventAction.new())
+#		#q_Input.parse_input_event(Autoload.loadA("InputEventAction.tres"))
 #		q_Input.remove_joy_mapping(Autoload.get_string())
 #
-#		#q_Input.set_custom_mouse_cursor(Autoload.loadA("Sprite.png"), randi() % 17,Autoload.get_vector2()) #CursorShape
-#		q_Input.set_default_cursor_shape(randi() % 17) #CursorShape
-#		q_Input.set_mouse_mode(randi() % 4) #MouseMode
+#		#q_Input.set_custom_mouse_cursor(Autoload.loadA("Sprite.png"), Autoload.get_int(),Autoload.get_vector2()) #CursorShape
+#		q_Input.set_default_cursor_shape(Autoload.get_int()) #CursorShape
+#		q_Input.set_mouse_mode(Autoload.get_int()) #MouseMode
 #		q_Input.set_use_accumulated_input(Autoload.get_bool())
 #
 #		#q_Input.start_joy_vibration(Autoload.get_int(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())

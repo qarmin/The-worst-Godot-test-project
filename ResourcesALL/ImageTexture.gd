@@ -24,7 +24,7 @@ func _process(delta) -> void:
 			q_ImageTexture.set_lossy_storage_quality(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			q_ImageTexture.create(min(Autoload.get_int(),1000),min(Autoload.get_int(),1000),Autoload.get_int(),Autoload.get_int()) # Format
+			q_ImageTexture.create(min(Autoload.get_int(),1000),min(Autoload.get_int(),1000),Autoload.get_int(),Autoload.get_int()) # Format 
 		if randi() % 2 == 1:
 			q_ImageTexture.create_from_image(Image.new(),Autoload.get_int())
 

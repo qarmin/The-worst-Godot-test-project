@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			popup_centered(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			popup_centered_clamped(Autoload.get_vector2(),randf())
+			popup_centered_clamped(Autoload.get_vector2(),Autoload.get_float())
 		if randi() % 2 == 1:
 			popup_centered_minsize(Autoload.get_vector2())
 		if randi() % 2 == 1:

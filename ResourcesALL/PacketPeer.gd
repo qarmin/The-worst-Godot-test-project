@@ -13,8 +13,6 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_PacketPeer : PacketPeer = PacketPeer.new()
 #
@@ -28,5 +26,3 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		qq += str(q_PacketPeer.put_packet( Autoload.get_poolbytearray()))
 #		qq += str(q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool()))
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

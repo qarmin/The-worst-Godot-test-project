@@ -13,16 +13,12 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #	if counter <= 0:
 #		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		if !Autoload.RANDI:
-#			pass
 #
 #		var q_PhysicsShapeQueryResult : PhysicsShapeQueryResult = PhysicsShapeQueryResult.new()
 #
 #		q_PhysicsShapeQueryResult.get_result_count()
-#		q_PhysicsShapeQueryResult.get_result_object( 0 )
-#		q_PhysicsShapeQueryResult.get_result_object_id( 0 ) 
-#		q_PhysicsShapeQueryResult.get_result_object_shape( 0 )
-#		q_PhysicsShapeQueryResult.get_result_rid( 0 )
+#		q_PhysicsShapeQueryResult.get_result_object( Autoload.get_int() )
+#		q_PhysicsShapeQueryResult.get_result_object_id( Autoload.get_int() ) 
+#		q_PhysicsShapeQueryResult.get_result_object_shape( Autoload.get_int() )
+#		q_PhysicsShapeQueryResult.get_result_rid( Autoload.get_int() )
 #
-#		if Autoload.WRONG_BUGS:
-#			pass

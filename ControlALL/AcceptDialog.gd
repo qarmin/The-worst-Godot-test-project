@@ -18,8 +18,8 @@ func _process(delta) -> void:
 			set_text(str(Autoload.get_int()))
 		if randi() % 2 == 1:
 			set_hide_on_ok(Autoload.get_bool())
-			#LEAK qq += str(add_button(str(Autoload.get_int()), Autoload.get_bool()))
-			#LEAK qq += str(add_cancel(str(Autoload.get_int())))
+			#LEAK qq += str(add_button(Autoload.get_string(), Autoload.get_bool()))
+			#LEAK qq += str(add_cancel(Autoload.get_string()))
 		if randi() % 2 == 1:
 			qq += str(get_label())
 		if randi() % 2 == 1:

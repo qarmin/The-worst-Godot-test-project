@@ -25,16 +25,16 @@ func _process(delta) -> void:
 			q_PoolVector3Array.append_array(Autoload.get_poolvector3array())
 			
 		if randi() % 2 == 1:
-			qq += str(q_PoolVector3Array.insert( randi() % 10 - 5, Autoload.get_vector3()) )
+			qq += str(q_PoolVector3Array.insert( Autoload.get_int(), Autoload.get_vector3()) ) 
 		if randi() % 2 == 1:
 			q_PoolVector3Array.invert()
 		if randi() % 2 == 1:
 			q_PoolVector3Array.push_back( Autoload.get_vector3() )
 		if randi() % 2 == 1:
-			q_PoolVector3Array.remove( randi() % 10 - 5)
+			q_PoolVector3Array.remove(Autoload.get_int()) 
 		if randi() % 2 == 1:
-			q_PoolVector3Array.resize( randi() % 10 - 5)
+			q_PoolVector3Array.resize(min(Autoload.get_int(),100)) 
 		if randi() % 2 == 1:
-			q_PoolVector3Array.set(randi() % 10 - 5, Autoload.get_vector3())
+			q_PoolVector3Array.set(Autoload.get_int(), Autoload.get_vector3()) 
 		if randi() % 2 == 1:
 			qq += str(q_PoolVector3Array.size())

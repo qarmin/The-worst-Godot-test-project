@@ -75,10 +75,10 @@ func _process(delta) -> void:
 			qq += str(q_File.is_open())
 			
 		if randi() % 2 == 1:
-			qq += str(q_File.open( "res://TEMP/" + Autoload.get_string(), randi() % 30 - 10))#randi() % 7 + 1))
-		###q_File.open_compressed( "Sprite.png", randi() % 7 + 1, randi() % 4 )#ModeFlags, CompressionMode
-		###q_File.open_encrypted( "Sprite.png", randi() % 7 + 1, Autoload.get_poolbytearray())#ModeFlags
-		###q_File.open_encrypted_with_pass( "Sprite.png", randi() % 7 + 1, "Sprite.png" )#ModeFlags
+			qq += str(q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int()))
+		###q_File.open_compressed( "Sprite.png", Autoload.get_int(), Autoload.get_int() )#ModeFlags, CompressionMode
+		###q_File.open_encrypted( "Sprite.png", Autoload.get_int(), Autoload.get_poolbytearray())#ModeFlags
+		###q_File.open_encrypted_with_pass( "Sprite.png", Autoload.get_int(), "Sprite.png" )#ModeFlags
 			
 		if randi() % 2 == 1:
 			q_File.seek( Autoload.get_int() )

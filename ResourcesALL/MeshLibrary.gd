@@ -44,11 +44,11 @@ func _process(delta) -> void:
 			###MOVEDq_MeshLibrary.remove_item(
 			
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_mesh(Autoload.get_int(),CubeMesh.new())
+			q_MeshLibrary.set_item_mesh(Autoload.get_int(),Autoload.loadA("CubeMesh.tres"))
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_name(Autoload.get_int(),Autoload.get_string())
 		if randi() % 2 == 1:
-			q_MeshLibrary.set_item_navmesh(Autoload.get_int(),NavigationMesh.new())
+			q_MeshLibrary.set_item_navmesh(Autoload.get_int(),Autoload.loadA("NavigationMesh.tres"))
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_navmesh_transform(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:

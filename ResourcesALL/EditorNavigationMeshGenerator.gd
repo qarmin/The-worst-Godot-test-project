@@ -18,7 +18,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 #
 #
-#			#BUG q_EditorNavigationMeshGenerator.bake( NavigationMesh.new(), Node.new() )
+#			#BUG q_EditorNavigationMeshGenerator.bake( Autoload.loadA("NavigationMesh.tres"), Node.new() )
 #			q_EditorNavigationMeshGenerator.clear(Autoload.loadA("NavigationMesh.tres") )
 
 #func delete_node():

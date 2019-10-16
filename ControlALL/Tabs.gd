@@ -17,7 +17,7 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			for _i in range(10):
-				add_tab(str(randf()),Autoload.loadA("Sprite.png"))
+				add_tab(Autoload.get_string(),Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
 			ensure_tab_visible(Autoload.get_int())
 		if randi() % 2 == 1:

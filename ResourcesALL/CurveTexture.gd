@@ -20,4 +20,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_CurveTexture.set_width(Autoload.get_int())
 		if randi() % 2 == 1:
-			q_CurveTexture.set_curve(Curve.new())
+			q_CurveTexture.set_curve(Autoload.loadA("Curve.tres"))

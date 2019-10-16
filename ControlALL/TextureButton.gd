@@ -26,7 +26,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_focused_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_click_mask(BitMap.new())
+			set_click_mask(Autoload.loadA("Bitmap.tres"))
 		if randi() % 2 == 1:
 			set_expand(Autoload.get_bool())
 		if randi() % 2 == 1:

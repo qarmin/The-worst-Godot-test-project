@@ -19,7 +19,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_cull_mask(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_environment(Environment.new())
+			set_environment(Autoload.loadA("DefaultEnv.tres"))
 		if randi() % 2 == 1:
 			set_h_offset(Autoload.get_float())
 		if randi() % 2 == 1:

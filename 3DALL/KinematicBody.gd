@@ -33,8 +33,8 @@ func _physics_process(delta):
 
 			if Autoload.SLOW_FUNCTIONS:
 				qq += str(move_and_collide(Autoload.get_vector3(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool()))
-				qq += str(move_and_slide(Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),randi()%10, randf(), Autoload.get_bool()))
-				qq += str(move_and_slide_with_snap(Autoload.get_vector3(), Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),randi()%10,randf(),Autoload.get_bool()))
+				qq += str(move_and_slide(Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),Autoload.get_int(), Autoload.get_float(), Autoload.get_bool()))
+				qq += str(move_and_slide_with_snap(Autoload.get_vector3(), Autoload.get_vector3(), Autoload.get_vector3(),Autoload.get_bool(),Autoload.get_int(),Autoload.get_float(),Autoload.get_bool()))
 	
 				qq += str(test_move( Autoload.get_transform(), Autoload.get_vector3(),Autoload.get_bool()))
 
@@ -68,7 +68,7 @@ func _physics_process(delta):
 		if randi() % 2 == 1:
 			set_capture_input_on_drag(Autoload.get_bool())
 
-			###_input_event(get_parent().find_node(Autoload.get_string()), InputEventAction.new(), Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_int())
+			###_input_event(get_parent().find_node(Autoload.get_string()), Autoload.loadA("InputEventAction.tres"), Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_int())
 
 		if randi() % 2 == 1:
 			qq += str(create_shape_owner(self))

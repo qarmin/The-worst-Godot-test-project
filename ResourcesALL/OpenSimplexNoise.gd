@@ -30,18 +30,18 @@ func _process(delta) -> void:
 			q_OpenSimplexNoise.set_lacunarity(Autoload.get_float())
 			
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_image( randi() % 10 - 5,randi() % 10 - 5))
+			qq += str(q_OpenSimplexNoise.get_image( Autoload.get_inti(50),Autoload.get_inti(50))) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_1d( randf() * 10 - 5 ))
+			qq += str(q_OpenSimplexNoise.get_noise_1d( Autoload.get_inti(50) )) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_2d( randf() * 10 - 5,randf() * 10 - 5 ))
+			qq += str(q_OpenSimplexNoise.get_noise_2d( Autoload.get_inti(50),Autoload.get_inti(50) )) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(randf() * 10 - 5,randf() * 10 - 5)))
+			qq += str(q_OpenSimplexNoise.get_noise_2dv( Vector2(Autoload.get_inti(50),Autoload.get_inti(50)))) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_3d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5))
+			qq += str(q_OpenSimplexNoise.get_noise_3d( Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50))) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5)))
+			qq += str(q_OpenSimplexNoise.get_noise_3dv( Vector3(Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50)))) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_noise_4d( randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5,randf() * 10 - 5 ))
+			qq += str(q_OpenSimplexNoise.get_noise_4d( Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50) )) 
 		if randi() % 2 == 1:
-			qq += str(q_OpenSimplexNoise.get_seamless_image( randi()%10 - 5))
+			qq += str(q_OpenSimplexNoise.get_seamless_image( Autoload.get_inti(50))) 

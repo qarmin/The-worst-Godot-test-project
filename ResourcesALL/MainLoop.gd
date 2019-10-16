@@ -22,7 +22,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 		#q_MainLoop._finalize()
 		#q_MainLoop._idle( Autoload.get_float() )
 		#q_MainLoop._initialize()
-		#q_MainLoop._input_event( InputEventAction.new() )
+		#q_MainLoop._input_event( Autoload.loadA("InputEventAction.tres") )
 		#q_MainLoop._input_text( Autoload.get_string() )
 		#q_MainLoop._iteration( Autoload.get_float() )
 #
@@ -34,7 +34,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_MainLoop.init()
 #
 #		if randi() % 2 == 1:
-#			q_MainLoop.input_event( InputEventAction.new() )
+#			q_MainLoop.input_event( Autoload.loadA("InputEventAction.tres") )
 #		if randi() % 2 == 1:
 #			q_MainLoop.input_text( Autoload.get_string() )
 #

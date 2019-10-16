@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_stream(AudioStreamGenerator.new())
+			set_stream(Autoload.loadA("AudioStreamGenerator.tres"))
 		if randi() % 2 == 1:
 			set_attenuation_model(Autoload.get_int()) # AttenuationModel
 		if randi() % 2 == 1:
@@ -37,7 +37,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_out_of_range_mode(Autoload.get_int()) #OutOfRangeMode
 		if randi() % 2 == 1:
-			set_bus(str(Autoload.get_string()))
+			set_bus(Autoload.get_string())
 		if randi() % 2 == 1:
 			set_area_mask(Autoload.get_int())
 		if randi() % 2 == 1:

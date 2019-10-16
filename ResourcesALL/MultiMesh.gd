@@ -29,7 +29,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MultiMesh.set_visible_instance_count(Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			q_MultiMesh.set_mesh(CubeMesh.new())
+#			q_MultiMesh.set_mesh(Autoload.loadA("CubeMesh.tres"))
 			
 		if randi() % 2 == 1:
 			qq += str(q_MultiMesh.get_aabb())

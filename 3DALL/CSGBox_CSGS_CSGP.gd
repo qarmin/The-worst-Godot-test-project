@@ -21,7 +21,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_depth(Autoload.get_float())
 		if randi() % 2 == 1:
-			set_material(SpatialMaterial.new())
+			set_material(Autoload.loadA("SpatialMaterial.tres"))
 			
 			# CSGPrimivive
 		if randi() % 2 == 1:

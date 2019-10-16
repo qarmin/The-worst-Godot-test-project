@@ -32,10 +32,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_DynamicFont.set_spacing(Autoload.get_int(),Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			q_DynamicFont.set_font_data(DynamicFontData.new())
+#			q_DynamicFont.set_font_data(Autoload.loadA("FreeMono.otf"))
 			
 #	LEAK	if randi() % 2 == 1:
-#			q_DynamicFont.add_fallback(DynamicFontData.new())
+#			q_DynamicFont.add_fallback(Autoload.loadA("FreeMono.otf"))
 			
 		if randi() % 2 == 1:
 			qq += str(q_DynamicFont.get_fallback( Autoload.get_int()))
@@ -45,4 +45,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_DynamicFont.remove_fallback( Autoload.get_int() )
 #	BUG	if randi() % 2 == 1:
-#			q_DynamicFont.set_fallback( Autoload.get_int(), DynamicFontData.new())
+#			q_DynamicFont.set_fallback( Autoload.get_int(), Autoload.loadA("FreeMono.otf"))

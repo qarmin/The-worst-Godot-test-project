@@ -23,7 +23,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_cell_space_transform(Autoload.get_transform())
 		if randi() % 2 == 1:
-			q_BakedLightmapData.set_cell_subdiv(randi()%10 -5)
+			q_BakedLightmapData.set_cell_subdiv(min(Autoload.get_int(),3)) 
 		if randi() % 2 == 1:
 			q_BakedLightmapData.set_energy(Autoload.get_float())
 		if randi() % 2 == 1:

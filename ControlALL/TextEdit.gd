@@ -109,22 +109,25 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(has_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
-			insert_text_at_cursor(str(Autoload.get_int()))
+			insert_text_at_cursor(Autoload.get_string())
 		if randi() % 2 == 1:
 			qq += str(is_folded(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(is_line_hidden(Autoload.get_int()))
 		if randi() % 2 == 1:
 			qq += str(is_selection_active())
-			#menu_option(randi() % MENU_MAX)
+		if randi() % 2 == 1:
+			menu_option(Autoload.get_int())
 		if randi() % 2 == 1:
 			paste()
 		if randi() % 2 == 1:
 			redo()
 		if randi() % 2 == 1:
 			remove_breakpoints()
-			#qq += str(search(Autoload.get_string(), randi() % 8,0,0)) # Strange but corrent, Match case, whole words and backwards can be added to itself
-			#select(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
+		if randi() % 2 == 1:
+			qq += str(search(Autoload.get_string(), Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
+		if randi() % 2 == 1:
+			select(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
 			select_all()
 		if randi() % 2 == 1:

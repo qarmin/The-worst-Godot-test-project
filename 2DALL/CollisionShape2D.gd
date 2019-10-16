@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 		if randi() % 2 == 1:
-			set_shape(CircleShape2D.new())
+			set_shape(Autoload.loadA("CircleShape2D.tres"))
 		if randi() % 2 == 1:
 			set_disabled(Autoload.get_bool())
 		if randi() % 2 == 1:

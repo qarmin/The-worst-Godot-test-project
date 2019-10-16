@@ -39,4 +39,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_smooth_faces(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_material(SpatialMaterial.new())
+			set_material(Autoload.loadA("SpatialMaterial.tres"))

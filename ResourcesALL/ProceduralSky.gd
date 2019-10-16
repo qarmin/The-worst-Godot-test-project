@@ -14,8 +14,11 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		
+		
 		if randi() % 2 == 1:
-			q_ProceduralSky = ProceduralSky.new()
+			if Autoload.SLOW_FUNCTIONS:
+				q_ProceduralSky = ProceduralSky.new()
 			
 		
 		if randi() % 2 == 1:

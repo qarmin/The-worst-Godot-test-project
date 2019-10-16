@@ -23,8 +23,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SphereMesh.set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_SphereMesh.set_radial_segments(randi()%10 - 8)
+			q_SphereMesh.set_radial_segments(min(Autoload.get_int(),5)) 
 		if randi() % 2 == 1:
-			q_SphereMesh.set_rings(randi()%15 - 7)
+			q_SphereMesh.set_rings(min(Autoload.get_int(),5))
 		if randi() % 2 == 1:
 			q_SphereMesh.set_is_hemisphere(Autoload.get_bool())

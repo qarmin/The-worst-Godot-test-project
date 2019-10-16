@@ -36,8 +36,8 @@ func _process(delta) -> void:
 			
 		if randi() % 2 == 1:
 			q_Theme.copy_default_theme()
-		if randi() % 2 == 1:
-			q_Theme.copy_theme( Theme.new() )
+#	BUG	if randi() % 2 == 1:
+#			q_Theme.copy_theme( Autoload.loadA("Theme.tres") )
 			
 		if randi() % 2 == 1:
 			qq += str(q_Theme.get_color( Autoload.get_string(), Autoload.get_string() ))
@@ -82,6 +82,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Theme.set_font( Autoload.get_string(), Autoload.get_string(), Font.new() )
 		if randi() % 2 == 1:
-			q_Theme.set_icon( Autoload.get_string(), Autoload.get_string(), ImageTexture.new())
+			q_Theme.set_icon( Autoload.get_string(), Autoload.get_string(), Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
 			q_Theme.set_stylebox( Autoload.get_string(), Autoload.get_string(), StyleBox.new() )

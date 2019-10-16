@@ -23,7 +23,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		qq += str(q_StyleBox.get_center_size())
 #		qq += str(q_StyleBox.get_current_item_drawn())
-#		qq += str(q_StyleBox.get_margin( randi() % 4 ))#MARGIN
+#		qq += str(q_StyleBox.get_margin( Autoload.get_int() ))#MARGIN
 #		qq += str(q_StyleBox.get_minimum_size())
 #		qq += str(q_StyleBox.get_offset())
 #

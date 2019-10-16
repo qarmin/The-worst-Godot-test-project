@@ -23,8 +23,9 @@ func _process(delta) -> void:
 			set_rotating(Autoload.get_bool())
 		if randi() % 2 == 1:
 			_set_current(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_zoom(Autoload.get_vector2())
+		if Autoload.SLOW_FUNCTIONS:
+			if randi() % 2 == 1:
+				set_zoom(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			if get_custom_viewport():
 				set_custom_viewport(viewport_temp)

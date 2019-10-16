@@ -16,7 +16,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		var q_InputEventMouse : InputEventMouse = InputEventMouse.new()
 #
-#		q_InputEventMouse.set_button_mask(randi() % 257) #ButtonList
+#		q_InputEventMouse.set_button_mask(Autoload.get_int()) #ButtonList
 #		q_InputEventMouse.set_position(Autoload.get_vector2())
 #		q_InputEventMouse.set_global_position(Autoload.get_vector2())
 #

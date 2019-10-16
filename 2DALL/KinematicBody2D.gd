@@ -65,7 +65,7 @@ func _physics_process(delta) -> void:
 		if randi() % 2 == 1:
 			set_pickable(Autoload.get_bool())
 			
-			###_input_event(get_viewport(), InputEventAction.new(), 0)
+			###_input_event(get_viewport(), Autoload.loadA("InputEventAction.tres"), Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			qq += str(create_shape_owner(self))
