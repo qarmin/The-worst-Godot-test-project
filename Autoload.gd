@@ -5,7 +5,7 @@ const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance re
 const USE_ONLY_ONE_NODE : bool = false#true
 const RANDI : bool = true# random functions execution
 
-const RANGE : int = 1000
+const RANGE : int = 10000
 
 var file : File = File.new()
 
@@ -148,9 +148,14 @@ func get_floatf(var max_value : float) -> float:
 func get_vector2f(var max_value : float) -> Vector2:
 	return Vector2(get_floatf(max_value),get_floatf(max_value))
 	
+func get_vector3f(var max_value : float) -> Vector3:
+	return Vector3(get_floatf(max_value),get_floatf(max_value),get_floatf(max_value))
+	
 func get_rect2f(var max_value : float) -> Rect2:
 	return Rect2(get_vector2f(max_value),get_vector2f(max_value))
 
+func get_aabbf(var max_value : float) -> AABB:
+	return AABB(get_vector3f(max_value),get_vector3f(max_value))
 ################
 
 const MAX_NUMBER : int = 1

@@ -68,7 +68,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.bezier_track_set_key_value(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 			
-			#MOVED AT ENDq_Animation.clear()
+		if randi() % 2 == 1:
+			q_Animation.clear()
 		if randi() % 2 == 1:
 			q_Animation.copy_track(Autoload.get_int(), Animation.new())
 		if randi() % 2 == 1:
@@ -150,5 +151,3 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.value_track_set_update_mode(Autoload.get_int(),Autoload.get_int()) # UpdateMode
 			
-		if randi() % 2 == 1:
-			q_Animation.clear() # Clear

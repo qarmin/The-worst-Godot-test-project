@@ -19,8 +19,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_skeleton_path(Autoload.get_nodepath(self))
 			
-#	BUG	if randi() % 2 == 1:
-#			create_convex_collision()
+		if randi() % 2 == 1:
+			create_convex_collision() #BUK
 		if randi() % 2 == 1:
 			create_debug_tangents()
 		if randi() % 2 == 1:

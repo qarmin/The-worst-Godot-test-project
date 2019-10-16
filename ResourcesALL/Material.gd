@@ -1,19 +1,23 @@
 extends Node2D
 
+var q_Material : Material = CanvasItemMaterial.new()
 var counter : float
 var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+func _ready():
+	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-#func _process(delta) -> void:
-#	counter -= delta
-#	var qq : String = ""
-#	qq = qq
-#
-#	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-#		var q_Material : Material = Material.new()
-#
-#			q_Material.set_render_priority(Autoload.get_int())
-#			q_Material.set_next_pass(Material.new())
+func _process(delta) -> void:
+	counter -= delta
+	var qq : String = ""
+	qq = qq
+	
+	if counter <= 0:
+		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		if randi() % 2 == 1:
+			q_Material = CanvasItemMaterial.new()
+
+		if randi() % 2 == 1:
+			q_Material.set_render_priority(Autoload.get_int())
+		if randi() % 2 == 1:
+			q_Material.set_next_pass(Material.new())

@@ -460,10 +460,10 @@ script = ExtResource( 2 )
 [node name="Reference_LEAK" type="Node2D" parent="."]
 script = ExtResource( 5 )
 
-[node name="ARVRInterface_CANT" type="Node2D" parent="."]
+[node name="ARVRInterface_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 4 )
 
-[node name="ARVRInterfaceGDNative_CANT" type="Node2D" parent="."]
+[node name="ARVRInterfaceGDNative_NOTHING" type="Node2D" parent="."]
 script = ExtResource( 6 )
 
 [node name="MobileVRInterface" type="Node2D" parent="."]
@@ -478,7 +478,7 @@ script = ExtResource( 428 )
 [node name="Resource" type="Node2D" parent="."]
 script = ExtResource( 7 )
 
-[node name="Texture_CANT_WORKAROUND" type="Node2D" parent="."]
+[node name="Texture_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 33 )
 
 [node name="AnimatedTexture" type="Node2D" parent="."]
@@ -580,7 +580,7 @@ script = ExtResource( 26 )
 [node name="ArrayMesh" type="Node2D" parent="."]
 script = ExtResource( 31 )
 
-[node name="PrimitiveMesh_CANT" type="Node2D" parent="."]
+[node name="PrimitiveMesh_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 200 )
 
 [node name="CapsuleMesh" type="Node2D" parent="."]
@@ -688,7 +688,7 @@ script = ExtResource( 225 )
 [node name="AudioEffectStereoEnhance" type="Node2D" parent="."]
 script = ExtResource( 222 )
 
-[node name="AudioStream_CANT" type="Node2D" parent="."]
+[node name="AudioStream_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 234 )
 
 [node name="AudioStreamGenerator" type="Node2D" parent="."]
@@ -712,7 +712,7 @@ script = ExtResource( 235 )
 [node name="BitMap" type="Node2D" parent="."]
 script = ExtResource( 245 )
 
-[node name="Font_CANT" type="Node2D" parent="."]
+[node name="Font_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 247 )
 
 [node name="BitmapFont" type="Node2D" parent="."]
@@ -721,7 +721,7 @@ script = ExtResource( 248 )
 [node name="DynamicFont" type="Node2D" parent="."]
 script = ExtResource( 246 )
 
-[node name="Shape_CANT" type="Node2D" parent="."]
+[node name="Shape_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 242 )
 
 [node name="BoxShape" type="Node2D" parent="."]
@@ -754,7 +754,7 @@ script = ExtResource( 256 )
 [node name="ButtonGroup" type="Node2D" parent="."]
 script = ExtResource( 239 )
 
-[node name="Material_CANT" type="Node2D" parent="."]
+[node name="Material_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 240 )
 
 [node name="CanvasItemMaterial" type="Node2D" parent="."]
@@ -769,7 +769,7 @@ script = ExtResource( 254 )
 [node name="SpatialMaterial" type="Node2D" parent="."]
 script = ExtResource( 252 )
 
-[node name="Shape2D_CANT" type="Node2D" parent="."]
+[node name="Shape2D_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 253 )
 
 [node name="CapsuleShape2D" type="Node2D" parent="."]
@@ -850,7 +850,7 @@ script = ExtResource( 296 )
 [node name="Image" type="Node2D" parent="."]
 script = ExtResource( 293 )
 
-[node name="InputEvent_CANT" type="Node2D" parent="."]
+[node name="InputEvent_WORKAROUND" type="Node2D" parent="."]
 script = ExtResource( 276 )
 
 [node name="InputEventAction" type="Node2D" parent="."]
@@ -1763,31 +1763,24 @@ script = ExtResource( 416 )
 script = ExtResource( 417 )
 
 [node name="PoolByteArray_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 347 )
 
 [node name="PoolIntArray_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 349 )
 
 [node name="PoolRealArray_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 320 )
 
 [node name="PoolStringArray_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 363 )
 
 [node name="PoolVector2Array_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 418 )
 
 [node name="PoolVector3Array_BUG" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 419 )
 
 [node name="Quat" type="Node2D" parent="."]

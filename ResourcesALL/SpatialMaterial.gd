@@ -16,20 +16,7 @@ func _process(delta) -> void:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 		if randi() % 2 == 1:
 			q_SpatialMaterial = SpatialMaterial.new()
-		var CT : CurveTexture = CurveTexture.new()
-		var C : Curve = Curve.new()
-		
-		if randi() % 2 == 1:
-			CT = load("res://RES/CurveTexture.tres")
 			
-		if randi() % 2 == 1:
-			CT.set_width(randi() % 2000)
-		if randi() % 2 == 1:
-			CT = load("res://RES/Curve.tres")
-		if randi() % 2 == 1:
-			CT.set_curve(C)
-		if randi() % 2 == 1:
-			q_SpatialMaterial.set_texture(randi() % 10,CT) #TextureParam
 		
 		if randi() % 2 == 1:
 			q_SpatialMaterial.set_feature(Autoload.get_int(),Autoload.get_bool())
@@ -67,6 +54,8 @@ func _process(delta) -> void:
 			q_SpatialMaterial.set_particles_anim_loop(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_SpatialMaterial.set_albedo(Autoload.get_color())
+		if randi() % 2 == 1:
+			q_SpatialMaterial.set_texture(Autoload.get_int(),Autoload.loadA("Sprite.png")) #TextureParam
 		if randi() % 2 == 1:
 			q_SpatialMaterial.set_metallic(Autoload.get_float())
 		if randi() % 2 == 1:

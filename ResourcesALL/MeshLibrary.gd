@@ -41,7 +41,8 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			qq += str(q_MeshLibrary.get_last_unused_item_id())
 			
-			###MOVEDq_MeshLibrary.remove_item(
+		if randi() % 2 == 1:
+			q_MeshLibrary.remove_item(Autoload.get_int())
 			
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_mesh(Autoload.get_int(),Autoload.loadA("CubeMesh.tres"))
@@ -56,5 +57,3 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.set_item_shapes(Autoload.get_int(),Autoload.get_array())
 			
-		if randi() % 2 == 1:
-			q_MeshLibrary.remove_item(Autoload.get_int()) #MOVED

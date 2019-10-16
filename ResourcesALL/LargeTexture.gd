@@ -19,7 +19,8 @@ func _process(delta) -> void:
 		
 		if randi() % 2 == 1:
 			qq += str(q_LargeTexture.add_piece(Autoload.get_vector2(),Autoload.loadA("Sprite.png")))
-			###MOVED q_LargeTexture.clear()
+		if randi() % 2 == 1:
+			q_LargeTexture.clear()
 			
 		if randi() % 2 == 1:
 			qq += str(q_LargeTexture.get_piece_count())
@@ -35,5 +36,3 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_LargeTexture.set_size(Autoload.get_vector2())
 			
-		if randi() % 2 == 1:
-			q_LargeTexture.clear() ## At the end

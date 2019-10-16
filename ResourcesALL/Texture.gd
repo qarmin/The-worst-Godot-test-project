@@ -14,9 +14,9 @@ func _process(delta) -> void:
 	
 	if counter <= 0:
 		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
 		if randi() % 2 == 1:
 			q_Texture = ImageTexture.new()
+			
 			
 		if randi() % 2 == 1:
 			q_Texture.draw(RID(),Autoload.get_vector2(),Autoload.get_color(),Autoload.get_bool(),Autoload.loadA("Sprite.png"))
