@@ -1,20 +1,13 @@
 extends RichTextLabel
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			clear()
 		if randi() % 2 == 1:
@@ -44,21 +37,21 @@ func _process(delta) -> void:
 #	BUG	if randi() % 2 == 1:
 #			add_text(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(append_bbcode(Autoload.get_string()))
+			Autoload.qq = str(append_bbcode(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(get_content_height())
+			Autoload.qq = str(get_content_height())
 		if randi() % 2 == 1:
-			qq += str(get_line_count())
+			Autoload.qq = str(get_line_count())
 		if randi() % 2 == 1:
-			qq += str(get_total_character_count())
+			Autoload.qq = str(get_total_character_count())
 		if randi() % 2 == 1:
-			qq += str(get_v_scroll())
+			Autoload.qq = str(get_v_scroll())
 		if randi() % 2 == 1:
-			qq += str(get_visible_line_count())
+			Autoload.qq = str(get_visible_line_count())
 		if randi() % 2 == 1:
 			newline()
 		if randi() % 2 == 1:
-			qq += str(parse_bbcode(Autoload.get_string()))
+			Autoload.qq = str(parse_bbcode(Autoload.get_string()))
 		if randi() % 2 == 1:
 			pop()
 		if randi() % 2 == 1:
@@ -84,6 +77,6 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			scroll_to_line(Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			qq += str(remove_line(Autoload.get_int()))
+#			Autoload.qq = str(remove_line(Autoload.get_int()))
 		if randi() % 2 == 1:
 			set_table_column_expand(Autoload.get_int(), Autoload.get_bool(), Autoload.get_int())

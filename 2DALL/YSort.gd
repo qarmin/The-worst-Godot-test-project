@@ -1,18 +1,20 @@
 extends YSort
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-		if randi() % 2 == 1:
-			set_sort_enabled(Autoload.get_bool())
+	if counter <= 0:
+		counter = Autoload.get_rand_time()
+
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_YSort : YSort) -> void:
+	
+	if randi() % 2 == 1:
+		q_YSort.set_sort_enabled(Autoload.get_bool())

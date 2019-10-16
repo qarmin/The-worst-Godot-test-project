@@ -1,22 +1,17 @@
 extends ColorPicker
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
 var default_number_of_children : int = 0
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	default_number_of_children = get_child_count()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_pick_color(Autoload.get_color())
 		if randi() % 2 == 1:
@@ -32,10 +27,10 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_preset(Autoload.get_color())
 		if randi() % 2 == 1:
-			qq += str(erase_preset(Autoload.get_color()))
-			
+			Autoload.qq = str(erase_preset(Autoload.get_color()))
+
 			# BoxContainer
-			
+
 		if randi() % 2 == 1:
 			set_alignment(Autoload.get_int()) # alignmode
 #LEAK

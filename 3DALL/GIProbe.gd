@@ -1,21 +1,15 @@
 extends GIProbe
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
-			set_subdiv(min(Autoload.get_int(),10)) # Subdiv 
+			set_subdiv(Autoload.get_inti(10)) # Subdiv 
 		if randi() % 2 == 1:
 			set_extents(Autoload.get_vector3())
 		if randi() % 2 == 1:
@@ -34,7 +28,7 @@ func _process(delta) -> void:
 			set_compress(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_probe_data(GIProbeData.new())
-			
+
 			if Autoload.SLOW_FUNCTIONS:
 				bake(self, Autoload.get_bool())
 				debug_bake()

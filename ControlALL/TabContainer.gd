@@ -1,19 +1,14 @@
 extends TabContainer
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
+
 #BUG
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var popup_menu_temp : PopupMenu = PopupMenu.new()
 #		if randi() % 2 == 1:
@@ -28,23 +23,23 @@ func _process(delta) -> void:
 #			set_tabs_rearrange_group(Autoload.get_int())
 #
 #		if randi() % 2 == 1:
-#			qq += str(get_current_tab_control())
+#			Autoload.qq = str(get_current_tab_control())
 #		if randi() % 2 == 1:
-#			qq += str(get_popup())
+#			Autoload.qq = str(get_popup())
 #		if randi() % 2 == 1:
-#			qq += str(get_previous_tab())
+#			Autoload.qq = str(get_previous_tab())
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_control(Autoload.get_int()))
+#			Autoload.qq = str(get_tab_control(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_count())
+#			Autoload.qq = str(get_tab_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_disabled(Autoload.get_int()))
+#			Autoload.qq = str(get_tab_disabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_icon(Autoload.get_int()))
+#			Autoload.qq = str(get_tab_icon(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tab_title(Autoload.get_int()))
+#			Autoload.qq = str(get_tab_title(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_tabs_rearrange_group())
+#			Autoload.qq = str(get_tabs_rearrange_group())
 #
 #		if randi() % 2 == 1:
 #			set_tab_align(Autoload.get_int())

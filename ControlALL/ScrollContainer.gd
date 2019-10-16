@@ -1,20 +1,13 @@
 extends ScrollContainer
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_enable_h_scroll(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -25,8 +18,8 @@ func _process(delta) -> void:
 			set_v_scroll(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_deadzone(Autoload.get_int())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_h_scrollbar())
+			Autoload.qq = str(get_h_scrollbar())
 		if randi() % 2 == 1:
-			qq += str(get_v_scrollbar())
+			Autoload.qq = str(get_v_scrollbar())

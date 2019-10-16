@@ -1,20 +1,13 @@
 extends LineEdit
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -45,19 +38,19 @@ func _process(delta) -> void:
 			cursor_set_blink_speed(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_cursor_position(Autoload.get_int())
-			
+
 		if randi() % 2 == 1:
 			append_at_cursor(Autoload.get_string())
 		if randi() % 2 == 1:
 			deselect()
 		if randi() % 2 == 1:
-			qq += str(get_menu())
+			Autoload.qq = str(get_menu())
 		if randi() % 2 == 1:
-			qq += str(menu_option(Autoload.get_int()))#HMMM A LITTLE TOO SLOW
+			Autoload.qq = str(menu_option(Autoload.get_int()))#HMMM A LITTLE TOO SLOW
 		if randi() % 2 == 1:
 			select(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
 			select_all()
-			
+
 		if randi() % 2 == 1:
 			clear()

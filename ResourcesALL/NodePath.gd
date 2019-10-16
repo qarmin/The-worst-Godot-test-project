@@ -1,38 +1,31 @@
 extends Node2D
 
 var q_NodePath : NodePath = Autoload.get_nodepath(self)
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_NodePath = Autoload.get_nodepath(self)
-			
+
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_as_property_path())
+			Autoload.qq = str(q_NodePath.get_as_property_path())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_concatenated_subnames())
+			Autoload.qq = str(q_NodePath.get_concatenated_subnames())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_name( Autoload.get_int()))
+			Autoload.qq = str(q_NodePath.get_name( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_name_count())
+			Autoload.qq = str(q_NodePath.get_name_count())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_subname(Autoload.get_int() ))
+			Autoload.qq = str(q_NodePath.get_subname(Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.get_subname_count())
-			
+			Autoload.qq = str(q_NodePath.get_subname_count())
+
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.is_absolute())
+			Autoload.qq = str(q_NodePath.is_absolute())
 		if randi() % 2 == 1:
-			qq += str(q_NodePath.is_empty())
+			Autoload.qq = str(q_NodePath.is_empty())

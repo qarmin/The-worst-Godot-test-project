@@ -1,20 +1,13 @@
 extends Button
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -25,7 +18,7 @@ func _process(delta) -> void:
 			set_clip_text(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_text_align(Autoload.get_int())
-			
+
 			# BaseButton
 		if randi() % 2 == 1:
 			set_disabled(Autoload.get_bool())
@@ -47,10 +40,10 @@ func _process(delta) -> void:
 			set_shortcut(ShortCut.new())
 		if randi() % 2 == 1:
 			set_button_group(ButtonGroup.new())
-			
+
 		#_pressed()
 		#_toggled(Autoload.get_bool())
 		if randi() % 2 == 1:
-			qq += str(get_draw_mode())
+			Autoload.qq = str(get_draw_mode())
 		if randi() % 2 == 1:
-			qq += str(is_hovered())
+			Autoload.qq = str(is_hovered())

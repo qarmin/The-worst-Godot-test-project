@@ -1,19 +1,14 @@
 extends SkeletonIK
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_root_bone(Autoload.get_string())
@@ -35,11 +30,11 @@ func _process(delta) -> void:
 			set_min_distance(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_max_iterations(Autoload.get_int())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_parent_skeleton())
+			Autoload.qq = str(get_parent_skeleton())
 		if randi() % 2 == 1:
-			qq += str(is_running())
+			Autoload.qq = str(is_running())
 		if randi() % 2 == 1:
 			start(Autoload.get_bool())
 		if randi() % 2 == 1:

@@ -1,56 +1,56 @@
 extends RayCast2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	if !is_visible():
-		queue_free()
-
-func _process_physics(delta) -> void:
+func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-		if randi() % 2 == 1:
-			clear_exceptions()
-		if randi() % 2 == 1:
-			set_enabled(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_exclude_parent_body(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_cast_to(Autoload.get_vector2())
-		if randi() % 2 == 1:
-			set_collision_mask(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_collide_with_areas(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_collide_with_bodies(Autoload.get_bool())
-		if randi() % 2 == 1:
-			add_exception(get_tree().get_root())
-		if randi() % 2 == 1:
-			add_exception_rid(RID())
-		if randi() % 2 == 1:
-			force_raycast_update()
-		if randi() % 2 == 1:
-			qq += str(get_collider())
-		if randi() % 2 == 1:
-			qq += str(get_collider_shape())
-		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_int()))
-		if randi() % 2 == 1:
-			qq += str(get_collision_normal())
-		if randi() % 2 == 1:
-			qq += str(get_collision_point())
-		if randi() % 2 == 1:
-			qq += str(is_colliding())
-		if randi() % 2 == 1:
-			remove_exception(get_tree().get_root())
-		if randi() % 2 == 1:
-			remove_exception_rid(RID())
-		if randi() % 2 == 1:
-			set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+	if counter <= 0:
+		counter = Autoload.get_rand_time()
+
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_RayCast2D : RayCast2D) -> void:
+
+	if randi() % 2 == 1:
+		q_RayCast2D.clear_exceptions()
+	if randi() % 2 == 1:
+		q_RayCast2D.set_enabled(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_exclude_parent_body(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_cast_to(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_collision_mask(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_collide_with_areas(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_collide_with_bodies(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_RayCast2D.add_exception(get_tree().get_root())
+	if randi() % 2 == 1:
+		q_RayCast2D.add_exception_rid(RID())
+	if randi() % 2 == 1:
+		q_RayCast2D.force_raycast_update()
+	if randi() % 2 == 1:
+		q_RayCast2D.get_collider()
+	if randi() % 2 == 1:
+		q_RayCast2D.get_collider_shape()
+	if randi() % 2 == 1:
+		q_RayCast2D.get_collision_mask_bit(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_RayCast2D.get_collision_normal()
+	if randi() % 2 == 1:
+		q_RayCast2D.get_collision_point()
+	if randi() % 2 == 1:
+		q_RayCast2D.is_colliding()
+	if randi() % 2 == 1:
+		q_RayCast2D.remove_exception(get_tree().get_root())
+	if randi() % 2 == 1:
+		q_RayCast2D.remove_exception_rid(RID())
+	if randi() % 2 == 1:
+		q_RayCast2D.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())

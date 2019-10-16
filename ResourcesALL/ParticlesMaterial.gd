@@ -2,24 +2,18 @@ extends Node2D
 
 var q_ParticlesMaterial : ParticlesMaterial = ParticlesMaterial.new()
 var CT : CurveTexture = CurveTexture.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_ParticlesMaterial = ParticlesMaterial.new()
 			CT = CurveTexture.new()
 
-		
 		if randi() % 2 == 1:
 			q_ParticlesMaterial.set_render_priority(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -58,10 +52,10 @@ func _process(delta) -> void:
 			q_ParticlesMaterial.set_color(Autoload.get_color())
 		if randi() % 2 == 1:
 			q_ParticlesMaterial.set_color_ramp(Autoload.loadA("Sprite.png"))
-			
+
 		if randi() % 2 == 1:
 			q_ParticlesMaterial.set_flag(Autoload.get_int(),Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			q_ParticlesMaterial.set_param(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:

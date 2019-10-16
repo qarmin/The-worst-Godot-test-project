@@ -1,85 +1,79 @@
 extends Node2D
 
 var q_File : File = File.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_File = File.new()
-			
-		
+
 		if randi() % 2 == 1:
 			q_File.set_endian_swap(Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			q_File.close()
 		if randi() % 2 == 1:
-			qq += str(q_File.eof_reached())
+			Autoload.qq = str(q_File.eof_reached())
 		if randi() % 2 == 1:
-			qq += str(q_File.file_exists( Autoload.get_string() ))
-			
+			Autoload.qq = str(q_File.file_exists( Autoload.get_string() ))
+
 		if randi() % 2 == 1:
-			qq += str(q_File.get_16())
+			Autoload.qq = str(q_File.get_16())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_32())
+			Autoload.qq = str(q_File.get_32())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_64())
+			Autoload.qq = str(q_File.get_64())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_8())
+			Autoload.qq = str(q_File.get_8())
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_File.get_as_text())
+#			Autoload.qq = str(q_File.get_as_text())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_buffer( Autoload.get_int()))
+			Autoload.qq = str(q_File.get_buffer( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_csv_line( Autoload.get_string() ))
+			Autoload.qq = str(q_File.get_csv_line( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_double())
+			Autoload.qq = str(q_File.get_double())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_error())
+			Autoload.qq = str(q_File.get_error())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_float())
+			Autoload.qq = str(q_File.get_float())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_len())
+			Autoload.qq = str(q_File.get_len())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_line())
+			Autoload.qq = str(q_File.get_line())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_md5( Autoload.get_string()))
+			Autoload.qq = str(q_File.get_md5( Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_modified_time( Autoload.get_string() ))
+			Autoload.qq = str(q_File.get_modified_time( Autoload.get_string() ))
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_File.get_pascal_string())
+#			Autoload.qq = str(q_File.get_pascal_string())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_path())
+			Autoload.qq = str(q_File.get_path())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_path_absolute())
+			Autoload.qq = str(q_File.get_path_absolute())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_position())
+			Autoload.qq = str(q_File.get_position())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_real())
+			Autoload.qq = str(q_File.get_real())
 		if randi() % 2 == 1:
-			qq += str(q_File.get_sha256( Autoload.get_string() ))
+			Autoload.qq = str(q_File.get_sha256( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_File.get_var( Autoload.get_bool()))
-			
+			Autoload.qq = str(q_File.get_var( Autoload.get_bool()))
+
 		if randi() % 2 == 1:
-			qq += str(q_File.is_open())
-			
+			Autoload.qq = str(q_File.is_open())
+
 		if randi() % 2 == 1:
-			qq += str(q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int()))
+			Autoload.qq = str(q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int()))
 		###q_File.open_compressed( "Sprite.png", Autoload.get_int(), Autoload.get_int() )#ModeFlags, CompressionMode
 		###q_File.open_encrypted( "Sprite.png", Autoload.get_int(), Autoload.get_poolbytearray())#ModeFlags
 		###q_File.open_encrypted_with_pass( "Sprite.png", Autoload.get_int(), "Sprite.png" )#ModeFlags
-			
+
 		if randi() % 2 == 1:
 			q_File.seek( Autoload.get_int() )
 		if randi() % 2 == 1:

@@ -1,19 +1,14 @@
 extends AudioStreamPlayer
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_stream(AudioStream.new())
@@ -31,13 +26,12 @@ func _process(delta) -> void:
 			set_mix_target(Autoload.get_int())# MixTarget
 		if randi() % 2 == 1:
 			set_bus(Autoload.get_string())
-			
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_playback_position())
+			Autoload.qq = str(get_playback_position())
 		if randi() % 2 == 1:
-			qq += str(get_stream_playback())
-			
+			Autoload.qq = str(get_stream_playback())
+
 		if randi() % 2 == 1:
 			play()
 		if randi() % 2 == 1:

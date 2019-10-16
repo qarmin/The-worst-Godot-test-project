@@ -1,18 +1,13 @@
 extends RayCast
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_enabled(Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -25,7 +20,7 @@ func _process(delta) -> void:
 			set_collide_with_areas(Autoload.get_bool())
 		if randi() % 2 == 1:
 			set_collide_with_bodies(Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			add_exception(get_parent())
 		if randi() % 2 == 1:
@@ -35,17 +30,17 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			force_raycast_update()
 		if randi() % 2 == 1:
-			qq += str(get_collider())
+			Autoload.qq = str(get_collider())
 		if randi() % 2 == 1:
-			qq += str(get_collider_shape())
+			Autoload.qq = str(get_collider_shape())
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_int()))
+			Autoload.qq = str(get_collision_mask_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_normal())
+			Autoload.qq = str(get_collision_normal())
 		if randi() % 2 == 1:
-			qq += str(get_collision_point())
+			Autoload.qq = str(get_collision_point())
 		if randi() % 2 == 1:
-			qq += str(is_colliding())
+			Autoload.qq = str(is_colliding())
 		if randi() % 2 == 1:
 			remove_exception(self)
 		if randi() % 2 == 1:

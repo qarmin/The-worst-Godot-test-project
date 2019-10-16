@@ -1,23 +1,17 @@
 extends Node2D
 
 var q_NavigationMesh : NavigationMesh = NavigationMesh.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_NavigationMesh = NavigationMesh.new()
-			
-		
+
 		if randi() % 2 == 1:
 			q_NavigationMesh.set_sample_partition_type(Autoload.get_int()) # SAMPLE_PARTITION
 		if randi() % 2 == 1:
@@ -56,20 +50,20 @@ func _process(delta) -> void:
 			q_NavigationMesh.set_filter_ledge_spans(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_NavigationMesh.set_filter_walkable_low_height_spans(Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			q_NavigationMesh.add_polygon( Autoload.get_poolintarray())
 		if randi() % 2 == 1:
 			q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:
 #			q_NavigationMesh.create_from_mesh(Autoload.loadA("CubeMesh.tres"))
-			
+
 		if randi() % 2 == 1:
-			qq += str(q_NavigationMesh.get_collision_mask_bit( Autoload.get_int() ))
+			Autoload.qq = str(q_NavigationMesh.get_collision_mask_bit( Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_NavigationMesh.get_polygon( Autoload.get_int() ))
+			Autoload.qq = str(q_NavigationMesh.get_polygon( Autoload.get_int() ))
 		if randi() % 2 == 1:
-			qq += str(q_NavigationMesh.get_polygon_count())
+			Autoload.qq = str(q_NavigationMesh.get_polygon_count())
 		if randi() % 2 == 1:
-			qq += str(q_NavigationMesh.get_vertices())
-			
+			Autoload.qq = str(q_NavigationMesh.get_vertices())
+

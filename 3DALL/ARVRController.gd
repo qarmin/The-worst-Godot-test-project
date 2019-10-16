@@ -1,34 +1,29 @@
 extends ARVRController
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_controller_id(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_rumble(Autoload.get_float())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_controller_name())
+			Autoload.qq = str(get_controller_name())
 		if randi() % 2 == 1:
-			qq += str(get_hand())
+			Autoload.qq = str(get_hand())
 		if randi() % 2 == 1:
-			qq += str(get_is_active())
+			Autoload.qq = str(get_is_active())
 		if randi() % 2 == 1:
-			qq += str(get_joystick_axis(Autoload.get_int()))
+			Autoload.qq = str(get_joystick_axis(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_joystick_id())
+			Autoload.qq = str(get_joystick_id())
 		if randi() % 2 == 1:
-			qq += str(get_mesh())
+			Autoload.qq = str(get_mesh())
 		if randi() % 2 == 1:
-			qq += str(is_button_pressed(Autoload.get_int()))
+			Autoload.qq = str(is_button_pressed(Autoload.get_int()))

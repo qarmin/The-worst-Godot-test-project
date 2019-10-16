@@ -1,30 +1,23 @@
 extends Node2D
 
 var q_Basis : AABB = Autoload.get_aabb()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
-	
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
 				q_Basis = Autoload.get_aabb()
-				
+
 			if randi() % 2 == 1:
 				q_Basis.encloses(Autoload.get_aabb())
 			if randi() % 2 == 1:
 				q_Basis.expand(Autoload.get_vector3())
-				
+
 			if randi() % 2 == 1:
 				q_Basis.get_area()
 			if randi() % 2 == 1:
@@ -43,18 +36,17 @@ func _process(delta) -> void:
 				q_Basis.get_shortest_axis_size()
 			if randi() % 2 == 1:
 				q_Basis.get_support(Autoload.get_vector3())
-				
-				
+
 			if randi() % 2 == 1:
 				q_Basis.grow(Autoload.get_float())
-				
+
 			if randi() % 2 == 1:
 				q_Basis.has_no_area()
 			if randi() % 2 == 1:
 				q_Basis.has_no_surface()
 			if randi() % 2 == 1:
 				q_Basis.has_point(Autoload.get_vector3())
-				
+
 			if randi() % 2 == 1:
 				q_Basis.intersection(Autoload.get_aabb())
 			if randi() % 2 == 1:
@@ -63,6 +55,6 @@ func _process(delta) -> void:
 				q_Basis.intersects_plane(Autoload.get_plane())
 			if randi() % 2 == 1:
 				q_Basis.intersects_segment(Autoload.get_vector3(),Autoload.get_vector3())
-			
+
 			if randi() % 2 == 1:
 				q_Basis.merge(Autoload.get_aabb())

@@ -1,40 +1,34 @@
 extends CPUParticles
 
-var counter : float
+onready var counter : float = Autoload.get_rand_time()
 var counter_temp : int = 0
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
 func empty():
 	pass
-	
+
 func empty2(var rrr, var rqw):
-	var qq : String = ""
-	qq += str(rrr)
-	qq += str(rqw)
-	qq = qq
+
+	Autoload.qq = str(rrr)
+	Autoload.qq = str(rqw)
 
 func _process(delta) -> void:
 	counter -= delta
 	counter_temp += 1
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		var particles : Particles = Particles.new()
 		if randi() % 2 == 1:
 			set_emitting(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_amount(min(Autoload.get_int(),5))
+			set_amount(Autoload.get_inti(5))
 		if randi() % 2 == 1:
-			set_lifetime(min(Autoload.get_float(),1.0))
+			set_lifetime(Autoload.get_floatf(1.0))
 		if randi() % 2 == 1:
 			set_one_shot(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_pre_process_time(min(Autoload.get_float(),1.0))
+			set_pre_process_time(Autoload.get_floatf(1.0))
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -66,7 +60,7 @@ func _process(delta) -> void:
 
 		if randi() % 2 == 1:
 			set_particle_flag(Autoload.get_int(),Autoload.get_bool())
-				
+
 		if randi() % 2 == 1:
 			set_spread(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -86,7 +80,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			restart()
 		particles.queue_free()
-			
+
 		if Autoload.SLOW_FUNCTIONS:
 			##GeometryInstance
 			set_material_override(Autoload.loadA("SpatialMaterial.tres"))
@@ -103,11 +97,11 @@ func _process(delta) -> void:
 
 			##VisualInstance
 			set_layer_mask(Autoload.get_int())
-			qq += str(get_aabb())
-			qq += str(get_base())
-			qq += str(get_instance())
-			qq += str(get_layer_mask_bit(Autoload.get_int()))
-			qq += str(get_transformed_aabb())
+			Autoload.qq = str(get_aabb())
+			Autoload.qq = str(get_base())
+			Autoload.qq = str(get_instance())
+			Autoload.qq = str(get_layer_mask_bit(Autoload.get_int()))
+			Autoload.qq = str(get_transformed_aabb())
 			set_base(RID())
 			set_layer_mask_bit(Autoload.get_int(),Autoload.get_bool())
 
@@ -123,8 +117,8 @@ func _process(delta) -> void:
 
 			force_update_transform()
 
-			qq += str(get_parent_spatial())
-			qq += str(get_world())
+			Autoload.qq = str(get_parent_spatial())
+			Autoload.qq = str(get_world())
 
 			global_rotate(Autoload.get_vector3(),Autoload.get_float())
 			global_scale(Autoload.get_vector3())
@@ -132,11 +126,11 @@ func _process(delta) -> void:
 
 			hide()
 
-			qq += str(is_local_transform_notification_enabled())
-			qq += str(is_scale_disabled())
-			qq += str(is_set_as_toplevel())
-			qq += str(is_transform_notification_enabled())
-			qq += str(is_visible_in_tree())
+			Autoload.qq = str(is_local_transform_notification_enabled())
+			Autoload.qq = str(is_scale_disabled())
+			Autoload.qq = str(is_set_as_toplevel())
+			Autoload.qq = str(is_transform_notification_enabled())
+			Autoload.qq = str(is_visible_in_tree())
 
 			look_at(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
 			look_at_from_position(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
@@ -160,8 +154,8 @@ func _process(delta) -> void:
 
 			show()
 
-			qq += str(to_global(Autoload.get_vector3()))
-			qq += str(to_local(Autoload.get_vector3()))
+			Autoload.qq = str(to_global(Autoload.get_vector3()))
+			Autoload.qq = str(to_local(Autoload.get_vector3()))
 
 			translate(Autoload.get_vector3())
 			translate_object_local(Autoload.get_vector3())
@@ -173,12 +167,12 @@ func _process(delta) -> void:
 			set_name(Autoload.get_string())
 			set_filename(Autoload.get_string())
 			set_owner(get_parent())
-			qq += str(get_multiplayer())
+			Autoload.qq = str(get_multiplayer())
 			set_custom_multiplayer(MultiplayerAPI.new())
 
 			###_exit_tree()
 			###_enter_tree()
-			###qq += str(_get_configuration_warning())
+			###Autoload.qq = str(_get_configuration_warning())
 			###_input(Autoload.loadA("InputEventAction.tres"))
 			###_physics_process(0.0)
 			###_process(0.0)
@@ -192,49 +186,49 @@ func _process(delta) -> void:
 			add_child_below_node(get_child(Autoload.get_int()),get_child(Autoload.get_int()),Autoload.get_bool())
 			add_to_group(Autoload.get_string(),Autoload.get_bool())
 
-			qq += str(can_process())
+			Autoload.qq = str(can_process())
 			var nooo : Node = duplicate(Autoload.get_int()) # DuplicateFlags
 			if nooo != null:
 				nooo.queue_free()
 
-			qq += str(find_node(Autoload.get_string(),Autoload.get_bool(),Autoload.get_bool()))
-			qq += str(find_parent(Autoload.get_string()))
+			Autoload.qq = str(find_node(Autoload.get_string(),Autoload.get_bool(),Autoload.get_bool()))
+			Autoload.qq = str(find_parent(Autoload.get_string()))
 
-			qq += str(get_child(Autoload.get_int()))
-			qq += str(get_child_count())
-			qq += str(get_children())
-			qq += str(get_groups())
-			qq += str(get_index())
-			qq += str(get_network_master())
-			qq += str(get_node(Autoload.get_nodepath(self)))
-			qq += str(get_node_and_resource(Autoload.get_nodepath(self)))
-			qq += str(get_node_or_null(Autoload.get_nodepath(self)))
-			qq += str(get_parent())
-			qq += str(get_path())
-			qq += str(get_path_to(get_parent()))
-			qq += str(get_physics_process_delta_time())
-			qq += str(get_position_in_parent())
-			qq += str(get_process_delta_time())
-			qq += str(get_scene_instance_load_placeholder())
-			qq += str(get_tree())
-			qq += str(get_viewport())
+			Autoload.qq = str(get_child(Autoload.get_int()))
+			Autoload.qq = str(get_child_count())
+			Autoload.qq = str(get_children())
+			Autoload.qq = str(get_groups())
+			Autoload.qq = str(get_index())
+			Autoload.qq = str(get_network_master())
+			Autoload.qq = str(get_node(Autoload.get_nodepath(self)))
+			Autoload.qq = str(get_node_and_resource(Autoload.get_nodepath(self)))
+			Autoload.qq = str(get_node_or_null(Autoload.get_nodepath(self)))
+			Autoload.qq = str(get_parent())
+			Autoload.qq = str(get_path())
+			Autoload.qq = str(get_path_to(get_parent()))
+			Autoload.qq = str(get_physics_process_delta_time())
+			Autoload.qq = str(get_position_in_parent())
+			Autoload.qq = str(get_process_delta_time())
+			Autoload.qq = str(get_scene_instance_load_placeholder())
+			Autoload.qq = str(get_tree())
+			Autoload.qq = str(get_viewport())
 
-			qq += str(has_node(Autoload.get_nodepath(self)))
-			qq += str(has_node_and_resource(Autoload.get_nodepath(self)))
+			Autoload.qq = str(has_node(Autoload.get_nodepath(self)))
+			Autoload.qq = str(has_node_and_resource(Autoload.get_nodepath(self)))
 
-			qq += str(is_a_parent_of(self))
-			qq += str(is_displayed_folded())
-			qq += str(is_greater_than(get_parent()))
-			qq += str(is_in_group(Autoload.get_string()))
-			qq += str(is_inside_tree())
-			qq += str(is_network_master())
-			qq += str(is_physics_processing())
-			qq += str(is_physics_processing_internal())
-			qq += str(is_processing())
-			qq += str(is_processing_input())
-			qq += str(is_processing_internal())
-			qq += str(is_processing_unhandled_input())
-			qq += str(is_processing_unhandled_key_input())
+			Autoload.qq = str(is_a_parent_of(self))
+			Autoload.qq = str(is_displayed_folded())
+			Autoload.qq = str(is_greater_than(get_parent()))
+			Autoload.qq = str(is_in_group(Autoload.get_string()))
+			Autoload.qq = str(is_inside_tree())
+			Autoload.qq = str(is_network_master())
+			Autoload.qq = str(is_physics_processing())
+			Autoload.qq = str(is_physics_processing_internal())
+			Autoload.qq = str(is_processing())
+			Autoload.qq = str(is_processing_input())
+			Autoload.qq = str(is_processing_internal())
+			Autoload.qq = str(is_processing_unhandled_input())
+			Autoload.qq = str(is_processing_unhandled_key_input())
 
 			move_child(get_child(Autoload.get_int()),Autoload.get_int())
 
@@ -261,11 +255,11 @@ func _process(delta) -> void:
 			replace_by(get_child(Autoload.get_int()),Autoload.get_bool())
 			request_ready()
 
-			qq += str(rpc(Autoload.get_string()))
+			Autoload.qq = str(rpc(Autoload.get_string()))
 			rpc_config(Autoload.get_string(),Autoload.get_int())
-			qq += str(rpc_id(Autoload.get_int(),Autoload.get_string()))
-			qq += str(rpc_unreliable(Autoload.get_string()))
-			qq += str(rpc_unreliable_id(Autoload.get_int(),Autoload.get_string()))
+			Autoload.qq = str(rpc_id(Autoload.get_int(),Autoload.get_string()))
+			Autoload.qq = str(rpc_unreliable(Autoload.get_string()))
+			Autoload.qq = str(rpc_unreliable_id(Autoload.get_int(),Autoload.get_string()))
 
 			rset(Autoload.get_string(), Autoload.loadA("CubeMesh.tres"))
 			rset_config(Autoload.get_string(),Autoload.get_int())
@@ -285,49 +279,48 @@ func _process(delta) -> void:
 			set_process_unhandled_key_input(Autoload.get_bool())
 			set_scene_instance_load_placeholder(Autoload.get_bool())
 
-
 			#Object
-			###qq += str(_get(Autoload.get_string()))
-			###qq += str(_get_property_list())
+			###Autoload.qq = str(_get(Autoload.get_string()))
+			###Autoload.qq = str(_get_property_list())
 			###_init()
 			###_notification(Autoload.get_int())
-			###qq += str(_set(Autoload.get_string(),TextEdit.new()))
-			###qq += str(_to_string())
+			###Autoload.qq = str(_set(Autoload.get_string(),TextEdit.new()))
+			###Autoload.qq = str(_to_string())
 
 			add_user_signal(Autoload.get_string() + str(counter_temp))
 
-			qq += str(call(Autoload.get_string()))
-			qq += str(call_deferred(Autoload.get_string()))
-			qq += str(callv(Autoload.get_string(),[Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int()]))
+			Autoload.qq = str(call(Autoload.get_string()))
+			Autoload.qq = str(call_deferred(Autoload.get_string()))
+			Autoload.qq = str(callv(Autoload.get_string(),[Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int()]))
 
-			qq += str(can_translate_messages())
-			qq += str(connect(Autoload.get_string(),self,Autoload.get_string(),[Autoload.get_string()],Autoload.get_int())) # ConnectFlags
+			Autoload.qq = str(can_translate_messages())
+			Autoload.qq = str(connect(Autoload.get_string(),self,Autoload.get_string(),[Autoload.get_string()],Autoload.get_int())) # ConnectFlags
 			disconnect(Autoload.get_string(),self,Autoload.get_string())
-			qq += str(emit_signal(Autoload.get_string()))
+			Autoload.qq = str(emit_signal(Autoload.get_string()))
 			###free()
 
-			qq += str(get(Autoload.get_string()))
-			qq += str(get_class())
-			qq += str(get_incoming_connections())
-			qq += str(get_indexed(Autoload.get_string()))
-			qq += str(get_instance_id())
+			Autoload.qq = str(get(Autoload.get_string()))
+			Autoload.qq = str(get_class())
+			Autoload.qq = str(get_incoming_connections())
+			Autoload.qq = str(get_indexed(Autoload.get_string()))
+			Autoload.qq = str(get_instance_id())
 			if.has_meta(Autoload.get_string()):
-				qq += str(get_meta(Autoload.get_string()))
-			qq += str(get_meta_list())
-			qq += str(get_method_list())
-			qq += str(get_property_list())
-			qq += str(get_script())
-			qq += str(get_signal_connection_list(Autoload.get_string()))
-			qq += str(get_signal_list())
+				Autoload.qq = str(get_meta(Autoload.get_string()))
+			Autoload.qq = str(get_meta_list())
+			Autoload.qq = str(get_method_list())
+			Autoload.qq = str(get_property_list())
+			Autoload.qq = str(get_script())
+			Autoload.qq = str(get_signal_connection_list(Autoload.get_string()))
+			Autoload.qq = str(get_signal_list())
 
-			qq += str(has_meta(Autoload.get_string()))
-			qq += str(has_method(Autoload.get_string()))
-			qq += str(has_user_signal(Autoload.get_string()))
+			Autoload.qq = str(has_meta(Autoload.get_string()))
+			Autoload.qq = str(has_method(Autoload.get_string()))
+			Autoload.qq = str(has_user_signal(Autoload.get_string()))
 
-			qq += str(is_blocking_signals())
-			qq += str(is_class(Autoload.get_string()))
-			qq += str(is_connected(Autoload.get_string(),self,Autoload.get_string()))
-			qq += str(is_queued_for_deletion())
+			Autoload.qq = str(is_blocking_signals())
+			Autoload.qq = str(is_class(Autoload.get_string()))
+			Autoload.qq = str(is_connected(Autoload.get_string(),self,Autoload.get_string()))
+			Autoload.qq = str(is_queued_for_deletion())
 
 			#Better do not touch this BUG
 			#for i in range(2000):
@@ -346,6 +339,6 @@ func _process(delta) -> void:
 			set_meta(Autoload.get_string(), Autoload.loadA("CubeMesh.tres"))
 			#set_script(Reference.new())
 
-			qq += str(to_string())
-			qq += str(tr(Autoload.get_string()))
-			
+			Autoload.qq = str(to_string())
+			Autoload.qq = str(tr(Autoload.get_string()))
+

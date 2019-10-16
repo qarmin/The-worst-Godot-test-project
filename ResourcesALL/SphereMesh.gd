@@ -1,30 +1,24 @@
 extends Node2D
 
 var q_SphereMesh : SphereMesh = SphereMesh.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_SphereMesh = SphereMesh.new()
-		
-		
+
 		if randi() % 2 == 1:
 			q_SphereMesh.set_radius(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_SphereMesh.set_height(Autoload.get_float())
 		if randi() % 2 == 1:
-			q_SphereMesh.set_radial_segments(min(Autoload.get_int(),5)) 
+			q_SphereMesh.set_radial_segments(Autoload.get_inti(5)) 
 		if randi() % 2 == 1:
-			q_SphereMesh.set_rings(min(Autoload.get_int(),5))
+			q_SphereMesh.set_rings(Autoload.get_inti(5))
 		if randi() % 2 == 1:
 			q_SphereMesh.set_is_hemisphere(Autoload.get_bool())

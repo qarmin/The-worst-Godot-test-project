@@ -1,23 +1,17 @@
 extends Node2D
 
 var q_AnimationNodeOneShot : AnimationNodeOneShot = AnimationNodeOneShot.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot = AnimationNodeOneShot.new()
-		
+
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_fadein_time(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -30,8 +24,8 @@ func _process(delta) -> void:
 			q_AnimationNodeOneShot.set_autorestart_random_delay(Autoload.get_float())
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_use_sync(Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
-			qq += str(q_AnimationNodeOneShot.get_mix_mode())
+			Autoload.qq = str(q_AnimationNodeOneShot.get_mix_mode())
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_mix_mode(Autoload.get_int()) # MIX_MODE

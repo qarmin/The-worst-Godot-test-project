@@ -1,18 +1,12 @@
 extends PhysicalBone
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _physics_process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_joint_type(Autoload.get_int()) #JOINT_TYPE
@@ -30,12 +24,12 @@ func _physics_process(delta) -> void:
 			set_bounce(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_gravity_scale(Autoload.get_float())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_bone_id())
+			Autoload.qq = str(get_bone_id())
 		if randi() % 2 == 1:
-			qq += str(get_simulate_physics())
+			Autoload.qq = str(get_simulate_physics())
 		if randi() % 2 == 1:
-			qq += str(is_simulating_physics())
+			Autoload.qq = str(is_simulating_physics())
 		if randi() % 2 == 1:
-			qq += str(is_static_body())
+			Autoload.qq = str(is_static_body())

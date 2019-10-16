@@ -1,18 +1,12 @@
 extends SoftBody
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_collision_layer(Autoload.get_int())
@@ -38,22 +32,22 @@ func _process(delta) -> void:
 			set_drag_coefficient(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_pose_matching_coefficient(Autoload.get_float())
-			
+
 		if randi() % 2 == 1:
 			add_collision_exception_with(Autoload.get_nodes(self))
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_collision_exceptions())
+			Autoload.qq = str(get_collision_exceptions())
 		if randi() % 2 == 1:
-			qq += str(get_collision_layer_bit(Autoload.get_int()))
+			Autoload.qq = str(get_collision_layer_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_collision_mask_bit(Autoload.get_int()))
-			
+			Autoload.qq = str(get_collision_mask_bit(Autoload.get_int()))
+
 		if randi() % 2 == 1:
-			qq += str(is_ray_pickable())
+			Autoload.qq = str(is_ray_pickable())
 		if randi() % 2 == 1:
 			remove_collision_exception_with(get_parent())
-			
+
 		if randi() % 2 == 1:
 			set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:

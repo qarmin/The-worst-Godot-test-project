@@ -1,19 +1,16 @@
 extends PopupMenu
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 #BUG
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		if randi() % 2 == 1:
 #			clear()
@@ -50,39 +47,39 @@ func _ready():
 #		if randi() % 2 == 1:
 #			add_submenu_item(Autoload.get_string(),Autoload.get_string())
 #		if randi() % 2 == 1:
-#			qq += str(get_item_accelerator(Autoload.get_int()))
+#			Autoload.qq = str(get_item_accelerator(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_count())
+#			Autoload.qq = str(get_item_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon(Autoload.get_int()))
+#			Autoload.qq = str(get_item_icon(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_id(Autoload.get_int()))
+#			Autoload.qq = str(get_item_id(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_index(Autoload.get_int()))
+#			Autoload.qq = str(get_item_index(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_metadata(Autoload.get_int()))
+#			Autoload.qq = str(get_item_metadata(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_shortcut(Autoload.get_int()))
+#			Autoload.qq = str(get_item_shortcut(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_submenu(Autoload.get_int()))
+#			Autoload.qq = str(get_item_submenu(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_text(Autoload.get_int()))
+#			Autoload.qq = str(get_item_text(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_tooltip(Autoload.get_int()))
+#			Autoload.qq = str(get_item_tooltip(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_hide_on_window_lose_focus())
+#			Autoload.qq = str(is_hide_on_window_lose_focus())
 #		if randi() % 2 == 1:
-#			qq += str(is_item_checkable(Autoload.get_int()))
+#			Autoload.qq = str(is_item_checkable(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_checked(Autoload.get_int()))
+#			Autoload.qq = str(is_item_checked(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_disabled(Autoload.get_int()))
+#			Autoload.qq = str(is_item_disabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_radio_checkable(Autoload.get_int()))
+#			Autoload.qq = str(is_item_radio_checkable(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_separator(Autoload.get_int()))
+#			Autoload.qq = str(is_item_separator(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_shortcut_disabled(Autoload.get_int()))
+#			Autoload.qq = str(is_item_shortcut_disabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			remove_item(Autoload.get_int())
 #		if randi() % 2 == 1:

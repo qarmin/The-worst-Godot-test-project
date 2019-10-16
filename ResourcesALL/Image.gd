@@ -1,23 +1,17 @@
 extends Node2D
 
 var q_Image : Image = Image.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			var q_Image = Image.new()
-			
-		
+
 		if randi() % 2 == 1:
 			q_Image.blend_rect( Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0) )
 		if randi() % 2 == 1:
@@ -33,7 +27,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), Autoload.get_floatf(1000.0))) #compressMode, #CompressSource
+#			Autoload.qq = str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), Autoload.get_floatf(1000.0))) #compressMode, #CompressSource
 #		if randi() % 2 == 1:
 #			q_Image.convert(Autoload.get_int()) #Format
 		if randi() % 2 == 1:
@@ -48,9 +42,9 @@ func _process(delta) -> void:
 			q_Image.crop( Autoload.get_inti(101), Autoload.get_inti(101) )
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_Image.decompress())
+				Autoload.qq = str(q_Image.decompress())
 		if randi() % 2 == 1:
-			qq += str(q_Image.detect_alpha())
+			Autoload.qq = str(q_Image.detect_alpha())
 #	BUG	if randi() % 2 == 1:
 #			q_Image.expand_x2_hq2x()
 #	BUG	if randi() % 2 == 1:
@@ -64,47 +58,47 @@ func _process(delta) -> void:
 			q_Image.flip_y()
 
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.generate_mipmaps( Autoload.get_bool()))
+#			Autoload.qq = str(q_Image.generate_mipmaps( Autoload.get_bool()))
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_data())
+			Autoload.qq = str(q_Image.get_data())
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_format())
+			Autoload.qq = str(q_Image.get_format())
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_height())
+			Autoload.qq = str(q_Image.get_height())
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_mipmap_offset( Autoload.get_inti(101) ))
+			Autoload.qq = str(q_Image.get_mipmap_offset( Autoload.get_inti(101) ))
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.get_pixel( Autoload.get_inti(101), Autoload.get_inti(101) ))
+#			Autoload.qq = str(q_Image.get_pixel( Autoload.get_inti(101), Autoload.get_inti(101) ))
 #		if randi() % 2 == 1:
-#			qq += str(q_Image.get_pixelv( Autoload.get_vector2f(1000.0)))
+#			Autoload.qq = str(q_Image.get_pixelv( Autoload.get_vector2f(1000.0)))
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_rect( Autoload.get_rect2f(1000.0)))
+			Autoload.qq = str(q_Image.get_rect( Autoload.get_rect2f(1000.0)))
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_size())
+			Autoload.qq = str(q_Image.get_size())
 #	BUG	if randi() % 2 == 1:
-#			qq += str(q_Image.get_used_rect())
+#			Autoload.qq = str(q_Image.get_used_rect())
 		if randi() % 2 == 1:
-			qq += str(q_Image.get_width())
+			Autoload.qq = str(q_Image.get_width())
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.has_mipmaps())
+			Autoload.qq = str(q_Image.has_mipmaps())
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.is_compressed())
+			Autoload.qq = str(q_Image.is_compressed())
 		if randi() % 2 == 1:
-			qq += str(q_Image.is_empty())
+			Autoload.qq = str(q_Image.is_empty())
 		if randi() % 2 == 1:
-			qq += str(q_Image.is_invisible())
+			Autoload.qq = str(q_Image.is_invisible())
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.load( "Sprite.png" ))
+			Autoload.qq = str(q_Image.load( "Sprite.png" ))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray()))
+			Autoload.qq = str(q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_png_from_buffer( Autoload.get_poolbytearray()))
+			Autoload.qq = str(q_Image.load_png_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			qq += str(q_Image.load_webp_from_buffer( Autoload.get_poolbytearray()))
+			Autoload.qq = str(q_Image.load_webp_from_buffer( Autoload.get_poolbytearray()))
 
 		if randi() % 2 == 1:
 			q_Image.lock()
@@ -119,9 +113,9 @@ func _process(delta) -> void:
 			q_Image.resize_to_po2( Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			qq += str(q_Image.rgbe_to_srgb())
+			Autoload.qq = str(q_Image.rgbe_to_srgb())
 		if randi() % 2 == 1:
-			qq += str(q_Image.save_png( "res://TEMP/Image" ))
+			Autoload.qq = str(q_Image.save_png( "res://TEMP/Image" ))
 
 #		if randi() % 2 == 1:
 #			q_Image.set_pixel( Autoload.get_inti(101), Autoload.get_inti(101),Autoload.get_color())

@@ -1,26 +1,26 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 #
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var q_Marshalls : Marshalls = Marshalls.new()
 #
-#		qq += str(q_Marshalls.base64_to_raw(Autoload.get_string()))
-#		qq += str(q_Marshalls.base64_to_utf8(Autoload.get_string()))
-#		qq += str(q_Marshalls.base64_to_variant(Autoload.get_string(),Autoload.get_bool()))
+#		Autoload.qq = str(q_Marshalls.base64_to_raw(Autoload.get_string()))
+#		Autoload.qq = str(q_Marshalls.base64_to_utf8(Autoload.get_string()))
+#		Autoload.qq = str(q_Marshalls.base64_to_variant(Autoload.get_string(),Autoload.get_bool()))
 #
-#		qq += str(q_Marshalls.raw_to_base64(Autoload.get_poolbytearray()))
-#		qq += str(q_Marshalls.utf8_to_base64(Autoload.get_string()))
-#		qq += str(q_Marshalls.variant_to_base64(String(),Autoload.get_bool()))
+#		Autoload.qq = str(q_Marshalls.raw_to_base64(Autoload.get_poolbytearray()))
+#		Autoload.qq = str(q_Marshalls.utf8_to_base64(Autoload.get_string()))
+#		Autoload.qq = str(q_Marshalls.variant_to_base64(String(),Autoload.get_bool()))
 #

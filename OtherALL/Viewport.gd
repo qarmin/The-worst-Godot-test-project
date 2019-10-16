@@ -1,19 +1,14 @@
 extends Viewport
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
 
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_use_arvr(Autoload.get_bool())
@@ -63,53 +58,53 @@ func _process(delta) -> void:
 			set_shadow_atlas_size(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_shadow_atlas_quadrant_subdiv(Autoload.get_int(),Autoload.get_int())
-	
+
 		if randi() % 2 == 1:
 			set_canvas_transform(Autoload.get_transform2d())
 		if randi() % 2 == 1:
 			set_global_canvas_transform(Autoload.get_transform2d())
-	
+
 		if randi() % 2 == 1:
-			qq += str(find_world())
+			Autoload.qq = str(find_world())
 		if randi() % 2 == 1:
-			qq += str(find_world_2d())
-	
+			Autoload.qq = str(find_world_2d())
+
 		if randi() % 2 == 1:
-			qq += str(get_camera())
+			Autoload.qq = str(get_camera())
 		if randi() % 2 == 1:
-			qq += str(get_final_transform())
+			Autoload.qq = str(get_final_transform())
 		if randi() % 2 == 1:
-			qq += str(get_modal_stack_top())
+			Autoload.qq = str(get_modal_stack_top())
 		if randi() % 2 == 1:
-			qq += str(get_mouse_position())
+			Autoload.qq = str(get_mouse_position())
 		if randi() % 2 == 1:
-			qq += str(get_render_info(Autoload.get_int()))
+			Autoload.qq = str(get_render_info(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_size_override())
+			Autoload.qq = str(get_size_override())
 		if randi() % 2 == 1:
-			qq += str(get_texture())
+			Autoload.qq = str(get_texture())
 		if randi() % 2 == 1:
-			qq += str(get_viewport_rid())
+			Autoload.qq = str(get_viewport_rid())
 		if randi() % 2 == 1:
-			qq += str(get_visible_rect())
-	
+			Autoload.qq = str(get_visible_rect())
+
 		if randi() % 2 == 1:
 			gui_get_drag_data()
 		if randi() % 2 == 1:
-			qq += str(gui_has_modal_stack())
+			Autoload.qq = str(gui_has_modal_stack())
 		if randi() % 2 == 1:
-			qq += str(gui_is_dragging())
-	
+			Autoload.qq = str(gui_is_dragging())
+
 		if randi() % 2 == 1:
 			input(Autoload.loadA("InputEventAction.tres"))
-	
+
 		if randi() % 2 == 1:
-			qq += str(is_input_handled())
+			Autoload.qq = str(is_input_handled())
 		if randi() % 2 == 1:
-			qq += str(is_size_override_enabled())
+			Autoload.qq = str(is_size_override_enabled())
 		if randi() % 2 == 1:
-			qq += str(is_size_override_stretch_enabled())
-	
+			Autoload.qq = str(is_size_override_stretch_enabled())
+
 		if randi() % 2 == 1:
 			set_attach_to_screen_rect(Autoload.get_rect2())
 		if randi() % 2 == 1:
@@ -118,7 +113,7 @@ func _process(delta) -> void:
 			set_size_override(Autoload.get_bool(),Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
 			set_size_override_stretch(Autoload.get_bool())
-	
+
 		if randi() % 2 == 1:
 			unhandled_input(Autoload.loadA("InputEventAction.tres"))
 		if Autoload.SLOW_FUNCTIONS:

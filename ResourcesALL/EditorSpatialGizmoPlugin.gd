@@ -1,22 +1,22 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 #
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var q_EditorSpatialGizmoPlugin : EditorSpatialGizmoPlugin = EditorSpatialGizmoPlugin.new()
 #
-#		qq += str(q_EditorSpatialGizmoPlugin.can_be_hidden())
+#		Autoload.qq = str(q_EditorSpatialGizmoPlugin.can_be_hidden())
 #		q_EditorSpatialGizmoPlugin.commit_handle( EditorSpatialGizmo gizmo, int index, Variant restore, bool cancel=false )
 #		q_EditorSpatialGizmoPlugin.create_gizmo( Spatial spatial )
 #		q_EditorSpatialGizmoPlugin.get_handle_name( EditorSpatialGizmo gizmo, int index )
@@ -35,5 +35,5 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_bool(), Autoload.get_color())
 #		q_EditorSpatialGizmoPlugin.create_material( Autoload.get_string(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool() )
 #
-#		qq += str(q_EditorSpatialGizmoPlugin.get_material( Autoload.get_string(), EditorSpatialGizmo.new() ))
+#		Autoload.qq = str(q_EditorSpatialGizmoPlugin.get_material( Autoload.get_string(), EditorSpatialGizmo.new() ))
 #

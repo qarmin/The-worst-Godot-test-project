@@ -1,24 +1,26 @@
 extends CollisionShape2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-		
-	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 
-		if randi() % 2 == 1:
-			set_shape(Autoload.loadA("CircleShape2D.tres"))
-		if randi() % 2 == 1:
-			set_disabled(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_one_way_collision(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_one_way_collision_margin(Autoload.get_bool())
+	if counter <= 0:
+		counter = Autoload.get_rand_time()
+
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_CollisionShape2D : CollisionShape2D) -> void:
+
+	if randi() % 2 == 1:
+		q_CollisionShape2D.set_shape(Autoload.loadA("CircleShape2D.tres"))
+	if randi() % 2 == 1:
+		q_CollisionShape2D.set_disabled(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_CollisionShape2D.set_one_way_collision(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_CollisionShape2D.set_one_way_collision_margin(Autoload.get_bool())

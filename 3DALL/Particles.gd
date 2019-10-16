@@ -1,31 +1,26 @@
 extends Particles
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		var pm : ParticlesMaterial = ParticlesMaterial.new()
 		var CT : CurveTexture  = CurveTexture.new()
-	
+
 		if randi() % 2 == 1:
 			set_emitting(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_amount(min(Autoload.get_int(),5))
+			set_amount(Autoload.get_inti(5))
 		if randi() % 2 == 1:
-			set_lifetime(min(Autoload.get_float(),1.0)) 
+			set_lifetime(Autoload.get_floatf(1.0)) 
 		if randi() % 2 == 1:
 			set_one_shot(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_pre_process_time(min(Autoload.get_float(),1.0)) 
+			set_pre_process_time(Autoload.get_floatf(1.0)) 
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
 		if randi() % 2 == 1:
@@ -44,7 +39,7 @@ func _process(delta) -> void:
 			set_draw_order(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_draw_pass_mesh(Autoload.get_int(), Autoload.loadA("CubeMesh.tres"))
-			
+
 		if randi() % 2 == 1:
 			pm.set_render_priority(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -83,19 +78,19 @@ func _process(delta) -> void:
 			pm.set_color(Autoload.get_color())
 		if randi() % 2 == 1:
 			pm.set_color_ramp(Autoload.loadA("Sprite.png"))
-			
+
 		if randi() % 2 == 1:
 			pm.set_flag(Autoload.get_int(),Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			pm.set_param(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
 			pm.set_param_randomness(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
 			pm.set_param_texture(Autoload.get_int(),Autoload.loadA("Sprite.png"))
-			
+
 		if randi() % 2 == 1:
 			restart()
-			
+
 		set_process_material(pm)
-			
+

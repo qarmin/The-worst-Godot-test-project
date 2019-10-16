@@ -1,27 +1,22 @@
 extends LightOccluder2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-		
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		var occluder_polygon : OccluderPolygon2D = OccluderPolygon2D.new()
+		counter = Autoload.get_rand_time()
+
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_LightOccluder2D : LightOccluder2D) -> void:
 
 		if randi() % 2 == 1:
-			occluder_polygon.set_closed(Autoload.get_bool())
+			q_LightOccluder2D.set_occluder_polygon(OccluderPolygon2D.new())
 		if randi() % 2 == 1:
-			occluder_polygon.set_cull_mode(Autoload.get_int())
-		if randi() % 2 == 1:
-			occluder_polygon.set_polygon(Autoload.get_poolvector2array())
-		if randi() % 2 == 1:
-			set_occluder_polygon(occluder_polygon)
-		if randi() % 2 == 1:
-			set_occluder_light_mask(Autoload.get_int())
+			q_LightOccluder2D.set_occluder_light_mask(Autoload.get_int())

@@ -1,18 +1,12 @@
 extends Camera
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_keep_aspect_mode(Autoload.get_int())
@@ -40,29 +34,29 @@ func _process(delta) -> void:
 			set_znear(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_zfar(Autoload.get_float())
-			
+
 		if randi() % 2 == 1:
 			clear_current(Autoload.get_bool())
 		if randi() % 2 == 1:
-			qq += str(get_camera_rid())
+			Autoload.qq = str(get_camera_rid())
 		if randi() % 2 == 1:
-			qq += str(get_camera_transform())
+			Autoload.qq = str(get_camera_transform())
 		if randi() % 2 == 1:
-			qq += str(get_cull_mask_bit(Autoload.get_int()))
+			Autoload.qq = str(get_cull_mask_bit(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_frustum())
+			Autoload.qq = str(get_frustum())
 		if randi() % 2 == 1:
-			qq += str(is_position_behind(Autoload.get_vector3()))
+			Autoload.qq = str(is_position_behind(Autoload.get_vector3()))
 		if randi() % 2 == 1:
 			make_current()
 		if randi() % 2 == 1:
-			qq += str(project_local_ray_normal(Autoload.get_vector2()))
+			Autoload.qq = str(project_local_ray_normal(Autoload.get_vector2()))
 		if randi() % 2 == 1:
-			qq += str(project_position(Autoload.get_vector2()))
+			Autoload.qq = str(project_position(Autoload.get_vector2()))
 		if randi() % 2 == 1:
-			qq += str(project_ray_normal(Autoload.get_vector2()))
+			Autoload.qq = str(project_ray_normal(Autoload.get_vector2()))
 		if randi() % 2 == 1:
-			qq += str(project_ray_origin(Autoload.get_vector2()))
+			Autoload.qq = str(project_ray_origin(Autoload.get_vector2()))
 		if randi() % 2 == 1:
 			set_cull_mask_bit(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
@@ -72,4 +66,4 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			set_perspective(Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
-			qq += str(unproject_position(Autoload.get_vector3()))
+			Autoload.qq = str(unproject_position(Autoload.get_vector3()))

@@ -1,28 +1,22 @@
 extends Node2D
 
 var q_CubeMesh : CubeMesh = CubeMesh.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_CubeMesh = CubeMesh.new()
-			
-		
+
 		if randi() % 2 == 1:
 			q_CubeMesh.set_size(Autoload.get_vector3())
 		if randi() % 2 == 1:
-			q_CubeMesh.set_subdivide_width(min(Autoload.get_int(),5)) 
+			q_CubeMesh.set_subdivide_width(Autoload.get_inti(5)) 
 		if randi() % 2 == 1:
-			q_CubeMesh.set_subdivide_height(min(Autoload.get_int(),5)) 
+			q_CubeMesh.set_subdivide_height(Autoload.get_inti(5)) 
 		if randi() % 2 == 1:
-			q_CubeMesh.set_subdivide_depth(min(Autoload.get_int(),5)) 
+			q_CubeMesh.set_subdivide_depth(Autoload.get_inti(5)) 

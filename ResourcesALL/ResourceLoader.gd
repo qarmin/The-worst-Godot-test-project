@@ -1,31 +1,31 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 #
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var q_ResourceLoader : ResourceLoader = ResourceLoader.new()
 #
-#		#qq += str(ResourceLoader.exists(Autoload.get_string(), Autoload.get_string()))
+#		#Autoload.qq = str(ResourceLoader.exists(Autoload.get_string(), Autoload.get_string()))
 #
-#		qq += str(ResourceLoader.get_dependencies(Autoload.get_string()))
-#		#qq += str(ResourceLoader.get_recognized_extensions_for_type(Autoload.get_string()))
+#		Autoload.qq = str(ResourceLoader.get_dependencies(Autoload.get_string()))
+#		#Autoload.qq = str(ResourceLoader.get_recognized_extensions_for_type(Autoload.get_string()))
 #
-#		#DEPRECATED qq += str(ResourceLoader.has(Autoload.get_string()))
-#		qq += str(ResourceLoader.has_cached(Autoload.get_string()))
+#		#DEPRECATED Autoload.qq = str(ResourceLoader.has(Autoload.get_string()))
+#		Autoload.qq = str(ResourceLoader.has_cached(Autoload.get_string()))
 #
-#		#qq += str(ResourceLoader.load(Autoload.get_string(),Autoload.get_string(), Autoload.get_bool()))
-#		#qq += str(ResourceLoader.load_interactive(Autoload.get_string(),Autoload.get_string()))
+#		#Autoload.qq = str(ResourceLoader.load(Autoload.get_string(),Autoload.get_string(), Autoload.get_bool()))
+#		#Autoload.qq = str(ResourceLoader.load_interactive(Autoload.get_string(),Autoload.get_string()))
 #
 #		ResourceLoader.set_abort_on_missing_resources(Autoload.get_bool())
 #

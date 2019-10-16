@@ -1,18 +1,12 @@
 extends AnimationTree
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_tree_root(AnimationNode.new())
@@ -24,10 +18,10 @@ func _process(delta) -> void:
 			set_process_mode(Autoload.get_int()) #AnimationProcessMode
 		if randi() % 2 == 1:
 			set_root_motion_track(Autoload.get_nodepath(self))
-			
+
 		if randi() % 2 == 1:
 			advance(Autoload.get_float())
 		if randi() % 2 == 1:
-			qq += str(get_root_motion_transform())
+			Autoload.qq = str(get_root_motion_transform())
 		if randi() % 2 == 1:
 			rename_parameter(Autoload.get_string(),Autoload.get_string())

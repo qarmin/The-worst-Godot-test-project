@@ -1,19 +1,12 @@
 extends TextEdit
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_text(Autoload.get_string())
@@ -55,13 +48,13 @@ func _process(delta) -> void:
 			cursor_set_blink_speed(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_right_click_moves_caret(Autoload.get_bool())
-			
+
 		if randi() % 2 == 1:
 			add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(),Autoload.get_bool())
 		if randi() % 2 == 1:
 			add_keyword_color(Autoload.get_string(), Autoload.get_color())
 		if randi() % 2 == 1:
-			qq += str(can_fold(Autoload.get_int()))
+			Autoload.qq = str(can_fold(Autoload.get_int()))
 		if randi() % 2 == 1:
 			clear_colors()
 		if randi() % 2 == 1:
@@ -69,9 +62,9 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			copy()
 		if randi() % 2 == 1:
-			qq += str(cursor_get_column())
+			Autoload.qq = str(cursor_get_column())
 		if randi() % 2 == 1:
-			qq += str(cursor_get_line())
+			Autoload.qq = str(cursor_get_line())
 		if randi() % 2 == 1:
 			cursor_set_column(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -85,37 +78,37 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			fold_line(Autoload.get_int())
 		if randi() % 2 == 1:
-			qq += str(get_breakpoints())
+			Autoload.qq = str(get_breakpoints())
 		if randi() % 2 == 1:
-			qq += str(get_keyword_color(Autoload.get_string()))
+			Autoload.qq = str(get_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(get_line(Autoload.get_int()))
+			Autoload.qq = str(get_line(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_line_count())
+			Autoload.qq = str(get_line_count())
 		if randi() % 2 == 1:
-			qq += str(get_menu())
+			Autoload.qq = str(get_menu())
 		if randi() % 2 == 1:
-			qq += str(get_selection_from_column())
+			Autoload.qq = str(get_selection_from_column())
 		if randi() % 2 == 1:
-			qq += str(get_selection_from_line())
+			Autoload.qq = str(get_selection_from_line())
 		if randi() % 2 == 1:
-			qq += str(get_selection_text())
+			Autoload.qq = str(get_selection_text())
 		if randi() % 2 == 1:
-			qq += str(get_selection_to_column())
+			Autoload.qq = str(get_selection_to_column())
 		if randi() % 2 == 1:
-			qq += str(get_selection_to_line())
+			Autoload.qq = str(get_selection_to_line())
 		if randi() % 2 == 1:
-			qq += str(get_word_under_cursor())
+			Autoload.qq = str(get_word_under_cursor())
 		if randi() % 2 == 1:
-			qq += str(has_keyword_color(Autoload.get_string()))
+			Autoload.qq = str(has_keyword_color(Autoload.get_string()))
 		if randi() % 2 == 1:
 			insert_text_at_cursor(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(is_folded(Autoload.get_int()))
+			Autoload.qq = str(is_folded(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_line_hidden(Autoload.get_int()))
+			Autoload.qq = str(is_line_hidden(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_selection_active())
+			Autoload.qq = str(is_selection_active())
 		if randi() % 2 == 1:
 			menu_option(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -125,7 +118,7 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			remove_breakpoints()
 		if randi() % 2 == 1:
-			qq += str(search(Autoload.get_string(), Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
+			Autoload.qq = str(search(Autoload.get_string(), Autoload.get_int(),Autoload.get_int(),Autoload.get_int()))
 		if randi() % 2 == 1:
 			select(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:

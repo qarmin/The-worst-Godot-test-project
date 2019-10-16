@@ -1,19 +1,14 @@
 extends Tween
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	queue_free()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
 		if randi() % 2 == 1:
 			set_repeat(Autoload.get_bool())
@@ -21,15 +16,15 @@ func _process(delta) -> void:
 			set_tween_process_mode(Autoload.get_int()) # TweenProcessMode
 		if randi() % 2 == 1:
 			set_speed_scale(Autoload.get_float())
-			
+
 		if randi() % 2 == 1:
-			qq += str(follow_method(self,Autoload.get_string(),Autoload.get_float(),self,Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float())) # TransitionType, EaseType
+			Autoload.qq = str(follow_method(self,Autoload.get_string(),Autoload.get_float(),self,Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float())) # TransitionType, EaseType
 		if randi() % 2 == 1:
-			qq += str(follow_property(self,Autoload.get_string(),Autoload.get_float(),self, Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float()))# TransitionType, EaseType
-			
+			Autoload.qq = str(follow_property(self,Autoload.get_string(),Autoload.get_float(),self, Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float()))# TransitionType, EaseType
+
 		if randi() % 2 == 1:
-			qq += str(get_runtime())
-			
+			Autoload.qq = str(get_runtime())
+
 		if randi() % 2 == 1:
 			interpolate_callback(self, Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
@@ -38,36 +33,36 @@ func _process(delta) -> void:
 			interpolate_method(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(),Autoload.get_float())# TransitionType, EaseType
 		if randi() % 2 == 1:
 			interpolate_property(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
-			
+
 		if randi() % 2 == 1:
-			qq += str(is_active())
-			
+			Autoload.qq = str(is_active())
+
 		if randi() % 2 == 1:
-			qq += str(remove(get_parent(), Autoload.get_))
+			Autoload.qq = str(remove(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
-			qq += str(remove_all())
-			
+			Autoload.qq = str(remove_all())
+
 		if randi() % 2 == 1:
-			qq += str(reset(get_parent(), Autoload.get_))
+			Autoload.qq = str(reset(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
-			qq += str(reset_all())
+			Autoload.qq = str(reset_all())
 		if randi() % 2 == 1:
-			qq += str(resume(get_parent(), Autoload.get_))
+			Autoload.qq = str(resume(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
-			qq += str(resume_all())
+			Autoload.qq = str(resume_all())
 		if randi() % 2 == 1:
 			set_active(Autoload.get_bool())
 		if randi() % 2 == 1:
-			qq += str(start())
+			Autoload.qq = str(start())
 		if randi() % 2 == 1:
-			qq += str(stop(get_parent(), Autoload.get_))
+			Autoload.qq = str(stop(get_parent(), Autoload.get_))
 		if randi() % 2 == 1:
-			qq += str(stop_all())
+			Autoload.qq = str(stop_all())
 
 		if randi() % 2 == 1:
 			targeting_method(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
 		if randi() % 2 == 1:
 			targeting_property(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
-			
+
 		if randi() % 2 == 1:
-			qq += str(tell())
+			Autoload.qq = str(tell())

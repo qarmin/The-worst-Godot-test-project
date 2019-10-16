@@ -1,26 +1,30 @@
 extends StaticBody2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
-func _physics_process(delta) -> void:
+func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
 
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_constant_linear_velocity(Autoload.get_vector2())
-		if randi() % 2 == 1:
-			set_constant_angular_velocity(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_friction(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_bounce(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		AutoObjects.A_CollisionObject2D(self)
+		AutoObjects.A_PhysicsBody2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_StaticBody2D : StaticBody2D) -> void:
+
+	if randi() % 2 == 1:
+		q_StaticBody2D.set_constant_linear_velocity(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_StaticBody2D.set_constant_angular_velocity(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_StaticBody2D.set_friction(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_StaticBody2D.set_bounce(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_StaticBody2D.set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))

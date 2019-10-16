@@ -1,19 +1,20 @@
 extends Node2D
 
 #var q_MainLoop : MainLoop = MainLoop.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
+
 #
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 #
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #		if randi() % 2 == 1:
 #			q_MainLoop.free()
 #			q_MainLoop = MainLoop.new()
@@ -29,7 +30,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		if randi() % 2 == 1:
 #			q_MainLoop.finish()
 #		if randi() % 2 == 1:
-#			qq += str(q_MainLoop.idle( Autoload.get_float() ))
+#			Autoload.qq = str(q_MainLoop.idle( Autoload.get_float() ))
 #		if randi() % 2 == 1:
 #			q_MainLoop.init()
 #
@@ -39,7 +40,7 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #			q_MainLoop.input_text( Autoload.get_string() )
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_MainLoop.iteration( Autoload.get_float() ))
+#			Autoload.qq = str(q_MainLoop.iteration( Autoload.get_float() ))
 #
 #
 #func delete_node():

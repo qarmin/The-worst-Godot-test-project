@@ -1,18 +1,18 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 #
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var q_StyleBox : StyleBox = StyleBox.new()
 #
@@ -21,11 +21,11 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_StyleBox.draw( RID(), Autoload.get_rect2())
 #
-#		qq += str(q_StyleBox.get_center_size())
-#		qq += str(q_StyleBox.get_current_item_drawn())
-#		qq += str(q_StyleBox.get_margin( Autoload.get_int() ))#MARGIN
-#		qq += str(q_StyleBox.get_minimum_size())
-#		qq += str(q_StyleBox.get_offset())
+#		Autoload.qq = str(q_StyleBox.get_center_size())
+#		Autoload.qq = str(q_StyleBox.get_current_item_drawn())
+#		Autoload.qq = str(q_StyleBox.get_margin( Autoload.get_int() ))#MARGIN
+#		Autoload.qq = str(q_StyleBox.get_minimum_size())
+#		Autoload.qq = str(q_StyleBox.get_offset())
 #
-#		qq += str(q_StyleBox.test_mask( Autoload.get_vector2(), Autoload.get_rect2()))
+#		Autoload.qq = str(q_StyleBox.test_mask( Autoload.get_vector2(), Autoload.get_rect2()))
 #

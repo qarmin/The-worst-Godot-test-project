@@ -1,21 +1,15 @@
 extends MultiMeshInstance
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq=qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-			
+		counter = Autoload.get_rand_time()
+
 		var MM : MultiMesh = MultiMesh.new()
-		
+
 		if randi() % 2 == 1:
 			MM.set_color_format(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -23,21 +17,21 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			MM.set_custom_data_format(Autoload.get_int())
 		if randi() % 2 == 1:
-			MM.set_instance_count(min(Autoload.get_int(),5))
+			MM.set_instance_count(Autoload.get_inti(5))
 		if randi() % 2 == 1:
 			MM.set_visible_instance_count(Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
 #			MM.set_mesh(Autoload.loadA("CubeMesh.tres"))
-			
+
 		if randi() % 2 == 1:
-			qq += str(MM.get_aabb())
-			#BUG qq += str(MM.get_instance_color(Autoload.get_int()))
-			#BUG qq += str(MM.get_instance_custom_data(Autoload.get_int()))
+			Autoload.qq = str(MM.get_aabb())
+			#BUG Autoload.qq = str(MM.get_instance_color(Autoload.get_int()))
+			#BUG Autoload.qq = str(MM.get_instance_custom_data(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform(Autoload.get_int()))
+			Autoload.qq = str(MM.get_instance_transform(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(MM.get_instance_transform_2d(Autoload.get_int()))
-	
+			Autoload.qq = str(MM.get_instance_transform_2d(Autoload.get_int()))
+
 		if randi() % 2 == 1:
 			MM.set_as_bulk_array(Autoload.get_poolrealarray())
 			#BUG MM.set_instance_color(Autoload.get_int(),Autoload.get_color())
@@ -46,5 +40,5 @@ func _process(delta) -> void:
 			MM.set_instance_transform(Autoload.get_int(),Autoload.get_transform())
 		if randi() % 2 == 1:
 			MM.set_instance_transform_2d(Autoload.get_int(),Autoload.get_transform2d())
-			
+
 			set_multimesh(MM)

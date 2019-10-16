@@ -1,19 +1,14 @@
 extends ItemList
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
+
 # BUG
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var popup_temp : Popup = Popup.new()
 #
@@ -46,41 +41,41 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			ensure_current_is_visible()
 #		if randi() % 2 == 1:
-#			qq += str(get_item_at_position(Autoload.get_vector2(),Autoload.get_bool()))
+#			Autoload.qq = str(get_item_at_position(Autoload.get_vector2(),Autoload.get_bool()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_count())
+#			Autoload.qq = str(get_item_count())
 #		if randi() % 2 == 1:
-#			qq += str(get_item_custom_bg_color(Autoload.get_int()))
+#			Autoload.qq = str(get_item_custom_bg_color(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_custom_fg_color(Autoload.get_int()))
+#			Autoload.qq = str(get_item_custom_fg_color(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon(Autoload.get_int()))
+#			Autoload.qq = str(get_item_icon(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon_modulate(Autoload.get_int()))
+#			Autoload.qq = str(get_item_icon_modulate(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_icon_region(Autoload.get_int()))
+#			Autoload.qq = str(get_item_icon_region(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_metadata(Autoload.get_int()))
+#			Autoload.qq = str(get_item_metadata(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_text(Autoload.get_int()))
+#			Autoload.qq = str(get_item_text(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_item_tooltip(Autoload.get_int()))
+#			Autoload.qq = str(get_item_tooltip(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(get_selected_items())
+#			Autoload.qq = str(get_selected_items())
 #		if randi() % 2 == 1:
-#			qq += str(get_v_scroll())
+#			Autoload.qq = str(get_v_scroll())
 #		if randi() % 2 == 1:
-#			qq += str(is_anything_selected())
+#			Autoload.qq = str(is_anything_selected())
 #		if randi() % 2 == 1:
-#			qq += str(is_item_disabled(Autoload.get_int()))
+#			Autoload.qq = str(is_item_disabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_icon_transposed(Autoload.get_int()))
+#			Autoload.qq = str(is_item_icon_transposed(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_selectable(Autoload.get_int()))
+#			Autoload.qq = str(is_item_selectable(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_item_tooltip_enabled(Autoload.get_int()))
+#			Autoload.qq = str(is_item_tooltip_enabled(Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			qq += str(is_selected(Autoload.get_int()))
+#			Autoload.qq = str(is_selected(Autoload.get_int()))
 #		if randi() % 2 == 1:
 #			move_item(Autoload.get_int(),Autoload.get_int())
 #		if randi() % 2 == 1:

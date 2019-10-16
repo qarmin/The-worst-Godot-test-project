@@ -1,18 +1,18 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #		if !Autoload.RANDI:
 #			pass
 #
@@ -20,17 +20,17 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #
 #		q_Script.set_source_code(Autoload.get_string())
 #
-#		qq += str(q_Script.can_instance())
+#		Autoload.qq = str(q_Script.can_instance())
 #
-#		qq += str(q_Script.get_base_script())
-#		qq += str(q_Script.get_instance_base_type())
+#		Autoload.qq = str(q_Script.get_base_script())
+#		Autoload.qq = str(q_Script.get_instance_base_type())
 #
-#		qq += str(q_Script.has_script_signal( Autoload.get_string() ))
-#		qq += str(q_Script.has_source_code())
+#		Autoload.qq = str(q_Script.has_script_signal( Autoload.get_string() ))
+#		Autoload.qq = str(q_Script.has_source_code())
 #
-#		qq += str(q_Script.instance_has( self ))
-#		qq += str(q_Script.is_tool())
-#		qq += str(q_Script.reload( Autoload.get_bool() ))
+#		Autoload.qq = str(q_Script.instance_has( self ))
+#		Autoload.qq = str(q_Script.is_tool())
+#		Autoload.qq = str(q_Script.reload( Autoload.get_bool() ))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

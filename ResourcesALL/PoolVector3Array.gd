@@ -1,20 +1,14 @@
 extends Node2D
 
 var q_PoolVector3Array : PoolVector3Array = Autoload.get_poolvector3array()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 #
 #		if randi() % 2 == 1:
 #			q_PoolVector3Array = Autoload.get_poolvector3array()
@@ -25,7 +19,7 @@ func _process(delta) -> void:
 #			q_PoolVector3Array.append_array(Autoload.get_poolvector3array())
 #
 #		if randi() % 2 == 1:
-#			qq += str(q_PoolVector3Array.insert( Autoload.get_int(), Autoload.get_vector3()) ) 
+#			Autoload.qq = str(q_PoolVector3Array.insert( Autoload.get_int(), Autoload.get_vector3()) ) 
 #		if randi() % 2 == 1:
 #			q_PoolVector3Array.invert()
 #		if randi() % 2 == 1:
@@ -33,8 +27,8 @@ func _process(delta) -> void:
 #		if randi() % 2 == 1:
 #			q_PoolVector3Array.remove(Autoload.get_int()) 
 #		if randi() % 2 == 1:
-#			q_PoolVector3Array.resize(min(Autoload.get_int(),100)) 
+#			q_PoolVector3Array.resize(Autoload.get_inti(100)) 
 #		if randi() % 2 == 1:
 #			q_PoolVector3Array.set(Autoload.get_int(), Autoload.get_vector3()) 
 #		if randi() % 2 == 1:
-#			qq += str(q_PoolVector3Array.size())
+#			Autoload.qq = str(q_PoolVector3Array.size())

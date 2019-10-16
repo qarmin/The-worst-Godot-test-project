@@ -1,20 +1,13 @@
 extends OptionButton
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			clear()
 		if randi() % 2 == 1:
@@ -24,25 +17,25 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			add_item(Autoload.get_string())
 		if randi() % 2 == 1:
-			qq += str(get_item_count())
+			Autoload.qq = str(get_item_count())
 		if randi() % 2 == 1:
-			qq += str(get_item_icon(Autoload.get_int()))
+			Autoload.qq = str(get_item_icon(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_item_id(Autoload.get_int()))
+			Autoload.qq = str(get_item_id(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_item_index(Autoload.get_int()))
+			Autoload.qq = str(get_item_index(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_item_metadata(Autoload.get_int()))
+			Autoload.qq = str(get_item_metadata(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_item_text(Autoload.get_int()))
+			Autoload.qq = str(get_item_text(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_popup())
+			Autoload.qq = str(get_popup())
 		if randi() % 2 == 1:
-			qq += str(get_selected_id())
+			Autoload.qq = str(get_selected_id())
 		if randi() % 2 == 1:
-			qq += str(get_selected_metadata())
+			Autoload.qq = str(get_selected_metadata())
 		if randi() % 2 == 1:
-			qq += str(is_item_disabled(Autoload.get_int()))
+			Autoload.qq = str(is_item_disabled(Autoload.get_int()))
 		if randi() % 2 == 1:
 			select(Autoload.get_int())
 		if randi() % 2 == 1:

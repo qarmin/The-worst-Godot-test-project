@@ -3,20 +3,16 @@ extends Node2D
 var q_Array : Array = []
 var q_temp : Node = load("res://RES/Node.tscn").instance()
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
 	add_child(q_temp)
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_temp.queue_free()
 			q_temp = load("res://RES/Node.tscn").instance()
@@ -44,33 +40,33 @@ func _process(delta) -> void:
 			q_Array.back()
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch( Autoload.get_string(), Autoload.get_bool()))
+			Autoload.qq = str(q_Array.bsearch( Autoload.get_string(), Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), Autoload.get_bool()))
+			Autoload.qq = str(q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), Autoload.get_bool()))
 
 		if randi() % 2 == 1:
 			q_Array.clear()
 		if randi() % 2 == 1:
-			qq += str(q_Array.count( Autoload.get_string() ))
+			Autoload.qq = str(q_Array.count( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Array.duplicate( Autoload.get_bool()))
+			Autoload.qq = str(q_Array.duplicate( Autoload.get_bool()))
 		if randi() % 2 == 1:
-			qq += str(q_Array.empty())
+			Autoload.qq = str(q_Array.empty())
 		if randi() % 2 == 1:
 			q_Array.erase( Autoload.get_string() )
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.find( Autoload.get_string(), Autoload.get_int()))
+			Autoload.qq = str(q_Array.find( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_Array.find_last( Autoload.get_string() ))
+			Autoload.qq = str(q_Array.find_last( Autoload.get_string() ))
 
 		if randi() % 2 == 1:
 			q_Array.front()
 
 		if randi() % 2 == 1:
-			qq += str(q_Array.has( Autoload.get_string() ))
+			Autoload.qq = str(q_Array.has( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Array.hash())
+			Autoload.qq = str(q_Array.hash())
 
 		if randi() % 2 == 1:
 			q_Array.insert( Autoload.get_int(), Autoload.get_string()) 
@@ -96,11 +92,11 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Array.resize( Autoload.get_inti(1000))
 		if randi() % 2 == 1:
-			qq += str(q_Array.rfind( Autoload.get_string(), Autoload.get_int()))
+			Autoload.qq = str(q_Array.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_Array.shuffle()
 		if randi() % 2 == 1:
-			qq += str(q_Array.size())
+			Autoload.qq = str(q_Array.size())
 
 		if randi() % 2 == 1:
 			q_Array.sort()

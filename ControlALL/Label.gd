@@ -1,20 +1,13 @@
 extends Label
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_text(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -35,12 +28,12 @@ func _process(delta) -> void:
 			set_lines_skipped(Autoload.get_int())
 		if randi() % 2 == 1:
 			set_max_lines_visible(Autoload.get_int())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_line_count())
+			Autoload.qq = str(get_line_count())
 		if randi() % 2 == 1:
-			qq += str(get_line_height())
+			Autoload.qq = str(get_line_height())
 		if randi() % 2 == 1:
-			qq += str(get_total_character_count())
+			Autoload.qq = str(get_total_character_count())
 		if randi() % 2 == 1:
-			qq += str(get_visible_line_count())
+			Autoload.qq = str(get_visible_line_count())

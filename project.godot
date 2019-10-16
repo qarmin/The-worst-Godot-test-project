@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://3DALL.tscn"
+run/main_scene="res://2DALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -24,6 +24,45 @@ config/icon="res://icon.png"
 [autoload]
 
 Autoload="*res://Autoload.gd"
+AutoObjects="*res://Autoloads/AutoObjects.gd"
+AutoAnimatedSprite="*res://2DALL/AnimatedSprite.gd"
+AutoArea2D="*res://2DALL/Area2D.gd"
+AutoKinematicBody2D="*res://2DALL/KinematicBody2D.gd"
+AutoRigidBody2D="*res://2DALL/RigidBody2D.gd"
+AutoStaticBody2D="*res://2DALL/StaticBody2D.gd"
+AutoAudioStreamPlayer2D="*res://2DALL/AudioStreamPlayer2D.gd"
+AutoBackBufferCopy="*res://2DALL/BackBufferCopy.gd"
+AutoBone2D="*res://2DALL/Bone2D.gd"
+AutoCPUParticles2D="*res://2DALL/CPUParticles2D.gd"
+AutoCamera2D="*res://2DALL/Camera2D.gd"
+AutoCanvasModulate="*res://2DALL/CanvasModulate.gd"
+AutoCollisionPolygon2D="*res://2DALL/CollisionPolygon2D.gd"
+AutoCollisionShape2D="*res://2DALL/CollisionShape2D.gd"
+AutoDampedSpringJoint2D="*res://2DALL/DampedSpringJoint2D.gd"
+AutoGrooveJoint2D="*res://2DALL/GrooveJoint2D.gd"
+AutoPinJoint2D="*res://2DALL/PinJoint2D.gd"
+AutoLight2D="*res://2DALL/Light2D.gd"
+AutoLightOccluder2D="*res://2DALL/LightOccluder2D.gd"
+AutoLine2D="*res://2DALL/Line2D.gd"
+AutoMeshInstance2D="*res://2DALL/MeshInstance2D.gd"
+AutoMultiMeshInstance2D="*res://2DALL/MultiMeshInstance2D.gd"
+AutoNavigation2D="*res://2DALL/Navigation2D.gd"
+AutoNavigationPolygonInstance="*res://2DALL/NavigationPolygonInstance.gd"
+AutoParallaxLayer="*res://2DALL/ParallaxLayer.gd"
+AutoParticles2D="*res://2DALL/Particles2D.gd"
+AutoPath2D="*res://2DALL/Path2D.gd"
+AutoPathFollow2D="*res://2DALL/PathFollow2D.gd"
+AutoPolygon2D="*res://2DALL/Polygon2D.gd"
+AutoPosition2D="*res://2DALL/Position2D.gd"
+AutoRayCast2D="*res://2DALL/RayCast2D.gd"
+AutoRemoteTransform2D="*res://2DALL/RemoteTransform2D.gd"
+AutoSkeleton2D="*res://2DALL/Skeleton2D.gd"
+AutoSprite="*res://2DALL/Sprite.gd"
+AutoTileMap="*res://2DALL/TileMap.gd"
+AutoTouchScreenButton="*res://2DALL/TouchScreenButton.gd"
+AutoVisibilityNotifier2D="*res://2DALL/VisibilityNotifier2D.gd"
+AutoVisibilityEnabler2D="*res://2DALL/VisibilityEnabler2D.gd"
+AutoYSort="*res://2DALL/YSort.gd"
 
 [debug]
 
@@ -72,4 +111,4 @@ limits/debugger_stdout/max_warnings_per_second=5
 
 threads/thread_model=2
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://RES/DefaultEnv.tres"

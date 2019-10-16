@@ -1,18 +1,18 @@
 extends Node2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
+onready var counter : float = Autoload.get_rand_time()
 
-#func _ready():
-#	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+#
+#
 
 #func _process(delta) -> void:
 #	counter -= delta
-#	var qq : String = ""
-#	qq = qq
+#
+#
 #
 #	if counter <= 0:
-#		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+#
 #
 #		var q_NativeScript : NativeScript = NativeScript.new()
 #
@@ -21,9 +21,9 @@ var C_COUNTER : Vector2 = Vector2(0.5,1.0)
 #		q_NativeScript.set_script_class_name(Autoload.get_nodepath(self))
 #		q_NativeScript.set_script_class_icon_path(Autoload.get_nodepath(self))
 #
-#		qq += str(q_NativeScript.get_class_documentation())
-#		qq += str(q_NativeScript.get_method_documentation( Autoload.get_string() ))
-#		qq += str(q_NativeScript.get_property_documentation( Autoload.get_string() ))
-#		qq += str(q_NativeScript.get_signal_documentation( Autoload.get_string() ))
-#		qq += str(q_NativeScript.new())
+#		Autoload.qq = str(q_NativeScript.get_class_documentation())
+#		Autoload.qq = str(q_NativeScript.get_method_documentation( Autoload.get_string() ))
+#		Autoload.qq = str(q_NativeScript.get_property_documentation( Autoload.get_string() ))
+#		Autoload.qq = str(q_NativeScript.get_signal_documentation( Autoload.get_string() ))
+#		Autoload.qq = str(q_NativeScript.new())
 #

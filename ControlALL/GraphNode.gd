@@ -1,20 +1,13 @@
 extends GraphNode
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_title(Autoload.get_string())
 		if randi() % 2 == 1:
@@ -36,30 +29,30 @@ func _process(delta) -> void:
 		if randi() % 2 == 1:
 			clear_all_slots()
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_color(Autoload.get_int()))
+			Autoload.qq = str(get_connection_input_color(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_count())
+			Autoload.qq = str(get_connection_input_count())
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_position(Autoload.get_int()))
+			Autoload.qq = str(get_connection_input_position(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_input_type(Autoload.get_int()))
+			Autoload.qq = str(get_connection_input_type(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_color(Autoload.get_int()))
+			Autoload.qq = str(get_connection_output_color(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_count())
+			Autoload.qq = str(get_connection_output_count())
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_position(Autoload.get_int()))
+			Autoload.qq = str(get_connection_output_position(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_connection_output_type(Autoload.get_int()))
+			Autoload.qq = str(get_connection_output_type(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_color_left(Autoload.get_int()))
+			Autoload.qq = str(get_slot_color_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_color_right(Autoload.get_int()))
+			Autoload.qq = str(get_slot_color_right(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_type_left(Autoload.get_int()))
+			Autoload.qq = str(get_slot_type_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(get_slot_type_right(Autoload.get_int()))
+			Autoload.qq = str(get_slot_type_right(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_slot_enabled_left(Autoload.get_int()))
+			Autoload.qq = str(is_slot_enabled_left(Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(is_slot_enabled_right(Autoload.get_int()))
+			Autoload.qq = str(is_slot_enabled_right(Autoload.get_int()))

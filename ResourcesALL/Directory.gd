@@ -1,62 +1,56 @@
 extends Node2D
 
 var q_Directory : Directory = Directory.new()
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			q_Directory = Directory.new()
-			
-		
+
 		if randi() % 2 == 1:
-			qq += str(q_Directory.change_dir( Autoload.get_string() ))
+			Autoload.qq = str(q_Directory.change_dir( Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.copy( Autoload.get_string(), Autoload.get_string() ))
+			Autoload.qq = str(q_Directory.copy( Autoload.get_string(), Autoload.get_string() ))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.current_is_dir())
+			Autoload.qq = str(q_Directory.current_is_dir())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.dir_exists( "res://TEMP/" + Autoload.get_string()))
+			Autoload.qq = str(q_Directory.dir_exists( "res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.file_exists( "res://TEMP/" + Autoload.get_string()))
-			
+			Autoload.qq = str(q_Directory.file_exists( "res://TEMP/" + Autoload.get_string()))
+
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_current_dir())
+			Autoload.qq = str(q_Directory.get_current_dir())
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				qq += str(q_Directory.get_current_drive())
+				Autoload.qq = str(q_Directory.get_current_drive())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_drive( Autoload.get_int()))
+			Autoload.qq = str(q_Directory.get_drive( Autoload.get_int()))
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_drive_count())
+			Autoload.qq = str(q_Directory.get_drive_count())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_next())
+			Autoload.qq = str(q_Directory.get_next())
 		if randi() % 2 == 1:
-			qq += str(q_Directory.get_space_left())
-			
+			Autoload.qq = str(q_Directory.get_space_left())
+
 		if randi() % 2 == 1:
-			qq += str(q_Directory.list_dir_begin( Autoload.get_bool(), Autoload.get_bool() ))
+			Autoload.qq = str(q_Directory.list_dir_begin( Autoload.get_bool(), Autoload.get_bool() ))
 		if randi() % 2 == 1:
 			q_Directory.list_dir_end()
-			
+
 			if Autoload.SLOW_FUNCTIONS:
 				if randi() % 2 == 1:
-					qq += str(q_Directory.make_dir( "res://TEMP/" + Autoload.get_string()))
+					Autoload.qq = str(q_Directory.make_dir( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.make_dir_recursive( "res://TEMP/" + Autoload.get_string()))
-					
+					Autoload.qq = str(q_Directory.make_dir_recursive( "res://TEMP/" + Autoload.get_string()))
+
 				if randi() % 2 == 1:
-					qq += str(q_Directory.open( "res://TEMP/" + Autoload.get_string()))
+					Autoload.qq = str(q_Directory.open( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.remove( "res://TEMP/" + Autoload.get_string()))
+					Autoload.qq = str(q_Directory.remove( "res://TEMP/" + Autoload.get_string()))
 				if randi() % 2 == 1:
-					qq += str(q_Directory.rename( Autoload.get_string(), Autoload.get_string() ))
+					Autoload.qq = str(q_Directory.rename( Autoload.get_string(), Autoload.get_string() ))

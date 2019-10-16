@@ -1,28 +1,28 @@
 extends RemoteTransform2D
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-	if !is_visible():
-		queue_free()
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
+		counter = Autoload.get_rand_time()
+
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Node2D(self)
+		nodeFunction(self)
+
+func nodeFunction(q_RemoteTransform2D : RemoteTransform2D) -> void:
 
 		if randi() % 2 == 1:
-			set_remote_node(Autoload.get_string())
+			q_RemoteTransform2D.set_remote_node(Autoload.get_string())
 		if randi() % 2 == 1:
-			set_use_global_coordinates(Autoload.get_bool())
+			q_RemoteTransform2D.set_use_global_coordinates(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_position(Autoload.get_bool())
+			q_RemoteTransform2D.set_update_position(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_rotation(Autoload.get_bool())
+			q_RemoteTransform2D.set_update_rotation(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_update_scale(Autoload.get_bool())
+			q_RemoteTransform2D.set_update_scale(Autoload.get_bool())

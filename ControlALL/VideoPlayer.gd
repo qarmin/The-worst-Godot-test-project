@@ -1,20 +1,13 @@
 extends VideoPlayer
 
-var counter : float
-var C_COUNTER : Vector2 = Vector2(0.5,1.0)
-
-func _ready():
-	counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-
+onready var counter : float = Autoload.get_rand_time()
 
 func _process(delta) -> void:
 	counter -= delta
-	var qq : String = ""
-	qq = qq
-	
+
 	if counter <= 0:
-		counter = randf() * (C_COUNTER.y - C_COUNTER.x) + C_COUNTER.x
-		
+		counter = Autoload.get_rand_time()
+
 		if randi() % 2 == 1:
 			set_audio_track(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -35,13 +28,13 @@ func _process(delta) -> void:
 			set_stream_position(Autoload.get_float())
 		if randi() % 2 == 1:
 			set_bus(Autoload.get_string())
-			
+
 		if randi() % 2 == 1:
-			qq += str(get_stream_name())
+			Autoload.qq = str(get_stream_name())
 		if randi() % 2 == 1:
-			qq += str(get_video_texture())
+			Autoload.qq = str(get_video_texture())
 		if randi() % 2 == 1:
-			qq += str(is_playing())
+			Autoload.qq = str(is_playing())
 		if randi() % 2 == 1:
 			play()
 		if randi() % 2 == 1:
