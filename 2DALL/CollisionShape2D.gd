@@ -2,7 +2,7 @@ extends CollisionShape2D
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
@@ -15,7 +15,7 @@ func _process(delta) -> void:
 		nodeFunction(self)
 
 func nodeFunction(q_CollisionShape2D : CollisionShape2D) -> void:
-
+	
 	if randi() % 2 == 1:
 		q_CollisionShape2D.set_shape(Autoload.loadA("CircleShape2D.tres"))
 	if randi() % 2 == 1:

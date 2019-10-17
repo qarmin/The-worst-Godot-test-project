@@ -141,15 +141,13 @@ _data = {
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="AnimatedSprite_ALL" type="AnimatedSprite" parent="."]
-visible = false
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
-frame = 50
+frame = 28
 playing = true
 script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
@@ -161,7 +159,6 @@ polygon = PoolVector2Array( 9.03, -9.88, -12.31, -3.97, 11.88, 17.58 )
 script = ExtResource( 40 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-visible = false
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
@@ -173,7 +170,6 @@ polygon = PoolVector2Array( 9.03, -9.88, -12.31, -3.97, 11.88, 17.58 )
 script = ExtResource( 40 )
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-visible = false
 script = ExtResource( 8 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
@@ -185,7 +181,6 @@ polygon = PoolVector2Array( 9.03, -9.88, -12.31, -3.97, 11.88, 17.58 )
 script = ExtResource( 40 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-visible = false
 script = ExtResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
@@ -193,58 +188,48 @@ shape = SubResource( 5 )
 script = ExtResource( 41 )
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-visible = false
 script = ExtResource( 11 )
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
-visible = false
 script = ExtResource( 12 )
 
 [node name="Bone2D" type="Bone2D" parent="."]
-visible = false
 script = ExtResource( 39 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
-visible = false
 script = ExtResource( 14 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-visible = false
 script = ExtResource( 15 )
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
 script = ExtResource( 16 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-visible = false
 polygon = PoolVector2Array( 0.4, 0.64, -1.58, -1.42, 0.79, -0.73, 6.74, -0.61 )
 script = ExtResource( 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 6 )
 script = ExtResource( 41 )
 
-[node name="DampedSpringJoint2D_J" type="DampedSpringJoint2D" parent="."]
-visible = false
+[node name="DampedSpringJoint2D" type="DampedSpringJoint2D" parent="."]
 node_a = NodePath("RigidBody2D")
 node_b = NodePath("RigidBody2D2")
 script = ExtResource( 17 )
 
-[node name="RigidBody2D" type="RigidBody2D" parent="DampedSpringJoint2D_J"]
+[node name="RigidBody2D" type="RigidBody2D" parent="DampedSpringJoint2D"]
 script = ExtResource( 8 )
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D_J/RigidBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DampedSpringJoint2D/RigidBody2D"]
 shape = SubResource( 7 )
 script = ExtResource( 41 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DampedSpringJoint2D_J/RigidBody2D"]
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="DampedSpringJoint2D/RigidBody2D"]
 polygon = PoolVector2Array( 9.03, -9.88, -12.31, -3.97, 11.88, 17.58 )
 script = ExtResource( 40 )
 
 [node name="GrooveJoint2D" type="GrooveJoint2D" parent="."]
-visible = false
 node_a = NodePath("RigidBody2D4")
 node_b = NodePath("RigidBody2D3")
 script = ExtResource( 18 )
@@ -264,35 +249,28 @@ shape = SubResource( 7 )
 script = ExtResource( 41 )
 
 [node name="PinJoint2D" type="PinJoint2D" parent="."]
-visible = false
 node_a = NodePath("../KinematicBody2D_CO_PB")
 node_b = NodePath("../Area2D")
 script = ExtResource( 19 )
 
 [node name="Light2D" type="Light2D" parent="."]
-visible = false
 script = ExtResource( 20 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
-visible = false
 occluder = SubResource( 8 )
 script = ExtResource( 21 )
 
 [node name="Line2D_BUG" type="Line2D" parent="."]
-visible = false
 script = ExtResource( 22 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
-visible = false
 mesh = SubResource( 10 )
 script = ExtResource( 23 )
 
 [node name="MultiMeshInstance2D" type="MultiMeshInstance2D" parent="."]
-visible = false
 script = ExtResource( 42 )
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
-visible = false
 script = ExtResource( 24 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
@@ -300,20 +278,16 @@ navpoly = SubResource( 11 )
 script = ExtResource( 43 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="."]
-visible = false
 script = ExtResource( 43 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
-visible = false
 script = ExtResource( 44 )
 
 [node name="Particles2D" type="Particles2D" parent="."]
-visible = false
 process_material = SubResource( 12 )
 script = ExtResource( 26 )
 
 [node name="Path2D" type="Path2D" parent="."]
-visible = false
 curve = SubResource( 13 )
 script = ExtResource( 27 )
 
@@ -323,29 +297,23 @@ rotation = 2.32475
 script = ExtResource( 45 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
-visible = false
 script = ExtResource( 45 )
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
-visible = false
 skeleton = NodePath("../Skeleton2D")
 script = ExtResource( 28 )
 
 [node name="Position2D_NOTHING" type="Position2D" parent="."]
-visible = false
 script = ExtResource( 29 )
 
 [node name="RayCast2D" type="RayCast2D" parent="."]
-visible = false
 script = ExtResource( 30 )
 
 [node name="RemoteTransform2D" type="RemoteTransform2D" parent="."]
-visible = false
 remote_path = NodePath("../CollisionPolygon2D")
 script = ExtResource( 31 )
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
-visible = false
 script = ExtResource( 13 )
 
 [node name="Bone2D" type="Bone2D" parent="Skeleton2D"]
@@ -357,11 +325,9 @@ rest = Transform2D( 0, 0.78, -0.92, 0.76, -1.37, 0.95 )
 script = ExtResource( 39 )
 
 [node name="Sprite" type="Sprite" parent="."]
-visible = false
 script = ExtResource( 32 )
 
 [node name="TileMap" type="TileMap" parent="."]
-visible = false
 mode = 1
 tile_set = ExtResource( 38 )
 cell_half_offset = 0
@@ -370,19 +336,15 @@ tile_data = PoolIntArray( -237436027, 0, 0, -237370492, 0, 0, -237304957, 0, 0, 
 script = ExtResource( 33 )
 
 [node name="TouchScreenButton" type="TouchScreenButton" parent="."]
-visible = false
 normal = SubResource( 3 )
 pressed = SubResource( 1 )
 script = ExtResource( 35 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
-visible = false
 script = ExtResource( 34 )
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-visible = false
 script = ExtResource( 36 )
 
 [node name="YSort" type="YSort" parent="."]
-visible = false
 script = ExtResource( 37 )
