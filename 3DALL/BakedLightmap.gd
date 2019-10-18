@@ -2,22 +2,40 @@ extends BakedLightmap
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		set_bake_cell_size(Autoload.get_float())
-		set_bake_quality(Autoload.get_int()) #BakeQuality
-		set_bake_mode(Autoload.get_int()) #BakeMode
-		set_propagation(Autoload.get_float())
-		set_energy(Autoload.get_float())
-		set_hdr(Autoload.get_bool())
-		set_extents(Autoload.get_vector3())
-		set_capture_cell_size(Autoload.get_float())
-		set_image_path("res://TEMP/Autoload.qqq")
-		set_light_data(BakedLightmapData.new())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_Spatial(self)
+		AutoObjects.A_VisualInstance(self)
+		nodeFunction(self)
 
-		###Autoload.qq = str(bake(self,Autoload.get_bool()))
-		###debug_bake()
+func nodeFunction(q_BakedLightmap : BakedLightmap) -> void:
+
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_bake_quality(Autoload.get_int()) #BakeQuality
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_bake_mode(Autoload.get_int()) #BakeMode
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_propagation(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_energy(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_hdr(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_extents(Autoload.get_vector3())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_capture_cell_size(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_image_path("res://TEMP/Autoload.qqq")
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_light_data(BakedLightmapData.new())
+
+		###q_BakedLightmap.bake(self,Autoload.get_bool()))
+		###q_BakedLightmap.debug_bake()

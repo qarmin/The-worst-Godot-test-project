@@ -5,9 +5,9 @@ var q_control : Control = Control.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
-	add_child(q_control)
+#	add_child(q_control)
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:

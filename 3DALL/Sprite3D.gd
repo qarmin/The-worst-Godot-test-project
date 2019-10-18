@@ -2,47 +2,31 @@ extends Sprite3D
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_texture(Autoload.loadA("Sprite.png"))
-		if randi() % 2 == 1:
-			set_vframes(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_hframes(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_frame(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_region(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_region_rect(Autoload.get_rect2())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_Spatial(self)
+		AutoObjects.A_VisualInstance(self)
+		AutoObjects.A_GeometryInstance(self)
+		AutoObjects.A_SpriteBase3D(self)
+		nodeFunction(self)
 
-			#SPRITE BASED
+func nodeFunction(q_Sprite3D : Sprite3D) -> void:
+
 		if randi() % 2 == 1:
-			set_centered(Autoload.get_bool())
+			q_Sprite3D.set_texture(Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_offset(Autoload.get_vector2())
+			q_Sprite3D.set_vframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_flip_h(Autoload.get_bool())
+			q_Sprite3D.set_hframes(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_flip_v(Autoload.get_bool())
+			q_Sprite3D.set_frame(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_modulate(Autoload.get_color())
+			q_Sprite3D.set_region(Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_opacity(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_pixel_size(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_axis(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_draw_flag(Autoload.get_int(),Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_alpha_cut_mode(Autoload.get_int())
-		if randi() % 2 == 1:
-			Autoload.qq = str(generate_triangle_mesh())
-		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_rect())
+			q_Sprite3D.set_region_rect(Autoload.get_rect2())

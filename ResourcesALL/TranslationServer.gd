@@ -3,13 +3,13 @@ extends Node2D
 onready var counter : float = Autoload.get_rand_time()
 
 #BUG 
-#func _process(delta) -> void:
+#func alt_process(delta) -> void:
 #	counter -= delta
 #
 #
 #
 #	if counter <= 0:
-		counter = Autoload.get_rand_time()
+#		counter = Autoload.get_rand_time()
 #
 #
 #		if randi() % 2 == 1:

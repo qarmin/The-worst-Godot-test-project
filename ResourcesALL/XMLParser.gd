@@ -3,7 +3,7 @@ extends Node2D
 var q_XMLParser : XMLParser = XMLParser.new()
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	#LEAK

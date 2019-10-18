@@ -7,3 +7,7 @@ func _ready() -> void:
 	for i in get_children():
 		if !i.is_visible():
 			i.queue_free()
+
+func _process(delta) -> void:
+	for i in get_children():
+		i.alt_process(delta)

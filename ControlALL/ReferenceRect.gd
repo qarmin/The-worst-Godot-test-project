@@ -2,11 +2,19 @@ extends ReferenceRect
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_border_color(Autoload.get_color())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Control(self)
+		nodeFunction(self)
+
+func nodeFunction(q_ReferenceRect : ReferenceRect) -> void:
+
+	if randi() % 2 == 1:
+		q_ReferenceRect.set_border_color(Autoload.get_color())

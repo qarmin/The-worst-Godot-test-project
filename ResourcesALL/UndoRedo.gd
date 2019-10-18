@@ -8,13 +8,13 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #	add_child(q_temp_0)
 #
-#func _process(delta) -> void:G
+#func alt_process(delta) -> void:G
 #	counter -= delta
 #
 #
 #	#BUG
 #	if counter <= 0:
-		counter = Autoload.get_rand_time()
+#		counter = Autoload.get_rand_time()
 #
 #		if randi() % 2 == 1:
 #			q_UndoRedo.free()

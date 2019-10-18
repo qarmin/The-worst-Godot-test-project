@@ -5,9 +5,9 @@ var q_temp : Node = load("res://RES/Node.tscn").instance()
 
 onready var counter : float = Autoload.get_rand_time()
 
-	add_child(q_temp)
+#	add_child(q_temp)
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:

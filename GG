@@ -9,8 +9,7 @@ func alt_process(delta) -> void:
 
 		AutoObjects.A_Object(self)
 		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
+		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_. : ) -> void:

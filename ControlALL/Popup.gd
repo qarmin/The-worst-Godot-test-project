@@ -2,22 +2,34 @@ extends Popup
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Control(self)
+		nodeFunction(self) 
+
+func nodeFunction(q_Popup : Popup) -> void:
+	
+	return # TOO SLOW
+	
+	if randi() % 2 == 1:
+		q_Popup.set_exclusive(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_Popup.popup(Autoload.get_rect2())
+	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			set_exclusive(Autoload.get_bool())
+			q_Popup.popup_centered(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_Popup.popup_centered_clamped(Autoload.get_vector2(),Autoload.get_float())
+	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			popup(Autoload.get_rect2())
+			q_Popup.popup_centered_minsize(Autoload.get_vector2())
 		if randi() % 2 == 1:
-			popup_centered(Autoload.get_vector2())
-		if randi() % 2 == 1:
-			popup_centered_clamped(Autoload.get_vector2(),Autoload.get_float())
-		if randi() % 2 == 1:
-			popup_centered_minsize(Autoload.get_vector2())
-		if randi() % 2 == 1:
-			popup_centered_ratio(Autoload.get_float())
+			q_Popup.popup_centered_ratio(Autoload.get_float())
 

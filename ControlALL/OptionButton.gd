@@ -2,51 +2,61 @@ extends OptionButton
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Control(self)
+		AutoObjects.A_BaseButton(self)
+		AutoControlButton.nodeFunction(self)
+		nodeFunction(self)
+
+func nodeFunction(q_OptionButton : OptionButton) -> void:
+
 		if randi() % 2 == 1:
-			clear()
+			q_OptionButton.clear()
 		if randi() % 2 == 1:
-			_select_int(Autoload.get_int())
+			q_OptionButton._select_int(Autoload.get_int())
 		if randi() % 2 == 1:
-			add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_string())
+			q_OptionButton.add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_string())
 		if randi() % 2 == 1:
-			add_item(Autoload.get_string())
+			q_OptionButton.add_item(Autoload.get_string())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_count())
+			q_OptionButton.get_item_count()
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_icon(Autoload.get_int()))
+			q_OptionButton.get_item_icon(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_id(Autoload.get_int()))
+			q_OptionButton.get_item_id(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_index(Autoload.get_int()))
+			q_OptionButton.get_item_index(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_metadata(Autoload.get_int()))
+			q_OptionButton.get_item_metadata(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_item_text(Autoload.get_int()))
+			q_OptionButton.get_item_text(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_popup())
+			q_OptionButton.get_popup()
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_selected_id())
+			q_OptionButton.get_selected_id()
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_selected_metadata())
+			q_OptionButton.get_selected_metadata()
 		if randi() % 2 == 1:
-			Autoload.qq = str(is_item_disabled(Autoload.get_int()))
+			q_OptionButton.is_item_disabled(Autoload.get_int())
 		if randi() % 2 == 1:
-			select(Autoload.get_int())
+			q_OptionButton.select(Autoload.get_int())
 		if randi() % 2 == 1:
-			set_item_disabled(Autoload.get_int(),Autoload.get_bool())
+			q_OptionButton.set_item_disabled(Autoload.get_int(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			set_item_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+			q_OptionButton.set_item_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
 		if randi() % 2 == 1:
-			set_item_id(Autoload.get_int(),Autoload.get_int())
+			q_OptionButton.set_item_id(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_item_metadata(Autoload.get_int(),Autoload.get_int())
+			q_OptionButton.set_item_metadata(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			set_item_text(Autoload.get_int(),Autoload.get_string())
+			q_OptionButton.set_item_text(Autoload.get_int(),Autoload.get_string())
 		if randi() % 2 == 1:
-			remove_item(Autoload.get_int())
+			q_OptionButton.remove_item(Autoload.get_int())

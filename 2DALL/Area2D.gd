@@ -55,9 +55,9 @@ func nodeFunction(q_Area2D : Area2D) -> void:
 		if randi() % 2 == 1:
 			q_Area2D.get_overlapping_bodies()
 	if randi() % 2 == 1:
-		q_Area2D.overlaps_area(Autoload.get_nodes(self))
+		q_Area2D.overlaps_area(Autoload.get_nodes(q_Area2D))
 	if randi() % 2 == 1:
-		q_Area2D.overlaps_body(Autoload.get_nodes(self))
+		q_Area2D.overlaps_body(Autoload.get_nodes(q_Area2D))
 
 	if randi() % 2 == 1:
 		q_Area2D.set_collision_layer_bit(Autoload.get_int(),Autoload.get_int())

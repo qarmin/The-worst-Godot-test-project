@@ -3,7 +3,7 @@ extends Node2D
 var q_StreamPeerBuffer : StreamPeerBuffer = StreamPeerBuffer.new()
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:

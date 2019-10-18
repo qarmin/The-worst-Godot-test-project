@@ -190,7 +190,6 @@ extents = Vector3( 1, 1.77, 1.71 )
 script = ExtResource( 1 )
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
-visible = false
 script = ExtResource( 2 )
 
 [node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
@@ -204,39 +203,32 @@ script = ExtResource( 4 )
 script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-visible = false
 script = ExtResource( 6 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
-visible = false
 size = 15954.2
 script = ExtResource( 7 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
-visible = false
 size = 16384.0
 target = NodePath("../ARVROrigin/ARVRController")
 script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-visible = false
 frames = SubResource( 4 )
-frame = 3
+frame = 4
 playing = true
 script = ExtResource( 13 )
 
-[node name="Sprite3D_SB" type="Sprite3D" parent="."]
-visible = false
+[node name="Sprite3D" type="Sprite3D" parent="."]
 texture = ExtResource( 50 )
 script = ExtResource( 14 )
 
-[node name="CPUParticles_ALL" type="CPUParticles" parent="."]
-visible = false
+[node name="CPUParticles" type="CPUParticles" parent="."]
 mesh = SubResource( 5 )
 script = ExtResource( 15 )
 
-[node name="CSGBox_CSGS_CSGP" type="CSGBox" parent="."]
-visible = false
+[node name="CSGBox" type="CSGBox" parent="."]
 invert_faces = true
 width = 1000.0
 height = 19.604
@@ -244,7 +236,6 @@ material = SubResource( 6 )
 script = ExtResource( 20 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
-visible = false
 invert_faces = true
 radius = 1000.0
 height = 23.0
@@ -254,20 +245,17 @@ script = ExtResource( 22 )
 
 [node name="CSGMesh" type="CSGMesh" parent="."]
 transform = Transform( 1, 0, 0, 0, 3.78, 0, 0, 0, 7.64, 5.27772, 5.196, 0 )
-visible = false
 invert_faces = true
 mesh = SubResource( 9 )
 material = SubResource( 11 )
 script = ExtResource( 21 )
 
 [node name="CSGPolygon" type="CSGPolygon" parent="."]
-visible = false
 polygon = PoolVector2Array( 1.3, 0.59, 1, 0.06, 1, -6.56, 0, 0, 0, 0, 0, 0 )
 material = SubResource( 12 )
 script = ExtResource( 19 )
 
 [node name="CSGSphere" type="CSGSphere" parent="."]
-visible = false
 invert_faces = true
 radius = 19.668
 radial_segments = 4
@@ -278,7 +266,6 @@ script = ExtResource( 18 )
 
 [node name="CSGTorus" type="CSGTorus" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71423, -3.42086 )
-visible = false
 invert_faces = true
 inner_radius = 0.001
 sides = 5
@@ -286,62 +273,50 @@ material = SubResource( 14 )
 script = ExtResource( 23 )
 
 [node name="CSGCombiner_NOTHING" type="CSGCombiner" parent="."]
-visible = false
 operation = 1
 script = ExtResource( 17 )
 
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
-visible = false
 material_override = SubResource( 15 )
 script = ExtResource( 24 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
-visible = false
 mesh = SubResource( 17 )
 material/0 = null
 script = ExtResource( 26 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-visible = false
 multimesh = SubResource( 19 )
 script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
-visible = false
 process_material = SubResource( 20 )
 script = ExtResource( 25 )
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
-visible = false
 image_path = "res://file.jpg"
 light_data = SubResource( 21 )
 script = ExtResource( 29 )
 
-[node name="DirectionalLight_LI" type="DirectionalLight" parent="."]
-visible = false
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
 script = ExtResource( 30 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-visible = false
 script = ExtResource( 31 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
-visible = false
 script = ExtResource( 32 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
-visible = false
 extents = Vector3( 10, 10, 22.3077 )
 data = SubResource( 22 )
 script = ExtResource( 33 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-visible = false
 script = ExtResource( 35 )
 
 [node name="RootMotionView" type="RootMotionView" parent="."]
-visible = false
 script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
@@ -401,23 +376,18 @@ shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-visible = false
 script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
-visible = false
 script = ExtResource( 62 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="."]
-visible = false
 script = ExtResource( 45 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-visible = false
 script = ExtResource( 46 )
 
 [node name="GridMap" type="GridMap" parent="."]
-visible = false
 mesh_library = SubResource( 24 )
 cell_size = Vector3( 2, 1.14, 3.08 )
 data = {
@@ -429,11 +399,9 @@ __meta__ = {
 }
 
 [node name="Listener" type="Listener" parent="."]
-visible = false
 script = ExtResource( 51 )
 
 [node name="Navigation_LEAK" type="Navigation" parent="."]
-visible = false
 script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
@@ -441,12 +409,10 @@ navmesh = SubResource( 25 )
 script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
-visible = false
 navmesh = SubResource( 25 )
 script = ExtResource( 47 )
 
 [node name="Path" type="Path" parent="."]
-visible = false
 curve = SubResource( 26 )
 script = ExtResource( 52 )
 
@@ -454,33 +420,26 @@ script = ExtResource( 52 )
 script = ExtResource( 48 )
 
 [node name="PathFollow" type="PathFollow" parent="."]
-visible = false
 script = ExtResource( 48 )
 
 [node name="Position3D_NOTHING" type="Position3D" parent="."]
-visible = false
 script = ExtResource( 54 )
 
 [node name="Camera_DEFAULT_CAMERA" type="Camera" parent="."]
-visible = false
 current = true
 script = ExtResource( 16 )
 
 [node name="ProximityGroup" type="ProximityGroup" parent="."]
-visible = false
 script = ExtResource( 59 )
 
 [node name="RayCast" type="RayCast" parent="."]
-visible = false
 script = ExtResource( 57 )
 
 [node name="RemoteTransform" type="RemoteTransform" parent="."]
-visible = false
 remote_path = NodePath("../Camera")
 script = ExtResource( 55 )
 
 [node name="Skeleton" type="Skeleton" parent="."]
-visible = false
 script = ExtResource( 56 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="Skeleton"]
@@ -505,14 +464,11 @@ script = ExtResource( 46 )
 script = ExtResource( 61 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="."]
-visible = false
 engine_force = 1.37327e-43
 script = ExtResource( 49 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-visible = false
 script = ExtResource( 58 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
-visible = false
 script = ExtResource( 60 )

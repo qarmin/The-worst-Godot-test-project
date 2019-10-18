@@ -1,4 +1,5 @@
 extends Node
 
-func _ready() -> void:
-	pass
+func _process(delta) -> void:
+	for i in get_children():
+		i.alt_process(delta)

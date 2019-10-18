@@ -2,20 +2,19 @@ extends HSlider
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _process(delta) -> void:
+func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_editable(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_scrollable(Autoload.get_bool())
-		if Autoload.SLOW_FUNCTIONS:
-			if randi() % 2 == 1:
-				set_ticks(Autoload.get_int())
-		if randi() % 2 == 1:
-			set_ticks_on_borders(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_focus_mode(Autoload.get_int())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		AutoObjects.A_CanvasItem(self)
+		AutoObjects.A_Control(self)
+		AutoObjects.A_Range(self)
+		AutoObjects.A_Slider(self)
+		nodeFunction(self)
+
+func nodeFunction(q_HSlider : HSlider) -> void:
+	pass
