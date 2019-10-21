@@ -18,7 +18,7 @@ func nodeFunction(q_CapsuleMesh : CapsuleMesh, can_reset : bool = false) -> void
 		if randi() % 2 == 1:
 			q_CapsuleMesh = CapsuleMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CapsuleMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_CapsuleMesh)
 
 	if randi() % 2 == 1:
 		q_CapsuleMesh.set_radius(Autoload.get_float())

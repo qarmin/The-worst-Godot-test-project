@@ -22,6 +22,6 @@ func nodeFunction(q_CryptoKey : CryptoKey, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_CryptoKey.load("res://TEMP/" + Autoload.get_string())
-	if randi() % 2 == 1:
-		if Autoload.SLOW_FUNCTIONS:
+	if Autoload.SLOW_FUNCTIONS:
+		if randi() % 2 == 1:
 			q_CryptoKey.save("res://TEMP/" + Autoload.get_string())

@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventJoypadMotion : InputEventJoypadMotion, can_reset :
 		if randi() % 2 == 1:
 			q_InputEventJoypadMotion = InputEventJoypadMotion.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventJoypadMotion)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventJoypadMotion)
 
 	if randi() % 2 == 1:
 		q_InputEventJoypadMotion.set_axis(Autoload.get_int()) #JoystickList

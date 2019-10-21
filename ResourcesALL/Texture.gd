@@ -1,6 +1,6 @@
 extends Node2D
 
-#var q_Texture : Texture = ImageTexture.new()
+var q_Texture : Texture = ImageTexture.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-#		nodeFunction(q_Texture,true)
+		nodeFunction(q_Texture,true)
 
 func nodeFunction(q_Texture : Texture, can_reset : bool = false) -> void:
 	

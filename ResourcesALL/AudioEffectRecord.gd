@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectRecord : AudioEffectRecord, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectRecord = AudioEffectRecord.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectRecord)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectRecord)
 
 	if randi() % 2 == 1:
 		q_AudioEffectRecord.set_format(Autoload.get_int()) #Format

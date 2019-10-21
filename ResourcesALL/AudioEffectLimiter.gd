@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectLimiter : AudioEffectLimiter, can_reset : bool = 
 		if randi() % 2 == 1:
 			q_AudioEffectLimiter = AudioEffectLimiter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectLimiter)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectLimiter)
 		
 	if randi() % 2 == 1:
 		q_AudioEffectLimiter.set_ceiling_db(Autoload.get_float())

@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventScreenTouch : InputEventScreenTouch, can_reset : b
 		if randi() % 2 == 1:
 			q_InputEventScreenTouch = InputEventScreenTouch.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventScreenTouch)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventScreenTouch)
 
 	if randi() % 2 == 1:
 		q_InputEventScreenTouch.set_index(Autoload.get_int())

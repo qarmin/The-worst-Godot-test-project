@@ -18,7 +18,7 @@ func nodeFunction(q_ArrayMesh : ArrayMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_ArrayMesh = ArrayMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_ArrayMesh)
+		AutoResourcesMesh.nodeFunction(q_ArrayMesh)
 
 	if randi() % 2 == 1:
 		q_ArrayMesh.set_blend_shape_mode(Autoload.get_int()) # BlendShapeMode

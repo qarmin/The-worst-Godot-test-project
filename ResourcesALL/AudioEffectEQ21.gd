@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectEQ21 : AudioEffectEQ21, can_reset : bool = false)
 		if randi() % 2 == 1:
 			q_AudioEffectEQ21 = AudioEffectEQ21.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectEQ21)
+		AutoResourcesAudioEffectEQ.nodeFunction(q_AudioEffectEQ21)

@@ -18,7 +18,7 @@ func nodeFunction(q_AudioStreamRandomPitch : AudioStreamRandomPitch, can_reset :
 		if randi() % 2 == 1:
 			q_AudioStreamRandomPitch = AudioStreamRandomPitch.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioStreamRandomPitch)
+		AutoResourcesAudioStream.nodeFunction(q_AudioStreamRandomPitch)
 
 	if randi() % 2 == 1:
 		q_AudioStreamRandomPitch.set_audio_stream(Autoload.loadA("AudioStreamGenerator.tres"))

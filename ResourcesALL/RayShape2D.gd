@@ -18,7 +18,7 @@ func nodeFunction(q_RayShape2D : RayShape2D, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_RayShape2D = RayShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_RayShape2D)
+		AutoResourcesShape2D.nodeFunction(q_RayShape2D)
 
 	if randi() % 2 == 1:
 		q_RayShape2D.set_length(Autoload.get_float())

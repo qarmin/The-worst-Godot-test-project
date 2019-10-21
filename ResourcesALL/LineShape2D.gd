@@ -18,7 +18,7 @@ func nodeFunction(q_LineShape2D : LineShape2D, can_reset : bool = false) -> void
 		if randi() % 2 == 1:
 			q_LineShape2D = LineShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_LineShape2D)
+		AutoResourcesShape2D.nodeFunction(q_LineShape2D)
 
 	if randi() % 2 == 1:
 		q_LineShape2D.set_normal(Autoload.get_vector2())

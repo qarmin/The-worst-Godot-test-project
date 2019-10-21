@@ -18,7 +18,7 @@ func nodeFunction(q_AudioStreamSample : AudioStreamSample, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioStreamSample = AudioStreamSample.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioStreamSample)
+		AutoResourcesAudioStream.nodeFunction(q_AudioStreamSample)
 
 	if randi() % 2 == 1:
 		q_AudioStreamSample.set_data(Autoload.get_poolbytearray())

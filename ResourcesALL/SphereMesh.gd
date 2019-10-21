@@ -18,7 +18,7 @@ func nodeFunction(q_SphereMesh : SphereMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_SphereMesh = SphereMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_SphereMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_SphereMesh)
 
 	if randi() % 2 == 1:
 		q_SphereMesh.set_radius(Autoload.get_float())

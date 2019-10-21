@@ -18,7 +18,7 @@ func nodeFunction(q_PrimitiveMesh : PrimitiveMesh, can_reset : bool = false) -> 
 #		if randi() % 2 == 1:
 #			q_PrimitiveMesh = PrimitiveMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_PrimitiveMesh)
+		AutoResourcesMesh.nodeFunction(q_PrimitiveMesh)
 
 	if randi() % 2 == 1:
 		q_PrimitiveMesh.set_material(Autoload.loadA("SpatialMaterial.tres"))

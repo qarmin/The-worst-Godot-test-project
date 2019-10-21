@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventMouseMotion : InputEventMouseMotion, can_reset : b
 		if randi() % 2 == 1:
 			q_InputEventMouseMotion = InputEventMouseMotion.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventMouseMotion)
+		AutoResourcesInputEventMouse.nodeFunction(q_InputEventMouseMotion)
 
 	if randi() % 2 == 1:
 		q_InputEventMouseMotion.set_relative(Autoload.get_vector2())

@@ -18,7 +18,7 @@ func nodeFunction(q_PHashTranslation : PHashTranslation, can_reset : bool = fals
 		if randi() % 2 == 1:
 			q_PHashTranslation = PHashTranslation.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_PHashTranslation)
+		AutoResourcesTranslation.nodeFunction(q_PHashTranslation)
 
-		if randi() % 2 == 1:
-			q_PHashTranslation.generate( Translation.new())
+	if randi() % 2 == 1:
+		q_PHashTranslation.generate( Translation.new())

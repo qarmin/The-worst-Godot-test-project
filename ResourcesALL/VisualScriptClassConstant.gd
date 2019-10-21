@@ -20,7 +20,7 @@ func nodeFunction(q_VisualScriptClassConstant : VisualScriptClassConstant, can_r
 	if randi() % 2 == 1:
 		AutoResourcesVisualScriptNode.nodeFunction(q_VisualScriptClassConstant)
 
-		if randi() % 2 == 1:
-			q_VisualScriptClassConstant.set_base_type(Autoload.get_string())
-		if randi() % 2 == 1:
-			q_VisualScriptClassConstant.set_class_constant(Autoload.get_string())
+	if randi() % 2 == 1:
+		q_VisualScriptClassConstant.set_base_type(Autoload.get_string())
+	if randi() % 2 == 1:
+		q_VisualScriptClassConstant.set_class_constant(Autoload.get_string())

@@ -18,7 +18,7 @@ func nodeFunction(q_BoxShape : BoxShape, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_BoxShape = BoxShape.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_BoxShape)
+		AutoResourcesShape.nodeFunction(q_BoxShape)
 
 	if randi() % 2 == 1:
 		q_BoxShape.set_extents(Autoload.get_vector3())

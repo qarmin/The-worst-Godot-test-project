@@ -18,7 +18,7 @@ func nodeFunction(q_PlaneMesh : PlaneMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_PlaneMesh = PlaneMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_PlaneMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_PlaneMesh)
 
 	if randi() % 2 == 1:
 		q_PlaneMesh.set_size(Autoload.get_vector2())

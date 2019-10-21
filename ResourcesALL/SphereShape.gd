@@ -18,7 +18,7 @@ func nodeFunction(q_SphereShape : SphereShape, can_reset : bool = false) -> void
 		if randi() % 2 == 1:
 			q_SphereShape = SphereShape.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_SphereShape)
+		AutoResourcesShape.nodeFunction(q_SphereShape)
 
 	if randi() % 2 == 1:
 		q_SphereShape.set_radius(Autoload.get_float())

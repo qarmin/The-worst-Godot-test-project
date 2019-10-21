@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectStereoEnhance : AudioEffectStereoEnhance, can_res
 		if randi() % 2 == 1:
 			q_AudioEffectStereoEnhance = AudioEffectStereoEnhance.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectStereoEnhance)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectStereoEnhance)
 
 	if randi() % 2 == 1:
 		q_AudioEffectStereoEnhance.set_pan_pullout(Autoload.get_float())

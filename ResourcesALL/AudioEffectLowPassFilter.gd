@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectLowPassFilter : AudioEffectLowPassFilter, can_res
 		if randi() % 2 == 1:
 			q_AudioEffectLowPassFilter = AudioEffectLowPassFilter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectLowPassFilter)
+		AutoResourcesAudioEffectFilter.nodeFunction(q_AudioEffectLowPassFilter)

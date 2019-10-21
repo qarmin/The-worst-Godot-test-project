@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventMagnifyGesture : InputEventMagnifyGesture, can_res
 		if randi() % 2 == 1:
 			q_InputEventMagnifyGesture = InputEventMagnifyGesture.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventMagnifyGesture)
+		AutoResourcesInputEventGesture.nodeFunction(q_InputEventMagnifyGesture)
 
 	if randi() % 2 == 1:
 		q_InputEventMagnifyGesture.set_factor(Autoload.get_float())

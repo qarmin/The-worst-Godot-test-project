@@ -14,7 +14,7 @@ onready var counter : float = Autoload.get_rand_time()
 #		counter = Autoload.get_rand_time()
 #
 #
-		var q_TextureLayered : TextureLayered = TextureLayered.new()
+#		var q_TextureLayered : TextureLayered = TextureLayered.new()
 #
 #		q_TextureLayered.set_flags(Autoload.get_int()) # Flags
 #		q_TextureLayered._set_data({Autoload.get_string()})

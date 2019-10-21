@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectCompressor : AudioEffectCompressor, can_reset : b
 		if randi() % 2 == 1:
 			q_AudioEffectCompressor = AudioEffectCompressor.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectCompressor)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectCompressor)
 
 	if randi() % 2 == 1:
 		q_AudioEffectCompressor.set_threshold(Autoload.get_float())

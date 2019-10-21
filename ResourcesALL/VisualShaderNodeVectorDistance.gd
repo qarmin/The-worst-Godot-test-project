@@ -12,7 +12,7 @@ func alt_process(delta) -> void:
 #
 #
 #	if counter <= 0:
-		counter = Autoload.get_rand_time()
+#		counter = Autoload.get_rand_time()
 #
 #
 #		var q_VisualShaderNodeVectorDistance : VisualShaderNodeVectorDistance = VisualShaderNodeVectorDistance.new()

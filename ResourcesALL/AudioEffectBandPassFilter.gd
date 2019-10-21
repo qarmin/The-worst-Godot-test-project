@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectBandLimitFilter : AudioEffectBandLimitFilter, can
 		if randi() % 2 == 1:
 			q_AudioEffectBandLimitFilter = AudioEffectBandLimitFilter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectBandLimitFilter)
+		AutoResourcesAudioEffectFilter.nodeFunction(q_AudioEffectBandLimitFilter)

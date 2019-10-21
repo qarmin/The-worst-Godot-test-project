@@ -18,7 +18,7 @@ func nodeFunction(q_CapsuleShape2D : CapsuleShape2D, can_reset : bool = false) -
 		if randi() % 2 == 1:
 			q_CapsuleShape2D = CapsuleShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CapsuleShape2D)
+		AutoResourcesShape2D.nodeFunction(q_CapsuleShape2D)
 
 	if randi() % 2 == 1:
 		q_CapsuleShape2D.set_radius(Autoload.get_float())

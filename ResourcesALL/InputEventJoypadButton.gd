@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventJoypadButton : InputEventJoypadButton, can_reset :
 		if randi() % 2 == 1:
 			q_InputEventJoypadButton = InputEventJoypadButton.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventJoypadButton)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventJoypadButton)
 
 	if randi() % 2 == 1:
 		q_InputEventJoypadButton.set_button_index(Autoload.get_int())

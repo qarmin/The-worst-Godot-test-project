@@ -18,7 +18,7 @@ func nodeFunction(q_ConcavePolygonShape : ConcavePolygonShape, can_reset : bool 
 		if randi() % 2 == 1:
 			q_ConcavePolygonShape = ConcavePolygonShape.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_ConcavePolygonShape)
+		AutoResourcesShape.nodeFunction(q_ConcavePolygonShape)
 
 	if randi() % 2 == 1:
 		q_ConcavePolygonShape.get_faces()

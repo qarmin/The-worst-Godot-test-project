@@ -1,6 +1,6 @@
 extends Node2D
 
-#var q_ARVRInterface : ARVRInterface = MobileVRInterface.new()
+var q_ARVRInterface : ARVRInterface = MobileVRInterface.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-#	WRONG_CLASSS	nodeFunction(q_ARVRInterface,true)
+		nodeFunction(q_ARVRInterface,true)
 
 func nodeFunction(q_ARVRInterface : ARVRInterface, can_reset : bool = false) -> void:
 	

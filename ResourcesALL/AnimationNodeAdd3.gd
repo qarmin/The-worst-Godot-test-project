@@ -20,5 +20,5 @@ func nodeFunction(q_AnimationNodeAdd3 : AnimationNodeAdd3, can_reset : bool = fa
 	if randi() % 2 == 1:
 		AutoResourcesAnimationNode.nodeFunction(q_AnimationNodeAdd3)
 
-		if randi() % 2 == 1:
-			q_AnimationNodeAdd3.set_use_sync(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_AnimationNodeAdd3.set_use_sync(Autoload.get_bool())

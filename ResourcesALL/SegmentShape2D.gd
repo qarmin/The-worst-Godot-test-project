@@ -18,7 +18,7 @@ func nodeFunction(q_SegmentShape2D : SegmentShape2D, can_reset : bool = false) -
 		if randi() % 2 == 1:
 			q_SegmentShape2D = SegmentShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_SegmentShape2D)
+		AutoResourcesShape2D.nodeFunction(q_SegmentShape2D)
 
 	if randi() % 2 == 1:
 		q_SegmentShape2D.set_a(Autoload.get_vector2())

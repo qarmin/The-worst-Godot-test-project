@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectHighShelfFilter : AudioEffectHighShelfFilter, can
 		if randi() % 2 == 1:
 			q_AudioEffectHighShelfFilter = AudioEffectHighShelfFilter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectHighShelfFilter)
+		AutoResourcesAudioEffectFilter.nodeFunction(q_AudioEffectHighShelfFilter)

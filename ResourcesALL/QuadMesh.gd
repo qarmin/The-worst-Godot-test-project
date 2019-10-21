@@ -18,4 +18,4 @@ func nodeFunction(q_QuadMesh : QuadMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_QuadMesh = QuadMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_QuadMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_QuadMesh)

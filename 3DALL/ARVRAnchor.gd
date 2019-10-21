@@ -33,4 +33,3 @@ func nodeFunction(q_ARVRAnchor : ARVRAnchor, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ARVRAnchor.get_size()
 	
-	return q_ARVRAnchor

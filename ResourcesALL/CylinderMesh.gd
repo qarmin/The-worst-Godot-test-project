@@ -18,7 +18,7 @@ func nodeFunction(q_CylinderMesh : CylinderMesh, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_CylinderMesh = CylinderMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CylinderMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_CylinderMesh)
 
 	if randi() % 2 == 1:
 		q_CylinderMesh.set_top_radius(Autoload.get_float())

@@ -20,7 +20,7 @@ func nodeFunction(q_VideoStreamWebm : VideoStreamWebm, can_reset : bool = false)
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_VideoStreamWebm)
 
-		if randi() % 2 == 1:
-			q_VideoStreamWebm.get_file()
-		if randi() % 2 == 1:
-			q_VideoStreamWebm.set_file( Autoload.get_string())
+	if randi() % 2 == 1:
+		q_VideoStreamWebm.get_file()
+	if randi() % 2 == 1:
+		q_VideoStreamWebm.set_file( Autoload.get_string())

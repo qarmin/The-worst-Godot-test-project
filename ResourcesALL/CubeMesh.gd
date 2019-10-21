@@ -18,7 +18,7 @@ func nodeFunction(q_CubeMesh : CubeMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_CubeMesh = CubeMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CubeMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_CubeMesh)
 
 	if randi() % 2 == 1:
 		q_CubeMesh.set_size(Autoload.get_vector3())

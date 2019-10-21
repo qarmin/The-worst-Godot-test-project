@@ -10,15 +10,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_QQRQQ,true)
+		nodeFunction(q_InputEventScreenDrag,true)
 
-InputEventScreenDrag
+func nodeFunction(q_InputEventScreenDrag : InputEventScreenDrag, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_QQRQQ = QQRQQ.new()
+			q_InputEventScreenDrag = InputEventScreenDrag.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_QQRQQ)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventScreenDrag)
 
 	if randi() % 2 == 1:
 		q_InputEventScreenDrag.set_index(Autoload.get_int())

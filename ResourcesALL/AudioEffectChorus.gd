@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectChorus : AudioEffectChorus, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectChorus = AudioEffectChorus.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectChorus)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectChorus)
 
 	if randi() % 2 == 1:
 		q_AudioEffectChorus.set_voice_count(Autoload.get_int())

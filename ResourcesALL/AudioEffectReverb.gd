@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectReverb : AudioEffectReverb, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectReverb = AudioEffectReverb.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectReverb)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectReverb)
 
 	if randi() % 2 == 1:
 		q_AudioEffectReverb.set_predelay_msec(Autoload.get_float())

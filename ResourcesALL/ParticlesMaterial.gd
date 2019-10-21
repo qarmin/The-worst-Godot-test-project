@@ -18,7 +18,7 @@ func nodeFunction(q_ParticlesMaterial : ParticlesMaterial, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_ParticlesMaterial = ParticlesMaterial.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_ParticlesMaterial)
+		AutoResourcesMaterial.nodeFunction(q_ParticlesMaterial)
 
 	if randi() % 2 == 1:
 		q_ParticlesMaterial.set_render_priority(Autoload.get_int())

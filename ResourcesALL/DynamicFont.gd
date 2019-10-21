@@ -18,7 +18,7 @@ func nodeFunction(q_DynamicFont : DynamicFont, can_reset : bool = false) -> void
 		if randi() % 2 == 1:
 			q_DynamicFont = DynamicFont.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_DynamicFont)
+		AutoResourcesFont.nodeFunction(q_DynamicFont)
 
 	if randi() % 2 == 1:
 		q_DynamicFont.set_size(Autoload.get_int())

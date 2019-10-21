@@ -18,4 +18,4 @@ func nodeFunction(q_AudioStreamGenerator : AudioStreamGenerator, can_reset : boo
 		if randi() % 2 == 1:
 			q_AudioStreamGenerator = AudioStreamGenerator.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioStreamGenerator)
+		AutoResourcesAudioStream.nodeFunction(q_AudioStreamGenerator)

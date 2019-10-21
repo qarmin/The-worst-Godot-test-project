@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_AudioEffectLowShelfFilter : AudioEffectLowShelfFilter = AudioEffectLowShelfFilter.new()
+var q_AudioEffectNotchFilter : AudioEffectNotchFilter = AudioEffectNotchFilter.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectNotchFilter : AudioEffectNotchFilter, can_reset :
 		if randi() % 2 == 1:
 			q_AudioEffectNotchFilter = AudioEffectNotchFilter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectNotchFilter)
+		AutoResourcesAudioEffectFilter.nodeFunction(q_AudioEffectNotchFilter)

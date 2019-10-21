@@ -18,7 +18,7 @@ func nodeFunction(q_CylinderShape : CylinderShape, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_CylinderShape = CylinderShape.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CylinderShape)
+		AutoResourcesShape.nodeFunction(q_CylinderShape)
 
 	if randi() % 2 == 1:
 		q_CylinderShape.set_radius(Autoload.get_float())

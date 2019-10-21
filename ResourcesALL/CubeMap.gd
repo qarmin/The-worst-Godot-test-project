@@ -20,18 +20,18 @@ func nodeFunction(q_CubeMap : CubeMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_CubeMap)
 
-		if randi() % 2 == 1:
-			q_CubeMap.set_flags(Autoload.get_int()) #FLAGS 
-		if randi() % 2 == 1:
-			q_CubeMap.set_storage(Autoload.get_int()) #Storage
-		if randi() % 2 == 1:
-			q_CubeMap.set_lossy_storage_quality(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_CubeMap.set_flags(Autoload.get_int()) #FLAGS 
+	if randi() % 2 == 1:
+		q_CubeMap.set_storage(Autoload.get_int()) #Storage
+	if randi() % 2 == 1:
+		q_CubeMap.set_lossy_storage_quality(Autoload.get_float())
 
-		if randi() % 2 == 1:
-			q_CubeMap.get_height()
-		if randi() % 2 == 1:
-			q_CubeMap.get_side(Autoload.get_int())# Side
-		if randi() % 2 == 1:
-			q_CubeMap.get_width()
-		if randi() % 2 == 1:
-			q_CubeMap.set_side( Autoload.get_int(), Autoload.loadA("Sprite.png"))# Side
+	if randi() % 2 == 1:
+		q_CubeMap.get_height()
+	if randi() % 2 == 1:
+		q_CubeMap.get_side(Autoload.get_int())# Side
+	if randi() % 2 == 1:
+		q_CubeMap.get_width()
+	if randi() % 2 == 1:
+		q_CubeMap.set_side( Autoload.get_int(), Autoload.loadA("Sprite.png"))# Side

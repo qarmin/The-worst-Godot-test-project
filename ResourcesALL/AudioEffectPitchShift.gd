@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectPitchShift : AudioEffectPitchShift, can_reset : b
 		if randi() % 2 == 1:
 			q_AudioEffectPitchShift = AudioEffectPitchShift.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectPitchShift)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectPitchShift)
 
 	if randi() % 2 == 1:
 		q_AudioEffectPitchShift.set_pitch_scale(Autoload.get_float())

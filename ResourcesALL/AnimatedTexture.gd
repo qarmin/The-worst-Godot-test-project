@@ -18,7 +18,7 @@ func nodeFunction(q_AnimatedTexture : AnimatedTexture, can_reset : bool = false)
 		if randi() % 2 == 1:
 			q_AnimatedTexture = AnimatedTexture.new()
 	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction()
+		AutoResourcesTexture.nodeFunction(q_AnimatedTexture)
 
 	if randi() % 2 == 1:
 		q_AnimatedTexture.set_frames(Autoload.get_int())

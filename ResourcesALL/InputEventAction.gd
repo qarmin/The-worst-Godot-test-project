@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventAction : InputEventAction, can_reset : bool = fals
 		if randi() % 2 == 1:
 			q_InputEventAction = InputEventAction.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventAction)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventAction)
 
 	if randi() % 2 == 1:
 			q_InputEventAction.set_action(Autoload.get_string())

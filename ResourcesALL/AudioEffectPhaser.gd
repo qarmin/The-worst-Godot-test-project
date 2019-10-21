@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectPhaser : AudioEffectPhaser, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectPhaser = AudioEffectPhaser.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectPhaser)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectPhaser)
 
 	if randi() % 2 == 1:
 		q_AudioEffectPhaser.set_range_min_hz(Autoload.get_float())

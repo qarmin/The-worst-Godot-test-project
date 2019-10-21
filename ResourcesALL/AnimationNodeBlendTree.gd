@@ -20,8 +20,8 @@ func nodeFunction(q_AnimationNodeBlendTree : AnimationNodeBlendTree, can_reset :
 	if randi() % 2 == 1:
 		AutoResourcesAnimationRootNode.nodeFunction(q_AnimationNodeBlendTree)
 
-		if randi() % 2 == 1:
-			q_AnimationNodeBlendTree.set_graph_offset(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_AnimationNodeBlendTree.set_graph_offset(Autoload.get_vector2())
 
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendTree.add_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_vector2())

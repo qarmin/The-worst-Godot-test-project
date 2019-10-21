@@ -18,7 +18,7 @@ func nodeFunction(q_CanvasItemMaterial : CanvasItemMaterial, can_reset : bool = 
 		if randi() % 2 == 1:
 			q_CanvasItemMaterial = CanvasItemMaterial.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CanvasItemMaterial)
+		AutoResourcesMaterial.nodeFunction(q_CanvasItemMaterial)
 
 	if randi() % 2 == 1:
 		q_CanvasItemMaterial.set_blend_mode(Autoload.get_int()) #BlendMode

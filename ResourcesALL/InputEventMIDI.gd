@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventMIDI : InputEventMIDI, can_reset : bool = false) -
 		if randi() % 2 == 1:
 			q_InputEventMIDI = InputEventMIDI.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventMIDI)
+		AutoResourcesInputEvent.nodeFunction(q_InputEventMIDI)
 
 	if randi() % 2 == 1:
 		q_InputEventMIDI.set_channel(Autoload.get_int())

@@ -18,7 +18,7 @@ func nodeFunction(q_InputEventPanGesture : InputEventPanGesture, can_reset : boo
 		if randi() % 2 == 1:
 			q_InputEventPanGesture = InputEventPanGesture.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_InputEventPanGesture)
+		AutoResourcesInputEventGesture.nodeFunction(q_InputEventPanGesture)
 
 	if randi() % 2 == 1:
 		q_InputEventPanGesture.set_delta(Autoload.get_vector2())

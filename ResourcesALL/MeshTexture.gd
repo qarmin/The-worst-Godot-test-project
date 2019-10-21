@@ -20,9 +20,9 @@ func nodeFunction(q_MeshTexture : MeshTexture, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_MeshTexture)
 
-		if randi() % 2 == 1:
-			q_MeshTexture.set_mesh(Mesh.new())
-		if randi() % 2 == 1:
-			q_MeshTexture.set_base_texture(Autoload.loadA("Sprite.png"))
-		if randi() % 2 == 1:
-			q_MeshTexture.set_image_size(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_MeshTexture.set_mesh(Mesh.new())
+	if randi() % 2 == 1:
+		q_MeshTexture.set_base_texture(Autoload.loadA("Sprite.png"))
+	if randi() % 2 == 1:
+		q_MeshTexture.set_image_size(Autoload.get_vector2())

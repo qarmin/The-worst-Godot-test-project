@@ -18,7 +18,7 @@ func nodeFunction(q_CircleShape2D : CircleShape2D, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_CircleShape2D = CircleShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_CircleShape2D)
+		AutoResourcesShape2D.nodeFunction(q_CircleShape2D)
 
 	if randi() % 2 == 1:
 		q_CircleShape2D.set_radius(Autoload.get_float())

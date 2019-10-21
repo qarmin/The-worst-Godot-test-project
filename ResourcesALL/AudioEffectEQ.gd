@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectEQ : AudioEffectEQ, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_AudioEffectEQ = AudioEffectEQ.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectEQ)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectEQ)
 
 	if randi() % 2 == 1:
 		q_AudioEffectEQ.get_band_count()

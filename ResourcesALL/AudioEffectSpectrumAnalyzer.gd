@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectSpectrumAnalyzer : AudioEffectSpectrumAnalyzer, c
 		if randi() % 2 == 1:
 			q_AudioEffectSpectrumAnalyzer = AudioEffectSpectrumAnalyzer.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectSpectrumAnalyzer)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectSpectrumAnalyzer)
 
 	if randi() % 2 == 1:
 		q_AudioEffectSpectrumAnalyzer.set_buffer_length(Autoload.get_float())

@@ -18,4 +18,4 @@ func nodeFunction(q_AudioEffectAmplify : AudioEffectAmplify, can_reset : bool = 
 		if randi() % 2 == 1:
 			q_AudioEffectAmplify = AudioEffectAmplify.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectAmplify)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectAmplify)

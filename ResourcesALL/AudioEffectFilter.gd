@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectFilter : AudioEffectFilter, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectFilter = AudioEffectFilter.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectFilter)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectFilter)
 
 	if randi() % 2 == 1:
 		q_AudioEffectFilter.set_cutoff(Autoload.get_float())

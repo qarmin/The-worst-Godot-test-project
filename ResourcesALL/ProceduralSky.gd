@@ -19,7 +19,7 @@ func nodeFunction(q_ProceduralSky : ProceduralSky, can_reset : bool = false) -> 
 			if randi() % 2 == 1:
 				q_ProceduralSky = ProceduralSky.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_ProceduralSky)
+		AutoResourcesSky.nodeFunction(q_ProceduralSky)
 
 	if randi() % 2 == 1:
 		q_ProceduralSky.set_sky_top_color(Autoload.get_color())

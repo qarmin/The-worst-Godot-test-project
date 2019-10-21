@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectDistortion : AudioEffectDistortion, can_reset : b
 		if randi() % 2 == 1:
 			q_AudioEffectDistortion = AudioEffectDistortion.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectDistortion)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectDistortion)
 
 	if randi() % 2 == 1:
 		q_AudioEffectDistortion.set_mode(Autoload.get_int()) #Mode

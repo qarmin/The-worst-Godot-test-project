@@ -11,13 +11,13 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_QQRQQ,true)
+		nodeFunction(q_RID,true)
 
-func nodeFunction(q_QQRQQ : QQRQQ, can_reset : bool = false) -> void:
+func nodeFunction(q_RID : RID, can_reset : bool = false) -> void:
 	
-	if can_reset:
+#	if can_reset:
 #		if randi() % 2 == 1:
 #			#q_RID = RID()
 
 	if randi() % 2 == 1:
-		q_RID.get_id())
+		q_RID.get_id()

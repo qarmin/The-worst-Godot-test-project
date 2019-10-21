@@ -19,7 +19,7 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 			q_NoiseTexture = NoiseTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_NoiseTexture)
-
+# BUG
 #	if randi() % 2 == 1:
 #		q_NoiseTexture.set_width(Autoload.get_int())
 #	if randi() % 2 == 1:

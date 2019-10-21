@@ -20,5 +20,5 @@ func nodeFunction(q_VisualScriptDeconstruct : VisualScriptDeconstruct, can_reset
 	if randi() % 2 == 1:
 		AutoResourcesVisualScriptNode.nodeFunction(q_VisualScriptDeconstruct)
 
-		if randi() % 2 == 1:
-			q_VisualScriptDeconstruct.set_deconstruct_type(Autoload.get_int())  # Variant_MAX
+	if randi() % 2 == 1:
+		q_VisualScriptDeconstruct.set_deconstruct_type(Autoload.get_int())  # Variant_MAX

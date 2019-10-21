@@ -20,5 +20,5 @@ func nodeFunction(q_AudioStream : AudioStream, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_AudioStream)
 
-		if randi() % 2 == 1:
-			q_AudioStream.get_length()
+	if randi() % 2 == 1:
+		q_AudioStream.get_length()

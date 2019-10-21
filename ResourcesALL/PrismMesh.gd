@@ -18,7 +18,7 @@ func nodeFunction(q_PrismMesh : PrismMesh, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_PrismMesh = PrismMesh.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_PrismMesh)
+		AutoResourcesPrimitiveMesh.nodeFunction(q_PrismMesh)
 
 	if randi() % 2 == 1:
 		q_PrismMesh.set_left_to_right(Autoload.get_float())

@@ -18,7 +18,7 @@ func nodeFunction(q_AudioStreamOGGVorbis : AudioStreamOGGVorbis, can_reset : boo
 		if randi() % 2 == 1:
 			q_AudioStreamOGGVorbis = AudioStreamOGGVorbis.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioStreamOGGVorbis)
+		AutoResourcesAudioStream.nodeFunction(q_AudioStreamOGGVorbis)
 
 	if randi() % 2 == 1:
 		q_AudioStreamOGGVorbis.set_data(Autoload.get_poolbytearray())

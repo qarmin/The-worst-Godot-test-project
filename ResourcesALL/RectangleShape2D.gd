@@ -18,7 +18,7 @@ func nodeFunction(q_RectangleShape2D : RectangleShape2D, can_reset : bool = fals
 		if randi() % 2 == 1:
 			q_RectangleShape2D = RectangleShape2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_RectangleShape2D)
+		AutoResourcesShape2D.nodeFunction(q_RectangleShape2D)
 
 	if randi() % 2 == 1:
 		q_RectangleShape2D.set_extents(Autoload.get_vector2())

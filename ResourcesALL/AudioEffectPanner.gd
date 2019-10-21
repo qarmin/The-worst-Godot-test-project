@@ -18,7 +18,7 @@ func nodeFunction(q_AudioEffectPanner : AudioEffectPanner, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_AudioEffectPanner = AudioEffectPanner.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_AudioEffectPanner)
+		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectPanner)
 
 	if randi() % 2 == 1:
 		q_AudioEffectPanner.set_pan(Autoload.get_float())

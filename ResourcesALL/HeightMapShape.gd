@@ -18,11 +18,11 @@ func nodeFunction(q_HeightMapShape : HeightMapShape, can_reset : bool = false) -
 		if randi() % 2 == 1:
 			q_HeightMapShape = HeightMapShape.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_HeightMapShape)
+		AutoResourcesShape.nodeFunction(q_HeightMapShape)
 
-#	BUG	if randi() % 2 == 1:
+#BUG	if randi() % 2 == 1:
 #			q_HeightMapShape.set_map_width(Autoload.get_int())
-#		if randi() % 2 == 1:
+#	if randi() % 2 == 1:
 #			q_HeightMapShape.set_map_depth(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_HeightMapShape.set_map_data(Autoload.get_poolrealarray())
+	if randi() % 2 == 1:
+		q_HeightMapShape.set_map_data(Autoload.get_poolrealarray())

@@ -18,7 +18,7 @@ func nodeFunction(q_VisualScript : VisualScript, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_VisualScript = VisualScript.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_VisualScript)
+		AutoResourcesScript.nodeFunction(q_VisualScript)
 
 	if randi() % 2 == 1:
 		q_VisualScript.add_custom_signal( Autoload.get_string())

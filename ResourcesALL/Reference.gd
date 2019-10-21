@@ -20,7 +20,6 @@ func nodeFunction(q_Reference : Reference, can_reset : bool = false) -> void:
 			q_Reference = Reference.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_Reference)
-		AutoObjects.A_Reference(q_Reference)
 		
 	if randi() % 2 == 1:
 		q_Reference.init_ref()

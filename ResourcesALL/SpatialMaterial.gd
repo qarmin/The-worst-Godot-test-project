@@ -18,7 +18,7 @@ func nodeFunction(q_SpatialMaterial : SpatialMaterial, can_reset : bool = false)
 		if randi() % 2 == 1:
 			q_SpatialMaterial = SpatialMaterial.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_SpatialMaterial)
+		AutoResourcesMaterial.nodeFunction(q_SpatialMaterial)
 
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_feature(Autoload.get_int(),Autoload.get_bool())
@@ -88,7 +88,7 @@ func nodeFunction(q_SpatialMaterial : SpatialMaterial, can_reset : bool = false)
 		q_SpatialMaterial.set_anisotropy(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_ao_light_affect(Autoload.get_float())
-#		if randi() % 2 == 1:
+#	if randi() % 2 == 1:
 		#BUG q_SpatialMaterial.set_ao_texture_channel(Autoload.get_int())#TextureChannel
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_depth_scale(Autoload.get_float())
@@ -106,7 +106,7 @@ func nodeFunction(q_SpatialMaterial : SpatialMaterial, can_reset : bool = false)
 		q_SpatialMaterial.set_subsurface_scattering_strength(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_refraction(Autoload.get_bool())
-#		if randi() % 2 == 1:
+#	if randi() % 2 == 1:
 		#BUG q_SpatialMaterial.set_refraction_texture_channel(Autoload.get_int())#TextureChannel
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_detail_blend_mode(Autoload.get_int()) #BlendMode
