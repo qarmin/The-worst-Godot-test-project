@@ -1,6 +1,7 @@
 extends Node2D
 
 var q_CubeMap : CubeMap = CubeMap.new()
+
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -9,8 +10,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_CubeMap,true)
+
+func nodeFunction(q_CubeMap : CubeMap, can_reset : bool = false) -> void:
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_CubeMap = CubeMap.new()
+	if randi() % 2 == 1:
+		AutoResourcesResource.nodeFunction(q_CubeMap)
 
 		if randi() % 2 == 1:
 			q_CubeMap.set_flags(Autoload.get_int()) #FLAGS 
@@ -20,10 +28,10 @@ func alt_process(delta) -> void:
 			q_CubeMap.set_lossy_storage_quality(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			q_CubeMap.get_height())
+			q_CubeMap.get_height()
 		if randi() % 2 == 1:
-			q_CubeMap.get_side(Autoload.get_int()))# Side
+			q_CubeMap.get_side(Autoload.get_int())# Side
 		if randi() % 2 == 1:
-			q_CubeMap.get_width())
+			q_CubeMap.get_width()
 		if randi() % 2 == 1:
 			q_CubeMap.set_side( Autoload.get_int(), Autoload.loadA("Sprite.png"))# Side

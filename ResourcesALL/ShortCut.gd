@@ -1,6 +1,7 @@
 extends Node2D
 
 var q_ShortCut : ShortCut = ShortCut.new()
+
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -9,16 +10,23 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_ShortCut,true)
+
+func nodeFunction(q_ShortCut : ShortCut, can_reset : bool = false) -> void:
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_ShortCut = ShortCut.new()
+	if randi() % 2 == 1:
+		AutoResourcesResource.nodeFunction(q_ShortCut)
 
-		if randi() % 2 == 1:
-			q_ShortCut.set_shortcut(Autoload.loadA("InputEventAction.tres"))
+	if randi() % 2 == 1:
+		q_ShortCut.set_shortcut(Autoload.loadA("InputEventAction.tres"))
 
-		if randi() % 2 == 1:
-			q_ShortCut.get_as_text())
+	if randi() % 2 == 1:
+		q_ShortCut.get_as_text()
 
-		if randi() % 2 == 1:
-			q_ShortCut.is_shortcut(Autoload.loadA("InputEventAction.tres")))
-		if randi() % 2 == 1:
-			q_ShortCut.is_valid())
+	if randi() % 2 == 1:
+		q_ShortCut.is_shortcut(Autoload.loadA("InputEventAction.tres"))
+	if randi() % 2 == 1:
+		q_ShortCut.is_valid()

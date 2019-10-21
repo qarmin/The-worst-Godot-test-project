@@ -1,6 +1,7 @@
 extends Node2D
 
 var q_HeightMapShape : HeightMapShape = HeightMapShape.new()
+
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -9,8 +10,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_HeightMapShape,true)
+
+func nodeFunction(q_HeightMapShape : HeightMapShape, can_reset : bool = false) -> void:
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_HeightMapShape = HeightMapShape.new()
+	if randi() % 2 == 1:
+		AutoResourcesResource.nodeFunction(q_HeightMapShape)
 
 #	BUG	if randi() % 2 == 1:
 #			q_HeightMapShape.set_map_width(Autoload.get_int())

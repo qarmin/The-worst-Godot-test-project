@@ -1,10 +1,8 @@
 extends Node2D
 
 var q_Expression : Expression = Expression.new()
-var q_temp0 : Node = load("res://RES/Node.tscn").instance()
-onready var counter : float = Autoload.get_rand_time()
 
-#	add_child(q_temp0)
+onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -12,20 +10,26 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_Expression,true)
+
+func nodeFunction(q_Expression : Expression, can_reset : bool = false) -> void:
+	
+	var q_node2D : Node2D = Node2D.new()
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_Expression = Expression.new()
-			q_temp0.queue_free()
-			q_temp0 = load("res://RES/Node.tscn").instance()
-			add_child(q_temp0)
+	if randi() % 2 == 1:
+		AutoResourcesReference.nodeFunction(q_Expression)
 
-		if randi() % 2 == 1:
-			q_Expression.execute( [Autoload.get_string()], q_temp0, Autoload.get_bool()))
-		if randi() % 2 == 1:
-			q_Expression.get_error_text())
-		if randi() % 2 == 1:
-			q_Expression.has_execute_failed())
-		if randi() % 2 == 1:
-			q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray()))
+	if randi() % 2 == 1:
+		q_Expression.execute( Autoload.get_array(), q_node2D, Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_Expression.get_error_text()
+	if randi() % 2 == 1:
+		q_Expression.has_execute_failed()
+	if randi() % 2 == 1:
+		q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray())
+	
+	q_node2D.queue_free()
 
-func delete_node():
-	q_temp0.queue_free()

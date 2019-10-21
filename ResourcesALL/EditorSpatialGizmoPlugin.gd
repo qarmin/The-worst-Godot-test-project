@@ -2,16 +2,22 @@ extends Node2D
 
 onready var counter : float = Autoload.get_rand_time()
 
-#
-#
-#
-#func alt_process(delta) -> void:
+func alt_process(delta) -> void:
+	pass
 #	counter -= delta
-#
-#
 #
 #	if counter <= 0:
 #		counter = Autoload.get_rand_time()
+#
+#		nodeFunction(q_QQRQQ,true)
+
+#func nodeFunction(q_QQRQQ : QQRQQ, can_reset : bool = false) -> void:
+#
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_QQRQQ = QQRQQ.new()
+#	if randi() % 2 == 1:
+#		AutoResourcesResource.nodeFunction(q_QQRQQ)
 #
 #
 #		var q_EditorSpatialGizmoPlugin : EditorSpatialGizmoPlugin = EditorSpatialGizmoPlugin.new()

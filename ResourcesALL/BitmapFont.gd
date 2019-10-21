@@ -1,6 +1,7 @@
 extends Node2D
 
 var q_BitmapFont : BitmapFont = BitmapFont.new()
+
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -9,8 +10,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_BitmapFont,true)
+
+func nodeFunction(q_BitmapFont : BitmapFont, can_reset : bool = false) -> void:
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_BitmapFont = BitmapFont.new()
+	if randi() % 2 == 1:
+		AutoResourcesResource.nodeFunction(q_BitmapFont)
 
 		if randi() % 2 == 1:
 			q_BitmapFont.set_height(Autoload.get_float())
@@ -32,13 +40,13 @@ func alt_process(delta) -> void:
 			q_BitmapFont.clear()
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
+				q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" )
 
 		if randi() % 2 == 1:
-			q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int()))
+			q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
-			q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int()))
+			q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
-			q_BitmapFont.get_texture( Autoload.get_int()))
+			q_BitmapFont.get_texture( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_BitmapFont.get_texture_count())
+			q_BitmapFont.get_texture_count()

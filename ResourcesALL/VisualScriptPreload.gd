@@ -1,6 +1,7 @@
 extends Node2D
 
 var q_VisualScriptPreload : VisualScriptPreload = VisualScriptPreload.new()
+
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -9,9 +10,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+		nodeFunction(q_VisualScriptPreload,true)
+
+func nodeFunction(q_VisualScriptPreload : VisualScriptPreload, can_reset : bool = false) -> void:
+	
+	if can_reset:
 		if randi() % 2 == 1:
 			q_VisualScriptPreload = VisualScriptPreload.new()
+	if randi() % 2 == 1:
+		AutoResourcesVisualScriptNode.nodeFunction(q_VisualScriptPreload)
 
-		if Autoload.SLOW_FUNCTIONS:
-			if randi() % 2 == 1:
-				q_VisualScriptPreload.set_preload(Autoload.loadA("Sprite.png"))
+	if Autoload.SLOW_FUNCTIONS:
+		if randi() % 2 == 1:
+			q_VisualScriptPreload.set_preload(Autoload.loadA("Sprite.png"))
