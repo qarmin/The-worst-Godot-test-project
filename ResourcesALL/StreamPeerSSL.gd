@@ -18,7 +18,7 @@ func nodeFunction(q_StreamPeerSSL : StreamPeerSSL, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_StreamPeerSSL = StreamPeerSSL.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_StreamPeerSSL)
+		AutoResourcesStreamPeer.nodeFunction(q_StreamPeerSSL)
 
 #	if randi() % 2 == 1:
 #	SPAM		q_StreamPeerSSL.accept_stream( StreamPeerTCP.new(),Autoload.loadA("CryptoKey.tres"),X509Certificate.new(),X509Certificate.new()))

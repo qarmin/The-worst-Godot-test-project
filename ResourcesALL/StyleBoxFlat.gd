@@ -18,7 +18,7 @@ func nodeFunction(q_StyleBoxFlat : StyleBoxFlat, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_StyleBoxFlat = StyleBoxFlat.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_StyleBoxFlat)
+		AutoResourcesStyleBox.nodeFunction(q_StyleBoxFlat)
 			
 	if randi() % 2 == 1:
 		q_StyleBoxFlat.set_bg_color(Autoload.get_color())

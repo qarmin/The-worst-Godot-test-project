@@ -12,5 +12,5 @@ func _ready() -> void:
 
 func alt_process(delta) -> void:
 	for i in get_children():
-		if i.has_method("alt_process"):
-			i.alt_process(delta)
+#		if i.has_method("alt_process"):
+		i.alt_process(delta)

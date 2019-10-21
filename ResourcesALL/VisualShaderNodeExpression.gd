@@ -18,7 +18,7 @@ func nodeFunction(q_VisualShaderNodeExpression : VisualShaderNodeExpression, can
 		if randi() % 2 == 1:
 			q_VisualShaderNodeExpression = VisualShaderNodeExpression.new()
 	if randi() % 2 == 1:
-		AutoResourcesVisualShaderNode.nodeFunction(q_VisualShaderNodeExpression)
+		AutoResourcesVisualShaderNodeGroupBase.nodeFunction(q_VisualShaderNodeExpression)
 
 	if randi() % 2 == 1:
 		q_VisualShaderNodeExpression.set_expression(Autoload.get_string())

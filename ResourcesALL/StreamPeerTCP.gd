@@ -18,7 +18,7 @@ func nodeFunction(q_StreamPeerTCP : StreamPeerTCP, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_StreamPeerTCP = StreamPeerTCP.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_StreamPeerTCP)
+		AutoResourcesStreamPeer.nodeFunction(q_StreamPeerTCP)
 
 	if randi() % 2 == 1:
 		q_StreamPeerTCP.connect_to_host( Autoload.get_string(), Autoload.get_int())

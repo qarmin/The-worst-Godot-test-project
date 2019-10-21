@@ -18,7 +18,7 @@ func nodeFunction(q_WebSocketClient : WebSocketClient, can_reset : bool = false)
 		if randi() % 2 == 1:
 			q_WebSocketClient = WebSocketClient.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_WebSocketClient)
+		AutoResourcesWebSocketMultiplayerPeer.nodeFunction(q_WebSocketClient)
 
 	if randi() % 2 == 1:
 		q_WebSocketClient.set_verify_ssl_enabled(Autoload.get_bool())

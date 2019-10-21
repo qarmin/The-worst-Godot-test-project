@@ -18,6 +18,7 @@ func nodeFunction(q_VisualShaderNodeTextureUniform : VisualShaderNodeTextureUnif
 		if randi() % 2 == 1:
 			q_VisualShaderNodeTextureUniform = VisualShaderNodeTextureUniform.new()
 	if randi() % 2 == 1:
+#		AutoResourcesVisualShaderNodeUniform.nodeFunction(q_VisualShaderNodeTextureUniform)
 		AutoResourcesVisualShaderNode.nodeFunction(q_VisualShaderNodeTextureUniform)
 
 	if randi() % 2 == 1:

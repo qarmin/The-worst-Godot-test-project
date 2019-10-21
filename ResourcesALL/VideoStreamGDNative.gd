@@ -18,7 +18,7 @@ func nodeFunction(q_VideoStreamGDNative : VideoStreamGDNative, can_reset : bool 
 		if randi() % 2 == 1:
 			q_VideoStreamGDNative = VideoStreamGDNative.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_VideoStreamGDNative)
+		AutoResourcesVideoStream.nodeFunction(q_VideoStreamGDNative)
 
 	if randi() % 2 == 1:
 		q_VideoStreamGDNative.get_file()

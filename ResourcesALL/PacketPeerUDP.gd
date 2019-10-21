@@ -18,7 +18,7 @@ func nodeFunction(q_PacketPeerUDP : PacketPeerUDP, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_PacketPeerUDP = PacketPeerUDP.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_PacketPeerUDP)
+		AutoResourcesPacketPeer.nodeFunction(q_PacketPeerUDP)
 
 	if randi() % 2 == 1:
 		q_PacketPeerUDP.close()

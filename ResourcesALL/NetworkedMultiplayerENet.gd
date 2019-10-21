@@ -18,7 +18,7 @@ func nodeFunction(q_NetworkedMultiplayerENet : NetworkedMultiplayerENet, can_res
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet = NetworkedMultiplayerENet.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_NetworkedMultiplayerENet)
+		AutoResourcesNetworkedMultiplayerPeer.nodeFunction(q_NetworkedMultiplayerENet)
 
 	if randi() % 2 == 1:
 		q_NetworkedMultiplayerENet.set_compression_mode(Autoload.get_int()) #CompressionMode

@@ -18,7 +18,7 @@ func nodeFunction(q_WebSocketPeer : WebSocketPeer, can_reset : bool = false) -> 
 		if randi() % 2 == 1:
 			q_WebSocketPeer = WebSocketPeer.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_WebSocketPeer)
+		AutoResourcesPacketPeer.nodeFunction(q_WebSocketPeer)
 
 	if randi() % 2 == 1:
 		q_WebSocketPeer.get_connected_host()

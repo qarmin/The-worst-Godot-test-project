@@ -20,16 +20,24 @@ func nodeFunction(q_StyleBox : StyleBox, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_StyleBox)
 
-	for i in range(4):
-		q_StyleBox.set_default_margin( i,Autoload.get_float())#MARGIN
+	if randi() % 2 == 1:
+		for i in range(4):
+			q_StyleBox.set_default_margin( i,Autoload.get_float())#MARGIN
 
-	q_StyleBox.draw( RID(), Autoload.get_rect2())
+	if randi() % 2 == 1:
+		q_StyleBox.draw( RID(), Autoload.get_rect2())
 
-	q_StyleBox.get_center_size()
-	q_StyleBox.get_current_item_drawn()
-	q_StyleBox.get_margin( Autoload.get_int())#MARGIN
-	q_StyleBox.get_minimum_size()
-	q_StyleBox.get_offset()
+	if randi() % 2 == 1:
+		q_StyleBox.get_center_size()
+	if randi() % 2 == 1:
+		q_StyleBox.get_current_item_drawn()
+	if randi() % 2 == 1:
+		q_StyleBox.get_margin( Autoload.get_int())#MARGIN
+	if randi() % 2 == 1:
+		q_StyleBox.get_minimum_size()
+	if randi() % 2 == 1:
+		q_StyleBox.get_offset()
 
-	q_StyleBox.test_mask( Autoload.get_vector2(), Autoload.get_rect2())
+	if randi() % 2 == 1:
+		q_StyleBox.test_mask( Autoload.get_vector2(), Autoload.get_rect2())
 

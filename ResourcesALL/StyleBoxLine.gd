@@ -18,7 +18,7 @@ func nodeFunction(q_StyleBoxLine : StyleBoxLine, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_StyleBoxLine = StyleBoxLine.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_StyleBoxLine)
+		AutoResourcesStyleBox.nodeFunction(q_StyleBoxLine)
 
 	if randi() % 2 == 1:
 		q_StyleBoxLine.set_color(Autoload.get_color())

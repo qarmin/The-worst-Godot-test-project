@@ -18,7 +18,7 @@ func nodeFunction(q_PacketPeerStream : PacketPeerStream, can_reset : bool = fals
 		if randi() % 2 == 1:
 			q_PacketPeerStream = PacketPeerStream.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_PacketPeerStream)
+		AutoResourcesPacketPeer.nodeFunction(q_PacketPeerStream)
 
 	if randi() % 2 == 1:
 		q_PacketPeerStream.set_input_buffer_max_size(Autoload.get_int())

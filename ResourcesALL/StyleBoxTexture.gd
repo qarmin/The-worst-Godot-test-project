@@ -18,7 +18,7 @@ func nodeFunction(q_StyleBoxTexture : StyleBoxTexture, can_reset : bool = false)
 		if randi() % 2 == 1:
 			q_StyleBoxTexture = StyleBoxTexture.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_StyleBoxTexture)
+		AutoResourcesStyleBox.nodeFunction(q_StyleBoxTexture)
 
 	if randi() % 2 == 1:
 		q_StyleBoxTexture.set_texture(Autoload.loadA("Sprite.png"))

@@ -4,18 +4,23 @@ var q_MultiplayerAPI : MultiplayerAPI = MultiplayerAPI.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
-#	add_child(q_temp0)
-#
 func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-	var q_node : Node = Node.new()
-	if randi() % 2 == 1:
-		q_MultiplayerAPI = MultiplayerAPI.new()
+		nodeFunction(q_MultiplayerAPI,true)
 
+func nodeFunction(q_MultiplayerAPI : MultiplayerAPI, can_reset : bool = false) -> void:
+	
+	if can_reset:
+		if randi() % 2 == 1:
+			q_MultiplayerAPI = MultiplayerAPI.new()
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_MultiplayerAPI)
+
+	var q_node : Node = Node.new()
 	if randi() % 2 == 1:
 		q_MultiplayerAPI.set_allow_object_decoding(Autoload.get_bool())
 	if randi() % 2 == 1:

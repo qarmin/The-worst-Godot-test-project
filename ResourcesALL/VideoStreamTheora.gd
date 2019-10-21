@@ -18,7 +18,7 @@ func nodeFunction(q_VideoStreamTheora : VideoStreamTheora, can_reset : bool = fa
 		if randi() % 2 == 1:
 			q_VideoStreamTheora = VideoStreamTheora.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_VideoStreamTheora)
+		AutoResourcesVideoStream.nodeFunction(q_VideoStreamTheora)
 
 	if randi() % 2 == 1:
 		q_VideoStreamTheora.get_file()

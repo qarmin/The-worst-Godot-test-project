@@ -18,7 +18,7 @@ func nodeFunction(q_VisualShader : VisualShader, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_VisualShader = VisualShader.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_VisualShader)
+		AutoResourcesShader.nodeFunction(q_VisualShader)
 #
 # BUG
 #		if randi() % 2 == 1:
