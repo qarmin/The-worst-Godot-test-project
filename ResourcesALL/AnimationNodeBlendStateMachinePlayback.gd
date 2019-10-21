@@ -13,15 +13,15 @@ func alt_process(delta) -> void:
 			q_AnimationNodeStateMachinePlayback = AnimationNodeStateMachinePlayback.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeStateMachinePlayback.get_current_node())
+			q_AnimationNodeStateMachinePlayback.get_current_node()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeStateMachinePlayback.get_travel_path())
+			q_AnimationNodeStateMachinePlayback.get_travel_path()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeStateMachinePlayback.is_playing())
+			q_AnimationNodeStateMachinePlayback.is_playing()
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachinePlayback.start( Autoload.get_string() )
+			q_AnimationNodeStateMachinePlayback.start( Autoload.get_string())
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachinePlayback.stop()
 		if randi() % 2 == 1:
-			q_AnimationNodeStateMachinePlayback.travel( Autoload.get_string() )
+			q_AnimationNodeStateMachinePlayback.travel( Autoload.get_string())

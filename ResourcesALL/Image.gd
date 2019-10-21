@@ -13,38 +13,38 @@ func alt_process(delta) -> void:
 			var q_Image = Image.new()
 
 		if randi() % 2 == 1:
-			q_Image.blend_rect( Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0) )
+			q_Image.blend_rect( Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0))
 		if randi() % 2 == 1:
-			q_Image.blend_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0) )
+			q_Image.blend_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0), Autoload.get_vector2f(1000.0))
 
 #	BUG	if randi() % 2 == 1:
 #			q_Image.blit_rect( Image.new(), Autoload.get_rect2f(1000.0),Autoload.get_vector2f(1000.0))
 		if randi() % 2 == 1:
-			q_Image.blit_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0),Autoload.get_vector2f(1000.0) )
+			q_Image.blit_rect_mask( Image.new(), Image.new(), Autoload.get_rect2f(1000.0),Autoload.get_vector2f(1000.0))
 
 #	BUG	if randi() % 2 == 1:
 #			q_Image.bumpmap_to_normalmap( Autoload.get_floatf(1000.0))
 		if randi() % 2 == 1:
 			q_Image.clear_mipmaps()
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_Image.compress( Autoload.get_int(), Autoload.get_int(), Autoload.get_floatf(1000.0))) #compressMode, #CompressSource
+#			q_Image.compress( Autoload.get_int(), Autoload.get_int(), Autoload.get_floatf(1000.0))) #compressMode, #CompressSource
 #		if randi() % 2 == 1:
 #			q_Image.convert(Autoload.get_int()) #Format
 		if randi() % 2 == 1:
-			q_Image.copy_from( Image.new() )
+			q_Image.copy_from( Image.new())
 
 #	BUG	if randi() % 2 == 1:
-#			q_Image.create( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() ) #Format
+#			q_Image.create( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int()) #Format
 		if randi() % 2 == 1:
 			q_Image.create_from_data( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() , Autoload.get_poolbytearray())#Format
 
 		if randi() % 2 == 1:
-			q_Image.crop( Autoload.get_inti(101), Autoload.get_inti(101) )
+			q_Image.crop( Autoload.get_inti(101), Autoload.get_inti(101))
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				Autoload.qq = str(q_Image.decompress())
+				q_Image.decompress())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.detect_alpha())
+			q_Image.detect_alpha())
 #	BUG	if randi() % 2 == 1:
 #			q_Image.expand_x2_hq2x()
 #	BUG	if randi() % 2 == 1:
@@ -58,47 +58,47 @@ func alt_process(delta) -> void:
 			q_Image.flip_y()
 
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_Image.generate_mipmaps( Autoload.get_bool()))
+#			q_Image.generate_mipmaps( Autoload.get_bool()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_data())
+			q_Image.get_data())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_format())
+			q_Image.get_format())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_height())
+			q_Image.get_height())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_mipmap_offset( Autoload.get_inti(101) ))
+			q_Image.get_mipmap_offset( Autoload.get_inti(101)))
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_Image.get_pixel( Autoload.get_inti(101), Autoload.get_inti(101) ))
+#			q_Image.get_pixel( Autoload.get_inti(101), Autoload.get_inti(101)))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_Image.get_pixelv( Autoload.get_vector2f(1000.0)))
+#			q_Image.get_pixelv( Autoload.get_vector2f(1000.0)))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_rect( Autoload.get_rect2f(1000.0)))
+			q_Image.get_rect( Autoload.get_rect2f(1000.0)))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_size())
+			q_Image.get_size())
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_Image.get_used_rect())
+#			q_Image.get_used_rect())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.get_width())
+			q_Image.get_width())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.has_mipmaps())
+			q_Image.has_mipmaps())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.is_compressed())
+			q_Image.is_compressed())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.is_empty())
+			q_Image.is_empty())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.is_invisible())
+			q_Image.is_invisible())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.load( "Sprite.png" ))
+			q_Image.load( "Sprite.png" ))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray()))
+			q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.load_png_from_buffer( Autoload.get_poolbytearray()))
+			q_Image.load_png_from_buffer( Autoload.get_poolbytearray()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.load_webp_from_buffer( Autoload.get_poolbytearray()))
+			q_Image.load_webp_from_buffer( Autoload.get_poolbytearray()))
 
 		if randi() % 2 == 1:
 			q_Image.lock()
@@ -113,9 +113,9 @@ func alt_process(delta) -> void:
 			q_Image.resize_to_po2( Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.rgbe_to_srgb())
+			q_Image.rgbe_to_srgb())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Image.save_png( "res://TEMP/Image" ))
+			q_Image.save_png( "res://TEMP/Image" ))
 
 #		if randi() % 2 == 1:
 #			q_Image.set_pixel( Autoload.get_inti(101), Autoload.get_inti(101),Autoload.get_color())

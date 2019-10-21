@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Path : Path) -> void:
+func nodeFunction(q_Path : Path, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Path.set_curve(Autoload.loadA("Curve3D.tres"))

@@ -18,11 +18,11 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		q_PacketPeer.set_allow_object_decoding(Autoload.get_bool())
 #
-#		Autoload.qq = str(q_PacketPeer.get_available_packet_count())
-#		Autoload.qq = str(q_PacketPeer.get_packet())
-#		Autoload.qq = str(q_PacketPeer.get_packet_error())
-#		Autoload.qq = str(q_PacketPeer.get_var( Autoload.get_bool()))
+#		q_PacketPeer.get_available_packet_count())
+#		q_PacketPeer.get_packet())
+#		q_PacketPeer.get_packet_error())
+#		q_PacketPeer.get_var( Autoload.get_bool()))
 #
-#		Autoload.qq = str(q_PacketPeer.put_packet( Autoload.get_poolbytearray()))
-#		Autoload.qq = str(q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool()))
+#		q_PacketPeer.put_packet( Autoload.get_poolbytearray()))
+#		q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool()))
 #

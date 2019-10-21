@@ -8,25 +8,26 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_GeometryInstance(self)
-		AutoObjects.A_SpriteBase3D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Sprite3D : Sprite3D) -> void:
+func nodeFunction(q_Sprite3D : Sprite3D, can_reset : bool = false) -> void:
 
-		if randi() % 2 == 1:
-			q_Sprite3D.set_texture(Autoload.loadA("Sprite.png"))
-		if randi() % 2 == 1:
-			q_Sprite3D.set_vframes(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_Sprite3D.set_hframes(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_Sprite3D.set_frame(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_Sprite3D.set_region(Autoload.get_bool())
-		if randi() % 2 == 1:
-			q_Sprite3D.set_region_rect(Autoload.get_rect2())
+	AutoObjects.A_Object(self)
+	AutoObjects.A_Node(self)
+	AutoObjects.A_Spatial(self)
+	AutoObjects.A_VisualInstance(self)
+	AutoObjects.A_GeometryInstance(self)
+	AutoObjects.A_SpriteBase3D(self)
+	
+	if randi() % 2 == 1:
+		q_Sprite3D.set_texture(Autoload.loadA("Sprite.png"))
+	if randi() % 2 == 1:
+		q_Sprite3D.set_vframes(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_Sprite3D.set_hframes(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_Sprite3D.set_frame(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_Sprite3D.set_region(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_Sprite3D.set_region_rect(Autoload.get_rect2())

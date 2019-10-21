@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Joint2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_PinJoint2D : PinJoint2D) -> void:
+func nodeFunction(q_PinJoint2D : PinJoint2D, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_PinJoint2D.set_softness(Autoload.get_float())

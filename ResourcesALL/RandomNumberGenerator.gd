@@ -16,14 +16,14 @@ func alt_process(delta) -> void:
 			q_RandomNumberGenerator.set_seed(Autoload.get_int())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RandomNumberGenerator.randf())
+			q_RandomNumberGenerator.randf())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RandomNumberGenerator.randf_range( Autoload.get_float(), Autoload.get_float() ))
+			q_RandomNumberGenerator.randf_range( Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RandomNumberGenerator.randfn( Autoload.get_float(), Autoload.get_float() ))
+			q_RandomNumberGenerator.randfn( Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RandomNumberGenerator.randi())
+			q_RandomNumberGenerator.randi())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RandomNumberGenerator.randi_range( Autoload.get_int(), Autoload.get_int() ))
+			q_RandomNumberGenerator.randi_range( Autoload.get_int(), Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_RandomNumberGenerator.randomize()

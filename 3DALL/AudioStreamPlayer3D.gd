@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D) -> void:
+func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_stream(Autoload.loadA("AudioStreamGenerator.tres"))

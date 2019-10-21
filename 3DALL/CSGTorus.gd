@@ -8,17 +8,18 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_GeometryInstance(self)
-		AutoObjects.A_CSGShape(self)
-		AutoObjects.A_CSGPrimitive(self)
 		nodeFunction(self)
 
-func nodeFunction(q_CSGTorus : CSGTorus) -> void:
+func nodeFunction(q_CSGTorus : CSGTorus, can_reset : bool = false) -> void:
 
+	AutoObjects.A_Object(self)
+	AutoObjects.A_Node(self)
+	AutoObjects.A_Spatial(self)
+	AutoObjects.A_VisualInstance(self)
+	AutoObjects.A_GeometryInstance(self)
+	AutoObjects.A_CSGShape(self)
+	AutoObjects.A_CSGPrimitive(self)
+		
 	if randi() % 2 == 1:
 		q_CSGTorus.set_inner_radius(Autoload.get_float())
 	if randi() % 2 == 1:

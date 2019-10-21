@@ -21,23 +21,23 @@ func alt_process(delta) -> void:
 
 		for _i in range(5):
 			if randi() % 2 == 1:
-				Autoload.qq = str(q_Animation.add_track(Autoload.get_int(),Autoload.get_int())) #TrackType 
+				q_Animation.add_track(Autoload.get_int(),Autoload.get_int()) #TrackType 
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.animation_track_get_key_animation(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.animation_track_get_key_animation(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.animation_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_string()))
+			q_Animation.animation_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_string())
 		if randi() % 2 == 1:
 			q_Animation.animation_track_set_key_animation(Autoload.get_int(),Autoload.get_int(),Autoload.get_string())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.audio_track_get_key_end_offset(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.audio_track_get_key_end_offset(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.audio_track_get_key_start_offset(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.audio_track_get_key_start_offset(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.audio_track_get_key_stream(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.audio_track_get_key_stream(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.audio_track_insert_key(1,Autoload.get_float(),Autoload.loadA("AudioStreamGenerator.tres"),Autoload.get_float(),Autoload.get_float()))
+			q_Animation.audio_track_insert_key(1,Autoload.get_float(),Autoload.loadA("AudioStreamGenerator.tres"),Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
 			q_Animation.audio_track_set_key_end_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
@@ -46,15 +46,15 @@ func alt_process(delta) -> void:
 			q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),Autoload.loadA("AudioStreamGenerator.tres"))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.bezier_track_get_key_in_handle(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.bezier_track_get_key_in_handle(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.bezier_track_get_key_out_handle(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.bezier_track_get_key_out_handle(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.bezier_track_get_key_value(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.bezier_track_get_key_value(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.bezier_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_float(),Autoload.get_vector2(),Autoload.get_vector2()))
+			q_Animation.bezier_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_float(),Autoload.get_vector2(),Autoload.get_vector2())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.bezier_track_interpolate(Autoload.get_int(),Autoload.get_float()))
+			q_Animation.bezier_track_interpolate(Autoload.get_int(),Autoload.get_float())
 		if randi() % 2 == 1:
 			q_Animation.bezier_track_set_key_in_handle(Autoload.get_int(),Autoload.get_int(),Autoload.get_vector2())
 		if randi() % 2 == 1:
@@ -67,44 +67,44 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.copy_track(Autoload.get_int(), Animation.new())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.find_track(Autoload.get_nodepath(self)))
+			q_Animation.find_track(Autoload.get_nodepath(self))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.get_track_count())
+			q_Animation.get_track_count()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.method_track_get_key_indices(Autoload.get_int(),Autoload.get_float(),Autoload.get_float()))
+			q_Animation.method_track_get_key_indices(Autoload.get_int(),Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.method_track_get_name(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.method_track_get_name(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.method_track_get_params(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.method_track_get_params(Autoload.get_int(),Autoload.get_int())
 
 		if randi() % 2 == 1:
 			q_Animation.remove_track(Autoload.get_int())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_find_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_bool()))
+			q_Animation.track_find_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_bool())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_interpolation_loop_wrap(Autoload.get_int()))
+			q_Animation.track_get_interpolation_loop_wrap(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_interpolation_type(Autoload.get_int()))
+			q_Animation.track_get_interpolation_type(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_key_count(Autoload.get_int()))
+			q_Animation.track_get_key_count(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_key_time(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.track_get_key_time(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_key_transition(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.track_get_key_transition(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_key_value(Autoload.get_int(),Autoload.get_int()))
+			q_Animation.track_get_key_value(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_path(Autoload.get_int()))
+			q_Animation.track_get_path(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_get_type(Autoload.get_int()))
+			q_Animation.track_get_type(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_Animation.track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_string(),Autoload.get_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_is_enabled(Autoload.get_int()))
+			q_Animation.track_is_enabled(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.track_is_imported(Autoload.get_int()))
+			q_Animation.track_is_imported(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_Animation.track_move_down(Autoload.get_int())
 		if randi() % 2 == 1:
@@ -134,14 +134,14 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Animation.track_swap(Autoload.get_int(),Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.transform_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_vector3(),Autoload.get_quat(),Autoload.get_vector3()))
+			q_Animation.transform_track_insert_key(Autoload.get_int(),Autoload.get_float(),Autoload.get_vector3(),Autoload.get_quat(),Autoload.get_vector3())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.transform_track_interpolate(Autoload.get_int(),Autoload.get_float()))
+			q_Animation.transform_track_interpolate(Autoload.get_int(),Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.value_track_get_key_indices(Autoload.get_int(),Autoload.get_float(),Autoload.get_float()))
+			q_Animation.value_track_get_key_indices(Autoload.get_int(),Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Animation.value_track_get_update_mode(Autoload.get_int()))
+			q_Animation.value_track_get_update_mode(Autoload.get_int())
 		if randi() % 2 == 1:
 			q_Animation.value_track_set_update_mode(Autoload.get_int(),Autoload.get_int()) # UpdateMode
 

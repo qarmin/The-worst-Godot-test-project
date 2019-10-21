@@ -18,8 +18,8 @@ func alt_process(delta) -> void:
 			if randi() % 2 == 1:
 				q_World.set_fallback_environment(Autoload.loadA("DefaultEnv.tres"))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World.get_space())
+			q_World.get_space())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World.get_scenario())
+			q_World.get_scenario())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World.get_direct_space_state())
+			q_World.get_direct_space_state())

@@ -17,5 +17,5 @@ onready var counter : float = Autoload.get_rand_time()
 #			pass
 #
 #		var q_SkinReference : SkinReference = SkinReference.new()
-#			Autoload.qq = str(q_SkinReference.get_skeleton())
-#			Autoload.qq = str(q_SkinReference.get_skin())
+#			q_SkinReference.get_skeleton())
+#			q_SkinReference.get_skin())

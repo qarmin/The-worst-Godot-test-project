@@ -24,15 +24,15 @@ onready var counter : float = Autoload.get_rand_time()
 #			add_child(q_temp_0)
 #
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_do_method( q_temp_0, Autoload.get_string(), Autoload.get_string() )
+#			q_UndoRedo.add_do_method( q_temp_0, Autoload.get_string(), Autoload.get_string())
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_do_property( q_temp_0, Autoload.get_string(), Autoload.get_string() )
+#			q_UndoRedo.add_do_property( q_temp_0, Autoload.get_string(), Autoload.get_string())
 #		if randi() % 2 == 1:
 #			q_UndoRedo.add_do_reference( q_temp_0 )
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_undo_method( q_temp_0, Autoload.get_string(), Autoload.get_string() )
+#			q_UndoRedo.add_undo_method( q_temp_0, Autoload.get_string(), Autoload.get_string())
 #		if randi() % 2 == 1:
-#			q_UndoRedo.add_undo_property( q_temp_0, Autoload.get_string(), Autoload.get_string() )
+#			q_UndoRedo.add_undo_property( q_temp_0, Autoload.get_string(), Autoload.get_string())
 #		if randi() % 2 == 1:
 #			q_UndoRedo.add_undo_reference( q_temp_0 )
 #
@@ -41,19 +41,19 @@ onready var counter : float = Autoload.get_rand_time()
 #		if randi() % 2 == 1:
 #			q_UndoRedo.commit_action()
 #		if randi() % 2 == 1:
-#			q_UndoRedo.create_action( Autoload.get_string(), Autoload.get_int() )#MergeMode
+#			q_UndoRedo.create_action( Autoload.get_string(), Autoload.get_int())#MergeMode
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_UndoRedo.get_current_action_name())
+#			q_UndoRedo.get_current_action_name())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_UndoRedo.get_version())
+#			q_UndoRedo.get_version())
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_UndoRedo.is_commiting_action())
+#			q_UndoRedo.is_commiting_action())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_UndoRedo.redo())
+#			q_UndoRedo.redo())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_UndoRedo.undo())
+#			q_UndoRedo.undo())
 #
 #
 #

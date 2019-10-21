@@ -16,8 +16,8 @@ func alt_process(delta) -> void:
 			q_AudioEffectRecord.set_format(Autoload.get_int()) #Format
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AudioEffectRecord.get_recording())
+			q_AudioEffectRecord.get_recording())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AudioEffectRecord.is_recording_active())
+			q_AudioEffectRecord.is_recording_active())
 		if randi() % 2 == 1:
 			q_AudioEffectRecord.set_recording_active( Autoload.get_bool())

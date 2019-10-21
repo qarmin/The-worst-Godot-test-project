@@ -32,13 +32,13 @@ func alt_process(delta) -> void:
 			q_BitmapFont.clear()
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				Autoload.qq = str(q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
+				q_BitmapFont.create_from_fnt( "res://RES/FreeMono.otf" ))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int() ))
+			q_BitmapFont.get_char_size( Autoload.get_int(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int() ))
+			q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitmapFont.get_texture( Autoload.get_int() ))
+			q_BitmapFont.get_texture( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitmapFont.get_texture_count())
+			q_BitmapFont.get_texture_count())

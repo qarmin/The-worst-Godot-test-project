@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_CollisionObject(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Area : Area) -> void:
+func nodeFunction(q_Area : Area, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Area.set_space_override_mode(Autoload.get_int())

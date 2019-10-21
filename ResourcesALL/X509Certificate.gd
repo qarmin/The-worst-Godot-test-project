@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_X509Certificate = X509Certificate.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_X509Certificate.load("res://TEMP/" + Autoload.get_string()))
+			q_X509Certificate.load("res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_X509Certificate.save("res://TEMP/" + Autoload.get_string()))
+			q_X509Certificate.save("res://TEMP/" + Autoload.get_string()))

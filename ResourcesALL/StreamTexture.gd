@@ -13,4 +13,4 @@ func alt_process(delta) -> void:
 			q_StreamTexture = StreamTexture.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_StreamTexture.load("res://RES/Sprite.png"))
+			q_StreamTexture.load("res://RES/Sprite.png"))

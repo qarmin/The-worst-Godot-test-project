@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Joint2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_GrooveJoint2D : GrooveJoint2D) -> void:
+func nodeFunction(q_GrooveJoint2D : GrooveJoint2D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_GrooveJoint2D.set_length(Autoload.get_float())

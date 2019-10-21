@@ -21,4 +21,4 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_InputEventKey.set_echo(Autoload.get_bool())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_InputEventKey.get_scancode_with_modifiers())
+			q_InputEventKey.get_scancode_with_modifiers())

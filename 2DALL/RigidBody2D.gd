@@ -8,16 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
-		AutoObjects.A_CollisionObject2D(self)
-		AutoObjects.A_PhysicsBody2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_RigidBody2D : RigidBody2D) -> void:
+func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void:
 
+	AutoObjects.A_Object(self)
+	AutoObjects.A_Node(self)
+	AutoObjects.A_CanvasItem(self)
+	AutoObjects.A_Node2D(self)
+	AutoObjects.A_CollisionObject2D(self)
+	AutoObjects.A_PhysicsBody2D(self)
+		
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_mode(Autoload.get_int())
 	if randi() % 2 == 1:

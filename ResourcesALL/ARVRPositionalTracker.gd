@@ -22,25 +22,25 @@ onready var counter : float = Autoload.get_rand_time()
 #			q_ARVRPositionalTracker.set_rumble(Autoload.get_float())
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_hand())
+#			q_ARVRPositionalTracker.get_hand())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_joy_id())
+#			q_ARVRPositionalTracker.get_joy_id())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_mesh())
+#			q_ARVRPositionalTracker.get_mesh())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_name())
+#			q_ARVRPositionalTracker.get_name())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_orientation())
+#			q_ARVRPositionalTracker.get_orientation())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_position())
+#			q_ARVRPositionalTracker.get_position())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_tracks_orientation())
+#			q_ARVRPositionalTracker.get_tracks_orientation())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_tracks_position())
+#			q_ARVRPositionalTracker.get_tracks_position())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_transform( Autoload.get_bool()))
+#			q_ARVRPositionalTracker.get_transform( Autoload.get_bool()))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_ARVRPositionalTracker.get_type())
+#			q_ARVRPositionalTracker.get_type())
 #
 #func delete_node():
 #	q_ARVRPositionalTracker.free()

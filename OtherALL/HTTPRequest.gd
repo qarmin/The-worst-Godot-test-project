@@ -23,11 +23,11 @@ func alt_process(delta) -> void:
 			cancel_request()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_body_size())
+			get_body_size())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_downloaded_bytes())
+			get_downloaded_bytes())
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_http_client_status())
+			get_http_client_status())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(request(Autoload.get_string(), Autoload.get_poolstringarray(),Autoload.get_bool(), Autoload.get_int(), Autoload.get_string()))
+			request(Autoload.get_string(), Autoload.get_poolstringarray(),Autoload.get_bool(), Autoload.get_int(), Autoload.get_string()))

@@ -15,22 +15,22 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_RegEx.clear()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.compile( Autoload.get_string() ))
+			q_RegEx.compile( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.get_group_count())
+			q_RegEx.get_group_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.get_names())
+			q_RegEx.get_names())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.get_pattern())
+			q_RegEx.get_pattern())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.is_valid())
+			q_RegEx.is_valid())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.search( Autoload.get_string(), Autoload.get_int(), Autoload.get_int() ))
+			q_RegEx.search( Autoload.get_string(), Autoload.get_int(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.search_all( Autoload.get_string(), Autoload.get_int(), Autoload.get_int() ))
+			q_RegEx.search_all( Autoload.get_string(), Autoload.get_int(), Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegEx.sub( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_int() ))
+			q_RegEx.sub( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_int()))

@@ -13,8 +13,8 @@ func alt_process(delta) -> void:
 			q_World2D = World2D.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World2D.get_canvas())
+			q_World2D.get_canvas())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World2D.get_space())
+			q_World2D.get_space())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_World2D.get_direct_space_state())
+			q_World2D.get_direct_space_state())

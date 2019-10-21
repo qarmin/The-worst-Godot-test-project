@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_SpringArm : SpringArm) -> void:
+func nodeFunction(q_SpringArm : SpringArm, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_SpringArm.set_collision_mask(Autoload.get_int())

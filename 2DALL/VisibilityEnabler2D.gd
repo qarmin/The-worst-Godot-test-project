@@ -16,7 +16,7 @@ func alt_process(delta) -> void:
 #		AutoVisibilityNotifier2D.nodeFunction(self)
 #		nodeFunction(self)
 
-func nodeFunction(q_VisibilityEnabler2D : VisibilityEnabler2D) -> void:
+func nodeFunction(q_VisibilityEnabler2D : VisibilityEnabler2D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_VisibilityEnabler2D.set_enabler(Autoload.get_int(),Autoload.get_bool())# Enabler

@@ -27,4 +27,4 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_AudioStreamSample.set_stereo(Autoload.get_bool())
 
-			### Autoload.qq = str(q_AudioStreamSample.save_to_wav(Autoload.get_nodepath(self)))
+			### q_AudioStreamSample.save_to_wav(Autoload.get_nodepath(self)))

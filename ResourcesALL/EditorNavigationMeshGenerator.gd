@@ -18,8 +18,8 @@ onready var counter : float = Autoload.get_rand_time()
 #			q_EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 #
 #
-#			#BUG q_EditorNavigationMeshGenerator.bake( Autoload.loadA("NavigationMesh.tres"), Node.new() )
-#			q_EditorNavigationMeshGenerator.clear(Autoload.loadA("NavigationMesh.tres") )
+#			#BUG q_EditorNavigationMeshGenerator.bake( Autoload.loadA("NavigationMesh.tres"), Node.new())
+#			q_EditorNavigationMeshGenerator.clear(Autoload.loadA("NavigationMesh.tres"))
 
 #func delete_node():
 #	q_EditorNavigationMeshGenerator.free()

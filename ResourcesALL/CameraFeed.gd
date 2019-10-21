@@ -16,8 +16,8 @@ func alt_process(delta) -> void:
 			q_CameraFeed.set_transform(Autoload.get_transform2d())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CameraFeed.get_id())
+			q_CameraFeed.get_id())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CameraFeed.get_name())
+			q_CameraFeed.get_name())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CameraFeed.get_position())
+			q_CameraFeed.get_position())

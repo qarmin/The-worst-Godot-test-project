@@ -20,17 +20,17 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		q_Script.set_source_code(Autoload.get_string())
 #
-#		Autoload.qq = str(q_Script.can_instance())
+#		q_Script.can_instance())
 #
-#		Autoload.qq = str(q_Script.get_base_script())
-#		Autoload.qq = str(q_Script.get_instance_base_type())
+#		q_Script.get_base_script())
+#		q_Script.get_instance_base_type())
 #
-#		Autoload.qq = str(q_Script.has_script_signal( Autoload.get_string() ))
-#		Autoload.qq = str(q_Script.has_source_code())
+#		q_Script.has_script_signal( Autoload.get_string()))
+#		q_Script.has_source_code())
 #
-#		Autoload.qq = str(q_Script.instance_has( self ))
-#		Autoload.qq = str(q_Script.is_tool())
-#		Autoload.qq = str(q_Script.reload( Autoload.get_bool() ))
+#		q_Script.instance_has( self ))
+#		q_Script.is_tool())
+#		q_Script.reload( Autoload.get_bool()))
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

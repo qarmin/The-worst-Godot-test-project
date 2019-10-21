@@ -8,36 +8,35 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		Auto3DCamera.nodeFunction(self)
 		nodeFunction(self)
 
 func nodeFunction(q_ClippedCamera : ClippedCamera) -> void:
+	
+	Auto3DCamera.nodeFunction(self)
 
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_margin(Autoload.get_float())
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_process_mode(Autoload.get_int()) #ProcessMode
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_collision_mask(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_clip_to_areas(Autoload.get_bool())
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_clip_to_bodies(Autoload.get_bool())
 
-		if randi() % 2 == 1:
-			q_ClippedCamera.add_exception(get_parent())
-		if randi() % 2 == 1:
-			q_ClippedCamera.add_exception_rid(RID())
-		if randi() % 2 == 1:
-			q_ClippedCamera.clear_exceptions()
-		if randi() % 2 == 1:
-			q_ClippedCamera.get_collision_mask_bit(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_ClippedCamera.remove_exception(get_parent())
-		if randi() % 2 == 1:
-			q_ClippedCamera.remove_exception_rid(RID())
-		if randi() % 2 == 1:
-			q_ClippedCamera.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_margin(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_process_mode(Autoload.get_int()) #ProcessMode
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_collision_mask(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_clip_to_areas(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_clip_to_bodies(Autoload.get_bool())
+
+	if randi() % 2 == 1:
+		q_ClippedCamera.add_exception(get_parent())
+	if randi() % 2 == 1:
+		q_ClippedCamera.add_exception_rid(RID())
+	if randi() % 2 == 1:
+		q_ClippedCamera.clear_exceptions()
+	if randi() % 2 == 1:
+		q_ClippedCamera.get_collision_mask_bit(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_ClippedCamera.remove_exception(get_parent())
+	if randi() % 2 == 1:
+		q_ClippedCamera.remove_exception_rid(RID())
+	if randi() % 2 == 1:
+		q_ClippedCamera.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())

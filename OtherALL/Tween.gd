@@ -8,59 +8,65 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_repeat(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_tween_process_mode(Autoload.get_int()) # TweenProcessMode
-		if randi() % 2 == 1:
-			set_speed_scale(Autoload.get_float())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		nodeFunction(self)
+
+func nodeFunction(q_Tween : Tween) -> void:
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(follow_method(self,Autoload.get_string(),Autoload.get_float(),self,Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float())) # TransitionType, EaseType
+			q_Tween.set_repeat(Autoload.get_bool())
 		if randi() % 2 == 1:
-			Autoload.qq = str(follow_property(self,Autoload.get_string(),Autoload.get_float(),self, Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float()))# TransitionType, EaseType
+			q_Tween.set_tween_process_mode(Autoload.get_int()) # TweenProcessMode
+		if randi() % 2 == 1:
+			q_Tween.set_speed_scale(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(get_runtime())
+			q_Tween.follow_method(Autoload.get_nodes(q_Tween),Autoload.get_string(),Autoload.get_float(),Autoload.get_nodes(q_Tween),Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float()) # TransitionType, EaseType
+		if randi() % 2 == 1:
+			q_Tween.follow_property(Autoload.get_nodes(q_Tween),Autoload.get_string(),Autoload.get_float(),Autoload.get_nodes(q_Tween), Autoload.get_string(),Autoload.get_float(),Autoload.get_int(),Autoload.get_int(),Autoload.get_float())# TransitionType, EaseType
 
 		if randi() % 2 == 1:
-			interpolate_callback(self, Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
-		if randi() % 2 == 1:
-			interpolate_deferred_callback(self, Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
-		if randi() % 2 == 1:
-			interpolate_method(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(),Autoload.get_float())# TransitionType, EaseType
-		if randi() % 2 == 1:
-			interpolate_property(self, Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
+			q_Tween.get_runtime()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(is_active())
+			q_Tween.interpolate_callback(Autoload.get_nodes(q_Tween), Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
+		if randi() % 2 == 1:
+			q_Tween.interpolate_deferred_callback(Autoload.get_nodes(q_Tween), Autoload.get_float(), Autoload.get_string(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
+		if randi() % 2 == 1:
+			q_Tween.interpolate_method(Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(),Autoload.get_float())# TransitionType, EaseType
+		if randi() % 2 == 1:
+			q_Tween.interpolate_property(Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(remove(get_parent(), Autoload.get_))
-		if randi() % 2 == 1:
-			Autoload.qq = str(remove_all())
+			q_Tween.is_active()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(reset(get_parent(), Autoload.get_))
+			q_Tween.remove(q_Tween.get_parent(), Autoload.get_string())
 		if randi() % 2 == 1:
-			Autoload.qq = str(reset_all())
-		if randi() % 2 == 1:
-			Autoload.qq = str(resume(get_parent(), Autoload.get_))
-		if randi() % 2 == 1:
-			Autoload.qq = str(resume_all())
-		if randi() % 2 == 1:
-			set_active(Autoload.get_bool())
-		if randi() % 2 == 1:
-			Autoload.qq = str(start())
-		if randi() % 2 == 1:
-			Autoload.qq = str(stop(get_parent(), Autoload.get_))
-		if randi() % 2 == 1:
-			Autoload.qq = str(stop_all())
+			q_Tween.remove_all()
 
 		if randi() % 2 == 1:
-			targeting_method(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
+			q_Tween.reset(get_parent(), Autoload.get_string())
 		if randi() % 2 == 1:
-			targeting_property(self, Autoload.get_string(), self, Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
+			q_Tween.reset_all()
+		if randi() % 2 == 1:
+			q_Tween.resume(get_parent(), Autoload.get_string())
+		if randi() % 2 == 1:
+			q_Tween.resume_all()
+		if randi() % 2 == 1:
+			q_Tween.set_active(Autoload.get_bool())
+		if randi() % 2 == 1:
+			q_Tween.start()
+		if randi() % 2 == 1:
+			q_Tween.stop(get_parent(), Autoload.get_string())
+		if randi() % 2 == 1:
+			q_Tween.stop_all()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(tell())
+			q_Tween.targeting_method(Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
+		if randi() % 2 == 1:
+			q_Tween.targeting_property(Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_nodes(q_Tween), Autoload.get_string(), Autoload.get_string(), Autoload.get_float(), Autoload.get_int(), Autoload.get_int(), Autoload.get_float())# TransitionType, EaseType
+
+		if randi() % 2 == 1:
+			q_Tween.tell()

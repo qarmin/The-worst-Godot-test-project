@@ -14,5 +14,5 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Position2D : Position2D) -> void:
+func nodeFunction(q_Position2D : Position2D, can_reset : bool = false) -> void:
 	pass

@@ -19,10 +19,10 @@ onready var counter : float = Autoload.get_rand_time()
 #		var q_Physics2DShapeQueryResult : Physics2DShapeQueryResult = Physics2DShapeQueryResult.new()
 #
 #		q_Physics2DShapeQueryResult.get_result_count()
-#		q_Physics2DShapeQueryResult.get_result_object( Autoload.get_int() )
-#		q_Physics2DShapeQueryResult.get_result_object_id( Autoload.get_int() )
-#		q_Physics2DShapeQueryResult.get_result_object_shape( Autoload.get_int() )
-#		q_Physics2DShapeQueryResult.get_result_rid( Autoload.get_int() )
+#		q_Physics2DShapeQueryResult.get_result_object( Autoload.get_int())
+#		q_Physics2DShapeQueryResult.get_result_object_id( Autoload.get_int())
+#		q_Physics2DShapeQueryResult.get_result_object_shape( Autoload.get_int())
+#		q_Physics2DShapeQueryResult.get_result_rid( Autoload.get_int())
 #
 #		if Autoload.WRONG_BUGS:
 #			pass

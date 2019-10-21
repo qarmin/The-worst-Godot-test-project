@@ -18,6 +18,6 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_GDNative.call_native( Autoload.get_string(), Autoload.get_string(), [Autoload.get_string(),Autoload.get_string()] )
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_GDNative.initialize())
+			q_GDNative.initialize())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_GDNative.terminate())
+			q_GDNative.terminate())

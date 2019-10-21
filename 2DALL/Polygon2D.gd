@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Polygon2D : Polygon2D) -> void:
+func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_Polygon2D.set_color(Autoload.get_color())

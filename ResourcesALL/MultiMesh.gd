@@ -26,15 +26,15 @@ func alt_process(delta) -> void:
 #			q_MultiMesh.set_mesh(Autoload.loadA("CubeMesh.tres"))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiMesh.get_aabb())
+			q_MultiMesh.get_aabb())
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_MultiMesh.get_instance_color(Autoload.get_int() ))
+#			q_MultiMesh.get_instance_color(Autoload.get_int()))
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_MultiMesh.get_instance_custom_data(Autoload.get_int() ))
+#			q_MultiMesh.get_instance_custom_data(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiMesh.get_instance_transform(Autoload.get_int() ))
+			q_MultiMesh.get_instance_transform(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiMesh.get_instance_transform_2d(Autoload.get_int() ))
+			q_MultiMesh.get_instance_transform_2d(Autoload.get_int()))
 
 		if randi() % 2 == 1:
 			q_MultiMesh.set_as_bulk_array( Autoload.get_poolrealarray())

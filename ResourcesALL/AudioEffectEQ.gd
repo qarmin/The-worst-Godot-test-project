@@ -13,8 +13,8 @@ func alt_process(delta) -> void:
 			q_AudioEffectEQ = AudioEffectEQ.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AudioEffectEQ.get_band_count())
+			q_AudioEffectEQ.get_band_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AudioEffectEQ.get_band_gain_db( Autoload.get_int() ))
+			q_AudioEffectEQ.get_band_gain_db( Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_AudioEffectEQ.set_band_gain_db( Autoload.get_int(), Autoload.get_int())

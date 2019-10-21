@@ -16,9 +16,9 @@ func alt_process(delta) -> void:
 			q_ShortCut.set_shortcut(Autoload.loadA("InputEventAction.tres"))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ShortCut.get_as_text())
+			q_ShortCut.get_as_text())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ShortCut.is_shortcut(Autoload.loadA("InputEventAction.tres")))
+			q_ShortCut.is_shortcut(Autoload.loadA("InputEventAction.tres")))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ShortCut.is_valid())
+			q_ShortCut.is_valid())

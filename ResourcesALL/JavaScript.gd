@@ -16,5 +16,5 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_JavaScript : JavaScript = JavaScript.new()
 #
-#		Autoload.qq = str(q_JavaScript.eval(Autoload.get_string(),Autoload.get_bool()))
+#		q_JavaScript.eval(Autoload.get_string(),Autoload.get_bool()))
 #

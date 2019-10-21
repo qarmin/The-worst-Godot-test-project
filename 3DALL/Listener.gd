@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Listener : Listener) -> void:
+func nodeFunction(q_Listener : Listener, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Listener.clear_current()

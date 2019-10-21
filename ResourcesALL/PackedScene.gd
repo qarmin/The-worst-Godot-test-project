@@ -13,10 +13,10 @@ func alt_process(delta) -> void:
 			q_PackedScene = PackedScene.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_PackedScene.can_instance())
+			q_PackedScene.can_instance())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_PackedScene.get_state())
+			q_PackedScene.get_state())
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_PackedScene.instance( Autoload.get_int() ).queue_free()) # GenEditState
+#			q_PackedScene.instance( Autoload.get_int()).queue_free()) # GenEditState
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_PackedScene.pack( self ))
+			q_PackedScene.pack( self ))

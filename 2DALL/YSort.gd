@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_YSort : YSort) -> void:
+func nodeFunction(q_YSort : YSort, can_reset : bool = false) -> void:
 	
 	if randi() % 2 == 1:
 		q_YSort.set_sort_enabled(Autoload.get_bool())

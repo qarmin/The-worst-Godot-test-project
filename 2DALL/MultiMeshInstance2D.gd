@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_MultiMeshInstance2D : MultiMeshInstance2D) -> void:
+func nodeFunction(q_MultiMeshInstance2D : MultiMeshInstance2D, can_reset : bool = false) -> void:
 
 #	BUG	if randi() % 2 == 1:
 #			q_MultiMeshInstance2D.set_multimesh(Autoload.loadA("Multimesh.tres"))

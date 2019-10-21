@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		Auto3DVisibilityNotifier.nodeFunction(self)
 		nodeFunction(self)
 
-func nodeFunction(q_VisibilityEnabler : VisibilityEnabler) -> void:
+func nodeFunction(q_VisibilityEnabler : VisibilityEnabler, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_VisibilityEnabler.set_enabler(Autoload.get_int(),Autoload.get_bool())

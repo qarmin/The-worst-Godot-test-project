@@ -13,12 +13,12 @@ func alt_process(delta) -> void:
 			q_StreamPeerSSL = StreamPeerSSL.new()
 
 #		if randi() % 2 == 1:
-#	SPAM		Autoload.qq = str(q_StreamPeerSSL.accept_stream( StreamPeerTCP.new(),Autoload.loadA("CryptoKey.tres"),X509Certificate.new(),X509Certificate.new()))
+#	SPAM		q_StreamPeerSSL.accept_stream( StreamPeerTCP.new(),Autoload.loadA("CryptoKey.tres"),X509Certificate.new(),X509Certificate.new()))
 #		if randi() % 2 == 1:
-#	SPAM		Autoload.qq = str(q_StreamPeerSSL.connect_to_stream( StreamPeerTCP.new(), Autoload.get_bool(), Autoload.get_string() ))
+#	SPAM		q_StreamPeerSSL.connect_to_stream( StreamPeerTCP.new(), Autoload.get_bool(), Autoload.get_string()))
 		if randi() % 2 == 1:
 			q_StreamPeerSSL.disconnect_from_stream()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_StreamPeerSSL.get_status())
+			q_StreamPeerSSL.get_status())
 		if randi() % 2 == 1:
 			q_StreamPeerSSL.poll()

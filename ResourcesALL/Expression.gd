@@ -19,13 +19,13 @@ func alt_process(delta) -> void:
 			add_child(q_temp0)
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Expression.execute( [Autoload.get_string()], q_temp0, Autoload.get_bool()))
+			q_Expression.execute( [Autoload.get_string()], q_temp0, Autoload.get_bool()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Expression.get_error_text())
+			q_Expression.get_error_text())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Expression.has_execute_failed())
+			q_Expression.has_execute_failed())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray() ))
+			q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray()))
 
 func delete_node():
 	q_temp0.queue_free()

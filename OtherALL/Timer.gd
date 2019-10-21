@@ -2,30 +2,34 @@ extends Timer
 
 onready var counter : float = Autoload.get_rand_time()
 
-	queue_free()
-
 func alt_process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			set_timer_process_mode(Autoload.get_int()) #TimerProcessMode
-		if randi() % 2 == 1:
-			set_wait_time(Autoload.get_float())
-		if randi() % 2 == 1:
-			set_one_shot(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_autostart(Autoload.get_bool())
-		if randi() % 2 == 1:
-			set_paused(Autoload.get_bool())
-		if randi() % 2 == 1:
-			Autoload.qq = str(get_time_left())
+		AutoObjects.A_Object(self)
+		AutoObjects.A_Node(self)
+		nodeFunction(self)
+
+func nodeFunction(q_Timer : Timer) -> void:
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(is_stopped())
+			q_Timer.set_timer_process_mode(Autoload.get_int()) #TimerProcessMode
 		if randi() % 2 == 1:
-			start(Autoload.get_float())
+			q_Timer.set_wait_time(Autoload.get_float())
 		if randi() % 2 == 1:
-			stop()
+			q_Timer.set_one_shot(Autoload.get_bool())
+		if randi() % 2 == 1:
+			q_Timer.set_autostart(Autoload.get_bool())
+		if randi() % 2 == 1:
+			q_Timer.set_paused(Autoload.get_bool())
+		if randi() % 2 == 1:
+			q_Timer.get_time_left()
+
+		if randi() % 2 == 1:
+			q_Timer.is_stopped()
+		if randi() % 2 == 1:
+			q_Timer.start(Autoload.get_float())
+		if randi() % 2 == 1:
+			q_Timer.stop()

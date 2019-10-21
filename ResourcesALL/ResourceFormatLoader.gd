@@ -16,10 +16,10 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_ResourceFormatLoader : ResourceFormatLoader = ResourceFormatLoader.new()
 #
-#		q_ResourceFormatLoader.get_dependencies( "res://Groźny.txtAutoload.get_string() )
+#		q_ResourceFormatLoader.get_dependencies( "res://Groźny.txtAutoload.get_string())
 #		q_ResourceFormatLoader.get_recognized_extensions()
 #		q_ResourceFormatLoader.get_resource_type( "res://Groźny.txt" )
-#		q_ResourceFormatLoader.handles_type( Autoload.get_string() )
-#		q_ResourceFormatLoader.load( "res://Groźny.txtAutoload.get_string() )
-#		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txtAutoload.get_string() )
+#		q_ResourceFormatLoader.handles_type( Autoload.get_string())
+#		q_ResourceFormatLoader.load( "res://Groźny.txtAutoload.get_string())
+#		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txtAutoload.get_string())
 #

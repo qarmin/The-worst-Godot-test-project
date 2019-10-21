@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_VideoStreamWebm = VideoStreamWebm.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_VideoStreamWebm.get_file())
+			q_VideoStreamWebm.get_file())
 		if randi() % 2 == 1:
-			q_VideoStreamWebm.set_file( Autoload.get_string() )
+			q_VideoStreamWebm.set_file( Autoload.get_string())

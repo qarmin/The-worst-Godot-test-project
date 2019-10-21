@@ -16,12 +16,12 @@ func alt_process(delta) -> void:
 			q_Translation.set_locale(Autoload.get_string())
 
 		if randi() % 2 == 1:
-			q_Translation.add_message( Autoload.get_string(), Autoload.get_string() )
+			q_Translation.add_message( Autoload.get_string(), Autoload.get_string())
 		if randi() % 2 == 1:
-			q_Translation.erase_message( Autoload.get_string() )
+			q_Translation.erase_message( Autoload.get_string())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Translation.get_message( Autoload.get_string() ))
+			q_Translation.get_message( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Translation.get_message_count())
+			q_Translation.get_message_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Translation.get_message_list())
+			q_Translation.get_message_list())

@@ -26,6 +26,6 @@ func alt_process(delta) -> void:
 			q_AnimationNodeOneShot.set_use_sync(Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeOneShot.get_mix_mode())
+			q_AnimationNodeOneShot.get_mix_mode()
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot.set_mix_mode(Autoload.get_int()) # MIX_MODE

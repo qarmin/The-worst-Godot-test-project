@@ -17,6 +17,6 @@ onready var counter : float = Autoload.get_rand_time()
 #		var q_Semaphore : Semaphore = Semaphore.new()
 #
 #			if randi() % 2 == 1:
-#				Autoload.qq = str(q_Semaphore.post())
+#				q_Semaphore.post())
 #			if randi() % 2 == 1:
-#				Autoload.qq = str(q_Semaphore.wait())
+#				q_Semaphore.wait())

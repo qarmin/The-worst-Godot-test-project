@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_EncodedObjectAsID = EncodedObjectAsID.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_EncodedObjectAsID.get_object_id())
+			q_EncodedObjectAsID.get_object_id())
 		if randi() % 2 == 1:
 			q_EncodedObjectAsID.set_object_id(Autoload.get_int())

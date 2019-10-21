@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_ConcavePolygonShape = ConcavePolygonShape.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ConcavePolygonShape.get_faces())
+			q_ConcavePolygonShape.get_faces())
 		if randi() % 2 == 1:
 			q_ConcavePolygonShape.set_faces(Autoload.get_poolvector3array())

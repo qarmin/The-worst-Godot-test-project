@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_GeometryInstance(self)
 		nodeFunction(self)
 
-func nodeFunction(q_ImmediateGeometry : ImmediateGeometry) -> void:
+func nodeFunction(q_ImmediateGeometry : ImmediateGeometry, can_reset : bool = false) -> void:
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:

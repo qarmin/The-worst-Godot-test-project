@@ -15,36 +15,36 @@ func alt_process(delta) -> void:
 			if randi() % 2 == 1:
 				q_Color = Color( Autoload.get_int())
 			if randi() % 2 == 1:
-				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float() )
+				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 			if randi() % 2 == 1:
-				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float() )
+				q_Color = Color( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.blend( Autoload.get_color()))
+			q_Color.blend( Autoload.get_color()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.contrasted())
+			q_Color.contrasted())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.darkened( Autoload.get_float() ))
+			q_Color.darkened( Autoload.get_float()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.from_hsv( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float() ))
+			q_Color.from_hsv( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.gray())
+			q_Color.gray())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.inverted())
+			q_Color.inverted())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.lightened( Autoload.get_float() ))
+			q_Color.lightened( Autoload.get_float()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_abgr32())
+			q_Color.to_abgr32())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_abgr64())
+			q_Color.to_abgr64())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_argb32())
+			q_Color.to_argb32())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_argb64())
+			q_Color.to_argb64())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_html(Autoload.get_bool()))
+			q_Color.to_html(Autoload.get_bool()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_rgba32())
+			q_Color.to_rgba32())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Color.to_rgba64())
+			q_Color.to_rgba64())

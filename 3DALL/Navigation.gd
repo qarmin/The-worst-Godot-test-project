@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Navigation : Navigation) -> void:
+func nodeFunction(q_Navigation : Navigation, can_reset : bool = false) -> void:
 
 		if q_Navigation.get_child_count() > 0:
 #		LEAK	if randi() % 2 == 1:

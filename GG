@@ -8,8 +8,7 @@ func alt_process(delta) -> void:
 		counter = Autoload.get_rand_time()
 
 		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
+		AutoObjects.A_Reference(self)
 		nodeFunction(self)
 
 func nodeFunction(q_. : ) -> void:

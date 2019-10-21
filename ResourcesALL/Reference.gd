@@ -22,11 +22,11 @@ onready var counter : float = Autoload.get_rand_time()
 #			q_Reference = Reference.new()
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_Reference.init_ref())
+#			q_Reference.init_ref())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_Reference.reference())
+#			q_Reference.reference())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_Reference.unreference())
+#			q_Reference.unreference())
 #
 #
 #func delete_node():

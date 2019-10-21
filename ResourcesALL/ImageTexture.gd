@@ -23,9 +23,9 @@ func alt_process(delta) -> void:
 			q_ImageTexture.create_from_image(Image.new(),Autoload.get_int())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ImageTexture.get_format())
+			q_ImageTexture.get_format())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ImageTexture.load("Sprite.png"))
+			q_ImageTexture.load("Sprite.png"))
 
 		if randi() % 2 == 1:
 			q_ImageTexture.set_data(Image.new())

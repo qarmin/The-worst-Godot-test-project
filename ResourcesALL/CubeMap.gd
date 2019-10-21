@@ -20,10 +20,10 @@ func alt_process(delta) -> void:
 			q_CubeMap.set_lossy_storage_quality(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CubeMap.get_height())
+			q_CubeMap.get_height())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CubeMap.get_side(Autoload.get_int()))# Side
+			q_CubeMap.get_side(Autoload.get_int()))# Side
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CubeMap.get_width())
+			q_CubeMap.get_width())
 		if randi() % 2 == 1:
 			q_CubeMap.set_side( Autoload.get_int(), Autoload.loadA("Sprite.png"))# Side

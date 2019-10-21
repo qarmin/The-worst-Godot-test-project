@@ -18,17 +18,17 @@ func alt_process(delta) -> void:
 			q_BitMap.create_from_image_alpha( Autoload.loadA("Sprite.png"),Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitMap.get_bit(Autoload.get_vector2()))
+			q_BitMap.get_bit(Autoload.get_vector2()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitMap.get_size())
+			q_BitMap.get_size())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitMap.get_true_bit_count())
+			q_BitMap.get_true_bit_count())
 
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:
 				q_BitMap.grow_mask( Autoload.get_int(), Autoload.get_rect2())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BitMap.opaque_to_polygons(  Autoload.get_rect2(), Autoload.get_float()))
+			q_BitMap.opaque_to_polygons(  Autoload.get_rect2(), Autoload.get_float()))
 
 		if randi() % 2 == 1:
 			q_BitMap.set_bit( Autoload.get_vector2(), Autoload.get_bool())

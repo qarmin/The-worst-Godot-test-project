@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Camera2D : Camera2D) -> void:
+func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 
 	var viewport_temp : Viewport = Viewport.new()
 

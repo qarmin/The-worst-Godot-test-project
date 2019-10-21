@@ -20,12 +20,12 @@ func alt_process(delta) -> void:
 			q_Texture.draw_rect_region(RID(),Autoload.get_rect2(),Autoload.get_rect2(), Autoload.get_color(), Autoload.get_bool(),Autoload.loadA("Sprite.png"),Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Texture.get_data())
+			q_Texture.get_data())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Texture.get_height())
+			q_Texture.get_height())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Texture.get_size())
+			q_Texture.get_size())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Texture.get_width())
+			q_Texture.get_width())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Texture.has_alpha())
+			q_Texture.has_alpha())

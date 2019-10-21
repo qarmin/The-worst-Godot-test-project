@@ -13,5 +13,5 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Position3D : Position3D) -> void:
+func nodeFunction(q_Position3D : Position3D, can_reset : bool = false) -> void:
 	pass

@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Skeleton : Skeleton) -> void:
+func nodeFunction(q_Skeleton : Skeleton, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			for _i in range(10):

@@ -24,6 +24,6 @@ func alt_process(delta) -> void:
 			q_GDNativeLibrary.set_reloadable(Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_GDNativeLibrary.get_current_dependencies())
+			q_GDNativeLibrary.get_current_dependencies())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_GDNativeLibrary.get_current_library_path())
+			q_GDNativeLibrary.get_current_library_path())

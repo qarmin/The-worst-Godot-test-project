@@ -21,18 +21,18 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.make_notification(Autoload.get_string(), Autoload.get_int()))
+#			q_JSONRPC.make_notification(Autoload.get_string(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.make_request(Autoload.get_string(), Autoload.get_int(), Autoload.get_int()))
+#			q_JSONRPC.make_request(Autoload.get_string(), Autoload.get_int(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.make_response(Autoload.get_int(), Autoload.get_int()))
+#			q_JSONRPC.make_response(Autoload.get_int(), Autoload.get_int()))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.make_response_error(Autoload.get_int(), Autoload.get_string(), Autoload.get_int()))
+#			q_JSONRPC.make_response_error(Autoload.get_int(), Autoload.get_string(), Autoload.get_int()))
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.process_action(Autoload.get_int(), Autoload.get_bool()))
+#			q_JSONRPC.process_action(Autoload.get_int(), Autoload.get_bool()))
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_JSONRPC.process_string(Autoload.get_string()))
+#			q_JSONRPC.process_string(Autoload.get_string()))
 #
 #		if randi() % 2 == 1:
 #			q_JSONRPC.set_scope(Autoload.get_string(), self)

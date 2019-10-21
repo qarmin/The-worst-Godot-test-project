@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_VideoStreamTheora = VideoStreamTheora.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_VideoStreamTheora.get_file())
+			q_VideoStreamTheora.get_file())
 		if randi() % 2 == 1:
-			q_VideoStreamTheora.set_file( Autoload.get_string() )
+			q_VideoStreamTheora.set_file( Autoload.get_string())

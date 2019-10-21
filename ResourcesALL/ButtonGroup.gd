@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_ButtonGroup = ButtonGroup.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ButtonGroup.get_buttons())
+			q_ButtonGroup.get_buttons())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_ButtonGroup.get_pressed_button())
+			q_ButtonGroup.get_pressed_button())

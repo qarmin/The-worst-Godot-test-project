@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_PathFollow2D : PathFollow2D) -> void:
+func nodeFunction(q_PathFollow2D : PathFollow2D, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_PathFollow2D.set_offset(Autoload.get_float())

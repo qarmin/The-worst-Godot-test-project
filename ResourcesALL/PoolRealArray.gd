@@ -19,11 +19,11 @@ func alt_process(delta) -> void:
 #			q_PoolRealArray.append_array(Autoload.get_poolrealarray())
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_PoolRealArray.insert( Autoload.get_int(), Autoload.get_float()) )
+#			q_PoolRealArray.insert( Autoload.get_int(), Autoload.get_float()))
 #		if randi() % 2 == 1:
 #			q_PoolRealArray.invert()
 #		if randi() % 2 == 1:
-#			q_PoolRealArray.push_back( Autoload.get_float() )
+#			q_PoolRealArray.push_back( Autoload.get_float())
 #		if randi() % 2 == 1:
 #			q_PoolRealArray.remove( Autoload.get_int())
 #		if randi() % 2 == 1:
@@ -31,4 +31,4 @@ func alt_process(delta) -> void:
 #		if randi() % 2 == 1:
 #			q_PoolRealArray.set(Autoload.get_int(), Autoload.get_float())
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_PoolRealArray.size())
+#			q_PoolRealArray.size())

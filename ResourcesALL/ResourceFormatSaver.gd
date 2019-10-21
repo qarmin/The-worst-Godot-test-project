@@ -16,7 +16,7 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_ResourceFormatSaver : ResourceFormatSaver = ResourceFormatSaver.new()
 #
-#		q_ResourceFormatSaver.get_recognized_extensions( Resource.new() )
-#		q_ResourceFormatSaver.recognize( Resource.new() )
-#		q_ResourceFormatSaver.save( Autoload.get_string(), Resource.new(), Autoload.get_int() )
+#		q_ResourceFormatSaver.get_recognized_extensions( Resource.new())
+#		q_ResourceFormatSaver.recognize( Resource.new())
+#		q_ResourceFormatSaver.save( Autoload.get_string(), Resource.new(), Autoload.get_int())
 #

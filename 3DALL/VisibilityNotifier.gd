@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_VisibilityNotifier : VisibilityNotifier) -> void:
+func nodeFunction(q_VisibilityNotifier : VisibilityNotifier, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_VisibilityNotifier.set_aabb(Autoload.get_aabb())

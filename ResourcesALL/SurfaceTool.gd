@@ -23,9 +23,9 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_smooth_group( Autoload.get_bool())
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_tangent( Autoload.get_plane() )
+			q_SurfaceTool.add_tangent( Autoload.get_plane())
 		if randi() % 2 == 1:
-			q_SurfaceTool.add_triangle_fan( Autoload.get_poolvector3array(), Autoload.get_poolvector2array(), Autoload.get_poolcolorarray(), Autoload.get_poolvector2array(), Autoload.get_poolvector3array(), Autoload.get_array() )
+			q_SurfaceTool.add_triangle_fan( Autoload.get_poolvector3array(), Autoload.get_poolvector2array(), Autoload.get_poolcolorarray(), Autoload.get_poolvector2array(), Autoload.get_poolvector3array(), Autoload.get_array())
 		if randi() % 2 == 1:
 			q_SurfaceTool.add_uv( Autoload.get_vector2())
 		if randi() % 2 == 1:
@@ -38,19 +38,19 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.append_from( Mesh.new(), Autoload.get_int(), Autoload.get_transform())
 		if randi() % 2 == 1:
-			q_SurfaceTool.begin( Autoload.get_int() )#PrimitiveType
+			q_SurfaceTool.begin( Autoload.get_int())#PrimitiveType
 		if randi() % 2 == 1:
 			q_SurfaceTool.clear()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_SurfaceTool.commit( Autoload.loadA("ArrayMesh.tres"), Autoload.get_int()))
+			q_SurfaceTool.commit( Autoload.loadA("ArrayMesh.tres"), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_SurfaceTool.commit_to_arrays())
+			q_SurfaceTool.commit_to_arrays())
 
 		if randi() % 2 == 1:
-			q_SurfaceTool.create_from( Mesh.new(), Autoload.get_int() )
+			q_SurfaceTool.create_from( Mesh.new(), Autoload.get_int())
 		if randi() % 2 == 1:
-			q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_int(), Autoload.get_string() )
+			q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_int(), Autoload.get_string())
 
 		if randi() % 2 == 1:
 			q_SurfaceTool.deindex()
@@ -63,4 +63,4 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_SurfaceTool.index()
 		if randi() % 2 == 1:
-			q_SurfaceTool.set_material( Autoload.loadA("SpatialMaterial.tres") )
+			q_SurfaceTool.set_material( Autoload.loadA("SpatialMaterial.tres"))

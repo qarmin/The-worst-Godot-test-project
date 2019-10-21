@@ -15,6 +15,6 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_EditorResourceConversionPlugin : EditorResourceConversionPlugin = EditorResourceConversionPlugin.new()
 #
-#		q_EditorResourceConversionPlugin._convert( Resource.new() )
+#		q_EditorResourceConversionPlugin._convert( Resource.new())
 #		q_EditorResourceConversionPlugin._converts_to()
 #

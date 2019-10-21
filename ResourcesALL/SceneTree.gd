@@ -27,46 +27,46 @@ onready var counter : float = Autoload.get_rand_time()
 ##		q_temp.queue_free()
 #		#q_SceneTree.set_current_scene(Node.new())
 #		#q_SceneTree.set_network_peer(NetworkedMultiplayerPeer.new())
-#		Autoload.qq = str(q_SceneTree.get_root())
+#		q_SceneTree.get_root())
 ##		q_SceneTree.set_multiplayer(MultiplayerAPI.new())
 #		q_SceneTree.set_multiplayer_poll_enabled(Autoload.get_bool())
 #
-#		q_SceneTree.call_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_string() )
+#		q_SceneTree.call_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_string())
 #		q_SceneTree.call_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_string())#GroupCallFlags
 #
 #		### q_SceneTree.change_scene( String path )
 #		### q_SceneTree.change_scene_to( PackedScene packed_scene )
 #
-#		Autoload.qq = str(q_SceneTree.create_timer( Autoload.get_float(), Autoload.get_bool()))
+#		q_SceneTree.create_timer( Autoload.get_float(), Autoload.get_bool()))
 #
-#		Autoload.qq = str(q_SceneTree.get_frame())
-#		#Autoload.qq = str(q_SceneTree.get_network_connected_peers())
-#		#Autoload.qq = str(q_SceneTree.get_network_unique_id())
-#		Autoload.qq = str(q_SceneTree.get_node_count())
-#		Autoload.qq = str(q_SceneTree.get_nodes_in_group( Autoload.get_string() ))
-#		Autoload.qq = str(q_SceneTree.get_rpc_sender_id())
+#		q_SceneTree.get_frame())
+#		#q_SceneTree.get_network_connected_peers())
+#		#q_SceneTree.get_network_unique_id())
+#		q_SceneTree.get_node_count())
+#		q_SceneTree.get_nodes_in_group( Autoload.get_string()))
+#		q_SceneTree.get_rpc_sender_id())
 #
-#		Autoload.qq = str(q_SceneTree.has_group( Autoload.get_string()))
-#		Autoload.qq = str(q_SceneTree.has_network_peer())
+#		q_SceneTree.has_group( Autoload.get_string()))
+#		q_SceneTree.has_network_peer())
 #
-#		Autoload.qq = str(q_SceneTree.is_input_handled())
-#		#Autoload.qq = str(q_SceneTree.is_network_server())
+#		q_SceneTree.is_input_handled())
+#		#q_SceneTree.is_network_server())
 #
 #		q_SceneTree.notify_group( Autoload.get_string(), Autoload.get_bool())
 #		q_SceneTree.notify_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_bool()) #GroupCallFlags
 #
 ##		q_temp = load("res://RES/Node.tscn").instance()
-##		q_SceneTree.queue_delete( Node.new() )
+##		q_SceneTree.queue_delete( Node.new())
 ##		q_temp.queue_free()
 #		### q_SceneTree.quit()
-#		#Autoload.qq = str(q_SceneTree.reload_current_scene())
+#		#q_SceneTree.reload_current_scene())
 #
 #		q_SceneTree.set_auto_accept_quit( Autoload.get_bool())
 #		q_SceneTree.set_group( Autoload.get_string(), Autoload.get_string(), Autoload.get_bool())
 #		q_SceneTree.set_group_flags( Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_bool()) # GroupCallFlags
 #		q_SceneTree.set_input_as_handled()
 #		q_SceneTree.set_quit_on_go_back( Autoload.get_bool())
-#		#q_SceneTree.set_screen_stretch( Autoload.get_int(), Autoload.get_int(), Autoload.get_vector2(), Autoload.get_float() )#StretchMode, StretchAspect
+#		#q_SceneTree.set_screen_stretch( Autoload.get_int(), Autoload.get_int(), Autoload.get_vector2(), Autoload.get_float())#StretchMode, StretchAspect
 #
 #		q_SceneTree.queue_delete(self)
 #

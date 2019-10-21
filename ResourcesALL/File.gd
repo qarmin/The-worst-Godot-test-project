@@ -18,90 +18,90 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_File.close()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.eof_reached())
+			q_File.eof_reached())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.file_exists( Autoload.get_string() ))
+			q_File.file_exists( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_16())
+			q_File.get_16())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_32())
+			q_File.get_32())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_64())
+			q_File.get_64())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_8())
+			q_File.get_8())
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_File.get_as_text())
+#			q_File.get_as_text())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_buffer( Autoload.get_int()))
+			q_File.get_buffer( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_csv_line( Autoload.get_string() ))
+			q_File.get_csv_line( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_double())
+			q_File.get_double())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_error())
+			q_File.get_error())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_float())
+			q_File.get_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_len())
+			q_File.get_len())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_line())
+			q_File.get_line())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_md5( Autoload.get_string()))
+			q_File.get_md5( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_modified_time( Autoload.get_string() ))
+			q_File.get_modified_time( Autoload.get_string()))
 #	BUG	if randi() % 2 == 1:
-#			Autoload.qq = str(q_File.get_pascal_string())
+#			q_File.get_pascal_string())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_path())
+			q_File.get_path())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_path_absolute())
+			q_File.get_path_absolute())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_position())
+			q_File.get_position())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_real())
+			q_File.get_real())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_sha256( Autoload.get_string() ))
+			q_File.get_sha256( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.get_var( Autoload.get_bool()))
+			q_File.get_var( Autoload.get_bool()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.is_open())
+			q_File.is_open())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int()))
-		###q_File.open_compressed( "Sprite.png", Autoload.get_int(), Autoload.get_int() )#ModeFlags, CompressionMode
+			q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int()))
+		###q_File.open_compressed( "Sprite.png", Autoload.get_int(), Autoload.get_int())#ModeFlags, CompressionMode
 		###q_File.open_encrypted( "Sprite.png", Autoload.get_int(), Autoload.get_poolbytearray())#ModeFlags
 		###q_File.open_encrypted_with_pass( "Sprite.png", Autoload.get_int(), "Sprite.png" )#ModeFlags
 
 		if randi() % 2 == 1:
-			q_File.seek( Autoload.get_int() )
+			q_File.seek( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_File.seek_end( Autoload.get_int() )
+			q_File.seek_end( Autoload.get_int())
 
 		if randi() % 2 == 1:
-			q_File.store_16( Autoload.get_int() )
+			q_File.store_16( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_File.store_32( Autoload.get_int() )
+			q_File.store_32( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_File.store_64( Autoload.get_int() )
+			q_File.store_64( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_File.store_8( Autoload.get_int() )
+			q_File.store_8( Autoload.get_int())
 		if randi() % 2 == 1:
 			q_File.store_buffer( Autoload.get_poolbytearray())
 		if randi() % 2 == 1:
-			q_File.store_csv_line( Autoload.get_poolstringarray(), Autoload.get_string() )
+			q_File.store_csv_line( Autoload.get_poolstringarray(), Autoload.get_string())
 		if randi() % 2 == 1:
-			q_File.store_double( Autoload.get_float() )
+			q_File.store_double( Autoload.get_float())
 		if randi() % 2 == 1:
-			q_File.store_float( Autoload.get_float() )
+			q_File.store_float( Autoload.get_float())
 		if randi() % 2 == 1:
-			q_File.store_line( Autoload.get_string() )
+			q_File.store_line( Autoload.get_string())
 		if randi() % 2 == 1:
-			q_File.store_pascal_string( Autoload.get_string() )
+			q_File.store_pascal_string( Autoload.get_string())
 		if randi() % 2 == 1:
-			q_File.store_real( Autoload.get_float() )
+			q_File.store_real( Autoload.get_float())
 		if randi() % 2 == 1:
-			q_File.store_string( Autoload.get_string() )
+			q_File.store_string( Autoload.get_string())
 		if randi() % 2 == 1:
 			q_File.store_var( Autoload.get_string(), Autoload.get_bool())

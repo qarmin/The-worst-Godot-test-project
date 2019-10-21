@@ -19,6 +19,6 @@ onready var counter : float = Autoload.get_rand_time()
 #		q_FuncRef.call_func(Autoload.get_string())
 #		q_FuncRef.is_valid()
 #
-#		q_FuncRef.set_function( Autoload.get_string() )
-#		q_FuncRef.set_instance( Node.new() )
+#		q_FuncRef.set_function( Autoload.get_string())
+#		q_FuncRef.set_instance( Node.new())
 #

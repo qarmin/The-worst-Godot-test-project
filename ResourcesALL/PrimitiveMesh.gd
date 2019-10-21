@@ -21,4 +21,4 @@ func alt_process(delta) -> void:
 
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:
-				Autoload.qq = str(q_PrimitiveMesh.get_mesh_arrays())
+				q_PrimitiveMesh.get_mesh_arrays())

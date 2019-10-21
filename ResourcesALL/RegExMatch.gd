@@ -13,17 +13,17 @@ func alt_process(delta) -> void:
 			q_RegExMatch = RegExMatch.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_subject())
+			q_RegExMatch.get_subject())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_names())
+			q_RegExMatch.get_names())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_strings())
+			q_RegExMatch.get_strings())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_end( Autoload.get_string() ))
+			q_RegExMatch.get_end( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_group_count())
+			q_RegExMatch.get_group_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_start( Autoload.get_string() ))
+			q_RegExMatch.get_start( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_RegExMatch.get_string( Autoload.get_string() ))
+			q_RegExMatch.get_string( Autoload.get_string()))

@@ -13,8 +13,8 @@ func alt_process(delta) -> void:
 			q_HashingContext = HashingContext.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_HashingContext.finish())
+			q_HashingContext.finish())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_HashingContext.start(Autoload.get_int())) #HashType
+			q_HashingContext.start(Autoload.get_int())) #HashType
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_HashingContext.update(Autoload.get_poolbytearray()))
+			q_HashingContext.update(Autoload.get_poolbytearray()))

@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_NavigationMeshInstance : NavigationMeshInstance) -> void:
+func nodeFunction(q_NavigationMeshInstance : NavigationMeshInstance, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_NavigationMeshInstance.set_navigation_mesh(Autoload.loadA("NavigationMesh.tres"))

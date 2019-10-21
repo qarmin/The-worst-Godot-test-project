@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Skeleton2D : Skeleton2D) -> void:
+func nodeFunction(q_Skeleton2D : Skeleton2D, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_Skeleton2D.get_skeleton()

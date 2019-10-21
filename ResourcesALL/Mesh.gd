@@ -13,22 +13,22 @@ func alt_process(delta) -> void:
 			q_Mesh = Mesh.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.create_convex_shape())
+			q_Mesh.create_convex_shape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.create_outline( Autoload.get_float()))
+			q_Mesh.create_outline( Autoload.get_float()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.create_trimesh_shape())
+			q_Mesh.create_trimesh_shape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.generate_triangle_mesh())
+			q_Mesh.generate_triangle_mesh())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.get_faces())
+			q_Mesh.get_faces())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.get_surface_count())
+			q_Mesh.get_surface_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.surface_get_arrays( Autoload.get_int() ))
+			q_Mesh.surface_get_arrays( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.surface_get_blend_shape_arrays( Autoload.get_int() ))
+			q_Mesh.surface_get_blend_shape_arrays( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mesh.surface_get_material( Autoload.get_int() ))
+			q_Mesh.surface_get_material( Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_Mesh.surface_set_material( Autoload.get_int(), Autoload.loadA("SpatialMaterial.tres"))

@@ -12,4 +12,4 @@ func alt_process(delta) -> void:
 
 		if randi() % 2 == 1:
 			#q_RID = RID()
-			Autoload.qq = str(q_RID.get_id())
+			q_RID.get_id())

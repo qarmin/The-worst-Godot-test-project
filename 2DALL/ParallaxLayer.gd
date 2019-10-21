@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_ParallaxLayer : ParallaxLayer) -> void:
+func nodeFunction(q_ParallaxLayer : ParallaxLayer, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_ParallaxLayer.set_motion_scale(Autoload.get_vector2())

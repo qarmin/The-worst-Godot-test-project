@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_GeometryInstance(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Particles : Particles) -> void:
+func nodeFunction(q_Particles : Particles, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_Particles.set_emitting(Autoload.get_bool())

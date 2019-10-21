@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_VehicleWheel : VehicleWheel) -> void:
+func nodeFunction(q_VehicleWheel : VehicleWheel, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_VehicleWheel.set_use_as_traction(Autoload.get_bool())

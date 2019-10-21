@@ -22,5 +22,5 @@ onready var counter : float = Autoload.get_rand_time()
 #		q_CameraServer.get_feed( Autoload.get_int())
 #		q_CameraServer.get_feed_count()
 #
-#		q_CameraServer.remove_feed( CameraFeed.new() )
+#		q_CameraServer.remove_feed( CameraFeed.new())
 #

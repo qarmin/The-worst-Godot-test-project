@@ -15,6 +15,6 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_Mutex.lock()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Mutex.try_lock())
+			q_Mutex.try_lock())
 		if randi() % 2 == 1:
 			q_Mutex.unlock()

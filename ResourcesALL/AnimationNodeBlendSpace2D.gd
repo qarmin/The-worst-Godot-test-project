@@ -28,24 +28,24 @@ func alt_process(delta) -> void:
 			q_AnimationNodeBlendSpace2D.set_blend_mode(Autoload.get_int()) #BlendMode
 
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.add_blend_point( AnimationRootNode.new(), Autoload.get_vector2(), Autoload.get_int() )
+			q_AnimationNodeBlendSpace2D.add_blend_point( AnimationRootNode.new(), Autoload.get_vector2(), Autoload.get_int())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.add_triangle( Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int() )
+			q_AnimationNodeBlendSpace2D.add_triangle( Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeBlendSpace2D.get_blend_point_count())
+			q_AnimationNodeBlendSpace2D.get_blend_point_count()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeBlendSpace2D.get_blend_point_node( Autoload.get_int() ))
+			q_AnimationNodeBlendSpace2D.get_blend_point_node( Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeBlendSpace2D.get_blend_point_position( Autoload.get_int() ))
+			q_AnimationNodeBlendSpace2D.get_blend_point_position( Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeBlendSpace2D.get_triangle_count())
+			q_AnimationNodeBlendSpace2D.get_triangle_count()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimationNodeBlendSpace2D.get_triangle_point( Autoload.get_int(), Autoload.get_int() ))
+			q_AnimationNodeBlendSpace2D.get_triangle_point( Autoload.get_int(), Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			q_AnimationNodeBlendSpace2D.remove_blend_point( Autoload.get_int() )
+#			q_AnimationNodeBlendSpace2D.remove_blend_point( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.remove_triangle( Autoload.get_int() )
+			q_AnimationNodeBlendSpace2D.remove_triangle( Autoload.get_int())
 		if randi() % 2 == 1:
 			q_AnimationNodeBlendSpace2D.set_blend_point_node( Autoload.get_int(), AnimationRootNode.new())
 		if randi() % 2 == 1:
-			q_AnimationNodeBlendSpace2D.set_blend_point_position( Autoload.get_int(), Autoload.get_vector2() )
+			q_AnimationNodeBlendSpace2D.set_blend_point_position( Autoload.get_int(), Autoload.get_vector2())

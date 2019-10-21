@@ -650,7 +650,7 @@ func A_Control(q_Control : Control) -> void:
 	if randi() % 2 == 1:
 		q_Control.get_constant(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Control.get_cursor_shape(Autoload.get_vector2() )
+		q_Control.get_cursor_shape(Autoload.get_vector2())
 	### q_Control.get_drag_data(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Control.get_end()

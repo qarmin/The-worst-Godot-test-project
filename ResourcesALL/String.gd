@@ -60,175 +60,175 @@ func alt_process(delta) -> void:
 				q_String = String( Autoload.get_poolcolorarray())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.begins_with( Autoload.get_string()))
+			q_String.begins_with( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.bigrams())
+			q_String.bigrams())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.c_escape())
+			q_String.c_escape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.c_unescape())
+			q_String.c_unescape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.capitalize())
+			q_String.capitalize())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.casecmp_to( Autoload.get_string() ))
+			q_String.casecmp_to( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.dedent())
+			q_String.dedent())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.empty())
+			q_String.empty())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.ends_with( Autoload.get_string() ))
+			q_String.ends_with( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.erase( Autoload.get_int(),Autoload.get_int()))
+			q_String.erase( Autoload.get_int(),Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.find( Autoload.get_string(), Autoload.get_int()))
+			q_String.find( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.find_last( Autoload.get_string() ))
+			q_String.find_last( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.findn( Autoload.get_string(), Autoload.get_int()))
+			q_String.findn( Autoload.get_string(), Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.format( Autoload.get_string(), Autoload.get_string() ))
+			q_String.format( Autoload.get_string(), Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.get_base_dir())
+			q_String.get_base_dir())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.get_basename())
+			q_String.get_basename())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.get_extension())
+			q_String.get_extension())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.get_file())
+			q_String.get_file())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.hash())
+			q_String.hash())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.hex_to_int())
+			q_String.hex_to_int())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.http_escape())
+			q_String.http_escape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.http_unescape())
+			q_String.http_unescape())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.insert( Autoload.get_int(), Autoload.get_string() ))
+			q_String.insert( Autoload.get_int(), Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_abs_path())
+			q_String.is_abs_path())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_rel_path())
+			q_String.is_rel_path())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_subsequence_of( Autoload.get_string() ))
+			q_String.is_subsequence_of( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_subsequence_ofi( Autoload.get_string() ))
+			q_String.is_subsequence_ofi( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_filename())
+			q_String.is_valid_filename())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_float())
+			q_String.is_valid_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_hex_number( Autoload.get_bool()))
+			q_String.is_valid_hex_number( Autoload.get_bool()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_html_color())
+			q_String.is_valid_html_color())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_identifier())
+			q_String.is_valid_identifier())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_integer())
+			q_String.is_valid_integer())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.is_valid_ip_address())
+			q_String.is_valid_ip_address())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.json_escape())
+			q_String.json_escape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.left( Autoload.get_int()))
+			q_String.left( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.length())
+			q_String.length())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.lstrip( Autoload.get_string() ))
+			q_String.lstrip( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.match( Autoload.get_string() ))
+			q_String.match( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.matchn( Autoload.get_string() ))
+			q_String.matchn( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.md5_buffer())
+			q_String.md5_buffer())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.md5_text())
+			q_String.md5_text())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.nocasecmp_to( Autoload.get_string() ))
+			q_String.nocasecmp_to( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.ord_at( Autoload.get_int()))
+			q_String.ord_at( Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.pad_decimals( Autoload.get_inti(100)))
+			q_String.pad_decimals( Autoload.get_inti(100)))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.pad_zeros( Autoload.get_inti(100)))
+			q_String.pad_zeros( Autoload.get_inti(100)))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.percent_decode())
+			q_String.percent_decode())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.percent_encode())
+			q_String.percent_encode())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.plus_file( Autoload.get_string() ))
+			q_String.plus_file( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.replace( Autoload.get_string(), Autoload.get_string() ))
+			q_String.replace( Autoload.get_string(), Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.replacen( Autoload.get_string(), Autoload.get_string() ))
+			q_String.replacen( Autoload.get_string(), Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.rfind( Autoload.get_string(), Autoload.get_int()))
+			q_String.rfind( Autoload.get_string(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.rfindn( Autoload.get_string(), Autoload.get_int()))
+			q_String.rfindn( Autoload.get_string(), Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.right( Autoload.get_int()))
+			q_String.right( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.rsplit( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
+			q_String.rsplit( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.rstrip( Autoload.get_string() ))
+			q_String.rstrip( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.sha256_buffer())
+			q_String.sha256_buffer())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.sha256_text())
+			q_String.sha256_text())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.similarity( Autoload.get_string() ))
+			q_String.similarity( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.split( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
+			q_String.split( Autoload.get_string(), Autoload.get_bool(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.split_floats( Autoload.get_string(),Autoload.get_bool() ))
+			q_String.split_floats( Autoload.get_string(),Autoload.get_bool()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.strip_edges( Autoload.get_bool(),Autoload.get_bool()))
+			q_String.strip_edges( Autoload.get_bool(),Autoload.get_bool()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.strip_escapes())
+			q_String.strip_escapes())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.substr( Autoload.get_int(),Autoload.get_int()))
+			q_String.substr( Autoload.get_int(),Autoload.get_int()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_ascii())
+			q_String.to_ascii())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_float())
+			q_String.to_float())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_int())
+			q_String.to_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_lower())
+			q_String.to_lower())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_upper())
+			q_String.to_upper())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.to_utf8())
+			q_String.to_utf8())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.trim_prefix( Autoload.get_string() ))
+			q_String.trim_prefix( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.trim_suffix( Autoload.get_string() ))
+			q_String.trim_suffix( Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.xml_escape())
+			q_String.xml_escape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_String.xml_unescape())
+			q_String.xml_unescape())

@@ -18,14 +18,14 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_StreamPeerBuffer.clear()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_StreamPeerBuffer.duplicate())
+			q_StreamPeerBuffer.duplicate())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_StreamPeerBuffer.get_position())
+			q_StreamPeerBuffer.get_position())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_StreamPeerBuffer.get_size())
+			q_StreamPeerBuffer.get_size())
 
 		if randi() % 2 == 1:
 			q_StreamPeerBuffer.resize( Autoload.get_int())
 		if randi() % 2 == 1:
-			q_StreamPeerBuffer.seek( Autoload.get_int() )
+			q_StreamPeerBuffer.seek( Autoload.get_int())

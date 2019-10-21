@@ -13,6 +13,6 @@ func alt_process(delta) -> void:
 			q_VideoStreamGDNative = VideoStreamGDNative.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_VideoStreamGDNative.get_file())
+			q_VideoStreamGDNative.get_file())
 		if randi() % 2 == 1:
 			q_VideoStreamGDNative.set_file( "res://TEMP/" +Autoload.get_string())

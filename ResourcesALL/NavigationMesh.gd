@@ -59,11 +59,11 @@ func alt_process(delta) -> void:
 #			q_NavigationMesh.create_from_mesh(Autoload.loadA("CubeMesh.tres"))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NavigationMesh.get_collision_mask_bit( Autoload.get_int() ))
+			q_NavigationMesh.get_collision_mask_bit( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NavigationMesh.get_polygon( Autoload.get_int() ))
+			q_NavigationMesh.get_polygon( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NavigationMesh.get_polygon_count())
+			q_NavigationMesh.get_polygon_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NavigationMesh.get_vertices())
+			q_NavigationMesh.get_vertices())
 

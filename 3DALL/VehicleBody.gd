@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_PhysicsBody(self)
 		nodeFunction(self)
 
-func nodeFunction(q_VehicleBody : VehicleBody) -> void:
+func nodeFunction(q_VehicleBody : VehicleBody, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_VehicleBody.set_engine_force(Autoload.get_float())

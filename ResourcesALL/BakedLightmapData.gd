@@ -28,8 +28,8 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_BakedLightmapData.clear_users()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BakedLightmapData.get_user_count())
+			q_BakedLightmapData.get_user_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BakedLightmapData.get_user_lightmap( Autoload.get_int()))
+			q_BakedLightmapData.get_user_lightmap( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_BakedLightmapData.get_user_path( Autoload.get_int()) )
+			q_BakedLightmapData.get_user_path( Autoload.get_int()))

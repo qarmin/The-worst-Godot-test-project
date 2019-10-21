@@ -16,11 +16,11 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_EditorSelection : EditorSelection = EditorSelection.new()
 #
-#		q_EditorSelection.add_node( Node.new() )
+#		q_EditorSelection.add_node( Node.new())
 #		q_EditorSelection.clear()
 #
 #		q_EditorSelection.get_selected_nodes()
 #		q_EditorSelection.get_transformable_selected_nodes()
 #
-#		q_EditorSelection.remove_node( Node.new() )
+#		q_EditorSelection.remove_node( Node.new())
 #

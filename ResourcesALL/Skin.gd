@@ -17,11 +17,11 @@ func _process(delta) ->  void:
 		if randi() % 2 == 1:
 			q_Skin.clear_binds()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Skin.get_bind_bone(Autoload.get_int())) 
+			q_Skin.get_bind_bone(Autoload.get_int())) 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Skin.get_bind_count())
+			q_Skin.get_bind_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Skin.get_bind_pose(Autoload.get_int()))
+			q_Skin.get_bind_pose(Autoload.get_int()))
 		if randi() % 2 == 1:
 			q_Skin.set_bind_bone(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:

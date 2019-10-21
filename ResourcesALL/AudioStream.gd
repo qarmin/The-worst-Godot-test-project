@@ -13,4 +13,4 @@ func alt_process(delta) -> void:
 			q_AudioStream = AudioStreamGenerator.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AudioStream.get_length())
+			q_AudioStream.get_length())

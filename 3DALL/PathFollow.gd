@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_PathFollow : PathFollow) -> void:
+func nodeFunction(q_PathFollow : PathFollow, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_PathFollow.set_offset(Autoload.get_float())

@@ -8,13 +8,12 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_GeometryInstance(self)
-		AutoObjects.A_CSGShape(self)
 		nodeFunction(self)
 
-func nodeFunction(q_CSGCombiner : CSGCombiner) -> void:
-	pass
+func nodeFunction(q_CSGCombiner : CSGCombiner, can_reset : bool = false) -> void:
+	AutoObjects.A_Object(self)
+	AutoObjects.A_Node(self)
+	AutoObjects.A_Spatial(self)
+	AutoObjects.A_VisualInstance(self)
+	AutoObjects.A_GeometryInstance(self)
+	AutoObjects.A_CSGShape(self)

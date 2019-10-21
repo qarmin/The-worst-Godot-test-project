@@ -15,6 +15,6 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #		var q_ResourceSaver : ResourceSaver = ResourceSaver.new()
 #
-#		Autoload.qq = str(ResourceSaver.get_recognized_extensions(Autoload.loadA("CubeMesh.tres")))
-#		Autoload.qq = str(ResourceSaver.save(Autoload.get_string(),Autoload.loadA("CubeMesh.tres"),Autoload.get_int())  # SaverFlags
+#		ResourceSaver.get_recognized_extensions(Autoload.loadA("CubeMesh.tres")))
+#		ResourceSaver.save(Autoload.get_string(),Autoload.loadA("CubeMesh.tres"),Autoload.get_int())  # SaverFlags
 #

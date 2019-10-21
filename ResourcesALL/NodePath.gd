@@ -13,19 +13,19 @@ func alt_process(delta) -> void:
 			q_NodePath = Autoload.get_nodepath(self)
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_as_property_path())
+			q_NodePath.get_as_property_path())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_concatenated_subnames())
+			q_NodePath.get_concatenated_subnames())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_name( Autoload.get_int()))
+			q_NodePath.get_name( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_name_count())
+			q_NodePath.get_name_count())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_subname(Autoload.get_int() ))
+			q_NodePath.get_subname(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.get_subname_count())
+			q_NodePath.get_subname_count())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.is_absolute())
+			q_NodePath.is_absolute())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NodePath.is_empty())
+			q_NodePath.is_empty())

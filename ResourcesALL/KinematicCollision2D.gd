@@ -13,24 +13,24 @@ func alt_process(delta) -> void:
 			q_KinematicCollision2D = KinematicCollision2D.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_position())
+			q_KinematicCollision2D.get_position())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_normal())
+			q_KinematicCollision2D.get_normal())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_travel())
+			q_KinematicCollision2D.get_travel())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_remainder())
+			q_KinematicCollision2D.get_remainder())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_local_shape())
+			q_KinematicCollision2D.get_local_shape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider())
+			q_KinematicCollision2D.get_collider())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider_id() )
+			q_KinematicCollision2D.get_collider_id())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider_shape())
+			q_KinematicCollision2D.get_collider_shape())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider_shape_index())
+			q_KinematicCollision2D.get_collider_shape_index())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider_velocity())
+			q_KinematicCollision2D.get_collider_velocity())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_KinematicCollision2D.get_collider_metadata())
+			q_KinematicCollision2D.get_collider_metadata())

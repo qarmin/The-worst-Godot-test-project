@@ -17,24 +17,24 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			q_MeshLibrary.create_item(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.find_item_by_name(Autoload.get_string()))
+			q_MeshLibrary.find_item_by_name(Autoload.get_string()))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_list())
+			q_MeshLibrary.get_item_list())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_mesh(Autoload.get_int()))
+			q_MeshLibrary.get_item_mesh(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_name(Autoload.get_int()))
+			q_MeshLibrary.get_item_name(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_navmesh(Autoload.get_int()))
+			q_MeshLibrary.get_item_navmesh(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_navmesh_transform(Autoload.get_int()))
+			q_MeshLibrary.get_item_navmesh_transform(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_preview(Autoload.get_int()))
+			q_MeshLibrary.get_item_preview(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_item_shapes(Autoload.get_int()))
+			q_MeshLibrary.get_item_shapes(Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MeshLibrary.get_last_unused_item_id())
+			q_MeshLibrary.get_last_unused_item_id())
 
 		if randi() % 2 == 1:
 			q_MeshLibrary.remove_item(Autoload.get_int())

@@ -16,11 +16,11 @@ func alt_process(delta) -> void:
 			q_Shader.set_code(Autoload.get_string())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Shader.get_default_texture_param( Autoload.get_string() ))
+			q_Shader.get_default_texture_param( Autoload.get_string()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Shader.get_mode())
+			q_Shader.get_mode())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Shader.has_param( Autoload.get_string() ))
+			q_Shader.has_param( Autoload.get_string()))
 		if randi() % 2 == 1:
-			q_Shader.set_default_texture_param( Autoload.get_string(), Autoload.loadA("Sprite.png") )
+			q_Shader.set_default_texture_param( Autoload.get_string(), Autoload.loadA("Sprite.png"))

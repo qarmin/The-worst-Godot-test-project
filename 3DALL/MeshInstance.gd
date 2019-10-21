@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_GeometryInstance(self)
 		nodeFunction(self)
 
-func nodeFunction(q_MeshInstance : MeshInstance) -> void:
+func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_MeshInstance.set_mesh(Autoload.loadA("CubeMesh.tres"))

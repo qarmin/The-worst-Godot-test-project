@@ -8,14 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_AnimatedSprite : AnimatedSprite) -> void:
+func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -> void:
 	
+	AutoObjects.A_Object(self)
+	AutoObjects.A_Node(self)
+	AutoObjects.A_CanvasItem(self)
+	AutoObjects.A_Node2D(self)
+		
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))
 	if randi()%2 == 1:

@@ -22,5 +22,5 @@ onready var counter : float = Autoload.get_rand_time()
 #		q_NetworkedMultiplayerPeer.get_packet_peer()
 #		q_NetworkedMultiplayerPeer.get_unique_id()
 #		q_NetworkedMultiplayerPeer.poll()
-#		q_NetworkedMultiplayerPeer.set_target_peer( Autoload.get_int() )
+#		q_NetworkedMultiplayerPeer.set_target_peer( Autoload.get_int())
 #

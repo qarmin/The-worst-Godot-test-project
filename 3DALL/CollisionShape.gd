@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_CollisionShape : CollisionShape) -> void:
+func nodeFunction(q_CollisionShape : CollisionShape, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_CollisionShape.set_shape(BoxShape.new())

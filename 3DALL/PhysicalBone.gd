@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_PhysicsBody(self)
 		nodeFunction(self)
 
-func nodeFunction(q_PhysicalBone : PhysicalBone) -> void:
+func nodeFunction(q_PhysicalBone : PhysicalBone, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_PhysicalBone.set_joint_type(Autoload.get_int()) #JOINT_TYPE

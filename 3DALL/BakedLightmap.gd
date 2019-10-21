@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_VisualInstance(self)
 		nodeFunction(self)
 
-func nodeFunction(q_BakedLightmap : BakedLightmap) -> void:
+func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())

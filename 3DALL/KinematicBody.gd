@@ -15,7 +15,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_PhysicsBody(self)
 		nodeFunction(self)
 
-func nodeFunction(q_KinematicBody : KinematicBody) -> void:
+func nodeFunction(q_KinematicBody : KinematicBody, can_reset : bool = false) -> void:
 
 		if randi() % 2 == 1:
 			q_KinematicBody.set_axis_lock(Autoload.get_int(),Autoload.get_bool())

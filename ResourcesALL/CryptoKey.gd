@@ -13,7 +13,7 @@ func alt_process(delta) -> void:
 			q_CryptoKey = CryptoKey.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_CryptoKey.load("res://TEMP/" + Autoload.get_string()))
+			q_CryptoKey.load("res://TEMP/" + Autoload.get_string()))
 		if randi() % 2 == 1:
 			if Autoload.SLOW_FUNCTIONS:
-				Autoload.qq = str(q_CryptoKey.save("res://TEMP/" + Autoload.get_string()))
+				q_CryptoKey.save("res://TEMP/" + Autoload.get_string()))

@@ -30,20 +30,20 @@ func alt_process(delta) -> void:
 			q_MultiplayerAPI.clear()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.get_network_connected_peers())
+			q_MultiplayerAPI.get_network_connected_peers())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.get_network_unique_id())
+			q_MultiplayerAPI.get_network_unique_id())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.get_rpc_sender_id())
+			q_MultiplayerAPI.get_rpc_sender_id())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.has_network_peer())
+			q_MultiplayerAPI.has_network_peer())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.is_network_server())
+			q_MultiplayerAPI.is_network_server())
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.poll()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_MultiplayerAPI.send_bytes( Autoload.get_poolbytearray()))#TransferNode
+			q_MultiplayerAPI.send_bytes( Autoload.get_poolbytearray()))#TransferNode
 		if randi() % 2 == 1:
 			q_MultiplayerAPI.set_root_node( q_temp0 )
 

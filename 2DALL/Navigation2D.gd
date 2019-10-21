@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_Navigation2D : Navigation2D) -> void:
+func nodeFunction(q_Navigation2D : Navigation2D, can_reset : bool = false) -> void:
 		
 		if randi() % 2 == 1:
 			q_Navigation2D.get_closest_point(Autoload.get_vector2())

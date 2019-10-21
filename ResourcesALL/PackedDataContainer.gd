@@ -18,6 +18,6 @@ onready var counter : float = Autoload.get_rand_time()
 #		var q_PackedDataContainer : PackedDataContainer = PackedDataContainer.new()
 #
 #			if randi() % 2 == 1:
-#				Autoload.qq = str(q_PackedDataContainer.pack(String(Autoload.get_string())))
+#				q_PackedDataContainer.pack(String(Autoload.get_string())))
 #			if randi() % 2 == 1:
-#				Autoload.qq = str(q_PackedDataContainer.size())
+#				q_PackedDataContainer.size())

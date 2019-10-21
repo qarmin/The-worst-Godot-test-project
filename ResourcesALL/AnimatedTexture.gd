@@ -18,9 +18,9 @@ func alt_process(delta) -> void:
 			q_AnimatedTexture.set_fps(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimatedTexture.get_frame_delay(Autoload.get_int()))
+			q_AnimatedTexture.get_frame_delay(Autoload.get_int())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_AnimatedTexture.get_frame_texture(Autoload.get_int()))
+			q_AnimatedTexture.get_frame_texture(Autoload.get_int())
 
 		if randi() % 2 == 1:
 			q_AnimatedTexture.set_frame_delay(Autoload.get_int(),Autoload.get_float())

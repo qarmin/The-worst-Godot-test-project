@@ -31,11 +31,11 @@ func alt_process(delta) -> void:
 #			q_DynamicFont.add_fallback(Autoload.loadA("FreeMono.otf"))
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_DynamicFont.get_fallback( Autoload.get_int()))
+			q_DynamicFont.get_fallback( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_DynamicFont.get_fallback_count())
+			q_DynamicFont.get_fallback_count())
 
 		if randi() % 2 == 1:
-			q_DynamicFont.remove_fallback( Autoload.get_int() )
+			q_DynamicFont.remove_fallback( Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
 #			q_DynamicFont.set_fallback( Autoload.get_int(), Autoload.loadA("FreeMono.otf"))

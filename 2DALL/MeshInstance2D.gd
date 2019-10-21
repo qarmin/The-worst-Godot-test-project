@@ -14,7 +14,7 @@ func alt_process(delta) -> void:
 		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
-func nodeFunction(q_MeshInstance2D : MeshInstance2D) -> void:
+func nodeFunction(q_MeshInstance2D : MeshInstance2D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_MeshInstance2D.set_texture(Autoload.loadA("Sprite.png"))

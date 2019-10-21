@@ -14,11 +14,11 @@ func alt_process(delta) -> void:
 			q_Thread = Thread.new()
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Thread.get_id())
+			q_Thread.get_id())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Thread.is_active())
+			q_Thread.is_active())
 #	LEAK	if randi() % 2 == 1:
-#			Autoload.qq = str(q_Thread.start(self, Autoload.get_string(), String(), Autoload.get_int() ))#Priority
+#			q_Thread.start(self, Autoload.get_string(), String(), Autoload.get_int()))#Priority
 		if randi() % 2 == 1:
 			q_Thread.wait_to_finish()
 

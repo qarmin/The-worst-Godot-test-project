@@ -40,14 +40,14 @@ func alt_process(delta) -> void:
 #			q_StyleBoxFlat.set_aa_size(Autoload.get_int())
 #
 #		if randi() % 2 == 1:
-#			Autoload.qq = str(q_StyleBoxFlat.get_border_width_min())
+#			q_StyleBoxFlat.get_border_width_min())
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_border_width_all( Autoload.get_int())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_corner_radius_all( Autoload.get_int() )
+#			q_StyleBoxFlat.set_corner_radius_all( Autoload.get_int())
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_corner_radius_individual( Autoload.get_int(),Autoload.get_int(),Autoload.get_int(), Autoload.get_int())
 #		if randi() % 2 == 1:
 #			q_StyleBoxFlat.set_expand_margin_all( Autoload.get_float())
 #		if randi() % 2 == 1:
-#			q_StyleBoxFlat.set_expand_margin_individual( Autoload.get_float(),Autoload.get_float(), Autoload.get_float(), Autoload.get_float() )
+#			q_StyleBoxFlat.set_expand_margin_individual( Autoload.get_float(),Autoload.get_float(), Autoload.get_float(), Autoload.get_float())

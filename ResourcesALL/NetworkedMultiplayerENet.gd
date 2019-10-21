@@ -25,21 +25,21 @@ func alt_process(delta) -> void:
 			q_NetworkedMultiplayerENet.close_connection( Autoload.get_int())
 
 #		if randi() % 2 == 1:
-#	LEAK		Autoload.qq = str(q_NetworkedMultiplayerENet.create_client(Autoload.get_string(),Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int() ))
+#	LEAK		q_NetworkedMultiplayerENet.create_client(Autoload.get_string(),Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NetworkedMultiplayerENet.create_server( Autoload.get_int(),Autoload.get_int(), Autoload.get_int(), Autoload.get_int()))
+			q_NetworkedMultiplayerENet.create_server( Autoload.get_int(),Autoload.get_int(), Autoload.get_int(), Autoload.get_int()))
 
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet.disconnect_peer( Autoload.get_int(), Autoload.get_bool())
 
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NetworkedMultiplayerENet.get_last_packet_channel())
+			q_NetworkedMultiplayerENet.get_last_packet_channel())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NetworkedMultiplayerENet.get_packet_channel())
+			q_NetworkedMultiplayerENet.get_packet_channel())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NetworkedMultiplayerENet.get_peer_address( Autoload.get_int()))
+			q_NetworkedMultiplayerENet.get_peer_address( Autoload.get_int()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_NetworkedMultiplayerENet.get_peer_port( Autoload.get_int()))
+			q_NetworkedMultiplayerENet.get_peer_port( Autoload.get_int()))
 
 		if randi() % 2 == 1:
 			q_NetworkedMultiplayerENet.set_bind_ip( Autoload.get_string())

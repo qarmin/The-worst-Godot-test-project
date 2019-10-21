@@ -21,11 +21,11 @@ func alt_process(delta) -> void:
 
 			### q_Resource._setup_local_to_scene()
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Resource.duplicate(Autoload.get_bool()))
+			q_Resource.duplicate(Autoload.get_bool()))
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Resource.get_local_scene())
+			q_Resource.get_local_scene())
 		if randi() % 2 == 1:
-			Autoload.qq = str(q_Resource.get_rid())
+			q_Resource.get_rid())
 		if randi() % 2 == 1:
 			q_Resource.setup_local_to_scene()
 		if randi() % 2 == 1:
