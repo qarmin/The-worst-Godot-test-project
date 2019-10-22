@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_RootMotionView : RootMotionView) -> void:
+func nodeFunction(q_RootMotionView : RootMotionView, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_RootMotionView)

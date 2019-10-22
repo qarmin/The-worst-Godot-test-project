@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_DirectionalLight : DirectionalLight) -> void:
+func nodeFunction(q_DirectionalLight : DirectionalLight, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_DirectionalLight)

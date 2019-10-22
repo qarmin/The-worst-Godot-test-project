@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_AnimationTree : AnimationTree) -> void:
+func nodeFunction(q_AnimationTree : AnimationTree, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AnimationTree)

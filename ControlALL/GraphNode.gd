@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_GraphNode : GraphNode) -> void:
+func nodeFunction(q_GraphNode : GraphNode, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_GraphNode)

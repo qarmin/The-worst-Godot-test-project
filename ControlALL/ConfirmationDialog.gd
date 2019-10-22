@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_ConfirmationDialog : ConfirmationDialog) -> void:
+func nodeFunction(q_ConfirmationDialog : ConfirmationDialog, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoControlAcceptDialog.nodeFunction(q_ConfirmationDialog)

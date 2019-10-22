@@ -11,11 +11,11 @@ func alt_process(delta) -> void:
 		nodeFunction(self,true)
 
 func nodeFunction(q_VisibilityEnabler : VisibilityEnabler, can_reset : bool = false) -> void:
-
-	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_VisibilityEnabler)
-		AutoObjects.A_Node(q_VisibilityEnabler)
-		AutoObjects.A_Spatial(q_VisibilityEnabler)
-		
-	if randi() % 2 == 1:
-		q_VisibilityEnabler.set_enabler(Autoload.get_int(),Autoload.get_bool())
+	pass
+#	if randi() % 2 == 1:
+#		AutoObjects.A_Object(q_VisibilityEnabler)
+#		AutoObjects.A_Node(q_VisibilityEnabler)
+#		AutoObjects.A_Spatial(q_VisibilityEnabler)
+#
+#	if randi() % 2 == 1:
+#		q_VisibilityEnabler.set_enabler(Autoload.get_int(),Autoload.get_bool())

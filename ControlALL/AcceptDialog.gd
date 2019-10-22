@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_AcceptDialog : AcceptDialog) -> void:
+func nodeFunction(q_AcceptDialog : AcceptDialog, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoControlWindowDialog.nodeFunction(q_AcceptDialog)

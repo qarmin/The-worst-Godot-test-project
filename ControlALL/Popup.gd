@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true) 
 
-func nodeFunction(q_Popup : Popup) -> void:
+func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 	
 	AutoObjects.A_Object(q_Popup)
 	AutoObjects.A_Node(q_Popup)

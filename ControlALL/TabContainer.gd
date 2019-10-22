@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_TabContainer : TabContainer) -> void:
+func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> void:
 	
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_TabContainer)

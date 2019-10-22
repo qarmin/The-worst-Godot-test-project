@@ -10,6 +10,6 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_CheckButton : CheckButton) -> void:
+func nodeFunction(q_CheckButton : CheckButton, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoControlButton.nodeFunction(q_CheckButton)

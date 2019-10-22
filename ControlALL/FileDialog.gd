@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_FileDialog : FileDialog) -> void:
+func nodeFunction(q_FileDialog : FileDialog, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoControlConfirmationDialog.nodeFunction(q_FileDialog)

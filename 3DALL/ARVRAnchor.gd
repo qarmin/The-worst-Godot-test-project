@@ -17,9 +17,9 @@ func nodeFunction(q_ARVRAnchor : ARVRAnchor, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_ARVRAnchor)
 		AutoObjects.A_Spatial(q_ARVRAnchor)
 	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_ARVRAnchor = ARVRAnchor.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_ARVRAnchor = ARVRAnchor.new()
 		
 	if randi() % 2 == 1:
 		q_ARVRAnchor.set_anchor_id(Autoload.get_int())

@@ -11,15 +11,15 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_VisibilityNotifier2D : VisibilityNotifier2D, can_reset : bool = false) -> void:
 	pass
-# BIG MEMORY USAGE
-	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_VisibilityNotifier2D)
-		AutoObjects.A_Node(q_VisibilityNotifier2D)
-		AutoObjects.A_CanvasItem(q_VisibilityNotifier2D)
-		AutoObjects.A_Node2D(q_VisibilityNotifier2D)
-
-	if Autoload.SLOW_FUNCTIONS:
-		if randi() % 2 == 1:
-			q_VisibilityNotifier2D.set_rect(Autoload.get_rect2f(10))
-	if randi() % 2 == 1:
-		q_VisibilityNotifier2D.is_on_screen()
+## BIG MEMORY USAGE
+#	if randi() % 2 == 1:
+#		AutoObjects.A_Object(q_VisibilityNotifier2D)
+#		AutoObjects.A_Node(q_VisibilityNotifier2D)
+#		AutoObjects.A_CanvasItem(q_VisibilityNotifier2D)
+#		AutoObjects.A_Node2D(q_VisibilityNotifier2D)
+#
+#	if Autoload.SLOW_FUNCTIONS:
+#		if randi() % 2 == 1:
+#			q_VisibilityNotifier2D.set_rect(Autoload.get_rect2f(10))
+#	if randi() % 2 == 1:
+#		q_VisibilityNotifier2D.is_on_screen()

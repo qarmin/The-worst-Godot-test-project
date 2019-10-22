@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_PopupMenu : PopupMenu) -> void:
+func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoControlPopup.nodeFunction(q_PopupMenu)
