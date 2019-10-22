@@ -1,6 +1,8 @@
 # The-worst-Godot-test-project
 Test project to check as many as possible functions, nodes and their parameters
 
+This version added a lot of tests but still can is incomplete, so you may want to use older but more "stable" and easier to understand version from this branch - https://github.com/qarmin/The-worst-Godot-test-project/tree/old_stable_version
+
 FreeMono.otf is downloaded from https://savannah.gnu.org/projects/freefont/ under GPL license  
 ## Informations
 1. Each scene - 3DALL, 2DALL, ControlALL, Resources and OtherALL contains nodes/resources from correct category  

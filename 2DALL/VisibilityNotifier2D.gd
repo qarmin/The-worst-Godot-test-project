@@ -7,7 +7,7 @@ func alt_process(delta) -> void:
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
-#		nodeFunction(self)
+#		nodeFunction(self,true)
 
 func nodeFunction(q_VisibilityNotifier2D : VisibilityNotifier2D, can_reset : bool = false) -> void:
 	pass

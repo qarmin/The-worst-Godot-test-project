@@ -8,7 +8,7 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self)
+		nodeFunction(self,true)
 
 func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = false) -> void:
 
