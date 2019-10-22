@@ -12,9 +12,10 @@ func alt_process(delta) -> void:
 
 func nodeFunction(qCamera : Camera, can_reset : bool = false) -> void:
 	
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(qCamera)
+		AutoObjects.A_Node(qCamera)
+		AutoObjects.A_Spatial(qCamera)
 
 	if randi() % 2 == 1:
 		qCamera.set_keep_aspect_mode(Autoload.get_int())

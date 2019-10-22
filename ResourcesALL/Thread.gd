@@ -25,7 +25,7 @@ func nodeFunction(q_Thread : Thread, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Thread.is_active()
 #	LEAK	if randi() % 2 == 1:
-#			q_Thread.start(self, Autoload.get_string(), String(), Autoload.get_int()))#Priority
+#			q_Thread.start(q_Thread, Autoload.get_string(), String(), Autoload.get_int()))#Priority
 	if randi() % 2 == 1:
 		q_Thread.wait_to_finish()
 

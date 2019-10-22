@@ -18,8 +18,7 @@ func nodeFunction(q_ARVRInterface : ARVRInterface, can_reset : bool = false) -> 
 #		if randi() % 2 == 1:
 #			q_ARVRInterface = MobileVRInterface.new()
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_ARVRInterface)
-		AutoObjects.A_Reference(q_ARVRInterface)
+		AutoResourcesReference.nodeFunction(q_ARVRInterface)
 		
 	if randi() % 2 == 1:
 		q_ARVRInterface.set_is_primary(Autoload.get_bool())

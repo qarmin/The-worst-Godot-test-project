@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_Listener : Listener, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_Listener)
+		AutoObjects.A_Node(q_Listener)
+		AutoObjects.A_Spatial(q_Listener)
+		
 	if randi() % 2 == 1:
 		q_Listener.clear_current()
 	if randi() % 2 == 1:

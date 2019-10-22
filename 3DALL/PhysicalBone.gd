@@ -8,15 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_CollisionObject(self)
-		AutoObjects.A_PhysicsBody(self)
 		nodeFunction(self)
 
 func nodeFunction(q_PhysicalBone : PhysicalBone, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_PhysicalBone)
+		AutoObjects.A_Node(q_PhysicalBone)
+		AutoObjects.A_Spatial(q_PhysicalBone)
+		AutoObjects.A_CollisionObject(q_PhysicalBone)
+		AutoObjects.A_PhysicsBody(q_PhysicalBone)
+		
 	if randi() % 2 == 1:
 		q_PhysicalBone.set_joint_type(Autoload.get_int()) #JOINT_TYPE
 	if randi() % 2 == 1:

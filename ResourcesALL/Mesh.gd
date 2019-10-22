@@ -20,16 +20,16 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Mesh)
 
-	if randi() % 2 == 1:
-		q_Mesh.create_convex_shape()
-	if randi() % 2 == 1:
-		q_Mesh.create_outline( Autoload.get_float())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_Mesh.create_convex_shape()
+#	if randi() % 2 == 1:
+#		q_Mesh.create_outline( Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Mesh.create_trimesh_shape()
 	if randi() % 2 == 1:
 		q_Mesh.generate_triangle_mesh()
-	if randi() % 2 == 1:
-		q_Mesh.get_faces()
+#	if randi() % 2 == 1: #BUG NEW
+#		q_Mesh.get_faces()
 	if randi() % 2 == 1:
 		q_Mesh.get_surface_count()
 	if randi() % 2 == 1:

@@ -12,13 +12,14 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CSGPolygon : CSGPolygon, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_CSGShape(self)
-	AutoObjects.A_CSGPrimitive(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CSGPolygon)
+		AutoObjects.A_Node(q_CSGPolygon)
+		AutoObjects.A_Spatial(q_CSGPolygon)
+		AutoObjects.A_VisualInstance(q_CSGPolygon)
+		AutoObjects.A_GeometryInstance(q_CSGPolygon)
+		AutoObjects.A_CSGShape(q_CSGPolygon)
+		AutoObjects.A_CSGPrimitive(q_CSGPolygon)
 		
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_polygon(Autoload.get_poolvector2array())

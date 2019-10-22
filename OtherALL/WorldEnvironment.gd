@@ -8,12 +8,14 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
 		nodeFunction(self)
 
 func nodeFunction(q_WorldEnvironment : WorldEnvironment) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_WorldEnvironment)
+		AutoObjects.A_Node(q_WorldEnvironment)
+
+	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			if Autoload.SLOW_FUNCTIONS:
-				q_WorldEnvironment.set_environment(Autoload.loadA("DefaultEnv.tres"))
+			q_WorldEnvironment.set_environment(Autoload.loadA("DefaultEnv.tres"))

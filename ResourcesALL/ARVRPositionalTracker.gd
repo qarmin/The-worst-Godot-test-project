@@ -1,6 +1,6 @@
 extends Node2D
-
-var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
+# TODO CHECK IF BUG
+#var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,14 +10,14 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_ARVRPositionalTracker,true)
+#		nodeFunction(q_ARVRPositionalTracker,true)
 
 func nodeFunction(q_ARVRPositionalTracker : ARVRPositionalTracker, can_reset : bool = false) -> void:
 	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_ARVRPositionalTracker.free()
-			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_ARVRPositionalTracker.free()
+#			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_ARVRPositionalTracker)
 
@@ -45,5 +45,5 @@ func nodeFunction(q_ARVRPositionalTracker : ARVRPositionalTracker, can_reset : b
 	if randi() % 2 == 1:
 		q_ARVRPositionalTracker.get_type()
 
-func _exit_tree():
-	q_ARVRPositionalTracker.free()
+#func _exit_tree():
+#	q_ARVRPositionalTracker.free()

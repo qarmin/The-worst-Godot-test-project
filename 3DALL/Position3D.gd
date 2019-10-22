@@ -8,10 +8,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_Position3D : Position3D, can_reset : bool = false) -> void:
-	pass
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_Position3D)
+		AutoObjects.A_Node(q_Position3D)
+		AutoObjects.A_Spatial(q_Position3D)

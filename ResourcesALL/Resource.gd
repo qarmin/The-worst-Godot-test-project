@@ -18,8 +18,7 @@ func nodeFunction(q_Resource : Resource, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_Resource = Resource.new()
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_Resource)
-		AutoObjects.A_Reference(q_Resource)
+		AutoResourcesReference.nodeFunction(q_Resource)
 
 	if randi() % 2 == 1:
 		q_Resource.set_local_to_scene(Autoload.get_bool())
@@ -29,8 +28,8 @@ func nodeFunction(q_Resource : Resource, can_reset : bool = false) -> void:
 		q_Resource.set_name(Autoload.get_string())
 
 		### q_Resource._setup_local_to_scene()
-	if randi() % 2 == 1:
-		q_Resource.duplicate(Autoload.get_bool())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_Resource.duplicate(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Resource.get_local_scene()
 	if randi() % 2 == 1:

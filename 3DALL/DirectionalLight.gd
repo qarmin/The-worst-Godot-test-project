@@ -8,15 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_Light(self)
 		nodeFunction(self)
 
 func nodeFunction(q_DirectionalLight : DirectionalLight) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_DirectionalLight)
+		AutoObjects.A_Node(q_DirectionalLight)
+		AutoObjects.A_Spatial(q_DirectionalLight)
+		AutoObjects.A_VisualInstance(q_DirectionalLight)
+		AutoObjects.A_Light(q_DirectionalLight)
+		
 	if randi() % 2 == 1:
 		q_DirectionalLight.set_shadow_mode(Autoload.get_int()) # ShadowMode
 

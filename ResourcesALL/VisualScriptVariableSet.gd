@@ -18,7 +18,7 @@ func nodeFunction(q_VisualScriptVariableSet : VisualScriptVariableSet, can_reset
 		if randi() % 2 == 1:
 			q_VisualScriptVariableSet = VisualScriptVariableSet.new()
 	if randi() % 2 == 1:
-		AutoResourcesVisualShaderNode.nodeFunction(q_VisualScriptVariableSet)
+		AutoResourcesVisualScriptNode.nodeFunction(q_VisualScriptVariableSet)
 
 	if randi() % 2 == 1:
 		q_VisualScriptVariableSet.set_variable(Autoload.get_string())

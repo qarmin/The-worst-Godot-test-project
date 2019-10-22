@@ -35,4 +35,4 @@ func nodeFunction(q_AudioStreamSample : AudioStreamSample, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_AudioStreamSample.set_stereo(Autoload.get_bool())
 
-		### q_AudioStreamSample.save_to_wav(Autoload.get_nodepath(self)))
+		### q_AudioStreamSample.save_to_wav(Autoload.get_nodepath(q_AudioStreamSample)))

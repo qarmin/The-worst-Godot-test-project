@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_RemoteTransform : RemoteTransform, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_RemoteTransform)
+		AutoObjects.A_Node(q_RemoteTransform)
+		AutoObjects.A_Spatial(q_RemoteTransform)
+		
 	if randi() % 2 == 1:
 		q_RemoteTransform.set_remote_node(Autoload.get_string())
 	if randi() % 2 == 1:

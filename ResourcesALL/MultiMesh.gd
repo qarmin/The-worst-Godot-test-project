@@ -20,12 +20,12 @@ func nodeFunction(q_MultiMesh : MultiMesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_MultiMesh)
 
-	if randi() % 2 == 1:
-		q_MultiMesh.set_color_format(Autoload.get_int()) #ColorFormat
+#	if randi() % 2 == 1: #BUG
+#		q_MultiMesh.set_color_format(Autoload.get_int()) #ColorFormat
 	if randi() % 2 == 1:
 		q_MultiMesh.set_transform_format(Autoload.get_int()) #TransformFormat
-	if randi() % 2 == 1:
-		q_MultiMesh.set_custom_data_format(Autoload.get_int()) #ColorDataFormat
+#	if randi() % 2 == 1: #BUG
+#		q_MultiMesh.set_custom_data_format(Autoload.get_int()) #ColorDataFormat
 	if randi() % 2 == 1:
 		q_MultiMesh.set_instance_count(Autoload.get_int())
 	if randi() % 2 == 1:

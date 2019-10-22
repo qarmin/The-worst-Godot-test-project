@@ -8,14 +8,14 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
 		nodeFunction(self) 
 
 func nodeFunction(q_Popup : Popup) -> void:
 	
+	AutoObjects.A_Object(q_Popup)
+	AutoObjects.A_Node(q_Popup)
+	AutoObjects.A_CanvasItem(q_Popup)
+	AutoObjects.A_Control(q_Popup)
 	return # TOO SLOW
 	
 	if randi() % 2 == 1:

@@ -96,6 +96,8 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 		q_Array.shuffle()
 	if randi() % 2 == 1:
 		q_Array.size()
+	if randi() % 2 == 1:
+		q_Array.slice(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_Array.sort()

@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
 		nodeFunction(self)
 
 func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_BakedLightmap)
+		AutoObjects.A_Node(q_BakedLightmap)
+		AutoObjects.A_Spatial(q_BakedLightmap)
+		AutoObjects.A_VisualInstance(q_BakedLightmap)
+		
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -37,5 +39,5 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_light_data(BakedLightmapData.new())
 
-		###q_BakedLightmap.bake(self,Autoload.get_bool()))
+		###q_BakedLightmap.bake(q_BakedLightmap,Autoload.get_bool()))
 		###q_BakedLightmap.debug_bake()

@@ -8,12 +8,12 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
-func nodeFunction(q_SoftBody : SoftBody) -> void:
+func nodeFunction(q_SoftBody : SoftBody, can_reset : bool = false) -> void:
+
+	if randi() % 2 == 1:
+		Auto3DMeshInstance.nodeFunction(q_SoftBody)
 
 	if randi() % 2 == 1:
 		q_SoftBody.set_collision_layer(Autoload.get_int())
@@ -41,7 +41,7 @@ func nodeFunction(q_SoftBody : SoftBody) -> void:
 		q_SoftBody.set_pose_matching_coefficient(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_SoftBody.add_collision_exception_with(Autoload.get_nodes(self))
+		q_SoftBody.add_collision_exception_with(Autoload.get_nodes(q_SoftBody))
 
 	if randi() % 2 == 1:
 		q_SoftBody.get_collision_exceptions()

@@ -8,14 +8,12 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
-		AutoControlContainer.nodeFunction(self)
 		nodeFunction(self)
 
 func nodeFunction(q_GridContainer : GridContainer) -> void:
 
-		if randi() % 2 == 1:
-			q_GridContainer.set_columns(Autoload.get_int())
+	if randi() % 2 == 1:
+		AutoControlContainer.nodeFunction(q_GridContainer)
+		
+	if randi() % 2 == 1:
+		q_GridContainer.set_columns(Autoload.get_int())

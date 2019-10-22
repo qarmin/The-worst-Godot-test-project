@@ -18,9 +18,7 @@ func nodeFunction(q_AStar2D : AStar2D, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_AStar2D = AStar2D.new()
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_AStar2D)
-		AutoObjects.A_Reference(q_AStar2D)
-
+		AutoResourcesReference.nodeFunction(q_AStar2D)
 
 	###q_AStar2D._compute_cost(Autoload.get_int(),Autoload.get_int())
 	###q_AStar2D._estimate_cost(Autoload.get_int(),Autoload.get_int())

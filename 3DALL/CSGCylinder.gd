@@ -12,13 +12,14 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CSGCylinder : CSGCylinder, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_CSGShape(self)
-	AutoObjects.A_CSGPrimitive(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CSGCylinder)
+		AutoObjects.A_Node(q_CSGCylinder)
+		AutoObjects.A_Spatial(q_CSGCylinder)
+		AutoObjects.A_VisualInstance(q_CSGCylinder)
+		AutoObjects.A_GeometryInstance(q_CSGCylinder)
+		AutoObjects.A_CSGShape(q_CSGCylinder)
+		AutoObjects.A_CSGPrimitive(q_CSGCylinder)
 	
 	if randi() % 2 == 1:
 		q_CSGCylinder.set_radius(Autoload.get_float())

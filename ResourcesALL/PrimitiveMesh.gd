@@ -24,8 +24,8 @@ func nodeFunction(q_PrimitiveMesh : PrimitiveMesh, can_reset : bool = false) -> 
 		q_PrimitiveMesh.set_material(Autoload.loadA("SpatialMaterial.tres"))
 	if randi() % 2 == 1:
 		q_PrimitiveMesh.set_custom_aabb(Autoload.get_aabb())
-	if randi() % 2 == 1:
-		q_PrimitiveMesh.set_flip_faces(Autoload.get_bool())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_PrimitiveMesh.set_flip_faces(Autoload.get_bool())
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:

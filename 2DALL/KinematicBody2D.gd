@@ -12,12 +12,13 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_KinematicBody2D : KinematicBody2D, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_CanvasItem(self)
-	AutoObjects.A_Node2D(self)
-	AutoObjects.A_CollisionObject2D(self)
-	AutoObjects.A_PhysicsBody2D(self)
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_KinematicBody2D)
+		AutoObjects.A_Node(q_KinematicBody2D)
+		AutoObjects.A_CanvasItem(q_KinematicBody2D)
+		AutoObjects.A_Node2D(q_KinematicBody2D)
+		AutoObjects.A_CollisionObject2D(q_KinematicBody2D)
+		AutoObjects.A_PhysicsBody2D(q_KinematicBody2D)
 		
 	if randi() % 2 == 1:
 		q_KinematicBody2D.set_safe_margin(Autoload.get_float())

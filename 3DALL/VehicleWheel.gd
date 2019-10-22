@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_VehicleWheel : VehicleWheel, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_VehicleWheel)
+		AutoObjects.A_Node(q_VehicleWheel)
+		AutoObjects.A_Spatial(q_VehicleWheel)
+		
 	if randi() % 2 == 1:
 		q_VehicleWheel.set_use_as_traction(Autoload.get_bool())
 	if randi() % 2 == 1:

@@ -12,13 +12,14 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CSGBox : CSGBox, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_CSGShape(self)
-	AutoObjects.A_CSGPrimitive(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CSGBox)
+		AutoObjects.A_Node(q_CSGBox)
+		AutoObjects.A_Spatial(q_CSGBox)
+		AutoObjects.A_VisualInstance(q_CSGBox)
+		AutoObjects.A_GeometryInstance(q_CSGBox)
+		AutoObjects.A_CSGShape(q_CSGBox)
+		AutoObjects.A_CSGPrimitive(q_CSGBox)
 	
 	if randi() % 2 == 1:
 		q_CSGBox.set_width(Autoload.get_float())

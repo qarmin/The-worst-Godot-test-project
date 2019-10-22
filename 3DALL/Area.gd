@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_CollisionObject(self)
 		nodeFunction(self)
 
 func nodeFunction(q_Area : Area, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_Area)
+		AutoObjects.A_Node(q_Area)
+		AutoObjects.A_Spatial(q_Area)
+		AutoObjects.A_CollisionObject(q_Area)
+		
 	if randi() % 2 == 1:
 		q_Area.set_space_override_mode(Autoload.get_int())
 	if randi() % 2 == 1:

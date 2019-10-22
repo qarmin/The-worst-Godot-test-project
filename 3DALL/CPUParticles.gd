@@ -12,11 +12,12 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CPUParticles)
+		AutoObjects.A_Node(q_CPUParticles)
+		AutoObjects.A_Spatial(q_CPUParticles)
+		AutoObjects.A_VisualInstance(q_CPUParticles)
+		AutoObjects.A_GeometryInstance(q_CPUParticles)
 	
 	var particles : Particles = Particles.new()
 	

@@ -12,10 +12,11 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -> void:
 	
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_CanvasItem(self)
-	AutoObjects.A_Node2D(self)
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_AnimatedSprite)
+		AutoObjects.A_Node(q_AnimatedSprite)
+		AutoObjects.A_CanvasItem(q_AnimatedSprite)
+		AutoObjects.A_Node2D(q_AnimatedSprite)
 		
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))

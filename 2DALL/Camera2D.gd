@@ -8,14 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
 func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_Camera2D)
+		AutoObjects.A_Node(q_Camera2D)
+		AutoObjects.A_CanvasItem(q_Camera2D)
+		AutoObjects.A_Node2D(q_Camera2D)
+		
+		
 	var viewport_temp : Viewport = Viewport.new()
 
 	if randi() % 2 == 1:

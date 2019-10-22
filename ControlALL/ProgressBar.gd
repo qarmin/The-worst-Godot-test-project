@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
-		AutoObjects.A_Range(self)
 		nodeFunction(self)
 
 func nodeFunction(q_ProgressBar : ProgressBar) -> void:
+
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_ProgressBar)
+		AutoObjects.A_Node(q_ProgressBar)
+		AutoObjects.A_CanvasItem(q_ProgressBar)
+		AutoObjects.A_Control(q_ProgressBar)
+		AutoObjects.A_Range(q_ProgressBar)
 
 	if randi() % 2 == 1:
 		q_ProgressBar.set_percent_visible(Autoload.get_bool())

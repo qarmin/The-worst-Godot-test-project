@@ -20,21 +20,21 @@ func nodeFunction(q_PacketPeer : PacketPeer, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_PacketPeer)
 
-
-	if randi() % 2 == 1:
-		q_PacketPeer.set_allow_object_decoding(Autoload.get_bool())
-	
-	if randi() % 2 == 1:
-		q_PacketPeer.get_available_packet_count()
-	if randi() % 2 == 1:
-		q_PacketPeer.get_packet()
-	if randi() % 2 == 1:
-		q_PacketPeer.get_packet_error()
-	if randi() % 2 == 1:
-		q_PacketPeer.get_var( Autoload.get_bool())
-	
-	if randi() % 2 == 1:
-		q_PacketPeer.put_packet( Autoload.get_poolbytearray())
-	if randi() % 2 == 1:
-		q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool())
+#BUG
+#	if randi() % 2 == 1:
+#		q_PacketPeer.set_allow_object_decoding(Autoload.get_bool())
+#
+#	if randi() % 2 == 1:
+#		q_PacketPeer.get_available_packet_count()
+#	if randi() % 2 == 1:
+#		q_PacketPeer.get_packet()
+#	if randi() % 2 == 1:
+#		q_PacketPeer.get_packet_error()
+#	if randi() % 2 == 1:
+#		q_PacketPeer.get_var( Autoload.get_bool())
+#
+#	if randi() % 2 == 1:
+#		q_PacketPeer.put_packet( Autoload.get_poolbytearray())
+#	if randi() % 2 == 1:
+#		q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool())
 	

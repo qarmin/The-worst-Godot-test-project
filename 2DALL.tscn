@@ -58,34 +58,9 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim 1",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
-"loop": false,
-"name": "New Anim 3",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), SubResource( 3 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": false,
-"name": "New Anim 6",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
-"loop": true,
-"name": "New Anim 7",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "New Anim 2",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "New Anim 5",
+"name": "New Anim 4",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -95,7 +70,32 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "New Anim 4",
+"name": "New Anim 2",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
+"loop": false,
+"name": "New Anim 3",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim 1",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), SubResource( 3 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": false,
+"name": "New Anim 6",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "New Anim 5",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
+"loop": true,
+"name": "New Anim 7",
 "speed": 5.0
 } ]
 
@@ -106,7 +106,7 @@ animations = [ {
 [sub_resource type="CapsuleShape2D" id=7]
 
 [sub_resource type="OccluderPolygon2D" id=8]
-polygon = PoolVector2Array( -1.10529, 7.89474, 387.172, 24.2205, -101.105, 208.947, -186.368, 85.7895, 5.21051, -43.6842, 0.83, 0.65, 0, -0.69, -4.66, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+polygon = PoolVector2Array( 154.731, -96.6275, 387.172, 24.2205, -101.105, 208.947, -186.368, 85.7895, -29.5522, -93.1285, 96.4138, -123.454, 143.068, -27.8128, 63.7559, 96.9867, -58.7109, 98.1531, -124.027, 87.6559, -94.8678, 130.811, -65.709, 134.31, -20.2213, 121.48, 63.7559, 115.648, 168.728, 23.5066 )
 
 [sub_resource type="SpatialMaterial" id=9]
 
@@ -143,7 +143,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
-frame = 7
+frame = 39
 playing = true
 script = ExtResource( 7 )
 
@@ -257,6 +257,7 @@ script = ExtResource( 19 )
 script = ExtResource( 20 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+position = Vector2( -144.628, -129.465 )
 occluder = SubResource( 8 )
 script = ExtResource( 21 )
 

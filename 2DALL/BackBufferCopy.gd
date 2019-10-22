@@ -12,10 +12,11 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_BackBufferCopy : BackBufferCopy, can_reset : bool = false):
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_CanvasItem(self)
-	AutoObjects.A_Node2D(self)
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_BackBufferCopy)
+		AutoObjects.A_Node(q_BackBufferCopy)
+		AutoObjects.A_CanvasItem(q_BackBufferCopy)
+		AutoObjects.A_Node2D(q_BackBufferCopy)
 		
 	if randi() % 2 == 1:
 		q_BackBufferCopy.set_copy_mode(Autoload.get_int())

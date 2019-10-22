@@ -12,9 +12,9 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_ARVRController : ARVRController, can_reset : bool = false) -> void:
 	
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
+	AutoObjects.A_Object(q_ARVRController)
+	AutoObjects.A_Node(q_ARVRController)
+	AutoObjects.A_Spatial(q_ARVRController)
 		
 	if can_reset:
 		if randi() % 2 == 1:

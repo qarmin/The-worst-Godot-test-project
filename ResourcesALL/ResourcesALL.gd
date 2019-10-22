@@ -10,7 +10,7 @@ func _ready() -> void:
 #				i.delete_node()
 			i.queue_free()
 
-func alt_process(delta) -> void:
+func _process(delta) -> void:
 	for i in get_children():
-#		if i.has_method("alt_process"):
-		i.alt_process(delta)
+		if i.has_method("alt_process"):
+			i.alt_process(delta)

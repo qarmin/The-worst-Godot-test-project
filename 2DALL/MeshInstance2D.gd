@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
 func nodeFunction(q_MeshInstance2D : MeshInstance2D, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_MeshInstance2D)
+		AutoObjects.A_Node(q_MeshInstance2D)
+		AutoObjects.A_CanvasItem(q_MeshInstance2D)
+		AutoObjects.A_Node2D(q_MeshInstance2D)
+		
 	if randi() % 2 == 1:
 		q_MeshInstance2D.set_texture(Autoload.loadA("Sprite.png"))
 	if randi() % 2 == 1:

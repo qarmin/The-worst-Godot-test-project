@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
 		nodeFunction(self)
 
 func nodeFunction(q_Skeleton2D : Skeleton2D, can_reset : bool = false) -> void:
 
-		if randi() % 2 == 1:
-			q_Skeleton2D.get_skeleton()
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_Skeleton2D)
+		AutoObjects.A_Node(q_Skeleton2D)
+		AutoObjects.A_CanvasItem(q_Skeleton2D)
+		AutoObjects.A_Node2D(q_Skeleton2D)
+		
+	if randi() % 2 == 1:
+		q_Skeleton2D.get_skeleton()

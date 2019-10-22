@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_RayCast : RayCast, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_RayCast)
+		AutoObjects.A_Node(q_RayCast)
+		AutoObjects.A_Spatial(q_RayCast)
+		
 	if randi() % 2 == 1:
 		q_RayCast.set_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -49,7 +51,7 @@ func nodeFunction(q_RayCast : RayCast, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_RayCast.is_colliding()
 	if randi() % 2 == 1:
-		q_RayCast.remove_exception(self)
+		q_RayCast.remove_exception(q_RayCast)
 	if randi() % 2 == 1:
 		q_RayCast.remove_exception_rid(RID())
 	if randi() % 2 == 1:

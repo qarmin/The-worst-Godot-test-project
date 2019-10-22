@@ -12,7 +12,8 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_ARVRCamera : ARVRCamera, can_reset : bool = false) -> void:
 	
-	Auto3DCamera.nodeFunction(self)
+	if randi() % 2 == 1:
+		Auto3DCamera.nodeFunction(q_ARVRCamera)
 	
 	if can_reset:
 		if randi() % 2 == 1:

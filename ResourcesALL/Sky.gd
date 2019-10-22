@@ -19,7 +19,7 @@ func nodeFunction(q_Sky : Sky, can_reset : bool = false) -> void:
 #			q_Sky = Sky.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Sky)
-
+	
 	if randi() % 2 == 1:
-		q_Sky.set_radiance_size(Autoload.get_int()) # RadianceSize
+		q_Sky.set_radiance_size(Autoload.get_inti(100)) # RadianceSize
 

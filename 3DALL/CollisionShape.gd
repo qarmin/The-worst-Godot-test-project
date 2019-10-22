@@ -8,13 +8,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
 		nodeFunction(self)
 
 func nodeFunction(q_CollisionShape : CollisionShape, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CollisionShape)
+		AutoObjects.A_Node(q_CollisionShape)
+		AutoObjects.A_Spatial(q_CollisionShape)
+		
 	if randi() % 2 == 1:
 		q_CollisionShape.set_shape(BoxShape.new())
 	if randi() % 2 == 1:

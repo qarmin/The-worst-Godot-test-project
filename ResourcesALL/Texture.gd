@@ -22,10 +22,10 @@ func nodeFunction(q_Texture : Texture, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Texture.draw(RID(),Autoload.get_vector2(),Autoload.get_color(),Autoload.get_bool(),Autoload.loadA("Sprite.png"))
-	if randi() % 2 == 1:
-		q_Texture.draw_rect(RID(),Autoload.get_rect2(),Autoload.get_bool(),Autoload.get_color(),Autoload.get_bool(),Autoload.loadA("Sprite.png"))
-	if randi() % 2 == 1:
-		q_Texture.draw_rect_region(RID(),Autoload.get_rect2(),Autoload.get_rect2(), Autoload.get_color(), Autoload.get_bool(),Autoload.loadA("Sprite.png"),Autoload.get_bool())
+#	if randi() % 2 == 1: #BUG NEW LARGETEXTURE
+#		q_Texture.draw_rect(RID(),Autoload.get_rect2(),Autoload.get_bool(),Autoload.get_color(),Autoload.get_bool(),Autoload.loadA("Sprite.png"))
+#	if randi() % 2 == 1:
+#		q_Texture.draw_rect_region(RID(),Autoload.get_rect2(),Autoload.get_rect2(), Autoload.get_color(), Autoload.get_bool(),Autoload.loadA("Sprite.png"),Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_Texture.get_data()

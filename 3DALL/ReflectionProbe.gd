@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
 		nodeFunction(self)
 
 func nodeFunction(q_ReflectionProbe : ReflectionProbe) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_ReflectionProbe)
+		AutoObjects.A_Node(q_ReflectionProbe)
+		AutoObjects.A_Spatial(q_ReflectionProbe)
+		AutoObjects.A_VisualInstance(q_ReflectionProbe)
+		
 	if randi() % 2 == 1:
 		q_ReflectionProbe.set_update_mode(Autoload.get_int()) #UpdateMode
 	if randi() % 2 == 1:

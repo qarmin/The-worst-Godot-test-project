@@ -8,15 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Node2D(self)
-		AutoObjects.A_Joint2D(self)
 		nodeFunction(self)
 
 func nodeFunction(q_DampedSpringJoint2D : DampedSpringJoint2D, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_DampedSpringJoint2D)
+		AutoObjects.A_Node(q_DampedSpringJoint2D)
+		AutoObjects.A_CanvasItem(q_DampedSpringJoint2D)
+		AutoObjects.A_Node2D(q_DampedSpringJoint2D)
+		AutoObjects.A_Joint2D(q_DampedSpringJoint2D)
+		
 	if randi() % 2 == 1:
 		q_DampedSpringJoint2D.set_length(Autoload.get_float())
 	if randi() % 2 == 1:

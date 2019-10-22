@@ -12,10 +12,11 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_CanvasItem(self)
-	AutoObjects.A_Node2D(self)
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_CPUParticles2D)
+		AutoObjects.A_Node(q_CPUParticles2D)
+		AutoObjects.A_CanvasItem(q_CPUParticles2D)
+		AutoObjects.A_Node2D(q_CPUParticles2D)
 		
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_amount(Autoload.get_inti(5))

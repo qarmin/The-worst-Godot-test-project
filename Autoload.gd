@@ -9,10 +9,10 @@ var qq : String = ""
 ############### FUNCTIONS
 
 func get_rand_time():
-	return randf() * 0.15  + 0.15
+	return randf() * 0.001  + 0.001
 
 const MAX_NUMBER : int = 1
-const MAX_NEWLINE : int = 3
+const MAX_NEWLINE : int = 0
 
 var temp_string : String
 

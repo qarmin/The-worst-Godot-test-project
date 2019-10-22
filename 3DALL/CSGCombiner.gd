@@ -11,9 +11,11 @@ func alt_process(delta) -> void:
 		nodeFunction(self)
 
 func nodeFunction(q_CSGCombiner : CSGCombiner, can_reset : bool = false) -> void:
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_CSGShape(self)
+	
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CSGCombiner)
+		AutoObjects.A_Node(q_CSGCombiner)
+		AutoObjects.A_Spatial(q_CSGCombiner)
+		AutoObjects.A_VisualInstance(q_CSGCombiner)
+		AutoObjects.A_GeometryInstance(q_CSGCombiner)
+		AutoObjects.A_CSGShape(q_CSGCombiner)

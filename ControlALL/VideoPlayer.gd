@@ -8,14 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
 		nodeFunction(self)
 
 func nodeFunction(q_VideoPlayer : VideoPlayer) -> void:
-	return #BUG
+	
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_VideoPlayer)
+		AutoObjects.A_Node(q_VideoPlayer)
+		AutoObjects.A_CanvasItem(q_VideoPlayer)
+		AutoObjects.A_Control(q_VideoPlayer)
+		
+	return #BUG NEW
 	
 	if randi() % 2 == 1:
 		q_VideoPlayer.set_audio_track(Autoload.get_int())

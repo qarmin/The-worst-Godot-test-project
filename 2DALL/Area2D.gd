@@ -12,11 +12,12 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_Area2D : Area2D, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_CanvasItem(self)
-	AutoObjects.A_Node2D(self)
-	AutoObjects.A_CollisionObject2D(self)
+	if randi()%2 == 1:
+		AutoObjects.A_Object(q_Area2D)
+		AutoObjects.A_Node(q_Area2D)
+		AutoObjects.A_CanvasItem(q_Area2D)
+		AutoObjects.A_Node2D(q_Area2D)
+		AutoObjects.A_CollisionObject2D(q_Area2D)
 	
 	if randi() % 2 == 1:
 		q_Area2D.set_space_override_mode(Autoload.get_int())

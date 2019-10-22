@@ -12,9 +12,10 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_InterpolatedCamera : InterpolatedCamera, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_InterpolatedCamera)
+		AutoObjects.A_Node(q_InterpolatedCamera)
+		AutoObjects.A_Spatial(q_InterpolatedCamera)
 	
 	if randi() % 2 == 1:
 		q_InterpolatedCamera.set_target_path(Autoload.get_string())
@@ -23,4 +24,4 @@ func nodeFunction(q_InterpolatedCamera : InterpolatedCamera, can_reset : bool = 
 	if randi() % 2 == 1:
 		q_InterpolatedCamera.set_interpolation_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_InterpolatedCamera.set_target(Autoload.get_nodes(self))
+		q_InterpolatedCamera.set_target(Autoload.get_nodes(q_InterpolatedCamera))

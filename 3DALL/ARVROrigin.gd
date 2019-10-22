@@ -12,9 +12,10 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_ARVROrigin : ARVROrigin, can_reset : bool = false) -> void:
 	
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_ARVROrigin)
+		AutoObjects.A_Node(q_ARVROrigin)
+		AutoObjects.A_Spatial(q_ARVROrigin)
 		
 	if can_reset:
 		if randi() % 2 == 1:

@@ -8,13 +8,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
-		AutoControlContainer.nodeFunction(self)
-		AutoObjects.A_SplitContainer(self)
 		nodeFunction(self)
 
 func nodeFunction(q_HSplitContainer : HSplitContainer) -> void:
-	pass
+	
+	if randi() % 2 == 1:
+		AutoControlContainer.nodeFunction(q_HSplitContainer)
+		AutoObjects.A_SplitContainer(q_HSplitContainer)

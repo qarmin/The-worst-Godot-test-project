@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_UndoRedo : UndoRedo = UndoRedo.new()
+#var q_UndoRedo : UndoRedo = UndoRedo.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,21 +10,18 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_UndoRedo,true)
+#		nodeFunction(q_UndoRedo,true)
 
 func nodeFunction(q_UndoRedo : UndoRedo, can_reset : bool = false) -> void:
 	
 	var q_node : Node = Node.new()
 	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_UndoRedo = UndoRedo.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_UndoRedo.free()
+#			q_UndoRedo = UndoRedo.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_UndoRedo)
-
-	if randi() % 2 == 1:
-		q_UndoRedo.free()
-		q_UndoRedo = UndoRedo.new()
 
 	if randi() % 2 == 1:
 		q_UndoRedo.add_do_method( q_node, Autoload.get_string(), Autoload.get_string())
@@ -61,5 +58,5 @@ func nodeFunction(q_UndoRedo : UndoRedo, can_reset : bool = false) -> void:
 	q_node.queue_free()
 
 
-func _exit_tree():
-	q_UndoRedo.free()
+#func _exit_tree():
+#	q_UndoRedo.free()

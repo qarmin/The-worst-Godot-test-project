@@ -16,7 +16,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ResourcesALL.tscn"
+run/main_scene="res://ALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -73,7 +73,6 @@ AutoControlColorPicker="*res://ControlALL/ColorPicker.gd"
 AutoControlColorRect="*res://ControlALL/ColorRect.gd"
 AutoControlConfirmationDialog="*res://ControlALL/ConfirmationDialog.gd"
 AutoControlContainer="*res://ControlALL/Container.gd"
-AutoControlControl="*res://ControlALL/Control.gd"
 AutoControlFileDialog="*res://ControlALL/FileDialog.gd"
 AutoControlGraphEdit="*res://ControlALL/GraphEdit.gd"
 AutoControlGraphNode="*res://ControlALL/GraphNode.gd"

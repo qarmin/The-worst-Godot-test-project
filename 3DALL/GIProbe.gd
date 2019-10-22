@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
 		nodeFunction(self)
 
 func nodeFunction(q_GIProbe : GIProbe) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_GIProbe)
+		AutoObjects.A_Node(q_GIProbe)
+		AutoObjects.A_Spatial(q_GIProbe)
+		AutoObjects.A_VisualInstance(q_GIProbe)
+		
 	if randi() % 2 == 1:
 		q_GIProbe.set_subdiv(Autoload.get_inti(10)) # Subdiv 
 	if randi() % 2 == 1:
@@ -39,6 +41,6 @@ func nodeFunction(q_GIProbe : GIProbe) -> void:
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			q_GIProbe.bake(self, Autoload.get_bool())
+			q_GIProbe.bake(q_GIProbe, Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_GIProbe.debug_bake()

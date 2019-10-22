@@ -12,7 +12,8 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_ClippedCamera : ClippedCamera) -> void:
 	
-	Auto3DCamera.nodeFunction(self)
+	if randi() % 2 == 1:
+		Auto3DCamera.nodeFunction(q_ClippedCamera)
 
 
 	if randi() % 2 == 1:

@@ -8,14 +8,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_GeometryInstance(self)
 		nodeFunction(self)
 
 func nodeFunction(q_MultiMeshInstance : MultiMeshInstance, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_MultiMeshInstance)
+		AutoObjects.A_Node(q_MultiMeshInstance)
+		AutoObjects.A_Spatial(q_MultiMeshInstance)
+		AutoObjects.A_VisualInstance(q_MultiMeshInstance)
+		AutoObjects.A_GeometryInstance(q_MultiMeshInstance)
+		
 	if randi() % 2 == 1:
 		q_MultiMeshInstance.set_multimesh(MultiMesh.new())

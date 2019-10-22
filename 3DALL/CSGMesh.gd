@@ -12,13 +12,14 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_CSGMesh : CSGMesh, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_CSGShape(self)
-	AutoObjects.A_CSGPrimitive(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_CSGMesh)
+		AutoObjects.A_Node(q_CSGMesh)
+		AutoObjects.A_Spatial(q_CSGMesh)
+		AutoObjects.A_VisualInstance(q_CSGMesh)
+		AutoObjects.A_GeometryInstance(q_CSGMesh)
+		AutoObjects.A_CSGShape(q_CSGMesh)
+		AutoObjects.A_CSGPrimitive(q_CSGMesh)
 		
 	if randi() % 2 == 1:
 		q_CSGMesh.set_mesh(Autoload.loadA("CubeMesh.tres"))

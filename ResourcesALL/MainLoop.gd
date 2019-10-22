@@ -1,6 +1,6 @@
 extends Node2D
-
-var q_MainLoop : MainLoop = MainLoop.new()
+# TODO CHECK IF BUG
+#var q_MainLoop : MainLoop = MainLoop.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,14 +10,14 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_MainLoop,true)
+#		nodeFunction(q_MainLoop,true)
 
 func nodeFunction(q_MainLoop : MainLoop, can_reset : bool = false) -> void:
 	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_MainLoop.free()
-			q_MainLoop = MainLoop.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_MainLoop.free()
+#			q_MainLoop = MainLoop.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_MainLoop)
 
@@ -49,5 +49,5 @@ func nodeFunction(q_MainLoop : MainLoop, can_reset : bool = false) -> void:
 		q_MainLoop.iteration( Autoload.get_float())
 
 
-func _exit_tree():
-	q_MainLoop.free()
+#func _exit_tree():
+#	q_MainLoop.free()

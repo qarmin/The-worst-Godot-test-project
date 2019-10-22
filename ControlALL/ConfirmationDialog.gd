@@ -8,16 +8,12 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_CanvasItem(self)
-		AutoObjects.A_Control(self)
-		AutoControlPopup.nodeFunction(self)
-		AutoControlWindowDialog.nodeFunction(self)
-		AutoControlAcceptDialog.nodeFunction(self)
 		nodeFunction(self)
 
 func nodeFunction(q_ConfirmationDialog : ConfirmationDialog) -> void:
 
-		if randi() % 2 == 1:
-			q_ConfirmationDialog.get_cancel()
+	if randi() % 2 == 1:
+		AutoControlAcceptDialog.nodeFunction(q_ConfirmationDialog)
+		
+	if randi() % 2 == 1:
+		q_ConfirmationDialog.get_cancel()

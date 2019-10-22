@@ -18,8 +18,7 @@ func nodeFunction(q_AStar : AStar, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_AStar = AStar.new()
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_AStar)
-		AutoObjects.A_Reference(q_AStar)
+		AutoResourcesReference.nodeFunction(q_AStar)
 
 
 	###q_AStar._compute_cost(Autoload.get_int(),Autoload.get_int())

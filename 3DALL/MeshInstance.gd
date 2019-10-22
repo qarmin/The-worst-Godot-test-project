@@ -8,15 +8,17 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		AutoObjects.A_Object(self)
-		AutoObjects.A_Node(self)
-		AutoObjects.A_Spatial(self)
-		AutoObjects.A_VisualInstance(self)
-		AutoObjects.A_GeometryInstance(self)
 		nodeFunction(self)
 
 func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> void:
 
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_MeshInstance)
+		AutoObjects.A_Node(q_MeshInstance)
+		AutoObjects.A_Spatial(q_MeshInstance)
+		AutoObjects.A_VisualInstance(q_MeshInstance)
+		AutoObjects.A_GeometryInstance(q_MeshInstance)
+		
 	if randi() % 2 == 1:
 		q_MeshInstance.set_mesh(Autoload.loadA("CubeMesh.tres"))
 	if randi() % 2 == 1:

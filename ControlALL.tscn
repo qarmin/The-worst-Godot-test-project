@@ -188,6 +188,9 @@ flat = true
 clip_text = true
 align = 0
 script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CheckBox_NOTHING" type="CheckBox" parent="."]
 margin_top = 249.0
@@ -305,6 +308,9 @@ margin_top = 803.0
 margin_right = 308.0
 margin_bottom = 833.0
 script = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 margin_left = 312.0

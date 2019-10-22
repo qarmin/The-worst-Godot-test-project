@@ -21,8 +21,6 @@ func nodeFunction(q_VisualShaderNodeGroupBase : VisualShaderNodeGroupBase, can_r
 		AutoResourcesVisualShaderNode.nodeFunction(q_VisualShaderNodeGroupBase)
 		
 	var q_control : Control = Control.new()
-	if randi() % 2 == 1:
-		q_control = Control.new()
 
 #	BUG	if randi() % 2 == 1:
 #			q_VisualShaderNodeGroupBase.add_input_port( Autoload.get_int(), Autoload.get_int(), Autoload.get_string())

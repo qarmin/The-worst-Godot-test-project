@@ -12,12 +12,13 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = false) -> void:
 
-	AutoObjects.A_Object(self)
-	AutoObjects.A_Node(self)
-	AutoObjects.A_Spatial(self)
-	AutoObjects.A_VisualInstance(self)
-	AutoObjects.A_GeometryInstance(self)
-	AutoObjects.A_SpriteBase3D(self)
+	if randi() % 2 == 1:
+		AutoObjects.A_Object(q_AnimatedSprite3D)
+		AutoObjects.A_Node(q_AnimatedSprite3D)
+		AutoObjects.A_Spatial(q_AnimatedSprite3D)
+		AutoObjects.A_VisualInstance(q_AnimatedSprite3D)
+		AutoObjects.A_GeometryInstance(q_AnimatedSprite3D)
+		AutoObjects.A_SpriteBase3D(q_AnimatedSprite3D)
 	
 	if randi() % 2 == 1:
 		q_AnimatedSprite3D.set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))

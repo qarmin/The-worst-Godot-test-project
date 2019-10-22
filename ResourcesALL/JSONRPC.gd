@@ -1,6 +1,6 @@
 extends Node2D
-
-var q_JSONRPC : JSONRPC = JSONRPC.new()
+# TODO CHECK IF BUG
+#var q_JSONRPC : JSONRPC = JSONRPC.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,14 +10,14 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_JSONRPC,true)
+#		nodeFunction(q_JSONRPC,true)
 
 func nodeFunction(q_JSONRPC : JSONRPC, can_reset : bool = false) -> void:
 	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_JSONRPC.free()
-			q_JSONRPC = JSONRPC.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_JSONRPC.free()
+#			q_JSONRPC = JSONRPC.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_JSONRPC)
 
@@ -36,7 +36,7 @@ func nodeFunction(q_JSONRPC : JSONRPC, can_reset : bool = false) -> void:
 		q_JSONRPC.process_string(Autoload.get_string())
 
 	if randi() % 2 == 1:
-		q_JSONRPC.set_scope(Autoload.get_string(), self)
+		q_JSONRPC.set_scope(Autoload.get_string(), q_JSONRPC)
 
-func _exit_tree():
-	q_JSONRPC.free()
+#func _exit_tree():
+#	q_JSONRPC.free()

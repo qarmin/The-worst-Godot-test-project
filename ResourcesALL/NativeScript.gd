@@ -19,8 +19,8 @@ func alt_process(delta) -> void:
 #
 #		q_NativeScript.set_class_name(Autoload.get_string())
 #		q_NativeScript.set_library(Autoload.loadA("GDNativeLibrary.tres"))
-#		q_NativeScript.set_script_class_name(Autoload.get_nodepath(self))
-#		q_NativeScript.set_script_class_icon_path(Autoload.get_nodepath(self))
+#		q_NativeScript.set_script_class_name(Autoload.get_nodepath(q_NativeScript))
+#		q_NativeScript.set_script_class_icon_path(Autoload.get_nodepath(q_NativeScript))
 #
 #		q_NativeScript.get_class_documentation())
 #		q_NativeScript.get_method_documentation( Autoload.get_string()))
