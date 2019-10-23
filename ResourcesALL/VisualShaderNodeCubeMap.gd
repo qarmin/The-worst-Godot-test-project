@@ -19,8 +19,11 @@ func nodeFunction(q_VisualShaderNodeCubeMap : VisualShaderNodeCubeMap, can_reset
 			q_VisualShaderNodeCubeMap = VisualShaderNodeCubeMap.new()
 	if randi() % 2 == 1:
 		AutoResourcesVisualShaderNode.nodeFunction(q_VisualShaderNodeCubeMap)
+	
+	var temp_CubeMap : CubeMap = CubeMap.new()
+	AutoResourcesCubeMap.nodeFunction(temp_CubeMap)
 
 	if randi() % 2 == 1:
-		q_VisualShaderNodeCubeMap.set_cube_map(CubeMap.new())
+		q_VisualShaderNodeCubeMap.set_cube_map(temp_CubeMap)
 	if randi() % 2 == 1:
 		q_VisualShaderNodeCubeMap.set_texture_type(Autoload.get_int()) #TextureType

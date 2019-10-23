@@ -20,6 +20,13 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 		AutoObjects.A_CollisionObject2D(q_RigidBody2D)
 		AutoObjects.A_PhysicsBody2D(q_RigidBody2D)
 		
+	### START TEMP
+	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
+	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_mode(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -35,7 +42,7 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_gravity_scale(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_RigidBody2D.set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))
+		q_RigidBody2D.set_physics_material_override(temp_PhysicsMaterial)
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_use_custom_integrator(Autoload.get_bool())
 	if randi() % 2 == 1:

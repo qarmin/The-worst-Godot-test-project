@@ -18,6 +18,13 @@ func nodeFunction(q_RigidBody : RigidBody, can_reset : bool = false) -> void:
 		AutoObjects.A_Spatial(q_RigidBody)
 		AutoObjects.A_CollisionObject(q_RigidBody)
 		AutoObjects.A_PhysicsBody(q_RigidBody)
+		
+	### START TEMP
+	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
+	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+	
+	### END TEMP
+	
 	
 	
 	if randi() % 2 == 1:
@@ -29,7 +36,7 @@ func nodeFunction(q_RigidBody : RigidBody, can_reset : bool = false) -> void:
 		#Deprecated q_RigidBody.set_friction(Autoload.get_float())
 		#Deprecated q_RigidBody.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_RigidBody.set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))
+		q_RigidBody.set_physics_material_override(temp_PhysicsMaterial)
 	if randi() % 2 == 1:
 		q_RigidBody.set_gravity_scale(Autoload.get_float())
 	if randi() % 2 == 1:

@@ -21,9 +21,6 @@ func nodeFunction(q_AnimationNodeStateMachineTransition : AnimationNodeStateMach
 		AutoResourcesResource.nodeFunction(q_AnimationNodeStateMachineTransition)
 
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachineTransition = AnimationNodeStateMachineTransition.new()
-
-	if randi() % 2 == 1:
 		q_AnimationNodeStateMachineTransition.set_switch_mode(Autoload.get_int()) # SwitchMode
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachineTransition.set_auto_advance(Autoload.get_bool())

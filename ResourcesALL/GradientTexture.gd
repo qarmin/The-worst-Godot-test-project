@@ -19,8 +19,14 @@ func nodeFunction(q_GradientTexture : GradientTexture, can_reset : bool = false)
 			q_GradientTexture = GradientTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_GradientTexture)
+		
+	### START TEMP
+	var temp_Gradient : Gradient = Gradient.new()
+	AutoResourcesGradient.nodeFunction(temp_Gradient)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_GradientTexture.set_gradient(Autoload.loadA("Gradient.tres"))
+		q_GradientTexture.set_gradient(temp_Gradient)
 	if randi() % 2 == 1:
 		q_GradientTexture.set_width(Autoload.get_int())

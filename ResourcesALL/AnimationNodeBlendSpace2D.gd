@@ -19,6 +19,12 @@ func nodeFunction(q_AnimationNodeBlendSpace2D : AnimationNodeBlendSpace2D, can_r
 			q_AnimationNodeBlendSpace2D = AnimationNodeBlendSpace2D.new()
 	if randi() % 2 == 1:
 		AutoResourcesAnimationRootNode.nodeFunction(q_AnimationNodeBlendSpace2D)
+		
+	### START TEMP
+	var temp_AnimationRootNode : AnimationRootNode = AnimationRootNode.new()
+	AutoResourcesAnimationRootNode.nodeFunction(temp_AnimationRootNode)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.set_auto_triangles(Autoload.get_bool())
@@ -36,7 +42,7 @@ func nodeFunction(q_AnimationNodeBlendSpace2D : AnimationNodeBlendSpace2D, can_r
 		q_AnimationNodeBlendSpace2D.set_blend_mode(Autoload.get_int()) #BlendMode
 
 	if randi() % 2 == 1:
-		q_AnimationNodeBlendSpace2D.add_blend_point( AnimationRootNode.new(), Autoload.get_vector2(), Autoload.get_int())
+		q_AnimationNodeBlendSpace2D.add_blend_point( temp_AnimationRootNode, Autoload.get_vector2(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.add_triangle( Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
@@ -54,6 +60,6 @@ func nodeFunction(q_AnimationNodeBlendSpace2D : AnimationNodeBlendSpace2D, can_r
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.remove_triangle( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_AnimationNodeBlendSpace2D.set_blend_point_node( Autoload.get_int(), AnimationRootNode.new())
+		q_AnimationNodeBlendSpace2D.set_blend_point_node( Autoload.get_int(), temp_AnimationRootNode)
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.set_blend_point_position( Autoload.get_int(), Autoload.get_vector2())

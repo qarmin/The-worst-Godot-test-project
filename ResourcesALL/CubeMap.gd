@@ -19,6 +19,12 @@ func nodeFunction(q_CubeMap : CubeMap, can_reset : bool = false) -> void:
 			q_CubeMap = CubeMap.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_CubeMap)
+		
+	### START TEMP
+	var temp_Image : Image = Image.new()
+	AutoResourcesImage.nodeFunction(temp_Image)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_CubeMap.set_flags(Autoload.get_int()) #FLAGS 
@@ -34,4 +40,4 @@ func nodeFunction(q_CubeMap : CubeMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CubeMap.get_width()
 	if randi() % 2 == 1:
-		q_CubeMap.set_side( Autoload.get_int(), Autoload.loadA("Sprite.png"))# Side
+		q_CubeMap.set_side( Autoload.get_int(), temp_Image)# Side

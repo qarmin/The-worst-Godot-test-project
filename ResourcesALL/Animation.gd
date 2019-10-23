@@ -19,6 +19,15 @@ func nodeFunction(q_Animation : Animation, can_reset : bool = false) -> void:
 			q_Animation = Animation.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Animation)
+		
+	### START TEMP
+	var temp_Animation : Animation = Animation.new()
+#	AutoResourcesAnimation.nodeFunction(temp_Animation) #LOOP
+	
+	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
+	AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_Animation.set_length(Autoload.get_float())
@@ -45,13 +54,13 @@ func nodeFunction(q_Animation : Animation, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Animation.audio_track_get_key_stream(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Animation.audio_track_insert_key(1,Autoload.get_float(),Autoload.loadA("AudioStreamGenerator.tres"),Autoload.get_float(),Autoload.get_float())
+		q_Animation.audio_track_insert_key(1,Autoload.get_float(),temp_AudioStreamGenerator,Autoload.get_float(),Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Animation.audio_track_set_key_end_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Animation.audio_track_set_key_start_offset(Autoload.get_int(),Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),Autoload.loadA("AudioStreamGenerator.tres"))
+		q_Animation.audio_track_set_key_stream(Autoload.get_int(),Autoload.get_int(),temp_AudioStreamGenerator)
 
 	if randi() % 2 == 1:
 		q_Animation.bezier_track_get_key_in_handle(Autoload.get_int(),Autoload.get_int())
@@ -73,7 +82,7 @@ func nodeFunction(q_Animation : Animation, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Animation.clear()
 	if randi() % 2 == 1:
-		q_Animation.copy_track(Autoload.get_int(), Animation.new())
+		q_Animation.copy_track(Autoload.get_int(), temp_Animation)
 	if randi() % 2 == 1:
 		q_Animation.find_track(Autoload.get_nodepath(self))
 	if randi() % 2 == 1:

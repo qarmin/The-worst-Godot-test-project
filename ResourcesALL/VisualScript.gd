@@ -19,13 +19,20 @@ func nodeFunction(q_VisualScript : VisualScript, can_reset : bool = false) -> vo
 			q_VisualScript = VisualScript.new()
 	if randi() % 2 == 1:
 		AutoResourcesScript.nodeFunction(q_VisualScript)
+		
+	### START TEMP
+	
+	var temp_VisualScriptBasicTypeConstant : VisualScriptBasicTypeConstant = VisualScriptBasicTypeConstant.new()
+	AutoResourcesVisualScriptBasicTypeConstant.nodeFunction(temp_VisualScriptBasicTypeConstant)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_VisualScript.add_custom_signal( Autoload.get_string())
 	if randi() % 2 == 1:
 		q_VisualScript.add_function( Autoload.get_string())
 	if randi() % 2 == 1:
-		q_VisualScript.add_node( Autoload.get_string(), Autoload.get_int(), VisualScriptNode.new(), Autoload.get_vector2())
+		q_VisualScript.add_node( Autoload.get_string(), Autoload.get_int(), temp_VisualScriptBasicTypeConstant, Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_VisualScript.add_variable( Autoload.get_string(), Autoload.get_vector2(), Autoload.get_bool())
 
@@ -110,4 +117,4 @@ func nodeFunction(q_VisualScript : VisualScript, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_VisualScript.set_variable_export( Autoload.get_string(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_VisualScript.set_variable_info( Autoload.get_string(), {Autoload.get_string(): 15, Autoload.get_string(): 124})
+		q_VisualScript.set_variable_info( Autoload.get_string(), Autoload.get_dictionary())

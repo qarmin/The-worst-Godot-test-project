@@ -18,9 +18,12 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_Camera2D)
 		AutoObjects.A_Node2D(q_Camera2D)
 		
-		
-	var viewport_temp : Viewport = Viewport.new()
-
+	### START TEMP
+	var temp_Viewport : Viewport = Viewport.new()
+	AutoOtherViewport.nodeFunction(temp_Viewport)
+	
+	### END TEMP
+	
 	if randi() % 2 == 1:
 		q_Camera2D.set_offset(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -34,7 +37,7 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 			q_Camera2D.set_zoom(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		if q_Camera2D.get_custom_viewport():
-			q_Camera2D.set_custom_viewport(viewport_temp)
+			q_Camera2D.set_custom_viewport(temp_Viewport)
 	if randi() % 2 == 1:
 		q_Camera2D.set_process_mode(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -86,4 +89,6 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Camera2D.reset_smoothing()
 
-	viewport_temp.queue_free()
+	### CLEANING
+	temp_Viewport.queue_free()
+	### END CLEANING

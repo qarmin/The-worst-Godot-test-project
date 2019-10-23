@@ -19,8 +19,14 @@ func nodeFunction(q_CurveTexture : CurveTexture, can_reset : bool = false) -> vo
 			q_CurveTexture = CurveTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_CurveTexture)
+		
+	### START TEMP
+	var temp_Curve : Curve = Curve.new()
+	AutoResourcesCurve.nodeFunction(temp_Curve)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_CurveTexture.set_width(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CurveTexture.set_curve(Autoload.loadA("Curve.tres"))
+		q_CurveTexture.set_curve(temp_Curve)

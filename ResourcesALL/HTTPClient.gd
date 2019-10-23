@@ -19,11 +19,17 @@ func nodeFunction(q_HTTPClient : HTTPClient, can_reset : bool = false) -> void:
 			q_HTTPClient = HTTPClient.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_HTTPClient)
+		
+	### START TEMP
+	var temp_StreamPeer : StreamPeer = StreamPeerBuffer.new()
+	AutoResourcesStreamPeer.nodeFunction(temp_StreamPeer)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_HTTPClient.set_blocking_mode(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_HTTPClient.set_connection(StreamPeer.new())
+		q_HTTPClient.set_connection(temp_StreamPeer)
 
 	if randi() % 2 == 1:
 		q_HTTPClient.close()

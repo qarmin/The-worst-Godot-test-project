@@ -18,10 +18,17 @@ func nodeFunction(q_Sprite : Sprite, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_Sprite)
 		AutoObjects.A_Node2D(q_Sprite)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_Sprite.set_texture(Autoload.loadA("Sprite.png"))
+		q_Sprite.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_Sprite.set_normal_map(Autoload.loadA("Sprite.png"))
+		q_Sprite.set_normal_map(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_Sprite.set_centered(Autoload.get_bool())
 	if randi() % 2 == 1:

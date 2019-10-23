@@ -139,17 +139,17 @@ func A_Object(q_Object : Object) -> void:
 		q_Object.remove_meta(Autoload.get_string())
 
 	if randi()%2 == 1:
-		q_Object.set(Autoload.get_string(),Autoload.loadA("CubeMesh.tres"))
+		q_Object.set(Autoload.get_string(),CubeMesh.new())
 	if randi()%2 == 1:
 		q_Object.set_block_signals(Autoload.get_bool())
 	if randi()%2 == 1:
-		q_Object.set_deferred(Autoload.get_string(),Autoload.loadA("CubeMesh.tres"))
+		q_Object.set_deferred(Autoload.get_string(),CubeMesh.new())
 	if randi()%2 == 1:
-		q_Object.set_indexed(Autoload.get_string(),Autoload.loadA("CubeMesh.tres"))
+		q_Object.set_indexed(Autoload.get_string(),CubeMesh.new())
 	if randi()%2 == 1:
 		q_Object.set_message_translation(Autoload.get_bool())
 	if randi()%2 == 1:
-		q_Object.set_meta(Autoload.get_string(), Autoload.loadA("CubeMesh.tres"))
+		q_Object.set_meta(Autoload.get_string(), CubeMesh.new())
 #BUG	if randi()%2 == 1:
 #		q_Object.set_script(Reference.new())
 
@@ -312,15 +312,15 @@ func A_Node(q_Node : Node) -> void:
 		q_Node.rpc_unreliable_id(Autoload.get_int(),Autoload.get_string())
 	
 	if randi()%2 == 1:
-		q_Node.rset(Autoload.get_string(), Autoload.loadA("CubeMesh.tres"))
+		q_Node.rset(Autoload.get_string(), CubeMesh.new())
 	if randi()%2 == 1:
 		q_Node.rset_config(Autoload.get_string(),Autoload.get_int())
 	if randi()%2 == 1:
-		q_Node.rset_id(Autoload.get_int(), Autoload.get_string(),Autoload.loadA("CubeMesh.tres"))
+		q_Node.rset_id(Autoload.get_int(), Autoload.get_string(),CubeMesh.new())
 	if randi()%2 == 1:
-		q_Node.rset_unreliable(Autoload.get_string(), Autoload.loadA("CubeMesh.tres"))
+		q_Node.rset_unreliable(Autoload.get_string(), CubeMesh.new())
 	if randi()%2 == 1:
-		q_Node.rset_unreliable_id(Autoload.get_int(),Autoload.get_string(),Autoload.loadA("CubeMesh.tres"))
+		q_Node.rset_unreliable_id(Autoload.get_int(),Autoload.get_string(),CubeMesh.new())
 	
 	if randi()%2 == 1:
 		q_Node.set_display_folded(Autoload.get_bool())
@@ -416,7 +416,7 @@ func A_CanvasItem(q_CanvasItem : CanvasItem) -> void:
 	if randi()%2 == 1:
 		q_CanvasItem.set_light_mask(Autoload.get_int())
 	if randi()%2 == 1:
-		q_CanvasItem.set_material(Autoload.loadA("SpatialMaterial.tres"))
+		q_CanvasItem.set_material(SpatialMaterial.new())
 	if randi()%2 == 1:
 		q_CanvasItem.set_use_parent_material(Autoload.get_bool())
 
@@ -505,7 +505,7 @@ func A_CollisionObject2D(q_CollisionObject2D : CollisionObject2D) -> void:
 	if randi() % 2 == 1:
 		q_CollisionObject2D.shape_find_owner(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CollisionObject2D.shape_owner_add_shape(Autoload.get_int(),Autoload.loadA("CircleShape2D.tres"))
+		q_CollisionObject2D.shape_owner_add_shape(Autoload.get_int(),CircleShape2D.new())
 	if randi() % 2 == 1:
 		q_CollisionObject2D.shape_owner_clear_shapes(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -635,7 +635,7 @@ func A_Control(q_Control : Control) -> void:
 	if randi() % 2 == 1:
 		q_Control.add_font_override(Autoload.get_string(), Autoload.loadA("DynamicFont.tres"))
 	if randi() % 2 == 1:
-		q_Control.add_icon_override(Autoload.get_string(), Autoload.loadA("Sprite.png"))
+		q_Control.add_icon_override(Autoload.get_string(), ImageTexture.new())
 	if randi() % 2 == 1:
 		q_Control.add_shader_override(Autoload.get_string(), Autoload.loadA("VisualShader.tres"))
 	if randi() % 2 == 1:
@@ -975,7 +975,7 @@ func A_GeometryInstance(q_GeometryInstance : GeometryInstance) -> void:
 		return
 		
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_material_override(Autoload.loadA("SpatialMaterial.tres"))
+		q_GeometryInstance.set_material_override(SpatialMaterial.new())
 	if randi() % 2 == 1:
 		q_GeometryInstance.set_cast_shadows_setting(Autoload.get_int())
 	if randi() % 2 == 1:

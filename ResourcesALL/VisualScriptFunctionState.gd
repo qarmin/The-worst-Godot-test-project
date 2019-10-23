@@ -13,18 +13,24 @@ func alt_process(delta) -> void:
 		nodeFunction(q_VisualScriptFunctionState,true)
 
 func nodeFunction(q_VisualScriptFunctionState : VisualScriptFunctionState, can_reset : bool = false) -> void:
-	var q_node : Node = Node.new()
 	if can_reset:
 		if randi() % 2 == 1:
 			q_VisualScriptFunctionState = VisualScriptFunctionState.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_VisualScriptFunctionState)
+		
+	### START TEMP
+	
+	var temp_Node : Node = Node.new()
+	AutoObjects.A_Node(temp_Node)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_VisualScriptFunctionState.connect_to_signal( q_node, Autoload.get_string(), Autoload.get_array())
+		q_VisualScriptFunctionState.connect_to_signal( temp_Node, Autoload.get_string(), Autoload.get_array())
 	if randi() % 2 == 1:
 		q_VisualScriptFunctionState.is_valid()
 	if randi() % 2 == 1:
 		q_VisualScriptFunctionState.resume( Autoload.get_array())
 
-	q_node.queue_free()
+	temp_Node.queue_free()

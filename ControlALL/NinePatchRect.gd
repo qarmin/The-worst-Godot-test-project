@@ -17,9 +17,15 @@ func nodeFunction(q_NinePatchRect : NinePatchRect, can_reset : bool = false) -> 
 		AutoObjects.A_Node(q_NinePatchRect)
 		AutoObjects.A_CanvasItem(q_NinePatchRect)
 		AutoObjects.A_Control(q_NinePatchRect)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 			
 	if randi() % 2 == 1:
-		q_NinePatchRect.set_texture(Autoload.loadA("Sprite.png"))
+		q_NinePatchRect.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_NinePatchRect.set_draw_center(Autoload.get_bool())
 	if randi() % 2 == 1:

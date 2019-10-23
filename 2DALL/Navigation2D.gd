@@ -18,12 +18,19 @@ func nodeFunction(q_Navigation2D : Navigation2D, can_reset : bool = false) -> vo
 		AutoObjects.A_CanvasItem(q_Navigation2D)
 		AutoObjects.A_Node2D(q_Navigation2D)
 		
+	### START TEMP
+	var temp_NavigationPolygon : NavigationPolygon = NavigationPolygon.new()
+	AutoResourcesNavigationPolygon.nodeFunction(temp_NavigationPolygon)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_Navigation2D.get_closest_point(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Navigation2D.get_closest_point_owner(Autoload.get_vector2())
 
 	if randi() % 2 == 1:
-		q_Navigation2D.navpoly_remove(navpoly_add(NavigationPolygon.new(),Autoload.get_transform2d()))
+		q_Navigation2D.navpoly_remove(navpoly_add(temp_NavigationPolygon,Autoload.get_transform2d()))
 	if randi() % 2 == 1:
 		q_Navigation2D.navpoly_set_transform(Autoload.get_int(),Autoload.get_transform2d())

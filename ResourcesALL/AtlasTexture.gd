@@ -19,9 +19,15 @@ func nodeFunction(q_AtlasTexture : AtlasTexture, can_reset : bool = false) -> vo
 			q_AtlasTexture = AtlasTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_AtlasTexture)
+		
+	### START TEMP
+	var temp_AnimatedTexture : AnimatedTexture = AnimatedTexture.new()
+	AutoResourcesAnimatedTexture.nodeFunction(temp_AnimatedTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_AtlasTexture.set_atlas(AnimatedTexture.new())
+		q_AtlasTexture.set_atlas(temp_AnimatedTexture)
 	if randi() % 2 == 1:
 		q_AtlasTexture.set_region(Autoload.get_rect2())
 	if randi() % 2 == 1:

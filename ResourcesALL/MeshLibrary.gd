@@ -19,6 +19,18 @@ func nodeFunction(q_MeshLibrary : MeshLibrary, can_reset : bool = false) -> void
 			q_MeshLibrary = MeshLibrary.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_MeshLibrary)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	
+	var temp_NavigationMesh : NavigationMesh = NavigationMesh.new()
+	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_MeshLibrary.clear()
@@ -48,15 +60,15 @@ func nodeFunction(q_MeshLibrary : MeshLibrary, can_reset : bool = false) -> void
 		q_MeshLibrary.remove_item(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_MeshLibrary.set_item_mesh(Autoload.get_int(),Autoload.loadA("CubeMesh.tres"))
+		q_MeshLibrary.set_item_mesh(Autoload.get_int(),temp_CubeMesh)
 	if randi() % 2 == 1:
 		q_MeshLibrary.set_item_name(Autoload.get_int(),Autoload.get_string())
 	if randi() % 2 == 1:
-		q_MeshLibrary.set_item_navmesh(Autoload.get_int(),Autoload.loadA("NavigationMesh.tres"))
+		q_MeshLibrary.set_item_navmesh(Autoload.get_int(),temp_NavigationMesh)
 	if randi() % 2 == 1:
 		q_MeshLibrary.set_item_navmesh_transform(Autoload.get_int(),Autoload.get_transform())
 	if randi() % 2 == 1:
-		q_MeshLibrary.set_item_preview(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+		q_MeshLibrary.set_item_preview(Autoload.get_int(),temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_MeshLibrary.set_item_shapes(Autoload.get_int(),Autoload.get_array())
 

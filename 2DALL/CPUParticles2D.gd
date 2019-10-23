@@ -18,6 +18,16 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 		AutoObjects.A_CanvasItem(q_CPUParticles2D)
 		AutoObjects.A_Node2D(q_CPUParticles2D)
 		
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_Curve : Curve = Curve.new()
+	AutoResourcesCurve.nodeFunction(temp_Curve)
+	
+	### END TEMP
+	
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_amount(Autoload.get_inti(5))
 	if randi() % 2 == 1:
@@ -43,9 +53,9 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_draw_order(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_texture(Autoload.loadA("Sprite.png"))
+		q_CPUParticles2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_normalmap(Autoload.loadA("Sprite.png"))
+		q_CPUParticles2D.set_normalmap(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_emission_shape(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -71,9 +81,9 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set("draw_order", Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set("texture", Autoload.loadA("Sprite.png"))
+		q_CPUParticles2D.set("texture", temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set("normalmap", Autoload.loadA("Sprite.png"))
+		q_CPUParticles2D.set("normalmap", temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set("emission_shape", Autoload.get_int())
 	if randi() % 2 == 1:
@@ -82,6 +92,6 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_param(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_param_curve(Autoload.get_int(),Autoload.loadA("Curve.tres"))
+		q_CPUParticles2D.set_param_curve(Autoload.get_int(),temp_Curve)
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_param_randomness(Autoload.get_int(),Autoload.get_float())

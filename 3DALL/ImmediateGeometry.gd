@@ -19,13 +19,20 @@ func nodeFunction(q_ImmediateGeometry : ImmediateGeometry, can_reset : bool = fa
 		AutoObjects.A_VisualInstance(q_ImmediateGeometry)
 		AutoObjects.A_GeometryInstance(q_ImmediateGeometry)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
 			q_ImmediateGeometry.add_sphere(Autoload.get_inti(3),Autoload.get_inti(4),Autoload.get_float(),Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_ImmediateGeometry.add_vertex(Autoload.get_vector3())
 #	if randi() % 2 == 1: #BUG
-#		q_ImmediateGeometry.begin(Autoload.get_int(),Autoload.loadA("Sprite.png")) # PrimitiveType
+#		q_ImmediateGeometry.begin(Autoload.get_int(),temp_ImageTexture) # PrimitiveType
 	if randi() % 2 == 1:
 		q_ImmediateGeometry.clear()
 	if randi() % 2 == 1:

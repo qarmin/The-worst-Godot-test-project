@@ -14,17 +14,24 @@ func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> vo
 	
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_TabContainer)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_PopupMenu : PopupMenu = PopupMenu.new()
+	AutoControlPopupMenu.nodeFunction(temp_PopupMenu)
+	### END TEMP
 
-	var popup_menu_temp : PopupMenu = PopupMenu.new()
 	
 	if randi() % 2 == 1:
-		q_TabContainer.set_popup(popup_menu_temp)
+		q_TabContainer.set_popup(temp_PopupMenu)
 	if randi() % 2 == 1:
 		q_TabContainer.set_tab_disabled(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TabContainer.set_tab_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+		q_TabContainer.set_tab_icon(Autoload.get_int(),temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_TabContainer.set_tab_title(Autoload.get_int(),str(Autoload.get_int()))
+		q_TabContainer.set_tab_title(Autoload.get_int(),Autoload.get_string())
 	if randi() % 2 == 1:
 		q_TabContainer.set_tabs_rearrange_group(Autoload.get_int())
 
@@ -56,4 +63,6 @@ func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_TabContainer.set_drag_to_rearrange_enabled(Autoload.get_bool())
 
-	popup_menu_temp.queue_free()
+	### CLEANING
+	temp_PopupMenu.queue_free()
+	### END CLEANING

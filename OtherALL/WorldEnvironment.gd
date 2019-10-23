@@ -15,7 +15,14 @@ func nodeFunction(q_WorldEnvironment : WorldEnvironment, can_reset : bool = fals
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_WorldEnvironment)
 		AutoObjects.A_Node(q_WorldEnvironment)
+		
+	### START TEMP
+	var temp_Environment : Environment = Environment.new()
+	AutoResourcesEnvironment.nodeFunction(temp_Environment)
+	
+	### END TEMP
+	
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			q_WorldEnvironment.set_environment(Autoload.loadA("DefaultEnv.tres"))
+			q_WorldEnvironment.set_environment(temp_Environment)

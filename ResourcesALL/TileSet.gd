@@ -19,6 +19,24 @@ func nodeFunction(q_TileSet : TileSet, can_reset : bool = false) -> void:
 			q_TileSet = TileSet.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_TileSet)
+		
+	### START TEMP
+	var temp_OccluderPolygon2D : OccluderPolygon2D = OccluderPolygon2D.new()
+	AutoResourcesOccluderPolygon2D.nodeFunction(temp_OccluderPolygon2D)
+	
+	var temp_NavigationPolygon : NavigationPolygon = NavigationPolygon.new()
+	AutoResourcesNavigationPolygon.nodeFunction(temp_NavigationPolygon)
+	
+	var temp_RectangleShape2D : RectangleShape2D = RectangleShape2D.new()
+	AutoResourcesRectangleShape2D.nodeFunction(temp_RectangleShape2D)
+	
+	var temp_ShaderMaterial : ShaderMaterial = ShaderMaterial.new()
+	AutoResourcesShaderMaterial.nodeFunction(temp_ShaderMaterial)
+	
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	### q_TileSet._forward_atlas_subtile_selection( int atlastile_id, Object tilemap, Vector2 tile_location )
 	### q_TileSet._forward_subtile_selection( int autotile_id, int bitmask, Object tilemap, Vector2 tile_location )
@@ -51,9 +69,9 @@ func nodeFunction(q_TileSet : TileSet, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileSet.autotile_set_icon_coordinate( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_TileSet.autotile_set_light_occluder( Autoload.get_int(), OccluderPolygon2D.new(), Autoload.get_vector2())
+		q_TileSet.autotile_set_light_occluder( Autoload.get_int(), temp_OccluderPolygon2D, Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_TileSet.autotile_set_navigation_polygon( Autoload.get_int(), NavigationPolygon.new(), Autoload.get_vector2())
+		q_TileSet.autotile_set_navigation_polygon( Autoload.get_int(), temp_NavigationPolygon, Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_TileSet.autotile_set_size( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -79,7 +97,7 @@ func nodeFunction(q_TileSet : TileSet, can_reset : bool = false) -> void:
 		q_TileSet.get_tiles_ids()
 
 	if randi() % 2 == 1:
-		q_TileSet.tile_add_shape( Autoload.get_int(), RectangleShape2D.new(), Autoload.get_transform2d(), Autoload.get_bool(), Autoload.get_vector2())
+		q_TileSet.tile_add_shape( Autoload.get_int(), temp_RectangleShape2D, Autoload.get_transform2d(), Autoload.get_bool(), Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_TileSet.tile_get_light_occluder( Autoload.get_int())
 	if randi() % 2 == 1:
@@ -121,25 +139,25 @@ func nodeFunction(q_TileSet : TileSet, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileSet.tile_get_z_index( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_light_occluder( Autoload.get_int(), OccluderPolygon2D.new())
+		q_TileSet.tile_set_light_occluder( Autoload.get_int(), temp_OccluderPolygon2D)
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_material( Autoload.get_int(), ShaderMaterial.new())
+		q_TileSet.tile_set_material( Autoload.get_int(), temp_ShaderMaterial)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_modulate( Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_name( Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_navigation_polygon( Autoload.get_int(), NavigationPolygon.new())
+		q_TileSet.tile_set_navigation_polygon( Autoload.get_int(), temp_NavigationPolygon)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_navigation_polygon_offset( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_normal_map( Autoload.get_int(), Texture.new())
+		q_TileSet.tile_set_normal_map( Autoload.get_int(), temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_occluder_offset( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_region( Autoload.get_int(), Autoload.get_rect2())
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_shape( Autoload.get_int(), Autoload.get_int(), RectangleShape2D.new())
+		q_TileSet.tile_set_shape( Autoload.get_int(), Autoload.get_int(), temp_RectangleShape2D)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_shape_offset( Autoload.get_int(), Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -151,7 +169,7 @@ func nodeFunction(q_TileSet : TileSet, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_shapes( Autoload.get_int(), Autoload.get_array())
 	if randi() % 2 == 1:
-		q_TileSet.tile_set_texture( Autoload.get_int(), Texture.new())
+		q_TileSet.tile_set_texture( Autoload.get_int(), temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_texture_offset( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:

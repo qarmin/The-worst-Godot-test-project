@@ -15,12 +15,19 @@ func nodeFunction(q_OptionButton : OptionButton, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		AutoControlButton.nodeFunction(q_OptionButton)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_OptionButton.clear()
 	if randi() % 2 == 1:
 		q_OptionButton._select_int(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_OptionButton.add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_string())
+		q_OptionButton.add_icon_item(temp_ImageTexture,Autoload.get_string())
 	if randi() % 2 == 1:
 		q_OptionButton.add_item(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -48,7 +55,7 @@ func nodeFunction(q_OptionButton : OptionButton, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_OptionButton.set_item_disabled(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_OptionButton.set_item_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+		q_OptionButton.set_item_icon(Autoload.get_int(),temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_OptionButton.set_item_id(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:

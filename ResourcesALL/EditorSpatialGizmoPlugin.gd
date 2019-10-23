@@ -19,6 +19,12 @@ func alt_process(delta) -> void:
 #	if randi() % 2 == 1:
 #		AutoResourcesResource.nodeFunction(q_QQRQQ)
 #
+#	### START TEMP
+#	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#
+#	### END TEMP
+#
 #
 #		var q_EditorSpatialGizmoPlugin : EditorSpatialGizmoPlugin = EditorSpatialGizmoPlugin.new()
 #
@@ -38,7 +44,7 @@ func alt_process(delta) -> void:
 #		q_EditorSpatialGizmoPlugin.add_material( Autoload.get_string(), SpatialMaterial.new())
 #
 #		q_EditorSpatialGizmoPlugin.create_handle_material( Autoload.get_string(), Autoload.get_bool())
-#		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_bool(), Autoload.get_color())
+#		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), temp_ImageTexture, Autoload.get_bool(), Autoload.get_color())
 #		q_EditorSpatialGizmoPlugin.create_material( Autoload.get_string(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool())
 #
 #		q_EditorSpatialGizmoPlugin.get_material( Autoload.get_string(), EditorSpatialGizmo.new()))

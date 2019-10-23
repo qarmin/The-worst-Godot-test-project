@@ -18,6 +18,13 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_Polygon2D)
 		AutoObjects.A_Node2D(q_Polygon2D)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_Polygon2D.set_color(Autoload.get_color())
 	if randi() % 2 == 1:
@@ -25,7 +32,7 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Polygon2D.set_antialiased(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_texture(Autoload.loadA("Sprite.png"))
+		q_Polygon2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_Polygon2D.set_texture_offset(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -67,4 +74,4 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Polygon2D.set_bone_path(Autoload.get_int(),Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_bone_weights(Autoload.get_int(),[Autoload.get_float(),Autoload.get_float(),Autoload.get_float()])
+		q_Polygon2D.set_bone_weights(Autoload.get_int(),Autoload.get_array())

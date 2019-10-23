@@ -19,6 +19,12 @@ func nodeFunction(q_ProxyTexture : ProxyTexture, can_reset : bool = false) -> vo
 			q_ProxyTexture = ProxyTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_ProxyTexture)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_ProxyTexture.set_base(Autoload.loadA("Sprite.png"))
+		q_ProxyTexture.set_base(temp_ImageTexture)

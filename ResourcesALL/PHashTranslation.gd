@@ -19,6 +19,13 @@ func nodeFunction(q_PHashTranslation : PHashTranslation, can_reset : bool = fals
 			q_PHashTranslation = PHashTranslation.new()
 	if randi() % 2 == 1:
 		AutoResourcesTranslation.nodeFunction(q_PHashTranslation)
+		
+	### START TEMP
+	
+	var temp_Translation : Translation = Translation.new()
+	AutoResourcesTranslation.nodeFunction(temp_Translation)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_PHashTranslation.generate( Translation.new())
+		q_PHashTranslation.generate( temp_Translation)

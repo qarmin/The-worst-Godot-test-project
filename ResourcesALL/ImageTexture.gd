@@ -19,6 +19,13 @@ func nodeFunction(q_ImageTexture : ImageTexture, can_reset : bool = false) -> vo
 			q_ImageTexture = ImageTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_ImageTexture)
+		
+	### START TEMP
+	
+	var temp_Image : Image = Image.new()
+	AutoResourcesImage.nodeFunction(temp_Image)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_ImageTexture.set_storage(Autoload.get_int()) #Storage
@@ -28,14 +35,14 @@ func nodeFunction(q_ImageTexture : ImageTexture, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_ImageTexture.create(Autoload.get_inti(1000),Autoload.get_inti(1000),Autoload.get_int(),Autoload.get_int()) # Format 
 	if randi() % 2 == 1:
-		q_ImageTexture.create_from_image(Image.new(),Autoload.get_int())
+		q_ImageTexture.create_from_image(temp_Image,Autoload.get_int())
 
 	if randi() % 2 == 1:
 		q_ImageTexture.get_format()
 	if randi() % 2 == 1:
-		q_ImageTexture.load("Sprite.png")
+		q_ImageTexture.load("res://icon.png")
 
-	if randi() % 2 == 1:
-		q_ImageTexture.set_data(Image.new())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_ImageTexture.set_data(temp_Image)
 	if randi() % 2 == 1:
 		q_ImageTexture.set_size_override(Autoload.get_vector2())

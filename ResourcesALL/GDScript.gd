@@ -96,8 +96,6 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			linear2db(Autoload.get_float())
 		if randi() % 2 == 1:
-			Autoload.loadA("Sprite.png")
-		if randi() % 2 == 1:
 			log(Autoload.get_float())
 		if randi() % 2 == 1:
 			max(Autoload.get_float(),Autoload.get_float())

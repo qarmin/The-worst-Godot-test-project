@@ -19,6 +19,12 @@ func nodeFunction(q_BakedLightmapData : BakedLightmapData, can_reset : bool = fa
 			q_BakedLightmapData = BakedLightmapData.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_BakedLightmapData)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_BakedLightmapData.set_bounds(Autoload.get_aabb())
@@ -32,7 +38,7 @@ func nodeFunction(q_BakedLightmapData : BakedLightmapData, can_reset : bool = fa
 		q_BakedLightmapData.set_octree(Autoload.get_poolbytearray())
 
 	if randi() % 2 == 1:
-		q_BakedLightmapData.add_user( Autoload.get_string(), Autoload.loadA("Sprite.png"), Autoload.get_int())
+		q_BakedLightmapData.add_user( Autoload.get_string(), temp_ImageTexture, Autoload.get_int())
 	if randi() % 2 == 1:
 		q_BakedLightmapData.clear_users()
 	if randi() % 2 == 1:

@@ -17,9 +17,15 @@ func nodeFunction(q_TextureRect : TextureRect, can_reset : bool = false) -> void
 		AutoObjects.A_Node(q_TextureRect)
 		AutoObjects.A_CanvasItem(q_TextureRect)
 		AutoObjects.A_Control(q_TextureRect)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 			
 	if randi() % 2 == 1:
-		q_TextureRect.set_texture(Autoload.loadA("Sprite.png"))
+		q_TextureRect.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_TextureRect.set_expand(Autoload.get_bool())
 	if randi() % 2 == 1:

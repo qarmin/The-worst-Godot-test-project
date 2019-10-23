@@ -19,6 +19,13 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 			q_NoiseTexture = NoiseTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_NoiseTexture)
+		
+	### START TEMP
+	
+	var temp_OpenSimplexNoise : OpenSimplexNoise = OpenSimplexNoise.new()
+	AutoResourcesOpenSimplexNoise.nodeFunction(temp_OpenSimplexNoise)
+	
+	### END TEMP
 # BUG
 #	if randi() % 2 == 1:
 #		q_NoiseTexture.set_width(Autoload.get_int())
@@ -31,4 +38,4 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 #	if randi() % 2 == 1:
 #		q_NoiseTexture.set_bump_strength(Autoload.get_float())
 #	if randi() % 2 == 1:
-#		q_NoiseTexture.set_noise(OpenSimplexNoise.new())
+#		q_NoiseTexture.set_noise(temp_OpenSimplexNoise)

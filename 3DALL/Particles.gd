@@ -19,6 +19,17 @@ func nodeFunction(q_Particles : Particles, can_reset : bool = false) -> void:
 		AutoObjects.A_VisualInstance(q_Particles)
 		AutoObjects.A_GeometryInstance(q_Particles)
 		
+	### START TEMP
+	var temp_ParticlesMaterial : ParticlesMaterial = ParticlesMaterial.new()
+	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_Particles.set_emitting(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -46,9 +57,9 @@ func nodeFunction(q_Particles : Particles, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Particles.set_draw_order(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Particles.set_process_material(ParticlesMaterial.new())
+		q_Particles.set_process_material(temp_ParticlesMaterial)
 	if randi() % 2 == 1:
-		q_Particles.set_draw_pass_mesh(Autoload.get_int(), Autoload.loadA("CubeMesh.tres"))
+		q_Particles.set_draw_pass_mesh(Autoload.get_int(), temp_CubeMesh)
 
 	if randi() % 2 == 1:
 		q_Particles.restart()

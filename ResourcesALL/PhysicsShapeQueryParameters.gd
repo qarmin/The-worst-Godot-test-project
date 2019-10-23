@@ -19,6 +19,12 @@ func nodeFunction(q_PhysicsShapeQueryParameters : PhysicsShapeQueryParameters, c
 			q_PhysicsShapeQueryParameters = PhysicsShapeQueryParameters.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_PhysicsShapeQueryParameters)
+		
+	### START TEMP
+	var temp_BoxShape : BoxShape = BoxShape.new()
+	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_PhysicsShapeQueryParameters.set_collision_mask(Autoload.get_int())
@@ -36,4 +42,4 @@ func nodeFunction(q_PhysicsShapeQueryParameters : PhysicsShapeQueryParameters, c
 		q_PhysicsShapeQueryParameters.set_collide_with_areas(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_PhysicsShapeQueryParameters.set_shape(BoxShape.new())
+		q_PhysicsShapeQueryParameters.set_shape(temp_BoxShape)

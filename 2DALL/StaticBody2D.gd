@@ -19,6 +19,13 @@ func nodeFunction(q_StaticBody2D : StaticBody2D, can_reset : bool = false) -> vo
 		AutoObjects.A_Node2D(q_StaticBody2D)
 		AutoObjects.A_CollisionObject2D(q_StaticBody2D)
 		AutoObjects.A_PhysicsBody2D(q_StaticBody2D)
+		
+	### START TEMP
+	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
+	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+	
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
 		q_StaticBody2D.set_constant_linear_velocity(Autoload.get_vector2())
@@ -29,4 +36,4 @@ func nodeFunction(q_StaticBody2D : StaticBody2D, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_StaticBody2D.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_StaticBody2D.set_physics_material_override(Autoload.loadA("PhysicsMaterial.tres"))
+		q_StaticBody2D.set_physics_material_override(temp_PhysicsMaterial)

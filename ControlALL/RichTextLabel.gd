@@ -17,6 +17,15 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 		AutoObjects.A_Node(q_RichTextLabel)
 		AutoObjects.A_CanvasItem(q_RichTextLabel)
 		AutoObjects.A_Control(q_RichTextLabel)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_DynamicFont : DynamicFont = DynamicFont.new()
+	AutoResourcesDynamicFont.nodeFunction(temp_DynamicFont)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_RichTextLabel.clear()
@@ -43,7 +52,7 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_RichTextLabel.set_override_selected_font_color(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_RichTextLabel.add_image(Autoload.loadA("Sprite.png"))
+		q_RichTextLabel.add_image(temp_ImageTexture)
 #	BUG	if randi() % 2 == 1:
 #			q_RichTextLabel.add_text(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -71,7 +80,7 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_color(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_RichTextLabel.push_font(Autoload.loadA("DynamicFont.tres"))
+		q_RichTextLabel.push_font(temp_DynamicFont)
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_indent(Autoload.get_int())
 	if randi() % 2 == 1:

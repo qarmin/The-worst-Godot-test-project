@@ -20,6 +20,12 @@ func nodeFunction(q_CSGCylinder : CSGCylinder, can_reset : bool = false) -> void
 		AutoObjects.A_GeometryInstance(q_CSGCylinder)
 		AutoObjects.A_CSGShape(q_CSGCylinder)
 		AutoObjects.A_CSGPrimitive(q_CSGCylinder)
+		
+	### START TEMP
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	### END TEMP
 	
 	if randi() % 2 == 1:
 		q_CSGCylinder.set_radius(Autoload.get_float())
@@ -32,4 +38,4 @@ func nodeFunction(q_CSGCylinder : CSGCylinder, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_CSGCylinder.set_smooth_faces(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGCylinder.set_material(Autoload.loadA("SpatialMaterial.tres"))
+		q_CSGCylinder.set_material(temp_SpatialMaterial)

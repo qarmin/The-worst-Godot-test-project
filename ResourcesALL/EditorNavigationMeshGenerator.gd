@@ -20,12 +20,25 @@ func nodeFunction(q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerato
 			q_EditorNavigationMeshGenerator = EditorNavigationMeshGenerator.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_EditorNavigationMeshGenerator)
+		
+	### START TEMP
+	var temp_NavigationMesh : NavigationMesh = NavigationMesh.new()
+	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
+	
+	var temp_Node : Node = Node.new()
+	AutoObjects.A_Node(temp_Node)
+	
+	### END TEMP
 
 
 #	if randi() % 2 == 1:
-		#BUG q_EditorNavigationMeshGenerator.bake( Autoload.loadA("NavigationMesh.tres"), Node.new())
+		#BUG q_EditorNavigationMeshGenerator.bake( temp_NavigationMesh, temp_Node)
 	if randi() % 2 == 1:
-		q_EditorNavigationMeshGenerator.clear(Autoload.loadA("NavigationMesh.tres"))
+		q_EditorNavigationMeshGenerator.clear(temp_NavigationMesh)
+		
+	### CLEANING
+	temp_Node.queue_free()
+	### END CLEANING
 
 #func exit_tree():
 #	q_EditorNavigationMeshGenerator.free()

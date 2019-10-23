@@ -19,6 +19,12 @@ func nodeFunction(q_BitmapFont : BitmapFont, can_reset : bool = false) -> void:
 			q_BitmapFont = BitmapFont.new()
 	if randi() % 2 == 1:
 		AutoResourcesFont.nodeFunction(q_BitmapFont)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_BitmapFont.set_height(Autoload.get_float())
@@ -34,7 +40,7 @@ func nodeFunction(q_BitmapFont : BitmapFont, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_BitmapFont.add_kerning_pair( Autoload.get_int(), Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
-		q_BitmapFont.add_texture( Autoload.loadA("Sprite.png"))
+		q_BitmapFont.add_texture( temp_ImageTexture)
 
 	if randi() % 2 == 1:
 		q_BitmapFont.clear()

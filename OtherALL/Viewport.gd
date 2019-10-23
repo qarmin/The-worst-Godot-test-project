@@ -16,6 +16,18 @@ func nodeFunction(q_Viewport : Viewport, can_reset : bool = false) -> void:
 		AutoObjects.A_Object(q_Viewport)
 		AutoObjects.A_Node(q_Viewport)
 	
+		
+	### START TEMP
+	var temp_World2D : World2D = World2D.new()
+	AutoResourcesWorld2D.nodeFunction(temp_World2D)
+	
+	var temp_World : World = World.new()
+	AutoResourcesWorld.nodeFunction(temp_World)
+	
+	var temp_InputEventAction : InputEventAction = InputEventAction.new()
+	AutoResourcesInputEventAction.nodeFunction(temp_InputEventAction)
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
 		q_Viewport.set_use_arvr(Autoload.get_bool())
@@ -24,9 +36,9 @@ func nodeFunction(q_Viewport : Viewport, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Viewport.set_use_own_world(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Viewport.set_world(World.new())
+		q_Viewport.set_world(temp_World)
 	if randi() % 2 == 1:
-		q_Viewport.set_world_2d(World2D.new())
+		q_Viewport.set_world_2d(temp_World2D)
 	if randi() % 2 == 1:
 		q_Viewport.set_transparent_background(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -103,7 +115,7 @@ func nodeFunction(q_Viewport : Viewport, can_reset : bool = false) -> void:
 		q_Viewport.gui_is_dragging()
 
 	if randi() % 2 == 1:
-		input(Autoload.loadA("InputEventAction.tres"))
+		input(temp_InputEventAction)
 
 	if randi() % 2 == 1:
 		q_Viewport.is_input_handled()
@@ -122,7 +134,7 @@ func nodeFunction(q_Viewport : Viewport, can_reset : bool = false) -> void:
 		q_Viewport.set_size_override_stretch(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_Viewport.unhandled_input(Autoload.loadA("InputEventAction.tres"))
+		q_Viewport.unhandled_input(temp_InputEventAction)
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
 			q_Viewport.update_worlds()

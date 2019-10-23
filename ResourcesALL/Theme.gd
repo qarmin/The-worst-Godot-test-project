@@ -19,9 +19,25 @@ func nodeFunction(q_Theme : Theme, can_reset : bool = false) -> void:
 			q_Theme = Theme.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Theme)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_Font : Font = DynamicFont.new()
+	AutoResourcesFont.nodeFunction(temp_Font)
+	
+	var temp_StyleBoxFlat : StyleBoxFlat = StyleBoxFlat.new()
+	AutoResourcesStyleBoxFlat.nodeFunction(temp_StyleBoxFlat)
+	
+	var temp_Theme : Theme = Theme.new()
+#	AutoResourcesTheme.nodeFunction(temp_Theme) #LOOP
+	temp_Theme = load("res://RES/Theme.tres")
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_Theme.set_default_font(Font.new())
+		q_Theme.set_default_font(temp_Font)
 
 #	BUG	if randi() % 2 == 1:
 #			q_Theme.clear()
@@ -39,7 +55,7 @@ func nodeFunction(q_Theme : Theme, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Theme.copy_default_theme()
 #	BUG	if randi() % 2 == 1:
-#			q_Theme.copy_theme( Autoload.loadA("Theme.tres"))
+#			q_Theme.copy_theme( temp_Theme)
 
 	if randi() % 2 == 1:
 		q_Theme.get_color( Autoload.get_string(), Autoload.get_string())
@@ -82,8 +98,8 @@ func nodeFunction(q_Theme : Theme, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Theme.set_constant( Autoload.get_string(), Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Theme.set_font( Autoload.get_string(), Autoload.get_string(), Font.new())
+		q_Theme.set_font( Autoload.get_string(), Autoload.get_string(), temp_Font)
 	if randi() % 2 == 1:
-		q_Theme.set_icon( Autoload.get_string(), Autoload.get_string(), Autoload.loadA("Sprite.png"))
+		q_Theme.set_icon( Autoload.get_string(), Autoload.get_string(), temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_Theme.set_stylebox( Autoload.get_string(), Autoload.get_string(), StyleBox.new())
+		q_Theme.set_stylebox( Autoload.get_string(), Autoload.get_string(), temp_StyleBoxFlat)

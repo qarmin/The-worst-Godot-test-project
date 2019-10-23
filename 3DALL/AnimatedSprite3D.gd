@@ -19,9 +19,16 @@ func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = fals
 		AutoObjects.A_VisualInstance(q_AnimatedSprite3D)
 		AutoObjects.A_GeometryInstance(q_AnimatedSprite3D)
 		AutoObjects.A_SpriteBase3D(q_AnimatedSprite3D)
+		
+	### START TEMP
+	var temp_SpriteFrames : SpriteFrames = SpriteFrames.new()
+	AutoResourcesSpriteFrames.nodeFunction(temp_SpriteFrames)
+	
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
-		q_AnimatedSprite3D.set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))
+		q_AnimatedSprite3D.set_sprite_frames(temp_SpriteFrames)
 	if randi() % 2 == 1:
 		q_AnimatedSprite3D.set_animation(Autoload.get_string())
 	if randi() % 2 == 1:

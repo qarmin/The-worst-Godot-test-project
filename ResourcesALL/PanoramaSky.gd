@@ -21,5 +21,12 @@ func nodeFunction(q_PanoramaSky : PanoramaSky, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		AutoResourcesSky.nodeFunction(q_PanoramaSky)
 		
+	### START TEMP
+	
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+		
 	if randi() % 2 == 1:
-		q_PanoramaSky.set_panorama(ImageTexture.new())
+		q_PanoramaSky.set_panorama(temp_ImageTexture)

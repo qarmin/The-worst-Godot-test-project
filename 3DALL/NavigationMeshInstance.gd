@@ -17,7 +17,14 @@ func nodeFunction(q_NavigationMeshInstance : NavigationMeshInstance, can_reset :
 		AutoObjects.A_Node(q_NavigationMeshInstance)
 		AutoObjects.A_Spatial(q_NavigationMeshInstance)
 		
+	### START TEMP
+	var temp_NavigationMesh : NavigationMesh = NavigationMesh.new()
+	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_NavigationMeshInstance.set_navigation_mesh(Autoload.loadA("NavigationMesh.tres"))
+		q_NavigationMeshInstance.set_navigation_mesh(temp_NavigationMesh)
 	if randi() % 2 == 1:
 		q_NavigationMeshInstance.set_enabled(Autoload.get_bool())

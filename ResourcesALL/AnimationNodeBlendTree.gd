@@ -19,12 +19,19 @@ func nodeFunction(q_AnimationNodeBlendTree : AnimationNodeBlendTree, can_reset :
 			q_AnimationNodeBlendTree = AnimationNodeBlendTree.new()
 	if randi() % 2 == 1:
 		AutoResourcesAnimationRootNode.nodeFunction(q_AnimationNodeBlendTree)
+		
+	### START TEMP
+	
+	var temp_AnimationNode : AnimationNode = AnimationNode.new()
+	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendTree.set_graph_offset(Autoload.get_vector2())
 
 	if randi() % 2 == 1:
-		q_AnimationNodeBlendTree.add_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_vector2())
+		q_AnimationNodeBlendTree.add_node( Autoload.get_string(), temp_AnimationNode, Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendTree.connect_node( Autoload.get_string(), Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:

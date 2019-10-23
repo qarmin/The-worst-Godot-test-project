@@ -17,10 +17,17 @@ func nodeFunction(q_SpringArm : SpringArm, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_SpringArm)
 		AutoObjects.A_Spatial(q_SpringArm)
 		
+	### START TEMP
+	var temp_BoxShape : BoxShape = BoxShape.new()
+	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_SpringArm.set_collision_mask(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_SpringArm.set_shape(BoxShape.new())
+		q_SpringArm.set_shape(temp_BoxShape)
 	if randi() % 2 == 1:
 		q_SpringArm.set_length(Autoload.get_float())
 	if randi() % 2 == 1:

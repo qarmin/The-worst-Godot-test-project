@@ -18,6 +18,13 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 		AutoObjects.A_Spatial(q_BakedLightmap)
 		AutoObjects.A_VisualInstance(q_BakedLightmap)
 		
+	### START TEMP
+	var temp_BakedLightmapData : BakedLightmapData = BakedLightmapData.new()
+	AutoResourcesBakedLightmapData.nodeFunction(temp_BakedLightmapData)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -36,8 +43,8 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 		q_BakedLightmap.set_capture_cell_size(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_image_path("res://TEMP/Autoload.qqq")
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_light_data(BakedLightmapData.new())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_BakedLightmap.set_light_data(temp_BakedLightmapData)
 
 		###q_BakedLightmap.bake(q_BakedLightmap,Autoload.get_bool()))
 		###q_BakedLightmap.debug_bake()

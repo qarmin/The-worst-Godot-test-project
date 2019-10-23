@@ -19,6 +19,18 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 			q_SurfaceTool = SurfaceTool.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_SurfaceTool)
+		
+	### START TEMP
+	var temp_ArrayMesh : ArrayMesh = ArrayMesh.new()
+	AutoResourcesArrayMesh.nodeFunction(temp_ArrayMesh)
+	
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_SurfaceTool.add_bones( Autoload.get_poolintarray())
@@ -44,21 +56,21 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 		q_SurfaceTool.add_weights( Autoload.get_poolrealarray())
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.append_from( Mesh.new(), Autoload.get_int(), Autoload.get_transform())
+		q_SurfaceTool.append_from( temp_CubeMesh, Autoload.get_int(), Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_SurfaceTool.begin( Autoload.get_int())#PrimitiveType
 	if randi() % 2 == 1:
 		q_SurfaceTool.clear()
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.commit( Autoload.loadA("ArrayMesh.tres"), Autoload.get_int())
+		q_SurfaceTool.commit( temp_ArrayMesh, Autoload.get_int())
 	if randi() % 2 == 1:
 		q_SurfaceTool.commit_to_arrays()
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.create_from( Mesh.new(), Autoload.get_int())
+		q_SurfaceTool.create_from( temp_CubeMesh, Autoload.get_int())
 	if randi() % 2 == 1:
-		q_SurfaceTool.create_from_blend_shape( Mesh.new(), Autoload.get_int(), Autoload.get_string())
+		q_SurfaceTool.create_from_blend_shape( temp_CubeMesh, Autoload.get_int(), Autoload.get_string())
 
 	if randi() % 2 == 1:
 		q_SurfaceTool.deindex()
@@ -71,4 +83,4 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_SurfaceTool.index()
 	if randi() % 2 == 1:
-		q_SurfaceTool.set_material( Autoload.loadA("SpatialMaterial.tres"))
+		q_SurfaceTool.set_material( temp_SpatialMaterial)

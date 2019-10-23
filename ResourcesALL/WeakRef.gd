@@ -21,7 +21,4 @@ func nodeFunction(q_WeakRef : WeakRef, can_reset : bool = false) -> void:
 		AutoResourcesReference.nodeFunction(q_WeakRef)
 
 	if randi() % 2 == 1:
-		q_WeakRef = WeakRef.new()
-
-	if randi() % 2 == 1:
 		q_WeakRef.get_ref()

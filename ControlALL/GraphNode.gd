@@ -15,6 +15,12 @@ func nodeFunction(q_GraphNode : GraphNode, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_GraphNode)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+		
 	if randi() % 2 == 1:
 		q_GraphNode.set_title(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -30,7 +36,7 @@ func nodeFunction(q_GraphNode : GraphNode, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_GraphNode.set_overlay(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_GraphNode.set_slot(Autoload.get_int(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), Autoload.loadA("Sprite.png"), Autoload.loadA("Sprite.png"))#Not in position
+		q_GraphNode.set_slot(Autoload.get_int(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), Autoload.get_bool(), Autoload.get_int(), Autoload.get_color(), temp_ImageTexture, temp_ImageTexture)#Not in position
 	if randi() % 2 == 1:
 		q_GraphNode.clear_slot(Autoload.get_int())
 	if randi() % 2 == 1:

@@ -18,6 +18,13 @@ func nodeFunction(q_GIProbe : GIProbe, can_reset : bool = false) -> void:
 		AutoObjects.A_Spatial(q_GIProbe)
 		AutoObjects.A_VisualInstance(q_GIProbe)
 		
+	### START TEMP
+	var temp_GIProbeData : GIProbeData = GIProbeData.new()
+	AutoResourcesGIProbeData.nodeFunction(temp_GIProbeData)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_GIProbe.set_subdiv(Autoload.get_inti(10)) # Subdiv 
 	if randi() % 2 == 1:
@@ -36,8 +43,8 @@ func nodeFunction(q_GIProbe : GIProbe, can_reset : bool = false) -> void:
 		q_GIProbe.set_interior(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_GIProbe.set_compress(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_GIProbe.set_probe_data(GIProbeData.new())
+#	if randi() % 2 == 1: #BUG NEW
+#		q_GIProbe.set_probe_data(temp_GIProbeData)
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:

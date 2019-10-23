@@ -18,8 +18,15 @@ func nodeFunction(q_AudioStreamPlayer2D : AudioStreamPlayer2D, can_reset : bool 
 		AutoObjects.A_CanvasItem(q_AudioStreamPlayer2D)
 		AutoObjects.A_Node2D(q_AudioStreamPlayer2D)
 		
+	### START TEMP
+	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
+# TOO SLOW	AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer2D.set_stream(Autoload.loadA("AudioStreamGenerator.tres"))
+		q_AudioStreamPlayer2D.set_stream(temp_AudioStreamGenerator)
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer2D.set_volume_db(Autoload.get_float())
 	if randi() % 2 == 1:

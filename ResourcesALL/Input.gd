@@ -54,7 +54,7 @@ func alt_process(delta) -> void:
 #		#q_Input.parse_input_event(Autoload.loadA("InputEventAction.tres"))
 #		q_Input.remove_joy_mapping(Autoload.get_string())
 #
-#		#q_Input.set_custom_mouse_cursor(Autoload.loadA("Sprite.png"), Autoload.get_int(),Autoload.get_vector2()) #CursorShape
+#		#q_Input.set_custom_mouse_cursor(temp_ImageTexture, Autoload.get_int(),Autoload.get_vector2()) #CursorShape
 #		q_Input.set_default_cursor_shape(Autoload.get_int()) #CursorShape
 #		q_Input.set_mouse_mode(Autoload.get_int()) #MouseMode
 #		q_Input.set_use_accumulated_input(Autoload.get_bool())

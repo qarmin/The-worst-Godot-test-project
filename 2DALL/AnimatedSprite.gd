@@ -18,8 +18,14 @@ func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -
 		AutoObjects.A_CanvasItem(q_AnimatedSprite)
 		AutoObjects.A_Node2D(q_AnimatedSprite)
 		
+	### START TEMP
+	var temp_SpriteFrames : SpriteFrames = SpriteFrames.new()
+	AutoResourcesSpriteFrames.nodeFunction(temp_SpriteFrames)
+	
+	### END TEMP
+	
 	if randi()%2 == 1:
-		q_AnimatedSprite.set_sprite_frames(Autoload.loadA("SpriteFrames.tres"))
+		q_AnimatedSprite.set_sprite_frames(temp_SpriteFrames)
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_frame(Autoload.get_int())
 	if randi()%2 == 1:

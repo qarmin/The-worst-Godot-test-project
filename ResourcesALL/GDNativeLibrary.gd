@@ -19,9 +19,16 @@ func nodeFunction(q_GDNativeLibrary : GDNativeLibrary, can_reset : bool = false)
 			q_GDNativeLibrary = GDNativeLibrary.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_GDNativeLibrary)
+		
+	### START TEMP
+	
+	var temp_ConfigFile : ConfigFile = ConfigFile.new()
+	AutoResourcesConfigFile.nodeFunction(temp_ConfigFile)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_GDNativeLibrary.set_config_file(ConfigFile.new())
+		q_GDNativeLibrary.set_config_file(temp_ConfigFile)
 	if randi() % 2 == 1:
 		q_GDNativeLibrary.set_load_once(Autoload.get_bool())
 	if randi() % 2 == 1:

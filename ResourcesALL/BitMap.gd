@@ -19,11 +19,17 @@ func nodeFunction(q_BitMap : BitMap, can_reset : bool = false) -> void:
 			q_BitMap = BitMap.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_BitMap)
+		
+	### START TEMP
+	var temp_Image : Image = Image.new()
+	AutoResourcesImage.nodeFunction(temp_Image)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_BitMap.create(Vector2(Autoload.get_floatf(1000.0),Autoload.get_floatf(1000.0)))#Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_BitMap.create_from_image_alpha( Autoload.loadA("Sprite.png"),Autoload.get_float())
+		q_BitMap.create_from_image_alpha( temp_Image,Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_BitMap.get_bit(Autoload.get_vector2())

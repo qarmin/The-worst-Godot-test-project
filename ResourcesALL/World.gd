@@ -19,12 +19,18 @@ func nodeFunction(q_World : World, can_reset : bool = false) -> void:
 			q_World = World.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_World)
+		
+	### START TEMP
+	var temp_Environment : Environment = Environment.new()
+	AutoResourcesEnvironment.nodeFunction(temp_Environment)
+	
+	### END TEMP
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			q_World.set_environment(Autoload.loadA("DefaultEnv.tres"))
+			q_World.set_environment(temp_Environment)
 		if randi() % 2 == 1:
-			q_World.set_fallback_environment(Autoload.loadA("DefaultEnv.tres"))
+			q_World.set_fallback_environment(temp_Environment)
 	if randi() % 2 == 1:
 		q_World.get_space()
 	if randi() % 2 == 1:

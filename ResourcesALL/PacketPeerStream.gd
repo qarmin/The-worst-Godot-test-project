@@ -19,10 +19,16 @@ func nodeFunction(q_PacketPeerStream : PacketPeerStream, can_reset : bool = fals
 			q_PacketPeerStream = PacketPeerStream.new()
 	if randi() % 2 == 1:
 		AutoResourcesPacketPeer.nodeFunction(q_PacketPeerStream)
+		
+	### START TEMP
+	var temp_StreamPeer : StreamPeer = StreamPeerBuffer.new()
+	AutoResourcesStreamPeer.nodeFunction(temp_StreamPeer)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_PacketPeerStream.set_input_buffer_max_size(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PacketPeerStream.set_output_buffer_max_size(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PacketPeerStream.set_stream_peer(StreamPeer.new())
+		q_PacketPeerStream.set_stream_peer(temp_StreamPeer)

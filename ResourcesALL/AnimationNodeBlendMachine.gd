@@ -19,11 +19,20 @@ func nodeFunction(q_AnimationNodeStateMachine : AnimationNodeStateMachine, can_r
 			q_AnimationNodeStateMachine = AnimationNodeStateMachine.new()
 	if randi() % 2 == 1:
 		AutoResourcesAnimationRootNode.nodeFunction(q_AnimationNodeStateMachine)
+		
+	### START TEMP
+	var temp_AnimationNode : AnimationNode = AnimationNode.new()
+	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)
+
+	var temp_AnimationNodeStateMachineTransition : AnimationNodeStateMachineTransition = AnimationNodeStateMachineTransition.new()
+	AutoResourcesAnimationNodeBlendStateMachineTransition.nodeFunction(temp_AnimationNodeStateMachineTransition)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachine.add_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_vector2())
+		q_AnimationNodeStateMachine.add_node( Autoload.get_string(), temp_AnimationNode, Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachine.add_transition( Autoload.get_string(), Autoload.get_string(), AnimationNodeStateMachineTransition.new())
+		q_AnimationNodeStateMachine.add_transition( Autoload.get_string(), Autoload.get_string(), temp_AnimationNodeStateMachineTransition)
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachine.get_end_node()
 	if randi() % 2 == 1:
@@ -31,7 +40,7 @@ func nodeFunction(q_AnimationNodeStateMachine : AnimationNodeStateMachine, can_r
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachine.get_node( Autoload.get_string())
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachine.get_node_name( AnimationNode.new())
+		q_AnimationNodeStateMachine.get_node_name( temp_AnimationNode)
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachine.get_node_position( Autoload.get_string())
 	if randi() % 2 == 1:

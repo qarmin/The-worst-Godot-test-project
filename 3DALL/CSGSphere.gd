@@ -21,6 +21,12 @@ func nodeFunction(q_CSGSphere : CSGSphere, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGShape(q_CSGSphere)
 		AutoObjects.A_CSGPrimitive(q_CSGSphere)
 		
+	### START TEMP
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	### END TEMP
+		
 	if randi() % 2 == 1:
 		q_CSGSphere.set_radius(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -30,4 +36,4 @@ func nodeFunction(q_CSGSphere : CSGSphere, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CSGSphere.set_smooth_faces(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGSphere.set_material(Autoload.loadA("SpatialMaterial.tres"))
+		q_CSGSphere.set_material(temp_SpatialMaterial)

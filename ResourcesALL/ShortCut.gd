@@ -19,14 +19,21 @@ func nodeFunction(q_ShortCut : ShortCut, can_reset : bool = false) -> void:
 			q_ShortCut = ShortCut.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_ShortCut)
+		
+	### START TEMP
+	
+	var temp_InputEventAction : InputEventAction = InputEventAction.new()
+	AutoResourcesInputEventAction.nodeFunction(temp_InputEventAction)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_ShortCut.set_shortcut(Autoload.loadA("InputEventAction.tres"))
+		q_ShortCut.set_shortcut(temp_InputEventAction)
 
 	if randi() % 2 == 1:
 		q_ShortCut.get_as_text()
 
 	if randi() % 2 == 1:
-		q_ShortCut.is_shortcut(Autoload.loadA("InputEventAction.tres"))
+		q_ShortCut.is_shortcut(temp_InputEventAction)
 	if randi() % 2 == 1:
 		q_ShortCut.is_valid()

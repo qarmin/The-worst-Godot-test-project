@@ -19,6 +19,15 @@ func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 #		AutoObjects.A_CanvasItem(q_Line2D)
 #		AutoObjects.A_Node2D(q_Line2D)
 #
+#	### START TEMP
+#	var temp_Gradient : Gradient = Gradient.new()
+#	AutoResourcesGradient.nodeFunction(temp_Gradient)
+#
+#	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#	### END TEMP
+#
+#
 #	if randi() % 2 == 1:
 #		q_Line2D.clear_points()
 #	if randi() % 2 == 1:
@@ -28,9 +37,9 @@ func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_Line2D.set_default_color(Autoload.get_color())
 #	if randi() % 2 == 1:
-#		q_Line2D.set_gradient(Autoload.loadA("Gradient.tres"))
+#		q_Line2D.set_gradient(temp_Gradient)
 #	if randi() % 2 == 1:
-#		q_Line2D.set_texture(Autoload.loadA("Sprite.png"))
+#		q_Line2D.set_texture(temp_ImageTexture)
 #	if randi() % 2 == 1:
 #		q_Line2D.set_texture_mode(Autoload.get_int())
 #	if randi() % 2 == 1:

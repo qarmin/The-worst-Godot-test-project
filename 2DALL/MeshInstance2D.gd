@@ -18,7 +18,14 @@ func nodeFunction(q_MeshInstance2D : MeshInstance2D, can_reset : bool = false) -
 		AutoObjects.A_CanvasItem(q_MeshInstance2D)
 		AutoObjects.A_Node2D(q_MeshInstance2D)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_MeshInstance2D.set_texture(Autoload.loadA("Sprite.png"))
+		q_MeshInstance2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_MeshInstance2D.set_normal_map(Autoload.loadA("Sprite.png"))
+		q_MeshInstance2D.set_normal_map(temp_ImageTexture)

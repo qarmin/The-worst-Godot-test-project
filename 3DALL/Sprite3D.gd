@@ -20,8 +20,15 @@ func nodeFunction(q_Sprite3D : Sprite3D, can_reset : bool = false) -> void:
 		AutoObjects.A_GeometryInstance(q_Sprite3D)
 		AutoObjects.A_SpriteBase3D(q_Sprite3D)
 	
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
 	if randi() % 2 == 1:
-		q_Sprite3D.set_texture(Autoload.loadA("Sprite.png"))
+		q_Sprite3D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_Sprite3D.set_vframes(Autoload.get_int())
 	if randi() % 2 == 1:

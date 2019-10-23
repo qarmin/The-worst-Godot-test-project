@@ -21,6 +21,12 @@ func nodeFunction(q_CSGPolygon : CSGPolygon, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGShape(q_CSGPolygon)
 		AutoObjects.A_CSGPrimitive(q_CSGPolygon)
 		
+	### START TEMP
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	### END TEMP
+		
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_polygon(Autoload.get_poolvector2array())
 	if randi() % 2 == 1:
@@ -46,4 +52,4 @@ func nodeFunction(q_CSGPolygon : CSGPolygon, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_smooth_faces(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGPolygon.set_material(Autoload.loadA("SpatialMaterial.tres"))
+		q_CSGPolygon.set_material(temp_SpatialMaterial)

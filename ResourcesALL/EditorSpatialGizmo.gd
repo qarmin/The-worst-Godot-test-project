@@ -28,7 +28,7 @@ func alt_process(delta) -> void:
 #		q_EditorSpatialGizmo.add_collision_triangles( TriangleMesh.new())
 #		q_EditorSpatialGizmo.add_handles( Autoload.get_poolvector3array(), Material.new(), Autoload.get_bool(), Autoload.get_bool())
 #		q_EditorSpatialGizmo.add_lines( Autoload.get_poolvector3array(), Material.new(), Autoload.get_bool())
-#		q_EditorSpatialGizmo.add_mesh( Autoload.loadA("ArrayMesh.tres"), Autoload.get_bool(), RID(), Material.new())
+#		q_EditorSpatialGizmo.add_mesh( temp_ArrayMesh, Autoload.get_bool(), RID(), Material.new())
 #		q_EditorSpatialGizmo.add_unscaled_billboard( Material.new(), Autoload.get_float())
 #
 #		q_EditorSpatialGizmo.clear()

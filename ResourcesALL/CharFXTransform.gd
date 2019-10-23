@@ -33,7 +33,7 @@ func nodeFunction(q_CharFXTransform : CharFXTransform, can_reset : bool = false)
 	if randi() % 2 == 1:
 		q_CharFXTransform.set_color(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_CharFXTransform.set_environment({Autoload.get_string() : Autoload.get_string()})
+		q_CharFXTransform.set_environment(Autoload.get_dictionary())
 	if randi() % 2 == 1:
 		q_CharFXTransform.set_character(Autoload.get_int())
 

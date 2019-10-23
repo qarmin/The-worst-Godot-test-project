@@ -19,11 +19,17 @@ func nodeFunction(q_StyleBoxTexture : StyleBoxTexture, can_reset : bool = false)
 			q_StyleBoxTexture = StyleBoxTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesStyleBox.nodeFunction(q_StyleBoxTexture)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_StyleBoxTexture.set_texture(Autoload.loadA("Sprite.png"))
+		q_StyleBoxTexture.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_StyleBoxTexture.set_normal_map(Autoload.loadA("Sprite.png"))
+		q_StyleBoxTexture.set_normal_map(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_StyleBoxTexture.set_region_rect(Autoload.get_rect2())
 	if randi() % 2 == 1:

@@ -17,5 +17,12 @@ func nodeFunction(q_Path : Path, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_Path)
 		AutoObjects.A_Spatial(q_Path)
 		
+	### START TEMP
+	var temp_Curve3D : Curve3D = Curve3D.new()
+	AutoResourcesCurve3D.nodeFunction(temp_Curve3D)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_Path.set_curve(Autoload.loadA("Curve3D.tres"))
+		q_Path.set_curve(temp_Curve3D)

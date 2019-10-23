@@ -56,7 +56,7 @@ func nodeFunction(q_LineEdit : LineEdit, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_LineEdit.get_menu()
 	if randi() % 2 == 1:
-		q_LineEdit.menu_option(Autoload.get_int())#HMMM A LITTLE TOO SLOW
+		q_LineEdit.menu_option(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_LineEdit.select(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:

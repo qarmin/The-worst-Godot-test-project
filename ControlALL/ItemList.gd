@@ -17,8 +17,15 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_ItemList)
 		AutoObjects.A_CanvasItem(q_ItemList)
 		AutoObjects.A_Control(q_ItemList)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	var temp_PopupMenu : PopupMenu = PopupMenu.new()
+	AutoControlPopupMenu.nodeFunction(temp_PopupMenu)
+	### END TEMP
 
-	var popup_temp : Popup = Popup.new()
 
 	if randi() % 2 == 1:
 		q_ItemList.set_select_mode(Autoload.get_int())
@@ -43,9 +50,9 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ItemList.set_fixed_icon_size(Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_ItemList.add_icon_item(Autoload.loadA("Sprite.png"),Autoload.get_bool())
+		q_ItemList.add_icon_item(temp_ImageTexture,Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_ItemList.add_item(Autoload.get_string(),Autoload.loadA("Sprite.png"),Autoload.get_bool())
+		q_ItemList.add_item(Autoload.get_string(),temp_ImageTexture,Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_ItemList.ensure_current_is_visible()
 	if randi() % 2 == 1:
@@ -97,7 +104,7 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ItemList.set_item_disabled(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_ItemList.set_item_icon(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+		q_ItemList.set_item_icon(Autoload.get_int(),temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_ItemList.set_item_icon_modulate(Autoload.get_int(),Autoload.get_color())
 	if randi() % 2 == 1:
@@ -105,7 +112,7 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ItemList.set_item_icon_transposed(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_ItemList.set_item_metadata(Autoload.get_int(),popup_temp)
+		q_ItemList.set_item_metadata(Autoload.get_int(),temp_PopupMenu)
 	if randi() % 2 == 1:
 		q_ItemList.set_item_selectable(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -123,6 +130,6 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ItemList.clear()
 		
-		
-	popup_temp.queue_free()
-
+	### CLEANING
+	temp_PopupMenu.queue_free()
+	### END CLEANING

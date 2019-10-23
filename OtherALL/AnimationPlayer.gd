@@ -15,6 +15,13 @@ func nodeFunction(q_AnimationPlayer : AnimationPlayer, can_reset : bool = false)
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AnimationPlayer)
 		AutoObjects.A_Node(q_AnimationPlayer)
+		
+	### START TEMP
+	var temp_Animation : Animation = Animation.new()
+	AutoResourcesAnimation.nodeFunction(temp_Animation)
+	
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
 		q_AnimationPlayer.set_root(Autoload.get_nodepath(q_AnimationPlayer))
@@ -38,7 +45,7 @@ func nodeFunction(q_AnimationPlayer : AnimationPlayer, can_reset : bool = false)
 		q_AnimationPlayer.set_speed_scale(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_AnimationPlayer.add_animation(Autoload.get_string(), Animation.new())
+		q_AnimationPlayer.add_animation(Autoload.get_string(), temp_Animation)
 	if randi() % 2 == 1:
 		q_AnimationPlayer.advance(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -50,7 +57,7 @@ func nodeFunction(q_AnimationPlayer : AnimationPlayer, can_reset : bool = false)
 	if randi() % 2 == 1:
 		q_AnimationPlayer.clear_queue()
 	if randi() % 2 == 1:
-		q_AnimationPlayer.find_animation(Animation.new())
+		q_AnimationPlayer.find_animation(temp_Animation)
 	if randi() % 2 == 1:
 		q_AnimationPlayer.get_animation(Autoload.get_string())
 	if randi() % 2 == 1:

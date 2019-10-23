@@ -21,7 +21,16 @@ func nodeFunction(q_CSGMesh : CSGMesh, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGShape(q_CSGMesh)
 		AutoObjects.A_CSGPrimitive(q_CSGMesh)
 		
+	### START TEMP
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	
+	### END TEMP
+		
 	if randi() % 2 == 1:
-		q_CSGMesh.set_mesh(Autoload.loadA("CubeMesh.tres"))
+		q_CSGMesh.set_mesh(temp_CubeMesh)
 	if randi() % 2 == 1:
-		q_CSGMesh.set_material(Autoload.loadA("SpatialMaterial.tres"))
+		q_CSGMesh.set_material(temp_SpatialMaterial)

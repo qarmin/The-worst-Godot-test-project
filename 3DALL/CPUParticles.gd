@@ -19,7 +19,18 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 		AutoObjects.A_VisualInstance(q_CPUParticles)
 		AutoObjects.A_GeometryInstance(q_CPUParticles)
 	
-	var particles : Particles = Particles.new()
+		
+	### START TEMP
+	var temp_Curve : Curve = Curve.new()
+	AutoResourcesCurve.nodeFunction(temp_Curve)
+	
+	var temp_Particles : Particles = Particles.new()
+	Auto3DParticles.nodeFunction(temp_Particles)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
 		q_CPUParticles.set_emitting(Autoload.get_bool())
@@ -46,7 +57,7 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_CPUParticles.set_draw_order(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CPUParticles.set_mesh(Mesh.new())
+		q_CPUParticles.set_mesh(temp_CubeMesh)
 	if randi() % 2 == 1:
 		q_CPUParticles.set_emission_shape(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -73,13 +84,15 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_CPUParticles.set_param(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CPUParticles.set_param_curve(Autoload.get_int(),Autoload.loadA("Curve.tres"))
+		q_CPUParticles.set_param_curve(Autoload.get_int(),temp_Curve)
 	if randi() % 2 == 1:
 		q_CPUParticles.set_param_randomness(Autoload.get_int(),Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_CPUParticles.convert_from_particles(particles)
+		q_CPUParticles.convert_from_particles(temp_Particles)
 	if randi() % 2 == 1:
 		q_CPUParticles.restart()
 		
-	particles.queue_free()
+	### CLEANING
+	temp_Particles.queue_free()
+	### END CLEANING

@@ -19,6 +19,12 @@ func nodeFunction(q_SpatialMaterial : SpatialMaterial, can_reset : bool = false)
 			q_SpatialMaterial = SpatialMaterial.new()
 	if randi() % 2 == 1:
 		AutoResourcesMaterial.nodeFunction(q_SpatialMaterial)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_feature(Autoload.get_int(),Autoload.get_bool())
@@ -57,7 +63,7 @@ func nodeFunction(q_SpatialMaterial : SpatialMaterial, can_reset : bool = false)
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_albedo(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_SpatialMaterial.set_texture(Autoload.get_int(),Autoload.loadA("Sprite.png")) #TextureParam
+		q_SpatialMaterial.set_texture(Autoload.get_int(),temp_ImageTexture) #TextureParam
 	if randi() % 2 == 1:
 		q_SpatialMaterial.set_metallic(Autoload.get_float())
 	if randi() % 2 == 1:

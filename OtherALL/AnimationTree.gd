@@ -16,8 +16,15 @@ func nodeFunction(q_AnimationTree : AnimationTree, can_reset : bool = false) -> 
 		AutoObjects.A_Object(q_AnimationTree)
 		AutoObjects.A_Node(q_AnimationTree)
 		
+	### START TEMP
+	var temp_AnimationNode : AnimationNode = AnimationNode.new()
+	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_AnimationTree.set_tree_root(AnimationNode.new())
+		q_AnimationTree.set_tree_root(temp_AnimationNode)
 	if randi() % 2 == 1:
 		q_AnimationTree.set_animation_player(Autoload.get_nodepath(q_AnimationTree))
 	if randi() % 2 == 1:

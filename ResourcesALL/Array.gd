@@ -13,9 +13,7 @@ func alt_process(delta) -> void:
 		nodeFunction(q_Array,true)
 
 func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
-	
-	var q_temp : Node = Node.new()
-	
+		
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
@@ -32,6 +30,12 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 				q_Array = Array(Autoload.get_poolintarray())
 			if randi() % 2 == 1:
 				q_Array = Array(Autoload.get_poolbytearray())
+		
+	### START TEMP
+	var temp_Node : Node = Node.new()
+	AutoObjects.A_Node(temp_Node)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_Array.append(Autoload.get_string())
@@ -41,7 +45,7 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Array.bsearch( Autoload.get_string(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Array.bsearch_custom( Autoload.get_string(), q_temp, Autoload.get_string(), Autoload.get_bool())
+		q_Array.bsearch_custom( Autoload.get_string(), temp_Node, Autoload.get_string(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_Array.clear()
@@ -102,6 +106,8 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Array.sort()
 	if randi() % 2 == 1:
-		q_Array.sort_custom( q_temp, Autoload.get_string())
+		q_Array.sort_custom( temp_Node, Autoload.get_string())
 
-	q_temp.queue_free()
+	### CLEANING
+	temp_Node.queue_free()
+	### END CLEANING

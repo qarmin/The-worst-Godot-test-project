@@ -15,9 +15,16 @@ func nodeFunction(q_AudioStreamPlayer : AudioStreamPlayer, can_reset : bool = fa
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AudioStreamPlayer)
 		AutoObjects.A_Node(q_AudioStreamPlayer)
+		
+	### START TEMP
+	var temp_AudioStream : AudioStream = AudioStream.new()
+#	AutoResourcesAudioStream.nodeFunction(temp_AudioStream) #BUG NEW LEAK
+	
+	### END TEMP
+	
 	
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer.set_stream(AudioStream.new())
+		q_AudioStreamPlayer.set_stream(temp_AudioStream)
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer.set_volume_db(Autoload.get_float())
 	if randi() % 2 == 1:

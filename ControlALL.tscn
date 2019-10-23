@@ -238,6 +238,9 @@ margin_top = 317.0
 margin_right = 308.0
 margin_bottom = 339.0
 script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="ToolButton_NOTHING" type="ToolButton" parent="."]
 margin_left = 312.0

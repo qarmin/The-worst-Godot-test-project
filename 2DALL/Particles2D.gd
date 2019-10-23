@@ -18,6 +18,15 @@ func nodeFunction(q_Particles2D : Particles2D, can_reset : bool = false) -> void
 		AutoObjects.A_CanvasItem(q_Particles2D)
 		AutoObjects.A_Node2D(q_Particles2D)
 		
+	### START TEMP
+	var temp_ParticlesMaterial : ParticlesMaterial = ParticlesMaterial.new()
+	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
+	
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_Particles2D.set_emitting(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -47,11 +56,11 @@ func nodeFunction(q_Particles2D : Particles2D, can_reset : bool = false) -> void
 		q_Particles2D.set_draw_order(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_Particles2D.set_process_material(ParticlesMaterial.new())
+		q_Particles2D.set_process_material(temp_ParticlesMaterial)
 	if randi() % 2 == 1:
-		q_Particles2D.set_texture(Autoload.loadA("Sprite.png"))
+		q_Particles2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_Particles2D.set_normal_map(Autoload.loadA("Sprite.png"))
+		q_Particles2D.set_normal_map(temp_ImageTexture)
 
 	if randi() % 2 == 1:
 		q_Particles2D.capture_rect()

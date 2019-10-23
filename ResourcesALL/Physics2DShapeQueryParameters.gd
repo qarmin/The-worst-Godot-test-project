@@ -19,6 +19,12 @@ func nodeFunction(q_Physics2DShapeQueryParameters : Physics2DShapeQueryParameter
 			q_Physics2DShapeQueryParameters = Physics2DShapeQueryParameters.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_Physics2DShapeQueryParameters)
+		
+	### START TEMP
+	var temp_BoxShape : BoxShape = BoxShape.new()
+	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_Physics2DShapeQueryParameters.set_collision_layer(Autoload.get_int())
@@ -38,4 +44,4 @@ func nodeFunction(q_Physics2DShapeQueryParameters : Physics2DShapeQueryParameter
 		q_Physics2DShapeQueryParameters.set_collide_with_areas(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_shape(BoxShape.new())
+		q_Physics2DShapeQueryParameters.set_shape(temp_BoxShape)

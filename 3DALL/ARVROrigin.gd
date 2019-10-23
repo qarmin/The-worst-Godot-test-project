@@ -17,9 +17,9 @@ func nodeFunction(q_ARVROrigin : ARVROrigin, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_ARVROrigin)
 		AutoObjects.A_Spatial(q_ARVROrigin)
 		
-	if can_reset:
-		if randi() % 2 == 1:
-			q_ARVROrigin = ARVROrigin.new()
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_ARVROrigin = ARVROrigin.new()
 		
 	if randi() % 2 == 1:
 		q_ARVROrigin.set_world_scale(Autoload.get_bool())

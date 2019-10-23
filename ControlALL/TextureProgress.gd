@@ -18,13 +18,19 @@ func nodeFunction(q_TextureProgress : TextureProgress, can_reset : bool = false)
 		AutoObjects.A_CanvasItem(q_TextureProgress)
 		AutoObjects.A_Control(q_TextureProgress)
 		AutoObjects.A_Range(q_TextureProgress)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_TextureProgress.set_under_texture(Autoload.loadA("Sprite.png"))
+		q_TextureProgress.set_under_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_TextureProgress.set_over_texture(Autoload.loadA("Sprite.png"))
+		q_TextureProgress.set_over_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_TextureProgress.set_progress_texture(Autoload.loadA("Sprite.png"))
+		q_TextureProgress.set_progress_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_TextureProgress.set_fill_mode(Autoload.get_int())
 	if randi() % 2 == 1:

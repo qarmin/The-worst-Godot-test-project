@@ -19,9 +19,16 @@ func nodeFunction(q_WebRTCMultiplayer : WebRTCMultiplayer, can_reset : bool = fa
 			q_WebRTCMultiplayer = WebRTCMultiplayer.new()
 	if randi() % 2 == 1:
 		AutoResourcesNetworkedMultiplayerPeer.nodeFunction(q_WebRTCMultiplayer)
+		
+	### START TEMP
+	
+	var temp_WebRTCPeerConnection : WebRTCPeerConnection = WebRTCPeerConnection.new()
+	AutoResourcesWebRTCPeerConnection.nodeFunction(temp_WebRTCPeerConnection)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_WebRTCMultiplayer.add_peer( WebRTCPeerConnection.new(), Autoload.get_int(), Autoload.get_int())
+		q_WebRTCMultiplayer.add_peer( temp_WebRTCPeerConnection, Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_WebRTCMultiplayer.close()
 

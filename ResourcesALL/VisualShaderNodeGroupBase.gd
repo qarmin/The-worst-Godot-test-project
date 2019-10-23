@@ -20,7 +20,12 @@ func nodeFunction(q_VisualShaderNodeGroupBase : VisualShaderNodeGroupBase, can_r
 	if randi() % 2 == 1:
 		AutoResourcesVisualShaderNode.nodeFunction(q_VisualShaderNodeGroupBase)
 		
-	var q_control : Control = Control.new()
+		
+	### START TEMP
+	var temp_Control : Control = Control.new()
+	AutoObjects.A_Control(temp_Control)
+	
+	### END TEMP
 
 #	BUG	if randi() % 2 == 1:
 #			q_VisualShaderNodeGroupBase.add_input_port( Autoload.get_int(), Autoload.get_int(), Autoload.get_string())
@@ -60,7 +65,7 @@ func nodeFunction(q_VisualShaderNodeGroupBase : VisualShaderNodeGroupBase, can_r
 		q_VisualShaderNodeGroupBase.remove_output_port( Autoload.get_int())
 
 #	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.set_control( q_control,Autoload.get_int())
+#			q_VisualShaderNodeGroupBase.set_control( temp_Control,Autoload.get_int())
 	if randi() % 2 == 1:
 		q_VisualShaderNodeGroupBase.set_input_port_name( Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
@@ -76,4 +81,6 @@ func nodeFunction(q_VisualShaderNodeGroupBase : VisualShaderNodeGroupBase, can_r
 	if randi() % 2 == 1:
 		q_VisualShaderNodeGroupBase.set_size( Autoload.get_vector2())
 		
-	q_control.queue_free()
+	### CLEANING
+	temp_Control.queue_free()
+	### END CLEANING

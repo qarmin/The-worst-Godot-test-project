@@ -19,6 +19,12 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 			q_Mesh = Mesh.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Mesh)
+		
+	### START TEMP
+	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
+	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	
+	### END TEMP
 
 #	if randi() % 2 == 1: #BUG NEW
 #		q_Mesh.create_convex_shape()
@@ -39,4 +45,4 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Mesh.surface_get_material( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Mesh.surface_set_material( Autoload.get_int(), Autoload.loadA("SpatialMaterial.tres"))
+		q_Mesh.surface_set_material( Autoload.get_int(), temp_SpatialMaterial)

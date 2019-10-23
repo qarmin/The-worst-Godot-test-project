@@ -19,16 +19,22 @@ func nodeFunction(q_AnimationNode : AnimationNode, can_reset : bool = false) -> 
 			q_AnimationNode = AnimationNode.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_AnimationNode)
+		
+	### START TEMP
+	var temp_AnimationNode : AnimationNode = AnimationNode.new()
+#	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)#LOOP
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_AnimationNode.set_filter_enabled(Autoload.get_bool())
 
-	### Autoload.qq =  str(q_AnimationNode.get_caption())
-	### Autoload.qq =  str(q_AnimationNode.get_child_by_name(Autoload.get_string()))
-	### Autoload.qq =  str(q_AnimationNode.get_child_nodes())
-	### Autoload.qq =  str(q_AnimationNode.get_parameter_default_value(Autoload.get_string()))
-	### Autoload.qq =  str(q_AnimationNode.get_parameter_list())
-	### Autoload.qq =  str(q_AnimationNode.has_filter())
+	### q_AnimationNode.get_caption())
+	### q_AnimationNode.get_child_by_name(Autoload.get_string()))
+	### q_AnimationNode.get_child_nodes())
+	### q_AnimationNode.get_parameter_default_value(Autoload.get_string()))
+	### q_AnimationNode.get_parameter_list())
+	### q_AnimationNode.has_filter())
 	### q_AnimationNode.process( Autoload.get_float(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
@@ -39,14 +45,14 @@ func nodeFunction(q_AnimationNode : AnimationNode, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_AnimationNode.blend_input( Autoload.get_int(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool())#FilterAction
 	if randi() % 2 == 1:
-		q_AnimationNode.blend_node( Autoload.get_string(), AnimationNode.new(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool())#FilterAction
+		q_AnimationNode.blend_node( Autoload.get_string(), temp_AnimationNode, Autoload.get_float(), Autoload.get_bool(), Autoload.get_float(), Autoload.get_int(), Autoload.get_bool())#FilterAction
 
 	if randi() % 2 == 1:
-		Autoload.qq =  str(q_AnimationNode.get_input_count())
+		q_AnimationNode.get_input_count()
 	if randi() % 2 == 1:
-		Autoload.qq =  str(q_AnimationNode.get_input_name( Autoload.get_int()))
+		q_AnimationNode.get_input_name( Autoload.get_int())
 	if randi() % 2 == 1:
-		Autoload.qq =  str(q_AnimationNode.get_parameter( Autoload.get_string()))
+		q_AnimationNode.get_parameter( Autoload.get_string())
 
 	if randi() % 2 == 1:
 		q_AnimationNode.is_path_filtered( Autoload.get_nodepath(self))

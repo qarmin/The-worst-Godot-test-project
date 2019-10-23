@@ -131,7 +131,7 @@ onready var counter : float = Autoload.get_rand_time()
 #		q_OS.request_attention()
 #		q_OS.request_permission(Autoload.get_string()))
 #
-#		q_OS.set_icon(Autoload.loadA("Sprite.png"))
+#		q_OS.set_icon(temp_ImageTexture)
 #		q_OS.set_ime_active(Autoload.get_bool())
 #		q_OS.set_ime_position(Autoload.get_vector2())
 #		q_OS.set_native_icon(Autoload.get_string())

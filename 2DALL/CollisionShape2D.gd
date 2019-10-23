@@ -18,8 +18,15 @@ func nodeFunction(q_CollisionShape2D : CollisionShape2D, can_reset : bool = fals
 		AutoObjects.A_CanvasItem(q_CollisionShape2D)
 		AutoObjects.A_Node2D(q_CollisionShape2D)
 		
+	### START TEMP
+	var temp_CircleShape2D : CircleShape2D = CircleShape2D.new()
+	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_CollisionShape2D.set_shape(Autoload.loadA("CircleShape2D.tres"))
+		q_CollisionShape2D.set_shape(temp_CircleShape2D)
 	if randi() % 2 == 1:
 		q_CollisionShape2D.set_disabled(Autoload.get_bool())
 	if randi() % 2 == 1:

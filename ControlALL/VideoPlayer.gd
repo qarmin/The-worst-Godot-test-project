@@ -19,11 +19,17 @@ func nodeFunction(q_VideoPlayer : VideoPlayer, can_reset : bool = false) -> void
 		AutoObjects.A_Control(q_VideoPlayer)
 		
 	return #BUG NEW
+		
+	### START TEMP
+	var temp_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
+	AutoResourcesVideoStreamWebm.nodeFunction(temp_VideoStreamWebm)
+	
+	### END TEMP
 	
 	if randi() % 2 == 1:
 		q_VideoPlayer.set_audio_track(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_VideoPlayer.set_stream(Autoload.loadA("VideoStreamWebm.tres"))
+		q_VideoPlayer.set_stream(temp_VideoStreamWebm)
 	if randi() % 2 == 1:
 		q_VideoPlayer.set_volume_db(Autoload.get_float())
 	if randi() % 2 == 1:

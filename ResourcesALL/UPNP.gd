@@ -19,6 +19,12 @@ func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
 			q_UPNP = UPNP.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_UPNP)
+		
+	### START TEMP
+	var temp_UPNPDevice : UPNPDevice = UPNPDevice.new()
+	AutoResourcesUPNPDevice.nodeFunction(temp_UPNPDevice)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_UPNP.set_discover_multicast_if(Autoload.get_string())
@@ -28,7 +34,7 @@ func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
 		q_UPNP.set_discover_ipv6(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_UPNP.add_device( UPNPDevice.new())
+		q_UPNP.add_device( temp_UPNPDevice)
 	if randi() % 2 == 1:
 		q_UPNP.add_port_mapping( Autoload.get_int(), Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_int())
 
@@ -52,4 +58,4 @@ func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_UPNP.remove_device( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_UPNP.set_device( Autoload.get_int(), UPNPDevice.new())
+		q_UPNP.set_device( Autoload.get_int(), temp_UPNPDevice)

@@ -2,9 +2,7 @@ extends Node
 
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 
-const RANGE : int = 100
-
-var qq : String = ""
+const RANGE : int = 10000
 
 ############### FUNCTIONS
 
@@ -162,7 +160,7 @@ func get_rect2f(var max_value : float) -> Rect2:
 func get_aabbf(var max_value : float) -> AABB:
 	return AABB(get_vector3f(max_value),get_vector3f(max_value))
 ################ LOADING RESOURCES
-
+	
 func loadA(var name : String):
 	if randi() % 2 == 1: # 50% szans
 		return load("res://RES/" + names.keys()[randi()%names.size()])

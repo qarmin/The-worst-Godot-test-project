@@ -14,7 +14,6 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_UndoRedo : UndoRedo, can_reset : bool = false) -> void:
 	
-	var q_node : Node = Node.new()
 	
 #	if can_reset:
 #		if randi() % 2 == 1:
@@ -22,19 +21,25 @@ func nodeFunction(q_UndoRedo : UndoRedo, can_reset : bool = false) -> void:
 #			q_UndoRedo = UndoRedo.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_UndoRedo)
+		
+	### START TEMP
+	var temp_Node : Node = Node.new()
+	AutoObjects.A_Node(temp_Node)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_UndoRedo.add_do_method( q_node, Autoload.get_string(), Autoload.get_string())
+		q_UndoRedo.add_do_method( temp_Node, Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_UndoRedo.add_do_property( q_node, Autoload.get_string(), Autoload.get_string())
+		q_UndoRedo.add_do_property( temp_Node, Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_UndoRedo.add_do_reference( q_node )
+		q_UndoRedo.add_do_reference( temp_Node )
 	if randi() % 2 == 1:
-		q_UndoRedo.add_undo_method( q_node, Autoload.get_string(), Autoload.get_string())
+		q_UndoRedo.add_undo_method( temp_Node, Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_UndoRedo.add_undo_property( q_node, Autoload.get_string(), Autoload.get_string())
+		q_UndoRedo.add_undo_property( temp_Node, Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_UndoRedo.add_undo_reference( q_node )
+		q_UndoRedo.add_undo_reference( temp_Node )
 
 	if randi() % 2 == 1:
 		q_UndoRedo.clear_history( Autoload.get_bool())
@@ -55,7 +60,9 @@ func nodeFunction(q_UndoRedo : UndoRedo, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_UndoRedo.undo()
 
-	q_node.queue_free()
+	### CLEANING
+	temp_Node.queue_free()
+	### END CLEANING
 
 
 #func _exit_tree():

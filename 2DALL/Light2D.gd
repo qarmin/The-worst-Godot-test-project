@@ -18,12 +18,19 @@ func nodeFunction(q_Light2D : Light2D, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_Light2D)
 		AutoObjects.A_Node2D(q_Light2D)
 		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_Light2D.set_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Light2D.set_editor_only(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Light2D.set_texture(Autoload.loadA("Sprite.png"))
+		q_Light2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_Light2D.set_texture_offset(Autoload.get_vector2())
 	if randi() % 2 == 1:

@@ -17,8 +17,15 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 		AutoObjects.A_Node(q_AudioStreamPlayer3D)
 		AutoObjects.A_Spatial(q_AudioStreamPlayer3D)
 		
+	### START TEMP
+	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
+#	TOO SLOW AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer3D.set_stream(Autoload.loadA("AudioStreamGenerator.tres"))
+		q_AudioStreamPlayer3D.set_stream(temp_AudioStreamGenerator)
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_attenuation_model(Autoload.get_int()) # AttenuationModel
 	if randi() % 2 == 1:

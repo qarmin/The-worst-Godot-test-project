@@ -19,9 +19,15 @@ func nodeFunction(q_ShaderMaterial : ShaderMaterial, can_reset : bool = false) -
 			q_ShaderMaterial = ShaderMaterial.new()
 	if randi() % 2 == 1:
 		AutoResourcesMaterial.nodeFunction(q_ShaderMaterial)
+		
+	### START TEMP
+	var temp_Shader : Shader = Shader.new()
+	AutoResourcesShader.nodeFunction(temp_Shader)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
-		q_ShaderMaterial.set_shader(Shader.new())
+		q_ShaderMaterial.set_shader(temp_Shader)
 
 	if randi() % 2 == 1:
 		q_ShaderMaterial.get_shader_param( Autoload.get_string())

@@ -18,6 +18,13 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_TileMap)
 		AutoObjects.A_Node2D(q_TileMap)
 		
+	### START TEMP
+	var temp_TileSet : TileSet = TileSet.new()
+	AutoResourcesTileSet.nodeFunction(temp_TileSet)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
 		q_TileMap.clear()
 #	if randi() % 2 == 1:
@@ -25,7 +32,7 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileMap.set_mode(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_TileMap.set_tileset(Autoload.loadA("Tileset.tres"))
+		q_TileMap.set_tileset(temp_TileSet)
 	if randi() % 2 == 1:
 		q_TileMap.set_cell_size(Autoload.get_vector2())
 	if randi() % 2 == 1:

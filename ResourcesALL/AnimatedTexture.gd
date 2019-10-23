@@ -19,6 +19,13 @@ func nodeFunction(q_AnimatedTexture : AnimatedTexture, can_reset : bool = false)
 			q_AnimatedTexture = AnimatedTexture.new()
 	if randi() % 2 == 1:
 		AutoResourcesTexture.nodeFunction(q_AnimatedTexture)
+		
+	### START TEMP
+	
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_AnimatedTexture.set_frames(Autoload.get_int())
@@ -33,4 +40,4 @@ func nodeFunction(q_AnimatedTexture : AnimatedTexture, can_reset : bool = false)
 	if randi() % 2 == 1:
 		q_AnimatedTexture.set_frame_delay(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AnimatedTexture.set_frame_texture(Autoload.get_int(),Autoload.loadA("Sprite.png"))
+		q_AnimatedTexture.set_frame_texture(Autoload.get_int(),temp_ImageTexture)

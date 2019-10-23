@@ -17,10 +17,20 @@ func nodeFunction(q_GridMap : GridMap, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_GridMap)
 		AutoObjects.A_Spatial(q_GridMap)
 		
+	### START TEMP
+	var temp_MeshLibrary : MeshLibrary = MeshLibrary.new()
+	AutoResourcesMeshLibrary.nodeFunction(temp_MeshLibrary)
+	
+	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_GridMap.set_theme(MeshLibrary.new())
+		q_GridMap.set_theme(temp_MeshLibrary)
 	if randi() % 2 == 1:
-		q_GridMap.set_mesh_library(MeshLibrary.new())
+		q_GridMap.set_mesh_library(temp_MeshLibrary)
 	if randi() % 2 == 1:
 		q_GridMap.set_cell_size(Autoload.get_vector3())
 	if randi() % 2 == 1:
@@ -65,7 +75,7 @@ func nodeFunction(q_GridMap : GridMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_GridMap.map_to_world(Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
-		q_GridMap.resource_changed(Autoload.loadA("CubeMesh.tres"))
+		q_GridMap.resource_changed(temp_CubeMesh)
 
 	if randi() % 2 == 1:
 		q_GridMap.set_cell_item(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())

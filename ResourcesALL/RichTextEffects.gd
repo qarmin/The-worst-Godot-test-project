@@ -19,5 +19,11 @@ func nodeFunction(q_RichTextEffect : RichTextEffect, can_reset : bool = false) -
 			q_RichTextEffect = RichTextEffect.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_RichTextEffect)
+		
+	### START TEMP
+	var temp_CharFXTransform : CharFXTransform = CharFXTransform.new()
+	AutoResourcesCharFXTransform.nodeFunction(temp_CharFXTransform)
+	
+	### END TEMP
 #
-#		_process_custom_fx(CharFXTransform.new())
+#		_process_custom_fx(temp_CharFXTransform)

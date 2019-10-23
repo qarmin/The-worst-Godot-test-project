@@ -28,14 +28,14 @@ func nodeFunction(q_AudioEffectChorus : AudioEffectChorus, can_reset : bool = fa
 		q_AudioEffectChorus.set_wet(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/delay_ms",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/delay_ms",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/rate_hz",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/rate_hz",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/depth_ms",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/depth_ms",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/level_db",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/level_db",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/cutoff_hz",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/cutoff_hz",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + str(Autoload.get_int()) + "/pan",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/pan",Autoload.get_float())

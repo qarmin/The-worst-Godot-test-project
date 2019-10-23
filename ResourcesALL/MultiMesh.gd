@@ -31,7 +31,7 @@ func nodeFunction(q_MultiMesh : MultiMesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_MultiMesh.set_visible_instance_count(Autoload.get_int())
 #	BUG	if randi() % 2 == 1:
-#			q_MultiMesh.set_mesh(Autoload.loadA("CubeMesh.tres"))
+#			q_MultiMesh.set_mesh(temp_CubeMesh)
 
 	if randi() % 2 == 1:
 		q_MultiMesh.get_aabb()

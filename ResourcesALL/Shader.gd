@@ -19,6 +19,12 @@ func nodeFunction(q_Shader : Shader, can_reset : bool = false) -> void:
 			q_Shader = Shader.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Shader)
+		
+	### START TEMP
+	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+	
+	### END TEMP
 
 	if randi() % 2 == 1:
 		q_Shader.set_code(Autoload.get_string())
@@ -31,4 +37,4 @@ func nodeFunction(q_Shader : Shader, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Shader.has_param( Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Shader.set_default_texture_param( Autoload.get_string(), Autoload.loadA("Sprite.png"))
+		q_Shader.set_default_texture_param( Autoload.get_string(), temp_ImageTexture)

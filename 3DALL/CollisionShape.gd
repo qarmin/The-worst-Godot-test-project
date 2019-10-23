@@ -17,11 +17,18 @@ func nodeFunction(q_CollisionShape : CollisionShape, can_reset : bool = false) -
 		AutoObjects.A_Node(q_CollisionShape)
 		AutoObjects.A_Spatial(q_CollisionShape)
 		
+	### START TEMP
+	var temp_BoxShape : BoxShape = BoxShape.new()
+	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+	
+	### END TEMP
+	
+		
 	if randi() % 2 == 1:
-		q_CollisionShape.set_shape(BoxShape.new())
+		q_CollisionShape.set_shape(temp_BoxShape)
 	if randi() % 2 == 1:
 		q_CollisionShape.set_disabled(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_CollisionShape.make_convex_from_brothers()
 	if randi() % 2 == 1:
-		q_CollisionShape.resource_changed(BoxShape.new())
+		q_CollisionShape.resource_changed(temp_BoxShape)

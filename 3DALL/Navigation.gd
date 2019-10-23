@@ -18,9 +18,16 @@ func nodeFunction(q_Navigation : Navigation, can_reset : bool = false) -> void:
 		AutoObjects.A_Spatial(q_Navigation)
 		
 		
+	### START TEMP
+	var temp_NavigationMesh : NavigationMesh = NavigationMesh.new()
+	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
+	
+	### END TEMP
+	
+		
 #		if q_Navigation.get_child_count() > 0:
 #		LEAK	if randi() % 2 == 1:
-#				LEAK q_Navigation.get_child(Autoload.get_int()).set_navigation_mesh(Autoload.loadA("NavigationMesh.tres"))
+#				LEAK q_Navigation.get_child(Autoload.get_int()).set_navigation_mesh(temp_NavigationMesh)
 #			if randi() % 2 == 1:
 #				q_Navigation.get_child(0).set_enabled(Autoload.get_bool())  
 
@@ -38,7 +45,7 @@ func nodeFunction(q_Navigation : Navigation, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Navigation.get_simple_path(Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_bool())
 
-		#LEAK q_Navigation.navmesh_add(Autoload.loadA("NavigationMesh.tres"), Autoload.get_transform(), get_parent())
+		#LEAK q_Navigation.navmesh_add(temp_NavigationMesh, Autoload.get_transform(), get_parent())
 	if randi() % 2 == 1:
 		q_Navigation.navmesh_remove(Autoload.get_int())
 	if randi() % 2 == 1:

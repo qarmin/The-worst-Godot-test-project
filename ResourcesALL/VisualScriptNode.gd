@@ -24,5 +24,5 @@ func nodeFunction(q_VisualScriptNode : VisualScriptNode, can_reset : bool = fals
 		q_VisualScriptNode.get_visual_script()
 
 		q_VisualScriptNode.ports_changed_notify()
-		q_VisualScriptNode.set_default_input_value( Autoload.get_int(), String())
+		q_VisualScriptNode.set_default_input_value( Autoload.get_int(), Autoload.get_string())
 
