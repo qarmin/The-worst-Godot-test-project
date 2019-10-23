@@ -143,7 +143,7 @@ script = ExtResource( 4 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
-frame = 6
+frame = 25
 playing = true
 script = ExtResource( 7 )
 
