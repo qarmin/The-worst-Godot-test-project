@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://3DALL/HingeJoint.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ConeTwistJoint.gd" type="Script" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://3DALL/PinJoint.gd" type="Script" id=4]
 [ext_resource path="res://3DALL/Generic6DOFJoint.gd" type="Script" id=5]
 [ext_resource path="res://3DALL/SoftBody.gd" type="Script" id=6]
+[ext_resource path="res://3DALL/OmniLight.gd" type="Script" id=7]
 
 [sub_resource type="CubeMesh" id=1]
 
@@ -65,3 +66,6 @@ script = ExtResource( 2 )
 mesh = SubResource( 1 )
 material/0 = null
 script = ExtResource( 6 )
+
+[node name="OmniLight" type="OmniLight" parent="."]
+script = ExtResource( 7 )

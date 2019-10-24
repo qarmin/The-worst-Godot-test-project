@@ -1,4 +1,4 @@
-[gd_scene load_steps=85 format=2]
+[gd_scene load_steps=84 format=2]
 
 [ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -26,7 +26,6 @@
 [ext_resource path="res://3DALL/MultiMeshInstance.gd" type="Script" id=27]
 [ext_resource path="res://3DALL/BakedLightmap.gd" type="Script" id=29]
 [ext_resource path="res://3DALL/DirectionalLight.gd" type="Script" id=30]
-[ext_resource path="res://3DALL/OmniLight.gd" type="Script" id=31]
 [ext_resource path="res://3DALL/SpotLight.gd" type="Script" id=32]
 [ext_resource path="res://3DALL/GIProbe.gd" type="Script" id=33]
 [ext_resource path="res://3DALL/RootMotionView.gd" type="Script" id=34]
@@ -144,9 +143,6 @@ tangential_accel_random = 1.0
 energy = 5.7
 
 [sub_resource type="GIProbeData" id=22]
-bias = 1.5
-normal_bias = 0.0
-propagation = 0.7
 
 [sub_resource type="BoxShape" id=23]
 margin = 0.5
@@ -216,7 +212,6 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 4 )
-frame = 2
 playing = true
 script = ExtResource( 13 )
 
@@ -230,16 +225,17 @@ script = ExtResource( 15 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 invert_faces = true
-width = 1000.0
+width = 44.173
 height = 19.604
 material = SubResource( 6 )
 script = ExtResource( 20 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 invert_faces = true
-radius = 1000.0
+radius = 68.978
 height = 23.0
 sides = 3
+cone = true
 material = SubResource( 7 )
 script = ExtResource( 22 )
 
@@ -300,9 +296,6 @@ script = ExtResource( 29 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 script = ExtResource( 30 )
-
-[node name="OmniLight" type="OmniLight" parent="."]
-script = ExtResource( 31 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )

@@ -21,7 +21,7 @@ func nodeFunction(q_InputEvent : InputEvent, can_reset : bool = false) -> void:
 		AutoResourcesResource.nodeFunction(q_InputEvent)
 
 	if randi() % 2 == 1:
-		q_InputEvent.accumulate( Autoload.loadA("InputEventAction.tres"))
+		q_InputEvent.accumulate( Autoload.loadA("InputEventAction.tres")) 
 	if randi() % 2 == 1:
 		q_InputEvent.as_text()
 	if randi() % 2 == 1:
