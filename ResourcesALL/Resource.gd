@@ -36,5 +36,5 @@ func nodeFunction(q_Resource : Resource, can_reset : bool = false) -> void:
 		q_Resource.get_rid()
 	if randi() % 2 == 1:
 		q_Resource.setup_local_to_scene()
-	if randi() % 2 == 1:
-		q_Resource.take_over_path(Autoload.get_string())
+#	if randi() % 2 == 1: #BUG
+#		q_Resource.take_over_path(Autoload.get_string())
