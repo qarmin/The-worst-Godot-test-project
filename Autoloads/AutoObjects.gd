@@ -70,20 +70,22 @@ func A_Object(q_Object : Object) -> void:
 #		q_Object.add_user_signal(Autoload.get_string())
 
 		###q_Object.call(Autoload.get_string()))
-	if randi()%2 == 1:
-		q_Object.call_deferred(Autoload.get_string())
-	if randi()%2 == 1:
-		q_Object.callv(Autoload.get_string(),Autoload.get_array())
+	if  Autoload.NOT_A_BUG:
+		if randi()%2 == 1: # NOT BUG
+			q_Object.call_deferred(Autoload.get_string())
+		if randi()%2 == 1:
+			q_Object.callv(Autoload.get_string(),Autoload.get_array())
 
 	if randi()%2 == 1:
 		q_Object.can_translate_messages()
-	if randi()%2 == 1:
-		q_Object.connect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string(),Autoload.get_array(),Autoload.get_int()) # ConnectFlags
-	if randi()%2 == 1:
-		q_Object.disconnect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
-	if randi()%2 == 1:
-		q_Object.emit_signal(Autoload.get_string())
-		###free()
+	if  Autoload.NOT_A_BUG:
+		if randi()%2 == 1: # DISABLED FOR NOW, BECAUSE IT SHOW TOO MUCH ERRORS WHICH I WANT TO CHECK
+			q_Object.connect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string(),Autoload.get_array(),Autoload.get_int()) # ConnectFlags
+		if randi()%2 == 1:
+			q_Object.disconnect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
+		if randi()%2 == 1:
+			q_Object.emit_signal(Autoload.get_string())
+	###free()
 
 	if randi()%2 == 1:
 		q_Object.get(Autoload.get_string())
@@ -122,8 +124,9 @@ func A_Object(q_Object : Object) -> void:
 		q_Object.is_blocking_signals()
 	if randi()%2 == 1:
 		q_Object.is_class(Autoload.get_string())
-	if randi()%2 == 1:
-		q_Object.is_connected(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
+	if  Autoload.NOT_A_BUG:
+		if randi()%2 == 1:
+			q_Object.is_connected(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
 	if randi()%2 == 1:
 		q_Object.is_queued_for_deletion()
 
@@ -281,8 +284,8 @@ func A_Node(q_Node : Node) -> void:
 		###q_Node.print_tree()
 		###q_Node.print_tree_pretty()
 	
-	if randi()%2 == 1:
-		q_Node.propagate_call(Autoload.get_string(),Autoload.get_array(),Autoload.get_bool())
+#	if randi()%2 == 1:
+#	NOT BUG, ENABLE WHEN YOU  WANT 	q_Node.propagate_call(Autoload.get_string(),Autoload.get_array(),Autoload.get_bool())
 #	if randi()%2 == 1: #BUG
 #		q_Node.propagate_notification(Autoload.get_int())
 	
@@ -866,8 +869,8 @@ func A_Spatial(q_Spatial : Spatial) -> void:
 		q_Spatial.set_transform(Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_Spatial.set_visible(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_Spatial.set_gizmo(SpatialGizmo.new())
+#	if randi() % 2 == 1: #SPATIAL GIZMO AND CHILD ARE NOT INSTANTIABLE
+#		q_Spatial.set_gizmo(SpatialGizmo.new())
 
 	if randi() % 2 == 1:
 		q_Spatial.force_update_transform()

@@ -17,8 +17,8 @@ func nodeFunction(q_AudioStreamPlayer : AudioStreamPlayer, can_reset : bool = fa
 		AutoObjects.A_Node(q_AudioStreamPlayer)
 		
 	### START TEMP
-	var temp_AudioStream : AudioStream = AudioStream.new()
-#	AutoResourcesAudioStream.nodeFunction(temp_AudioStream) #BUG NEW LEAK
+	var temp_AudioStream : AudioStream = AudioStreamGenerator.new()
+	AutoResourcesAudioStream.nodeFunction(temp_AudioStream)
 	
 	### END TEMP
 	

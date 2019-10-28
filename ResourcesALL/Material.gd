@@ -23,4 +23,4 @@ func nodeFunction(q_Material : Material, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Material.set_render_priority(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Material.set_next_pass(Material.new()) #NO PREVENT LOOP
+		q_Material.set_next_pass(SpatialMaterial.new()) #NO PREVENT LOOP
