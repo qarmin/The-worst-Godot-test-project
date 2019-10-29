@@ -212,7 +212,7 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 4 )
-frame = 2
+frame = 3
 playing = true
 script = ExtResource( 13 )
 
@@ -314,7 +314,6 @@ script = ExtResource( 35 )
 script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
-visible = false
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
@@ -322,7 +321,6 @@ shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
-visible = false
 script = ExtResource( 40 )
 
 [node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
@@ -330,7 +328,6 @@ shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
-visible = false
 script = ExtResource( 38 )
 
 [node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
@@ -338,7 +335,6 @@ shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-visible = false
 script = ExtResource( 39 )
 
 [node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
@@ -346,7 +342,6 @@ shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
-visible = false
 script = ExtResource( 41 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
@@ -362,7 +357,6 @@ engine_force = 1.47136e-43
 script = ExtResource( 49 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-visible = false
 script = ExtResource( 42 )
 
 [node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]
