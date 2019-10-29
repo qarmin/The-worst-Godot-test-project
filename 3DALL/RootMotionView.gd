@@ -1,3 +1,4 @@
+extends Node
 # DO NOT USE AS AUTOLOAD
 #extends RootMotionView
 #
