@@ -22,7 +22,7 @@ func nodeFunction(q_VideoPlayer : VideoPlayer, can_reset : bool = false) -> void
 		
 	### START TEMP
 	var temp_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
-	AutoResourcesVideoStreamWebm.nodeFunction(temp_VideoStreamWebm)
+#?#	AutoResourcesVideoStreamWebm.nodeFunction(temp_VideoStreamWebm)
 	
 	### END TEMP
 	

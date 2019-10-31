@@ -21,10 +21,10 @@ func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> vo
 		
 	### START TEMP
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
 	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 	

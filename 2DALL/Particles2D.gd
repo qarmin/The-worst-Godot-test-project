@@ -20,10 +20,10 @@ func nodeFunction(q_Particles2D : Particles2D, can_reset : bool = false) -> void
 		
 	### START TEMP
 	var temp_ParticlesMaterial : ParticlesMaterial = ParticlesMaterial.new()
-	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
+#?#	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
 	
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	### END TEMP
 	
 		

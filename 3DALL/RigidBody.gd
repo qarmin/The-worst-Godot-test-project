@@ -21,7 +21,7 @@ func nodeFunction(q_RigidBody : RigidBody, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
-	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+#?#	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
 	
 	### END TEMP
 	

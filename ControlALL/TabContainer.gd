@@ -17,7 +17,7 @@ func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> vo
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_PopupMenu : PopupMenu = PopupMenu.new()
 	AutoControlPopupMenu.nodeFunction(temp_PopupMenu)

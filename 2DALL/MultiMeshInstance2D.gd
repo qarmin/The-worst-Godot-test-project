@@ -20,10 +20,10 @@ func nodeFunction(q_MultiMeshInstance2D : MultiMeshInstance2D, can_reset : bool 
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_MultiMesh : MultiMesh = MultiMesh.new()
-	AutoResourcesMultiMesh.nodeFunction(temp_MultiMesh)
+#?#	AutoResourcesMultiMesh.nodeFunction(temp_MultiMesh)
 	### END TEMP
 	
 		

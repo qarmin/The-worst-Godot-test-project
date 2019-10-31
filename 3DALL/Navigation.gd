@@ -20,7 +20,7 @@ func nodeFunction(q_Navigation : Navigation, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_NavigationMesh : NavigationMesh = NavigationMesh.new()
-	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
+#?#	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
 	
 	### END TEMP
 	

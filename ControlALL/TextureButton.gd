@@ -21,10 +21,10 @@ func nodeFunction(q_TextureButton : TextureButton, can_reset : bool = false) -> 
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_BitMap : BitMap = BitMap.new()
-	AutoResourcesBitMap.nodeFunction(temp_BitMap)
+#?#	AutoResourcesBitMap.nodeFunction(temp_BitMap)
 	
 	### END TEMP
 		

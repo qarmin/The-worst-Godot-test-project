@@ -19,13 +19,13 @@ func nodeFunction(q_Viewport : Viewport, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_World2D : World2D = World2D.new()
-	AutoResourcesWorld2D.nodeFunction(temp_World2D)
+#?#	AutoResourcesWorld2D.nodeFunction(temp_World2D)
 	
 	var temp_World : World = World.new()
-	AutoResourcesWorld.nodeFunction(temp_World)
+#?#	AutoResourcesWorld.nodeFunction(temp_World)
 	
 	var temp_InputEventAction : InputEventAction = InputEventAction.new()
-	AutoResourcesInputEventAction.nodeFunction(temp_InputEventAction)
+#?#	AutoResourcesInputEventAction.nodeFunction(temp_InputEventAction)
 	### END TEMP
 	
 	

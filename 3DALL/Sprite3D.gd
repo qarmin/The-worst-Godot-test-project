@@ -23,7 +23,7 @@ func nodeFunction(q_Sprite3D : Sprite3D, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	### END TEMP
 	

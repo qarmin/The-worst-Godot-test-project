@@ -20,10 +20,10 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_DynamicFont : DynamicFont = DynamicFont.new()
-	AutoResourcesDynamicFont.nodeFunction(temp_DynamicFont)
+#?#	AutoResourcesDynamicFont.nodeFunction(temp_DynamicFont)
 	
 	### END TEMP
 

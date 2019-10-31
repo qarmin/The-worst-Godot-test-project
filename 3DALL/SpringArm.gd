@@ -19,7 +19,7 @@ func nodeFunction(q_SpringArm : SpringArm, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_BoxShape : BoxShape = BoxShape.new()
-	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+#?#	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
 	
 	### END TEMP
 	

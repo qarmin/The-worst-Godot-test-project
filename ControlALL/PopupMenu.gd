@@ -17,10 +17,10 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_ShortCut : ShortCut = ShortCut.new()
-	AutoResourcesShortCut.nodeFunction(temp_ShortCut)
+#?#	AutoResourcesShortCut.nodeFunction(temp_ShortCut)
 	
 	### END TEMP
 	

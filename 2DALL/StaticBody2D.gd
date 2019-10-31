@@ -22,7 +22,7 @@ func nodeFunction(q_StaticBody2D : StaticBody2D, can_reset : bool = false) -> vo
 		
 	### START TEMP
 	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
-	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+#?#	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
 	
 	### END TEMP
 	

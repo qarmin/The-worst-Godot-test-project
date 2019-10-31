@@ -20,7 +20,7 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_TileSet : TileSet = TileSet.new()
-	AutoResourcesTileSet.nodeFunction(temp_TileSet)
+#?#	AutoResourcesTileSet.nodeFunction(temp_TileSet)
 	
 	### END TEMP
 	

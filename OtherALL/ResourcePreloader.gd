@@ -18,7 +18,7 @@ func nodeFunction(q_ResourcePreloader : ResourcePreloader, can_reset : bool = fa
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	### END TEMP
 	

@@ -18,7 +18,7 @@ func nodeFunction(q_AnimationTree : AnimationTree, can_reset : bool = false) -> 
 		
 	### START TEMP
 	var temp_AnimationNode : AnimationNode = AnimationNode.new()
-	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)
+#?#	AutoResourcesAnimationNode.nodeFunction(temp_AnimationNode)
 	
 	### END TEMP
 	

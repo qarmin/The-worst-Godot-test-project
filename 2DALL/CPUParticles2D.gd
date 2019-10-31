@@ -21,10 +21,10 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_Curve : Curve = Curve.new()
-	AutoResourcesCurve.nodeFunction(temp_Curve)
+#?#	AutoResourcesCurve.nodeFunction(temp_Curve)
 	
 	### END TEMP
 	

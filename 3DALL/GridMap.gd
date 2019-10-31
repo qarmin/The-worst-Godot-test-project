@@ -19,10 +19,10 @@ func nodeFunction(q_GridMap : GridMap, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_MeshLibrary : MeshLibrary = MeshLibrary.new()
-	AutoResourcesMeshLibrary.nodeFunction(temp_MeshLibrary)
+#?#	AutoResourcesMeshLibrary.nodeFunction(temp_MeshLibrary)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
 	### END TEMP
 	

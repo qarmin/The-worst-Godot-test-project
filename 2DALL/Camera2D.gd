@@ -20,7 +20,7 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_Viewport : Viewport = Viewport.new()
-	AutoOtherViewport.nodeFunction(temp_Viewport)
+#?#	AutoOtherViewport.nodeFunction(temp_Viewport)
 	
 	### END TEMP
 	

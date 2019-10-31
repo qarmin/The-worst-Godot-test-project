@@ -39,8 +39,9 @@ func nodeFunction(q_ImageTexture : ImageTexture, can_reset : bool = false) -> vo
 
 	if randi() % 2 == 1:
 		q_ImageTexture.get_format()
-	if randi() % 2 == 1:
-		q_ImageTexture.load("res://icon.png")
+	if Autoload.NOT_A_BUG:
+		if randi() % 2 == 1:
+			q_ImageTexture.load("res://icon.png")
 
 #	if randi() % 2 == 1: #BUG NEW
 #		q_ImageTexture.set_data(temp_Image)

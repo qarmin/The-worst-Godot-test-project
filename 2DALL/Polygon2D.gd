@@ -20,7 +20,7 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	### END TEMP
 	

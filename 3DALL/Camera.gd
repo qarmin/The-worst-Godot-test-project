@@ -20,7 +20,7 @@ func nodeFunction(q_Camera : Camera, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_Environment : Environment = Environment.new()
-	AutoResourcesEnvironment.nodeFunction(temp_Environment)
+#?#	AutoResourcesEnvironment.nodeFunction(temp_Environment)
 	
 	### END TEMP
 	

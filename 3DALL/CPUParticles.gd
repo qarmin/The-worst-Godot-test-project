@@ -22,13 +22,13 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 		
 	### START TEMP
 	var temp_Curve : Curve = Curve.new()
-	AutoResourcesCurve.nodeFunction(temp_Curve)
+#?#	AutoResourcesCurve.nodeFunction(temp_Curve)
 	
 	var temp_Particles : Particles = Particles.new()
 	Auto3DParticles.nodeFunction(temp_Particles)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	### END TEMP
 	
 	

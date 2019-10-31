@@ -18,7 +18,7 @@ func nodeFunction(q_VisibilityEnabler2D : VisibilityEnabler2D, can_reset : bool 
 #		AutoObjects.A_Node(q_VisibilityEnabler2D)
 #		AutoObjects.A_CanvasItem(q_VisibilityEnabler2D)
 #		AutoObjects.A_Node2D(q_VisibilityEnabler2D)
-#		Auto2DVisibilityNotifier2D.nodeFunction(q_VisibilityEnabler2D)
+##?#		Auto2DVisibilityNotifier2D.nodeFunction(q_VisibilityEnabler2D)
 #
 #	if randi() % 2 == 1:
 #		q_VisibilityEnabler2D.set_enabler(Autoload.get_int(),Autoload.get_bool())# Enabler

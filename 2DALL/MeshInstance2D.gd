@@ -20,7 +20,7 @@ func nodeFunction(q_MeshInstance2D : MeshInstance2D, can_reset : bool = false) -
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	### END TEMP
 	

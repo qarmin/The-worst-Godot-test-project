@@ -19,7 +19,7 @@ func nodeFunction(q_Path : Path, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_Curve3D : Curve3D = Curve3D.new()
-	AutoResourcesCurve3D.nodeFunction(temp_Curve3D)
+#?#	AutoResourcesCurve3D.nodeFunction(temp_Curve3D)
 	
 	### END TEMP
 	

@@ -20,13 +20,13 @@ func nodeFunction(q_TouchScreenButton : TouchScreenButton, can_reset : bool = fa
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_BitMap : BitMap = BitMap.new()
-	AutoResourcesBitMap.nodeFunction(temp_BitMap)
+#?#	AutoResourcesBitMap.nodeFunction(temp_BitMap)
 	
 	var temp_CircleShape2D : CircleShape2D = CircleShape2D.new()
-	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
+#?#	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
 	### END TEMP
 	
 		

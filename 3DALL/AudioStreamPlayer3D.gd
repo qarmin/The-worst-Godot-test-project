@@ -19,7 +19,7 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 		
 	### START TEMP
 	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
-#	TOO SLOW AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
+##?#	TOO SLOW AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
 	
 	### END TEMP
 	

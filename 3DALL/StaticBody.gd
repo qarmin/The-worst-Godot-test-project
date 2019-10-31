@@ -21,15 +21,15 @@ func nodeFunction(q_StaticBody : StaticBody, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_PhysicsMaterial : PhysicsMaterial = PhysicsMaterial.new()
-	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
+#?#	AutoResourcesPhysicsMaterial.nodeFunction(temp_PhysicsMaterial)
 	
 	### END TEMP
 	
 		
-	if randi() % 2 == 1:
-		q_StaticBody.set_friction(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_StaticBody.set_bounce(Autoload.get_float())
+#	if randi() % 2 == 1: #DEPRECATED
+#		q_StaticBody.set_friction(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_StaticBody.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_StaticBody.set_physics_material_override(temp_PhysicsMaterial)
 	if randi() % 2 == 1:

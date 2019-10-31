@@ -19,7 +19,7 @@ func nodeFunction(q_CollisionShape : CollisionShape, can_reset : bool = false) -
 		
 	### START TEMP
 	var temp_BoxShape : BoxShape = BoxShape.new()
-	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+#?#	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
 	
 	### END TEMP
 	

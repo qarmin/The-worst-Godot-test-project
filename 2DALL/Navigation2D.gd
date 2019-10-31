@@ -20,7 +20,7 @@ func nodeFunction(q_Navigation2D : Navigation2D, can_reset : bool = false) -> vo
 		
 	### START TEMP
 	var temp_NavigationPolygon : NavigationPolygon = NavigationPolygon.new()
-	AutoResourcesNavigationPolygon.nodeFunction(temp_NavigationPolygon)
+#?#	AutoResourcesNavigationPolygon.nodeFunction(temp_NavigationPolygon)
 	
 	### END TEMP
 	

@@ -21,10 +21,10 @@ func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 #
 #	### START TEMP
 #	var temp_Gradient : Gradient = Gradient.new()
-#	AutoResourcesGradient.nodeFunction(temp_Gradient)
+##?#	AutoResourcesGradient.nodeFunction(temp_Gradient)
 #
 #	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+##?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 #	### END TEMP
 #
 #

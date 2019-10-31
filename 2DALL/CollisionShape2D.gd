@@ -20,7 +20,7 @@ func nodeFunction(q_CollisionShape2D : CollisionShape2D, can_reset : bool = fals
 		
 	### START TEMP
 	var temp_CircleShape2D : CircleShape2D = CircleShape2D.new()
-	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
+#?#	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
 	
 	### END TEMP
 	

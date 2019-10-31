@@ -22,7 +22,7 @@ func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = fals
 		
 	### START TEMP
 	var temp_SpriteFrames : SpriteFrames = SpriteFrames.new()
-	AutoResourcesSpriteFrames.nodeFunction(temp_SpriteFrames)
+#?#	AutoResourcesSpriteFrames.nodeFunction(temp_SpriteFrames)
 	
 	### END TEMP
 	

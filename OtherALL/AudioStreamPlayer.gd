@@ -18,7 +18,7 @@ func nodeFunction(q_AudioStreamPlayer : AudioStreamPlayer, can_reset : bool = fa
 		
 	### START TEMP
 	var temp_AudioStream : AudioStream = AudioStreamGenerator.new()
-	AutoResourcesAudioStream.nodeFunction(temp_AudioStream)
+#?#	AutoResourcesAudioStream.nodeFunction(temp_AudioStream)
 	
 	### END TEMP
 	

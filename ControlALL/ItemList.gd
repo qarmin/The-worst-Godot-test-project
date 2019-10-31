@@ -20,7 +20,7 @@ func nodeFunction(q_ItemList : ItemList, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
-	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
+#?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
 	var temp_PopupMenu : PopupMenu = PopupMenu.new()
 	AutoControlPopupMenu.nodeFunction(temp_PopupMenu)

@@ -20,7 +20,7 @@ func nodeFunction(q_Path2D : Path2D, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_Curve2D : Curve2D = Curve2D.new()
-	AutoResourcesCurve2D.nodeFunction(temp_Curve2D)
+#?#	AutoResourcesCurve2D.nodeFunction(temp_Curve2D)
 	
 	### END TEMP
 	

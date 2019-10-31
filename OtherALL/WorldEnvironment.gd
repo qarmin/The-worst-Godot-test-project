@@ -18,7 +18,7 @@ func nodeFunction(q_WorldEnvironment : WorldEnvironment, can_reset : bool = fals
 		
 	### START TEMP
 	var temp_Environment : Environment = Environment.new()
-	AutoResourcesEnvironment.nodeFunction(temp_Environment)
+#?#	AutoResourcesEnvironment.nodeFunction(temp_Environment)
 	
 	### END TEMP
 	

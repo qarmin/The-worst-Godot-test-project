@@ -26,7 +26,7 @@ func nodeFunction(q_CSGMesh : CSGMesh, can_reset : bool = false) -> void:
 	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
 	### END TEMP
 		

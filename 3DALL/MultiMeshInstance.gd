@@ -21,7 +21,7 @@ func nodeFunction(q_MultiMeshInstance : MultiMeshInstance, can_reset : bool = fa
 		
 	### START TEMP
 	var temp_MultiMesh : MultiMesh = MultiMesh.new()
-	AutoResourcesMultiMesh.nodeFunction(temp_MultiMesh)
+#?#	AutoResourcesMultiMesh.nodeFunction(temp_MultiMesh)
 	
 	### END TEMP
 	

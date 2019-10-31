@@ -20,7 +20,7 @@ func nodeFunction(q_LightOccluder2D : LightOccluder2D, can_reset : bool = false)
 		
 	### START TEMP
 	var temp_OccluderPolygon2D : OccluderPolygon2D = OccluderPolygon2D.new()
-	AutoResourcesOccluderPolygon2D.nodeFunction(temp_OccluderPolygon2D)
+#?#	AutoResourcesOccluderPolygon2D.nodeFunction(temp_OccluderPolygon2D)
 	
 	### END TEMP
 	

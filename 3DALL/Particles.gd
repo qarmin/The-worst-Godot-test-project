@@ -21,10 +21,10 @@ func nodeFunction(q_Particles : Particles, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_ParticlesMaterial : ParticlesMaterial = ParticlesMaterial.new()
-	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
+#?#	AutoResourcesParticlesMaterial.nodeFunction(temp_ParticlesMaterial)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
 	
 	### END TEMP

@@ -23,7 +23,7 @@ func nodeFunction(q_CSGTorus : CSGTorus, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 		

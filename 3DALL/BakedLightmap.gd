@@ -20,7 +20,7 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 		
 	### START TEMP
 	var temp_BakedLightmapData : BakedLightmapData = BakedLightmapData.new()
-	AutoResourcesBakedLightmapData.nodeFunction(temp_BakedLightmapData)
+#?#	AutoResourcesBakedLightmapData.nodeFunction(temp_BakedLightmapData)
 	
 	### END TEMP
 	

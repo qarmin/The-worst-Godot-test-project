@@ -20,7 +20,7 @@ func nodeFunction(q_GIProbe : GIProbe, can_reset : bool = false) -> void:
 		
 	### START TEMP
 	var temp_GIProbeData : GIProbeData = GIProbeData.new()
-	AutoResourcesGIProbeData.nodeFunction(temp_GIProbeData)
+#?#	AutoResourcesGIProbeData.nodeFunction(temp_GIProbeData)
 	
 	### END TEMP
 	
