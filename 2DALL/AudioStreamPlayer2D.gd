@@ -45,8 +45,14 @@ func nodeFunction(q_AudioStreamPlayer2D : AudioStreamPlayer2D, can_reset : bool 
 		q_AudioStreamPlayer2D.set_bus(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer2D.set_area_mask(Autoload.get_int())
+
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer2D.play()
+		q_AudioStreamPlayer2D.get_playback_position()
+	if randi() % 2 == 1:
+		q_AudioStreamPlayer2D.get_stream_playback()
+
+	if randi() % 2 == 1:
+		q_AudioStreamPlayer2D.play(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer2D.seek(Autoload.get_float())
 	if randi() % 2 == 1:

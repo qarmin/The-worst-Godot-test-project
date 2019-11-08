@@ -19,6 +19,6 @@ func nodeFunction(q_BackBufferCopy : BackBufferCopy, can_reset : bool = false):
 		AutoObjects.A_Node2D(q_BackBufferCopy)
 		
 	if randi() % 2 == 1:
-		q_BackBufferCopy.set_copy_mode(Autoload.get_int())
+		q_BackBufferCopy.set_copy_mode(Autoload.get_int()) #CopyMode
 	if randi() % 2 == 1:
 		q_BackBufferCopy.set_rect(Autoload.get_rect2())

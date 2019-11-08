@@ -47,6 +47,7 @@ func nodeFunction(q_Area2D : Area2D, can_reset : bool = false) -> void:
 		q_Area2D.set_audio_bus_override(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Area2D.set_audio_bus_name(Autoload.get_string())
+
 	if randi() % 2 == 1:
 		q_Area2D.get_collision_layer_bit(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -56,6 +57,7 @@ func nodeFunction(q_Area2D : Area2D, can_reset : bool = false) -> void:
 			q_Area2D.get_overlapping_areas()
 		if randi() % 2 == 1:
 			q_Area2D.get_overlapping_bodies()
+			
 	if randi() % 2 == 1:
 		q_Area2D.overlaps_area(Autoload.get_nodes(q_Area2D))
 	if randi() % 2 == 1:

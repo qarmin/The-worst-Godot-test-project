@@ -27,9 +27,9 @@ func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_sprite_frames(temp_SpriteFrames)
 	if randi()%2 == 1:
-		q_AnimatedSprite.set_frame(Autoload.get_int())
-	if randi()%2 == 1:
 		q_AnimatedSprite.set_animation(Autoload.get_string())
+	if randi()%2 == 1:
+		q_AnimatedSprite.set_frame(Autoload.get_int())
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_speed_scale(Autoload.get_float())
 	if randi()%2 == 1:
@@ -42,7 +42,10 @@ func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -
 		q_AnimatedSprite.set_flip_h(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_flip_v(Autoload.get_bool())
+
 	if randi()%2 == 1:
-		q_AnimatedSprite.stop()
+		q_AnimatedSprite.is_playing()
 	if randi()%2 == 1:
 		q_AnimatedSprite.play(Autoload.get_string(), Autoload.get_bool())
+	if randi()%2 == 1:
+		q_AnimatedSprite.stop()

@@ -18,9 +18,14 @@ func nodeFunction(q_Bone2D : Bone2D, can_reset : bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_Bone2D)
 		AutoObjects.A_Node2D(q_Bone2D)
 		
-		
+	if randi() % 2 == 1:
+		q_Bone2D.set_rest(Autoload.get_transform2d())
+	if randi() % 2 == 1:
+		q_Bone2D.set_default_length(Autoload.get_float())
+
 	if randi() % 2 == 1:
 		q_Bone2D.apply_rest()
+
 	if randi() % 2 == 1:
 		q_Bone2D.get_index_in_skeleton()
 	if randi() % 2 == 1:

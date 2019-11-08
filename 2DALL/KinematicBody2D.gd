@@ -35,9 +35,15 @@ func nodeFunction(q_KinematicBody2D : KinematicBody2D, can_reset : bool = false)
 	if randi() % 2 == 1:
 		q_KinematicBody2D.is_on_floor()
 	if randi() % 2 == 1:
-		if Autoload.SLOW_FUNCTIONS:
+		q_KinematicBody2D.is_on_wall()
+
+	if Autoload.SLOW_FUNCTIONS:
+		if randi() % 2 == 1:
 			q_KinematicBody2D.move_and_collide(Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool())
+		if randi() % 2 == 1:
 			q_KinematicBody2D.move_and_slide(Autoload.get_vector2(), Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_int(), Autoload.get_float(), Autoload.get_bool())
+		if randi() % 2 == 1:
 			q_KinematicBody2D.move_and_slide_with_snap(Autoload.get_vector2(), Autoload.get_vector2(), Autoload.get_vector2(),Autoload.get_bool(),Autoload.get_int(),Autoload.get_float(),Autoload.get_bool())
 
+		if randi() % 2 == 1:
 			q_KinematicBody2D.test_move( Autoload.get_transform2d(),Autoload.get_vector2(),Autoload.get_bool())

@@ -40,13 +40,13 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_RigidBody2D.set_gravity_scale(Autoload.get_float())
-	if randi() % 2 == 1:
 		q_RigidBody2D.set_physics_material_override(temp_PhysicsMaterial)
+	if randi() % 2 == 1:
+		q_RigidBody2D.set_gravity_scale(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_use_custom_integrator(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_RigidBody2D.set_continuous_collision_detection_mode(Autoload.get_int())
+		q_RigidBody2D.set_continuous_collision_detection_mode(Autoload.get_int()) #CCDMode
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_max_contacts_reported(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -76,6 +76,7 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 		q_RigidBody2D.add_force(Autoload.get_vector2(),Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_RigidBody2D.add_torque(Autoload.get_float())
+
 	if randi() % 2 == 1:
 		q_RigidBody2D.apply_central_impulse(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -83,6 +84,8 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_RigidBody2D.apply_torque_impulse(Autoload.get_float())
 
+	if randi() % 2 == 1:
+		q_RigidBody2D.get_colliding_bodies()
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_axis_velocity(Autoload.get_vector2())
 	if Autoload.SLOW_FUNCTIONS:
