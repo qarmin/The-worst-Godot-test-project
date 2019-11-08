@@ -31,8 +31,8 @@ func nodeFunction(q_AStar2D : AStar2D, can_reset : bool = false) -> void:
 		q_AStar2D.clear()
 	if randi() % 2 == 1:
 		q_AStar2D.connect_points(Autoload.get_int(),Autoload.get_int(),Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_AStar2D.disconnect_points(Autoload.get_int(),Autoload.get_int())
+#	if randi() % 2 == 1: #BUG CRASH
+#		q_AStar2D.disconnect_points(Autoload.get_int(),Autoload.get_int())
 
 	if randi() % 2 == 1:
 		q_AStar2D.get_available_point_id()

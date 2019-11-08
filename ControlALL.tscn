@@ -280,6 +280,30 @@ script = ExtResource( 13 )
 margin_right = 40.0
 margin_bottom = 40.0
 
+[node name="Control2" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Control3" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Control4" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Control5" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Control6" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Control7" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+
 [node name="ColorPicker" type="ColorPicker" parent="."]
 margin_left = 4.0
 margin_top = 4.0
@@ -327,7 +351,6 @@ __meta__ = {
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-visible = false
 margin_left = 312.0
 margin_top = 845.0
 margin_right = 518.0

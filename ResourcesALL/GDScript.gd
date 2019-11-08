@@ -129,10 +129,11 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			printt(Autoload.get_string())
 
-		if randi() % 2 == 1:
-			push_error(Autoload.get_string())
-		if randi() % 2 == 1:
-			push_warning(Autoload.get_string())
+		if Autoload.NOT_A_BUG:
+			if randi() % 2 == 1:
+				push_error(Autoload.get_string())
+			if randi() % 2 == 1:
+				push_warning(Autoload.get_string())
 
 		if randi() % 2 == 1:
 			rad2deg(Autoload.get_float())

@@ -212,7 +212,7 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 4 )
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 13 )
 
@@ -273,6 +273,41 @@ script = ExtResource( 23 )
 operation = 1
 script = ExtResource( 17 )
 
+[node name="CSGBox" type="CSGBox" parent="CSGCombiner_NOTHING"]
+invert_faces = true
+width = 44.173
+height = 19.604
+material = SubResource( 6 )
+script = ExtResource( 20 )
+
+[node name="CSGBox2" type="CSGBox" parent="CSGCombiner_NOTHING"]
+invert_faces = true
+width = 44.173
+height = 19.604
+material = SubResource( 6 )
+script = ExtResource( 20 )
+
+[node name="CSGBox3" type="CSGBox" parent="CSGCombiner_NOTHING"]
+invert_faces = true
+width = 44.173
+height = 19.604
+material = SubResource( 6 )
+script = ExtResource( 20 )
+
+[node name="CSGBox4" type="CSGBox" parent="CSGCombiner_NOTHING"]
+invert_faces = true
+width = 44.173
+height = 19.604
+material = SubResource( 6 )
+script = ExtResource( 20 )
+
+[node name="CSGBox5" type="CSGBox" parent="CSGCombiner_NOTHING"]
+invert_faces = true
+width = 44.173
+height = 19.604
+material = SubResource( 6 )
+script = ExtResource( 20 )
+
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
 material_override = SubResource( 15 )
 script = ExtResource( 24 )
@@ -320,31 +355,91 @@ script = ExtResource( 37 )
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
+[node name="CollisionShape2" type="CollisionShape" parent="Area"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Area"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Area"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
 [node name="KinematicBody" type="KinematicBody" parent="."]
 script = ExtResource( 40 )
 
-[node name="CollisionShape 2" type="CollisionShape" parent="KinematicBody"]
+[node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="KinematicBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
 script = ExtResource( 38 )
 
-[node name="CollisionShape 3" type="CollisionShape" parent="PhysicalBone"]
+[node name="CollisionShape" type="CollisionShape" parent="PhysicalBone"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="PhysicalBone"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="PhysicalBone"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="PhysicalBone"]
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
 script = ExtResource( 39 )
 
-[node name="CollisionShape 4" type="CollisionShape" parent="RigidBody"]
+[node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="RigidBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
 script = ExtResource( 41 )
 
-[node name="CollisionShape 5" type="CollisionShape" parent="VehicleBody"]
+[node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="VehicleBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="VehicleBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="VehicleBody"]
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
@@ -352,14 +447,34 @@ script = ExtResource( 46 )
 engine_force = 5.60519e-45
 script = ExtResource( 49 )
 
-[node name="VehicleWheel 2" type="VehicleWheel" parent="VehicleBody"]
-engine_force = 1.47136e-43
+[node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 5.60519e-45
+script = ExtResource( 49 )
+
+[node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 5.60519e-45
+script = ExtResource( 49 )
+
+[node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
+engine_force = 5.60519e-45
 script = ExtResource( 49 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
 script = ExtResource( 42 )
 
-[node name="CollisionShape 5" type="CollisionShape" parent="StaticBody"]
+[node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
+shape = SubResource( 23 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 23 )
 script = ExtResource( 46 )
 
@@ -396,6 +511,18 @@ script = ExtResource( 53 )
 navmesh = SubResource( 25 )
 script = ExtResource( 47 )
 
+[node name="NavigationMeshInstance2" type="NavigationMeshInstance" parent="Navigation_LEAK"]
+navmesh = SubResource( 25 )
+script = ExtResource( 47 )
+
+[node name="NavigationMeshInstance3" type="NavigationMeshInstance" parent="Navigation_LEAK"]
+navmesh = SubResource( 25 )
+script = ExtResource( 47 )
+
+[node name="NavigationMeshInstance4" type="NavigationMeshInstance" parent="Navigation_LEAK"]
+navmesh = SubResource( 25 )
+script = ExtResource( 47 )
+
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
 navmesh = SubResource( 25 )
 script = ExtResource( 47 )
@@ -405,6 +532,15 @@ curve = SubResource( 26 )
 script = ExtResource( 52 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
+script = ExtResource( 48 )
+
+[node name="PathFollow2" type="PathFollow" parent="Path"]
+script = ExtResource( 48 )
+
+[node name="PathFollow3" type="PathFollow" parent="Path"]
+script = ExtResource( 48 )
+
+[node name="PathFollow4" type="PathFollow" parent="Path"]
 script = ExtResource( 48 )
 
 [node name="PathFollow" type="PathFollow" parent="."]
@@ -437,7 +573,31 @@ script = ExtResource( 38 )
 transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
 script = ExtResource( 62 )
 
+[node name="BoneAttachment2" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
+transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 62 )
+
+[node name="BoneAttachment3" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
+transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 62 )
+
+[node name="BoneAttachment4" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
+transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
+script = ExtResource( 62 )
+
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone"]
 shape = SubResource( 27 )
 script = ExtResource( 46 )
 
@@ -445,6 +605,18 @@ script = ExtResource( 46 )
 script = ExtResource( 38 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
+shape = SubResource( 27 )
+script = ExtResource( 46 )
+
+[node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
 shape = SubResource( 27 )
 script = ExtResource( 46 )
 
