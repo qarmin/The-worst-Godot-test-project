@@ -18,7 +18,7 @@ func nodeFunction(q_KinematicBody : KinematicBody, can_reset : bool = false) -> 
 		AutoObjects.A_Spatial(q_KinematicBody)
 		AutoObjects.A_CollisionObject(q_KinematicBody)
 		AutoObjects.A_PhysicsBody(q_KinematicBody)
-		
+
 	if randi() % 2 == 1:
 		q_KinematicBody.set_axis_lock(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -26,7 +26,6 @@ func nodeFunction(q_KinematicBody : KinematicBody, can_reset : bool = false) -> 
 
 	if randi() % 2 == 1:
 		q_KinematicBody.get_floor_velocity()
-
 	if randi() % 2 == 1:
 		for j in q_KinematicBody.get_slide_count():
 			q_KinematicBody.get_slide_collision(j).collider.name
@@ -35,6 +34,8 @@ func nodeFunction(q_KinematicBody : KinematicBody, can_reset : bool = false) -> 
 		q_KinematicBody.is_on_ceiling()
 	if randi() % 2 == 1:
 		q_KinematicBody.is_on_floor()
+	if randi() % 2 == 1:
+		q_KinematicBody.is_on_wall()
 
 	if Autoload.SLOW_FUNCTIONS:
 		q_KinematicBody.move_and_collide(Autoload.get_vector3(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool())

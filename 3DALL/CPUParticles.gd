@@ -29,6 +29,9 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+
+	var temp_Gradient : Gradient = Gradient.new()
+#?#	AutoResourcesGradient.nodeFunction(temp_Gradient)
 	### END TEMP
 	
 	
@@ -49,17 +52,19 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_CPUParticles.set_randomness_ratio(Autoload.get_float())
 	if randi() % 2 == 1:
+		q_CPUParticles.set_lifetime_randomness(Autoload.get_float())
+	if randi() % 2 == 1:
 		q_CPUParticles.set_fixed_fps(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_CPUParticles.set_fractional_delta(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_CPUParticles.set_use_local_coordinates(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CPUParticles.set_draw_order(Autoload.get_int())
+		q_CPUParticles.set_draw_order(Autoload.get_int()) #DrawOrder
 	if randi() % 2 == 1:
 		q_CPUParticles.set_mesh(temp_CubeMesh)
 	if randi() % 2 == 1:
-		q_CPUParticles.set_emission_shape(Autoload.get_int())
+		q_CPUParticles.set_emission_shape(Autoload.get_int()) #EmissionShape
 	if randi() % 2 == 1:
 		q_CPUParticles.set_emission_sphere_radius(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -75,6 +80,8 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 		q_CPUParticles.set_particle_flag(Autoload.get_int(),Autoload.get_bool())
 
 	if randi() % 2 == 1:
+		q_CPUParticles.set_direction(Autoload.get_vector3())
+	if randi() % 2 == 1:
 		q_CPUParticles.set_spread(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_CPUParticles.set_flatness(Autoload.get_float())
@@ -87,6 +94,11 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 		q_CPUParticles.set_param_curve(Autoload.get_int(),temp_Curve)
 	if randi() % 2 == 1:
 		q_CPUParticles.set_param_randomness(Autoload.get_int(),Autoload.get_float())
+
+	if randi() % 2 == 1:
+		q_CPUParticles.set_color(Autoload.get_color())
+	if randi() % 2 == 1:
+		q_CPUParticles.set_color_ramp(temp_Gradient)
 
 	if randi() % 2 == 1:
 		q_CPUParticles.convert_from_particles(temp_Particles)

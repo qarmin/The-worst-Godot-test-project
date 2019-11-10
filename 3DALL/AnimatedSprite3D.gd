@@ -35,6 +35,7 @@ func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = fals
 		q_AnimatedSprite3D.set_frame(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_AnimatedSprite3D._set_playing(Autoload.get_bool())
+		
 	if randi() % 2 == 1:
 		q_AnimatedSprite3D.is_playing()
 	if randi() % 2 == 1:

@@ -26,7 +26,7 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 	
 	### END TEMP
 
-#	if randi() % 2 == 1: #BUG NEW
+#	if randi() % 2 == 1: #BUG GH#32988
 #		q_Mesh.create_convex_shape()
 #	if randi() % 2 == 1:
 #		q_Mesh.create_outline( Autoload.get_float())

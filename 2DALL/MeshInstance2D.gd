@@ -22,9 +22,14 @@ func nodeFunction(q_MeshInstance2D : MeshInstance2D, can_reset : bool = false) -
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
+	var temp_Mesh : Mesh = Mesh.new()
+#?#	AutoResourcesMesh.nodeFunction(temp_Mesh)
+
 	### END TEMP
 	
 		
+	if randi() % 2 == 1:
+		q_MeshInstance2D.set_mesh(temp_Mesh)
 	if randi() % 2 == 1:
 		q_MeshInstance2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:

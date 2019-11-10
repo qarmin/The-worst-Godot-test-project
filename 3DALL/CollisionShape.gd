@@ -28,7 +28,8 @@ func nodeFunction(q_CollisionShape : CollisionShape, can_reset : bool = false) -
 		q_CollisionShape.set_shape(temp_BoxShape)
 	if randi() % 2 == 1:
 		q_CollisionShape.set_disabled(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_CollisionShape.make_convex_from_brothers()
+		
+#	if randi() % 2 == 1: #BUG GH#32988 because use Mesh
+#		q_CollisionShape.make_convex_from_brothers()
 	if randi() % 2 == 1:
 		q_CollisionShape.resource_changed(temp_BoxShape)

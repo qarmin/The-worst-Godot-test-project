@@ -36,6 +36,8 @@ func nodeFunction(q_Sprite3D : Sprite3D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Sprite3D.set_frame(Autoload.get_int())
 	if randi() % 2 == 1:
+		q_Sprite3D.set_frame_coords(Autoload.get_vector2())
+	if randi() % 2 == 1:
 		q_Sprite3D.set_region(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Sprite3D.set_region_rect(Autoload.get_rect2())

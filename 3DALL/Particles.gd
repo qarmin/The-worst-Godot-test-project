@@ -55,12 +55,16 @@ func nodeFunction(q_Particles : Particles, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Particles.set_use_local_coordinates(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Particles.set_draw_order(Autoload.get_int())
+		q_Particles.set_draw_order(Autoload.get_int()) #DrawOrder
 	if randi() % 2 == 1:
 		q_Particles.set_process_material(temp_ParticlesMaterial)
 	if randi() % 2 == 1:
+		q_Particles.set_draw_passes(Autoload.get_int())
+	if randi() % 2 == 1:
 		q_Particles.set_draw_pass_mesh(Autoload.get_int(), temp_CubeMesh)
 
+	if randi() % 2 == 1:
+		q_Particles.capture_aabb()
 	if randi() % 2 == 1:
 		q_Particles.restart()
 

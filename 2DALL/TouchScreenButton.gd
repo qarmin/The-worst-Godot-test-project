@@ -47,4 +47,7 @@ func nodeFunction(q_TouchScreenButton : TouchScreenButton, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_TouchScreenButton.set_action(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_TouchScreenButton.set_visibility_mode(Autoload.get_int())
+		q_TouchScreenButton.set_visibility_mode(Autoload.get_int()) #VisibilityMode
+
+	if randi() % 2 == 1:
+		q_TouchScreenButton.is_pressed()

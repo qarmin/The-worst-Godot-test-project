@@ -40,6 +40,7 @@ func nodeFunction(q_PhysicalBone : PhysicalBone, can_reset : bool = false) -> vo
 		q_PhysicalBone.get_bone_id()
 	if randi() % 2 == 1:
 		q_PhysicalBone.get_simulate_physics()
+		
 	if randi() % 2 == 1:
 		q_PhysicalBone.is_simulating_physics()
 	if randi() % 2 == 1:

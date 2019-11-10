@@ -18,6 +18,12 @@ func nodeFunction(q_VehicleWheel : VehicleWheel, can_reset : bool = false) -> vo
 		AutoObjects.A_Spatial(q_VehicleWheel)
 		
 	if randi() % 2 == 1:
+		q_VehicleWheel.set_engine_force(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_VehicleWheel.set_brake(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_VehicleWheel.set_steering(Autoload.get_float())
+	if randi() % 2 == 1:
 		q_VehicleWheel.set_use_as_traction(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_VehicleWheel.set_use_as_steering(Autoload.get_bool())
@@ -44,5 +50,6 @@ func nodeFunction(q_VehicleWheel : VehicleWheel, can_reset : bool = false) -> vo
 		q_VehicleWheel.get_rpm()
 	if randi() % 2 == 1:
 		q_VehicleWheel.get_skidinfo()
+		
 	if randi() % 2 == 1:
 		q_VehicleWheel.is_in_contact()

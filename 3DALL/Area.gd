@@ -19,7 +19,7 @@ func nodeFunction(q_Area : Area, can_reset : bool = false) -> void:
 		AutoObjects.A_CollisionObject(q_Area)
 		
 	if randi() % 2 == 1:
-		q_Area.set_space_override_mode(Autoload.get_int())
+		q_Area.set_space_override_mode(Autoload.get_int())  #SpaceOverride
 	if randi() % 2 == 1:
 		q_Area.set_gravity_is_point(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -59,7 +59,6 @@ func nodeFunction(q_Area : Area, can_reset : bool = false) -> void:
 		q_Area.get_collision_layer_bit(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Area.get_collision_mask_bit(Autoload.get_int())
-
 	if randi() % 2 == 1:
 		q_Area.get_overlapping_areas()
 	if randi() % 2 == 1:

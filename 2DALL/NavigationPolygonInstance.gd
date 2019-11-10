@@ -18,5 +18,13 @@ func nodeFunction(q_NavigationPolygonInstance : NavigationPolygonInstance, can_r
 		AutoObjects.A_CanvasItem(q_NavigationPolygonInstance)
 		AutoObjects.A_Node2D(q_NavigationPolygonInstance)
 		
+	### START TEMP
+	var temp_NavigationPolygon : NavigationPolygon = NavigationPolygon.new()
+	#?#	AutoResourcesNavigationPolygon.nodeFunction(temp_NavigationPolygon)
+		
+	### END TEMP
+	
+	if randi() % 2 == 1:
+		q_NavigationPolygonInstance.set_navigation_polygon(temp_NavigationPolygon)
 	if randi() % 2 == 1:
 		q_NavigationPolygonInstance.set_enabled(Autoload.get_bool())

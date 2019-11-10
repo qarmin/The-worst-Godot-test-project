@@ -23,6 +23,7 @@ func nodeFunction(q_ARVRAnchor : ARVRAnchor, can_reset : bool = false) -> void:
 		
 	if randi() % 2 == 1:
 		q_ARVRAnchor.set_anchor_id(Autoload.get_int())
+		
 	if randi() % 2 == 1:
 		q_ARVRAnchor.get_anchor_name()
 	if randi() % 2 == 1:

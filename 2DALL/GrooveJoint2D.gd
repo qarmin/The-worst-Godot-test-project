@@ -23,7 +23,3 @@ func nodeFunction(q_GrooveJoint2D : GrooveJoint2D, can_reset : bool = false) -> 
 		q_GrooveJoint2D.set_length(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_GrooveJoint2D.set_initial_offset(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_GrooveJoint2D.set_bias(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_GrooveJoint2D.set_exclude_nodes_from_collision(Autoload.get_bool())

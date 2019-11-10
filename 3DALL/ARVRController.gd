@@ -37,5 +37,6 @@ func nodeFunction(q_ARVRController : ARVRController, can_reset : bool = false) -
 		q_ARVRController.get_joystick_id()
 	if randi() % 2 == 1:
 		q_ARVRController.get_mesh()
+		
 	if randi() % 2 == 1:
 		q_ARVRController.is_button_pressed(Autoload.get_int())

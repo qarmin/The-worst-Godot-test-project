@@ -44,11 +44,14 @@ func nodeFunction(q_Sprite : Sprite, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Sprite.set_frame(Autoload.get_int())
 	if randi() % 2 == 1:
+		q_Sprite.set_frame_coords(Autoload.get_vector2())
+	if randi() % 2 == 1:
 		q_Sprite.set_region(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Sprite.set_region_rect(Autoload.get_rect2())
 	if randi() % 2 == 1:
 		q_Sprite.set_region_filter_clip(Autoload.get_bool())
+		
 	if randi() % 2 == 1:
 		q_Sprite.get_rect()
 	if randi() % 2 == 1:

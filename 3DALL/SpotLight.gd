@@ -20,10 +20,10 @@ func nodeFunction(q_SpotLight : SpotLight, can_reset : bool = false) -> void:
 		AutoObjects.A_Light(q_SpotLight)
 		
 	if randi() % 2 == 1:
-		q_SpotLight.set("spot_range",Autoload.get_float())
+		q_SpotLight.set_param(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_SpotLight.set("spot_attenuation",Autoload.get_float())
+		q_SpotLight.set_param(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_SpotLight.set("spot_angle",Autoload.get_float())
+		q_SpotLight.set_param(Autoload.get_int(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_SpotLight.set("spot_angle_attenuation",Autoload.get_float())
+		q_SpotLight.set_param(Autoload.get_int(),Autoload.get_float())

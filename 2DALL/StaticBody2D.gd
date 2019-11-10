@@ -31,9 +31,10 @@ func nodeFunction(q_StaticBody2D : StaticBody2D, can_reset : bool = false) -> vo
 		q_StaticBody2D.set_constant_linear_velocity(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_StaticBody2D.set_constant_angular_velocity(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_StaticBody2D.set_friction(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_StaticBody2D.set_bounce(Autoload.get_float())
+	if Autoload.NOT_A_BUG:
+		if randi() % 2 == 1:
+			q_StaticBody2D.set_friction(Autoload.get_float())
+		if randi() % 2 == 1:
+			q_StaticBody2D.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_StaticBody2D.set_physics_material_override(temp_PhysicsMaterial)

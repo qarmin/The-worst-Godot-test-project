@@ -19,4 +19,8 @@ func nodeFunction(q_Skeleton2D : Skeleton2D, can_reset : bool = false) -> void:
 		AutoObjects.A_Node2D(q_Skeleton2D)
 		
 	if randi() % 2 == 1:
+		q_Skeleton2D.get_bone(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_Skeleton2D.get_bone_count()
+	if randi() % 2 == 1:
 		q_Skeleton2D.get_skeleton()

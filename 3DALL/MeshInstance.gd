@@ -34,16 +34,18 @@ func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_MeshInstance.set_skeleton_path(Autoload.get_nodepath(q_MeshInstance))
 
-	if randi() % 2 == 1:
-		q_MeshInstance.create_convex_collision() #BUK
-	if randi() % 2 == 1:
-		q_MeshInstance.create_debug_tangents()
-	if randi() % 2 == 1:
-		q_MeshInstance.create_trimesh_collision()
+#	if randi() % 2 == 1: Look GH#26976
+#		q_MeshInstance.create_convex_collision() #BUK
+##	if randi() % 2 == 1: #BUG CRASH
+##		q_MeshInstance.create_debug_tangents()
+#	if randi() % 2 == 1:
+#		q_MeshInstance.create_trimesh_collision()
+
 	if randi() % 2 == 1:
 		q_MeshInstance.get_surface_material(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_MeshInstance.get_surface_material_count()
+		
 	if randi() % 2 == 1:
 		q_MeshInstance.set_surface_material(Autoload.get_int(), temp_SpatialMaterial)
 

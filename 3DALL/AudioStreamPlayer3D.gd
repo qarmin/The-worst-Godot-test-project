@@ -67,8 +67,9 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 		q_AudioStreamPlayer3D.get_playback_position()
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.get_stream_playback()
+
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer3D.play()
+		q_AudioStreamPlayer3D.play(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.seek(Autoload.get_float())
 	if randi() % 2 == 1:

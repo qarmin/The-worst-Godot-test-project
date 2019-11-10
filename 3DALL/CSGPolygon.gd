@@ -38,7 +38,7 @@ func nodeFunction(q_CSGPolygon : CSGPolygon, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_spin_sides(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CSGPolygon.set_path_node(Autoload.get_string())
+		q_CSGPolygon.set_path_node(Autoload.get_nodepath(self))
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_path_interval(Autoload.get_float())
 	if randi() % 2 == 1:

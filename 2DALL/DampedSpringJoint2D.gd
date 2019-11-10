@@ -27,5 +27,3 @@ func nodeFunction(q_DampedSpringJoint2D : DampedSpringJoint2D, can_reset : bool 
 		q_DampedSpringJoint2D.set_stiffness(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_DampedSpringJoint2D.set_damping(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_DampedSpringJoint2D.set_exclude_nodes_from_collision(Autoload.get_bool())

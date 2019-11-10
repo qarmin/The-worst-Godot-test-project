@@ -29,7 +29,11 @@ func nodeFunction(q_Navigation2D : Navigation2D, can_reset : bool = false) -> vo
 		q_Navigation2D.get_closest_point(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Navigation2D.get_closest_point_owner(Autoload.get_vector2())
+	if randi() % 2 == 1:
+		q_Navigation2D.get_simple_path(Autoload.get_vector2(),Autoload.get_vector2(),Autoload.get_bool())
 
+#	if randi() % 2 == 1: Probably leak, I'm not sure, need to check
+#		q_Navigation2D.navpoly_add(temp_NavigationPolygon, Autoload.get_transform2d(),self)
 	if randi() % 2 == 1:
 		q_Navigation2D.navpoly_remove(navpoly_add(temp_NavigationPolygon,Autoload.get_transform2d()))
 	if randi() % 2 == 1:

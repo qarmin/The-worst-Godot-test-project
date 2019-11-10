@@ -70,6 +70,7 @@ func nodeFunction(q_RigidBody : RigidBody, can_reset : bool = false) -> void:
 		q_RigidBody.add_force(Autoload.get_vector3(),Autoload.get_vector3())
 	if randi() % 2 == 1:
 		q_RigidBody.add_torque(Autoload.get_vector3())
+		
 	if randi() % 2 == 1:
 		q_RigidBody.apply_central_impulse(Autoload.get_vector3())
 	if randi() % 2 == 1:

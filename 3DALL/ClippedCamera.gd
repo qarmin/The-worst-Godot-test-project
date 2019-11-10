@@ -31,13 +31,19 @@ func nodeFunction(q_ClippedCamera : ClippedCamera, can_reset : bool = false) -> 
 		q_ClippedCamera.add_exception(get_parent())
 	if randi() % 2 == 1:
 		q_ClippedCamera.add_exception_rid(RID())
+
 	if randi() % 2 == 1:
 		q_ClippedCamera.clear_exceptions()
+
+	if randi() % 2 == 1:
+		q_ClippedCamera.get_clip_offset()
 	if randi() % 2 == 1:
 		q_ClippedCamera.get_collision_mask_bit(Autoload.get_int())
+
 	if randi() % 2 == 1:
 		q_ClippedCamera.remove_exception(get_parent())
 	if randi() % 2 == 1:
 		q_ClippedCamera.remove_exception_rid(RID())
+		
 	if randi() % 2 == 1:
 		q_ClippedCamera.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())

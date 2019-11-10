@@ -17,9 +17,13 @@ func nodeFunction(q_Skeleton : Skeleton, can_reset : bool = false) -> void:
 		AutoObjects.A_Node(q_Skeleton)
 		AutoObjects.A_Spatial(q_Skeleton)
 	
+	### START TEMP
+	var temp_Skin : Skin = Skin.new()
+#?#	AutoResourcesSkin.nodeFunction(temp_Skin)
+	
+	### END TEMP
 	if randi() % 2 == 1:
-		for _i in range(10):
-			q_Skeleton.add_bone(Autoload.get_string())
+		q_Skeleton.add_bone(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Skeleton.bind_child_node_to_bone(Autoload.get_int(),Autoload.get_nodes(q_Skeleton))
 	if randi() % 2 == 1:
@@ -57,10 +61,16 @@ func nodeFunction(q_Skeleton : Skeleton, can_reset : bool = false) -> void:
 		q_Skeleton.physical_bones_start_simulation()
 	if randi() % 2 == 1:
 		q_Skeleton.physical_bones_stop_simulation()
+
+	if randi() % 2 == 1:
+		q_Skeleton.register_skin(temp_Skin)
+
 	if randi() % 2 == 1:
 		q_Skeleton.set_bone_custom_pose(Autoload.get_int(),Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_Skeleton.set_bone_disable_rest(Autoload.get_int(),Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_Skeleton.set_bone_global_pose_override(Autoload.get_int(),Autoload.get_transform(),Autoload.get_float(),Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Skeleton.set_bone_parent(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:

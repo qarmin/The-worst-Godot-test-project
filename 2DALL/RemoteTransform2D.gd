@@ -28,3 +28,7 @@ func nodeFunction(q_RemoteTransform2D : RemoteTransform2D, can_reset : bool = fa
 		q_RemoteTransform2D.set_update_rotation(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_RemoteTransform2D.set_update_scale(Autoload.get_bool())
+
+	if randi() % 2 == 1:
+		q_RemoteTransform2D.force_update_cache()
+

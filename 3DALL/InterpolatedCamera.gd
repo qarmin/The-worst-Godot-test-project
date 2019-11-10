@@ -18,10 +18,11 @@ func nodeFunction(q_InterpolatedCamera : InterpolatedCamera, can_reset : bool = 
 		AutoObjects.A_Spatial(q_InterpolatedCamera)
 	
 	if randi() % 2 == 1:
-		q_InterpolatedCamera.set_target_path(Autoload.get_string())
+		q_InterpolatedCamera.set_target_path(Autoload.get_nodepath(self))
 	if randi() % 2 == 1:
 		q_InterpolatedCamera.set_speed(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_InterpolatedCamera.set_interpolation_enabled(Autoload.get_bool())
+	
 	if randi() % 2 == 1:
 		q_InterpolatedCamera.set_target(Autoload.get_nodes(q_InterpolatedCamera))
