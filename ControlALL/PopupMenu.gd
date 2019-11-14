@@ -25,8 +25,7 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 	### END TEMP
 	
 		
-	if randi() % 2 == 1:
-		q_PopupMenu.clear()
+
 	if randi() % 2 == 1:
 		q_PopupMenu.set_hide_on_item_selection(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -35,6 +34,9 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		q_PopupMenu.set_hide_on_state_item_selection(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_PopupMenu.set_submenu_popup_delay(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_PopupMenu.set_allow_search(Autoload.get_bool())
+
 	if randi() % 2 == 1:
 		q_PopupMenu.add_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
@@ -46,9 +48,15 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_PopupMenu.add_icon_item(temp_ImageTexture, Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
+		q_PopupMenu.add_icon_radio_check_item(temp_ImageTexture, Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
+	if randi() % 2 == 1:
+		q_PopupMenu.add_icon_radio_check_shortcut(temp_ImageTexture,temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
+	if randi() % 2 == 1:
 		q_PopupMenu.add_icon_shortcut(temp_ImageTexture, temp_ShortCut, Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PopupMenu.add_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
+	if randi() % 2 == 1:
+		q_PopupMenu.add_multistate_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PopupMenu.add_radio_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
@@ -59,6 +67,10 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		q_PopupMenu.add_shortcut(temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_PopupMenu.add_submenu_item(Autoload.get_string(),Autoload.get_string())
+
+	if randi() % 2 == 1:
+		q_PopupMenu.clear()
+
 	if randi() % 2 == 1:
 		q_PopupMenu.get_item_accelerator(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -79,6 +91,7 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		q_PopupMenu.get_item_text(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PopupMenu.get_item_tooltip(Autoload.get_int())
+
 	if randi() % 2 == 1:
 		q_PopupMenu.is_hide_on_window_lose_focus()
 	if randi() % 2 == 1:
@@ -93,8 +106,10 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		q_PopupMenu.is_item_separator(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PopupMenu.is_item_shortcut_disabled(Autoload.get_int())
+
 	if randi() % 2 == 1:
 		q_PopupMenu.remove_item(Autoload.get_int())
+
 	if randi() % 2 == 1:
 		q_PopupMenu.set_hide_on_window_lose_focus(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -127,6 +142,7 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 		q_PopupMenu.set_item_text(Autoload.get_int(),Autoload.get_string())
 	if randi() % 2 == 1:
 		q_PopupMenu.set_item_tooltip(Autoload.get_int(),Autoload.get_string())
+		
 	if randi() % 2 == 1:
 		q_PopupMenu.toggle_item_checked(Autoload.get_int())
 	if randi() % 2 == 1:

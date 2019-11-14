@@ -19,5 +19,6 @@ func nodeFunction(q_WindowDialog : WindowDialog, can_reset : bool = false) -> vo
 		q_WindowDialog.set_title(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_WindowDialog.set_resizable(Autoload.get_bool())
+		
 	if randi() % 2 == 1:
 		q_WindowDialog.get_close_button()

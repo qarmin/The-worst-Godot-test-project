@@ -20,6 +20,7 @@ func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 	
 	if randi() % 2 == 1:
 		q_Popup.set_exclusive(Autoload.get_bool())
+
 	if randi() % 2 == 1:
 		q_Popup.popup(Autoload.get_rect2())
 	if Autoload.SLOW_FUNCTIONS:
@@ -32,4 +33,7 @@ func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 			q_Popup.popup_centered_minsize(Autoload.get_vector2())
 		if randi() % 2 == 1:
 			q_Popup.popup_centered_ratio(Autoload.get_float())
+
+	if randi() % 2 == 1:
+		q_Popup.set_as_minsize()
 

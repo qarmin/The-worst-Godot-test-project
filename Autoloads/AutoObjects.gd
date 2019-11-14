@@ -43,16 +43,16 @@ func _ready():
 #	use_Range = false
 #	use_Slider = false
 #	use_Separator = false
-#	use_Spatial = true
-#	use_VisualInstance = true
-#	use_GeometryInstance = true
-#	use_SpriteBase3D = true
-#	use_CSGShape = true
-#	use_CSGPrimitive = true
-#	use_Light = true
-#	use_CollisionObject = true
-#	use_PhysicsBody = true
-#	use_Joint = true
+#	use_Spatial = false
+#	use_VisualInstance = false
+#	use_GeometryInstance = false
+#	use_SpriteBase3D = false
+#	use_CSGShape = false
+#	use_CSGPrimitive = false
+#	use_Light = false
+#	use_CollisionObject = false
+#	use_PhysicsBody = false
+#	use_Joint = false
 	pass
 
 func A_Object(q_Object : Object) -> void:
@@ -629,8 +629,14 @@ func A_Control(q_Control : Control) -> void:
 	### q_Control._get_minimum_size())
 	### q_Control._gui_input(Autoload.loadA("InputEventAction.tres"))
 	### q_Control._make_custom_tooltip("Aha"))
+	### q_Control.can_drop_data(Autoload.get_vector2(), "Hehe"))
+	### q_Control.drop_data(Autoload.get_vector2()
+	### q_Control.get_drag_data(Autoload.get_vector2())
+	### q_Control.has_point(Autoload.get_vector2())
+
 	if randi() % 2 == 1:
 		q_Control.accept_event()
+
 	if randi() % 2 == 1:
 		q_Control.add_color_override(Autoload.get_string(), Autoload.get_color())
 	if randi() % 2 == 1:
@@ -643,10 +649,10 @@ func A_Control(q_Control : Control) -> void:
 		q_Control.add_shader_override(Autoload.get_string(), Autoload.loadA("VisualShader.tres"))
 	if randi() % 2 == 1:
 		q_Control.add_stylebox_override(Autoload.get_string(), Autoload.loadA("StyleBoxTexture.tres"))
-	### q_Control.can_drop_data(Autoload.get_vector2(), "Hehe"))
-	### q_Control.drop_data(Autoload.get_vector2()
+
 #	if randi() % 2 == 1: #TODO Need Control
 #		q_Control.force_drag(Autoload.get_string(), Autoload.get_nodes(q_Control))
+
 	if randi() % 2 == 1:
 		q_Control.get_begin()
 	if randi() % 2 == 1:
@@ -657,7 +663,6 @@ func A_Control(q_Control : Control) -> void:
 		q_Control.get_constant(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.get_cursor_shape(Autoload.get_vector2())
-	### q_Control.get_drag_data(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Control.get_end()
 	if randi() % 2 == 1:
@@ -682,10 +687,12 @@ func A_Control(q_Control : Control) -> void:
 		q_Control.get_stylebox(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.get_tooltip(Autoload.get_vector2())
+
 	if randi() % 2 == 1:
 		q_Control.grab_click_focus()
 	if randi() % 2 == 1:
 		q_Control.grab_focus()
+
 	if randi() % 2 == 1:
 		q_Control.has_color(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
@@ -697,23 +704,25 @@ func A_Control(q_Control : Control) -> void:
 	if randi() % 2 == 1:
 		q_Control.has_focus()
 	if randi() % 2 == 1:
+		q_Control.has_font(Autoload.get_string(),Autoload.get_string())
+	if randi() % 2 == 1:
 		q_Control.has_font_override(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.has_icon(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.has_icon_override(Autoload.get_string())
-#	if randi() % 2 == 1:
-#	### q_Control.has_point(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Control.has_shader_override(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.has_stylebox(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Control.has_stylebox_override(Autoload.get_string())
+
 	if randi() % 2 == 1:
 		q_Control.minimum_size_changed()
 	if randi() % 2 == 1:
 		q_Control.release_focus()
+
 	if randi() % 2 == 1:
 		q_Control.set_anchor(Autoload.get_int(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_bool()) #MARGIN
 	if randi() % 2 == 1:
@@ -726,7 +735,8 @@ func A_Control(q_Control : Control) -> void:
 		q_Control.set_begin(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Control.set_drag_forwarding(q_Control)
-	### q_Control.set_drag_preview(q_Control)
+	if randi() % 2 == 1:
+		q_Control.set_drag_preview(q_Control)
 	if randi() % 2 == 1:
 		q_Control.set_end(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -739,6 +749,7 @@ func A_Control(q_Control : Control) -> void:
 		q_Control.set_rotation(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Control.set_size(Autoload.get_vector2(), Autoload.get_bool())
+
 	if randi() % 2 == 1:
 		q_Control.show_modal(Autoload.get_bool())
 	### q_Control.warp_mouse(Autoload.get_vector2()) #JUST NO!!!
