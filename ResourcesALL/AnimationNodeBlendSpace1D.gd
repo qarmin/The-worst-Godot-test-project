@@ -43,8 +43,8 @@ func nodeFunction(q_AnimationNodeBlendSpace1D : AnimationNodeBlendSpace1D, can_r
 		q_AnimationNodeBlendSpace1D.get_blend_point_node( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace1D.get_blend_point_position( Autoload.get_int())
-#	BUG	if randi() % 2 == 1:
-#			q_AnimationNodeBlendSpace1D.remove_blend_point( Autoload.get_int())
+	if randi() % 2 == 1:
+		q_AnimationNodeBlendSpace1D.remove_blend_point( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace1D.set_blend_point_node( Autoload.get_int(), temp_AnimationRootNode)
 	if randi() % 2 == 1:

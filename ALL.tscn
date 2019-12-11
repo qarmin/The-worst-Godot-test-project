@@ -11,6 +11,7 @@
 [node name="2DALL" parent="." instance=ExtResource( 2 )]
 
 [node name="3DALL" parent="." instance=ExtResource( 5 )]
+visible = false
 
 [node name="ControlALL" parent="." instance=ExtResource( 4 )]
 

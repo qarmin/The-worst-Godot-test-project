@@ -26,7 +26,7 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 	AutoResourcesOpenSimplexNoise.nodeFunction(temp_OpenSimplexNoise)
 	
 	### END TEMP
-# BUG
+# BUG GH#32699
 #	if randi() % 2 == 1:
 #		q_NoiseTexture.set_width(Autoload.get_int())
 #	if randi() % 2 == 1:

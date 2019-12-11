@@ -27,7 +27,7 @@ func nodeFunction(q_Reference : Reference, can_reset : bool = false) -> void:
 #		q_Reference.reference()
 #	if randi() % 2 == 1:
 #		q_Reference.unreference()
-#
+
 #
 #func _exit_tree():
 #	q_Reference.unreference()

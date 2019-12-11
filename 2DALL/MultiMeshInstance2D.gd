@@ -27,8 +27,8 @@ func nodeFunction(q_MultiMeshInstance2D : MultiMeshInstance2D, can_reset : bool 
 	### END TEMP
 	
 		
-#	BUG	if randi() % 2 == 1:
-#			q_MultiMeshInstance2D.set_multimesh(temp_MultiMesh)
+	if randi() % 2 == 1:
+		q_MultiMeshInstance2D.set_multimesh(temp_MultiMesh)
 	if randi() % 2 == 1:
 		q_MultiMeshInstance2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:

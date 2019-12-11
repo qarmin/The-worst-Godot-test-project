@@ -212,8 +212,6 @@ script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 4 )
-frame = 1
-playing = true
 script = ExtResource( 13 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]

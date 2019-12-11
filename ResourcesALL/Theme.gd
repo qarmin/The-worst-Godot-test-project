@@ -39,8 +39,8 @@ func nodeFunction(q_Theme : Theme, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Theme.set_default_font(temp_Font)
 
-#	BUG	if randi() % 2 == 1:
-#			q_Theme.clear()
+#	if randi() % 2 == 1: #BUG GH#32702
+#		q_Theme.clear()
 	if randi() % 2 == 1:
 		q_Theme.clear_color( Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:

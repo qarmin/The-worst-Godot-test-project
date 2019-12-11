@@ -45,5 +45,5 @@ func nodeFunction(q_DynamicFont : DynamicFont, can_reset : bool = false) -> void
 
 	if randi() % 2 == 1:
 		q_DynamicFont.remove_fallback( Autoload.get_int())
-#	BUG	if randi() % 2 == 1:
-#			q_DynamicFont.set_fallback( Autoload.get_int(), Autoload.loadA("FreeMono.otf"))
+	if randi() % 2 == 1:
+		q_DynamicFont.set_fallback( Autoload.get_int(), Autoload.loadA("FreeMono.otf"))

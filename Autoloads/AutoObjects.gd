@@ -27,7 +27,7 @@ var use_PhysicsBody : bool = true
 var use_Joint : bool = true
 		
 		
-func _ready():
+func _ready() ->  void:
 #	use_Object = false
 #	use_Node = false
 #	use_Node2D = false
@@ -53,7 +53,7 @@ func _ready():
 #	use_CollisionObject = false
 #	use_PhysicsBody = false
 #	use_Joint = false
-	pass
+	return
 
 func A_Object(q_Object : Object) -> void:
 	if !use_Object:
@@ -71,7 +71,7 @@ func A_Object(q_Object : Object) -> void:
 
 		###q_Object.call(Autoload.get_string()))
 	if  Autoload.NOT_A_BUG:
-		if randi()%2 == 1: # NOT BUG
+		if randi()%2 == 1:
 			q_Object.call_deferred(Autoload.get_string())
 		if randi()%2 == 1:
 			q_Object.callv(Autoload.get_string(),Autoload.get_array())
@@ -79,7 +79,7 @@ func A_Object(q_Object : Object) -> void:
 	if randi()%2 == 1:
 		q_Object.can_translate_messages()
 	if  Autoload.NOT_A_BUG:
-		if randi()%2 == 1: # DISABLED FOR NOW, BECAUSE IT SHOW TOO MUCH ERRORS WHICH I WANT TO CHECK
+		if randi()%2 == 1:
 			q_Object.connect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string(),Autoload.get_array(),Autoload.get_int()) # ConnectFlags
 		if randi()%2 == 1:
 			q_Object.disconnect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
@@ -102,8 +102,9 @@ func A_Object(q_Object : Object) -> void:
 			q_Object.get_meta(Autoload.get_string())
 	if randi()%2 == 1:
 		q_Object.get_meta_list()
-	if randi()%2 == 1:
-		q_Object.get_method_list()
+	if Autoload.SLOW_FUNCTIONS:
+		if randi()%2 == 1:
+			q_Object.get_method_list()
 	if randi()%2 == 1:
 		q_Object.get_property_list()
 	if randi()%2 == 1:
@@ -153,7 +154,7 @@ func A_Object(q_Object : Object) -> void:
 		q_Object.set_message_translation(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_Object.set_meta(Autoload.get_string(), CubeMesh.new())
-#BUG	if randi()%2 == 1:
+#	if randi()%2 == 1: #BUG GH#33780
 #		q_Object.set_script(Reference.new())
 
 	if randi()%2 == 1:
@@ -283,9 +284,9 @@ func A_Node(q_Node : Node) -> void:
 		###q_Node.print_stray_nodes()
 		###q_Node.print_tree()
 		###q_Node.print_tree_pretty()
-	
-#	if randi()%2 == 1:
-#	NOT BUG, ENABLE WHEN YOU  WANT 	q_Node.propagate_call(Autoload.get_string(),Autoload.get_array(),Autoload.get_bool())
+		
+	if randi()%2 == 1:
+		q_Node.propagate_call(Autoload.get_string(),Autoload.get_array(),Autoload.get_bool())
 #	if randi()%2 == 1: #BUG
 #		q_Node.propagate_notification(Autoload.get_int())
 	
@@ -333,12 +334,14 @@ func A_Node(q_Node : Node) -> void:
 		q_Node.set_physics_process(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_Node.set_physics_process_internal(Autoload.get_bool())
-		###q_Node.set_process(Autoload.get_bool())
+	if randi()%2 == 1:
+		q_Node.set_process(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_Node.set_process_input(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_Node.set_process_internal(Autoload.get_bool())
-		###q_Node.set_process_priority(Autoload.get_int())
+	if randi()%2 == 1:
+		q_Node.set_process_priority(Autoload.get_int())
 	if randi()%2 == 1:
 		q_Node.set_process_unhandled_input(Autoload.get_bool())
 	if randi()%2 == 1:

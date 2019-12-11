@@ -16,14 +16,14 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ResourcesALL.tscn"
+run/main_scene="res://ALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
 
 [autoload]
 
-Autoload="*res://Autoload.gd"
+Autoload="*res://Autoloads/Autoload.gd"
 AutoObjects="*res://Autoloads/AutoObjects.gd"
 Auto2DAnimatedSprite="*res://2DALL/AnimatedSprite.gd"
 Auto2DArea2D="*res://2DALL/Area2D.gd"

@@ -5,10 +5,18 @@ const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, b
 
 const RANGE : int = 10000
 
+var frames_to_show = -1
+
 ############### FUNCTIONS
 
+func _process(delta):
+	if frames_to_show == 0:
+		get_tree().quit()
+	frames_to_show -= 1
+
+
 func get_rand_time():
-	return randf() * 0.001  + 0.001
+	return randf() * 10.001  + 10.001
 
 const MAX_NUMBER : int = 1
 const MAX_NEWLINE : int = 0

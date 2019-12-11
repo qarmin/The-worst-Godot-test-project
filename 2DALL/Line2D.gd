@@ -12,7 +12,7 @@ func alt_process(delta) -> void:
 
 func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 	pass
-## BUG
+## BUG GH#31159
 #	if randi() % 2 == 1:
 #		AutoObjects.A_Object(q_Line2D)
 #		AutoObjects.A_Node(q_Line2D)

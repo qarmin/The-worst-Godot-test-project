@@ -55,8 +55,8 @@ func nodeFunction(q_AnimationNodeBlendSpace2D : AnimationNodeBlendSpace2D, can_r
 		q_AnimationNodeBlendSpace2D.get_triangle_count()
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.get_triangle_point( Autoload.get_int(), Autoload.get_int())
-#	BUG	if randi() % 2 == 1:
-#			q_AnimationNodeBlendSpace2D.remove_blend_point( Autoload.get_int())
+	if randi() % 2 == 1:
+		q_AnimationNodeBlendSpace2D.remove_blend_point( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_AnimationNodeBlendSpace2D.remove_triangle( Autoload.get_int())
 	if randi() % 2 == 1:
