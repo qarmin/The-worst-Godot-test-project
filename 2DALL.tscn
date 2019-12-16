@@ -1,9 +1,10 @@
-[gd_scene load_steps=56 format=2]
+[gd_scene load_steps=57 format=2]
 
 [ext_resource path="res://2DALL/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
 [ext_resource path="res://2DALL/2DALL.gd" type="Script" id=4]
+[ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://RES/Sprite.png" type="Texture" id=6]
 [ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
 [ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
@@ -58,24 +59,14 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [  ],
-"loop": true,
-"name": "New Anim",
-"speed": 5.0
-}, {
-"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "New Anim 4",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 6 ), ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 2 ) ],
 "loop": true,
 "name": "New Anim 7",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "New Anim 2",
+"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
+"loop": false,
+"name": "New Anim 3",
 "speed": 5.0
 }, {
 "frames": [  ],
@@ -85,17 +76,27 @@ animations = [ {
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": true,
-"name": "New Anim 5",
+"name": "New Anim 4",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 3 ), SubResource( 2 ), SubResource( 1 ) ],
-"loop": false,
-"name": "New Anim 3",
+"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "New Anim 2",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 6 ), SubResource( 3 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
 "loop": false,
 "name": "New Anim 6",
+"speed": 5.0
+}, {
+"frames": [  ],
+"loop": true,
+"name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 6 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "New Anim 5",
 "speed": 5.0
 } ]
 
@@ -145,6 +146,9 @@ _data = {
 
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 4 )
@@ -408,6 +412,7 @@ node_b = NodePath("../Area2D")
 script = ExtResource( 19 )
 
 [node name="Light2D" type="Light2D" parent="."]
+texture = ExtResource( 5 )
 script = ExtResource( 20 )
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="."]
