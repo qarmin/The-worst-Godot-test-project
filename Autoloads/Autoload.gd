@@ -3,7 +3,7 @@ extends Node
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, but shows too much spam in console
 
-const RANGE : int = 10000
+const RANGE : int = 1
 
 var frames_to_show = -1
 
@@ -18,10 +18,16 @@ func _process(delta):
 func get_rand_time():
 	return randf() * 1.001  + 3.001
 
-const MAX_NUMBER : int = 1
-const MAX_NEWLINE : int = 0
+const MAX_NUMBER : int = 1525
+const MAX_NEWLINE : int = 25
 
 var temp_string : String
+
+func get_not_zero() -> int:
+	var not_zero : int = get_int()
+	if not_zero == 0:
+		not_zero += 1
+	return not_zero
 
 func get_string() -> String:
 	temp_string = ""

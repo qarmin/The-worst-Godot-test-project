@@ -65,6 +65,7 @@ script = ExtResource( 7 )
 script = ExtResource( 12 )
 
 [node name="SkeletonIK" type="SkeletonIK" parent="."]
+process_priority = 1
 target = Transform( 2.49, 1.02, -0.07, 1.15, 1, -1.97, -0.7, -1.01, 2.42, -0.7, -0.59, -0.29 )
 magnet = Vector3( 2.8, -3.69, -0.95 )
 script = ExtResource( 10 )
