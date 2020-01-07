@@ -236,9 +236,10 @@ material = SubResource( 6 )
 script = ExtResource( 20 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
+transform = Transform( 1, 0, 0, 0, 0.745602, 0, 0, 0, 1, 0, 0, 0 )
 invert_faces = true
-radius = 68.978
-height = 23.0
+radius = 123.75
+height = 45.8309
 sides = 3
 cone = true
 material = SubResource( 7 )

@@ -17,10 +17,10 @@ func alt_process(delta) -> void:
 #
 #		var q_ResourceFormatLoader : ResourceFormatLoader = ResourceFormatLoader.new()
 #
-#		q_ResourceFormatLoader.get_dependencies( "res://Groźny.txtAutoload.get_string())
+#		q_ResourceFormatLoader.get_dependencies( "res://TEMP/Groźny.txt",Autoload.get_string())
 #		q_ResourceFormatLoader.get_recognized_extensions()
-#		q_ResourceFormatLoader.get_resource_type( "res://Groźny.txt" )
+#		q_ResourceFormatLoader.get_resource_type( "res://TEMP/Groźny.txt" )
 #		q_ResourceFormatLoader.handles_type( Autoload.get_string())
-#		q_ResourceFormatLoader.load( "res://Groźny.txtAutoload.get_string())
-#		q_ResourceFormatLoader.rename_dependencies( "res://Groźny.txtAutoload.get_string())
+#		q_ResourceFormatLoader.load( "res://TEMP/Groźny.txt",Autoload.get_string())
+#		q_ResourceFormatLoader.rename_dependencies( "res://TEMP/Groźny.txt",Autoload.get_string())
 #

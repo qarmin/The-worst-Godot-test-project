@@ -1,7 +1,0 @@
-[gd_resource type="ProxyTexture" load_steps=2 format=2]
-
-[ext_resource path="res://RES/Sprite.png" type="Texture" id=1]
-
-[resource]
-flags = 23
-base = ExtResource( 1 )

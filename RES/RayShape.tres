@@ -1,6 +1,0 @@
-[gd_resource type="RayShape" format=2]
-
-[resource]
-margin = 1.228
-length = 39.4
-slips_on_slope = true

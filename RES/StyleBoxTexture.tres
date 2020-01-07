@@ -2,6 +2,8 @@
 
 [ext_resource path="res://RES/Sprite.png" type="Texture" id=2]
 
+
+
 [resource]
 content_margin_right = 329.0
 content_margin_top = 129.0

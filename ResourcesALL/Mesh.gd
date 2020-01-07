@@ -30,10 +30,10 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 #		q_Mesh.create_convex_shape()
 #	if randi() % 2 == 1:
 #		q_Mesh.create_outline( Autoload.get_float())
-	if randi() % 2 == 1:
-		q_Mesh.create_trimesh_shape()
-	if randi() % 2 == 1:
-		q_Mesh.generate_triangle_mesh()
+#	if randi() % 2 == 1: #BUG GH#33197
+#		q_Mesh.create_trimesh_shape()
+#	if randi() % 2 == 1: #BUG GH#33197
+#		q_Mesh.generate_triangle_mesh()
 #	if randi() % 2 == 1: #BUG NEW
 #		q_Mesh.get_faces()
 	if randi() % 2 == 1:

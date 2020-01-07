@@ -1,5 +1,0 @@
-[gd_resource type="CircleShape2D" format=2]
-
-[resource]
-custom_solver_bias = 0.51
-radius = 255.0

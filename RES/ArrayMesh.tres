@@ -1,5 +1,0 @@
-[gd_resource type="ArrayMesh" format=2]
-
-[resource]
-lightmap_size_hint = Vector2( 8.87, 1.32 )
-custom_aabb = AABB( 0.73, -5.31, 3.25, 1.21, 8.65, 1.11 )

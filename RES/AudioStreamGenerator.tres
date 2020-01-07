@@ -1,5 +1,0 @@
-[gd_resource type="AudioStreamGenerator" format=2]
-
-[resource]
-mix_rate = 3535.0
-buffer_length = 10.0

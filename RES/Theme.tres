@@ -2,5 +2,7 @@
 
 [ext_resource path="res://RES/DynamicFont.tres" type="DynamicFont" id=1]
 
+
+
 [resource]
 default_font = ExtResource( 1 )

@@ -11,6 +11,8 @@ onready var counter : float = Autoload.get_rand_time()
 func _ready() -> void:
 	if !is_visible():
 		queue_free()
+	func_ready()
+		
 			
 func _process(delta) -> void:
 	counter -= delta
@@ -151,9 +153,8 @@ enum {TILE, MILE}
 enum State {STATE_IDLE, STATE_JUMP = 5, STATE_SHOOT}
 const Roman = {IDLE = 0, JUMP = 5, SHOOT = 6}
 const TITLE = 0
+const TITLE2 : int = 0
 var describtion
-
-
 
 
 func qq():
@@ -161,3 +162,29 @@ func qq():
 
 func qqr(var stat : String = "TQW") -> String:
 	return Autoload.get_string()
+	
+static func ff(var rr : String = "FA") -> String:
+	return Autoload.get_string()
+	
+class ram:
+	var sa : int = 0
+	var qq
+#	static func rr() -> ram:
+#		return ram.new()
+	static func Wr() -> Node:
+		return Node.new()
+	static func rqq() -> String:
+		return "as"
+	func roman() ->  String:
+		return "wqr"
+	func wykop() ->  String:
+		return "wqr"
+
+func func_ready() -> void:
+	var rr : ram = ram.new()
+	rr.sa = 125
+	rr.qq  = "qw"
+#	rr.rr()
+	rr.rqq()
+	rr.roman()
+	rr.wykop()

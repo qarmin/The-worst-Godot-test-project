@@ -26,16 +26,15 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 	AutoResourcesOpenSimplexNoise.nodeFunction(temp_OpenSimplexNoise)
 	
 	### END TEMP
-# BUG GH#32699
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_width(Autoload.get_int())
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_height(Autoload.get_int())
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_seamless(Autoload.get_bool())
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_as_normalmap(Autoload.get_bool())
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_bump_strength(Autoload.get_float())
-#	if randi() % 2 == 1:
-#		q_NoiseTexture.set_noise(temp_OpenSimplexNoise)
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_width(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_height(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_seamless(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_as_normalmap(Autoload.get_bool())
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_bump_strength(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_NoiseTexture.set_noise(temp_OpenSimplexNoise)

@@ -18,8 +18,8 @@ func _process(delta):
 func get_rand_time():
 	return randf() * 1.001  + 3.001
 
-const MAX_NUMBER : int = 1525
-const MAX_NEWLINE : int = 25
+const MAX_NUMBER : int = 15
+const MAX_NEWLINE : int = 0
 
 var temp_string : String
 
