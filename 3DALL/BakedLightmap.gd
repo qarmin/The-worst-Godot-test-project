@@ -45,8 +45,8 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 		q_BakedLightmap.set_capture_cell_size(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_BakedLightmap.set_image_path("res://TEMP/Autoload.qqq")
-#	if randi() % 2 == 1: #BUG NEW
-#		q_BakedLightmap.set_light_data(temp_BakedLightmapData) 
+	if randi() % 2 == 1:
+		q_BakedLightmap.set_light_data(temp_BakedLightmapData) 
 
 		###q_BakedLightmap.bake(q_BakedLightmap,Autoload.get_bool()))
 		###q_BakedLightmap.debug_bake()

@@ -18,8 +18,6 @@ func nodeFunction(q_VideoPlayer : VideoPlayer, can_reset : bool = false) -> void
 		AutoObjects.A_CanvasItem(q_VideoPlayer)
 		AutoObjects.A_Control(q_VideoPlayer)
 		
-	return #BUG NEW
-		
 	### START TEMP
 	var temp_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
 #?#	AutoResourcesVideoStreamWebm.nodeFunction(temp_VideoStreamWebm)

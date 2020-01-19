@@ -43,7 +43,7 @@ func nodeFunction(q_ImageTexture : ImageTexture, can_reset : bool = false) -> vo
 		if randi() % 2 == 1:
 			q_ImageTexture.load("res://icon.png")
 
-#	if randi() % 2 == 1: #BUG NEW
-#		q_ImageTexture.set_data(temp_Image)
+	if randi() % 2 == 1:
+		q_ImageTexture.set_data(temp_Image)
 	if randi() % 2 == 1:
 		q_ImageTexture.set_size_override(Autoload.get_vector2())

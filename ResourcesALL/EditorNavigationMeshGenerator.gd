@@ -31,8 +31,8 @@ func nodeFunction(q_EditorNavigationMeshGenerator : EditorNavigationMeshGenerato
 	### END TEMP
 
 
-#	if randi() % 2 == 1:
-		#BUG q_EditorNavigationMeshGenerator.bake( temp_NavigationMesh, temp_Node)
+	if randi() % 2 == 1:
+		 q_EditorNavigationMeshGenerator.bake( temp_NavigationMesh, temp_Node)
 	if randi() % 2 == 1:
 		q_EditorNavigationMeshGenerator.clear(temp_NavigationMesh)
 		

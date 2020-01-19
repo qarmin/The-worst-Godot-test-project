@@ -13,34 +13,34 @@ func alt_process(delta) -> void:
 		nodeFunction(q_Theme,true)
 
 func nodeFunction(q_Theme : Theme, can_reset : bool = false) -> void:
-	
+
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Theme = Theme.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Theme)
-		
+
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
 	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
+
 	var temp_Font : Font = DynamicFont.new()
 	AutoResourcesFont.nodeFunction(temp_Font)
-	
+
 	var temp_StyleBoxFlat : StyleBoxFlat = StyleBoxFlat.new()
 	AutoResourcesStyleBoxFlat.nodeFunction(temp_StyleBoxFlat)
-	
+
 	var temp_Theme : Theme = Theme.new()
 #	AutoResourcesTheme.nodeFunction(temp_Theme) #LOOP
 	temp_Theme = load("res://RES/Theme.tres")
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:
 		q_Theme.set_default_font(temp_Font)
 
-#	if randi() % 2 == 1: #BUG GH#32702
-#		q_Theme.clear()
+	if randi() % 2 == 1:
+		q_Theme.clear()
 	if randi() % 2 == 1:
 		q_Theme.clear_color( Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:

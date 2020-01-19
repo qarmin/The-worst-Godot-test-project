@@ -64,8 +64,8 @@ func nodeFunction(q_VisualShaderNodeGroupBase : VisualShaderNodeGroupBase, can_r
 	if randi() % 2 == 1:
 		q_VisualShaderNodeGroupBase.remove_output_port( Autoload.get_int())
 
-#	BUG	if randi() % 2 == 1:
-#			q_VisualShaderNodeGroupBase.set_control( temp_Control,Autoload.get_int())
+	if randi() % 2 == 1:
+		q_VisualShaderNodeGroupBase.set_control( temp_Control,Autoload.get_int())
 	if randi() % 2 == 1:
 		q_VisualShaderNodeGroupBase.set_input_port_name( Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:

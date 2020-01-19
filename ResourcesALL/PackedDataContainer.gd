@@ -19,8 +19,8 @@ extends Node2D
 #			q_PackedDataContainer = PackedDataContainer.new()
 #	if randi() % 2 == 1:
 #		AutoResourcesResource.nodeFunction(q_PackedDataContainer)
-		
-# BUG	if randi() % 2 == 1:
+#
+#	if randi() % 2 == 1:
 #		q_PackedDataContainer.pack(String(Autoload.get_string()))
 #	if randi() % 2 == 1:
 #		q_PackedDataContainer.size()

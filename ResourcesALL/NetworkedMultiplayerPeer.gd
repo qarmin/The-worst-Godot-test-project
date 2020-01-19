@@ -29,8 +29,8 @@ func nodeFunction(q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer, can_res
 
 	if randi() % 2 == 1:
 		q_NetworkedMultiplayerPeer.get_connection_status()
-#	if randi() % 2 == 1: #BUG
-#		q_NetworkedMultiplayerPeer.get_packet_peer()
+	if randi() % 2 == 1:
+		q_NetworkedMultiplayerPeer.get_packet_peer()
 	if randi() % 2 == 1:
 		q_NetworkedMultiplayerPeer.get_unique_id()
 	if randi() % 2 == 1:

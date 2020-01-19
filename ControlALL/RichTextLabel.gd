@@ -53,8 +53,8 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 		q_RichTextLabel.set_override_selected_font_color(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_RichTextLabel.add_image(temp_ImageTexture)
-#	BUG	if randi() % 2 == 1:
-#			q_RichTextLabel.add_text(Autoload.get_string())
+	if randi() % 2 == 1:
+		q_RichTextLabel.add_text(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_RichTextLabel.append_bbcode(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -95,7 +95,7 @@ func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> 
 		q_RichTextLabel.push_underline()
 	if randi() % 2 == 1:
 		q_RichTextLabel.scroll_to_line(Autoload.get_int())
-#	if randi() % 2 == 1: #BUG GH#32736
-#		q_RichTextLabel.remove_line(Autoload.get_int()))
+	if randi() % 2 == 1:
+		q_RichTextLabel.remove_line(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_RichTextLabel.set_table_column_expand(Autoload.get_int(), Autoload.get_bool(), Autoload.get_int())
