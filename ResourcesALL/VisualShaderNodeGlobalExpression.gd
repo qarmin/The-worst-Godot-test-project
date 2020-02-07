@@ -19,6 +19,3 @@ func nodeFunction(q_VisualShaderNodeGlobalExpression : VisualShaderNodeGlobalExp
 			q_VisualShaderNodeGlobalExpression = VisualShaderNodeGlobalExpression.new()
 	if randi() % 2 == 1:
 		AutoResourcesVisualShaderNodeExpression.nodeFunction(q_VisualShaderNodeGlobalExpression)
-
-	if randi() % 2 == 1:
-		q_VisualShaderNodeGlobalExpression.editable = Autoload.get_bool()

@@ -23,8 +23,6 @@ func nodeFunction(q_VisualShaderNode : VisualShaderNode, can_reset : bool = fals
 		
 	if randi() % 2 == 1:
 		q_VisualShaderNode.set_output_port_for_preview(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_VisualShaderNode._set_default_input_values(Autoload.get_array())
 
 	if randi() % 2 == 1:
 		q_VisualShaderNode.get_input_port_default_value( Autoload.get_int())

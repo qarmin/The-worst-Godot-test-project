@@ -73,8 +73,6 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_spread(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_flatness(Autoload.get_float())
-	if randi() % 2 == 1:
 		q_CPUParticles2D.set_gravity(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set("local_coords", Autoload.get_bool())
