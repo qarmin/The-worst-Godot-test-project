@@ -22,6 +22,3 @@ func nodeFunction(q_VisualShaderNodeExpression : VisualShaderNodeExpression, can
 
 	if randi() % 2 == 1:
 		q_VisualShaderNodeExpression.set_expression(Autoload.get_string())
-
-	if randi() % 2 == 1:
-		q_VisualShaderNodeExpression.build()
