@@ -1,7 +1,7 @@
 [gd_scene load_steps=454 format=2]
 
 [ext_resource path="res://ResourcesALL/GDScript.gd" type="Script" id=1]
-[ext_resource path="res://ResourcesALL/ResourcesALL.gd" type="Script" id=2]
+[ext_resource path="res://MainScripts/ResourcesALL.gd" type="Script" id=2]
 [ext_resource path="res://ResourcesALL/VisualScriptYieldSignal.gd" type="Script" id=3]
 [ext_resource path="res://ResourcesALL/ARVRInterface.gd" type="Script" id=4]
 [ext_resource path="res://ResourcesALL/Reference.gd" type="Script" id=5]
@@ -1690,7 +1690,7 @@ script = ExtResource( 351 )
 [node name="SceneTree\?" type="Node2D" parent="."]
 script = ExtResource( 397 )
 
-[node name="OS_CANT" type="Node2D" parent="."]
+[node name="OS" type="Node2D" parent="."]
 script = ExtResource( 396 )
 
 [node name="Performance_CANT" type="Node2D" parent="."]
@@ -1714,7 +1714,7 @@ script = ExtResource( 421 )
 [node name="Physics2DServerSW_CANT" type="Node2D" parent="."]
 script = ExtResource( 317 )
 
-[node name="ProjectSettings_JUST_DONT" type="Node2D" parent="."]
+[node name="ProjectSettings" type="Node2D" parent="."]
 script = ExtResource( 406 )
 
 [node name="ResourceLoader_CANT" type="Node2D" parent="."]
@@ -1763,31 +1763,24 @@ script = ExtResource( 416 )
 script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 347 )
 
 [node name="PoolIntArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 349 )
 
 [node name="PoolRealArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 320 )
 
 [node name="PoolStringArray" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 363 )
 
 [node name="PoolVector2Array" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 418 )
 
 [node name="PoolVector3Array" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 419 )
 
 [node name="Quat" type="Node2D" parent="."]

@@ -3,7 +3,7 @@
 [ext_resource path="res://RES/DynamicFont.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ControlALL/PopupMenu.gd" type="Script" id=2]
 [ext_resource path="res://ControlALL/Popup.gd" type="Script" id=6]
-[ext_resource path="res://ControlALL/ControlALL.gd" type="Script" id=7]
+[ext_resource path="res://MainScripts/ControlALL.gd" type="Script" id=7]
 [ext_resource path="res://ControlALL/WindowDialog.gd" type="Script" id=8]
 [ext_resource path="res://ControlALL/FileDialog.gd" type="Script" id=9]
 [ext_resource path="res://ControlALL/PopupPanel.gd" type="Script" id=10]
@@ -56,6 +56,8 @@
 [ext_resource path="res://ControlALL/TextureRect.gd" type="Script" id=57]
 [ext_resource path="res://ControlALL/VideoPlayer.gd" type="Script" id=58]
 [ext_resource path="res://ControlALL/Tree.gd" type="Script" id=59]
+
+
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )

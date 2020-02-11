@@ -51,10 +51,11 @@ func alt_process(delta) -> void:
 			decimals(Autoload.get_float())
 		if randi() % 2 == 1:
 			dectime(Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
-
+	
 		if randi() % 2 == 1:
 			deg2rad(Autoload.get_float())
-			#dict2inst(Autoload.get_dictionary())
+		
+			#dict2inst()
 		if randi() % 2 == 1:
 			ease(Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
@@ -72,7 +73,8 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			hash(Autoload.get_string())
 
-			#inst2dict(Texture.new())
+		if randi() % 2 == 1:
+			inst2dict(Texture.new())
 		if randi() % 2 == 1:
 			instance_from_id(Autoload.get_int())
 
@@ -112,7 +114,7 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			pow(Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:
-			preload("res://RES/Sprite.png")
+			preload("res://icon.png")
 
 		if randi() % 2 == 1:
 			print(Autoload.get_string())

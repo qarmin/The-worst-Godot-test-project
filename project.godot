@@ -12,7 +12,7 @@ _global_script_classes=[ {
 "base": "Node2D",
 "class": "Operators",
 "language": "GDScript",
-"path": "res://Operators.gd"
+"path": "res://MainScripts/Operators.gd"
 } ]
 _global_script_class_icons={
 "Operators": ""
@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ALL.tscn"
+run/main_scene="res://ResourcesALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -638,7 +638,7 @@ AutoOtherAnimationTree="*res://OtherALL/AnimationTree.gd"
 AutoOtherAudioStreamPlayer="*res://OtherALL/AudioStreamPlayer.gd"
 AutoOtherCanvasLayer="*res://OtherALL/CanvasLayer.gd"
 AutoOtherHTTPRequest="*res://OtherALL/HTTPRequest.gd"
-AutoOtherOtherALL="*res://OtherALL/OtherALL.gd"
+AutoOtherOtherALL="*res://MainScripts/OtherALL.gd"
 AutoOtherParallaxBackground="*res://OtherALL/ParallaxBackground.gd"
 AutoOtherResourcePreloader="*res://OtherALL/ResourcePreloader.gd"
 AutoOtherSkeletonIK="*res://OtherALL/SkeletonIK.gd"

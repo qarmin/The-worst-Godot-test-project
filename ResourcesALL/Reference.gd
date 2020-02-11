@@ -20,13 +20,13 @@ func nodeFunction(q_Reference : Reference, can_reset : bool = false) -> void:
 #			q_Reference = Reference.new()
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_Reference)
-# BUG NEW
-#	if randi() % 2 == 1:
-#		q_Reference.init_ref()
-#	if randi() % 2 == 1:
-#		q_Reference.reference()
-#	if randi() % 2 == 1:
-#		q_Reference.unreference()
+# Don't use, it is similar to Node.free and Node.new()
+###	if randi() % 2 == 1:
+###		q_Reference.init_ref()
+###	if randi() % 2 == 1:
+###		q_Reference.reference()
+###	if randi() % 2 == 1:
+###		q_Reference.unreference()
 
 #
 #func _exit_tree():

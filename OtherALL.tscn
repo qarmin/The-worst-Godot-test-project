@@ -1,6 +1,6 @@
 [gd_scene load_steps=18 format=2]
 
-[ext_resource path="res://OtherALL/OtherALL.gd" type="Script" id=1]
+[ext_resource path="res://MainScripts/OtherALL.gd" type="Script" id=1]
 [ext_resource path="res://OtherALL/CanvasLayer.gd" type="Script" id=2]
 [ext_resource path="res://OtherALL/Tween.gd" type="Script" id=3]
 [ext_resource path="res://OtherALL/WorldEnvironment.gd" type="Script" id=4]
@@ -13,6 +13,7 @@
 [ext_resource path="res://OtherALL/Viewport.gd" type="Script" id=11]
 [ext_resource path="res://OtherALL/ResourcePreloader.gd" type="Script" id=12]
 [ext_resource path="res://OtherALL/ParallaxBackground.gd" type="Script" id=13]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"

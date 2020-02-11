@@ -3,7 +3,7 @@
 [ext_resource path="res://2DALL/Area2D.gd" type="Script" id=1]
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
-[ext_resource path="res://2DALL/2DALL.gd" type="Script" id=4]
+[ext_resource path="res://MainScripts/2DALL.gd" type="Script" id=4]
 [ext_resource path="res://icon.png" type="Texture" id=5]
 [ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
 [ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
@@ -41,6 +41,8 @@
 [ext_resource path="res://2DALL/NavigationPolygonInstance.gd" type="Script" id=43]
 [ext_resource path="res://2DALL/ParallaxLayer.gd" type="Script" id=44]
 [ext_resource path="res://2DALL/PathFollow2D.gd" type="Script" id=45]
+
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {

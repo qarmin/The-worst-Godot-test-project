@@ -1,6 +1,6 @@
 [gd_scene load_steps=90 format=2]
 
-[ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
+[ext_resource path="res://MainScripts/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
 [ext_resource path="res://3DALL/ARVRController.gd" type="Script" id=3]
 [ext_resource path="res://3DALL/ARVRCamera.gd" type="Script" id=4]
@@ -62,6 +62,8 @@
 [ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
 [ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
 [ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=62]
+
+
 
 [sub_resource type="StreamTexture" id=1]
 flags = 23
