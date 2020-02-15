@@ -17,8 +17,8 @@ func nodeFunction(q_LargeTexture : LargeTexture, can_reset : bool = false) -> vo
 	if can_reset:
 		if randi() % 2 == 1:
 			q_LargeTexture = LargeTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_LargeTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_LargeTexture)
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()

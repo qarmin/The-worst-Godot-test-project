@@ -20,9 +20,9 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_MeshDataTool)
 		
-	### START TEMP
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+	### START TEMP 
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
+#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	var temp_ArrayMesh : ArrayMesh = ArrayMesh.new()
 	AutoResourcesArrayMesh.nodeFunction(temp_ArrayMesh)
@@ -87,8 +87,8 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 		q_MeshDataTool.set_edge_meta( Autoload.get_int(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_face_meta( Autoload.get_int(), Autoload.get_float())
-	if randi() % 2 == 1:
-		q_MeshDataTool.set_material( temp_SpatialMaterial)
+#	if randi() % 2 == 1: MISSING
+#		q_MeshDataTool.set_material( temp_SpatialMaterial)
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_vertex( Autoload.get_int(), Autoload.get_vector3())
 	if randi() % 2 == 1:

@@ -59,8 +59,8 @@ func nodeFunction(q_Light2D : Light2D, can_reset : bool = false) -> void:
 		q_Light2D.set_shadow_color(Autoload.get_color())
 	if randi() % 2 == 1:
 		q_Light2D.set_shadow_buffer_size(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_Light2D.set_shadow_gradient_length(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Light2D.set_shadow_gradient_length(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Light2D.set_shadow_filter(Autoload.get_int()) #ShadowFilter
 	if randi() % 2 == 1:

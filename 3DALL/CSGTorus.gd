@@ -22,8 +22,8 @@ func nodeFunction(q_CSGTorus : CSGTorus, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGPrimitive(q_CSGTorus)
 		
 	### START TEMP
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
+##?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 		
@@ -37,5 +37,5 @@ func nodeFunction(q_CSGTorus : CSGTorus, can_reset : bool = false) -> void:
 		q_CSGTorus.set_ring_sides(Autoload.get_inti(5))
 	if randi() % 2 == 1:
 		q_CSGTorus.set_smooth_faces(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_CSGTorus.set_material(temp_SpatialMaterial)
+#	if randi() % 2 == 1: #MISSING
+#		q_CSGTorus.set_material(temp_SpatialMaterial)

@@ -17,8 +17,8 @@ func nodeFunction(q_StreamTexture : StreamTexture, can_reset : bool = false) -> 
 	if can_reset:
 		if randi() % 2 == 1:
 			q_StreamTexture = StreamTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_StreamTexture)
+#	if randi() % 2 == 1: #MISSING
+#		AutoResourcesTexture.nodeFunction(q_StreamTexture)
 
 	if randi() % 2 == 1:
 		q_StreamTexture.load("res://RES/Sprite.png")

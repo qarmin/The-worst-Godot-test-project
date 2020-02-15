@@ -21,8 +21,8 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 		AutoResourcesResource.nodeFunction(q_Mesh)
 		
 	### START TEMP
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() MISSING
+#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 
@@ -44,5 +44,5 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 		q_Mesh.surface_get_blend_shape_arrays( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Mesh.surface_get_material( Autoload.get_int())
-	if randi() % 2 == 1:
-		q_Mesh.surface_set_material( Autoload.get_int(), temp_SpatialMaterial)
+#	if randi() % 2 == 1: MISSING
+#		q_Mesh.surface_set_material( Autoload.get_int(), temp_SpatialMaterial)

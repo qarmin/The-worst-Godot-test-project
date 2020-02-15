@@ -17,8 +17,8 @@ func nodeFunction(q_ProxyTexture : ProxyTexture, can_reset : bool = false) -> vo
 	if can_reset:
 		if randi() % 2 == 1:
 			q_ProxyTexture = ProxyTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_ProxyTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_ProxyTexture)
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()

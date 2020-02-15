@@ -48,8 +48,6 @@ func alt_process(delta) -> void:
 			db2linear(Autoload.get_float())
 
 		if randi() % 2 == 1:
-			decimals(Autoload.get_float())
-		if randi() % 2 == 1:
 			dectime(Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 	
 		if randi() % 2 == 1:

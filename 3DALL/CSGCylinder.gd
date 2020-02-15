@@ -22,8 +22,8 @@ func nodeFunction(q_CSGCylinder : CSGCylinder, can_reset : bool = false) -> void
 		AutoObjects.A_CSGPrimitive(q_CSGCylinder)
 		
 	### START TEMP
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MIISSING
+##?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 	
@@ -37,5 +37,5 @@ func nodeFunction(q_CSGCylinder : CSGCylinder, can_reset : bool = false) -> void
 		q_CSGCylinder.set_cone(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_CSGCylinder.set_smooth_faces(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_CSGCylinder.set_material(temp_SpatialMaterial)
+#	if randi() % 2 == 1: #MISSING
+#		q_CSGCylinder.set_material(temp_SpatialMaterial)

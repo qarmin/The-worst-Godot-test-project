@@ -17,8 +17,8 @@ func nodeFunction(q_CurveTexture : CurveTexture, can_reset : bool = false) -> vo
 	if can_reset:
 		if randi() % 2 == 1:
 			q_CurveTexture = CurveTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_CurveTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_CurveTexture)
 		
 	### START TEMP
 	var temp_Curve : Curve = Curve.new()

@@ -23,8 +23,8 @@ func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> vo
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
+##?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 	
@@ -46,8 +46,8 @@ func nodeFunction(q_MeshInstance : MeshInstance, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_MeshInstance.get_surface_material_count()
 		
-	if randi() % 2 == 1:
-		q_MeshInstance.set_surface_material(Autoload.get_int(), temp_SpatialMaterial)
+#	if randi() % 2 == 1: #MISSING
+#		q_MeshInstance.set_surface_material(Autoload.get_int(), temp_SpatialMaterial)
 
 #####################
 	if randi() % 2 == 1:

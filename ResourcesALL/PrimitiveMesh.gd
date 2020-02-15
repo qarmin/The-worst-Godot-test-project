@@ -22,13 +22,13 @@ func nodeFunction(q_PrimitiveMesh : PrimitiveMesh, can_reset : bool = false) -> 
 		
 	### START TEMP
 	
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
+#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 
-	if randi() % 2 == 1:
-		q_PrimitiveMesh.set_material(temp_SpatialMaterial)
+#	if randi() % 2 == 1: #MISSING
+#		q_PrimitiveMesh.set_material(temp_SpatialMaterial)
 	if randi() % 2 == 1:
 		q_PrimitiveMesh.set_custom_aabb(Autoload.get_aabb())
 #	if randi() % 2 == 1: #BUG NEW

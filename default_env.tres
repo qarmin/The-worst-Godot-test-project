@@ -4,12 +4,11 @@
 
 [resource]
 background_mode = 2
-background_sky = SubResource( 1 )
-background_sky_custom_fov = 51.7
-background_sky_orientation = Basis( 4.996, -0.318, -0.241, 0.235, -0.059, 0.97, -0.323, -0.946, 0.021 )
+sky = SubResource( 1 )
+sky_custom_fov = 51.7
 ambient_light_color = Color( 0.647059, 0.643137, 0.643137, 1 )
-ambient_light_energy = 4.01
 ambient_light_sky_contribution = 0.18
+ambient_light_energy = 4.01
 fog_enabled = true
 fog_color = Color( 0.286275, 0.364706, 0.443137, 1 )
 fog_sun_amount = 0.93
@@ -22,16 +21,6 @@ fog_height_enabled = true
 fog_height_min = 84.7
 fog_height_max = 4000.0
 fog_height_curve = 0.406126
-dof_blur_far_enabled = true
-dof_blur_far_distance = 12.98
-dof_blur_far_transition = 213.92
-dof_blur_far_amount = 1.0
-dof_blur_far_quality = 0
-dof_blur_near_enabled = true
-dof_blur_near_distance = 7.46
-dof_blur_near_transition = 0.08
-dof_blur_near_amount = 0.5
-dof_blur_near_quality = 0
 glow_enabled = true
 glow_intensity = 2.73
 glow_strength = 0.41

@@ -33,8 +33,6 @@ func nodeFunction(q_Color : Color, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Color.from_hsv( Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Color.gray()
-	if randi() % 2 == 1:
 		q_Color.inverted()
 	if randi() % 2 == 1:
 		q_Color.lightened( Autoload.get_float())

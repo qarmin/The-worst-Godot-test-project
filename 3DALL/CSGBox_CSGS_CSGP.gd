@@ -22,8 +22,8 @@ func nodeFunction(q_CSGBox : CSGBox, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGPrimitive(q_CSGBox)
 		
 	### START TEMP
-	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new()
-#?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
+##?#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
 	
 	### END TEMP
 	
@@ -34,5 +34,5 @@ func nodeFunction(q_CSGBox : CSGBox, can_reset : bool = false) -> void:
 		q_CSGBox.set_height(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_CSGBox.set_depth(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_CSGBox.set_material(temp_SpatialMaterial)
+#	if randi() % 2 == 1: #MISSING
+#		q_CSGBox.set_material(temp_SpatialMaterial)

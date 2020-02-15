@@ -4,7 +4,7 @@
 [ext_resource path="res://2DALL/KinematicBody2D.gd" type="Script" id=2]
 [ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
 [ext_resource path="res://MainScripts/2DALL.gd" type="Script" id=4]
-[ext_resource path="res://icon.png" type="Texture" id=5]
+[ext_resource path="res://icon.png" type="Texture2D" id=5]
 [ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
 [ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
 [ext_resource path="res://2DALL/AudioStreamPlayer2D.gd" type="Script" id=11]
@@ -42,8 +42,6 @@
 [ext_resource path="res://2DALL/ParallaxLayer.gd" type="Script" id=44]
 [ext_resource path="res://2DALL/PathFollow2D.gd" type="Script" id=45]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 5 ) ],
@@ -66,7 +64,7 @@ animations = [ {
 [sub_resource type="OccluderPolygon2D" id=5]
 polygon = PoolVector2Array( 154.731, -96.6275, 387.172, 24.2205, -101.105, 208.947, -186.368, 85.7895, -29.5522, -93.1285, 96.4138, -123.454, 143.068, -27.8128, 63.7559, 96.9867, -58.7109, 98.1531, -124.027, 87.6559, -94.8678, 130.811, -65.709, 134.31, -20.2213, 121.48, 63.7559, 115.648, 168.728, 23.5066 )
 
-[sub_resource type="SpatialMaterial" id=6]
+[sub_resource type="StandardMaterial3D" id=6]
 
 [sub_resource type="CylinderMesh" id=7]
 lightmap_size_hint = Vector2( 0, -5.04 )
@@ -104,10 +102,8 @@ _data = {
 }
 
 [sub_resource type="StreamTexture" id=13]
-flags = 23
 
 [sub_resource type="StreamTexture" id=14]
-flags = 23
 
 [node name="2DALL" type="Node2D"]
 script = ExtResource( 4 )

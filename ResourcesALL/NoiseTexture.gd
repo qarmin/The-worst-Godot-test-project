@@ -17,8 +17,8 @@ func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> vo
 	if can_reset:
 		if randi() % 2 == 1:
 			q_NoiseTexture = NoiseTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_NoiseTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_NoiseTexture)
 		
 	### START TEMP
 	

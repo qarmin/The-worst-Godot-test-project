@@ -17,8 +17,8 @@ func nodeFunction(q_MeshTexture : MeshTexture, can_reset : bool = false) -> void
 	if can_reset:
 		if randi() % 2 == 1:
 			q_MeshTexture = MeshTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_MeshTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_MeshTexture)
 		
 	### START TEMP
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()

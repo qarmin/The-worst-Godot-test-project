@@ -36,10 +36,6 @@ func nodeFunction(q_RigidBody2D : RigidBody2D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_weight(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_RigidBody2D.set_friction(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_RigidBody2D.set_bounce(Autoload.get_float())
-	if randi() % 2 == 1:
 		q_RigidBody2D.set_physics_material_override(temp_PhysicsMaterial)
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_gravity_scale(Autoload.get_float())

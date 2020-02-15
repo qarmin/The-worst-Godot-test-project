@@ -17,8 +17,8 @@ func nodeFunction(q_GradientTexture : GradientTexture, can_reset : bool = false)
 	if can_reset:
 		if randi() % 2 == 1:
 			q_GradientTexture = GradientTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_GradientTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_GradientTexture)
 		
 	### START TEMP
 	var temp_Gradient : Gradient = Gradient.new()

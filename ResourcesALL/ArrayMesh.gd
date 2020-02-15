@@ -26,8 +26,8 @@ func nodeFunction(q_ArrayMesh : ArrayMesh, can_reset : bool = false) -> void:
 		q_ArrayMesh.set_custom_aabb(Autoload.get_aabb())
 	if randi() % 2 == 1:
 		q_ArrayMesh.add_blend_shape( Autoload.get_string())
-	if randi() % 2 == 1:
-		q_ArrayMesh.add_surface_from_arrays( Autoload.get_int(), Autoload.get_array(), Autoload.get_array(), Autoload.get_int()) #PrimitiveType
+#	if randi() % 2 == 1: MISSING
+#		q_ArrayMesh.add_surface_from_arrays( Autoload.get_int(), Autoload.get_array(), Autoload.get_array(), Autoload.get_int()) #PrimitiveType
 	if randi() % 2 == 1:
 		q_ArrayMesh.clear_blend_shapes()
 	if randi() % 2 == 1:
@@ -50,8 +50,8 @@ func nodeFunction(q_ArrayMesh : ArrayMesh, can_reset : bool = false) -> void:
 		q_ArrayMesh.surface_get_name( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_ArrayMesh.surface_get_primitive_type( Autoload.get_int())
-	if randi() % 2 == 1:
-		q_ArrayMesh.surface_remove( Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_ArrayMesh.surface_remove( Autoload.get_int())
 	if randi() % 2 == 1:
 		q_ArrayMesh.surface_set_name( Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:

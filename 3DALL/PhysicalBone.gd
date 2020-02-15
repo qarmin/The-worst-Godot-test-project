@@ -43,5 +43,5 @@ func nodeFunction(q_PhysicalBone : PhysicalBone, can_reset : bool = false) -> vo
 		
 	if randi() % 2 == 1:
 		q_PhysicalBone.is_simulating_physics()
-	if randi() % 2 == 1:
-		q_PhysicalBone.is_static_body()
+#	if randi() % 2 == 1: #MISSING
+#		q_PhysicalBone.is_static_body()

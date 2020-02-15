@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ResourcesALL.tscn"
+run/main_scene="res://ALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -691,7 +691,6 @@ limits/debugger_stdout/max_warnings_per_second=5
 
 [rendering]
 
-quality/driver/driver_name="GLES2"
 threads/thread_model=2
 vram_compression/import_etc=true
 vram_compression/import_etc2=false

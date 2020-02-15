@@ -421,8 +421,8 @@ func A_CanvasItem(q_CanvasItem : CanvasItem) -> void:
 		q_CanvasItem._set_on_top(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_CanvasItem.set_light_mask(Autoload.get_int())
-	if randi()%2 == 1:
-		q_CanvasItem.set_material(SpatialMaterial.new())
+#	if randi()%2 == 1: #MISSING
+#		q_CanvasItem.set_material(SpatialMaterial.new())
 	if randi()%2 == 1:
 		q_CanvasItem.set_use_parent_material(Autoload.get_bool())
 
@@ -991,8 +991,8 @@ func A_GeometryInstance(q_GeometryInstance : GeometryInstance) -> void:
 	if !use_GeometryInstance:
 		return
 		
-	if randi() % 2 == 1:
-		q_GeometryInstance.set_material_override(SpatialMaterial.new())
+#	if randi() % 2 == 1: MISSING
+#		q_GeometryInstance.set_material_override(SpatialMaterial.new())
 	if randi() % 2 == 1:
 		q_GeometryInstance.set_cast_shadows_setting(Autoload.get_int())
 	if randi() % 2 == 1:

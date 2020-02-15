@@ -17,8 +17,8 @@ func nodeFunction(q_CameraTexture : CameraTexture, can_reset : bool = false) -> 
 	if can_reset:
 		if randi() % 2 == 1:
 			q_CameraTexture = CameraTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_CameraTexture)
+#	if randi() % 2 == 1:#MISSING
+#		AutoResourcesTexture.nodeFunction(q_CameraTexture)
 
 	if randi() % 2 == 1:
 		q_CameraTexture.set_camera_feed_id(Autoload.get_int())

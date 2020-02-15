@@ -17,8 +17,8 @@ func nodeFunction(q_ViewportTexture : ViewportTexture, can_reset : bool = false)
 	if can_reset:
 		if randi() % 2 == 1:
 			q_ViewportTexture = ViewportTexture.new()
-	if randi() % 2 == 1:
-		AutoResourcesTexture.nodeFunction(q_ViewportTexture)
+#	if randi() % 2 == 1: #MISSING
+#		AutoResourcesTexture.nodeFunction(q_ViewportTexture)
 
 	if randi() % 2 == 1:
 		q_ViewportTexture.set_viewport_path_in_scene(Autoload.get_nodepath(self))
