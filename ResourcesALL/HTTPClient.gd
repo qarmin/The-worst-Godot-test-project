@@ -59,11 +59,11 @@ func nodeFunction(q_HTTPClient : HTTPClient, can_reset : bool = false) -> void:
 		q_HTTPClient.read_response_body_chunk()
 
 	if randi() % 2 == 1:
-		q_HTTPClient.request( Autoload.get_int(), Autoload.get_string(), Autoload.get_poolstringarray(), Autoload.get_string())#Method
+		q_HTTPClient.request( Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_string())#Method
 	if randi() % 2 == 1:
 		q_HTTPClient.read_response_body_chunk()
 	if randi() % 2 == 1:
-		q_HTTPClient.request_raw( Autoload.get_int(), Autoload.get_string(), Autoload.get_poolstringarray(), Autoload.get_poolbytearray())#Method
+		q_HTTPClient.request_raw( Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_packedbytearray())#Method
 
 	if randi() % 2 == 1:
 		q_HTTPClient.set_read_chunk_size( Autoload.get_int())

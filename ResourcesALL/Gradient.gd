@@ -21,9 +21,9 @@ func nodeFunction(q_Gradient : Gradient, can_reset : bool = false) -> void:
 		AutoResourcesResource.nodeFunction(q_Gradient)
 
 	if randi() % 2 == 1:
-		q_Gradient.set_offsets(Autoload.get_poolrealarray())
+		q_Gradient.set_offsets(Autoload.get_packedrealarray())
 	if randi() % 2 == 1:
-		q_Gradient.set_colors(Autoload.get_poolcolorarray())
+		q_Gradient.set_colors(Autoload.get_packedcolorarray())
 
 	for _i in range(4):
 		if randi() % 2 == 1:

@@ -21,7 +21,7 @@ func nodeFunction(q_CollisionPolygon2D : CollisionPolygon2D, can_reset : bool = 
 	if randi() % 2 == 1:
 		q_CollisionPolygon2D.set_build_mode(Autoload.get_int()) # Enum BuildMode
 	if randi() % 2 == 1:
-		q_CollisionPolygon2D.set_polygon(Autoload.get_poolvector2array())
+		q_CollisionPolygon2D.set_polygon(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
 		q_CollisionPolygon2D.set_disabled(Autoload.get_bool())
 	if randi() % 2 == 1:

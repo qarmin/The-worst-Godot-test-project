@@ -53,7 +53,7 @@ func nodeFunction(q_MultiplayerAPI : MultiplayerAPI, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_MultiplayerAPI.poll()
 	if randi() % 2 == 1:
-		q_MultiplayerAPI.send_bytes( Autoload.get_poolbytearray())#TransferNode
+		q_MultiplayerAPI.send_bytes( Autoload.get_packedbytearray())#TransferNode
 	if randi() % 2 == 1:
 		q_MultiplayerAPI.set_root_node( temp_Node)
 

@@ -50,7 +50,7 @@ func nodeFunction(q_XMLParser : XMLParser, can_reset : bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_XMLParser.open( Autoload.get_string())
 #	if randi() % 2 == 1:
-#		q_XMLParser.open_buffer( Autoload.get_poolbytearray())
+#		q_XMLParser.open_buffer( Autoload.get_packedbytearray())
 #
 #	if randi() % 2 == 1:
 #		q_XMLParser.read()

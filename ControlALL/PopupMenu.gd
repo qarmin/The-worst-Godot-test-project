@@ -129,7 +129,7 @@ func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_PopupMenu.set_item_id(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PopupMenu.set_item_metadata(Autoload.get_int(),Autoload.get_poolbytearray())
+		q_PopupMenu.set_item_metadata(Autoload.get_int(),Autoload.get_packedbytearray())
 	if randi() % 2 == 1:
 		q_PopupMenu.set_item_multistate(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:

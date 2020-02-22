@@ -22,4 +22,4 @@ func nodeFunction(q_CollisionPolygon : CollisionPolygon, can_reset : bool = fals
 	if randi() % 2 == 1:
 		q_CollisionPolygon.set_disabled(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CollisionPolygon.set_polygon(Autoload.get_poolvector2array())
+		q_CollisionPolygon.set_polygon(Autoload.get_packedvector2array())

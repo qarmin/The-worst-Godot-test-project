@@ -63,11 +63,11 @@ func nodeFunction(q_CPUParticles2D : CPUParticles2D, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_emission_rect_extents(Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_emission_points(Autoload.get_poolvector2array())
+		q_CPUParticles2D.set_emission_points(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_emission_normals(Autoload.get_poolvector2array())
+		q_CPUParticles2D.set_emission_normals(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_CPUParticles2D.set_emission_colors(Autoload.get_poolcolorarray())
+		q_CPUParticles2D.set_emission_colors(Autoload.get_packedcolorarray())
 	if randi() % 2 == 1:
 		q_CPUParticles2D.set_particle_flag(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:

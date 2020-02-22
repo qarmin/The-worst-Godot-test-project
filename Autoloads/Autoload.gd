@@ -71,44 +71,44 @@ func get_vector2() -> Vector2:
 func get_vector3() -> Vector3:
 	return Vector3(get_float(),get_float(),get_float())
 ### Arrays
-func get_poolvector2array() -> PoolVector2Array:
-	var pv2a : PoolVector2Array = PoolVector2Array([])
+func get_packedvector2array() -> PackedVector2Array:
+	var pv2a : PackedVector2Array = PackedVector2Array([])
 	for i in range(randi() % 10):
 		pv2a.append(get_vector2())
 	return pv2a
 
-func get_poolvector3array() -> PoolVector3Array:
-	var pv3a : PoolVector3Array = PoolVector3Array([])
+func get_packedvector3array() -> PackedVector3Array:
+	var pv3a : PackedVector3Array = PackedVector3Array([])
 	for i in range(randi() % 10):
 		pv3a.append(get_vector3())
 	return pv3a
 
-func get_poolbytearray() -> PoolByteArray:
-	var pba : PoolByteArray = PoolByteArray([])
+func get_packedbytearray() -> PackedByteArray:
+	var pba : PackedByteArray = PackedByteArray([])
 	for i in range(randi() % 10):
 		pba.append(get_int())
 	return pba
 
-func get_poolcolorarray() -> PoolColorArray:
-	var pca : PoolColorArray = PoolColorArray([])
+func get_packedcolorarray() -> PackedColorArray:
+	var pca : PackedColorArray = PackedColorArray([])
 	for i in range(randi() % 10):
 		pca.append(get_color())
 	return pca
 
-func get_poolintarray() -> PoolIntArray:
-	var pia : PoolIntArray = PoolIntArray([])
+func get_packedintarray() -> PackedIntArray:
+	var pia : PackedIntArray = PackedIntArray([])
 	for i in range(randi() % 10):
 		pia.append(get_int())
 	return pia
 
-func get_poolrealarray() -> PoolRealArray:
-	var pra : PoolRealArray = PoolRealArray([])
+func get_packedrealarray() -> PackedRealArray:
+	var pra : PackedRealArray = PackedRealArray([])
 	for i in range(randi() % 10):
 		pra.append(get_float())
 	return pra
 
-func get_poolstringarray() -> PoolStringArray:
-	var psa : PoolStringArray = PoolStringArray([])
+func get_packedstringarray() -> PackedStringArray:
+	var psa : PackedStringArray = PackedStringArray([])
 	for i in range(randi() % 10):
 		psa.append(get_string())
 	return psa

@@ -30,7 +30,7 @@ func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 
 
 	if randi() % 2 == 1:
-		q_Line2D.set_points(Autoload.get_poolvector2array())
+		q_Line2D.set_points(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
 		q_Line2D.set_width(Autoload.get_float())
 	if randi() % 2 == 1:

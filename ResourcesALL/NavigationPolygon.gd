@@ -21,11 +21,11 @@ func nodeFunction(q_NavigationPolygon : NavigationPolygon, can_reset : bool = fa
 		AutoResourcesResource.nodeFunction(q_NavigationPolygon)
 
 	if randi() % 2 == 1:
-		q_NavigationPolygon.add_outline( Autoload.get_poolvector2array())
+		q_NavigationPolygon.add_outline( Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_NavigationPolygon.add_outline_at_index( Autoload.get_poolvector2array(), Autoload.get_int())
+		q_NavigationPolygon.add_outline_at_index( Autoload.get_packedvector2array(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_NavigationPolygon.add_polygon( Autoload.get_poolintarray())
+		q_NavigationPolygon.add_polygon( Autoload.get_packedintarray())
 
 	if randi() % 2 == 1:
 		q_NavigationPolygon.clear_outlines()
@@ -49,7 +49,7 @@ func nodeFunction(q_NavigationPolygon : NavigationPolygon, can_reset : bool = fa
 		q_NavigationPolygon.remove_outline(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_NavigationPolygon.set_outline(Autoload.get_int(), Autoload.get_poolvector2array())
+		q_NavigationPolygon.set_outline(Autoload.get_int(), Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_NavigationPolygon.set_vertices( Autoload.get_poolvector2array())
+		q_NavigationPolygon.set_vertices( Autoload.get_packedvector2array())
 

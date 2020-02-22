@@ -69,13 +69,13 @@ func nodeFunction(q_StreamPeer : StreamPeer, can_reset : bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_StreamPeer.put_8(Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_StreamPeer.put_data( Autoload.get_poolbytearray())
+#		q_StreamPeer.put_data( Autoload.get_packedbytearray())
 #	if randi() % 2 == 1:
 #		q_StreamPeer.put_double(Autoload.get_float())
 #	if randi() % 2 == 1:
 #		q_StreamPeer.put_float(Autoload.get_float())
 #	if randi() % 2 == 1:
-#		q_StreamPeer.put_partial_data( Autoload.get_poolbytearray())
+#		q_StreamPeer.put_partial_data( Autoload.get_packedbytearray())
 #	if randi() % 2 == 1:
 #		q_StreamPeer.put_string( Autoload.get_string())
 #	if randi() % 2 == 1:

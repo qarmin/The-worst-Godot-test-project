@@ -21,4 +21,4 @@ func nodeFunction(q_ConvexPolygonShape : ConvexPolygonShape, can_reset : bool = 
 		AutoResourcesShape.nodeFunction(q_ConvexPolygonShape)
 
 	if randi() % 2 == 1:
-		q_ConvexPolygonShape.set_points(Autoload.get_poolvector3array())
+		q_ConvexPolygonShape.set_points(Autoload.get_packedvector3array())

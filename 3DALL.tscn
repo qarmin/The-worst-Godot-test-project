@@ -1,4 +1,4 @@
-[gd_scene load_steps=88 format=2]
+[gd_scene load_steps=77 format=2]
 
 [ext_resource path="res://MainScripts/3DALL.gd" type="Script" id=1]
 [ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
@@ -11,9 +11,6 @@
 [ext_resource path="res://3DALL/Generic6DOFJoint.gd" type="Script" id=9]
 [ext_resource path="res://3DALL/ConeTwistJoint.gd" type="Script" id=10]
 [ext_resource path="res://3DALL/OmniLight.gd" type="Script" id=11]
-[ext_resource path="res://RES/Sprite.png" type="Texture2D" id=12]
-[ext_resource path="res://3DALL/AnimatedSprite3D.gd" type="Script" id=13]
-[ext_resource path="res://3DALL/Sprite3D.gd" type="Script" id=14]
 [ext_resource path="res://3DALL/CPUParticles.gd" type="Script" id=15]
 [ext_resource path="res://3DALL/AAAAAAAAAAAAA.gd" type="Script" id=16]
 [ext_resource path="res://3DALL/CSGCombiner.gd" type="Script" id=17]
@@ -26,7 +23,6 @@
 [ext_resource path="res://3DALL/ImmediateGeometry.gd" type="Script" id=24]
 [ext_resource path="res://3DALL/Particles.gd" type="Script" id=25]
 [ext_resource path="res://3DALL/MeshInstance.gd" type="Script" id=26]
-[ext_resource path="res://3DALL/MultiMeshInstance.gd" type="Script" id=27]
 [ext_resource path="res://3DALL/SliderJoint.gd" type="Script" id=28]
 [ext_resource path="res://3DALL/DirectionalLight.gd" type="Script" id=30]
 [ext_resource path="res://3DALL/HingeJoint.gd" type="Script" id=31]
@@ -48,7 +44,6 @@
 [ext_resource path="res://3DALL/NavigationMeshInstance.gd" type="Script" id=47]
 [ext_resource path="res://3DALL/PathFollow.gd" type="Script" id=48]
 [ext_resource path="res://3DALL/VehicleWheel.gd" type="Script" id=49]
-[ext_resource path="res://icon.png" type="Texture2D" id=50]
 [ext_resource path="res://3DALL/Listener.gd" type="Script" id=51]
 [ext_resource path="res://3DALL/Path.gd" type="Script" id=52]
 [ext_resource path="res://3DALL/Navigation.gd" type="Script" id=53]
@@ -61,20 +56,6 @@
 [ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
 [ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
 [ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=62]
-
-[sub_resource type="StreamTexture" id=1]
-
-[sub_resource type="StreamTexture" id=2]
-
-[sub_resource type="StreamTexture" id=3]
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ ExtResource( 12 ), SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 1 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
 
 [sub_resource type="CubeMesh" id=5]
 
@@ -118,15 +99,7 @@ specular_mode = 1
 material = SubResource( 16 )
 size = Vector3( 2.25, 1.56, 2.49 )
 
-[sub_resource type="CubeMesh" id=18]
-
-[sub_resource type="MultiMesh" id=19]
-transform_format = 1
-instance_count = 15
-mesh = SubResource( 18 )
-buffer = PoolRealArray( 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0 )
-
-[sub_resource type="ParticlesMaterial" id=20]
+[sub_resource type="ParticlesMaterial" id=25]
 render_priority = 127
 emission_shape = 2
 emission_box_extents = Vector3( 1, 1, 1 )
@@ -135,24 +108,24 @@ radial_accel_random = 1.0
 tangential_accel = 3.1
 tangential_accel_random = 1.0
 
-[sub_resource type="GIProbeData" id=21]
+[sub_resource type="GIProbeData" id=26]
 _data = {
 "bounds": AABB( 0, 0, 0, 0, 0, 0 ),
-"level_counts": PoolIntArray(  ),
-"octree_cells": PoolByteArray(  ),
-"octree_data": PoolByteArray(  ),
-"octree_df": PoolByteArray(  ),
+"level_counts": PackedIntArray(  ),
+"octree_cells": PackedByteArray(  ),
+"octree_data": PackedByteArray(  ),
+"octree_df": PackedByteArray(  ),
 "octree_size": Vector3( 0, 0, 0 ),
 "to_cell_xform": Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0 )
 }
 
-[sub_resource type="BoxShape" id=22]
+[sub_resource type="BoxShape" id=20]
 margin = 0.5
 extents = Vector3( 1, 26.5038, 3.22286 )
 
-[sub_resource type="MeshLibrary" id=23]
+[sub_resource type="MeshLibrary" id=21]
 
-[sub_resource type="NavigationMesh" id=24]
+[sub_resource type="NavigationMesh" id=22]
 sample_partition_type/sample_partition_type = 2
 geometry/parsed_geometry_type = 1
 geometry/collision_mask = 2147483647
@@ -173,14 +146,14 @@ filter/low_hanging_obstacles = true
 filter/ledge_spans = true
 filter/filter_walkable_low_height_spans = true
 
-[sub_resource type="Curve3D" id=25]
+[sub_resource type="Curve3D" id=23]
 bake_interval = 10.0
 _data = {
-"points": PoolVector3Array( 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007, 0, 0, 0, 0, 0, 0, -18.4839, 0.381447, -2.2567, 0, 0, 0, 0, 0, 0, -9.25256, -1.66295, 1.34504, 0, 0, 0, 0, 0, 0, 14.3498, 1.51124, -0.660617, 0, 0, 0, 0, 0, 0, 16.5666, 7.48303, -8.42252, 0, 0, 0, 0, 0, 0, 5.21951, 11.8408, -15.3123, 0, 0, 0, 0, 0, 0, -6.34309, 13.0513, -18.0214, 0, 0, 0, 0, 0, 0, -22.2367, 9.90402, -15.3228, 0, 0, 0, 0, 0, 0, -5.97389, 1.40365, -2.43845, 0, 0, 0, 0, 0, 0, 1.22511, 4.12054, -5.38451, 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007 ),
-"tilts": PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+"points": PackedVector3Array( 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007, 0, 0, 0, 0, 0, 0, -18.4839, 0.381447, -2.2567, 0, 0, 0, 0, 0, 0, -9.25256, -1.66295, 1.34504, 0, 0, 0, 0, 0, 0, 14.3498, 1.51124, -0.660617, 0, 0, 0, 0, 0, 0, 16.5666, 7.48303, -8.42252, 0, 0, 0, 0, 0, 0, 5.21951, 11.8408, -15.3123, 0, 0, 0, 0, 0, 0, -6.34309, 13.0513, -18.0214, 0, 0, 0, 0, 0, 0, -22.2367, 9.90402, -15.3228, 0, 0, 0, 0, 0, 0, -5.97389, 1.40365, -2.43845, 0, 0, 0, 0, 0, 0, 1.22511, 4.12054, -5.38451, 0, 0, 0, 0, 0, 0, -4.21835, 8.31693, -11.5007 ),
+"tilts": PackedRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 }
 
-[sub_resource type="BoxShape" id=26]
+[sub_resource type="BoxShape" id=24]
 margin = 1.21
 extents = Vector3( 1, 1.77, 1.71 )
 
@@ -212,14 +185,6 @@ size = 16384.0
 target = NodePath("../ARVROrigin/ARVRController")
 script = ExtResource( 8 )
 
-[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
-frames = SubResource( 4 )
-script = ExtResource( 13 )
-
-[node name="Sprite3D" type="Sprite3D" parent="."]
-texture = ExtResource( 50 )
-script = ExtResource( 14 )
-
 [node name="CPUParticles" type="CPUParticles" parent="."]
 mesh = SubResource( 5 )
 script = ExtResource( 15 )
@@ -249,7 +214,7 @@ material = SubResource( 11 )
 script = ExtResource( 21 )
 
 [node name="CSGPolygon" type="CSGPolygon" parent="."]
-polygon = PoolVector2Array( 1.3, 0.59, 1, 0.06, 1, -6.56, 0, 0, 0, 0, 0, 0 )
+polygon = PackedVector2Array( 1.3, 0.59, 1, 0.06, 1, -6.56, 0, 0, 0, 0, 0, 0 )
 material = SubResource( 12 )
 script = ExtResource( 19 )
 
@@ -318,26 +283,20 @@ mesh = SubResource( 17 )
 material/0 = null
 script = ExtResource( 26 )
 
-[node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
-multimesh = SubResource( 19 )
-script = ExtResource( 27 )
-
 [node name="Particles" type="Particles" parent="."]
-process_material = SubResource( 20 )
+process_material = SubResource( 25 )
 script = ExtResource( 25 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
-visible = false
 script = ExtResource( 30 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
-visible = false
 script = ExtResource( 32 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
 extents = Vector3( 10, 10, 22.3077 )
-data = SubResource( 21 )
+data = SubResource( 26 )
 script = ExtResource( 33 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
@@ -350,95 +309,95 @@ script = ExtResource( 34 )
 script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Area"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Area"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Area"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
 script = ExtResource( 40 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="KinematicBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="KinematicBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="KinematicBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
 script = ExtResource( 38 )
 
 [node name="CollisionShape" type="CollisionShape" parent="PhysicalBone"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="PhysicalBone"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="PhysicalBone"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="PhysicalBone"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
 script = ExtResource( 39 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="RigidBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="RigidBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="RigidBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
 script = ExtResource( 41 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="VehicleBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="VehicleBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="VehicleBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
@@ -461,19 +420,19 @@ script = ExtResource( 49 )
 script = ExtResource( 42 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
-shape = SubResource( 22 )
+shape = SubResource( 20 )
 script = ExtResource( 46 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
@@ -489,10 +448,10 @@ script = ExtResource( 45 )
 script = ExtResource( 46 )
 
 [node name="GridMap" type="GridMap" parent="."]
-mesh_library = SubResource( 23 )
+mesh_library = SubResource( 21 )
 cell_size = Vector3( 2, 1.14, 3.08 )
 data = {
-"cells": PoolIntArray(  )
+"cells": PackedIntArray(  )
 }
 script = ExtResource( 36 )
 __meta__ = {
@@ -506,27 +465,27 @@ script = ExtResource( 51 )
 script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
-navmesh = SubResource( 24 )
+navmesh = SubResource( 22 )
 script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance2" type="NavigationMeshInstance" parent="Navigation_LEAK"]
-navmesh = SubResource( 24 )
+navmesh = SubResource( 22 )
 script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance3" type="NavigationMeshInstance" parent="Navigation_LEAK"]
-navmesh = SubResource( 24 )
+navmesh = SubResource( 22 )
 script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance4" type="NavigationMeshInstance" parent="Navigation_LEAK"]
-navmesh = SubResource( 24 )
+navmesh = SubResource( 22 )
 script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
-navmesh = SubResource( 24 )
+navmesh = SubResource( 22 )
 script = ExtResource( 47 )
 
 [node name="Path" type="Path" parent="."]
-curve = SubResource( 25 )
+curve = SubResource( 23 )
 script = ExtResource( 52 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
@@ -584,38 +543,38 @@ transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e
 script = ExtResource( 62 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="PhysicalBone 3" type="PhysicalBone" parent="Skeleton"]
 script = ExtResource( 38 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
-shape = SubResource( 26 )
+shape = SubResource( 24 )
 script = ExtResource( 46 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
@@ -682,5 +641,4 @@ solver/priority = 8
 script = ExtResource( 10 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-visible = false
 script = ExtResource( 11 )

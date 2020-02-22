@@ -48,11 +48,11 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Polygon2D.set_invert_border(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_polygon(Autoload.get_poolvector2array())
+		q_Polygon2D.set_polygon(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_uv(Autoload.get_poolvector2array())
+		q_Polygon2D.set_uv(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_vertex_colors(Autoload.get_poolcolorarray())
+		q_Polygon2D.set_vertex_colors(Autoload.get_packedcolorarray())
 	if randi() % 2 == 1:
 		q_Polygon2D.set_polygons(Autoload.get_array())
 	if randi() % 2 == 1:
@@ -61,7 +61,7 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		q_Polygon2D.set_internal_vertex_count(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_Polygon2D.add_bone(Autoload.get_string(),Autoload.get_poolrealarray())
+		q_Polygon2D.add_bone(Autoload.get_string(),Autoload.get_packedrealarray())
 	if randi() % 2 == 1:
 		q_Polygon2D.erase_bone(Autoload.get_int())
 	if randi() % 2 == 1:

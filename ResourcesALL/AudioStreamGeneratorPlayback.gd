@@ -22,6 +22,6 @@ func alt_process(delta) -> void:
 #			q_AudioStreamGeneratorPlayback.get_frames_available())
 #			q_AudioStreamGeneratorPlayback.get_skips())
 #
-#			q_AudioStreamGeneratorPlayback.push_buffer( Autoload.get_poolvector2array()))
+#			q_AudioStreamGeneratorPlayback.push_buffer( Autoload.get_packedvector2array()))
 #			q_AudioStreamGeneratorPlayback.push_frame( Autoload.get_vector2()))
 #

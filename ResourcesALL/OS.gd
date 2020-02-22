@@ -213,7 +213,7 @@ func alt_process(delta) -> void:
 #		if randi() % 2 == 1:
 #			OS.print_all_textures_by_size()
 #		if randi() % 2 == 1:
-#			OS.print_resources_by_type(Autoload.get_poolstringarray())
+#			OS.print_resources_by_type(Autoload.get_packedstringarray())
 #		if randi() % 2 == 1:
 #			OS.print_resources_in_use(Autoload.get_bool())
 #

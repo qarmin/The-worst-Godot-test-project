@@ -21,7 +21,7 @@ func nodeFunction(q_StreamPeerBuffer : StreamPeerBuffer, can_reset : bool = fals
 		AutoResourcesStreamPeer.nodeFunction(q_StreamPeerBuffer)
 
 	if randi() % 2 == 1:
-		q_StreamPeerBuffer.set_data_array(Autoload.get_poolbytearray())
+		q_StreamPeerBuffer.set_data_array(Autoload.get_packedbytearray())
 
 	if randi() % 2 == 1:
 		q_StreamPeerBuffer.clear()

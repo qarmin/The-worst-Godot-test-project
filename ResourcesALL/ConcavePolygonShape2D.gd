@@ -21,4 +21,4 @@ func nodeFunction(q_ConcavePolygonShape2D : ConcavePolygonShape2D, can_reset : b
 		AutoResourcesShape2D.nodeFunction(q_ConcavePolygonShape2D)
 
 	if randi() % 2 == 1:
-		q_ConcavePolygonShape2D.set_segments(Autoload.get_poolvector2array())
+		q_ConcavePolygonShape2D.set_segments(Autoload.get_packedvector2array())

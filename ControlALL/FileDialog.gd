@@ -22,7 +22,7 @@ func nodeFunction(q_FileDialog : FileDialog, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_FileDialog.set_access(Autoload.get_int()) #Access
 	if randi() % 2 == 1:
-		q_FileDialog.set_filters(Autoload.get_poolstringarray())
+		q_FileDialog.set_filters(Autoload.get_packedstringarray())
 	if randi() % 2 == 1:
 		q_FileDialog.set_show_hidden_files(Autoload.get_bool())
 	if randi() % 2 == 1:

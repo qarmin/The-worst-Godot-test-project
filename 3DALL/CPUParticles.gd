@@ -70,9 +70,9 @@ func nodeFunction(q_CPUParticles : CPUParticles, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_CPUParticles.set_emission_box_extents(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_CPUParticles.set_emission_points(Autoload.get_poolvector3array())
+		q_CPUParticles.set_emission_points(Autoload.get_packedvector3array())
 	if randi() % 2 == 1:
-		q_CPUParticles.set_emission_normals(Autoload.get_poolvector3array())
+		q_CPUParticles.set_emission_normals(Autoload.get_packedvector3array())
 	if randi() % 2 == 1:
 		q_CPUParticles.set_emission_colors([Autoload.get_color(),Autoload.get_color()])
 

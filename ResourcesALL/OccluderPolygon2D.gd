@@ -25,4 +25,4 @@ func nodeFunction(q_OccluderPolygon2D : OccluderPolygon2D, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_OccluderPolygon2D.set_cull_mode(Autoload.get_int()) # CullMode
 	if randi() % 2 == 1:
-		q_OccluderPolygon2D.set_polygon(Autoload.get_poolvector2array())
+		q_OccluderPolygon2D.set_polygon(Autoload.get_packedvector2array())

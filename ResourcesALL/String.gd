@@ -51,19 +51,19 @@ func nodeFunction(q_String : String, can_reset : bool = false) -> void:
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_array())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolbytearray())
+				q_String = String( Autoload.get_packedbytearray())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolintarray())
+				q_String = String( Autoload.get_packedintarray())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolrealarray())
+				q_String = String( Autoload.get_packedrealarray())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolstringarray())
+				q_String = String( Autoload.get_packedstringarray())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolvector2array())
+				q_String = String( Autoload.get_packedvector2array())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolvector3array())
+				q_String = String( Autoload.get_packedvector3array())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolcolorarray())
+				q_String = String( Autoload.get_packedcolorarray())
 
 	if randi() % 2 == 1:
 		q_String.begins_with( Autoload.get_string())

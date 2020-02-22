@@ -52,7 +52,7 @@ func nodeFunction(q_Image : Image, can_reset : bool = false) -> void:
 ##	BUG	if randi() % 2 == 1:
 ##			q_Image.create( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int()) #Format
 #	if randi() % 2 == 1:
-#		q_Image.create_from_data( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() , Autoload.get_poolbytearray())#Format
+#		q_Image.create_from_data( Autoload.get_inti(101), Autoload.get_inti(101), Autoload.get_bool(), Autoload.get_int() , Autoload.get_packedbytearray())#Format
 #
 #	if randi() % 2 == 1:
 #		q_Image.crop( Autoload.get_inti(101), Autoload.get_inti(101))
@@ -110,11 +110,11 @@ func nodeFunction(q_Image : Image, can_reset : bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_Image.load( "Sprite.png" )
 #	if randi() % 2 == 1:
-#		q_Image.load_jpg_from_buffer( Autoload.get_poolbytearray())
+#		q_Image.load_jpg_from_buffer( Autoload.get_packedbytearray())
 #	if randi() % 2 == 1:
-#		q_Image.load_png_from_buffer( Autoload.get_poolbytearray())
+#		q_Image.load_png_from_buffer( Autoload.get_packedbytearray())
 #	if randi() % 2 == 1:
-#		q_Image.load_webp_from_buffer( Autoload.get_poolbytearray())
+#		q_Image.load_webp_from_buffer( Autoload.get_packedbytearray())
 #
 #	if randi() % 2 == 1:
 #		q_Image.lock()

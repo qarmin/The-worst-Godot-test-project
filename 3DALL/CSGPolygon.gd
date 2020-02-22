@@ -28,7 +28,7 @@ func nodeFunction(q_CSGPolygon : CSGPolygon, can_reset : bool = false) -> void:
 	### END TEMP
 		
 	if randi() % 2 == 1:
-		q_CSGPolygon.set_polygon(Autoload.get_poolvector2array())
+		q_CSGPolygon.set_polygon(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
 		q_CSGPolygon.set_mode(Autoload.get_int()) # Mode
 	if randi() % 2 == 1:

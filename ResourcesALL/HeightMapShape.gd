@@ -25,4 +25,4 @@ func nodeFunction(q_HeightMapShape : HeightMapShape, can_reset : bool = false) -
 	if randi() % 2 == 1:
 			q_HeightMapShape.set_map_depth(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_HeightMapShape.set_map_data(Autoload.get_poolrealarray())
+		q_HeightMapShape.set_map_data(Autoload.get_packedrealarray())

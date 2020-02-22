@@ -17,19 +17,19 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolcolorarray())
+				q_Array = Array(Autoload.get_packedcolorarray())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolvector3array())
+				q_Array = Array(Autoload.get_packedvector3array())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolvector2array())
+				q_Array = Array(Autoload.get_packedvector2array())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolstringarray())
+				q_Array = Array(Autoload.get_packedstringarray())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolrealarray())
+				q_Array = Array(Autoload.get_packedrealarray())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolintarray())
+				q_Array = Array(Autoload.get_packedintarray())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolbytearray())
+				q_Array = Array(Autoload.get_packedbytearray())
 		
 	### START TEMP
 	var temp_Node : Node = Node.new()

@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolRealArray : PoolRealArray = Autoload.get_poolrealarray()
+var q_PackedRealArray : PackedRealArray = Autoload.get_packedrealarray()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,30 +10,30 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PoolRealArray,true)
+		nodeFunction(q_PackedRealArray,true)
 
-func nodeFunction(q_PoolRealArray : PoolRealArray, can_reset : bool = false) -> void:
+func nodeFunction(q_PackedRealArray : PackedRealArray, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_PoolRealArray = Autoload.get_poolrealarray()
+			q_PackedRealArray = Autoload.get_packedrealarray()
 
 	if randi() % 2 == 1:
-		q_PoolRealArray.append(Autoload.get_float())
+		q_PackedRealArray.append(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_PoolRealArray.append_array(Autoload.get_poolrealarray())
+		q_PackedRealArray.append_array(Autoload.get_packedrealarray())
 
 	if randi() % 2 == 1:
-		q_PoolRealArray.insert( Autoload.get_int(), Autoload.get_float())
+		q_PackedRealArray.insert( Autoload.get_int(), Autoload.get_float())
 	if randi() % 2 == 1:
-		q_PoolRealArray.invert()
+		q_PackedRealArray.invert()
 	if randi() % 2 == 1:
-		q_PoolRealArray.push_back( Autoload.get_float())
+		q_PackedRealArray.push_back( Autoload.get_float())
 	if randi() % 2 == 1:
-		q_PoolRealArray.remove( Autoload.get_int())
+		q_PackedRealArray.remove( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolRealArray.resize( Autoload.get_int())
+		q_PackedRealArray.resize( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolRealArray.set(Autoload.get_int(), Autoload.get_float())
+		q_PackedRealArray.set(Autoload.get_int(), Autoload.get_float())
 	if randi() % 2 == 1:
-		q_PoolRealArray.size()
+		q_PackedRealArray.size()

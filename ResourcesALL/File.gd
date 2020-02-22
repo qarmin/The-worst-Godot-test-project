@@ -79,7 +79,7 @@ func nodeFunction(q_File : File, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_File.open( "res://TEMP/" + Autoload.get_string(), Autoload.get_int())
 	###q_File.open_compressed( "Sprite.png", Autoload.get_int(), Autoload.get_int())#ModeFlags, CompressionMode
-	###q_File.open_encrypted( "Sprite.png", Autoload.get_int(), Autoload.get_poolbytearray())#ModeFlags
+	###q_File.open_encrypted( "Sprite.png", Autoload.get_int(), Autoload.get_packedbytearray())#ModeFlags
 	###q_File.open_encrypted_with_pass( "Sprite.png", Autoload.get_int(), "Sprite.png" )#ModeFlags
 
 	if randi() % 2 == 1:
@@ -96,9 +96,9 @@ func nodeFunction(q_File : File, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_File.store_8( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_File.store_buffer( Autoload.get_poolbytearray())
+		q_File.store_buffer( Autoload.get_packedbytearray())
 	if randi() % 2 == 1:
-		q_File.store_csv_line( Autoload.get_poolstringarray(), Autoload.get_string())
+		q_File.store_csv_line( Autoload.get_packedstringarray(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_File.store_double( Autoload.get_float())
 	if randi() % 2 == 1:

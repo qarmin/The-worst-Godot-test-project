@@ -35,7 +35,7 @@ extends Node2D
 #	if randi() % 2 == 1:
 #		q_BakedLightmapData.set_energy(Autoload.get_float())
 #	if randi() % 2 == 1:
-#		q_BakedLightmapData.set_octree(Autoload.get_poolbytearray())
+#		q_BakedLightmapData.set_octree(Autoload.get_packedbytearray())
 #
 #	if randi() % 2 == 1:
 #		q_BakedLightmapData.add_user( Autoload.get_string(), temp_ImageTexture, Autoload.get_int())

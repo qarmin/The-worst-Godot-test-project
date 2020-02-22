@@ -23,4 +23,4 @@ func nodeFunction(q_ConcavePolygonShape : ConcavePolygonShape, can_reset : bool 
 	if randi() % 2 == 1:
 		q_ConcavePolygonShape.get_faces()
 	if randi() % 2 == 1:
-		q_ConcavePolygonShape.set_faces(Autoload.get_poolvector3array())
+		q_ConcavePolygonShape.set_faces(Autoload.get_packedvector3array())

@@ -1,4 +1,4 @@
-[gd_scene load_steps=453 format=2]
+[gd_scene load_steps=454 format=2]
 
 [ext_resource path="res://ResourcesALL/GDScript.gd" type="Script" id=1]
 [ext_resource path="res://MainScripts/ResourcesALL.gd" type="Script" id=2]
@@ -369,6 +369,7 @@
 [ext_resource path="res://ResourcesALL/StyleBoxFlat.gd" type="Script" id=367]
 [ext_resource path="res://ResourcesALL/Basis.gd" type="Script" id=368]
 [ext_resource path="res://ResourcesALL/Engine.gd" type="Script" id=369]
+[ext_resource path="res://ResourcesALL/Callable.gd" type="Script" id=370]
 [ext_resource path="res://ResourcesALL/SurfaceTool.gd" type="Script" id=371]
 [ext_resource path="res://ResourcesALL/VideoStreamWebm.gd" type="Script" id=372]
 [ext_resource path="res://ResourcesALL/TranslationServer.gd" type="Script" id=373]
@@ -1742,6 +1743,9 @@ script = ExtResource( 423 )
 
 [node name="Basis" type="Node2D" parent="."]
 script = ExtResource( 368 )
+
+[node name="Callable" type="Node2D" parent="."]
+script = ExtResource( 370 )
 
 [node name="Color" type="Node2D" parent="."]
 script = ExtResource( 365 )

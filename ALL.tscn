@@ -8,6 +8,7 @@
 [ext_resource path="res://Operators.tscn" type="PackedScene" id=6]
 
 [node name="ALL" type="Node"]
+script = null
 
 [node name="2DALL" parent="." instance=ExtResource( 2 )]
 

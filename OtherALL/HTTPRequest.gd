@@ -36,4 +36,4 @@ func nodeFunction(q_HTTPRequest :HTTPRequest, can_reset : bool = false) -> void:
 		get_http_client_status()
 
 	if randi() % 2 == 1:
-		request(Autoload.get_string(), Autoload.get_poolstringarray(),Autoload.get_bool(), Autoload.get_int(), Autoload.get_string())
+		request(Autoload.get_string(), Autoload.get_packedstringarray(),Autoload.get_bool(), Autoload.get_int(), Autoload.get_string())

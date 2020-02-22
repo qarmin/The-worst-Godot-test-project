@@ -21,7 +21,7 @@ func alt_process(delta) -> void:
 #		q_Marshalls.base64_to_utf8(Autoload.get_string()))
 #		q_Marshalls.base64_to_variant(Autoload.get_string(),Autoload.get_bool()))
 #
-#		q_Marshalls.raw_to_base64(Autoload.get_poolbytearray()))
+#		q_Marshalls.raw_to_base64(Autoload.get_packedbytearray()))
 #		q_Marshalls.utf8_to_base64(Autoload.get_string()))
 #		q_Marshalls.variant_to_base64(String(),Autoload.get_bool()))
 #

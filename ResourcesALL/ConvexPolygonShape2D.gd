@@ -21,6 +21,6 @@ func nodeFunction(q_ConvexPolygonShape2D : ConvexPolygonShape2D, can_reset : boo
 		AutoResourcesShape2D.nodeFunction(q_ConvexPolygonShape2D)
 
 	if randi() % 2 == 1:
-		q_ConvexPolygonShape2D.set_points(Autoload.get_poolvector2array())
+		q_ConvexPolygonShape2D.set_points(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_ConvexPolygonShape2D.set_point_cloud( Autoload.get_poolvector2array())
+		q_ConvexPolygonShape2D.set_point_cloud( Autoload.get_packedvector2array())

@@ -17,13 +17,13 @@ func alt_process(delta) -> void:
 #
 #		var q_Nil 
 #
-#		q_Nil = Nil( PoolColorArray([Autoload.get_color(),Autoload.get_color()]))
-#		q_Nil = Nil( PoolVector3Array())
-#		q_Nil = Nil( PoolVector2Array())
-#		q_Nil = Nil( PoolStringArray())
-#		q_Nil = Nil( PoolRealArray())
-#		q_Nil = Nil( PoolIntArray())
-#		q_Nil = Nil( PoolByteArray())
+#		q_Nil = Nil( PackedColorArray([Autoload.get_color(),Autoload.get_color()]))
+#		q_Nil = Nil( PackedVector3Array())
+#		q_Nil = Nil( PackedVector2Array())
+#		q_Nil = Nil( PackedStringArray())
+#		q_Nil = Nil( PackedRealArray())
+#		q_Nil = Nil( PackedIntArray())
+#		q_Nil = Nil( PackedByteArray())
 #		q_Nil = Nil( Array())
 #		q_Nil = Nil( Dictionary())
 #		q_Nil = Nil( Object())

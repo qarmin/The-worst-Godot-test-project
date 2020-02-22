@@ -33,7 +33,7 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	### END TEMP
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.add_bones( Autoload.get_poolintarray())
+		q_SurfaceTool.add_bones( Autoload.get_packedintarray())
 	if randi() % 2 == 1:
 		q_SurfaceTool.add_color( Autoload.get_color())
 	if randi() % 2 == 1:
@@ -45,7 +45,7 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_SurfaceTool.add_tangent( Autoload.get_plane())
 	if randi() % 2 == 1:
-		q_SurfaceTool.add_triangle_fan( Autoload.get_poolvector3array(), Autoload.get_poolvector2array(), Autoload.get_poolcolorarray(), Autoload.get_poolvector2array(), Autoload.get_poolvector3array(), Autoload.get_array())
+		q_SurfaceTool.add_triangle_fan( Autoload.get_packedvector3array(), Autoload.get_packedvector2array(), Autoload.get_packedcolorarray(), Autoload.get_packedvector2array(), Autoload.get_packedvector3array(), Autoload.get_array())
 	if randi() % 2 == 1:
 		q_SurfaceTool.add_uv( Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -53,7 +53,7 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_SurfaceTool.add_vertex( Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_SurfaceTool.add_weights( Autoload.get_poolrealarray())
+		q_SurfaceTool.add_weights( Autoload.get_packedrealarray())
 
 	if randi() % 2 == 1:
 		q_SurfaceTool.append_from( temp_CubeMesh, Autoload.get_int(), Autoload.get_transform())

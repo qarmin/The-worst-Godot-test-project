@@ -25,4 +25,4 @@ func nodeFunction(q_HashingContext : HashingContext, can_reset : bool = false) -
 	if randi() % 2 == 1:
 		q_HashingContext.start(Autoload.get_int()) #HashType
 	if randi() % 2 == 1:
-		q_HashingContext.update(Autoload.get_poolbytearray())
+		q_HashingContext.update(Autoload.get_packedbytearray())

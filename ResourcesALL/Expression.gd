@@ -33,7 +33,7 @@ func nodeFunction(q_Expression : Expression, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Expression.has_execute_failed()
 	if randi() % 2 == 1:
-		q_Expression.parse( Autoload.get_string(), Autoload.get_poolstringarray())
+		q_Expression.parse( Autoload.get_string(), Autoload.get_packedstringarray())
 	
 	### CLEANING
 	temp_Node.queue_free()

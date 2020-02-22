@@ -24,5 +24,5 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #			q_WebSocketServer.has_peer( Autoload.get_int()))
 #			q_WebSocketServer.is_listening())
-#			q_WebSocketServer.listen( Autoload.get_int(), Autoload.get_poolstringarray(), Autoload.get_bool()))
+#			q_WebSocketServer.listen( Autoload.get_int(), Autoload.get_packedstringarray(), Autoload.get_bool()))
 #			q_WebSocketServer.stop()

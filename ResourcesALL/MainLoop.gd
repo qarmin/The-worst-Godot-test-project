@@ -27,7 +27,7 @@ func nodeFunction(q_MainLoop : MainLoop, can_reset : bool = false) -> void:
 	
 	### END TEMP
 
-#			q_MainLoop._drop_files( Autoload.get_poolstringarray(), Autoload.get_int())
+#			q_MainLoop._drop_files( Autoload.get_packedstringarray(), Autoload.get_int())
 #			q_MainLoop._finalize()
 #			q_MainLoop._idle( Autoload.get_float())
 #			q_MainLoop._initialize()

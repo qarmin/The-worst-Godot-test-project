@@ -79,10 +79,10 @@ func A_Object(q_Object : Object) -> void:
 	if randi()%2 == 1:
 		q_Object.can_translate_messages()
 	if  Autoload.NOT_A_BUG:
-		if randi()%2 == 1:
-			q_Object.connect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string(),Autoload.get_array(),Autoload.get_int()) # ConnectFlags
-		if randi()%2 == 1:
-			q_Object.disconnect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
+		#if randi()%2 == 1:
+		#	q_Object.connect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string(),Autoload.get_array(),Autoload.get_int()) # ConnectFlags
+		#if randi()%2 == 1:
+		#	q_Object.disconnect(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
 		if randi()%2 == 1:
 			q_Object.emit_signal(Autoload.get_string())
 	###free()
@@ -125,9 +125,9 @@ func A_Object(q_Object : Object) -> void:
 		q_Object.is_blocking_signals()
 	if randi()%2 == 1:
 		q_Object.is_class(Autoload.get_string())
-	if  Autoload.NOT_A_BUG:
-		if randi()%2 == 1:
-			q_Object.is_connected(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
+#	if  Autoload.NOT_A_BUG:
+#		if randi()%2 == 1:
+#			q_Object.is_connected(Autoload.get_string(),Autoload.get_nodes(temp_node),Autoload.get_string())
 	if randi()%2 == 1:
 		q_Object.is_queued_for_deletion()
 

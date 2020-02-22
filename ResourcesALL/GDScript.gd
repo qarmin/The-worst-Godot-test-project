@@ -28,7 +28,7 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			atan2(Autoload.get_float(),Autoload.get_float())
 
-			#bytes2var(Autoload.get_poolbytearray,Autoload.get_bool())
+			#bytes2var(Autoload.get_packedbytearray,Autoload.get_bool())
 		if randi() % 2 == 1:
 			cartesian2polar(Autoload.get_float(),Autoload.get_float())
 		if randi() % 2 == 1:

@@ -2,7 +2,7 @@ extends Node2D
 # BUG
 #onready var counter : float = Autoload.get_rand_time()
 #
-#var temp_array : PoolStringArray = PoolStringArray([
+#var temp_array : PackedStringArray = PackedStringArray([
 #	"rrara",
 #	"application/config/name",
 #	"application/config/description",
@@ -334,7 +334,7 @@ extends Node2D
 #		if randi() % 2 == 1:
 #			ProjectSettings.set_setting("audio/default_bus_layout", Autoload.get_string())
 #		if randi() % 2 == 1:
-#			ProjectSettings.set_setting("editor/search_in_file_extensions", Autoload.get_poolstringarray())
+#			ProjectSettings.set_setting("editor/search_in_file_extensions", Autoload.get_packedstringarray())
 #		if randi() % 2 == 1:
 #			ProjectSettings.set_setting("editor/script_templates_search_path", Autoload.get_string())
 #		if randi() % 2 == 1:

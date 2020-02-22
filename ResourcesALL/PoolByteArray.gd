@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PoolByteArray : PoolByteArray = Autoload.get_poolbytearray()
+var q_PackedByteArray : PackedByteArray = Autoload.get_packedbytearray()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,45 +10,45 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PoolByteArray,true)
+		nodeFunction(q_PackedByteArray,true)
 
-func nodeFunction(q_PoolByteArray : PoolByteArray, can_reset : bool = false) -> void:
+func nodeFunction(q_PackedByteArray : PackedByteArray, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_PoolByteArray = Autoload.get_poolbytearray()
+			q_PackedByteArray = Autoload.get_packedbytearray()
 
 	if randi() % 2 == 1:
-		q_PoolByteArray.append(Autoload.get_int())
+		q_PackedByteArray.append(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.append_array(Autoload.get_poolbytearray())
+		q_PackedByteArray.append_array(Autoload.get_packedbytearray())
 
 	if randi() % 2 == 1:
-		q_PoolByteArray.compress(Autoload.get_int()) # File.CompressionMode
+		q_PackedByteArray.compress(Autoload.get_int()) # File.CompressionMode
 	if randi() % 2 == 1:
-		q_PoolByteArray.decompress(Autoload.get_int(),Autoload.get_int())
+		q_PackedByteArray.decompress(Autoload.get_int(),Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_PoolByteArray.get_string_from_ascii()
+		q_PackedByteArray.get_string_from_ascii()
 	if randi() % 2 == 1:
-		q_PoolByteArray.get_string_from_utf8()
+		q_PackedByteArray.get_string_from_utf8()
 
 
 	if randi() % 2 == 1:
-		q_PoolByteArray.hex_encode()
+		q_PackedByteArray.hex_encode()
 	if randi() % 2 == 1:
-		q_PoolByteArray.insert( Autoload.get_int(), Autoload.get_int())
+		q_PackedByteArray.insert( Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.invert()
+		q_PackedByteArray.invert()
 	if randi() % 2 == 1:
-		q_PoolByteArray.push_back( Autoload.get_int())
+		q_PackedByteArray.push_back( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.remove( Autoload.get_int())
+		q_PackedByteArray.remove( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.resize( Autoload.get_int())
+		q_PackedByteArray.resize( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.set(Autoload.get_int(), Autoload.get_int())
+		q_PackedByteArray.set(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PoolByteArray.size()
+		q_PackedByteArray.size()
 	if randi() % 2 == 1:
-		q_PoolByteArray.subarray(Autoload.get_int(),Autoload.get_int())
+		q_PackedByteArray.subarray(Autoload.get_int(),Autoload.get_int())

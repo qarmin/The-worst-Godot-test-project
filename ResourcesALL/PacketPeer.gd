@@ -34,7 +34,7 @@ func nodeFunction(q_PacketPeer : PacketPeer, can_reset : bool = false) -> void:
 #		q_PacketPeer.get_var( Autoload.get_bool())
 #
 #	if randi() % 2 == 1:
-#		q_PacketPeer.put_packet( Autoload.get_poolbytearray())
+#		q_PacketPeer.put_packet( Autoload.get_packedbytearray())
 #	if randi() % 2 == 1:
 #		q_PacketPeer.put_var(Autoload.get_string(), Autoload.get_bool())
 	

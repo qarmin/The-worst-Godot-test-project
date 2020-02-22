@@ -60,7 +60,7 @@ func nodeFunction(q_NavigationMesh : NavigationMesh, can_reset : bool = false) -
 		q_NavigationMesh.set_filter_walkable_low_height_spans(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_NavigationMesh.add_polygon( Autoload.get_poolintarray())
+		q_NavigationMesh.add_polygon( Autoload.get_packedintarray())
 	if randi() % 2 == 1:
 		q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:

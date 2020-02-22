@@ -55,4 +55,4 @@ func nodeFunction(q_ArrayMesh : ArrayMesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_ArrayMesh.surface_set_name( Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_ArrayMesh.surface_update_region( Autoload.get_int(), Autoload.get_int(), Autoload.get_poolbytearray())
+		q_ArrayMesh.surface_update_region( Autoload.get_int(), Autoload.get_int(), Autoload.get_packedbytearray())

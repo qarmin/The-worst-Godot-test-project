@@ -92,7 +92,7 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_vertex( Autoload.get_int(), Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_MeshDataTool.set_vertex_bones( Autoload.get_int(), Autoload.get_poolintarray())
+		q_MeshDataTool.set_vertex_bones( Autoload.get_int(), Autoload.get_packedintarray())
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_vertex_color( Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
@@ -106,4 +106,4 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_vertex_uv2( Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_MeshDataTool.set_vertex_weights( Autoload.get_int(), Autoload.get_poolrealarray())
+		q_MeshDataTool.set_vertex_weights( Autoload.get_int(), Autoload.get_packedrealarray())

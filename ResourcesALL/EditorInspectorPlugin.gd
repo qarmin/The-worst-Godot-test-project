@@ -24,5 +24,5 @@ func alt_process(delta) -> void:
 #
 #		q_EditorInspectorPlugin.add_custom_control( Control.new())
 #		q_EditorInspectorPlugin.add_property_editor( Autoload.get_string(), Control.new())
-#		q_EditorInspectorPlugin.add_property_editor_for_multiple_properties( Autoload.get_string(), Autoload.get_poolstringarray(), Control.new())
+#		q_EditorInspectorPlugin.add_property_editor_for_multiple_properties( Autoload.get_string(), Autoload.get_packedstringarray(), Control.new())
 #
