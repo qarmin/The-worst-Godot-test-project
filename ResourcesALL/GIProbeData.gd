@@ -27,7 +27,7 @@ func nodeFunction(q_GIProbeData : GIProbeData, can_reset : bool = false) -> void
 #	if randi() % 2 == 1:
 #		q_GIProbeData.set_to_cell_xform(Autoload.get_transform())
 #	if randi() % 2 == 1:
-#		q_GIProbeData.set_dynamic_data(Autoload.get_packedintarray())
+#		q_GIProbeData.set_dynamic_data(Autoload.get_packedint64array())
 #	if randi() % 2 == 1:
 #		q_GIProbeData.set_dynamic_range(Autoload.get_int())
 #	if randi() % 2 == 1:

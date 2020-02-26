@@ -28,6 +28,7 @@ func _process(delta) -> void:
 		var strin = Autoload.get_string()
 		
 		52 % -25
+		arr.append(254)
 		arr[Autoload.get_int() % arr.size()]
 		arr[-Autoload.get_int() % arr.size()]
 		if dict.has(strin):
@@ -151,7 +152,7 @@ func _process(delta) -> void:
 
 enum {TILE, MILE}
 enum State {STATE_IDLE, STATE_JUMP = 5, STATE_SHOOT}
-const Roman = {IDLE = 0, JUMP = 5, SHOOT = 6}
+#const Roman = {IDLE = 0, JUMP = 5, SHOOT = 6}
 const TITLE = 0
 const TITLE2 : int = 0
 var describtion

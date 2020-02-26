@@ -50,7 +50,7 @@ func nodeFunction(q_MultiMesh : MultiMesh, can_reset : bool = false) -> void:
 #		q_MultiMesh.get_instance_transform_2d(Autoload.get_int())
 #
 #	if randi() % 2 == 1:
-#		q_MultiMesh.set_as_bulk_array( Autoload.get_packedrealarray())
+#		q_MultiMesh.set_as_bulk_array( Autoload.get_packedfloat32array())
 #	if randi() % 2 == 1:
 #		q_MultiMesh.set_instance_color(Autoload.get_int(), Autoload.get_color())
 #	if randi() % 2 == 1:

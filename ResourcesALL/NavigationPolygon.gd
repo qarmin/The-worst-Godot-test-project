@@ -25,7 +25,7 @@ func nodeFunction(q_NavigationPolygon : NavigationPolygon, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_NavigationPolygon.add_outline_at_index( Autoload.get_packedvector2array(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_NavigationPolygon.add_polygon( Autoload.get_packedintarray())
+		q_NavigationPolygon.add_polygon( Autoload.get_packedint32array())
 
 	if randi() % 2 == 1:
 		q_NavigationPolygon.clear_outlines()

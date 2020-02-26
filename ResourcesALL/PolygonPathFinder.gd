@@ -38,4 +38,4 @@ func nodeFunction(q_PolygonPathFinder : PolygonPathFinder, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_PolygonPathFinder.set_point_penalty(Autoload.get_int(), Autoload.get_float())
 	if randi() % 2 == 1:
-		q_PolygonPathFinder.setup( Autoload.get_packedvector2array(), Autoload.get_packedintarray())
+		q_PolygonPathFinder.setup( Autoload.get_packedvector2array(), Autoload.get_packedint32array())

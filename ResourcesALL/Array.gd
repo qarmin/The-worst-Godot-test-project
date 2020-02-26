@@ -25,9 +25,9 @@ func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
 			if randi() % 2 == 1:
 				q_Array = Array(Autoload.get_packedstringarray())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_packedrealarray())
+				q_Array = Array(Autoload.get_packedfloat32array())
 			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_packedintarray())
+				q_Array = Array(Autoload.get_packedint64array())
 			if randi() % 2 == 1:
 				q_Array = Array(Autoload.get_packedbytearray())
 		

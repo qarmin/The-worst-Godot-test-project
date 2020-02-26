@@ -61,7 +61,7 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		q_Polygon2D.set_internal_vertex_count(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_Polygon2D.add_bone(Autoload.get_string(),Autoload.get_packedrealarray())
+		q_Polygon2D.add_bone(Autoload.get_string(),Autoload.get_packedfloat32array())
 	if randi() % 2 == 1:
 		q_Polygon2D.erase_bone(Autoload.get_int())
 	if randi() % 2 == 1:

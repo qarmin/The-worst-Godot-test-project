@@ -53,9 +53,9 @@ func nodeFunction(q_String : String, can_reset : bool = false) -> void:
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_packedbytearray())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_packedintarray())
+				q_String = String( Autoload.get_packedint64array())
 			if randi() % 2 == 1:
-				q_String = String( Autoload.get_packedrealarray())
+				q_String = String( Autoload.get_packedfloat32array())
 			if randi() % 2 == 1:
 				q_String = String( Autoload.get_packedstringarray())
 			if randi() % 2 == 1:

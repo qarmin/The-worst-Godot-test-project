@@ -3,7 +3,7 @@ extends Node
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, but shows too much spam in console
 
-const RANGE : int = 30
+const RANGE : int = 100
 
 var frames_to_show = -1
 
@@ -95,14 +95,26 @@ func get_packedcolorarray() -> PackedColorArray:
 		pca.append(get_color())
 	return pca
 
-func get_packedintarray() -> PackedIntArray:
-	var pia : PackedIntArray = PackedIntArray([])
+func get_packedint32array() -> PackedInt32Array:
+	var pia : PackedInt32Array = PackedInt32Array([])
+	for i in range(randi() % 10):
+		pia.append(get_int())
+	return pia
+	
+func get_packedint64array() -> PackedInt64Array:
+	var pia : PackedInt64Array = PackedInt64Array([])
 	for i in range(randi() % 10):
 		pia.append(get_int())
 	return pia
 
-func get_packedrealarray() -> PackedRealArray:
-	var pra : PackedRealArray = PackedRealArray([])
+func get_packedfloat64array() -> PackedFloat64Array:
+	var pra : PackedFloat64Array = PackedFloat64Array([])
+	for i in range(randi() % 10):
+		pra.append(get_float())
+	return pra
+
+func get_packedfloat32array() -> PackedFloat32Array:
+	var pra : PackedFloat32Array = PackedFloat32Array([])
 	for i in range(randi() % 10):
 		pra.append(get_float())
 	return pra
