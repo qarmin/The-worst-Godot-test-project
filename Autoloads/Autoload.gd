@@ -40,6 +40,18 @@ func get_string() -> String:
 		temp_string += str(randi() % MAX_NUMBER)
 
 	return temp_string
+	
+#func get_stringname() -> StringName:
+#	temp_string :  StringName = ""
+#	if MAX_NEWLINE != 0:
+#		temp_string += str(randi() % MAX_NUMBER)
+#		for i in range(MAX_NEWLINE):
+#			if randi() % 2 == 1:
+#				temp_string += "\n"
+#	else: 
+#		temp_string += str(randi() % MAX_NUMBER)
+#
+#	return temp_string
 
 func get_int() -> int:
 	return randi() % RANGE - RANGE / 2
@@ -68,8 +80,14 @@ func get_color() -> Color:
 func get_vector2() -> Vector2:
 	return Vector2(get_float(),get_float())
 
+func get_vector2i() -> Vector2i:
+	return Vector2i(get_int(),get_int())
+
 func get_vector3() -> Vector3:
 	return Vector3(get_float(),get_float(),get_float())
+	
+func get_vector3i() -> Vector3i:
+	return Vector3i(get_int(),get_int(),get_int())
 ### Arrays
 func get_packedvector2array() -> PackedVector2Array:
 	var pv2a : PackedVector2Array = PackedVector2Array([])
@@ -177,12 +195,21 @@ func get_floatf(var max_value : float) -> float:
 
 func get_vector2f(var max_value : float) -> Vector2:
 	return Vector2(get_floatf(max_value),get_floatf(max_value))
+	
+func get_vector2ii(var max_value : int) -> Vector2:
+	return Vector2(get_inti(max_value),get_inti(max_value))
 
 func get_vector3f(var max_value : float) -> Vector3:
 	return Vector3(get_floatf(max_value),get_floatf(max_value),get_floatf(max_value))
+	
+func get_vector3ii(var max_value : int) -> Vector3:
+	return Vector3(get_inti(max_value),get_inti(max_value),get_inti(max_value))
 
 func get_rect2f(var max_value : float) -> Rect2:
 	return Rect2(get_vector2f(max_value),get_vector2f(max_value))
+	
+#func get_rect2i(var max_value : int) -> Vector2:
+#	return Vector2(get_vector2f(max_value),get_vector2f(max_value))
 
 func get_aabbf(var max_value : float) -> AABB:
 	return AABB(get_vector3f(max_value),get_vector3f(max_value))

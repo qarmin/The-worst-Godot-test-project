@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PackedInt64Array : PackedInt64Array = Autoload.get_packedint64array()
+var q_PackedInt32Array : PackedInt32Array = Autoload.get_packedint32array()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,30 +10,30 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PackedInt64Array,true)
+		nodeFunction(q_PackedInt32Array,true)
 
-func nodeFunction(q_PackedInt64Array : PackedInt64Array, can_reset : bool = false) -> void:
+func nodeFunction(q_PackedInt32Array : PackedInt32Array, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_PackedInt64Array = Autoload.get_packedint64array()
+			q_PackedInt32Array = Autoload.get_packedint32array()
 
 	if randi() % 2 == 1:
-		q_PackedInt64Array.append(Autoload.get_int())
+		q_PackedInt32Array.append(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.append_array(Autoload.get_packedint64array())
+		q_PackedInt32Array.append_array(Autoload.get_packedint32array())
 
 	if randi() % 2 == 1:
-		q_PackedInt64Array.insert( Autoload.get_int(), Autoload.get_int())
+		q_PackedInt32Array.insert( Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.invert()
+		q_PackedInt32Array.invert()
 	if randi() % 2 == 1:
-		q_PackedInt64Array.push_back( Autoload.get_int())
+		q_PackedInt32Array.push_back( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.remove( Autoload.get_int())
+		q_PackedInt32Array.remove( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.resize( Autoload.get_int())
+		q_PackedInt32Array.resize( Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.set(Autoload.get_int(), Autoload.get_int())
+		q_PackedInt32Array.set(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PackedInt64Array.size()
+		q_PackedInt32Array.size()
