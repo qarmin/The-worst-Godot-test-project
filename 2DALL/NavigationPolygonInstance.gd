@@ -1,4 +1,4 @@
-extends NavigationPolygonInstance
+extends NavigationRegion2D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,7 +10,7 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_NavigationPolygonInstance : NavigationPolygonInstance, can_reset : bool = false) -> void:
+func nodeFunction(q_NavigationPolygonInstance : NavigationRegion2D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_NavigationPolygonInstance)
