@@ -22,11 +22,11 @@ func nodeFunction(q_InputEventKey : InputEventKey, can_reset : bool = false) -> 
 
 	if randi() % 2 == 1:
 		q_InputEventKey.set_pressed(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_InputEventKey.set_scancode(Autoload.get_int()) #KeyList
+#	if randi() % 2 == 1:
+#		q_InputEventKey.set_scancode(Autoload.get_int()) #KeyList
 	if randi() % 2 == 1:
 		q_InputEventKey.set_unicode(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_InputEventKey.set_echo(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_InputEventKey.get_scancode_with_modifiers()
+#	if randi() % 2 == 1:
+#		q_InputEventKey.get_scancode_with_modifiers()

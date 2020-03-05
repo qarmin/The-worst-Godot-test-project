@@ -35,6 +35,10 @@ func nodeFunction(q_AnimatedSprite : AnimatedSprite, can_reset : bool = false) -
 	if randi()%2 == 1:
 		q_AnimatedSprite._set_playing(Autoload.get_bool())
 	if randi()%2 == 1:
+		q_AnimatedSprite.set_specular_color(Autoload.get_color())
+	if randi()%2 == 1:
+		q_AnimatedSprite.set_shininess(Autoload.get_float())
+	if randi()%2 == 1:
 		q_AnimatedSprite.set_centered(Autoload.get_bool())
 	if randi()%2 == 1:
 		q_AnimatedSprite.set_offset(Autoload.get_vector2())
