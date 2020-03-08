@@ -457,7 +457,7 @@
 [ext_resource path="res://ResourcesALL/Vector3i.gd" type="Script" id=455]
 [ext_resource path="res://ResourcesALL/StringName.gd" type="Script" id=456]
 [ext_resource path="res://ResourcesALL/Rect2i.gd" type="Script" id=457]
-[ext_resource path="res://Signal.gd" type="Script" id=458]
+[ext_resource path="res://ResourcesALL/Signal.gd" type="Script" id=458]
 
 [node name="Resources" type="Node2D"]
 script = ExtResource( 2 )

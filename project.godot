@@ -10,12 +10,12 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Node2D",
-"class": "Operators",
-"language": "GDScript",
+"class": @"Operators",
+"language": @"GDScript",
 "path": "res://MainScripts/Operators.gd"
 } ]
 _global_script_class_icons={
-"Operators": ""
+@"Operators": ""
 }
 
 [application]

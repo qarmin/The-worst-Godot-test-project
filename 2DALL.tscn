@@ -46,12 +46,12 @@
 animations = [ {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
-"name": "0",
+"name": @"0",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
 "loop": true,
-"name": "New Anim",
+"name": @"New Anim",
 "speed": 5.0
 } ]
 
@@ -114,7 +114,7 @@ __meta__ = {
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 1079.71, 252.027 )
 frames = SubResource( 1 )
-animation = "New Anim"
+animation = @"New Anim"
 script = ExtResource( 7 )
 
 [node name="Area2D" type="Area2D" parent="."]
