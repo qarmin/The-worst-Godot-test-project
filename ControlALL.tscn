@@ -161,9 +161,9 @@ popup_exclusive = true
 script = ExtResource( 19 )
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
-margin_top = 923.0
-margin_right = 308.0
-margin_bottom = 943.0
+margin_left = 1150.0
+margin_right = 1202.0
+margin_bottom = 164.0
 hide_on_item_selection = false
 hide_on_checkable_item_selection = false
 hide_on_state_item_selection = true
@@ -437,7 +437,7 @@ margin_left = 627.0
 margin_top = 628.0
 margin_right = 841.0
 margin_bottom = 664.0
-scroll_offset = Vector2( -102, 0 )
+scroll_offset = Vector2( -32, 0 )
 script = ExtResource( 38 )
 
 [node name="HScrollBar_NOTHING" type="HScrollBar" parent="."]

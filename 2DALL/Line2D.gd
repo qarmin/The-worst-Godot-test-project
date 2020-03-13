@@ -66,5 +66,5 @@ func nodeFunction(q_Line2D : Line2D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Line2D.remove_point(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_Line2D.set_point_position(Autoload.get_int(), Autoload.get_vector2())
+#	if randi() % 2 == 1: #BUG CRASH
+#		q_Line2D.set_point_position(Autoload.get_int(), Autoload.get_vector2())

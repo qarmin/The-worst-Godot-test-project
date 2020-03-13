@@ -27,5 +27,8 @@ func nodeFunction(q_SpinBox : SpinBox, can_reset : bool = false) -> void:
 		q_SpinBox.set_prefix(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_SpinBox.set_suffix(Autoload.get_string())
+		
+	if randi() % 2 == 1:
+		q_SpinBox.apply()
 	if randi() % 2 == 1:
 		q_SpinBox.get_line_edit()

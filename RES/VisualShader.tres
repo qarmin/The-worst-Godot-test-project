@@ -42,6 +42,8 @@ void light() {
 
 }
 "
+graph_offset = Vector2( 0, 286.333 )
+version = "4.0"
 mode = 1
 modes/blend = 2
 flags/light_only = true
@@ -64,4 +66,4 @@ nodes/fragment/8/node = SubResource( 7 )
 nodes/fragment/8/position = Vector2( -20, 360 )
 nodes/fragment/9/node = SubResource( 8 )
 nodes/fragment/9/position = Vector2( 128, 445.5 )
-nodes/fragment/connections = PoolIntArray( 8, 0, 7, 0, 8, 0, 9, 0, 9, 0, 3, 0, 8, 0, 7, 2 )
+nodes/fragment/connections = PackedInt32Array( 8, 0, 7, 0, 8, 0, 9, 0, 9, 0, 3, 0, 8, 0, 7, 2 )

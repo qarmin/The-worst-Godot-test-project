@@ -15,7 +15,7 @@ func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_TabContainer)
 		
-#BUG
+#BUG GH#36904
 #	### START TEMP
 #	var temp_ImageTexture : ImageTexture = ImageTexture.new()
 ##?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
