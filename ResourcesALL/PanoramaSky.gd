@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PanoramaSky : PanoramaSky = PanoramaSky.new()
+var q_PanoramaSkyMaterial : PanoramaSkyMaterial = PanoramaSkyMaterial.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,16 +10,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PanoramaSky,true)
+		nodeFunction(q_PanoramaSkyMaterial,true)
 
-func nodeFunction(q_PanoramaSky : PanoramaSky, can_reset : bool = false) -> void:
+func nodeFunction(q_PanoramaSkyMaterial : PanoramaSkyMaterial, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:
-				q_PanoramaSky = PanoramaSky.new()
+				q_PanoramaSkyMaterial = PanoramaSkyMaterial.new()
 	if randi() % 2 == 1:
-		AutoResourcesSky.nodeFunction(q_PanoramaSky)
+		AutoResourcesSky.nodeFunction(q_PanoramaSkyMaterial)
 		
 	### START TEMP
 	
@@ -29,4 +29,4 @@ func nodeFunction(q_PanoramaSky : PanoramaSky, can_reset : bool = false) -> void
 	### END TEMP
 		
 	if randi() % 2 == 1:
-		q_PanoramaSky.set_panorama(temp_ImageTexture)
+		q_PanoramaSkyMaterial.set_panorama(temp_ImageTexture)

@@ -21,8 +21,8 @@ func nodeFunction(q_Environment : Environment, can_reset : bool = false) -> void
 		AutoResourcesResource.nodeFunction(q_Environment)
 		
 	### START TEMP
-	var temp_PanoramaSky : PanoramaSky = PanoramaSky.new()
-	AutoResourcesPanoramaSky.nodeFunction(temp_PanoramaSky)
+	var temp_PanoramaSkyMaterial : PanoramaSkyMaterial = PanoramaSkyMaterial.new()
+	AutoResourcesPanoramaSkyMaterial.nodeFunction(temp_PanoramaSkyMaterial)
 	
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
 	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
@@ -32,7 +32,7 @@ func nodeFunction(q_Environment : Environment, can_reset : bool = false) -> void
 #	if randi() % 2 == 1:
 #		q_Environment.set_background(Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_Environment.set_sky(temp_PanoramaSky)
+#		q_Environment.set_sky(temp_PanoramaSkyMaterial)
 #	if randi() % 2 == 1:
 #		q_Environment.set_sky_custom_fov(Autoload.get_float())
 #	if randi() % 2 == 1:
