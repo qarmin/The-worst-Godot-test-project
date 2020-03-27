@@ -111,7 +111,7 @@ __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
 
-[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+[node name="AnimatedSprite" type="AnimatedSprite2D" parent="."]
 position = Vector2( 1079.71, 252.027 )
 frames = SubResource( 1 )
 animation = @"New Anim"
@@ -443,7 +443,7 @@ script = ExtResource( 43 )
 position = Vector2( 794.745, 399.52 )
 script = ExtResource( 44 )
 
-[node name="Particles2D" type="Particles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
 position = Vector2( 1071.12, 353.697 )
 process_material = SubResource( 11 )
 script = ExtResource( 26 )
@@ -517,7 +517,7 @@ script = ExtResource( 39 )
 rest = Transform2D( 0, 0.78, -0.92, 0.76, -1.37, 0.95 )
 script = ExtResource( 39 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Sprite" type="Sprite2D" parent="."]
 script = ExtResource( 32 )
 
 [node name="TileMap" type="TileMap" parent="."]

@@ -64,7 +64,7 @@ script = ExtResource( 7 )
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 script = ExtResource( 12 )
 
-[node name="SkeletonIK" type="SkeletonIK" parent="."]
+[node name="SkeletonIK" type="SkeletonIK3D" parent="."]
 process_priority = 1
 target = Transform( 2.49, 1.02, -0.07, 1.15, 1, -1.97, -0.7, -1.01, 2.42, -0.7, -0.59, -0.29 )
 magnet = Vector3( 2.8, -3.69, -0.95 )
@@ -76,7 +76,7 @@ script = ExtResource( 5 )
 [node name="Tween" type="Tween" parent="."]
 script = ExtResource( 3 )
 
-[node name="Viewport" type="Viewport" parent="."]
+[node name="Viewport" type="Node" parent="."]
 script = ExtResource( 11 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
