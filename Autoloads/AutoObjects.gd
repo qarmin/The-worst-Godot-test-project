@@ -16,8 +16,8 @@ var use_Range : bool = true
 var use_Slider : bool = true
 var use_Separator : bool = true
 var use_Spatial : bool = true
-var use_VisualInstance : bool = true
-var use_GeometryInstance : bool = true
+var use_VisualInstance3D : bool = true
+var use_GeometryInstance3D : bool = true
 var use_SpriteBase3D : bool = true
 var use_CSGShape : bool = true
 var use_CSGPrimitive : bool = true
@@ -44,8 +44,8 @@ func _ready() ->  void:
 #	use_Slider = false
 #	use_Separator = false
 #	use_Spatial = false
-#	use_VisualInstance = false
-#	use_GeometryInstance = false
+#	use_VisualInstance3D = false
+#	use_GeometryInstance3D = false
 #	use_SpriteBase3D = false
 #	use_CSGShape = false
 #	use_CSGPrimitive = false
@@ -235,8 +235,6 @@ func A_Node(q_Node : Node) -> void:
 	if randi()%2 == 1:
 		q_Node.get_physics_process_delta_time()
 	if randi()%2 == 1:
-		q_Node.get_position_in_parent()
-	if randi()%2 == 1:
 		q_Node.get_process_delta_time()
 	if randi()%2 == 1:
 		q_Node.get_scene_instance_load_placeholder()
@@ -422,7 +420,7 @@ func A_CanvasItem(q_CanvasItem : CanvasItem) -> void:
 	if randi()%2 == 1:
 		q_CanvasItem.set_light_mask(Autoload.get_int())
 #	if randi()%2 == 1: #MISSING
-#		q_CanvasItem.set_material(SpatialMaterial.new())
+#		q_CanvasItem.set_material(StandardMaterial.new())
 	if randi()%2 == 1:
 		q_CanvasItem.set_use_parent_material(Autoload.get_bool())
 
@@ -640,121 +638,121 @@ func A_Control(q_Control : Control) -> void:
 	if randi() % 2 == 1:
 		q_Control.accept_event()
 
-	if randi() % 2 == 1:
-		q_Control.add_color_override(Autoload.get_string(), Autoload.get_color())
-	if randi() % 2 == 1:
-		q_Control.add_constant_override(Autoload.get_string(), Autoload.get_int())
-	if randi() % 2 == 1:
-		q_Control.add_font_override(Autoload.get_string(), Autoload.loadA("DynamicFont.tres"))
-	if randi() % 2 == 1:
-		q_Control.add_icon_override(Autoload.get_string(), ImageTexture.new())
-	if randi() % 2 == 1:
-		q_Control.add_shader_override(Autoload.get_string(), Autoload.loadA("VisualShader.tres"))
-	if randi() % 2 == 1:
-		q_Control.add_stylebox_override(Autoload.get_string(), Autoload.loadA("StyleBoxTexture.tres"))
+#	if randi() % 2 == 1:
+#		q_Control.add_color_override(Autoload.get_string(), Autoload.get_color())
+#	if randi() % 2 == 1:
+#		q_Control.add_constant_override(Autoload.get_string(), Autoload.get_int())
+#	if randi() % 2 == 1: #TODO CHECK
+#		q_Control.add_font_override(Autoload.get_string(), Autoload.loadA("DynamicFont.tres"))
+#	if randi() % 2 == 1:
+#		q_Control.add_icon_override(Autoload.get_string(), ImageTexture.new())
+#	if randi() % 2 == 1:
+#		q_Control.add_shader_override(Autoload.get_string(), Autoload.loadA("VisualShader.tres"))
+#	if randi() % 2 == 1:
+#		q_Control.add_stylebox_override(Autoload.get_string(), Autoload.loadA("StyleBoxTexture.tres"))
 
 #	if randi() % 2 == 1: #TODO Need Control
 #		q_Control.force_drag(Autoload.get_string(), Autoload.get_nodes(q_Control))
 
-	if randi() % 2 == 1:
-		q_Control.get_begin()
-	if randi() % 2 == 1:
-		q_Control.get_color(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.get_combined_minimum_size()
-	if randi() % 2 == 1:
-		q_Control.get_constant(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.get_cursor_shape(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Control.get_end()
-	if randi() % 2 == 1:
-		q_Control.get_focus_owner()
-	if randi() % 2 == 1:
-		q_Control.get_font(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.get_global_rect()
-	if randi() % 2 == 1:
-		q_Control.get_icon(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.get_minimum_size()
-	if randi() % 2 == 1:
-		q_Control.get_parent_area_size()
-	if randi() % 2 == 1:
-		q_Control.get_parent_control()
-	if randi() % 2 == 1:
-		q_Control.get_rect()
-	if randi() % 2 == 1:
-		q_Control.get_rotation()
-	if randi() % 2 == 1:
-		q_Control.get_stylebox(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.get_tooltip(Autoload.get_vector2())
-
-	if randi() % 2 == 1:
-		q_Control.grab_click_focus()
-	if randi() % 2 == 1:
-		q_Control.grab_focus()
-
-	if randi() % 2 == 1:
-		q_Control.has_color(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_color_override(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_constant(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_constant_override(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_focus()
-	if randi() % 2 == 1:
-		q_Control.has_font(Autoload.get_string(),Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_font_override(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_icon(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_icon_override(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_shader_override(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_stylebox(Autoload.get_string(), Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Control.has_stylebox_override(Autoload.get_string())
-
-	if randi() % 2 == 1:
-		q_Control.minimum_size_changed()
-	if randi() % 2 == 1:
-		q_Control.release_focus()
-
-	if randi() % 2 == 1:
-		q_Control.set_anchor(Autoload.get_int(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_bool()) #MARGIN
-	if randi() % 2 == 1:
-		q_Control.set_anchor_and_margin(Autoload.get_int(), Autoload.get_float(), Autoload.get_float(), Autoload.get_bool()) # MARGIN
-	if randi() % 2 == 1:
-		q_Control.set_anchors_and_margins_preset(Autoload.get_int(), Autoload.get_int(), Autoload.get_int()) # LayoutPreset, LayoutPresetMode
-	if randi() % 2 == 1:
-		q_Control.set_anchors_preset(Autoload.get_int(), Autoload.get_bool())# LayoutPreset
-	if randi() % 2 == 1:
-		q_Control.set_begin(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Control.set_drag_forwarding(q_Control)
-	if randi() % 2 == 1:
-		q_Control.set_drag_preview(q_Control)
-	if randi() % 2 == 1:
-		q_Control.set_end(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Control.set_global_position(Autoload.get_vector2(), Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_Control.set_margins_preset(Autoload.get_int(), Autoload.get_int(), Autoload.get_int()) # LayoutPreset, LayoutPresetMode
-	if randi() % 2 == 1:
-		q_Control.set_position(Autoload.get_vector2(), Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_Control.set_rotation(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_Control.set_size(Autoload.get_vector2(), Autoload.get_bool())
-
-	if randi() % 2 == 1:
-		q_Control.show_modal(Autoload.get_bool())
+#	if randi() % 2 == 1: # TODO CHECK THIS
+#		q_Control.get_begin()
+#	if randi() % 2 == 1:
+#		q_Control.get_color(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.get_combined_minimum_size()
+#	if randi() % 2 == 1:
+#		q_Control.get_constant(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.get_cursor_shape(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Control.get_end()
+#	if randi() % 2 == 1:
+#		q_Control.get_focus_owner()
+#	if randi() % 2 == 1: 
+#		q_Control.get_font(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.get_global_rect()
+#	if randi() % 2 == 1:
+#		q_Control.get_icon(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.get_minimum_size()
+#	if randi() % 2 == 1:
+#		q_Control.get_parent_area_size()
+#	if randi() % 2 == 1:
+#		q_Control.get_parent_control()
+#	if randi() % 2 == 1:
+#		q_Control.get_rect()
+#	if randi() % 2 == 1:
+#		q_Control.get_rotation()
+#	if randi() % 2 == 1:
+#		q_Control.get_stylebox(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.get_tooltip(Autoload.get_vector2())
+#
+#	if randi() % 2 == 1:
+#		q_Control.grab_click_focus()
+#	if randi() % 2 == 1:
+#		q_Control.grab_focus()
+#
+#	if randi() % 2 == 1:
+#		q_Control.has_color(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_color_override(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_constant(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_constant_override(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_focus()
+#	if randi() % 2 == 1:
+#		q_Control.has_font(Autoload.get_string(),Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_font_override(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_icon(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_icon_override(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_shader_override(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_stylebox(Autoload.get_string(), Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Control.has_stylebox_override(Autoload.get_string())
+#
+#	if randi() % 2 == 1:
+#		q_Control.minimum_size_changed()
+#	if randi() % 2 == 1:
+#		q_Control.release_focus()
+#
+#	if randi() % 2 == 1:
+#		q_Control.set_anchor(Autoload.get_int(), Autoload.get_float(), Autoload.get_bool(), Autoload.get_bool()) #MARGIN
+#	if randi() % 2 == 1:
+#		q_Control.set_anchor_and_margin(Autoload.get_int(), Autoload.get_float(), Autoload.get_float(), Autoload.get_bool()) # MARGIN
+#	if randi() % 2 == 1:
+#		q_Control.set_anchors_and_margins_preset(Autoload.get_int(), Autoload.get_int(), Autoload.get_int()) # LayoutPreset, LayoutPresetMode
+#	if randi() % 2 == 1:
+#		q_Control.set_anchors_preset(Autoload.get_int(), Autoload.get_bool())# LayoutPreset
+#	if randi() % 2 == 1:
+#		q_Control.set_begin(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Control.set_drag_forwarding(q_Control)
+#	if randi() % 2 == 1:
+#		q_Control.set_drag_preview(q_Control)
+#	if randi() % 2 == 1:
+#		q_Control.set_end(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Control.set_global_position(Autoload.get_vector2(), Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_Control.set_margins_preset(Autoload.get_int(), Autoload.get_int(), Autoload.get_int()) # LayoutPreset, LayoutPresetMode
+#	if randi() % 2 == 1:
+#		q_Control.set_position(Autoload.get_vector2(), Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_Control.set_rotation(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Control.set_size(Autoload.get_vector2(), Autoload.get_bool())
+#
+#	if randi() % 2 == 1:
+#		q_Control.show_modal(Autoload.get_bool())
 	### q_Control.warp_mouse(Autoload.get_vector2()) #JUST NO!!!
 	pass
 
@@ -865,229 +863,229 @@ func A_Separator(q_Separator : Separator) -> void: #ITS EMPTY
 	if !use_Separator:
 		return
 
-func A_Spatial(q_Spatial : Spatial) -> void:
+func A_Node3D(q_Node3D : Node3D) -> void:
 	if !use_Spatial:
 		return
 		
 	if randi() % 2 == 1:
-		q_Spatial.set_global_transform(Autoload.get_transform())
+		q_Node3D.set_global_transform(Autoload.get_transform())
 	if randi() % 2 == 1:
-		q_Spatial.set_translation(Autoload.get_vector3())
+		q_Node3D.set_translation(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.set_rotation_degrees(Autoload.get_vector3())
+		q_Node3D.set_rotation_degrees(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.set_rotation(Autoload.get_vector3())
+		q_Node3D.set_rotation(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.set_scale(Autoload.get_vector3())
+		q_Node3D.set_scale(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.set_transform(Autoload.get_transform())
+		q_Node3D.set_transform(Autoload.get_transform())
 	if randi() % 2 == 1:
-		q_Spatial.set_visible(Autoload.get_bool())
+		q_Node3D.set_visible(Autoload.get_bool())
 #	if randi() % 2 == 1: #SPATIAL GIZMO AND CHILD ARE NOT INSTANTIABLE
-#		q_Spatial.set_gizmo(SpatialGizmo.new())
+#		q_Node3D.set_gizmo(SpatialGizmo.new())
 
 	if randi() % 2 == 1:
-		q_Spatial.force_update_transform()
+		q_Node3D.force_update_transform()
 
 	if randi() % 2 == 1:
-		q_Spatial.get_parent_spatial()
+		q_Node3D.get_parent_spatial()
 	if randi() % 2 == 1:
-		q_Spatial.get_world()
+		q_Node3D.get_world()
 
 	if randi() % 2 == 1:
-		q_Spatial.global_rotate(Autoload.get_vector3(),Autoload.get_float())
+		q_Node3D.global_rotate(Autoload.get_vector3(),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Spatial.global_scale(Autoload.get_vector3())
+		q_Node3D.global_scale(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.global_translate(Autoload.get_vector3())
+		q_Node3D.global_translate(Autoload.get_vector3())
 
 	if randi() % 2 == 1:
-		q_Spatial.hide()
+		q_Node3D.hide()
 
 	if randi() % 2 == 1:
-		q_Spatial.is_local_transform_notification_enabled()
+		q_Node3D.is_local_transform_notification_enabled()
 	if randi() % 2 == 1:
-		q_Spatial.is_scale_disabled()
+		q_Node3D.is_scale_disabled()
 	if randi() % 2 == 1:
-		q_Spatial.is_set_as_toplevel()
+		q_Node3D.is_set_as_toplevel()
 	if randi() % 2 == 1:
-		q_Spatial.is_transform_notification_enabled()
+		q_Node3D.is_transform_notification_enabled()
 	if randi() % 2 == 1:
-		q_Spatial.is_visible_in_tree()
+		q_Node3D.is_visible_in_tree()
 
 	if randi() % 2 == 1:
-		q_Spatial.look_at(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
+		q_Node3D.look_at(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
 	if randi() % 2 == 1:
-		q_Spatial.look_at_from_position(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
+		q_Node3D.look_at_from_position(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215))
 
 	if randi() % 2 == 1:
-		q_Spatial.orthonormalize()
+		q_Node3D.orthonormalize()
 
 	if randi() % 2 == 1:
-		q_Spatial.rotate(Vector3(Autoload.get_float() + 150,Autoload.get_float() + 100,Autoload.get_float() + 15),Autoload.get_float() + 10)
+		q_Node3D.rotate(Vector3(Autoload.get_float() + 150,Autoload.get_float() + 100,Autoload.get_float() + 15),Autoload.get_float() + 10)
 	if randi() % 2 == 1:
-		q_Spatial.rotate_object_local(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Autoload.get_float())
+		q_Node3D.rotate_object_local(Vector3(Autoload.get_float() + 4,Autoload.get_float() + 45,Autoload.get_float() + 215),Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Spatial.rotate_x(Autoload.get_float())
+		q_Node3D.rotate_x(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Spatial.rotate_y(Autoload.get_float())
+		q_Node3D.rotate_y(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Spatial.rotate_z(Autoload.get_float())
+		q_Node3D.rotate_z(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_Spatial.scale_object_local(Autoload.get_vector3())
+		q_Node3D.scale_object_local(Autoload.get_vector3())
 
 	if randi() % 2 == 1:
-		q_Spatial.set_as_toplevel(Autoload.get_bool())
+		q_Node3D.set_as_toplevel(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Spatial.set_disable_scale(Autoload.get_bool())
+		q_Node3D.set_disable_scale(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Spatial.set_identity()
+		q_Node3D.set_identity()
 	if randi() % 2 == 1:
-		q_Spatial.set_ignore_transform_notification(Autoload.get_bool())
+		q_Node3D.set_ignore_transform_notification(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Spatial.set_notify_local_transform(Autoload.get_bool())
+		q_Node3D.set_notify_local_transform(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Spatial.set_notify_transform(Autoload.get_bool())
+		q_Node3D.set_notify_transform(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_Spatial.show()
+		q_Node3D.show()
 
 	if randi() % 2 == 1:
-		q_Spatial.to_global(Autoload.get_vector3())
+		q_Node3D.to_global(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.to_local(Autoload.get_vector3())
+		q_Node3D.to_local(Autoload.get_vector3())
 
 	if randi() % 2 == 1:
-		q_Spatial.translate(Autoload.get_vector3())
+		q_Node3D.translate(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Spatial.translate_object_local(Autoload.get_vector3())
+		q_Node3D.translate_object_local(Autoload.get_vector3())
 
 	if randi() % 2 == 1:
-		q_Spatial.update_gizmo()
+		q_Node3D.update_gizmo()
 		
-func A_VisualInstance(q_VisualInstance : VisualInstance) -> void:
-	if !use_VisualInstance:
+func A_VisualInstance3D(q_VisualInstance3D : VisualInstance3D) -> void:
+	if !use_VisualInstance3D:
 		return
 		
 	if randi() % 2 == 1:
-			q_VisualInstance.set_layer_mask(Autoload.get_int())
+			q_VisualInstance3D.set_layer_mask(Autoload.get_int())
 	if randi() % 2 == 1:
-			q_VisualInstance.get_aabb()
+			q_VisualInstance3D.get_aabb()
 	if randi() % 2 == 1:
-			q_VisualInstance.get_base()
+			q_VisualInstance3D.get_base()
 	if randi() % 2 == 1:
-			q_VisualInstance.get_instance()
+			q_VisualInstance3D.get_instance()
 	if randi() % 2 == 1:
-			q_VisualInstance.get_layer_mask_bit(Autoload.get_int())
+			q_VisualInstance3D.get_layer_mask_bit(Autoload.get_int())
 	if randi() % 2 == 1:
-			q_VisualInstance.get_transformed_aabb()
+			q_VisualInstance3D.get_transformed_aabb()
 	if randi() % 2 == 1:
-			q_VisualInstance.set_base(RID())
+			q_VisualInstance3D.set_base(RID())
 	if randi() % 2 == 1:
-			q_VisualInstance.set_layer_mask_bit(Autoload.get_int(),Autoload.get_bool())
+			q_VisualInstance3D.set_layer_mask_bit(Autoload.get_int(),Autoload.get_bool())
 		
-func A_GeometryInstance(q_GeometryInstance : GeometryInstance) -> void:
-	if !use_GeometryInstance:
+func A_GeometryInstance3D(q_GeometryInstance3D : GeometryInstance3D) -> void:
+	if !use_GeometryInstance3D:
 		return
 		
 #	if randi() % 2 == 1: MISSING
-#		q_GeometryInstance.set_material_override(SpatialMaterial.new())
+#		q_GeometryInstance3D.set_material_override(StandardMaterial.new())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_cast_shadows_setting(Autoload.get_int())
+		q_GeometryInstance3D.set_cast_shadows_setting(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_extra_cull_margin(Autoload.get_float())
+		q_GeometryInstance3D.set_extra_cull_margin(Autoload.get_float())
 	
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_flag(Autoload.get_int(),Autoload.get_bool())
+		q_GeometryInstance3D.set_flag(Autoload.get_int(),Autoload.get_bool())
 	
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_lod_min_distance(Autoload.get_float())
+		q_GeometryInstance3D.set_lod_min_distance(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_lod_min_hysteresis(Autoload.get_float())
+		q_GeometryInstance3D.set_lod_min_hysteresis(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_lod_max_distance(Autoload.get_float())
+		q_GeometryInstance3D.set_lod_max_distance(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_lod_max_hysteresis(Autoload.get_float())
+		q_GeometryInstance3D.set_lod_max_hysteresis(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_GeometryInstance.set_custom_aabb(Autoload.get_aabb())
+		q_GeometryInstance3D.set_custom_aabb(Autoload.get_aabb())
 		
 func A_SpriteBase3D(q_SpriteBase3D : SpriteBase3D) -> void:
 	if !use_SpriteBase3D:
 		return
 		
-func A_CSGShape(q_CSGShape : CSGShape) -> void:
+func A_CSGShape3D(q_CSGShape3D : CSGShape3D) -> void:
 	if !use_CSGShape:
 		return
 		
 	if randi() % 2 == 1:
-		q_CSGShape.set_operation(Autoload.get_int()) # OPERATION
+		q_CSGShape3D.set_operation(Autoload.get_int()) # OPERATION
 	if randi() % 2 == 1:
-		q_CSGShape.set_snap(Autoload.get_float())
+		q_CSGShape3D.set_snap(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CSGShape.set_calculate_tangents(Autoload.get_bool())
+		q_CSGShape3D.set_calculate_tangents(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGShape.set_use_collision(Autoload.get_bool())
+		q_CSGShape3D.set_use_collision(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGShape.set_collision_layer(Autoload.get_int())
+		q_CSGShape3D.set_collision_layer(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CSGShape.set_collision_mask(Autoload.get_int())
+		q_CSGShape3D.set_collision_mask(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_CSGShape.get_collision_layer_bit(Autoload.get_int())
+		q_CSGShape3D.get_collision_layer_bit(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CSGShape.get_collision_mask_bit(Autoload.get_int())
+		q_CSGShape3D.get_collision_mask_bit(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CSGShape.get_meshes()
+		q_CSGShape3D.get_meshes()
 
 	if randi() % 2 == 1:
-		q_CSGShape.is_root_shape()
+		q_CSGShape3D.is_root_shape()
 
 	if randi() % 2 == 1:
-		q_CSGShape.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
+		q_CSGShape3D.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CSGShape.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+		q_CSGShape3D.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
 			
-func A_CSGPrimitive(q_CSGPrimitive : CSGPrimitive) -> void:
+func A_CSGPrimitive3D(q_CSGPrimitive3D : CSGPrimitive3D) -> void:
 	if !use_CSGPrimitive:
 		return
 		
 	if randi() % 2 == 1:
-		q_CSGPrimitive.set_invert_faces(Autoload.get_bool())
+		q_CSGPrimitive3D.set_invert_faces(Autoload.get_bool())
 		
-func A_Light(q_Light : Light) -> void:
+func A_Light3D(A_Light3D : Light3D) -> void:
 	if !use_Light:
 		return
 		
 	if randi() % 2 == 1:
-		q_Light.set_color(Autoload.get_color())
+		A_Light3D.set_color(Autoload.get_color())
 
 	if randi() % 2 == 1:
-		q_Light.set("light_energy",Autoload.get_float())
+		A_Light3D.set("light_energy",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Light.set("light_indirect_energy",Autoload.get_float())
+		A_Light3D.set("light_indirect_energy",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Light.set_negative(Autoload.get_bool())
+		A_Light3D.set_negative(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Light.set("light_specular",Autoload.get_float())
+		A_Light3D.set("light_specular",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Light.set_bake_mode(Autoload.get_int()) # BakeMode
+		A_Light3D.set_bake_mode(Autoload.get_int()) # BakeMode
 	if randi() % 2 == 1:
-		q_Light.set_cull_mask(Autoload.get_int())
+		A_Light3D.set_cull_mask(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Light.set_shadow(Autoload.get_bool())
+		A_Light3D.set_shadow(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Light.set_shadow_color(Autoload.get_color())
+		A_Light3D.set_shadow_color(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_Light.set("shadow_bias",Autoload.get_float())
+		A_Light3D.set("shadow_bias",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Light.set("shadow_contact",Autoload.get_float())
+		A_Light3D.set("shadow_contact",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Light.set_shadow_reverse_cull_face(Autoload.get_bool())
+		A_Light3D.set_shadow_reverse_cull_face(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Light.set_editor_only(Autoload.get_bool())
+		A_Light3D.set_editor_only(Autoload.get_bool())
 		
-func A_CollisionObject(q_CollisionObject : CollisionObject) -> void:
+func A_CollisionObject3D(q_CollisionObject : CollisionObject3D) -> void:
 	if !use_CollisionObject:
 		return
 		
@@ -1114,7 +1112,7 @@ func A_CollisionObject(q_CollisionObject : CollisionObject) -> void:
 	if randi() % 2 == 1:
 		q_CollisionObject.shape_find_owner(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_CollisionObject.shape_owner_add_shape(Autoload.get_int(),BoxShape.new())
+		q_CollisionObject.shape_owner_add_shape(Autoload.get_int(),BoxShape3D.new())
 	if randi() % 2 == 1:
 		q_CollisionObject.shape_owner_clear_shapes(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -1134,41 +1132,41 @@ func A_CollisionObject(q_CollisionObject : CollisionObject) -> void:
 	if randi() % 2 == 1:
 		q_CollisionObject.shape_owner_set_transform(Autoload.get_int(), Autoload.get_transform())
 		
-func A_PhysicsBody(q_PhysicsBody : PhysicsBody) -> void:
+func A_PhysicsBody3D(q_PhysicsBody3D : PhysicsBody3D) -> void:
 	if !use_PhysicsBody:
 		return
 	if randi() % 2 == 1:
-		q_PhysicsBody.set_collision_layer(Autoload.get_int())
+		q_PhysicsBody3D.set_collision_layer(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PhysicsBody.set_collision_mask(Autoload.get_int())
+		q_PhysicsBody3D.set_collision_mask(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_PhysicsBody.add_collision_exception_with(q_PhysicsBody)
+		q_PhysicsBody3D.add_collision_exception_with(q_PhysicsBody3D)
 
 	if randi() % 2 == 1:
-		q_PhysicsBody.get_collision_exceptions()
+		q_PhysicsBody3D.get_collision_exceptions()
 	if randi() % 2 == 1:
-		q_PhysicsBody.get_collision_layer_bit(Autoload.get_int())
+		q_PhysicsBody3D.get_collision_layer_bit(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PhysicsBody.get_collision_mask_bit(Autoload.get_int())
+		q_PhysicsBody3D.get_collision_mask_bit(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_PhysicsBody.remove_collision_exception_with(q_PhysicsBody)
+		q_PhysicsBody3D.remove_collision_exception_with(q_PhysicsBody3D)
 
 	if randi() % 2 == 1:
-		q_PhysicsBody.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
+		q_PhysicsBody3D.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_PhysicsBody.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+		q_PhysicsBody3D.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
 		
-func A_Joint(q_Joint : Joint) -> void:
+func A_Joint3D(q_Joint3D : Joint3D) -> void:
 	if !use_Joint:
 		return
 		
 	if randi() % 2 == 1:
-		q_Joint.set_node_a(Autoload.get_string())
+		q_Joint3D.set_node_a(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Joint.set_node_b(Autoload.get_string())
+		q_Joint3D.set_node_b(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Joint.set_solver_priority(Autoload.get_int())
+		q_Joint3D.set_solver_priority(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Joint.set_exclude_nodes_from_collision(Autoload.get_bool())
+		q_Joint3D.set_exclude_nodes_from_collision(Autoload.get_bool())

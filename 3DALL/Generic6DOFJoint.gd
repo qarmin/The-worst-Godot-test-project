@@ -1,4 +1,4 @@
-extends Generic6DOFJoint
+extends Generic6DOFJoint3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,13 +10,13 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_Generic6DOFJoint : Generic6DOFJoint, can_reset : bool = false) -> void:
+func nodeFunction(q_Generic6DOFJoint3D : Generic6DOFJoint3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_Generic6DOFJoint)
-		AutoObjects.A_Node(q_Generic6DOFJoint)
-		AutoObjects.A_Spatial(q_Generic6DOFJoint)
-		AutoObjects.A_Joint(q_Generic6DOFJoint)
+		AutoObjects.A_Object(q_Generic6DOFJoint3D)
+		AutoObjects.A_Node(q_Generic6DOFJoint3D)
+		AutoObjects.A_Node3D(q_Generic6DOFJoint3D)
+		AutoObjects.A_Joint3D(q_Generic6DOFJoint3D)
 
 	if randi() % 2 == 1:
 		set("linear_limit_x/enabled",Autoload.get_bool())

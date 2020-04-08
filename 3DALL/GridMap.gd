@@ -15,7 +15,7 @@ func nodeFunction(q_GridMap : GridMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_GridMap)
 		AutoObjects.A_Node(q_GridMap)
-		AutoObjects.A_Spatial(q_GridMap)
+		AutoObjects.A_Node3D(q_GridMap)
 		
 	### START TEMP
 	var temp_MeshLibrary : MeshLibrary = MeshLibrary.new()

@@ -15,8 +15,8 @@ func nodeFunction(q_ReflectionProbe : ReflectionProbe, can_reset : bool = false)
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_ReflectionProbe)
 		AutoObjects.A_Node(q_ReflectionProbe)
-		AutoObjects.A_Spatial(q_ReflectionProbe)
-		AutoObjects.A_VisualInstance(q_ReflectionProbe)
+		AutoObjects.A_Node3D(q_ReflectionProbe)
+		AutoObjects.A_VisualInstance3D(q_ReflectionProbe)
 		
 	if randi() % 2 == 1:
 		q_ReflectionProbe.set_update_mode(Autoload.get_int()) #UpdateMode

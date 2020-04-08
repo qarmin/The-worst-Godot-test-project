@@ -1,4 +1,4 @@
-extends OmniLight
+extends OmniLight3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,20 +10,20 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_OmniLight : OmniLight, can_reset : bool = false) -> void:
+func nodeFunction(q_OmniLight3D : OmniLight3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_OmniLight)
-		AutoObjects.A_Node(q_OmniLight)
-		AutoObjects.A_Spatial(q_OmniLight)
-		AutoObjects.A_VisualInstance(q_OmniLight)
-		AutoObjects.A_Light(q_OmniLight)
+		AutoObjects.A_Object(q_OmniLight3D)
+		AutoObjects.A_Node(q_OmniLight3D)
+		AutoObjects.A_Node3D(q_OmniLight3D)
+		AutoObjects.A_VisualInstance3D(q_OmniLight3D)
+		AutoObjects.A_Light3D(q_OmniLight3D)
 		
 	if randi() % 2 == 1:
-		q_OmniLight.set("omni_range",Autoload.get_float())
+		q_OmniLight3D.set("omni_range",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_OmniLight.set("omni_attenuation",Autoload.get_float())
+		q_OmniLight3D.set("omni_attenuation",Autoload.get_float())
 	if randi() % 2 == 1:
-		q_OmniLight.set_shadow_mode(Autoload.get_int()) # ShadowMode
+		q_OmniLight3D.set_shadow_mode(Autoload.get_int()) # ShadowMode
 #	if randi() % 2 == 1: #MISSING
-#		q_OmniLight.set_shadow_detail(Autoload.get_int()) # SkadowDetail
+#		q_OmniLight3D.set_shadow_detail(Autoload.get_int()) # SkadowDetail

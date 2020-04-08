@@ -15,8 +15,8 @@ func nodeFunction(q_GIProbe : GIProbe, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_GIProbe)
 		AutoObjects.A_Node(q_GIProbe)
-		AutoObjects.A_Spatial(q_GIProbe)
-		AutoObjects.A_VisualInstance(q_GIProbe)
+		AutoObjects.A_Node3D(q_GIProbe)
+		AutoObjects.A_VisualInstance3D(q_GIProbe)
 		
 	### START TEMP
 	var temp_GIProbeData : GIProbeData = GIProbeData.new()

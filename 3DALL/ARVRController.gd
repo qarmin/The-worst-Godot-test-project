@@ -14,7 +14,7 @@ func nodeFunction(q_ARVRController : ARVRController, can_reset : bool = false) -
 	
 	AutoObjects.A_Object(q_ARVRController)
 	AutoObjects.A_Node(q_ARVRController)
-	AutoObjects.A_Spatial(q_ARVRController)
+	AutoObjects.A_Node3D(q_ARVRController)
 		
 	if can_reset:
 		if randi() % 2 == 1:

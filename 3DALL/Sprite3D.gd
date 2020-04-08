@@ -16,9 +16,9 @@ func nodeFunction(q_Sprite3D : Sprite3D, can_reset : bool = false) -> void:
 #	if randi() % 2 == 1:
 #		AutoObjects.A_Object(q_Sprite3D)
 #		AutoObjects.A_Node(q_Sprite3D)
-#		AutoObjects.A_Spatial(q_Sprite3D)
-#		AutoObjects.A_VisualInstance(q_Sprite3D)
-#		AutoObjects.A_GeometryInstance(q_Sprite3D)
+#		AutoObjects.A_Node3D(q_Sprite3D)
+#		AutoObjects.A_VisualInstance3D(q_Sprite3D)
+#		AutoObjects.A_GeometryInstance3D(q_Sprite3D)
 #		AutoObjects.A_SpriteBase3D(q_Sprite3D)
 #
 #

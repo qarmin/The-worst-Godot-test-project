@@ -1,4 +1,4 @@
-extends SliderJoint
+extends SliderJoint3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,13 +10,13 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_SliderJoint : SliderJoint, can_reset : bool = false) -> void:
+func nodeFunction(q_SliderJoint3D : SliderJoint3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_SliderJoint)
-		AutoObjects.A_Node(q_SliderJoint)
-		AutoObjects.A_Spatial(q_SliderJoint)
-		AutoObjects.A_Joint(q_SliderJoint)
+		AutoObjects.A_Object(q_SliderJoint3D)
+		AutoObjects.A_Node(q_SliderJoint3D)
+		AutoObjects.A_Node3D(q_SliderJoint3D)
+		AutoObjects.A_Joint3D(q_SliderJoint3D)
 
 	if randi() % 2 == 1:
 		set("linear_limit/upper_distance",Autoload.get_float())

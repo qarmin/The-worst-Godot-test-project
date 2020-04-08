@@ -15,9 +15,9 @@ func nodeFunction(q_AnimatedSprite3D : AnimatedSprite3D, can_reset : bool = fals
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AnimatedSprite3D)
 		AutoObjects.A_Node(q_AnimatedSprite3D)
-		AutoObjects.A_Spatial(q_AnimatedSprite3D)
-		AutoObjects.A_VisualInstance(q_AnimatedSprite3D)
-		AutoObjects.A_GeometryInstance(q_AnimatedSprite3D)
+		AutoObjects.A_Node3D(q_AnimatedSprite3D)
+		AutoObjects.A_VisualInstance3D(q_AnimatedSprite3D)
+		AutoObjects.A_GeometryInstance3D(q_AnimatedSprite3D)
 		AutoObjects.A_SpriteBase3D(q_AnimatedSprite3D)
 		
 	### START TEMP

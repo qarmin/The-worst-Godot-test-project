@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_PlaneShape : WorldMarginShape = WorldMarginShape.new()
+var q_PlaneShape : WorldMarginShape3D = WorldMarginShape3D.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -12,11 +12,11 @@ func alt_process(delta) -> void:
 
 		nodeFunction(q_PlaneShape,true)
 
-func nodeFunction(q_PlaneShape : WorldMarginShape, can_reset : bool = false) -> void:
+func nodeFunction(q_PlaneShape : WorldMarginShape3D, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_PlaneShape = WorldMarginShape.new()
+			q_PlaneShape = WorldMarginShape3D.new()
 	if randi() % 2 == 1:
 		AutoResourcesShape.nodeFunction(q_PlaneShape)
 

@@ -17,8 +17,8 @@ extends Node
 #	if randi() % 2 == 1:
 #		AutoObjects.A_Object(q_RootMotionView)
 #		AutoObjects.A_Node(q_RootMotionView)
-#		AutoObjects.A_Spatial(q_RootMotionView)
-#		AutoObjects.A_VisualInstance(q_RootMotionView)
+#		AutoObjects.A_Node3D(q_RootMotionView)
+#		AutoObjects.A_VisualInstance3D(q_RootMotionView)
 #
 #	if randi() % 2 == 1:
 #		q_RootMotionView.set_animation_path(Autoload.get_string())

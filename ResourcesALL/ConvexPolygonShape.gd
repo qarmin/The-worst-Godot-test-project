@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_ConvexPolygonShape : ConvexPolygonShape = ConvexPolygonShape.new()
+var q_ConvexPolygonShape3D : ConvexPolygonShape3D = ConvexPolygonShape3D.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,15 +10,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_ConvexPolygonShape,true)
+		nodeFunction(q_ConvexPolygonShape3D,true)
 
-func nodeFunction(q_ConvexPolygonShape : ConvexPolygonShape, can_reset : bool = false) -> void:
+func nodeFunction(q_ConvexPolygonShape3D : ConvexPolygonShape3D, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_ConvexPolygonShape = ConvexPolygonShape.new()
+			q_ConvexPolygonShape3D = ConvexPolygonShape3D.new()
 	if randi() % 2 == 1:
-		AutoResourcesShape.nodeFunction(q_ConvexPolygonShape)
+		AutoResourcesShape.nodeFunction(q_ConvexPolygonShape3D)
 
 	if randi() % 2 == 1:
-		q_ConvexPolygonShape.set_points(Autoload.get_packedvector3array())
+		q_ConvexPolygonShape3D.set_points(Autoload.get_packedvector3array())

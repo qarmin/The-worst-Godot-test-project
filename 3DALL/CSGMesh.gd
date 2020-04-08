@@ -1,4 +1,4 @@
-extends CSGMesh
+extends CSGMesh3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,20 +10,20 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_CSGMesh : CSGMesh, can_reset : bool = false) -> void:
+func nodeFunction(q_CSGMesh3D : CSGMesh3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_CSGMesh)
-		AutoObjects.A_Node(q_CSGMesh)
-		AutoObjects.A_Spatial(q_CSGMesh)
-		AutoObjects.A_VisualInstance(q_CSGMesh)
-		AutoObjects.A_GeometryInstance(q_CSGMesh)
-		AutoObjects.A_CSGShape(q_CSGMesh)
-		AutoObjects.A_CSGPrimitive(q_CSGMesh)
+		AutoObjects.A_Object(q_CSGMesh3D)
+		AutoObjects.A_Node(q_CSGMesh3D)
+		AutoObjects.A_Node3D(q_CSGMesh3D)
+		AutoObjects.A_VisualInstance3D(q_CSGMesh3D)
+		AutoObjects.A_GeometryInstance3D(q_CSGMesh3D)
+		AutoObjects.A_CSGShape3D(q_CSGMesh3D)
+		AutoObjects.A_CSGPrimitive3D(q_CSGMesh3D)
 		
 	### START TEMP
-#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() #MISSING
-#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
+#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
+#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
@@ -31,6 +31,6 @@ func nodeFunction(q_CSGMesh : CSGMesh, can_reset : bool = false) -> void:
 	### END TEMP
 		
 	if randi() % 2 == 1:
-		q_CSGMesh.set_mesh(temp_CubeMesh)
+		q_CSGMesh3D.set_mesh(temp_CubeMesh)
 #	if randi() % 2 == 1: #MISSING
-#		q_CSGMesh.set_material(temp_SpatialMaterial)
+#		q_CSGMesh3D.set_material(temp_StandardMaterial)

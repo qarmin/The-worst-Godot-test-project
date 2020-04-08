@@ -14,8 +14,8 @@ func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 	
 	AutoObjects.A_Object(q_Popup)
 	AutoObjects.A_Node(q_Popup)
-	AutoObjects.A_CanvasItem(q_Popup)
-	AutoObjects.A_Control(q_Popup)
+	#AutoObjects.A_CanvasItem(q_Popup)
+	#AutoObjects.A_Control(q_Popup)
 	return # TOO SLOW FOR NOW
 	
 	if randi() % 2 == 1:

@@ -15,7 +15,7 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AudioStreamPlayer3D)
 		AutoObjects.A_Node(q_AudioStreamPlayer3D)
-		AutoObjects.A_Spatial(q_AudioStreamPlayer3D)
+		AutoObjects.A_Node3D(q_AudioStreamPlayer3D)
 		
 	### START TEMP
 	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()

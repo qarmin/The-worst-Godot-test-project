@@ -1,4 +1,4 @@
-extends MultiMeshInstance
+extends MultiMeshInstance3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,14 +10,14 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_MultiMeshInstance : MultiMeshInstance, can_reset : bool = false) -> void:
+func nodeFunction(q_MultiMeshInstance3D : MultiMeshInstance3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_MultiMeshInstance)
-		AutoObjects.A_Node(q_MultiMeshInstance)
-		AutoObjects.A_Spatial(q_MultiMeshInstance)
-		AutoObjects.A_VisualInstance(q_MultiMeshInstance)
-		AutoObjects.A_GeometryInstance(q_MultiMeshInstance)
+		AutoObjects.A_Object(q_MultiMeshInstance3D)
+		AutoObjects.A_Node(q_MultiMeshInstance3D)
+		AutoObjects.A_Node3D(q_MultiMeshInstance3D)
+		AutoObjects.A_VisualInstance3D(q_MultiMeshInstance3D)
+		AutoObjects.A_GeometryInstance3D(q_MultiMeshInstance3D)
 		
 	### START TEMP
 	var temp_MultiMesh : MultiMesh = MultiMesh.new()
@@ -27,4 +27,4 @@ func nodeFunction(q_MultiMeshInstance : MultiMeshInstance, can_reset : bool = fa
 	
 		
 	if randi() % 2 == 1:
-		q_MultiMeshInstance.set_multimesh(temp_MultiMesh)
+		q_MultiMeshInstance3D.set_multimesh(temp_MultiMesh)

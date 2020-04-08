@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://MainScripts/OtherALL.gd" type="Script" id=1]
 [ext_resource path="res://OtherALL/CanvasLayer.gd" type="Script" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://OtherALL/AudioStreamPlayer.gd" type="Script" id=8]
 [ext_resource path="res://OtherALL/AnimationTree.gd" type="Script" id=9]
 [ext_resource path="res://OtherALL/SkeletonIK.gd" type="Script" id=10]
-[ext_resource path="res://OtherALL/Viewport.gd" type="Script" id=11]
 [ext_resource path="res://OtherALL/ResourcePreloader.gd" type="Script" id=12]
 [ext_resource path="res://OtherALL/ParallaxBackground.gd" type="Script" id=13]
 
@@ -64,7 +63,7 @@ script = ExtResource( 7 )
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 script = ExtResource( 12 )
 
-[node name="SkeletonIK" type="SkeletonIK3D" parent="."]
+[node name="SkeletonIK3D" type="SkeletonIK3D" parent="."]
 process_priority = 1
 target = Transform( 2.49, 1.02, -0.07, 1.15, 1, -1.97, -0.7, -1.01, 2.42, -0.7, -0.59, -0.29 )
 magnet = Vector3( 2.8, -3.69, -0.95 )
@@ -76,9 +75,18 @@ script = ExtResource( 5 )
 [node name="Tween" type="Tween" parent="."]
 script = ExtResource( 3 )
 
-[node name="Viewport" type="Node" parent="."]
-script = ExtResource( 11 )
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
 script = ExtResource( 4 )
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+script = null
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+script = null
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationAgent3D"]
+script = null
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationAgent3D/NavigationObstacle2D"]
+script = null

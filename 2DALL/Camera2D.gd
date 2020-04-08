@@ -19,7 +19,7 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 		AutoObjects.A_Node2D(q_Camera2D)
 		
 	### START TEMP
-	var temp_Viewport : Viewport = Viewport.new()
+	# TODO CHECK NOT INSTATNABLE var temp_Viewport : Viewport = Viewport.new()
 #?#	AutoOtherViewport.nodeFunction(temp_Viewport)
 	
 	### END TEMP
@@ -35,8 +35,8 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
 			q_Camera2D.set_zoom(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Camera2D.set_custom_viewport(temp_Viewport)
+#	if randi() % 2 == 1:
+#		q_Camera2D.set_custom_viewport(temp_Viewport)
 	if randi() % 2 == 1:
 		q_Camera2D.set_process_mode(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -91,5 +91,5 @@ func nodeFunction(q_Camera2D : Camera2D, can_reset : bool = false) -> void:
 #		q_Camera2D.set_limit(Autoload.get_int(),Autoload.get_int())
 
 	### CLEANING
-	temp_Viewport.queue_free()
+	#temp_Viewport.queue_free()
 	### END CLEANING

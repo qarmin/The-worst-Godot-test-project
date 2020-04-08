@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Physics2DShapeQueryParameters : Physics2DShapeQueryParameters = Physics2DShapeQueryParameters.new()
+var q_PhysicsShapeQueryParameters2D : PhysicsShapeQueryParameters2D = PhysicsShapeQueryParameters2D.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,38 +10,38 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Physics2DShapeQueryParameters,true)
+		nodeFunction(q_PhysicsShapeQueryParameters2D,true)
 
-func nodeFunction(q_Physics2DShapeQueryParameters : Physics2DShapeQueryParameters, can_reset : bool = false) -> void:
+func nodeFunction(q_PhysicsShapeQueryParameters2D : PhysicsShapeQueryParameters2D, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_Physics2DShapeQueryParameters = Physics2DShapeQueryParameters.new()
+			q_PhysicsShapeQueryParameters2D = PhysicsShapeQueryParameters2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_Physics2DShapeQueryParameters)
+		AutoResourcesReference.nodeFunction(q_PhysicsShapeQueryParameters2D)
 		
 	### START TEMP
-	var temp_BoxShape : BoxShape = BoxShape.new()
-	AutoResourcesBoxShape.nodeFunction(temp_BoxShape)
+	var temp_BoxShape3D : BoxShape3D = BoxShape3D.new()
+	AutoResourcesBoxShape.nodeFunction(temp_BoxShape3D)
 	
 	### END TEMP
 
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_collision_layer(Autoload.get_int())
+		q_PhysicsShapeQueryParameters2D.set_collision_layer(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_exclude(Autoload.get_array())
+		q_PhysicsShapeQueryParameters2D.set_exclude(Autoload.get_array())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_margin(Autoload.get_float())
+		q_PhysicsShapeQueryParameters2D.set_margin(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_motion(Autoload.get_vector2())
+		q_PhysicsShapeQueryParameters2D.set_motion(Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_shape_rid(RID())
+		q_PhysicsShapeQueryParameters2D.set_shape_rid(RID())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_transform(Autoload.get_transform2d())
+		q_PhysicsShapeQueryParameters2D.set_transform(Autoload.get_transform2d())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_collide_with_bodies(Autoload.get_bool())
+		q_PhysicsShapeQueryParameters2D.set_collide_with_bodies(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_collide_with_areas(Autoload.get_bool())
+		q_PhysicsShapeQueryParameters2D.set_collide_with_areas(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_Physics2DShapeQueryParameters.set_shape(temp_BoxShape)
+		q_PhysicsShapeQueryParameters2D.set_shape(temp_BoxShape3D)

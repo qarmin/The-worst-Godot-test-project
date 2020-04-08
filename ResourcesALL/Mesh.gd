@@ -1,7 +1,7 @@
 extends Node2D
-
-var q_Mesh : Mesh = Mesh.new()
-
+ # TODO CHECK, NOT INSTANTABLE
+#var q_Mesh : Mesh = Mesh.new()
+#
 onready var counter : float = Autoload.get_rand_time()
 
 func alt_process(delta) -> void:
@@ -10,20 +10,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Mesh,true)
+#		nodeFunction(q_Mesh,true)
 
 func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
-	
-	if can_reset:
-		if randi() % 2 == 1:
-			q_Mesh = Mesh.new()
+
+#	if can_reset:
+#		if randi() % 2 == 1:
+#			q_Mesh = Mesh.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_Mesh)
-		
+
 	### START TEMP
-#	var temp_SpatialMaterial : SpatialMaterial = SpatialMaterial.new() MISSING
-#	AutoResourcesSpatialMaterial.nodeFunction(temp_SpatialMaterial)
-	
+#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() MISSING
+#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+
 	### END TEMP
 
 	if randi() % 2 == 1: 
@@ -45,4 +45,4 @@ func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Mesh.surface_get_material( Autoload.get_int())
 #	if randi() % 2 == 1: MISSING
-#		q_Mesh.surface_set_material( Autoload.get_int(), temp_SpatialMaterial)
+#		q_Mesh.surface_set_material( Autoload.get_int(), temp_StandardMaterial)

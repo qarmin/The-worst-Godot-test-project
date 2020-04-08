@@ -1,4 +1,4 @@
-extends CollisionPolygon
+extends CollisionPolygon3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,16 +10,16 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_CollisionPolygon : CollisionPolygon, can_reset : bool = false) -> void:
+func nodeFunction(q_CollisionPolygon3D : CollisionPolygon3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_CollisionPolygon)
-		AutoObjects.A_Node(q_CollisionPolygon)
-		AutoObjects.A_Spatial(q_CollisionPolygon)
+		AutoObjects.A_Object(q_CollisionPolygon3D)
+		AutoObjects.A_Node(q_CollisionPolygon3D)
+		AutoObjects.A_Node3D(q_CollisionPolygon3D)
 		
 	if randi() % 2 == 1:
-		q_CollisionPolygon.set_depth(Autoload.get_float())
+		q_CollisionPolygon3D.set_depth(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CollisionPolygon.set_disabled(Autoload.get_bool())
+		q_CollisionPolygon3D.set_disabled(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_CollisionPolygon.set_polygon(Autoload.get_packedvector2array())
+		q_CollisionPolygon3D.set_polygon(Autoload.get_packedvector2array())

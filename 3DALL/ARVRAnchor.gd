@@ -15,7 +15,7 @@ func nodeFunction(q_ARVRAnchor : ARVRAnchor, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_ARVRAnchor)
 		AutoObjects.A_Node(q_ARVRAnchor)
-		AutoObjects.A_Spatial(q_ARVRAnchor)
+		AutoObjects.A_Node3D(q_ARVRAnchor)
 	
 #	if can_reset:
 #		if randi() % 2 == 1:

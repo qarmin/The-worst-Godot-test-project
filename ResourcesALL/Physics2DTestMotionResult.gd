@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_Physics2DTestMotionResult : Physics2DTestMotionResult = Physics2DTestMotionResult.new()
+var q_PhysicsTestMotionResult2D : PhysicsTestMotionResult2D = PhysicsTestMotionResult2D.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,31 +10,31 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Physics2DTestMotionResult,true)
+		nodeFunction(q_PhysicsTestMotionResult2D,true)
 
-func nodeFunction(q_Physics2DTestMotionResult : Physics2DTestMotionResult, can_reset : bool = false) -> void:
+func nodeFunction(q_PhysicsTestMotionResult2D : PhysicsTestMotionResult2D, can_reset : bool = false) -> void:
 	
 	if can_reset:
 		if randi() % 2 == 1:
-			q_Physics2DTestMotionResult = Physics2DTestMotionResult.new()
+			q_PhysicsTestMotionResult2D = PhysicsTestMotionResult2D.new()
 	if randi() % 2 == 1:
-		AutoResourcesReference.nodeFunction(q_Physics2DTestMotionResult)
+		AutoResourcesReference.nodeFunction(q_PhysicsTestMotionResult2D)
 
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_motion()
+		q_PhysicsTestMotionResult2D.get_motion()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_motion_remainder()
+		q_PhysicsTestMotionResult2D.get_motion_remainder()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collision_point()
+		q_PhysicsTestMotionResult2D.get_collision_point()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collision_normal()
+		q_PhysicsTestMotionResult2D.get_collision_normal()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collider_velocity()
+		q_PhysicsTestMotionResult2D.get_collider_velocity()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collider_id()
+		q_PhysicsTestMotionResult2D.get_collider_id()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collider_rid()
+		q_PhysicsTestMotionResult2D.get_collider_rid()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collider()
+		q_PhysicsTestMotionResult2D.get_collider()
 	if randi() % 2 == 1:
-		q_Physics2DTestMotionResult.get_collider_shape()
+		q_PhysicsTestMotionResult2D.get_collider_shape()

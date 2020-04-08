@@ -17,8 +17,8 @@ extends Node
 #	if randi() % 2 == 1:
 #		AutoObjects.A_Object(q_BakedLightmap)
 #		AutoObjects.A_Node(q_BakedLightmap)
-#		AutoObjects.A_Spatial(q_BakedLightmap)
-#		AutoObjects.A_VisualInstance(q_BakedLightmap)
+#		AutoObjects.A_Node3D(q_BakedLightmap)
+#		AutoObjects.A_VisualInstance3D(q_BakedLightmap)
 #
 #	### START TEMP
 #	var temp_BakedLightmapData : BakedLightmapData = BakedLightmapData.new()

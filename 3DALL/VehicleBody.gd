@@ -1,4 +1,4 @@
-extends VehicleBody
+extends VehicleBody3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,18 +10,18 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_VehicleBody : VehicleBody, can_reset : bool = false) -> void:
+func nodeFunction(q_VehicleBody3D : VehicleBody3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_VehicleBody)
-		AutoObjects.A_Node(q_VehicleBody)
-		AutoObjects.A_Spatial(q_VehicleBody)
-		AutoObjects.A_CollisionObject(q_VehicleBody)
-		AutoObjects.A_PhysicsBody(q_VehicleBody)
+		AutoObjects.A_Object(q_VehicleBody3D)
+		AutoObjects.A_Node(q_VehicleBody3D)
+		AutoObjects.A_Node3D(q_VehicleBody3D)
+		AutoObjects.A_CollisionObject3D(q_VehicleBody3D)
+		AutoObjects.A_PhysicsBody3D(q_VehicleBody3D)
 		
 	if randi() % 2 == 1:
-		q_VehicleBody.set_engine_force(Autoload.get_float())
+		q_VehicleBody3D.set_engine_force(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_VehicleBody.set_brake(Autoload.get_float())
+		q_VehicleBody3D.set_brake(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_VehicleBody.set_steering(Autoload.get_float())
+		q_VehicleBody3D.set_steering(Autoload.get_float())

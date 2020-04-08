@@ -1,4 +1,4 @@
-extends Path
+extends Path3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,12 +10,12 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_Path : Path, can_reset : bool = false) -> void:
+func nodeFunction(q_Path3D : Path3D, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_Path)
-		AutoObjects.A_Node(q_Path)
-		AutoObjects.A_Spatial(q_Path)
+		AutoObjects.A_Object(q_Path3D)
+		AutoObjects.A_Node(q_Path3D)
+		AutoObjects.A_Node3D(q_Path3D)
 		
 	### START TEMP
 	var temp_Curve3D : Curve3D = Curve3D.new()
@@ -25,4 +25,4 @@ func nodeFunction(q_Path : Path, can_reset : bool = false) -> void:
 	
 		
 	if randi() % 2 == 1:
-		q_Path.set_curve(temp_Curve3D)
+		q_Path3D.set_curve(temp_Curve3D)

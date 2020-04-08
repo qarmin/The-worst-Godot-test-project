@@ -1,4 +1,4 @@
-extends VisibilityEnabler
+extends VisibilityEnabler3D
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,12 +10,12 @@ func alt_process(delta) -> void:
 
 		nodeFunction(self,true)
 
-func nodeFunction(q_VisibilityEnabler : VisibilityEnabler, can_reset : bool = false) -> void:
+func nodeFunction(q_VisibilityEnabler3D : VisibilityEnabler3D, can_reset : bool = false) -> void:
 	pass
 #	if randi() % 2 == 1:
-#		AutoObjects.A_Object(q_VisibilityEnabler)
-#		AutoObjects.A_Node(q_VisibilityEnabler)
-#		AutoObjects.A_Spatial(q_VisibilityEnabler)
+#		AutoObjects.A_Object(q_VisibilityEnabler3D)
+#		AutoObjects.A_Node(q_VisibilityEnabler3D)
+#		AutoObjects.A_Node3D(q_VisibilityEnabler3D)
 #
 #	if randi() % 2 == 1:
-#		q_VisibilityEnabler.set_enabler(Autoload.get_int(),Autoload.get_bool())
+#		q_VisibilityEnabler3D.set_enabler(Autoload.get_int(),Autoload.get_bool())
