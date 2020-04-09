@@ -20,7 +20,7 @@ func nodeFunction(q_Listener3D : Listener3D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Listener3D.clear_current()
 	if randi() % 2 == 1:
-		q_Listener3D.get_Listener3D_transform()
+		q_Listener3D.get_listener_transform()
 	if randi() % 2 == 1:
 		q_Listener3D.is_current()
 	if randi() % 2 == 1:

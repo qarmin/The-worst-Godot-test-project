@@ -24,13 +24,13 @@ func nodeFunction(q_MeshTexture : MeshTexture, can_reset : bool = false) -> void
 	var temp_ImageTexture : ImageTexture = ImageTexture.new()
 	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 	
-	var temp_Mesh : Mesh = Mesh.new()
-	AutoResourcesMesh.nodeFunction(temp_Mesh)
+#	var temp_Mesh : Mesh = Mesh.new() #TODO Mesh is not instantable
+#	AutoResourcesMesh.nodeFunction(temp_Mesh)
 	
 	### END TEMP
 
-	if randi() % 2 == 1:
-		q_MeshTexture.set_mesh(temp_Mesh)
+#	if randi() % 2 == 1:
+#		q_MeshTexture.set_mesh(temp_Mesh)
 	if randi() % 2 == 1:
 		q_MeshTexture.set_base_texture(temp_ImageTexture)
 	if randi() % 2 == 1:

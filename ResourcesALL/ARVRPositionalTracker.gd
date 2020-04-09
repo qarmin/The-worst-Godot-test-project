@@ -1,6 +1,6 @@
 extends Node2D
 # TODO CHECK IF BUG
-#var q_ARVRPositionalTracker : ARVRPositionalTracker = ARVRPositionalTracker.new()
+#var q_XRPositionalTracker : XRPositionalTracker = XRPositionalTracker.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
@@ -10,40 +10,40 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-#		nodeFunction(q_ARVRPositionalTracker,true)
+#		nodeFunction(q_XRPositionalTracker,true)
 
-func nodeFunction(q_ARVRPositionalTracker : ARVRPositionalTracker, can_reset : bool = false) -> void:
+func nodeFunction(q_XRPositionalTracker : XRPositionalTracker, can_reset : bool = false) -> void:
 	
 #	if can_reset:
 #		if randi() % 2 == 1:
-#			q_ARVRPositionalTracker.free()
-#			q_ARVRPositionalTracker = ARVRPositionalTracker.new()
+#			q_XRPositionalTracker.free()
+#			q_XRPositionalTracker = XRPositionalTracker.new()
 	if randi() % 2 == 1:
-		AutoObjects.A_Object(q_ARVRPositionalTracker)
+		AutoObjects.A_Object(q_XRPositionalTracker)
 
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.set_rumble(Autoload.get_float())
+		q_XRPositionalTracker.set_rumble(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_hand()
+		q_XRPositionalTracker.get_hand()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_joy_id()
+		q_XRPositionalTracker.get_joy_id()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_mesh()
+		q_XRPositionalTracker.get_mesh()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_name()
+		q_XRPositionalTracker.get_name()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_orientation()
+		q_XRPositionalTracker.get_orientation()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_position()
+		q_XRPositionalTracker.get_position()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_tracks_orientation()
+		q_XRPositionalTracker.get_tracks_orientation()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_tracks_position()
+		q_XRPositionalTracker.get_tracks_position()
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_transform( Autoload.get_bool())
+		q_XRPositionalTracker.get_transform( Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_ARVRPositionalTracker.get_type()
+		q_XRPositionalTracker.get_type()
 
 #func _exit_tree():
-#	q_ARVRPositionalTracker.free()
+#	q_XRPositionalTracker.free()

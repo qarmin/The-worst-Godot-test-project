@@ -1,4 +1,5 @@
-extends Viewport
+extends Node
+#Viewport
 
 #onready var counter : float = Autoload.get_rand_time()
 #

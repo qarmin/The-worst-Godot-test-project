@@ -55,9 +55,9 @@ func nodeFunction(q_Camera3D : Camera3D, can_reset : bool = false) -> void:
 		q_Camera3D.clear_current(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_Camera3D.get_Camera3D_rid()
+		q_Camera3D.get_camera_rid()
 	if randi() % 2 == 1:
-		q_Camera3D.get_Camera3D_transform()
+		q_Camera3D.get_camera_transform()
 	if randi() % 2 == 1:
 		q_Camera3D.get_cull_mask_bit(Autoload.get_int())
 	if randi() % 2 == 1:

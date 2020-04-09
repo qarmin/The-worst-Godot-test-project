@@ -1,3 +1,4 @@
+extends Node
 #extends PopupDialog
 #
 #onready var counter : float = Autoload.get_rand_time()

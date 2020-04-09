@@ -41,17 +41,8 @@ func get_string() -> String:
 
 	return temp_string
 	
-#func get_stringname() -> StringName:
-#	temp_string :  StringName = ""
-#	if MAX_NEWLINE != 0:
-#		temp_string += str(randi() % MAX_NUMBER)
-#		for i in range(MAX_NEWLINE):
-#			if randi() % 2 == 1:
-#				temp_string += "\n"
-#	else: 
-#		temp_string += str(randi() % MAX_NUMBER)
-#
-#	return temp_string
+func get_stringname() -> StringName:
+	return StringName(get_string())
 
 func get_int() -> int:
 	return randi() % RANGE - RANGE / 2

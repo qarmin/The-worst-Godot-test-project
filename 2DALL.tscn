@@ -5,7 +5,7 @@
 [ext_resource path="res://2DALL/StaticBody2D.gd" type="Script" id=3]
 [ext_resource path="res://MainScripts/2DALL.gd" type="Script" id=4]
 [ext_resource path="res://icon.png" type="Texture2D" id=5]
-[ext_resource path="res://2DALL/AnimatedSprite.gd" type="Script" id=7]
+[ext_resource path="res://2DALL/AnimatedSprite2D.gd" type="Script" id=7]
 [ext_resource path="res://2DALL/RigidBody2D.gd" type="Script" id=8]
 [ext_resource path="res://2DALL/AudioStreamPlayer2D.gd" type="Script" id=11]
 [ext_resource path="res://2DALL/BackBufferCopy.gd" type="Script" id=12]
@@ -44,14 +44,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
-"loop": true,
-"name": @"New Anim",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ) ],
 "loop": true,
 "name": @"0",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
+"loop": true,
+"name": @"New Anim",
 "speed": 5.0
 } ]
 
@@ -234,6 +234,7 @@ position = Vector2( 395.869, 394.508 )
 script = ExtResource( 11 )
 
 [node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+visible = false
 position = Vector2( 531.906, 372.742 )
 script = ExtResource( 12 )
 
@@ -242,6 +243,7 @@ position = Vector2( 306.084, 224.462 )
 script = ExtResource( 39 )
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+visible = false
 position = Vector2( 129.236, 465.248 )
 script = ExtResource( 14 )
 
@@ -403,6 +405,7 @@ position = Vector2( 356.357, 198.507 )
 script = ExtResource( 22 )
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+visible = false
 position = Vector2( 721.714, 117.422 )
 mesh = SubResource( 7 )
 script = ExtResource( 23 )
@@ -444,6 +447,7 @@ position = Vector2( 794.745, 399.52 )
 script = ExtResource( 44 )
 
 [node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+visible = false
 position = Vector2( 1071.12, 353.697 )
 process_material = SubResource( 11 )
 script = ExtResource( 26 )
