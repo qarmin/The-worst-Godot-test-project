@@ -50,3 +50,5 @@ func nodeFunction(q_Navigation3D : Navigation3D, can_reset : bool = false) -> vo
 #		q_Navigation3D.navmesh_remove(Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_Navigation3D.navmesh_set_transform(Autoload.get_int(),Autoload.get_transform())
+
+	temp_NavigationRegion3D.queue_free()
