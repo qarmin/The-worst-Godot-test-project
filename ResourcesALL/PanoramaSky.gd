@@ -18,8 +18,8 @@ func nodeFunction(q_PanoramaSkyMaterial : PanoramaSkyMaterial, can_reset : bool 
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:
 				q_PanoramaSkyMaterial = PanoramaSkyMaterial.new()
-	if randi() % 2 == 1:
-		AutoResourcesSky.nodeFunction(q_PanoramaSkyMaterial)
+#	 TODOif randi() % 2 == 1:
+#		AutoResourcesSky.nodeFunction(q_PanoramaSkyMaterial)
 		
 	### START TEMP
 	

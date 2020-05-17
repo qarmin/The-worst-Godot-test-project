@@ -58,7 +58,7 @@ func nodeFunction(q_Vector2 : Vector2, can_reset : bool = false) -> void:
 		q_Vector2.length_squared()
 
 	if randi() % 2 == 1:
-		q_Vector2.linear_interpolate( Autoload.get_vector2(), Autoload.get_float())
+		q_Vector2.lerp( Autoload.get_vector2(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector2.move_toward( Autoload.get_vector2(), Autoload.get_float())
 	if randi() % 2 == 1:

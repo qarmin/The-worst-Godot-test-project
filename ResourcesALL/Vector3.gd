@@ -53,7 +53,7 @@ func nodeFunction(q_Vector3 : Vector3, can_reset : bool = false) -> void:
 		q_Vector3.length_squared()
 
 	if randi() % 2 == 1:
-		q_Vector3.linear_interpolate( Autoload.get_vector3(), Autoload.get_float())
+		q_Vector3.lerp( Autoload.get_vector3(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector3.max_axis()
 	if randi() % 2 == 1:

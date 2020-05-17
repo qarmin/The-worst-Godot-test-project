@@ -23,4 +23,4 @@ func nodeFunction(q_LineShape2D : LineShape2D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_LineShape2D.set_normal(Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_LineShape2D.set_d(Autoload.get_float())
+		q_LineShape2D.set_distance(Autoload.get_float())

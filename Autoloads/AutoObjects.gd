@@ -890,7 +890,7 @@ func A_Node3D(q_Node3D : Node3D) -> void:
 	if randi() % 2 == 1:
 		q_Node3D.get_parent_spatial()
 	if randi() % 2 == 1:
-		q_Node3D.get_world()
+		q_Node3D.get_world_3d()
 
 	if randi() % 2 == 1:
 		q_Node3D.global_rotate(Autoload.get_vector3(),Autoload.get_float())
@@ -996,8 +996,8 @@ func A_GeometryInstance3D(q_GeometryInstance3D : GeometryInstance3D) -> void:
 	if randi() % 2 == 1:
 		q_GeometryInstance3D.set_extra_cull_margin(Autoload.get_float())
 	
-	if randi() % 2 == 1:
-		q_GeometryInstance3D.set_flag(Autoload.get_int(),Autoload.get_bool())
+#	if randi() % 2 == 1: #MISSING
+#		q_GeometryInstance3D.set_flag(Autoload.get_int(),Autoload.get_bool())
 	
 	if randi() % 2 == 1:
 		q_GeometryInstance3D.set_lod_min_distance(Autoload.get_float())

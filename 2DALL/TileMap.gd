@@ -40,7 +40,7 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileMap.set_tile_origin(Autoload.get_int()) #TileOrigin
 	if randi() % 2 == 1:
-		q_TileMap.set_y_sort_mode(Autoload.get_bool())
+		q_TileMap.set_y_sort_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TileMap.set_compatibility_mode(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -79,8 +79,8 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 		q_TileMap.get_collision_mask_bit(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TileMap.get_used_cells()
-	if randi() % 2 == 1:
-		q_TileMap.get_used_cells_by_id(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_TileMap.get_used_cells_by_id(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TileMap.get_used_rect()
 
