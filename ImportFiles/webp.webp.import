@@ -1,7 +1,7 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
+type="StreamTexture2D"
 path="res://.import/webp.webp-c617d1c0fc26d9552fe4eb0c173782a5.stex"
 metadata={
 "vram_texture": false
@@ -16,7 +16,7 @@ dest_files=[ "res://.import/webp.webp-c617d1c0fc26d9552fe4eb0c173782a5.stex" ]
 
 compress/mode=0
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0

@@ -1,7 +1,7 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
+type="StreamTexture2D"
 path.s3tc="res://.import/Sprite.png-9214acea54bfa78aa624fc301c151c17.s3tc.stex"
 path.etc="res://.import/Sprite.png-9214acea54bfa78aa624fc301c151c17.etc.stex"
 metadata={
@@ -18,7 +18,7 @@ dest_files=[ "res://.import/Sprite.png-9214acea54bfa78aa624fc301c151c17.s3tc.ste
 
 compress/mode=2
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=1
 compress/channel_pack=0

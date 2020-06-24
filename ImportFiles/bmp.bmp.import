@@ -1,7 +1,7 @@
 [remap]
 
 importer="texture"
-type="StreamTexture"
+type="StreamTexture2D"
 path="res://.import/bmp.bmp-7ab9291af4d8c3e93ed1fc7dda180f3c.stex"
 metadata={
 "vram_texture": false
@@ -16,7 +16,7 @@ dest_files=[ "res://.import/bmp.bmp-7ab9291af4d8c3e93ed1fc7dda180f3c.stex" ]
 
 compress/mode=0
 compress/lossy_quality=0.7
-compress/hdr_mode=0
+compress/hdr_compression=1
 compress/bptc_ldr=0
 compress/normal_map=0
 compress/channel_pack=0
