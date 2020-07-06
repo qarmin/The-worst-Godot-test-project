@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://MainScripts/OtherALL.gd" type="Script" id=1]
 [ext_resource path="res://OtherALL/CanvasLayer.gd" type="Script" id=2]
@@ -10,8 +10,13 @@
 [ext_resource path="res://OtherALL/AudioStreamPlayer.gd" type="Script" id=8]
 [ext_resource path="res://OtherALL/AnimationTree.gd" type="Script" id=9]
 [ext_resource path="res://OtherALL/SkeletonIK.gd" type="Script" id=10]
+[ext_resource path="res://OtherALL/ShaderGlobalsOverride.gd" type="Script" id=11]
 [ext_resource path="res://OtherALL/ResourcePreloader.gd" type="Script" id=12]
 [ext_resource path="res://OtherALL/ParallaxBackground.gd" type="Script" id=13]
+[ext_resource path="res://OtherALL/NavigationAgent2D.gd" type="Script" id=14]
+[ext_resource path="res://OtherALL/NavigationAgent3D.gd" type="Script" id=15]
+[ext_resource path="res://OtherALL/NavigationObstacle2D.gd" type="Script" id=16]
+[ext_resource path="res://OtherALL/NavigationObstacle3D.gd" type="Script" id=17]
 
 [sub_resource type="Animation" id=1]
 resource_name = "New Anim"
@@ -60,8 +65,23 @@ script = ExtResource( 13 )
 [node name="HTTPRequest" type="HTTPRequest" parent="."]
 script = ExtResource( 7 )
 
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+script = ExtResource( 15 )
+
+[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="."]
+script = ExtResource( 16 )
+
+[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="."]
+script = ExtResource( 17 )
+
 [node name="ResourcePreloader" type="ResourcePreloader" parent="."]
 script = ExtResource( 12 )
+
+[node name="ShaderGlobalsOverride" type="ShaderGlobalsOverride" parent="."]
+script = ExtResource( 11 )
 
 [node name="SkeletonIK3D" type="SkeletonIK3D" parent="."]
 process_priority = 1
@@ -78,15 +98,3 @@ script = ExtResource( 3 )
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 4 )
 script = ExtResource( 4 )
-
-[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
-script = null
-
-[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
-script = null
-
-[node name="NavigationObstacle2D" type="NavigationObstacle2D" parent="NavigationAgent3D"]
-script = null
-
-[node name="NavigationObstacle3D" type="NavigationObstacle3D" parent="NavigationAgent3D/NavigationObstacle2D"]
-script = null

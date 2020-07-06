@@ -89,8 +89,6 @@ func nodeFunction(q_String : String, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_String.find( Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_String.find_last( Autoload.get_string())
-	if randi() % 2 == 1:
 		q_String.findn( Autoload.get_string(), Autoload.get_int())
 
 	if randi() % 2 == 1:

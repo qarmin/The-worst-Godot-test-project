@@ -170,7 +170,7 @@ static func ff(var rr : String = "FA") -> String:
 class ram:
 	var sa : int = 0
 	var qq
-#	static func rr() -> ram:
+#	static func rr() -> ram: #GH 30668
 #		return ram.new()
 	static func Wr() -> Node:
 		return Node.new()

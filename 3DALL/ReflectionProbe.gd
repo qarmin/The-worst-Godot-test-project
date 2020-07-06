@@ -36,9 +36,3 @@ func nodeFunction(q_ReflectionProbe : ReflectionProbe, can_reset : bool = false)
 		q_ReflectionProbe.set_cull_mask(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_ReflectionProbe.set_as_interior(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_ReflectionProbe.set_interior_ambient(Autoload.get_color())
-	if randi() % 2 == 1:
-		q_ReflectionProbe.set_interior_ambient_energy(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_ReflectionProbe.set_interior_ambient_probe_contribution(Autoload.get_float())
