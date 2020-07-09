@@ -35,7 +35,9 @@ func nodeFunction(q_Button : Button, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Button.set_clip_text(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Button.set_text_align(Autoload.get_int())
+		q_Button.set_text_align(Autoload.get_int()) # TextAlign
 	if randi() % 2 == 1:
 		q_Button.set_text_align(Autoload.get_int())
+	if randi() % 2 == 1:
+		q_Button.set_expand_icon(Autoload.get_bool())
 

@@ -22,4 +22,4 @@ func nodeFunction(q_LinkButton : LinkButton, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_LinkButton.set_text(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_LinkButton.set_underline_mode(Autoload.get_int())
+		q_LinkButton.set_underline_mode(Autoload.get_int()) # Underline

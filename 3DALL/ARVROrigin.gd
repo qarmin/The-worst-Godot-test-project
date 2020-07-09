@@ -22,5 +22,5 @@ func nodeFunction(q_XROrigin3D : XROrigin3D, can_reset : bool = false) -> void:
 #			q_XROrigin3D = XROrigin3D.new()
 		
 	if randi() % 2 == 1:
-		q_XROrigin3D.set_world_scale(Autoload.get_bool())
+		q_XROrigin3D.set_world_scale(Autoload.get_float())
 

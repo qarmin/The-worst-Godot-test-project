@@ -23,13 +23,17 @@ func nodeFunction(q_OptionButton : OptionButton, can_reset : bool = false) -> vo
 	
 		
 	if randi() % 2 == 1:
-		q_OptionButton.clear()
-	if randi() % 2 == 1:
 		q_OptionButton._select_int(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_OptionButton.add_icon_item(temp_ImageTexture,Autoload.get_string())
+		q_OptionButton.add_icon_item(temp_ImageTexture,Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_OptionButton.add_item(Autoload.get_string())
+		q_OptionButton.add_item(Autoload.get_string(),Autoload.get_int())
+	if randi() % 2 == 1:
+		q_OptionButton.add_separator()
+		
+	if randi() % 2 == 1:
+		q_OptionButton.clear()
+		
 	if randi() % 2 == 1:
 		q_OptionButton.get_item_count()
 	if randi() % 2 == 1:
@@ -48,10 +52,14 @@ func nodeFunction(q_OptionButton : OptionButton, can_reset : bool = false) -> vo
 		q_OptionButton.get_selected_id()
 	if randi() % 2 == 1:
 		q_OptionButton.get_selected_metadata()
+		
 	if randi() % 2 == 1:
 		q_OptionButton.is_item_disabled(Autoload.get_int())
 	if randi() % 2 == 1:
+		q_OptionButton.remove_item(Autoload.get_int())
+	if randi() % 2 == 1:
 		q_OptionButton.select(Autoload.get_int())
+		
 	if randi() % 2 == 1:
 		q_OptionButton.set_item_disabled(Autoload.get_int(),Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -62,5 +70,3 @@ func nodeFunction(q_OptionButton : OptionButton, can_reset : bool = false) -> vo
 		q_OptionButton.set_item_metadata(Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
 		q_OptionButton.set_item_text(Autoload.get_int(),Autoload.get_string())
-	if randi() % 2 == 1:
-		q_OptionButton.remove_item(Autoload.get_int())
