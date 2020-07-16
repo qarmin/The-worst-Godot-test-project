@@ -41,7 +41,7 @@ func alt_process(delta) -> void:
 #		q_EditorSpatialGizmoPlugin.redraw( EditorSpatialGizmo gizmo )
 #		q_EditorSpatialGizmoPlugin.set_handle( EditorSpatialGizmo gizmo, int index, Camera camera, Vector2 point )
 
-#		q_EditorSpatialGizmoPlugin.add_material( Autoload.get_string(), StandardMaterial.new())
+#		q_EditorSpatialGizmoPlugin.add_material( Autoload.get_string(), StandardMaterial3D.new())
 #
 #		q_EditorSpatialGizmoPlugin.create_handle_material( Autoload.get_string(), Autoload.get_bool())
 #		q_EditorSpatialGizmoPlugin.create_icon_material( Autoload.get_string(), temp_ImageTexture, Autoload.get_bool(), Autoload.get_color())

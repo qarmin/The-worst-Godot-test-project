@@ -23,8 +23,8 @@ func nodeFunction(q_MeshInstance3D : MeshInstance3D, can_reset : bool = false) -
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
 	
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-##?#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new()
+##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	### END TEMP
 	
@@ -42,12 +42,14 @@ func nodeFunction(q_MeshInstance3D : MeshInstance3D, can_reset : bool = false) -
 		q_MeshInstance3D.create_trimesh_collision()
 
 	if randi() % 2 == 1:
+		q_MeshInstance3D.get_active_material(Autoload.get_int())
+	if randi() % 2 == 1:
 		q_MeshInstance3D.get_surface_material(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_MeshInstance3D.get_surface_material_count()
 		
-#	if randi() % 2 == 1: #MISSING
-#		q_MeshInstance3D.set_surface_material(Autoload.get_int(), temp_StandardMaterial)
+	if randi() % 2 == 1:
+		q_MeshInstance3D.set_surface_material(Autoload.get_int(), temp_StandardMaterial3D)
 
 #####################
 	if randi() % 2 == 1:

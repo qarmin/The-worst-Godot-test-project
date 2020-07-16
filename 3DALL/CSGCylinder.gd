@@ -22,8 +22,8 @@ func nodeFunction(q_CSGCylinder3D : CSGCylinder3D, can_reset : bool = false) -> 
 		AutoObjects.A_CSGPrimitive3D(q_CSGCylinder3D)
 		
 	### START TEMP
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MIISSING
-##?#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MIISSING
+##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	### END TEMP
 	
@@ -38,4 +38,4 @@ func nodeFunction(q_CSGCylinder3D : CSGCylinder3D, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_CSGCylinder3D.set_smooth_faces(Autoload.get_bool())
 #	if randi() % 2 == 1: #MISSING
-#		q_CSGCylinder3D.set_material(temp_StandardMaterial)
+#		q_CSGCylinder3D.set_material(temp_StandardMaterial3D)

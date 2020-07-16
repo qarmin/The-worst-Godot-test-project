@@ -25,5 +25,3 @@ func nodeFunction(q_OmniLight3D : OmniLight3D, can_reset : bool = false) -> void
 		q_OmniLight3D.set("omni_attenuation",Autoload.get_float())
 	if randi() % 2 == 1:
 		q_OmniLight3D.set_shadow_mode(Autoload.get_int()) # ShadowMode
-#	if randi() % 2 == 1: #MISSING
-#		q_OmniLight3D.set_shadow_detail(Autoload.get_int()) # SkadowDetail

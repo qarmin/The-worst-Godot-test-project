@@ -62,3 +62,6 @@ func nodeFunction(q_SliderJoint3D : SliderJoint3D, can_reset : bool = false) -> 
 		set("angular_ortho/restitution",Autoload.get_float())
 	if randi() % 2 == 1:
 		set("angular_ortho/damping",Autoload.get_float())
+		
+	if randi() % 2 == 1:
+		set_param(Autoload.get_int(),Autoload.get_float())

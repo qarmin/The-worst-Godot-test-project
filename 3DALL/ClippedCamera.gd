@@ -15,7 +15,6 @@ func nodeFunction(q_ClippedCamera3D : ClippedCamera3D, can_reset : bool = false)
 	if randi() % 2 == 1:
 		Auto3DCamera.nodeFunction(q_ClippedCamera3D)
 
-
 	if randi() % 2 == 1:
 		q_ClippedCamera3D.set_margin(Autoload.get_float())
 	if randi() % 2 == 1:

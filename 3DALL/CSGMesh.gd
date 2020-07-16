@@ -22,8 +22,8 @@ func nodeFunction(q_CSGMesh3D : CSGMesh3D, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGPrimitive3D(q_CSGMesh3D)
 		
 	### START TEMP
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
@@ -33,4 +33,4 @@ func nodeFunction(q_CSGMesh3D : CSGMesh3D, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CSGMesh3D.set_mesh(temp_CubeMesh)
 #	if randi() % 2 == 1: #MISSING
-#		q_CSGMesh3D.set_material(temp_StandardMaterial)
+#		q_CSGMesh3D.set_material(temp_StandardMaterial3D)

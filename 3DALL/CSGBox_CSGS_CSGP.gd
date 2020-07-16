@@ -22,11 +22,10 @@ func nodeFunction(q_CSGBox3D : CSGBox3D, can_reset : bool = false) -> void:
 		AutoObjects.A_CSGPrimitive3D(q_CSGBox3D)
 		
 	### START TEMP
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-##?#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	### END TEMP
-	
 	
 	if randi() % 2 == 1:
 		q_CSGBox3D.set_width(Autoload.get_float())
@@ -34,5 +33,5 @@ func nodeFunction(q_CSGBox3D : CSGBox3D, can_reset : bool = false) -> void:
 		q_CSGBox3D.set_height(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_CSGBox3D.set_depth(Autoload.get_float())
-#	if randi() % 2 == 1: #MISSING
-#		q_CSGBox3D.set_material(temp_StandardMaterial)
+	if randi() % 2 == 1:
+		q_CSGBox3D.set_material(temp_StandardMaterial3D)

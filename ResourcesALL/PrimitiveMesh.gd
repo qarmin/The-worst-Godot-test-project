@@ -22,13 +22,13 @@ func nodeFunction(q_PrimitiveMesh : PrimitiveMesh, can_reset : bool = false) -> 
 		
 	### START TEMP
 	
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	### END TEMP
 
 #	if randi() % 2 == 1: #MISSING
-#		q_PrimitiveMesh.set_material(temp_StandardMaterial)
+#		q_PrimitiveMesh.set_material(temp_StandardMaterial3D)
 	if randi() % 2 == 1:
 		q_PrimitiveMesh.set_custom_aabb(Autoload.get_aabb())
 #	if randi() % 2 == 1: #BUG NEW

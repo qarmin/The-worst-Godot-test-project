@@ -24,8 +24,8 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	var temp_ArrayMesh : ArrayMesh = ArrayMesh.new()
 	AutoResourcesArrayMesh.nodeFunction(temp_ArrayMesh)
 	
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	var temp_CubeMesh : CubeMesh = CubeMesh.new()
 	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
@@ -83,4 +83,4 @@ func nodeFunction(q_SurfaceTool : SurfaceTool, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_SurfaceTool.index()
 #	if randi() % 2 == 1: MISSING
-#		q_SurfaceTool.set_material( temp_StandardMaterial)
+#		q_SurfaceTool.set_material( temp_StandardMaterial3D)

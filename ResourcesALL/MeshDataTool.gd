@@ -21,8 +21,8 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 		AutoResourcesReference.nodeFunction(q_MeshDataTool)
 		
 	### START TEMP 
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	var temp_ArrayMesh : ArrayMesh = ArrayMesh.new()
 	AutoResourcesArrayMesh.nodeFunction(temp_ArrayMesh)
@@ -88,7 +88,7 @@ func nodeFunction(q_MeshDataTool : MeshDataTool, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_face_meta( Autoload.get_int(), Autoload.get_float())
 #	if randi() % 2 == 1: MISSING
-#		q_MeshDataTool.set_material( temp_StandardMaterial)
+#		q_MeshDataTool.set_material( temp_StandardMaterial3D)
 	if randi() % 2 == 1:
 		q_MeshDataTool.set_vertex( Autoload.get_int(), Autoload.get_vector3())
 	if randi() % 2 == 1:

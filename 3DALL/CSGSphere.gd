@@ -22,8 +22,8 @@ func nodeFunction(q_CSGSphere3D : CSGSphere3D, can_reset : bool = false) -> void
 		AutoObjects.A_CSGPrimitive3D(q_CSGSphere3D)
 		
 	### START TEMP
-#	var temp_StandardMaterial : StandardMaterial = StandardMaterial.new() #MISSING
-##?#	AutoResourcesStandardMaterial.nodeFunction(temp_StandardMaterial)
+#	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
+##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 	
 	### END TEMP
 		
@@ -36,4 +36,4 @@ func nodeFunction(q_CSGSphere3D : CSGSphere3D, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_CSGSphere3D.set_smooth_faces(Autoload.get_bool())
 #	if randi() % 2 == 1: # MISSING
-#		q_CSGSphere3D.set_material(temp_StandardMaterial)
+#		q_CSGSphere3D.set_material(temp_StandardMaterial3D)
