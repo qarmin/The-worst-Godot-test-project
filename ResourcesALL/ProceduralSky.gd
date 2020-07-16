@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_ProceduralSkyMaterial : ProceduralSkyMaterial = ProceduralSkyMaterial.new()
+var q_ProceduralSkyMaterial: ProceduralSkyMaterial = ProceduralSkyMaterial.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_ProceduralSkyMaterial,true)
+		nodeFunction(q_ProceduralSkyMaterial, true)
 
-func nodeFunction(q_ProceduralSkyMaterial : ProceduralSkyMaterial, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_ProceduralSkyMaterial: ProceduralSkyMaterial, can_reset: bool = false) -> void:
 	if can_reset:
 		if Autoload.SLOW_FUNCTIONS:
 			if randi() % 2 == 1:

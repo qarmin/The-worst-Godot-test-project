@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_SphereMesh : SphereMesh = SphereMesh.new()
+var q_SphereMesh: SphereMesh = SphereMesh.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_SphereMesh,true)
+		nodeFunction(q_SphereMesh, true)
 
-func nodeFunction(q_SphereMesh : SphereMesh, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_SphereMesh: SphereMesh, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_SphereMesh = SphereMesh.new()
@@ -25,7 +26,7 @@ func nodeFunction(q_SphereMesh : SphereMesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_SphereMesh.set_height(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_SphereMesh.set_radial_segments(Autoload.get_inti(5)) 
+		q_SphereMesh.set_radial_segments(Autoload.get_inti(5))
 	if randi() % 2 == 1:
 		q_SphereMesh.set_rings(Autoload.get_inti(5))
 	if randi() % 2 == 1:

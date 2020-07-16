@@ -1,6 +1,7 @@
 extends TextEdit
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,16 +9,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_TextEdit : TextEdit, can_reset : bool = false) -> void:
 
+func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_TextEdit)
 		AutoObjects.A_Node(q_TextEdit)
 		AutoObjects.A_CanvasItem(q_TextEdit)
 		AutoObjects.A_Control(q_TextEdit)
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.set_text(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -60,42 +61,42 @@ func nodeFunction(q_TextEdit : TextEdit, can_reset : bool = false) -> void:
 		q_TextEdit.set_right_click_moves_caret(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_TextEdit.add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(),Autoload.get_bool())
+		q_TextEdit.add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(), Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.add_keyword_color(Autoload.get_string(), Autoload.get_color())
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.can_fold(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.center_viewport_to_cursor()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.clear_colors()
 	if randi() % 2 == 1:
 		q_TextEdit.clear_undo_history()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.copy()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.cursor_get_column()
 	if randi() % 2 == 1:
 		q_TextEdit.cursor_get_line()
 	if randi() % 2 == 1:
-		q_TextEdit.cursor_set_column(Autoload.get_int(),Autoload.get_bool())
+		q_TextEdit.cursor_set_column(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TextEdit.cursor_set_line(Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_int())
-		
+		q_TextEdit.cursor_set_line(Autoload.get_int(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_int())
+
 	if randi() % 2 == 1:
 		q_TextEdit.cut()
 	if randi() % 2 == 1:
 		q_TextEdit.deselect()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.fold_all_lines()
 	if randi() % 2 == 1:
 		q_TextEdit.fold_line(Autoload.get_int())
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.get_breakpoints()
 	if randi() % 2 == 1:
@@ -118,19 +119,19 @@ func nodeFunction(q_TextEdit : TextEdit, can_reset : bool = false) -> void:
 		q_TextEdit.get_selection_to_line()
 	if randi() % 2 == 1:
 		q_TextEdit.get_word_under_cursor()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.has_keyword_color(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_TextEdit.insert_text_at_cursor(Autoload.get_string())
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.is_folded(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.is_line_hidden(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.is_selection_active()
-		
+
 	if randi() % 2 == 1:
 		q_TextEdit.menu_option(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -140,17 +141,17 @@ func nodeFunction(q_TextEdit : TextEdit, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TextEdit.remove_breakpoints()
 	if randi() % 2 == 1:
-		q_TextEdit.search(Autoload.get_string(), Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
-		
+		q_TextEdit.search(Autoload.get_string(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
+
 	if randi() % 2 == 1:
-		q_TextEdit.select(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
+		q_TextEdit.select(Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.select_all()
-		
+
 	if randi() % 2 == 1:
-		q_TextEdit.set_line_as_hidden(Autoload.get_int(),Autoload.get_bool())
+		q_TextEdit.set_line_as_hidden(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TextEdit.set_line_as_hidden(Autoload.get_int(),Autoload.get_bool())
+		q_TextEdit.set_line_as_hidden(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.toggle_fold_line(Autoload.get_int())
 	if randi() % 2 == 1:

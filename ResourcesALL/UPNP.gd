@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_UPNP : UPNP = UPNP.new()
+var q_UPNP: UPNP = UPNP.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_UPNP,true)
+		nodeFunction(q_UPNP, true)
 
-func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_UPNP: UPNP, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_UPNP = UPNP.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_UPNP)
-		
+
 	### START TEMP
-	var temp_UPNPDevice : UPNPDevice = UPNPDevice.new()
+	var temp_UPNPDevice: UPNPDevice = UPNPDevice.new()
 	AutoResourcesUPNPDevice.nodeFunction(temp_UPNPDevice)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:
@@ -34,20 +35,20 @@ func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
 		q_UPNP.set_discover_ipv6(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_UPNP.add_device( temp_UPNPDevice)
+		q_UPNP.add_device(temp_UPNPDevice)
 	if randi() % 2 == 1:
-		q_UPNP.add_port_mapping( Autoload.get_int(), Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_int())
+		q_UPNP.add_port_mapping(Autoload.get_int(), Autoload.get_int(), Autoload.get_string(), Autoload.get_string(), Autoload.get_int())
 
 	if randi() % 2 == 1:
 		q_UPNP.clear_devices()
 	if randi() % 2 == 1:
-		q_UPNP.delete_port_mapping( Autoload.get_int(), Autoload.get_string())
+		q_UPNP.delete_port_mapping(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
 		if Autoload.SLOW_FUNCTIONS:
-			q_UPNP.discover( Autoload.get_int(), Autoload.get_int(), Autoload.get_string())
+			q_UPNP.discover(Autoload.get_int(), Autoload.get_int(), Autoload.get_string())
 
 	if randi() % 2 == 1:
-		q_UPNP.get_device( Autoload.get_int())
+		q_UPNP.get_device(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_UPNP.get_device_count()
 	if randi() % 2 == 1:
@@ -56,6 +57,6 @@ func nodeFunction(q_UPNP : UPNP, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_UPNP.query_external_address()
 	if randi() % 2 == 1:
-		q_UPNP.remove_device( Autoload.get_int())
+		q_UPNP.remove_device(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_UPNP.set_device( Autoload.get_int(), temp_UPNPDevice)
+		q_UPNP.set_device(Autoload.get_int(), temp_UPNPDevice)

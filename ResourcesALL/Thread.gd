@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_Thread : Thread = Thread.new()
+var q_Thread: Thread = Thread.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Thread,true)
+		nodeFunction(q_Thread, true)
 
-func nodeFunction(q_Thread : Thread, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Thread: Thread, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Thread = Thread.new()
@@ -29,5 +30,6 @@ func nodeFunction(q_Thread : Thread, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Thread.wait_to_finish()
 
-func Hiszpania(var Wychodzi : String) -> void:
+
+func Hiszpania(Wychodzi: String) -> void:
 	print(Wychodzi)

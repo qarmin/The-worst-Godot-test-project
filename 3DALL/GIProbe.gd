@@ -1,6 +1,7 @@
 extends GIProbe
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,22 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_GIProbe : GIProbe, can_reset : bool = false) -> void:
 
+func nodeFunction(q_GIProbe: GIProbe, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_GIProbe)
 		AutoObjects.A_Node(q_GIProbe)
 		AutoObjects.A_Node3D(q_GIProbe)
 		AutoObjects.A_VisualInstance3D(q_GIProbe)
-		
+
 	### START TEMP
-	var temp_GIProbeData : GIProbeData = GIProbeData.new()
+	var temp_GIProbeData: GIProbeData = GIProbeData.new()
 #?#	AutoResourcesGIProbeData.nodeFunction(temp_GIProbeData)
-	
-	### END TEMP
-	
+
+### END TEMP
+
 #MISSING
 #	if randi() % 2 == 1:
 #		q_GIProbe.set_subdiv(Autoload.get_inti(10)) # Subdiv 

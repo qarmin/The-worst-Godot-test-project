@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_StreamPeerTCP : StreamPeerTCP = StreamPeerTCP.new()
+var q_StreamPeerTCP: StreamPeerTCP = StreamPeerTCP.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_StreamPeerTCP,true)
+		nodeFunction(q_StreamPeerTCP, true)
 
-func nodeFunction(q_StreamPeerTCP : StreamPeerTCP, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_StreamPeerTCP: StreamPeerTCP, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_StreamPeerTCP = StreamPeerTCP.new()
@@ -21,7 +22,7 @@ func nodeFunction(q_StreamPeerTCP : StreamPeerTCP, can_reset : bool = false) -> 
 		AutoResourcesStreamPeer.nodeFunction(q_StreamPeerTCP)
 
 	if randi() % 2 == 1:
-		q_StreamPeerTCP.connect_to_host( Autoload.get_string(), Autoload.get_int())
+		q_StreamPeerTCP.connect_to_host(Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_StreamPeerTCP.disconnect_from_host()
 
@@ -35,4 +36,4 @@ func nodeFunction(q_StreamPeerTCP : StreamPeerTCP, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_StreamPeerTCP.is_connected_to_host()
 	if randi() % 2 == 1:
-		q_StreamPeerTCP.set_no_delay( Autoload.get_bool())
+		q_StreamPeerTCP.set_no_delay(Autoload.get_bool())

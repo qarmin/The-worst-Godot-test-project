@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioEffectDistortion : AudioEffectDistortion = AudioEffectDistortion.new()
+var q_AudioEffectDistortion: AudioEffectDistortion = AudioEffectDistortion.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioEffectDistortion,true)
+		nodeFunction(q_AudioEffectDistortion, true)
 
-func nodeFunction(q_AudioEffectDistortion : AudioEffectDistortion, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioEffectDistortion: AudioEffectDistortion, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioEffectDistortion = AudioEffectDistortion.new()
@@ -21,7 +22,7 @@ func nodeFunction(q_AudioEffectDistortion : AudioEffectDistortion, can_reset : b
 		AutoResourcesAudioEffect.nodeFunction(q_AudioEffectDistortion)
 
 	if randi() % 2 == 1:
-		q_AudioEffectDistortion.set_mode(Autoload.get_int()) #Mode
+		q_AudioEffectDistortion.set_mode(Autoload.get_int())  #Mode
 	if randi() % 2 == 1:
 		q_AudioEffectDistortion.set_pre_gain(Autoload.get_float())
 	if randi() % 2 == 1:

@@ -1,4 +1,6 @@
 extends Node2D
+
+
 # MISSING
 #var q_Texture : Texture = ImageTexture.new()
 #
@@ -12,7 +14,7 @@ extends Node2D
 #
 #		nodeFunction(q_Texture,true)
 #
-func nodeFunction(q_Texture : Texture, can_reset : bool = false) -> void:
+func nodeFunction(q_Texture: Texture, can_reset: bool = false) -> void:
 	pass
 #
 ##	if can_reset:

@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_TCP_Server : TCP_Server = TCP_Server.new()
+var q_TCP_Server: TCP_Server = TCP_Server.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_TCP_Server,true)
+		nodeFunction(q_TCP_Server, true)
 
-func nodeFunction(q_TCP_Server : TCP_Server, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_TCP_Server: TCP_Server, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_TCP_Server = TCP_Server.new()
@@ -23,7 +24,7 @@ func nodeFunction(q_TCP_Server : TCP_Server, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TCP_Server.is_connection_available()
 	if randi() % 2 == 1:
-		q_TCP_Server.listen( Autoload.get_int(), Autoload.get_string())
+		q_TCP_Server.listen(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_TCP_Server.stop()
 	if randi() % 2 == 1:

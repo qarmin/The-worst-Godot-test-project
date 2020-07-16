@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_CubeMesh : CubeMesh = CubeMesh.new()
+var q_CubeMesh: CubeMesh = CubeMesh.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_CubeMesh,true)
+		nodeFunction(q_CubeMesh, true)
 
-func nodeFunction(q_CubeMesh : CubeMesh, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_CubeMesh: CubeMesh, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_CubeMesh = CubeMesh.new()
@@ -23,8 +24,8 @@ func nodeFunction(q_CubeMesh : CubeMesh, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_CubeMesh.set_size(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_CubeMesh.set_subdivide_width(Autoload.get_inti(5)) 
+		q_CubeMesh.set_subdivide_width(Autoload.get_inti(5))
 	if randi() % 2 == 1:
-		q_CubeMesh.set_subdivide_height(Autoload.get_inti(5)) 
+		q_CubeMesh.set_subdivide_height(Autoload.get_inti(5))
 	if randi() % 2 == 1:
-		q_CubeMesh.set_subdivide_depth(Autoload.get_inti(5)) 
+		q_CubeMesh.set_subdivide_depth(Autoload.get_inti(5))

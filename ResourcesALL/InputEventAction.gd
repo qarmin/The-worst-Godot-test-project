@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_InputEventAction : InputEventAction = InputEventAction.new()
+var q_InputEventAction: InputEventAction = InputEventAction.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_InputEventAction,true)
+		nodeFunction(q_InputEventAction, true)
 
-func nodeFunction(q_InputEventAction : InputEventAction, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_InputEventAction: InputEventAction, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_InputEventAction = InputEventAction.new()
@@ -21,8 +22,8 @@ func nodeFunction(q_InputEventAction : InputEventAction, can_reset : bool = fals
 		AutoResourcesInputEvent.nodeFunction(q_InputEventAction)
 
 	if randi() % 2 == 1:
-			q_InputEventAction.set_action(Autoload.get_string())
+		q_InputEventAction.set_action(Autoload.get_string())
 	if randi() % 2 == 1:
-			q_InputEventAction.set_pressed(Autoload.get_bool())
+		q_InputEventAction.set_pressed(Autoload.get_bool())
 	if randi() % 2 == 1:
-			q_InputEventAction.set_strength(Autoload.get_float())
+		q_InputEventAction.set_strength(Autoload.get_float())

@@ -1,6 +1,7 @@
 extends ReflectionProbe
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,18 +9,18 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_ReflectionProbe : ReflectionProbe, can_reset : bool = false) -> void:
 
+func nodeFunction(q_ReflectionProbe: ReflectionProbe, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_ReflectionProbe)
 		AutoObjects.A_Node(q_ReflectionProbe)
 		AutoObjects.A_Node3D(q_ReflectionProbe)
 		AutoObjects.A_VisualInstance3D(q_ReflectionProbe)
-		
+
 	if randi() % 2 == 1:
-		q_ReflectionProbe.set_update_mode(Autoload.get_int()) #UpdateMode
+		q_ReflectionProbe.set_update_mode(Autoload.get_int())  #UpdateMode
 	if randi() % 2 == 1:
 		q_ReflectionProbe.set_intensity(Autoload.get_float())
 	if randi() % 2 == 1:

@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_VisualScriptPropertySet : VisualScriptPropertySet = VisualScriptPropertySet.new()
+var q_VisualScriptPropertySet: VisualScriptPropertySet = VisualScriptPropertySet.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_VisualScriptPropertySet,true)
+		nodeFunction(q_VisualScriptPropertySet, true)
 
-func nodeFunction(q_VisualScriptPropertySet : VisualScriptPropertySet, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_VisualScriptPropertySet: VisualScriptPropertySet, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_VisualScriptPropertySet = VisualScriptPropertySet.new()
@@ -21,7 +22,7 @@ func nodeFunction(q_VisualScriptPropertySet : VisualScriptPropertySet, can_reset
 		AutoResourcesVisualScriptNode.nodeFunction(q_VisualScriptPropertySet)
 
 	if randi() % 2 == 1:
-		q_VisualScriptPropertySet.set_call_mode(Autoload.get_int()) # CallMode
+		q_VisualScriptPropertySet.set_call_mode(Autoload.get_int())  # CallMode
 	if randi() % 2 == 1:
 		q_VisualScriptPropertySet.set_base_type(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -35,4 +36,4 @@ func nodeFunction(q_VisualScriptPropertySet : VisualScriptPropertySet, can_reset
 	if randi() % 2 == 1:
 		q_VisualScriptPropertySet.set_index(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_VisualScriptPropertySet.set_assign_op(Autoload.get_int()) # AssignOP
+		q_VisualScriptPropertySet.set_assign_op(Autoload.get_int())  # AssignOP

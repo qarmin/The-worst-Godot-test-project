@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
 
 #
 #

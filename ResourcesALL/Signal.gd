@@ -2,7 +2,8 @@ extends Node2D
 
 #var q_Signal : Signal = Autoload.get_Signal()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,7 +11,9 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+
 #		nodeFunction(q_Signal,true)
 
-func nodeFunction(q_Signal : Signal, can_reset : bool = false) -> void:
+
+func nodeFunction(q_Signal: Signal, can_reset: bool = false) -> void:
 	pass

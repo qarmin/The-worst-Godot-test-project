@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioEffectEQ : AudioEffectEQ = AudioEffectEQ.new()
+var q_AudioEffectEQ: AudioEffectEQ = AudioEffectEQ.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioEffectEQ,true)
+		nodeFunction(q_AudioEffectEQ, true)
 
-func nodeFunction(q_AudioEffectEQ : AudioEffectEQ, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioEffectEQ: AudioEffectEQ, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioEffectEQ = AudioEffectEQ.new()
@@ -23,6 +24,6 @@ func nodeFunction(q_AudioEffectEQ : AudioEffectEQ, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_AudioEffectEQ.get_band_count()
 	if randi() % 2 == 1:
-		q_AudioEffectEQ.get_band_gain_db( Autoload.get_int())
+		q_AudioEffectEQ.get_band_gain_db(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_AudioEffectEQ.set_band_gain_db( Autoload.get_int(), Autoload.get_int())
+		q_AudioEffectEQ.set_band_gain_db(Autoload.get_int(), Autoload.get_int())

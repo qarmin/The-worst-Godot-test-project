@@ -28,8 +28,7 @@ extends Node
 #	var temp_InputEventAction : InputEventAction = InputEventAction.new()
 ##?#	AutoResourcesInputEventAction.nodeFunction(temp_InputEventAction)
 #	### END TEMP
-	
-	
+
 #	if randi() % 2 == 1: #MISSING
 #		q_Viewport.set_use_arvr(Autoload.get_bool())
 #	if randi() % 2 == 1:

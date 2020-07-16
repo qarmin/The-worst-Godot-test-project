@@ -1,6 +1,7 @@
 extends TouchScreenButton
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,28 +9,27 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_TouchScreenButton : TouchScreenButton, can_reset : bool = false) -> void:
 
+func nodeFunction(q_TouchScreenButton: TouchScreenButton, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_TouchScreenButton)
 		AutoObjects.A_Node(q_TouchScreenButton)
 		AutoObjects.A_CanvasItem(q_TouchScreenButton)
 		AutoObjects.A_Node2D(q_TouchScreenButton)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
-	var temp_BitMap : BitMap = BitMap.new()
+
+	var temp_BitMap: BitMap = BitMap.new()
 #?#	AutoResourcesBitMap.nodeFunction(temp_BitMap)
-	
-	var temp_CircleShape2D : CircleShape2D = CircleShape2D.new()
+
+	var temp_CircleShape2D: CircleShape2D = CircleShape2D.new()
 #?#	AutoResourcesCircleShape2D.nodeFunction(temp_CircleShape2D)
 	### END TEMP
-	
-		
+
 	if randi() % 2 == 1:
 		q_TouchScreenButton.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
@@ -47,7 +47,7 @@ func nodeFunction(q_TouchScreenButton : TouchScreenButton, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_TouchScreenButton.set_action(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_TouchScreenButton.set_visibility_mode(Autoload.get_int()) #VisibilityMode
+		q_TouchScreenButton.set_visibility_mode(Autoload.get_int())  #VisibilityMode
 
 	if randi() % 2 == 1:
 		q_TouchScreenButton.is_pressed()

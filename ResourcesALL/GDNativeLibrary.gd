@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_GDNativeLibrary : GDNativeLibrary = GDNativeLibrary.new()
+var q_GDNativeLibrary: GDNativeLibrary = GDNativeLibrary.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,21 +11,21 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_GDNativeLibrary,true)
+		nodeFunction(q_GDNativeLibrary, true)
 
-func nodeFunction(q_GDNativeLibrary : GDNativeLibrary, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_GDNativeLibrary: GDNativeLibrary, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_GDNativeLibrary = GDNativeLibrary.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_GDNativeLibrary)
-		
+
 	### START TEMP
-	
-	var temp_ConfigFile : ConfigFile = ConfigFile.new()
+
+	var temp_ConfigFile: ConfigFile = ConfigFile.new()
 	AutoResourcesConfigFile.nodeFunction(temp_ConfigFile)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

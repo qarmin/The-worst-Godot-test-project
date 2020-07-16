@@ -1,6 +1,7 @@
 extends CSGPolygon3D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,10 +9,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_CSGPolygon3D : CSGPolygon3D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_CSGPolygon3D: CSGPolygon3D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_CSGPolygon3D)
 		AutoObjects.A_Node(q_CSGPolygon3D)
@@ -20,17 +21,17 @@ func nodeFunction(q_CSGPolygon3D : CSGPolygon3D, can_reset : bool = false) -> vo
 		AutoObjects.A_GeometryInstance3D(q_CSGPolygon3D)
 		AutoObjects.A_CSGShape3D(q_CSGPolygon3D)
 		AutoObjects.A_CSGPrimitive3D(q_CSGPolygon3D)
-		
+
 	### START TEMP
 #	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
 ##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
-	
+
 	### END TEMP
-		
+
 	if randi() % 2 == 1:
 		q_CSGPolygon3D.set_polygon(Autoload.get_packedvector2array())
 	if randi() % 2 == 1:
-		q_CSGPolygon3D.set_mode(Autoload.get_int()) # Mode
+		q_CSGPolygon3D.set_mode(Autoload.get_int())  # Mode
 	if randi() % 2 == 1:
 		q_CSGPolygon3D.set_depth(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -42,7 +43,7 @@ func nodeFunction(q_CSGPolygon3D : CSGPolygon3D, can_reset : bool = false) -> vo
 	if randi() % 2 == 1:
 		q_CSGPolygon3D.set_path_interval(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CSGPolygon3D.set_path_rotation(Autoload.get_int()) # PathRotation
+		q_CSGPolygon3D.set_path_rotation(Autoload.get_int())  # PathRotation
 	if randi() % 2 == 1:
 		q_CSGPolygon3D.set_path_local(Autoload.get_bool())
 	if randi() % 2 == 1:

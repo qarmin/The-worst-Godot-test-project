@@ -1,6 +1,7 @@
 extends GridMap
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,25 +9,24 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_GridMap : GridMap, can_reset : bool = false) -> void:
 
+func nodeFunction(q_GridMap: GridMap, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_GridMap)
 		AutoObjects.A_Node(q_GridMap)
 		AutoObjects.A_Node3D(q_GridMap)
-		
+
 	### START TEMP
-	var temp_MeshLibrary : MeshLibrary = MeshLibrary.new()
+	var temp_MeshLibrary: MeshLibrary = MeshLibrary.new()
 #?#	AutoResourcesMeshLibrary.nodeFunction(temp_MeshLibrary)
-	
-	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+
+	var temp_CubeMesh: CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
-	
-	### END TEMP
-	
-		
+
+### END TEMP
+
 #	if randi() % 2 == 1: #LEAK
 #		q_GridMap.set_theme(temp_MeshLibrary)
 #	if randi() % 2 == 1:

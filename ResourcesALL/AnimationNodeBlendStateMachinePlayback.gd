@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AnimationNodeStateMachinePlayback : AnimationNodeStateMachinePlayback = AnimationNodeStateMachinePlayback.new()
+var q_AnimationNodeStateMachinePlayback: AnimationNodeStateMachinePlayback = AnimationNodeStateMachinePlayback.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AnimationNodeStateMachinePlayback,true)
+		nodeFunction(q_AnimationNodeStateMachinePlayback, true)
 
-func nodeFunction(q_AnimationNodeStateMachinePlayback : AnimationNodeStateMachinePlayback, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AnimationNodeStateMachinePlayback: AnimationNodeStateMachinePlayback, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachinePlayback = AnimationNodeStateMachinePlayback.new()
@@ -28,8 +29,8 @@ func nodeFunction(q_AnimationNodeStateMachinePlayback : AnimationNodeStateMachin
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachinePlayback.is_playing()
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachinePlayback.start( Autoload.get_string())
+		q_AnimationNodeStateMachinePlayback.start(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachinePlayback.stop()
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachinePlayback.travel( Autoload.get_string())
+		q_AnimationNodeStateMachinePlayback.travel(Autoload.get_string())

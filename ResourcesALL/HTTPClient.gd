@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_HTTPClient : HTTPClient = HTTPClient.new()
+var q_HTTPClient: HTTPClient = HTTPClient.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_HTTPClient,true)
+		nodeFunction(q_HTTPClient, true)
 
-func nodeFunction(q_HTTPClient : HTTPClient, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_HTTPClient: HTTPClient, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_HTTPClient = HTTPClient.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_HTTPClient)
-		
+
 	### START TEMP
-	var temp_StreamPeer : StreamPeer = StreamPeerBuffer.new()
+	var temp_StreamPeer: StreamPeer = StreamPeerBuffer.new()
 	AutoResourcesStreamPeer.nodeFunction(temp_StreamPeer)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:
@@ -34,7 +35,7 @@ func nodeFunction(q_HTTPClient : HTTPClient, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_HTTPClient.close()
 	if randi() % 2 == 1:
-		q_HTTPClient.connect_to_host( Autoload.get_string(), Autoload.get_int(), Autoload.get_bool(), Autoload.get_bool())
+		q_HTTPClient.connect_to_host(Autoload.get_string(), Autoload.get_int(), Autoload.get_bool(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_HTTPClient.get_response_body_length()
@@ -54,16 +55,16 @@ func nodeFunction(q_HTTPClient : HTTPClient, can_reset : bool = false) -> void:
 #	BUG	if randi() % 2 == 1:
 #			q_HTTPClient.poll()
 	if randi() % 2 == 1:
-		q_HTTPClient.query_string_from_dict( Autoload.get_dictionary())
+		q_HTTPClient.query_string_from_dict(Autoload.get_dictionary())
 	if randi() % 2 == 1:
 		q_HTTPClient.read_response_body_chunk()
 
 	if randi() % 2 == 1:
-		q_HTTPClient.request( Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_string())#Method
+		q_HTTPClient.request(Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_string())  #Method
 	if randi() % 2 == 1:
 		q_HTTPClient.read_response_body_chunk()
 	if randi() % 2 == 1:
-		q_HTTPClient.request_raw( Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_packedbytearray())#Method
+		q_HTTPClient.request_raw(Autoload.get_int(), Autoload.get_string(), Autoload.get_packedstringarray(), Autoload.get_packedbytearray())  #Method
 
 	if randi() % 2 == 1:
-		q_HTTPClient.set_read_chunk_size( Autoload.get_int())
+		q_HTTPClient.set_read_chunk_size(Autoload.get_int())

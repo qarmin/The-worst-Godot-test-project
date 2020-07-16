@@ -1,9 +1,10 @@
 extends Node2D
 
 # warning-ignore:unassigned_variable
-var q_RID : RID
+var q_RID: RID
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -11,10 +12,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_RID,true)
+		nodeFunction(q_RID, true)
 
-func nodeFunction(q_RID : RID, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_RID: RID, can_reset: bool = false) -> void:
 #	if can_reset:
 #		if randi() % 2 == 1:
 #			#q_RID = RID()

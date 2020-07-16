@@ -1,6 +1,6 @@
 extends Node2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
 
 #
 #
@@ -13,7 +13,7 @@ onready var counter : float = Autoload.get_rand_time()
 #	if counter <= 0:
 #		counter = Autoload.get_rand_time()
 #
-	#		var q_AudioEffectSpectrumAnalyzerInstance : AudioEffectSpectrumAnalyzerInstance = AudioEffectSpectrumAnalyzerInstance.new()
-	#
-	#		q_AudioEffectSpectrumAnalyzerInstance.get_magnitude_for_frequency_range( Autoload.get_float(), Autoload.get_float(), Autoload.get_int()) #MagnitudeMode
-	#
+#		var q_AudioEffectSpectrumAnalyzerInstance : AudioEffectSpectrumAnalyzerInstance = AudioEffectSpectrumAnalyzerInstance.new()
+#
+#		q_AudioEffectSpectrumAnalyzerInstance.get_magnitude_for_frequency_range( Autoload.get_float(), Autoload.get_float(), Autoload.get_int()) #MagnitudeMode
+#

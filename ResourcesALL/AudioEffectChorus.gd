@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioEffectChorus : AudioEffectChorus = AudioEffectChorus.new()
+var q_AudioEffectChorus: AudioEffectChorus = AudioEffectChorus.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioEffectChorus,true)
+		nodeFunction(q_AudioEffectChorus, true)
 
-func nodeFunction(q_AudioEffectChorus : AudioEffectChorus, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioEffectChorus: AudioEffectChorus, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioEffectChorus = AudioEffectChorus.new()
@@ -28,14 +29,14 @@ func nodeFunction(q_AudioEffectChorus : AudioEffectChorus, can_reset : bool = fa
 		q_AudioEffectChorus.set_wet(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/delay_ms",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/delay_ms", Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/rate_hz",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/rate_hz", Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/depth_ms",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/depth_ms", Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/level_db",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/level_db", Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/cutoff_hz",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/cutoff_hz", Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/pan",Autoload.get_float())
+		q_AudioEffectChorus.set("voice/" + Autoload.get_string() + "/pan", Autoload.get_float())

@@ -2,7 +2,8 @@ extends Node2D
 # PROBABLY CANT BE DECLARED TOD
 #var q_WebRTCPeerConnection : WebRTCPeerConnection = WebRTCPeerConnection.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,9 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+
 #		nodeFunction(q_WebRTCPeerConnection,true)
 #
-func nodeFunction(q_WebRTCPeerConnection : WebRTCPeerConnection, can_reset : bool = false) -> void:
+func nodeFunction(q_WebRTCPeerConnection: WebRTCPeerConnection, can_reset: bool = false) -> void:
 	pass
 #
 #	if can_reset:

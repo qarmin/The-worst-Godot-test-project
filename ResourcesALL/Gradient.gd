@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_Gradient : Gradient = Gradient.new()
+var q_Gradient: Gradient = Gradient.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Gradient,true)
+		nodeFunction(q_Gradient, true)
 
-func nodeFunction(q_Gradient : Gradient, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Gradient: Gradient, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Gradient = Gradient.new()
@@ -27,7 +28,7 @@ func nodeFunction(q_Gradient : Gradient, can_reset : bool = false) -> void:
 
 	for _i in range(4):
 		if randi() % 2 == 1:
-				q_Gradient.add_point( Autoload.get_float(),Autoload.get_color())
+			q_Gradient.add_point(Autoload.get_float(), Autoload.get_color())
 
 	if randi() % 2 == 1:
 		q_Gradient.get_color(Autoload.get_int())
@@ -44,4 +45,4 @@ func nodeFunction(q_Gradient : Gradient, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Gradient.set_color(Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
-		q_Gradient.set_offset(Autoload.get_int(),Autoload.get_float())
+		q_Gradient.set_offset(Autoload.get_int(), Autoload.get_float())

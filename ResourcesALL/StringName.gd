@@ -18,4 +18,3 @@ extends Node2D
 #		if randi() % 2 == 1:
 #			if randi() % 2 == 1:
 #				q_StringName = StringName( Autoload.get_bool())
-

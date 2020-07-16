@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AnimationNodeOneShot : AnimationNodeOneShot = AnimationNodeOneShot.new()
+var q_AnimationNodeOneShot: AnimationNodeOneShot = AnimationNodeOneShot.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AnimationNodeOneShot,true)
+		nodeFunction(q_AnimationNodeOneShot, true)
 
-func nodeFunction(q_AnimationNodeOneShot : AnimationNodeOneShot, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AnimationNodeOneShot: AnimationNodeOneShot, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AnimationNodeOneShot = AnimationNodeOneShot.new()
@@ -36,4 +37,4 @@ func nodeFunction(q_AnimationNodeOneShot : AnimationNodeOneShot, can_reset : boo
 	if randi() % 2 == 1:
 		q_AnimationNodeOneShot.get_mix_mode()
 	if randi() % 2 == 1:
-		q_AnimationNodeOneShot.set_mix_mode(Autoload.get_int()) # MIX_MODE
+		q_AnimationNodeOneShot.set_mix_mode(Autoload.get_int())  # MIX_MODE

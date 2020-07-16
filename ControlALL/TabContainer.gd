@@ -1,6 +1,7 @@
 extends TabContainer
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,30 +9,29 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_TabContainer : TabContainer, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_TabContainer: TabContainer, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoControlContainer.nodeFunction(q_TabContainer)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 
-	var temp_PopupMenu : PopupMenu = PopupMenu.new()
+	var temp_PopupMenu: PopupMenu = PopupMenu.new()
 	AutoControlPopupMenu.nodeFunction(temp_PopupMenu)
 	### END TEMP
-
 
 	if randi() % 2 == 1:
 		q_TabContainer.set_popup(temp_PopupMenu)
 	if randi() % 2 == 1:
-		q_TabContainer.set_tab_disabled(Autoload.get_int(),Autoload.get_bool())
+		q_TabContainer.set_tab_disabled(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TabContainer.set_tab_icon(Autoload.get_int(),temp_ImageTexture)
+		q_TabContainer.set_tab_icon(Autoload.get_int(), temp_ImageTexture)
 	if randi() % 2 == 1:
-		q_TabContainer.set_tab_title(Autoload.get_int(),Autoload.get_string())
+		q_TabContainer.set_tab_title(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_TabContainer.set_tabs_rearrange_group(Autoload.get_int())
 

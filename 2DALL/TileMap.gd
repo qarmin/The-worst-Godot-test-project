@@ -1,6 +1,7 @@
 extends TileMap
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,25 +9,24 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 
+func nodeFunction(q_TileMap: TileMap, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_TileMap)
 		AutoObjects.A_Node(q_TileMap)
 		AutoObjects.A_CanvasItem(q_TileMap)
 		AutoObjects.A_Node2D(q_TileMap)
-		
+
 	### START TEMP
-	var temp_TileSet : TileSet = TileSet.new()
+	var temp_TileSet: TileSet = TileSet.new()
 #?#	AutoResourcesTileSet.nodeFunction(temp_TileSet)
-	
+
 	### END TEMP
-	
-		
+
 	if randi() % 2 == 1:
-		q_TileMap.set_mode(Autoload.get_int()) #Mode
+		q_TileMap.set_mode(Autoload.get_int())  #Mode
 	if randi() % 2 == 1:
 		q_TileMap.set_tileset(temp_TileSet)
 	if randi() % 2 == 1:
@@ -36,9 +36,9 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TileMap.set_custom_transform(Autoload.get_transform2d())
 	if randi() % 2 == 1:
-		q_TileMap.set_half_offset(Autoload.get_int()) #HalfOffset
+		q_TileMap.set_half_offset(Autoload.get_int())  #HalfOffset
 	if randi() % 2 == 1:
-		q_TileMap.set_tile_origin(Autoload.get_int()) #TileOrigin
+		q_TileMap.set_tile_origin(Autoload.get_int())  #TileOrigin
 	if randi() % 2 == 1:
 		q_TileMap.set_y_sort_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -68,9 +68,9 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 #		BUG q_TileMap.fix_invalid_tiles()
 
 	if randi() % 2 == 1:
-		q_TileMap.get_cell(Autoload.get_int(),Autoload.get_int())
+		q_TileMap.get_cell(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_TileMap.get_cell_autotile_coord(Autoload.get_int(),Autoload.get_int())
+		q_TileMap.get_cell_autotile_coord(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TileMap.get_cellv(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -85,23 +85,23 @@ func nodeFunction(q_TileMap : TileMap, can_reset : bool = false) -> void:
 		q_TileMap.get_used_rect()
 
 	if randi() % 2 == 1:
-		q_TileMap.is_cell_transposed(Autoload.get_int(),Autoload.get_int())
+		q_TileMap.is_cell_transposed(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_TileMap.is_cell_x_flipped(Autoload.get_int(),Autoload.get_int())
+		q_TileMap.is_cell_x_flipped(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_TileMap.is_cell_y_flipped(Autoload.get_int(),Autoload.get_int())
+		q_TileMap.is_cell_y_flipped(Autoload.get_int(), Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_TileMap.map_to_world(Autoload.get_vector2(),Autoload.get_bool())
+		q_TileMap.map_to_world(Autoload.get_vector2(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_TileMap.set_cell(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_vector2())
+		q_TileMap.set_cell(Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_TileMap.set_cellv(Autoload.get_vector2(),Autoload.get_int(),Autoload.get_bool(),Autoload.get_bool(),Autoload.get_bool())
+		q_TileMap.set_cellv(Autoload.get_vector2(), Autoload.get_int(), Autoload.get_bool(), Autoload.get_bool(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TileMap.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
+		q_TileMap.set_collision_layer_bit(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TileMap.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+		q_TileMap.set_collision_mask_bit(Autoload.get_int(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_TileMap.update_bitmask_area(Autoload.get_vector2())

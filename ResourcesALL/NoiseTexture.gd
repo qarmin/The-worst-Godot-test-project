@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_NoiseTexture : NoiseTexture = NoiseTexture.new()
+var q_NoiseTexture: NoiseTexture = NoiseTexture.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,9 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_NoiseTexture,true)
+		nodeFunction(q_NoiseTexture, true)
 
-func nodeFunction(q_NoiseTexture : NoiseTexture, can_reset : bool = false) -> void:
+
+func nodeFunction(q_NoiseTexture: NoiseTexture, can_reset: bool = false) -> void:
 	pass
 #	if can_reset: #BUG CRASH GH#37032
 #		if randi() % 2 == 1:

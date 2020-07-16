@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AABB : AABB = Autoload.get_aabb()
+var q_AABB: AABB = Autoload.get_aabb()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AABB,true)
+		nodeFunction(q_AABB, true)
 
-func nodeFunction(q_AABB : AABB, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AABB: AABB, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
@@ -60,7 +61,7 @@ func nodeFunction(q_AABB : AABB, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_AABB.intersects_plane(Autoload.get_plane())
 	if randi() % 2 == 1:
-		q_AABB.intersects_segment(Autoload.get_vector3(),Autoload.get_vector3())
+		q_AABB.intersects_segment(Autoload.get_vector3(), Autoload.get_vector3())
 
 	if randi() % 2 == 1:
 		q_AABB.merge(Autoload.get_aabb())

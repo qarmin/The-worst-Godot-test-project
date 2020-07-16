@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_Skin : Skin = Skin.new()
+var q_Skin: Skin = Skin.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Skin,true)
+		nodeFunction(q_Skin, true)
 
-func nodeFunction(q_Skin : Skin, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Skin: Skin, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Skin = Skin.new()
@@ -21,7 +22,7 @@ func nodeFunction(q_Skin : Skin, can_reset : bool = false) -> void:
 		AutoResourcesResource.nodeFunction(q_Skin)
 
 	if randi() % 2 == 1:
-		q_Skin.add_bind(Autoload.get_int(),Autoload.get_transform())
+		q_Skin.add_bind(Autoload.get_int(), Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_Skin.clear_binds()
 	if randi() % 2 == 1:
@@ -36,4 +37,3 @@ func nodeFunction(q_Skin : Skin, can_reset : bool = false) -> void:
 		q_Skin.set_bind_count(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Skin.set_bind_pose(Autoload.get_int(), Autoload.get_transform())
-

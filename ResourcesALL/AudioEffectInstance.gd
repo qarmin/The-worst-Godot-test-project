@@ -1,6 +1,7 @@
 extends Node2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 #
 #
@@ -14,5 +15,5 @@ func alt_process(delta) -> void:
 #	if counter <= 0:
 #		counter = Autoload.get_rand_time()
 #
-	#		var q_AudioEffectInstance : AudioEffectInstance = AudioEffectInstance.new()
-	#
+#		var q_AudioEffectInstance : AudioEffectInstance = AudioEffectInstance.new()
+#

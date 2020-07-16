@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_OpenSimplexNoise : OpenSimplexNoise = OpenSimplexNoise.new()
+var q_OpenSimplexNoise: OpenSimplexNoise = OpenSimplexNoise.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_OpenSimplexNoise,true)
+		nodeFunction(q_OpenSimplexNoise, true)
 
-func nodeFunction(q_OpenSimplexNoise : OpenSimplexNoise, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_OpenSimplexNoise: OpenSimplexNoise, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_OpenSimplexNoise = OpenSimplexNoise.new()
@@ -32,18 +33,18 @@ func nodeFunction(q_OpenSimplexNoise : OpenSimplexNoise, can_reset : bool = fals
 		q_OpenSimplexNoise.set_lacunarity(Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_image( Autoload.get_inti(50),Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_image(Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_1d( Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_noise_1d(Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_2d( Autoload.get_inti(50),Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_noise_2d(Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_2dv( Vector2(Autoload.get_inti(50),Autoload.get_inti(50)))
+		q_OpenSimplexNoise.get_noise_2dv(Vector2(Autoload.get_inti(50), Autoload.get_inti(50)))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_3d( Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_noise_3d(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_3dv( Vector3(Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50)))
+		q_OpenSimplexNoise.get_noise_3dv(Vector3(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50)))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_4d( Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50),Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_noise_4d(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_seamless_image( Autoload.get_inti(50))
+		q_OpenSimplexNoise.get_seamless_image(Autoload.get_inti(50))

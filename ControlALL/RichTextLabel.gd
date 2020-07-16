@@ -1,6 +1,7 @@
 extends RichTextLabel
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,23 +9,23 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_RichTextLabel : RichTextLabel, can_reset : bool = false) -> void:
 
+func nodeFunction(q_RichTextLabel: RichTextLabel, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_RichTextLabel)
 		AutoObjects.A_Node(q_RichTextLabel)
 		AutoObjects.A_CanvasItem(q_RichTextLabel)
 		AutoObjects.A_Control(q_RichTextLabel)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
-	var temp_DynamicFont : DynamicFont = DynamicFont.new()
+
+	var temp_DynamicFont: DynamicFont = DynamicFont.new()
 #?#	AutoResourcesDynamicFont.nodeFunction(temp_DynamicFont)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

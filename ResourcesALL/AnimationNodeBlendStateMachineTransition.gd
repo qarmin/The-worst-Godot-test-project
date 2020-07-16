@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AnimationNodeStateMachineTransition : AnimationNodeStateMachineTransition = AnimationNodeStateMachineTransition.new()
+var q_AnimationNodeStateMachineTransition: AnimationNodeStateMachineTransition = AnimationNodeStateMachineTransition.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AnimationNodeStateMachineTransition,true)
+		nodeFunction(q_AnimationNodeStateMachineTransition, true)
 
-func nodeFunction(q_AnimationNodeStateMachineTransition : AnimationNodeStateMachineTransition, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AnimationNodeStateMachineTransition: AnimationNodeStateMachineTransition, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AnimationNodeStateMachineTransition = AnimationNodeStateMachineTransition.new()
@@ -21,7 +22,7 @@ func nodeFunction(q_AnimationNodeStateMachineTransition : AnimationNodeStateMach
 		AutoResourcesResource.nodeFunction(q_AnimationNodeStateMachineTransition)
 
 	if randi() % 2 == 1:
-		q_AnimationNodeStateMachineTransition.set_switch_mode(Autoload.get_int()) # SwitchMode
+		q_AnimationNodeStateMachineTransition.set_switch_mode(Autoload.get_int())  # SwitchMode
 	if randi() % 2 == 1:
 		q_AnimationNodeStateMachineTransition.set_auto_advance(Autoload.get_bool())
 	if randi() % 2 == 1:

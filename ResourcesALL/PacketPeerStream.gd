@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_PacketPeerStream : PacketPeerStream = PacketPeerStream.new()
+var q_PacketPeerStream: PacketPeerStream = PacketPeerStream.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PacketPeerStream,true)
+		nodeFunction(q_PacketPeerStream, true)
 
-func nodeFunction(q_PacketPeerStream : PacketPeerStream, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_PacketPeerStream: PacketPeerStream, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_PacketPeerStream = PacketPeerStream.new()
 	if randi() % 2 == 1:
 		AutoResourcesPacketPeer.nodeFunction(q_PacketPeerStream)
-		
+
 	### START TEMP
-	var temp_StreamPeer : StreamPeer = StreamPeerBuffer.new()
+	var temp_StreamPeer: StreamPeer = StreamPeerBuffer.new()
 	AutoResourcesStreamPeer.nodeFunction(temp_StreamPeer)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

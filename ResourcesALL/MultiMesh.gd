@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_MultiMesh : MultiMesh = MultiMesh.new()
+var q_MultiMesh: MultiMesh = MultiMesh.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_MultiMesh,true)
+		nodeFunction(q_MultiMesh, true)
 
-func nodeFunction(q_MultiMesh : MultiMesh, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_MultiMesh: MultiMesh, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_MultiMesh = MultiMesh.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_MultiMesh)
 	### START TEMP	
-	var temp_CubeMesh : CubeMesh = CubeMesh.new()
+	var temp_CubeMesh: CubeMesh = CubeMesh.new()
 #?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
-	
-	### END TEMP
+
+### END TEMP
 
 #	if randi() % 2 == 1: #MISSING
 #		q_MultiMesh.set_color_format(Autoload.get_int()) #ColorFormat

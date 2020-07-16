@@ -1,6 +1,7 @@
 extends Polygon2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,23 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_Polygon2D: Polygon2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_Polygon2D)
 		AutoObjects.A_Node(q_Polygon2D)
 		AutoObjects.A_CanvasItem(q_Polygon2D)
 		AutoObjects.A_Node2D(q_Polygon2D)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
+
 	### END TEMP
-	
-		
+
 	if randi() % 2 == 1:
 		q_Polygon2D.set_color(Autoload.get_color())
 	if randi() % 2 == 1:
@@ -61,7 +61,7 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		q_Polygon2D.set_internal_vertex_count(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_Polygon2D.add_bone(Autoload.get_string(),Autoload.get_packedfloat32array())
+		q_Polygon2D.add_bone(Autoload.get_string(), Autoload.get_packedfloat32array())
 	if randi() % 2 == 1:
 		q_Polygon2D.erase_bone(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -73,8 +73,8 @@ func nodeFunction(q_Polygon2D : Polygon2D, can_reset : bool = false) -> void:
 		q_Polygon2D.get_bone_path(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Polygon2D.get_bone_weights(Autoload.get_int())
-		
+
 	if randi() % 2 == 1:
-		q_Polygon2D.set_bone_path(Autoload.get_int(),Autoload.get_string())
+		q_Polygon2D.set_bone_path(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Polygon2D.set_bone_weights(Autoload.get_int(),Autoload.get_array())
+		q_Polygon2D.set_bone_weights(Autoload.get_int(), Autoload.get_array())

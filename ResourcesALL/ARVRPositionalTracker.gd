@@ -2,7 +2,8 @@ extends Node2D
 # TODO CHECK IF BUG
 #var q_XRPositionalTracker : XRPositionalTracker = XRPositionalTracker.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,11 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
+
 #		nodeFunction(q_XRPositionalTracker,true)
 
-func nodeFunction(q_XRPositionalTracker : XRPositionalTracker, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_XRPositionalTracker: XRPositionalTracker, can_reset: bool = false) -> void:
 #	if can_reset:
 #		if randi() % 2 == 1:
 #			q_XRPositionalTracker.free()
@@ -41,7 +43,7 @@ func nodeFunction(q_XRPositionalTracker : XRPositionalTracker, can_reset : bool 
 	if randi() % 2 == 1:
 		q_XRPositionalTracker.get_tracks_position()
 	if randi() % 2 == 1:
-		q_XRPositionalTracker.get_transform( Autoload.get_bool())
+		q_XRPositionalTracker.get_transform(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_XRPositionalTracker.get_type()
 

@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_PacketPeerUDP : PacketPeerUDP = PacketPeerUDP.new()
+var q_PacketPeerUDP: PacketPeerUDP = PacketPeerUDP.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PacketPeerUDP,true)
+		nodeFunction(q_PacketPeerUDP, true)
 
-func nodeFunction(q_PacketPeerUDP : PacketPeerUDP, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_PacketPeerUDP: PacketPeerUDP, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_PacketPeerUDP = PacketPeerUDP.new()
@@ -31,12 +32,12 @@ func nodeFunction(q_PacketPeerUDP : PacketPeerUDP, can_reset : bool = false) -> 
 	if randi() % 2 == 1:
 		q_PacketPeerUDP.is_listening()
 	if randi() % 2 == 1:
-		q_PacketPeerUDP.join_multicast_group( Autoload.get_string(), Autoload.get_string())
+		q_PacketPeerUDP.join_multicast_group(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_PacketPeerUDP.leave_multicast_group( Autoload.get_string(), Autoload.get_string())
+		q_PacketPeerUDP.leave_multicast_group(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_PacketPeerUDP.listen( Autoload.get_int(), Autoload.get_string(), Autoload.get_int())
+		q_PacketPeerUDP.listen(Autoload.get_int(), Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_PacketPeerUDP.set_dest_address( Autoload.get_string(),Autoload.get_int())
+		q_PacketPeerUDP.set_dest_address(Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PacketPeerUDP.wait()

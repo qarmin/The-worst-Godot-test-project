@@ -1,6 +1,7 @@
 extends AudioStreamPlayer3D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,26 +9,25 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_AudioStreamPlayer3D: AudioStreamPlayer3D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_AudioStreamPlayer3D)
 		AutoObjects.A_Node(q_AudioStreamPlayer3D)
 		AutoObjects.A_Node3D(q_AudioStreamPlayer3D)
-		
+
 	### START TEMP
-	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
+	var temp_AudioStreamGenerator: AudioStreamGenerator = AudioStreamGenerator.new()
 ##?#	TOO SLOW AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
-	
+
 	### END TEMP
-	
-		
+
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_stream(temp_AudioStreamGenerator)
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer3D.set_attenuation_model(Autoload.get_int()) # AttenuationModel
+		q_AudioStreamPlayer3D.set_attenuation_model(Autoload.get_int())  # AttenuationModel
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_unit_db(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -45,7 +45,7 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_max_distance(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer3D.set_out_of_range_mode(Autoload.get_int()) #OutOfRangeMode
+		q_AudioStreamPlayer3D.set_out_of_range_mode(Autoload.get_int())  #OutOfRangeMode
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_bus(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -61,7 +61,7 @@ func nodeFunction(q_AudioStreamPlayer3D : AudioStreamPlayer3D, can_reset : bool 
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.set_attenuation_filter_db(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioStreamPlayer3D.set_doppler_tracking(Autoload.get_int()) # DopplerTracking
+		q_AudioStreamPlayer3D.set_doppler_tracking(Autoload.get_int())  # DopplerTracking
 
 	if randi() % 2 == 1:
 		q_AudioStreamPlayer3D.get_playback_position()

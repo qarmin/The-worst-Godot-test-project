@@ -1,6 +1,7 @@
-extends Node#AcceptDialog
+extends Node  #AcceptDialog
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta

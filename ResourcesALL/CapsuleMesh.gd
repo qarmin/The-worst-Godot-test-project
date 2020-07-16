@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_CapsuleMesh : CapsuleMesh = CapsuleMesh.new()
+var q_CapsuleMesh: CapsuleMesh = CapsuleMesh.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_CapsuleMesh,true)
+		nodeFunction(q_CapsuleMesh, true)
 
-func nodeFunction(q_CapsuleMesh : CapsuleMesh, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_CapsuleMesh: CapsuleMesh, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_CapsuleMesh = CapsuleMesh.new()
@@ -25,6 +26,6 @@ func nodeFunction(q_CapsuleMesh : CapsuleMesh, can_reset : bool = false) -> void
 	if randi() % 2 == 1:
 		q_CapsuleMesh.set_mid_height(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_CapsuleMesh.set_radial_segments(Autoload.get_inti(5)) 
+		q_CapsuleMesh.set_radial_segments(Autoload.get_inti(5))
 	if randi() % 2 == 1:
-		q_CapsuleMesh.set_rings(Autoload.get_inti(5)) 
+		q_CapsuleMesh.set_rings(Autoload.get_inti(5))

@@ -1,6 +1,7 @@
 extends SoftBody3D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,10 +9,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_SoftBody3D : SoftBody3D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_SoftBody3D: SoftBody3D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		Auto3DMeshInstance.nodeFunction(q_SoftBody3D)
 
@@ -56,8 +57,8 @@ func nodeFunction(q_SoftBody3D : SoftBody3D, can_reset : bool = false) -> void:
 		q_SoftBody3D.remove_collision_exception_with(get_parent())
 
 	if randi() % 2 == 1:
-		q_SoftBody3D.set_collision_layer_bit(Autoload.get_int(),Autoload.get_bool())
+		q_SoftBody3D.set_collision_layer_bit(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_SoftBody3D.set_collision_mask_bit(Autoload.get_int(),Autoload.get_bool())
+		q_SoftBody3D.set_collision_mask_bit(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_SoftBody3D.set_ray_pickable(Autoload.get_bool())

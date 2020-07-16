@@ -1,6 +1,7 @@
 extends NinePatchRect
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,22 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_NinePatchRect : NinePatchRect, can_reset : bool = false) -> void:
 
+func nodeFunction(q_NinePatchRect: NinePatchRect, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_NinePatchRect)
 		AutoObjects.A_Node(q_NinePatchRect)
 		AutoObjects.A_CanvasItem(q_NinePatchRect)
 		AutoObjects.A_Control(q_NinePatchRect)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
+
 	### END TEMP
-			
+
 	if randi() % 2 == 1:
 		q_NinePatchRect.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:

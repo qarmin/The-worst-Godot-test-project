@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_PackedScene : PackedScene = PackedScene.new()
+var q_PackedScene: PackedScene = PackedScene.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PackedScene,true)
+		nodeFunction(q_PackedScene, true)
 
-func nodeFunction(q_PackedScene : PackedScene, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_PackedScene: PackedScene, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_PackedScene = PackedScene.new()
@@ -27,4 +28,4 @@ func nodeFunction(q_PackedScene : PackedScene, can_reset : bool = false) -> void
 #	BUG	if randi() % 2 == 1:
 #			q_PackedScene.instance( Autoload.get_int()).queue_free()) # GenEditState
 	if randi() % 2 == 1:
-		q_PackedScene.pack( self )
+		q_PackedScene.pack(self)

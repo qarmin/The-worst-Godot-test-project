@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioEffectFilter : AudioEffectFilter = AudioEffectFilter.new()
+var q_AudioEffectFilter: AudioEffectFilter = AudioEffectFilter.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioEffectFilter,true)
+		nodeFunction(q_AudioEffectFilter, true)
 
-func nodeFunction(q_AudioEffectFilter : AudioEffectFilter, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioEffectFilter: AudioEffectFilter, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioEffectFilter = AudioEffectFilter.new()
@@ -27,4 +28,4 @@ func nodeFunction(q_AudioEffectFilter : AudioEffectFilter, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_AudioEffectFilter.set_gain(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_AudioEffectFilter.set_db(Autoload.get_int()) #FilterDB
+		q_AudioEffectFilter.set_db(Autoload.get_int())  #FilterDB

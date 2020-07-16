@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_PhysicsShapeQueryParameters3D : PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
+var q_PhysicsShapeQueryParameters3D: PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_PhysicsShapeQueryParameters3D,true)
+		nodeFunction(q_PhysicsShapeQueryParameters3D, true)
 
-func nodeFunction(q_PhysicsShapeQueryParameters3D : PhysicsShapeQueryParameters3D, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_PhysicsShapeQueryParameters3D: PhysicsShapeQueryParameters3D, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_PhysicsShapeQueryParameters3D = PhysicsShapeQueryParameters3D.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_PhysicsShapeQueryParameters3D)
-		
+
 	### START TEMP
-	var temp_BoxShape3D : BoxShape3D = BoxShape3D.new()
+	var temp_BoxShape3D: BoxShape3D = BoxShape3D.new()
 	AutoResourcesBoxShape.nodeFunction(temp_BoxShape3D)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

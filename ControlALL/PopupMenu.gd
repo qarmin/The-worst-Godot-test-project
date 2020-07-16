@@ -1,6 +1,7 @@
 extends PopupMenu
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,23 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_PopupMenu : PopupMenu, can_reset : bool = false) -> void:
 
+func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoControlPopup.nodeFunction(q_PopupMenu)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
-	var temp_ShortCut : ShortCut = ShortCut.new()
+
+	var temp_ShortCut: ShortCut = ShortCut.new()
 #?#	AutoResourcesShortCut.nodeFunction(temp_ShortCut)
-	
-	### END TEMP
-	
-		
+
+### END TEMP
+
 # TEMP TODO
 #	if randi() % 2 == 1:
 #		q_PopupMenu.set_hide_on_item_selection(Autoload.get_bool())

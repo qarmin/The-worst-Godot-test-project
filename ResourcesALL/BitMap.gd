@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_BitMap : BitMap = BitMap.new()
+var q_BitMap: BitMap = BitMap.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,26 +11,26 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_BitMap,true)
+		nodeFunction(q_BitMap, true)
 
-func nodeFunction(q_BitMap : BitMap, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_BitMap: BitMap, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_BitMap = BitMap.new()
 	if randi() % 2 == 1:
 		AutoResourcesResource.nodeFunction(q_BitMap)
-		
+
 	### START TEMP
-	var temp_Image : Image = Image.new()
+	var temp_Image: Image = Image.new()
 	AutoResourcesImage.nodeFunction(temp_Image)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:
-		q_BitMap.create(Vector2(Autoload.get_floatf(1000.0),Autoload.get_floatf(1000.0)))#Autoload.get_vector2())
+		q_BitMap.create(Vector2(Autoload.get_floatf(1000.0), Autoload.get_floatf(1000.0)))  #Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_BitMap.create_from_image_alpha( temp_Image,Autoload.get_float())
+		q_BitMap.create_from_image_alpha(temp_Image, Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_BitMap.get_bit(Autoload.get_vector2())
@@ -40,11 +41,11 @@ func nodeFunction(q_BitMap : BitMap, can_reset : bool = false) -> void:
 
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
-			q_BitMap.grow_mask( Autoload.get_int(), Autoload.get_rect2())
+			q_BitMap.grow_mask(Autoload.get_int(), Autoload.get_rect2())
 	if randi() % 2 == 1:
-		q_BitMap.opaque_to_polygons(  Autoload.get_rect2(), Autoload.get_float())
+		q_BitMap.opaque_to_polygons(Autoload.get_rect2(), Autoload.get_float())
 
 	if randi() % 2 == 1:
-		q_BitMap.set_bit( Autoload.get_vector2(), Autoload.get_bool())
+		q_BitMap.set_bit(Autoload.get_vector2(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_BitMap.set_bit_rect( Autoload.get_rect2(), Autoload.get_bool())
+		q_BitMap.set_bit_rect(Autoload.get_rect2(), Autoload.get_bool())

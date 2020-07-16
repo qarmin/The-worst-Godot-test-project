@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_RegExMatch : RegExMatch = RegExMatch.new()
+var q_RegExMatch: RegExMatch = RegExMatch.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_RegExMatch,true)
+		nodeFunction(q_RegExMatch, true)
 
-func nodeFunction(q_RegExMatch : RegExMatch, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_RegExMatch: RegExMatch, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_RegExMatch = RegExMatch.new()
@@ -28,10 +29,10 @@ func nodeFunction(q_RegExMatch : RegExMatch, can_reset : bool = false) -> void:
 		q_RegExMatch.get_strings()
 
 	if randi() % 2 == 1:
-		q_RegExMatch.get_end( Autoload.get_string())
+		q_RegExMatch.get_end(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_RegExMatch.get_group_count()
 	if randi() % 2 == 1:
-		q_RegExMatch.get_start( Autoload.get_string())
+		q_RegExMatch.get_start(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_RegExMatch.get_string( Autoload.get_string())
+		q_RegExMatch.get_string(Autoload.get_string())

@@ -1,6 +1,7 @@
 extends Node2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	pass
@@ -56,4 +57,3 @@ func alt_process(delta) -> void:
 #
 #		Geometry.triangulate_delaunay_2d(Autoload.get_packedvector2array()))
 #		Geometry.triangulate_polygon(Autoload.get_packedvector2array()))
-

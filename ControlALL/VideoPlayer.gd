@@ -1,6 +1,7 @@
 extends VideoPlayer
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,22 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_VideoPlayer : VideoPlayer, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_VideoPlayer: VideoPlayer, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_VideoPlayer)
 		AutoObjects.A_Node(q_VideoPlayer)
 		AutoObjects.A_CanvasItem(q_VideoPlayer)
 		AutoObjects.A_Control(q_VideoPlayer)
-		
+
 	### START TEMP
-	var temp_VideoStreamWebm : VideoStreamWebm = VideoStreamWebm.new()
+	var temp_VideoStreamWebm: VideoStreamWebm = VideoStreamWebm.new()
 #?#	AutoResourcesVideoStreamWebm.nodeFunction(temp_VideoStreamWebm)
-	
+
 	### END TEMP
-	
+
 	if randi() % 2 == 1:
 		q_VideoPlayer.set_audio_track(Autoload.get_int())
 	if randi() % 2 == 1:

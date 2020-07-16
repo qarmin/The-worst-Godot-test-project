@@ -1,6 +1,7 @@
 extends LineEdit
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,10 +9,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_LineEdit : LineEdit, can_reset : bool = false) -> void:
 
+func nodeFunction(q_LineEdit: LineEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_LineEdit)
 		AutoObjects.A_Node(q_LineEdit)
@@ -58,7 +59,7 @@ func nodeFunction(q_LineEdit : LineEdit, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_LineEdit.menu_option(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_LineEdit.select(Autoload.get_int(),Autoload.get_int())
+		q_LineEdit.select(Autoload.get_int(), Autoload.get_int())
 	if randi() % 2 == 1:
 		q_LineEdit.select_all()
 

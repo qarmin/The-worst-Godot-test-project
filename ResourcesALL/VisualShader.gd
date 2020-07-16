@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_VisualShader : VisualShader = VisualShader.new()
+var q_VisualShader: VisualShader = VisualShader.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_VisualShader,true)
+		nodeFunction(q_VisualShader, true)
 
-func nodeFunction(q_VisualShader : VisualShader, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_VisualShader: VisualShader, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_VisualShader = VisualShader.new()

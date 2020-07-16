@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_NavigationMesh : NavigationMesh = NavigationMesh.new()
+var q_NavigationMesh: NavigationMesh = NavigationMesh.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_NavigationMesh,true)
+		nodeFunction(q_NavigationMesh, true)
 
-func nodeFunction(q_NavigationMesh : NavigationMesh, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_NavigationMesh: NavigationMesh, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_NavigationMesh = NavigationMesh.new()
@@ -21,9 +22,9 @@ func nodeFunction(q_NavigationMesh : NavigationMesh, can_reset : bool = false) -
 		AutoResourcesResource.nodeFunction(q_NavigationMesh)
 
 	if randi() % 2 == 1:
-		q_NavigationMesh.set_sample_partition_type(Autoload.get_int()) # SAMPLE_PARTITION
+		q_NavigationMesh.set_sample_partition_type(Autoload.get_int())  # SAMPLE_PARTITION
 	if randi() % 2 == 1:
-		q_NavigationMesh.set_parsed_geometry_type(Autoload.get_int()) #PARSED_GEOMETRY
+		q_NavigationMesh.set_parsed_geometry_type(Autoload.get_int())  #PARSED_GEOMETRY
 	if randi() % 2 == 1:
 		q_NavigationMesh.set_collision_mask(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -60,18 +61,17 @@ func nodeFunction(q_NavigationMesh : NavigationMesh, can_reset : bool = false) -
 		q_NavigationMesh.set_filter_walkable_low_height_spans(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_NavigationMesh.add_polygon( Autoload.get_packedint32array())
+		q_NavigationMesh.add_polygon(Autoload.get_packedint32array())
 	if randi() % 2 == 1:
 		q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:
 #			q_NavigationMesh.create_from_mesh(temp_CubeMesh)
 
 	if randi() % 2 == 1:
-		q_NavigationMesh.get_collision_mask_bit( Autoload.get_int())
+		q_NavigationMesh.get_collision_mask_bit(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_NavigationMesh.get_polygon( Autoload.get_int())
+		q_NavigationMesh.get_polygon(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_NavigationMesh.get_polygon_count()
 	if randi() % 2 == 1:
 		q_NavigationMesh.get_vertices()
-

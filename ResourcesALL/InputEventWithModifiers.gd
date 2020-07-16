@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_InputEventWithModifiers : InputEventWithModifiers = InputEventMagnifyGesture.new()
+var q_InputEventWithModifiers: InputEventWithModifiers = InputEventMagnifyGesture.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_InputEventWithModifiers,true)
+		nodeFunction(q_InputEventWithModifiers, true)
 
-func nodeFunction(q_InputEventWithModifiers : InputEventWithModifiers, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_InputEventWithModifiers: InputEventWithModifiers, can_reset: bool = false) -> void:
 #	if can_reset:
 #		if randi() % 2 == 1:
 #			q_InputEventWithModifiers = InputEventWithModifiers.new()

@@ -97,4 +97,3 @@ extends Node2D
 #		#q_SceneTree.set_screen_stretch( Autoload.get_int(), Autoload.get_int(), Autoload.get_vector2(), Autoload.get_float())#StretchMode, StretchAspect
 #
 #		#q_SceneTree.queue_delete(q_SceneTree)
-

@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_Font : Font = BitmapFont.new()
+var q_Font: Font = BitmapFont.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Font,true)
+		nodeFunction(q_Font, true)
 
-func nodeFunction(q_Font : Font, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Font: Font, can_reset: bool = false) -> void:
 #	if can_reset:
 #		if randi() % 2 == 1:
 #			q_Font = Font.new()
@@ -21,9 +22,9 @@ func nodeFunction(q_Font : Font, can_reset : bool = false) -> void:
 		AutoResourcesResource.nodeFunction(q_Font)
 
 	if randi() % 2 == 1:
-		q_Font.draw( RID(), Autoload.get_vector2(), Autoload.get_string(), Autoload.get_color(), Autoload.get_int(), Autoload.get_color())
+		q_Font.draw(RID(), Autoload.get_vector2(), Autoload.get_string(), Autoload.get_color(), Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
-		q_Font.draw_char( RID(), Autoload.get_vector2(), Autoload.get_int(), Autoload.get_int(), Autoload.get_color(),Autoload.get_bool())
+		q_Font.draw_char(RID(), Autoload.get_vector2(), Autoload.get_int(), Autoload.get_int(), Autoload.get_color(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_Font.get_ascent()
@@ -32,9 +33,9 @@ func nodeFunction(q_Font : Font, can_reset : bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Font.get_height()
 	if randi() % 2 == 1:
-		q_Font.get_string_size( Autoload.get_string())
+		q_Font.get_string_size(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_Font.get_wordwrap_string_size( Autoload.get_string(), Autoload.get_float())
+		q_Font.get_wordwrap_string_size(Autoload.get_string(), Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_Font.has_outline()

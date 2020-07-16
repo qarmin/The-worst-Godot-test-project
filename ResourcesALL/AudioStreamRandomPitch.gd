@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioStreamRandomPitch : AudioStreamRandomPitch = AudioStreamRandomPitch.new()
+var q_AudioStreamRandomPitch: AudioStreamRandomPitch = AudioStreamRandomPitch.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,21 +11,21 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioStreamRandomPitch,true)
+		nodeFunction(q_AudioStreamRandomPitch, true)
 
-func nodeFunction(q_AudioStreamRandomPitch : AudioStreamRandomPitch, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioStreamRandomPitch: AudioStreamRandomPitch, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioStreamRandomPitch = AudioStreamRandomPitch.new()
 	if randi() % 2 == 1:
 		AutoResourcesAudioStream.nodeFunction(q_AudioStreamRandomPitch)
-		
+
 	### START TEMP
-	
-	var temp_AudioStreamGenerator : AudioStreamGenerator = AudioStreamGenerator.new()
+
+	var temp_AudioStreamGenerator: AudioStreamGenerator = AudioStreamGenerator.new()
 	AutoResourcesAudioStreamGenerator.nodeFunction(temp_AudioStreamGenerator)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

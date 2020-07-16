@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_AudioStreamSample : AudioStreamSample = AudioStreamSample.new()
+var q_AudioStreamSample: AudioStreamSample = AudioStreamSample.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_AudioStreamSample,true)
+		nodeFunction(q_AudioStreamSample, true)
 
-func nodeFunction(q_AudioStreamSample : AudioStreamSample, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_AudioStreamSample: AudioStreamSample, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_AudioStreamSample = AudioStreamSample.new()
@@ -23,9 +24,9 @@ func nodeFunction(q_AudioStreamSample : AudioStreamSample, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_AudioStreamSample.set_data(Autoload.get_packedbytearray())
 	if randi() % 2 == 1:
-		q_AudioStreamSample.set_format(Autoload.get_int())#
+		q_AudioStreamSample.set_format(Autoload.get_int())  #
 	if randi() % 2 == 1:
-		q_AudioStreamSample.set_loop_mode(Autoload.get_int())#LoopMode
+		q_AudioStreamSample.set_loop_mode(Autoload.get_int())  #LoopMode
 	if randi() % 2 == 1:
 		q_AudioStreamSample.set_loop_begin(Autoload.get_int())
 	if randi() % 2 == 1:

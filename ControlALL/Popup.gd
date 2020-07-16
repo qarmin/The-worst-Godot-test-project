@@ -1,6 +1,7 @@
 extends Popup
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,16 +9,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true) 
+		nodeFunction(self, true)
 
-func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Popup: Popup, can_reset: bool = false) -> void:
 	AutoObjects.A_Object(q_Popup)
 	AutoObjects.A_Node(q_Popup)
 	#AutoObjects.A_CanvasItem(q_Popup)
 	#AutoObjects.A_Control(q_Popup)
-	return # TOO SLOW FOR NOW
-	
+	return  # TOO SLOW FOR NOW
+
 	if randi() % 2 == 1:
 		q_Popup.set_exclusive(Autoload.get_bool())
 
@@ -27,7 +28,7 @@ func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 		if randi() % 2 == 1:
 			q_Popup.popup_centered(Autoload.get_vector2())
 	if randi() % 2 == 1:
-		q_Popup.popup_centered_clamped(Autoload.get_vector2(),Autoload.get_float())
+		q_Popup.popup_centered_clamped(Autoload.get_vector2(), Autoload.get_float())
 	if Autoload.SLOW_FUNCTIONS:
 		if randi() % 2 == 1:
 			q_Popup.popup_centered_minsize(Autoload.get_vector2())
@@ -36,4 +37,3 @@ func nodeFunction(q_Popup : Popup, can_reset : bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Popup.set_as_minsize()
-

@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_Crypto : Crypto = Crypto.new()
+var q_Crypto: Crypto = Crypto.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,20 +11,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_Crypto,true)
+		nodeFunction(q_Crypto, true)
 
-func nodeFunction(q_Crypto : Crypto, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_Crypto: Crypto, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Crypto = Crypto.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_Crypto)
-		
+
 	### START TEMP
-	var temp_CryptoKey : CryptoKey = CryptoKey.new()
+	var temp_CryptoKey: CryptoKey = CryptoKey.new()
 	AutoResourcesCryptoKey.nodeFunction(temp_CryptoKey)
-	
+
 	### END TEMP
 
 	if randi() % 2 == 1:

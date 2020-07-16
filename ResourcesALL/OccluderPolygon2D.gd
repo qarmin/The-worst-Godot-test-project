@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_OccluderPolygon2D : OccluderPolygon2D = OccluderPolygon2D.new()
+var q_OccluderPolygon2D: OccluderPolygon2D = OccluderPolygon2D.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,10 +11,10 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_OccluderPolygon2D,true)
+		nodeFunction(q_OccluderPolygon2D, true)
 
-func nodeFunction(q_OccluderPolygon2D : OccluderPolygon2D, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_OccluderPolygon2D: OccluderPolygon2D, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_OccluderPolygon2D = OccluderPolygon2D.new()
@@ -23,6 +24,6 @@ func nodeFunction(q_OccluderPolygon2D : OccluderPolygon2D, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_OccluderPolygon2D.set_closed(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_OccluderPolygon2D.set_cull_mode(Autoload.get_int()) # CullMode
+		q_OccluderPolygon2D.set_cull_mode(Autoload.get_int())  # CullMode
 	if randi() % 2 == 1:
 		q_OccluderPolygon2D.set_polygon(Autoload.get_packedvector2array())

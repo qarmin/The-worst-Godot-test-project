@@ -1,6 +1,7 @@
 extends RemoteTransform2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,16 +9,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_RemoteTransform2D : RemoteTransform2D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_RemoteTransform2D: RemoteTransform2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_RemoteTransform2D)
 		AutoObjects.A_Node(q_RemoteTransform2D)
 		AutoObjects.A_CanvasItem(q_RemoteTransform2D)
 		AutoObjects.A_Node2D(q_RemoteTransform2D)
-		
+
 	if randi() % 2 == 1:
 		q_RemoteTransform2D.set_remote_node(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -31,4 +32,3 @@ func nodeFunction(q_RemoteTransform2D : RemoteTransform2D, can_reset : bool = fa
 
 	if randi() % 2 == 1:
 		q_RemoteTransform2D.force_update_cache()
-

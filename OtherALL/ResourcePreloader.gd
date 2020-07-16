@@ -1,6 +1,7 @@
 extends ResourcePreloader
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,21 +9,20 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_ResourcePreloader : ResourcePreloader, can_reset : bool = false) -> void:
 
+func nodeFunction(q_ResourcePreloader: ResourcePreloader, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_ResourcePreloader)
 		AutoObjects.A_Node(q_ResourcePreloader)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
+
 	### END TEMP
-	
-	
+
 	if randi() % 2 == 1:
 		q_ResourcePreloader.add_resource(Autoload.get_string(), temp_ImageTexture)
 
@@ -34,6 +34,6 @@ func nodeFunction(q_ResourcePreloader : ResourcePreloader, can_reset : bool = fa
 	if randi() % 2 == 1:
 		q_ResourcePreloader.has_resource(Autoload.get_string())
 	if randi() % 2 == 1:
-		q_ResourcePreloader.rename_resource(Autoload.get_string(),Autoload.get_string())
+		q_ResourcePreloader.rename_resource(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
-		q_ResourcePreloader.remove_resource(Autoload.get_string()) ## Zmiana kolejnosci
+		q_ResourcePreloader.remove_resource(Autoload.get_string())  ## Zmiana kolejnosci

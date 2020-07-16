@@ -1,8 +1,9 @@
 extends Node2D
 
-var q_XRInterface : XRInterface = MobileVRInterface.new()
+var q_XRInterface: XRInterface = MobileVRInterface.new()
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -10,16 +11,16 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_XRInterface,true)
+		nodeFunction(q_XRInterface, true)
 
-func nodeFunction(q_XRInterface : XRInterface, can_reset : bool = false) -> void:
-	
+
+func nodeFunction(q_XRInterface: XRInterface, can_reset: bool = false) -> void:
 #	if can_reset:
 #		if randi() % 2 == 1:
 #			q_XRInterface = MobileVRInterface.new()
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_XRInterface)
-		
+
 	if randi() % 2 == 1:
 		q_XRInterface.set_is_primary(Autoload.get_bool())
 	if randi() % 2 == 1:

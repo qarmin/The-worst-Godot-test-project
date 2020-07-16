@@ -1,6 +1,7 @@
 extends Sprite2D
 
-onready var counter : float = Autoload.get_rand_time()
+onready var counter: float = Autoload.get_rand_time()
+
 
 func alt_process(delta) -> void:
 	counter -= delta
@@ -8,23 +9,22 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self,true)
+		nodeFunction(self, true)
 
-func nodeFunction(q_Sprite2D : Sprite2D, can_reset : bool = false) -> void:
 
+func nodeFunction(q_Sprite2D: Sprite2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoObjects.A_Object(q_Sprite2D)
 		AutoObjects.A_Node(q_Sprite2D)
 		AutoObjects.A_CanvasItem(q_Sprite2D)
 		AutoObjects.A_Node2D(q_Sprite2D)
-		
+
 	### START TEMP
-	var temp_ImageTexture : ImageTexture = ImageTexture.new()
+	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
-	
+
 	### END TEMP
-	
-		
+
 	if randi() % 2 == 1:
 		q_Sprite2D.set_texture(temp_ImageTexture)
 	if randi() % 2 == 1:
@@ -51,7 +51,7 @@ func nodeFunction(q_Sprite2D : Sprite2D, can_reset : bool = false) -> void:
 		q_Sprite2D.set_region_rect(Autoload.get_rect2())
 	if randi() % 2 == 1:
 		q_Sprite2D.set_region_filter_clip(Autoload.get_bool())
-		
+
 	if randi() % 2 == 1:
 		q_Sprite2D.get_rect()
 	if randi() % 2 == 1:
