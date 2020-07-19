@@ -59,15 +59,10 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 		q_TextEdit.set_right_click_moves_caret(Autoload.get_bool())
 
 	if randi() % 2 == 1:
-		q_TextEdit.add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(), Autoload.get_bool())
-
-	if randi() % 2 == 1:
 		q_TextEdit.can_fold(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.center_viewport_to_cursor()
 
-	if randi() % 2 == 1:
-		q_TextEdit.clear_colors()
 	if randi() % 2 == 1:
 		q_TextEdit.clear_undo_history()
 
@@ -96,8 +91,6 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TextEdit.get_breakpoints()
 	if randi() % 2 == 1:
-		q_TextEdit.get_keyword_color(Autoload.get_string())
-	if randi() % 2 == 1:
 		q_TextEdit.get_line(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TextEdit.get_line_count()
@@ -116,8 +109,6 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TextEdit.get_word_under_cursor()
 
-	if randi() % 2 == 1:
-		q_TextEdit.has_keyword_color(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_TextEdit.insert_text_at_cursor(Autoload.get_string())
 

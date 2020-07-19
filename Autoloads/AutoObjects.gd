@@ -1048,8 +1048,8 @@ func A_CSGShape3D(q_CSGShape3D: CSGShape3D) -> void:
 		q_CSGShape3D.set_operation(Autoload.get_int())  # OPERATION
 	if randi() % 2 == 1:
 		q_CSGShape3D.set_snap(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_CSGShape3D.set_calculate_tangents(Autoload.get_bool())
+#	if randi() % 2 == 1: # BUG CRASH GH#40506
+#		q_CSGShape3D.set_calculate_tangents(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_CSGShape3D.set_use_collision(Autoload.get_bool())
 	if randi() % 2 == 1:

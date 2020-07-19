@@ -34,12 +34,13 @@ func nodeFunction(q_MeshInstance3D: MeshInstance3D, can_reset: bool = false) -> 
 	if randi() % 2 == 1:
 		q_MeshInstance3D.set_skeleton_path(Autoload.get_nodepath(q_MeshInstance3D))
 
-	if randi() % 2 == 1:
-		q_MeshInstance3D.create_convex_collision()
-	if randi() % 2 == 1:
-		q_MeshInstance3D.create_debug_tangents()
-	if randi() % 2 == 1:
-		q_MeshInstance3D.create_trimesh_collision()
+# BUG CRASH GH#40505 - probably all three
+#	if randi() % 2 == 1:
+#		q_MeshInstance3D.create_convex_collision()
+#	if randi() % 2 == 1:
+#		q_MeshInstance3D.create_debug_tangents()
+#	if randi() % 2 == 1:
+#		q_MeshInstance3D.create_trimesh_collision()
 
 	if randi() % 2 == 1:
 		q_MeshInstance3D.get_active_material(Autoload.get_int())
