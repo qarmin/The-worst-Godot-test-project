@@ -26,8 +26,6 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TextEdit.set_highlight_current_line(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_TextEdit.set_syntax_coloring(Autoload.get_bool())
-	if randi() % 2 == 1:
 		q_TextEdit.set_show_line_numbers(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_draw_tabs(Autoload.get_bool())
@@ -62,8 +60,6 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_TextEdit.add_color_region(Autoload.get_string(), Autoload.get_string(), Autoload.get_color(), Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_TextEdit.add_keyword_color(Autoload.get_string(), Autoload.get_color())
 
 	if randi() % 2 == 1:
 		q_TextEdit.can_fold(Autoload.get_int())
