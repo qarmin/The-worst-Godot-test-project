@@ -233,9 +233,9 @@ var names : Dictionary = {"ArrayMesh.tres" : ArrayMesh.new(),
 "InputEventAction.tres":InputEventAction.new(),
 "Multimesh.tres" : MultiMesh.new(),
 "NavigationMesh.tres":NavigationMesh.new(),
-#"Node.tscn":Node.new(),
+#"Node.tscn":Node.new(), # This will leak
 "PhysicsMaterial.tres":PhysicsMaterial.new(),
-#"StandardMaterial3D.tres":StandardMaterial3D.new(),
+"StandardMaterial3D.tres":StandardMaterial3D.new(),
 "Sprite.png":ImageTexture.new(),
 "SpriteFrames.tres":SpriteFrames.new(),
 "StyleBoxTexture.tres":StyleBoxTexture.new(),
@@ -247,5 +247,5 @@ var names : Dictionary = {"ArrayMesh.tres" : ArrayMesh.new(),
 
 "CapsuleShape.tres":CapsuleShape2D.new(),
 "RayShape.tres":RayShape2D.new(),
-#"RayShape2D.tres":RayShape2D.new(),
+"RayShape2D.tres":RayShape2D.new(),
 }

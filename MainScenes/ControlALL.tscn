@@ -1,0 +1,451 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://ControlALL/SubViewportContainer.gd" type="Script" id=1]
+[ext_resource path="res://MainScenes/ControlALL.gd" type="Script" id=7]
+[ext_resource path="res://ControlALL/LinkButton.gd" type="Script" id=12]
+[ext_resource path="res://ControlALL/Container.gd" type="Script" id=13]
+[ext_resource path="res://ControlALL/MenuButton.gd" type="Script" id=14]
+[ext_resource path="res://ControlALL/OptionButton.gd" type="Script" id=15]
+[ext_resource path="res://ControlALL/TextureButton.gd" type="Script" id=16]
+[ext_resource path="res://ControlALL/CheckBox.gd" type="Script" id=18]
+[ext_resource path="res://ControlALL/ColorPickerButton.gd" type="Script" id=20]
+[ext_resource path="res://ControlALL/CheckButton.gd" type="Script" id=21]
+[ext_resource path="res://ControlALL/Button.gd" type="Script" id=22]
+[ext_resource path="res://ControlALL/ColorPicker.gd" type="Script" id=24]
+[ext_resource path="res://ControlALL/CenterContainer.gd" type="Script" id=25]
+[ext_resource path="res://ControlALL/HBoxContainer.gd" type="Script" id=26]
+[ext_resource path="res://ControlALL/VBoxContainer.gd" type="Script" id=27]
+[ext_resource path="res://ControlALL/GridContainer.gd" type="Script" id=28]
+[ext_resource path="res://ControlALL/GraphNode.gd" type="Script" id=29]
+[ext_resource path="res://ControlALL/HSplitContainer.gd" type="Script" id=30]
+[ext_resource path="res://ControlALL/VSplitContainer.gd" type="Script" id=31]
+[ext_resource path="res://ControlALL/PanelContainer.gd" type="Script" id=32]
+[ext_resource path="res://ControlALL/MarginContainer.gd" type="Script" id=33]
+[ext_resource path="res://ControlALL/ScrollContainer.gd" type="Script" id=34]
+[ext_resource path="res://ControlALL/TabContainer.gd" type="Script" id=35]
+[ext_resource path="res://ControlALL/ColorRect.gd" type="Script" id=37]
+[ext_resource path="res://ControlALL/GraphEdit.gd" type="Script" id=38]
+[ext_resource path="res://ControlALL/HScrollBar.gd" type="Script" id=39]
+[ext_resource path="res://ControlALL/VScrollBar.gd" type="Script" id=40]
+[ext_resource path="res://ControlALL/TextureProgress.gd" type="Script" id=41]
+[ext_resource path="res://ControlALL/HSlider.gd" type="Script" id=42]
+[ext_resource path="res://ControlALL/SpinBox.gd" type="Script" id=43]
+[ext_resource path="res://ControlALL/ProgressBar.gd" type="Script" id=44]
+[ext_resource path="res://ControlALL/VSlider.gd" type="Script" id=45]
+[ext_resource path="res://ControlALL/ItemList.gd" type="Script" id=46]
+[ext_resource path="res://ControlALL/Label.gd" type="Script" id=47]
+[ext_resource path="res://ControlALL/HSeparator.gd" type="Script" id=48]
+[ext_resource path="res://ControlALL/VSeparator.gd" type="Script" id=49]
+[ext_resource path="res://ControlALL/LineEdit.gd" type="Script" id=50]
+[ext_resource path="res://ControlALL/NinePatchRect.gd" type="Script" id=51]
+[ext_resource path="res://ControlALL/Panel.gd" type="Script" id=52]
+[ext_resource path="res://ControlALL/ReferenceRect.gd" type="Script" id=53]
+[ext_resource path="res://ControlALL/RichTextLabel.gd" type="Script" id=54]
+[ext_resource path="res://ControlALL/Tabs.gd" type="Script" id=55]
+[ext_resource path="res://ControlALL/TextEdit.gd" type="Script" id=56]
+[ext_resource path="res://ControlALL/TextureRect.gd" type="Script" id=57]
+[ext_resource path="res://ControlALL/VideoPlayer.gd" type="Script" id=58]
+[ext_resource path="res://ControlALL/Tree.gd" type="Script" id=59]
+
+
+
+[node name="ControlALL" type="GridContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+columns = 9
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_right = 16.0
+margin_bottom = 40.0
+text = "asfasf"
+flat = true
+clip_text = true
+align = 0
+script = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CheckBox_NOTHING" type="CheckBox" parent="."]
+margin_left = 20.0
+margin_right = 310.0
+margin_bottom = 40.0
+text = "safasf"
+flat = true
+clip_text = true
+align = 2
+script = ExtResource( 18 )
+
+[node name="CheckButton_NOTHING" type="CheckButton" parent="."]
+margin_left = 314.0
+margin_right = 394.0
+margin_bottom = 40.0
+text = "asfq"
+flat = true
+clip_text = true
+align = 1
+script = ExtResource( 21 )
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="."]
+margin_left = 398.0
+margin_right = 410.0
+margin_bottom = 40.0
+text = "asfasf"
+flat = true
+clip_text = true
+align = 2
+color = Color( 0.639216, 0.576471, 0.576471, 1 )
+edit_alpha = false
+script = ExtResource( 20 )
+
+[node name="MenuButton" type="MenuButton" parent="."]
+margin_left = 414.0
+margin_right = 426.0
+margin_bottom = 40.0
+switch_on_hover = true
+script = ExtResource( 14 )
+
+[node name="OptionButton" type="OptionButton" parent="."]
+margin_left = 430.0
+margin_right = 462.0
+margin_bottom = 40.0
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="."]
+margin_left = 466.0
+margin_right = 514.0
+margin_bottom = 40.0
+text = "asfqfqwf"
+underline = 2
+script = ExtResource( 12 )
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 518.0
+margin_right = 530.0
+margin_bottom = 40.0
+expand = true
+stretch_mode = 5
+script = ExtResource( 16 )
+
+[node name="Container" type="Container" parent="."]
+margin_left = 534.0
+margin_right = 580.0
+margin_bottom = 40.0
+script = ExtResource( 13 )
+
+[node name="Control" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control2" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control3" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control4" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control5" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control6" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="Control7" type="Control" parent="Container"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = null
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+margin_top = 44.0
+margin_right = 16.0
+margin_bottom = 464.0
+use_top_left = true
+script = ExtResource( 25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorPicker" type="ColorPicker" parent="."]
+margin_left = 20.0
+margin_top = 44.0
+margin_right = 310.0
+margin_bottom = 464.0
+alignment = 1
+edit_alpha = false
+raw_mode = true
+deferred_mode = true
+presets_enabled = false
+presets_visible = false
+script = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer_NOTHING" type="HBoxContainer" parent="."]
+margin_left = 314.0
+margin_top = 44.0
+margin_right = 394.0
+margin_bottom = 464.0
+script = ExtResource( 26 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer_NOTHING" type="VBoxContainer" parent="."]
+margin_left = 398.0
+margin_top = 44.0
+margin_right = 410.0
+margin_bottom = 464.0
+script = ExtResource( 27 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 414.0
+margin_top = 44.0
+margin_right = 426.0
+margin_bottom = 464.0
+script = ExtResource( 34 )
+
+[node name="GraphNode" type="GraphNode" parent="."]
+margin_left = 430.0
+margin_top = 44.0
+margin_right = 462.0
+margin_bottom = 464.0
+script = ExtResource( 29 )
+
+[node name="GridContainer" type="GridContainer" parent="."]
+margin_left = 466.0
+margin_top = 44.0
+margin_right = 514.0
+margin_bottom = 464.0
+script = ExtResource( 28 )
+
+[node name="HSplitContainer_NOTHING" type="HSplitContainer" parent="."]
+margin_left = 518.0
+margin_top = 44.0
+margin_right = 530.0
+margin_bottom = 464.0
+script = ExtResource( 30 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSplitContainer_NOTHING" type="VSplitContainer" parent="."]
+margin_left = 534.0
+margin_top = 44.0
+margin_right = 580.0
+margin_bottom = 464.0
+script = ExtResource( 31 )
+
+[node name="MarginContainer_NOTHING" type="MarginContainer" parent="."]
+margin_top = 468.0
+margin_right = 16.0
+margin_bottom = 507.0
+script = ExtResource( 33 )
+
+[node name="PanelContainer_NOTHING" type="PanelContainer" parent="."]
+margin_left = 20.0
+margin_top = 468.0
+margin_right = 310.0
+margin_bottom = 507.0
+script = ExtResource( 32 )
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+margin_left = 314.0
+margin_top = 468.0
+margin_right = 394.0
+margin_bottom = 507.0
+script = ExtResource( 1 )
+
+[node name="TabContainer" type="TabContainer" parent="."]
+margin_left = 398.0
+margin_top = 468.0
+margin_right = 410.0
+margin_bottom = 507.0
+script = ExtResource( 35 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = 414.0
+margin_top = 468.0
+margin_right = 426.0
+margin_bottom = 507.0
+script = ExtResource( 37 )
+
+[node name="GraphEdit" type="GraphEdit" parent="."]
+margin_left = 430.0
+margin_top = 468.0
+margin_right = 462.0
+margin_bottom = 507.0
+scroll_offset = Vector2( -32, -1 )
+script = ExtResource( 38 )
+
+[node name="HScrollBar_NOTHING" type="HScrollBar" parent="."]
+margin_left = 466.0
+margin_top = 468.0
+margin_right = 514.0
+margin_bottom = 480.0
+script = ExtResource( 39 )
+
+[node name="VScrollBar_NOTHING" type="VScrollBar" parent="."]
+margin_left = 518.0
+margin_top = 468.0
+margin_right = 530.0
+margin_bottom = 507.0
+script = ExtResource( 40 )
+
+[node name="HSlider_NOTHING" type="HSlider" parent="."]
+margin_left = 534.0
+margin_top = 468.0
+margin_right = 580.0
+margin_bottom = 484.0
+script = ExtResource( 42 )
+
+[node name="VSlider_NOTHING" type="VSlider" parent="."]
+margin_top = 511.0
+margin_right = 16.0
+margin_bottom = 538.0
+script = ExtResource( 45 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 20.0
+margin_top = 511.0
+margin_right = 310.0
+margin_bottom = 528.0
+script = ExtResource( 44 )
+
+[node name="SpinBox" type="SpinBox" parent="."]
+margin_left = 314.0
+margin_top = 511.0
+margin_right = 394.0
+margin_bottom = 538.0
+script = ExtResource( 43 )
+
+[node name="TextureProgress" type="TextureProgress" parent="."]
+margin_left = 398.0
+margin_top = 511.0
+margin_right = 410.0
+margin_bottom = 538.0
+script = ExtResource( 41 )
+
+[node name="HSeparator" type="HSeparator" parent="."]
+margin_left = 414.0
+margin_top = 511.0
+margin_right = 426.0
+margin_bottom = 538.0
+script = ExtResource( 48 )
+
+[node name="VSeparator" type="VSeparator" parent="."]
+margin_left = 430.0
+margin_top = 511.0
+margin_right = 462.0
+margin_bottom = 538.0
+script = ExtResource( 49 )
+
+[node name="ItemList" type="ItemList" parent="."]
+margin_left = 466.0
+margin_top = 511.0
+margin_right = 514.0
+margin_bottom = 538.0
+script = ExtResource( 46 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 518.0
+margin_top = 516.0
+margin_right = 530.0
+margin_bottom = 533.0
+script = ExtResource( 47 )
+
+[node name="LineEdit" type="LineEdit" parent="."]
+margin_left = 534.0
+margin_top = 511.0
+margin_right = 580.0
+margin_bottom = 538.0
+caret_blink = true
+script = ExtResource( 50 )
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+margin_top = 542.0
+margin_right = 16.0
+margin_bottom = 569.0
+script = ExtResource( 51 )
+
+[node name="Panel_NOTHING" type="Panel" parent="."]
+margin_left = 20.0
+margin_top = 542.0
+margin_right = 310.0
+margin_bottom = 569.0
+script = ExtResource( 52 )
+
+[node name="ReferenceRect" type="ReferenceRect" parent="."]
+margin_left = 314.0
+margin_top = 542.0
+margin_right = 394.0
+margin_bottom = 569.0
+script = ExtResource( 53 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+margin_left = 398.0
+margin_top = 542.0
+margin_right = 410.0
+margin_bottom = 569.0
+script = ExtResource( 54 )
+
+[node name="Tabs" type="Tabs" parent="."]
+margin_left = 414.0
+margin_top = 542.0
+margin_right = 426.0
+margin_bottom = 569.0
+script = ExtResource( 55 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 430.0
+margin_top = 542.0
+margin_right = 462.0
+margin_bottom = 569.0
+script = ExtResource( 56 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 466.0
+margin_top = 542.0
+margin_right = 514.0
+margin_bottom = 569.0
+script = ExtResource( 57 )
+
+[node name="Tree" type="Tree" parent="."]
+margin_left = 518.0
+margin_top = 542.0
+margin_right = 530.0
+margin_bottom = 569.0
+script = ExtResource( 59 )
+
+[node name="VideoPlayer" type="VideoPlayer" parent="."]
+margin_left = 534.0
+margin_top = 542.0
+margin_right = 580.0
+margin_bottom = 569.0
+script = ExtResource( 58 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
