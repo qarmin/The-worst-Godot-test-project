@@ -174,8 +174,8 @@ func A_Node(q_Node: Node) -> void:
 		q_Node.set_pause_mode(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Node.set_name(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Node.set_filename(Autoload.get_string())
+#	if randi() % 2 == 1: #BUG #GH#40657
+#		q_Node.set_filename(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Node.set_owner(get_parent())
 	if randi() % 2 == 1:
