@@ -2,7 +2,7 @@ extends Node2D
 # TODO CHECK IF BUG
 #var q_MainLoop : MainLoop = MainLoop.new()
 
-onready var counter: float = Autoload.get_rand_time()
+@onready var counter: float = Autoload.get_rand_time()
 
 
 func alt_process(delta) -> void:

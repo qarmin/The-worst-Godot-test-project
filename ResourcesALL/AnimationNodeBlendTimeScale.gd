@@ -2,7 +2,7 @@ extends Node2D
 
 var q_AnimationNodeTimeScale: AnimationNodeTimeScale = AnimationNodeTimeScale.new()
 
-onready var counter: float = Autoload.get_rand_time()
+@onready var counter: float = Autoload.get_rand_time()
 
 
 func alt_process(delta) -> void:

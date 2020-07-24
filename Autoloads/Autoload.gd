@@ -53,7 +53,7 @@ func get_float() -> float:
 func get_bool() -> bool:
 	return bool(randi()%2)
 
-func get_nodes(var node : Node) -> Node:
+func get_nodes(node : Node) -> Node:
 	if randi() % 3 == 1 && node.get_parent() != null:
 		if randi() % 2 == 1 && get_parent().get_child_count() > 0:
 			return get_parent().get_child(randi() % get_parent().get_child_count())
@@ -173,40 +173,40 @@ func get_dictionary() -> Dictionary: # Probably there is better solution
 	#var dict : Dictionary = {}
 	return {"asfa" : ImageTexture.new(), 242 : 51}
 
-func get_nodepath(var node : Node) -> NodePath:
+func get_nodepath(node : Node) -> NodePath:
 	return NodePath(".")
 
 ######################OVERLOADED FUNCTIONS
 
-func get_inti(var max_value : int) -> int:
+func get_inti(max_value : int) -> int:
 	return int(min(randi(), max_value))
 
-func get_floatf(var max_value : float) -> float:
+func get_floatf(max_value : float) -> float:
 	return min(get_float(),max_value)
 
-func get_vector2f(var max_value : float) -> Vector2:
+func get_vector2f(max_value : float) -> Vector2:
 	return Vector2(get_floatf(max_value),get_floatf(max_value))
 	
-func get_vector2ii(var max_value : int) -> Vector2:
-	return Vector2(get_inti(max_value),get_inti(max_value))
+func get_vector2ii(max_value : int) -> Vector2i:
+	return Vector2i(get_inti(max_value),get_inti(max_value))
 
-func get_vector3f(var max_value : float) -> Vector3:
+func get_vector3f(max_value : float) -> Vector3:
 	return Vector3(get_floatf(max_value),get_floatf(max_value),get_floatf(max_value))
 	
-func get_vector3ii(var max_value : int) -> Vector3:
-	return Vector3(get_inti(max_value),get_inti(max_value),get_inti(max_value))
+func get_vector3ii(max_value : int) -> Vector3i:
+	return Vector3i(get_inti(max_value),get_inti(max_value),get_inti(max_value))
 
-func get_rect2f(var max_value : float) -> Rect2:
+func get_rect2f(max_value : float) -> Rect2:
 	return Rect2(get_vector2f(max_value),get_vector2f(max_value))
 	
-#func get_rect2i(var max_value : int) -> Vector2:
+#func get_rect2i(max_value : int) -> Vector2:
 #	return Vector2(get_vector2f(max_value),get_vector2f(max_value))
 
-func get_aabbf(var max_value : float) -> AABB:
+func get_aabbf(max_value : float) -> AABB:
 	return AABB(get_vector3f(max_value),get_vector3f(max_value))
 ################ LOADING RESOURCES
 	
-func loadA(var name : String):
+func loadA(name : String):
 	if randi() % 2 == 1: # 50% szans
 		return load("res://RES/" + names.keys()[randi()%names.size()])
 		#names[randi() % names.size()])

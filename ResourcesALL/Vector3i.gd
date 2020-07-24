@@ -2,7 +2,7 @@ extends Node2D
 
 var q_Vector3i: Vector3i = Autoload.get_vector3i()
 
-onready var counter: float = Autoload.get_rand_time()
+@onready var counter: float = Autoload.get_rand_time()
 
 
 func alt_process(delta) -> void:

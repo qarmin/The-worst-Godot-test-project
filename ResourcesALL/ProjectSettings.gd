@@ -1,6 +1,6 @@
 extends Node2D
 # BUG
-#onready var counter : float = Autoload.get_rand_time()
+#@onready var counter : float = Autoload.get_rand_time()
 #
 #var temp_array : PackedStringArray = PackedStringArray([
 #	"rrara",

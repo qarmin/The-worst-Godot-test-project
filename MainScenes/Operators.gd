@@ -4,9 +4,9 @@ class_name Operators
 
 signal roman
 
-onready var sew : int = 0
+@onready var sew : int = 0
 
-onready var counter : float = Autoload.get_rand_time()
+@onready var counter : float = Autoload.get_rand_time()
 
 func _ready() -> void:
 	if !is_visible():
