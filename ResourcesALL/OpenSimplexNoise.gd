@@ -39,11 +39,11 @@ func nodeFunction(q_OpenSimplexNoise: OpenSimplexNoise, can_reset: bool = false)
 	if randi() % 2 == 1:
 		q_OpenSimplexNoise.get_noise_2d(Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_2dv(Vector2(Autoload.get_inti(50), Autoload.get_inti(50)))
+		q_OpenSimplexNoise.get_noise_2dv(Autoload.get_vector2f(50))
 	if randi() % 2 == 1:
 		q_OpenSimplexNoise.get_noise_3d(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:
-		q_OpenSimplexNoise.get_noise_3dv(Vector3(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50)))
+		q_OpenSimplexNoise.get_noise_3dv(Autoload.get_vector3f(50))
 	if randi() % 2 == 1:
 		q_OpenSimplexNoise.get_noise_4d(Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50), Autoload.get_inti(50))
 	if randi() % 2 == 1:

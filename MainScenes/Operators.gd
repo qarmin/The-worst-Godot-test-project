@@ -82,7 +82,6 @@ func _process(delta) -> void:
 		"""
 		MULTILINIONOWOŚĆ
 		"""
-		@"."
 		$"."
 		
 		#Comment
@@ -161,10 +160,10 @@ var describtion
 func qq():
 	return
 
-func qqr(var stat : String = "TQW") -> String:
+func qqr(stat : String = "TQW") -> String:
 	return Autoload.get_string()
 	
-static func ff(var rr : String = "FA") -> String:
+static func ff(rr : String = "FA") -> String:
 	return Autoload.get_string()
 	
 class ram:

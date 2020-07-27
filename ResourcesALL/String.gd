@@ -149,8 +149,8 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_String.lstrip(Autoload.get_string())
 
-	if randi() % 2 == 1:
-		q_String.match(Autoload.get_string())
+#	if randi() % 2 == 1: #GH#40740
+#		q_String.match(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_String.matchn(Autoload.get_string())
 

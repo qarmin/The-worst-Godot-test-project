@@ -42,18 +42,16 @@
 [ext_resource path="res://2DALL/ParallaxLayer.gd" type="Script" id=44]
 [ext_resource path="res://2DALL/PathFollow2D.gd" type="Script" id=45]
 
-
-
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": @"0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
 "loop": true,
 "name": @"New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": @"0",
 "speed": 5.0
 } ]
 

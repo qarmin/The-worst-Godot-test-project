@@ -29,8 +29,6 @@ func nodeFunction(q_Plane: Plane, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Plane.distance_to(Autoload.get_vector3())
 	if randi() % 2 == 1:
-		q_Plane.get_any_point()
-	if randi() % 2 == 1:
 		q_Plane.has_point(Autoload.get_vector3(), Autoload.get_float())
 
 	if randi() % 2 == 1:

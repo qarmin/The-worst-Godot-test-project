@@ -1,9 +1,12 @@
 extends Node2D
 
-var q_NodePath: NodePath = Autoload.get_nodepath(self)
+var q_NodePath: NodePath
 
 @onready var counter: float = Autoload.get_rand_time()
 
+func _ready() -> void:
+	q_NodePath = Autoload.get_nodepath(self)
+	
 
 func alt_process(delta) -> void:
 	counter -= delta

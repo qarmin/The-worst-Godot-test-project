@@ -32,8 +32,8 @@ func nodeFunction(q_Theme: Theme, can_reset: bool = false) -> void:
 	AutoResourcesStyleBoxFlat.nodeFunction(temp_StyleBoxFlat)
 
 	var temp_Theme: Theme = Theme.new()
-#	AutoResourcesTheme.nodeFunction(temp_Theme) #LOOP
-	temp_Theme = load("res://RES/Theme.tres")
+#	AutoResourcesTheme.nodeFunction(temp_Theme) #LOOP - don't use
+#	temp_Theme = load("res://RES/Theme.tres") # TODO CHECK WHY THIS WON'T WORK
 
 	### END TEMP
 
