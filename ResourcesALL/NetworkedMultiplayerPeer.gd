@@ -22,8 +22,8 @@ func nodeFunction(q_NetworkedMultiplayerPeer : NetworkedMultiplayerPeer, can_res
 
 		
 
-	if randi() % 2 == 1:
-		q_NetworkedMultiplayerPeer.set_refuse_new_connections(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_NetworkedMultiplayerPeer.set_refuse_new_connections(Autoload.get_bool()) #BUG GH#40507
 	if randi() % 2 == 1:
 		q_NetworkedMultiplayerPeer.set_transfer_mode(Autoload.get_int()) #TransferMode
 
