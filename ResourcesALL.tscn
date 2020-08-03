@@ -1,1827 +1,918 @@
-[gd_scene load_steps=454 format=2]
-
-[ext_resource path="res://ResourcesALL/GDScript.gd" type="Script" id=1]
-[ext_resource path="res://ResourcesALL/ResourcesALL.gd" type="Script" id=2]
-[ext_resource path="res://ResourcesALL/VisualScriptYieldSignal.gd" type="Script" id=3]
-[ext_resource path="res://ResourcesALL/ARVRInterface.gd" type="Script" id=4]
-[ext_resource path="res://ResourcesALL/Reference.gd" type="Script" id=5]
-[ext_resource path="res://ResourcesALL/ARVRInterfaceGDNative.gd" type="Script" id=6]
-[ext_resource path="res://ResourcesALL/Resource.gd" type="Script" id=7]
-[ext_resource path="res://ResourcesALL/AStar.gd" type="Script" id=8]
-[ext_resource path="res://ResourcesALL/MobileVRInterface.gd" type="Script" id=9]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendOutput.gd" type="Script" id=10]
-[ext_resource path="res://ResourcesALL/StreamTexture.gd" type="Script" id=11]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendMachine.gd" type="Script" id=12]
-[ext_resource path="res://ResourcesALL/ViewportTexture.gd" type="Script" id=13]
-[ext_resource path="res://ResourcesALL/Animation.gd" type="Script" id=14]
-[ext_resource path="res://ResourcesALL/ImageTexture.gd" type="Script" id=15]
-[ext_resource path="res://ResourcesALL/LargeTexture.gd" type="Script" id=16]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendStateMachinePlayback.gd" type="Script" id=17]
-[ext_resource path="res://ResourcesALL/MeshTexture.gd" type="Script" id=18]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendTransition.gd" type="Script" id=19]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendTree.gd" type="Script" id=20]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendSpace1D.gd" type="Script" id=21]
-[ext_resource path="res://ResourcesALL/NoiseTexture.gd" type="Script" id=22]
-[ext_resource path="res://ResourcesALL/ProxyTexture.gd" type="Script" id=23]
-[ext_resource path="res://ResourcesALL/AnimationRootNode.gd" type="Script" id=24]
-[ext_resource path="res://ResourcesALL/AnimationNodeAdd2.gd" type="Script" id=25]
-[ext_resource path="res://ResourcesALL/Mesh.gd" type="Script" id=26]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendStateMachineTransition.gd" type="Script" id=27]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendTimeScale.gd" type="Script" id=28]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendBlend3.gd" type="Script" id=29]
-[ext_resource path="res://ResourcesALL/AtlasTexture.gd" type="Script" id=30]
-[ext_resource path="res://ResourcesALL/ArrayMesh.gd" type="Script" id=31]
-[ext_resource path="res://ResourcesALL/CurveTexture.gd" type="Script" id=32]
-[ext_resource path="res://ResourcesALL/Texture.gd" type="Script" id=33]
-[ext_resource path="res://ResourcesALL/GradientTexture.gd" type="Script" id=34]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendSpace2D.gd" type="Script" id=35]
-[ext_resource path="res://ResourcesALL/AnimationNode.gd" type="Script" id=36]
-[ext_resource path="res://ResourcesALL/AnimationNodeAdd3.gd" type="Script" id=37]
-[ext_resource path="res://ResourcesALL/AnimatedTexture.gd" type="Script" id=38]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendOneShot.gd" type="Script" id=39]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendTimeSeek.gd" type="Script" id=40]
-[ext_resource path="res://ResourcesALL/AnimationNodeBlendBlend2.gd" type="Script" id=41]
-[ext_resource path="res://ResourcesALL/AnimationNodeAnimation.gd" type="Script" id=42]
-[ext_resource path="res://ResourcesALL/CameraTexture.gd" type="Script" id=43]
-[ext_resource path="res://ResourcesALL/MeshLibrary.gd" type="Script" id=44]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformCompose.gd" type="Script" id=45]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeCubeMap.gd" type="Script" id=46]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorSmoothStep.gd" type="Script" id=47]
-[ext_resource path="res://ResourcesALL/VisualScriptSelf.gd" type="Script" id=48]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeColorConstant.gd" type="Script" id=49]
-[ext_resource path="res://ResourcesALL/VisualScriptDeconstruct.gd" type="Script" id=50]
-[ext_resource path="res://ResourcesALL/VisualScriptEndgineSingleton.gd" type="Script" id=51]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarOp.gd" type="Script" id=52]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformMult.gd" type="Script" id=53]
-[ext_resource path="res://ResourcesALL/VisualScriptVariableSet.gd" type="Script" id=54]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeOutput.gd" type="Script" id=55]
-[ext_resource path="res://ResourcesALL/VisualScriptLocalVarSet.gd" type="Script" id=56]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorDistance.gd" type="Script" id=57]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorFunc.gd" type="Script" id=58]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeColorFunc.gd" type="Script" id=59]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarClamp.gd" type="Script" id=60]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeDecompose.gd" type="Script" id=61]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeFaceForward.gd" type="Script" id=62]
-[ext_resource path="res://ResourcesALL/VisualScriptSequence.gd" type="Script" id=63]
-[ext_resource path="res://ResourcesALL/VisualScriptReturn.gd" type="Script" id=64]
-[ext_resource path="res://ResourcesALL/VisualScriptInputAction.gd" type="Script" id=65]
-[ext_resource path="res://ResourcesALL/VisualScriptFunction.gd" type="Script" id=66]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVec3Uniform.gd" type="Script" id=67]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformFunc.gd" type="Script" id=68]
-[ext_resource path="res://ResourcesALL/VisualScriptSubCall.gd" type="Script" id=69]
-[ext_resource path="res://ResourcesALL/VisualScriptIndexSet.gd" type="Script" id=70]
-[ext_resource path="res://ResourcesALL/VisualScriptOperator.gd" type="Script" id=71]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorDecompose.gd" type="Script" id=72]
-[ext_resource path="res://ResourcesALL/VisualScriptEmitSignal.gd" type="Script" id=73]
-[ext_resource path="res://ResourcesALL/VisualScriptMathConstant.gd" type="Script" id=74]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeExpression.gd" type="Script" id=75]
-[ext_resource path="res://ResourcesALL/VisualScriptIterator.gd" type="Script" id=76]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorClamp.gd" type="Script" id=77]
-[ext_resource path="res://ResourcesALL/VisualScriptClassConstant.gd" type="Script" id=78]
-[ext_resource path="res://ResourcesALL/VisualScriptBuiltinFunc.gd" type="Script" id=79]
-[ext_resource path="res://ResourcesALL/VisualScriptBasicTypeConstant.gd" type="Script" id=80]
-[ext_resource path="res://ResourcesALL/VisualScriptComment.gd" type="Script" id=81]
-[ext_resource path="res://ResourcesALL/VisualScriptCondition.gd" type="Script" id=82]
-[ext_resource path="res://ResourcesALL/VisualScriptConstant.gd" type="Script" id=83]
-[ext_resource path="res://ResourcesALL/VisualScriptConstructor.gd" type="Script" id=84]
-[ext_resource path="res://ResourcesALL/VisualScriptCustomNode.gd" type="Script" id=85]
-[ext_resource path="res://ResourcesALL/VisualScriptNode.gd" type="Script" id=86]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeColorOp.gd" type="Script" id=87]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarInterp.gd" type="Script" id=88]
-[ext_resource path="res://ResourcesALL/VisualScriptSceneTree.gd" type="Script" id=89]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeUniform.gd" type="Script" id=90]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformVecMult.gd" type="Script" id=91]
-[ext_resource path="res://ResourcesALL/VisualScriptGlobalConstant.gd" type="Script" id=92]
-[ext_resource path="res://ResourcesALL/VisualScriptSwitch.gd" type="Script" id=93]
-[ext_resource path="res://ResourcesALL/VisualScriptExpression.gd" type="Script" id=94]
-[ext_resource path="res://ResourcesALL/VisualScriptTypeCast.gd" type="Script" id=95]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeGroupBase.gd" type="Script" id=96]
-[ext_resource path="res://ResourcesALL/VisualScriptPreload.gd" type="Script" id=97]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorScalarStep.gd" type="Script" id=98]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTexture.gd" type="Script" id=99]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformUniform.gd" type="Script" id=100]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeBooleanUniform.gd" type="Script" id=101]
-[ext_resource path="res://ResourcesALL/VisualScriptFunctionCall.gd" type="Script" id=102]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVec3Constant.gd" type="Script" id=103]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeFresnel.gd" type="Script" id=104]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarFunc.gd" type="Script" id=105]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorRefract.gd" type="Script" id=106]
-[ext_resource path="res://ResourcesALL/VisualScriptResourcePath.gd" type="Script" id=107]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarDerivativeFunc.gd" type="Script" id=108]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorDerivativeFunc.gd" type="Script" id=109]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeIf.gd" type="Script" id=110]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeSwitch.gd" type="Script" id=111]
-[ext_resource path="res://ResourcesALL/VisualScriptPropertySet.gd" type="Script" id=112]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorScalarSmoothStep.gd" type="Script" id=113]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarConstant.gd" type="Script" id=114]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorInterp.gd" type="Script" id=115]
-[ext_resource path="res://ResourcesALL/VisualScriptYield.gd" type="Script" id=116]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTransformConstant.gd" type="Script" id=117]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarSmoothStep.gd" type="Script" id=118]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeBooleanConstant.gd" type="Script" id=119]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeInput.gd" type="Script" id=120]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTextureUniform.gd" type="Script" id=121]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeDeterminant.gd" type="Script" id=122]
-[ext_resource path="res://ResourcesALL/VisualScriptIndexGet.gd" type="Script" id=123]
-[ext_resource path="res://ResourcesALL/VisualShaderNode.gd" type="Script" id=124]
-[ext_resource path="res://ResourcesALL/VisualScriptLocalVar.gd" type="Script" id=125]
-[ext_resource path="res://ResourcesALL/VisualScriptVariableGet.gd" type="Script" id=126]
-[ext_resource path="res://ResourcesALL/VisualScriptSceneNode.gd" type="Script" id=127]
-[ext_resource path="res://ResourcesALL/VisualScriptWhile.gd" type="Script" id=128]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorCompose.gd" type="Script" id=129]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeScalarUniform.gd" type="Script" id=130]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeOuterProduct.gd" type="Script" id=131]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorLen.gd" type="Script" id=132]
-[ext_resource path="res://ResourcesALL/VisualScriptPropertyGet.gd" type="Script" id=133]
-[ext_resource path="res://ResourcesALL/VisualScriptSelect.gd" type="Script" id=134]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeColorUniform.gd" type="Script" id=135]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorOp.gd" type="Script" id=136]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeCubeMapUniform.gd" type="Script" id=137]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeDotProduct.gd" type="Script" id=138]
-[ext_resource path="res://ResourcesALL/AudioStreamPlaybackResampled.gd" type="Script" id=139]
-[ext_resource path="res://ResourcesALL/XMLParser.gd" type="Script" id=140]
-[ext_resource path="res://ResourcesALL/SpatialVelocityTracker.gd" type="Script" id=141]
-[ext_resource path="res://ResourcesALL/AudioStreamPlayback.gd" type="Script" id=142]
-[ext_resource path="res://ResourcesALL/ConfigFile.gd" type="Script" id=143]
-[ext_resource path="res://ResourcesALL/Semaphore.gd" type="Script" id=144]
-[ext_resource path="res://ResourcesALL/SceneTreeTimer.gd" type="Script" id=145]
-[ext_resource path="res://ResourcesALL/ResourceFormatSaver.gd" type="Script" id=146]
-[ext_resource path="res://ResourcesALL/EditorScript.gd" type="Script" id=147]
-[ext_resource path="res://ResourcesALL/AnimationTrackEditPlugin.gd" type="Script" id=148]
-[ext_resource path="res://ResourcesALL/EditorFeatureProfile.gd" type="Script" id=149]
-[ext_resource path="res://ResourcesALL/AudioEffectInstance.gd" type="Script" id=150]
-[ext_resource path="res://ResourcesALL/EditorImportPlugin.gd" type="Script" id=151]
-[ext_resource path="res://ResourcesALL/WebRTCMultiplayer.gd" type="Script" id=152]
-[ext_resource path="res://ResourcesALL/EditorScenePostImport.gd" type="Script" id=153]
-[ext_resource path="res://ResourcesALL/NetworkedMultiplayerENet.gd" type="Script" id=154]
-[ext_resource path="res://ResourcesALL/HTTPClient.gd" type="Script" id=155]
-[ext_resource path="res://ResourcesALL/Physics2DDirectSpaceState.gd" type="Script" id=156]
-[ext_resource path="res://ResourcesALL/World.gd" type="Script" id=157]
-[ext_resource path="res://ResourcesALL/Mutex.gd" type="Script" id=158]
-[ext_resource path="res://ResourcesALL/ResourveInteractiveLoader.gd" type="Script" id=159]
-[ext_resource path="res://ResourcesALL/WebSocketMultiplayerPeer.gd" type="Script" id=160]
-[ext_resource path="res://ResourcesALL/AudioStreamGeneratorPlayback.gd" type="Script" id=161]
-[ext_resource path="res://ResourcesALL/WebRTCPeerConnection.gd" type="Script" id=162]
-[ext_resource path="res://ResourcesALL/EditorSceneImporterAssimp.gd" type="Script" id=163]
-[ext_resource path="res://ResourcesALL/GDNative.gd" type="Script" id=164]
-[ext_resource path="res://ResourcesALL/File.gd" type="Script" id=165]
-[ext_resource path="res://ResourcesALL/WebSocketServer.gd" type="Script" id=166]
-[ext_resource path="res://ResourcesALL/EditorSpatialGizmo.gd" type="Script" id=167]
-[ext_resource path="res://ResourcesALL/GDScriptFunctionState.gd" type="Script" id=168]
-[ext_resource path="res://ResourcesALL/SceneState.gd" type="Script" id=169]
-[ext_resource path="res://ResourcesALL/MultiplayerPeerGDNative.gd" type="Script" id=170]
-[ext_resource path="res://ResourcesALL/Vector3.gd" type="Script" id=171]
-[ext_resource path="res://ResourcesALL/ClassDB.gd" type="Script" id=172]
-[ext_resource path="res://ResourcesALL/PhysicsShapeQueryResult.gd" type="Script" id=173]
-[ext_resource path="res://ResourcesALL/CameraFeed.gd" type="Script" id=174]
-[ext_resource path="res://ResourcesALL/WebSocketClient.gd" type="Script" id=175]
-[ext_resource path="res://ResourcesALL/PacketPeerUDP.gd" type="Script" id=176]
-[ext_resource path="res://ResourcesALL/Input.gd" type="Script" id=177]
-[ext_resource path="res://ResourcesALL/PhysicsShapeQueryParameters.gd" type="Script" id=178]
-[ext_resource path="res://ResourcesALL/Transform2D.gd" type="Script" id=179]
-[ext_resource path="res://ResourcesALL/Vector2.gd" type="Script" id=180]
-[ext_resource path="res://ResourcesALL/String.gd" type="Script" id=181]
-[ext_resource path="res://ResourcesALL/WebRTCDataChannelGDNative.gd" type="Script" id=182]
-[ext_resource path="res://ResourcesALL/ResourceImporterOGGVorbis.gd" type="Script" id=183]
-[ext_resource path="res://ResourcesALL/Marshalls.gd" type="Script" id=184]
-[ext_resource path="res://ResourcesALL/Rect2.gd" type="Script" id=185]
-[ext_resource path="res://ResourcesALL/RegExMatch.gd" type="Script" id=186]
-[ext_resource path="res://ResourcesALL/EditorSelection.gd" type="Script" id=187]
-[ext_resource path="res://ResourcesALL/VisualScriptFunctionState.gd" type="Script" id=188]
-[ext_resource path="res://ResourcesALL/FuncRef.gd" type="Script" id=189]
-[ext_resource path="res://ResourcesALL/Expression.gd" type="Script" id=190]
-[ext_resource path="res://ResourcesALL/MeshDataTool.gd" type="Script" id=191]
-[ext_resource path="res://ResourcesALL/PCKPacker.gd" type="Script" id=192]
-[ext_resource path="res://ResourcesALL/StreamPeerGDNative.gd" type="Script" id=193]
-[ext_resource path="res://ResourcesALL/Directory.gd" type="Script" id=194]
-[ext_resource path="res://ResourcesALL/InputMap.gd" type="Script" id=195]
-[ext_resource path="res://ResourcesALL/CryptoKey.gd" type="Script" id=196]
-[ext_resource path="res://ResourcesALL/EditorInspectorPlugin.gd" type="Script" id=197]
-[ext_resource path="res://ResourcesALL/AudioEffectHighShelfFilter.gd" type="Script" id=198]
-[ext_resource path="res://ResourcesALL/CapsuleMesh.gd" type="Script" id=199]
-[ext_resource path="res://ResourcesALL/PrimitiveMesh.gd" type="Script" id=200]
-[ext_resource path="res://ResourcesALL/SphereMesh.gd" type="Script" id=201]
-[ext_resource path="res://ResourcesALL/QuadMesh.gd" type="Script" id=202]
-[ext_resource path="res://ResourcesALL/PrismMesh.gd" type="Script" id=203]
-[ext_resource path="res://ResourcesALL/PlaneMesh.gd" type="Script" id=204]
-[ext_resource path="res://ResourcesALL/AudioEffectCompressor.gd" type="Script" id=205]
-[ext_resource path="res://ResourcesALL/AudioEffectDelay.gd" type="Script" id=206]
-[ext_resource path="res://ResourcesALL/AudioStreamStreamSample.gd" type="Script" id=207]
-[ext_resource path="res://ResourcesALL/AudioEffectDistortion.gd" type="Script" id=208]
-[ext_resource path="res://ResourcesALL/AudioEffectLowShelfFilter.gd" type="Script" id=209]
-[ext_resource path="res://ResourcesALL/AudioEffectNotchFilter.gd" type="Script" id=210]
-[ext_resource path="res://ResourcesALL/AudioEffectChorus.gd" type="Script" id=211]
-[ext_resource path="res://ResourcesALL/AudioEffectBandPassFilter.gd" type="Script" id=212]
-[ext_resource path="res://ResourcesALL/AudioEffectBandLimitFilter.gd" type="Script" id=213]
-[ext_resource path="res://ResourcesALL/AudioEffectLowPassFilter.gd" type="Script" id=214]
-[ext_resource path="res://ResourcesALL/AudioEffectHighPassFilter.gd" type="Script" id=215]
-[ext_resource path="res://ResourcesALL/CubeMesh.gd" type="Script" id=216]
-[ext_resource path="res://ResourcesALL/CylinderMesh.gd" type="Script" id=217]
-[ext_resource path="res://ResourcesALL/AudioEffect.gd" type="Script" id=218]
-[ext_resource path="res://ResourcesALL/AudioBusLayout.gd" type="Script" id=219]
-[ext_resource path="res://ResourcesALL/AudioEffectAmplify.gd" type="Script" id=220]
-[ext_resource path="res://ResourcesALL/AudioEffectFilter.gd" type="Script" id=221]
-[ext_resource path="res://ResourcesALL/AudioEffectStereoEnhance.gd" type="Script" id=222]
-[ext_resource path="res://ResourcesALL/AudioStreamGenerator.gd" type="Script" id=223]
-[ext_resource path="res://ResourcesALL/AudioStreamMicrophone.gd" type="Script" id=224]
-[ext_resource path="res://ResourcesALL/AudioEffectSpectrumAnalyzer.gd" type="Script" id=225]
-[ext_resource path="res://ResourcesALL/AudioEffectPitchShift.gd" type="Script" id=226]
-[ext_resource path="res://ResourcesALL/AudioEffectEQ6.gd" type="Script" id=227]
-[ext_resource path="res://ResourcesALL/AudioEffectLimiter.gd" type="Script" id=228]
-[ext_resource path="res://ResourcesALL/AudioEffectEQ21.gd" type="Script" id=229]
-[ext_resource path="res://ResourcesALL/AudioEffectPanner.gd" type="Script" id=230]
-[ext_resource path="res://ResourcesALL/AudioStreamOGGVorbis.gd" type="Script" id=231]
-[ext_resource path="res://ResourcesALL/AudioEffectEQ.gd" type="Script" id=232]
-[ext_resource path="res://ResourcesALL/AudioEffectEQ10.gd" type="Script" id=233]
-[ext_resource path="res://ResourcesALL/AudioStream.gd" type="Script" id=234]
-[ext_resource path="res://ResourcesALL/BakedLightmapData.gd" type="Script" id=235]
-[ext_resource path="res://ResourcesALL/AudioEffectReverb.gd" type="Script" id=236]
-[ext_resource path="res://ResourcesALL/AudioEffectPhaser.gd" type="Script" id=237]
-[ext_resource path="res://ResourcesALL/AudioEffectRecord.gd" type="Script" id=238]
-[ext_resource path="res://ResourcesALL/ButtonGroup.gd" type="Script" id=239]
-[ext_resource path="res://ResourcesALL/Material.gd" type="Script" id=240]
-[ext_resource path="res://ResourcesALL/ParticlesMaterial.gd" type="Script" id=241]
-[ext_resource path="res://ResourcesALL/Shape.gd" type="Script" id=242]
-[ext_resource path="res://ResourcesALL/CapsuleShape.gd" type="Script" id=243]
-[ext_resource path="res://ResourcesALL/BoxShape.gd" type="Script" id=244]
-[ext_resource path="res://ResourcesALL/BitMap.gd" type="Script" id=245]
-[ext_resource path="res://ResourcesALL/DynamicFont.gd" type="Script" id=246]
-[ext_resource path="res://ResourcesALL/Font.gd" type="Script" id=247]
-[ext_resource path="res://ResourcesALL/BitmapFont.gd" type="Script" id=248]
-[ext_resource path="res://ResourcesALL/ConcavePolygonShape.gd" type="Script" id=249]
-[ext_resource path="res://ResourcesALL/AudioStreamRandomPitch.gd" type="Script" id=250]
-[ext_resource path="res://ResourcesALL/CanvasItemMaterial.gd" type="Script" id=251]
-[ext_resource path="res://ResourcesALL/SpatialMaterial.gd" type="Script" id=252]
-[ext_resource path="res://ResourcesALL/Shape2D.gd" type="Script" id=253]
-[ext_resource path="res://ResourcesALL/ShaderMaterial.gd" type="Script" id=254]
-[ext_resource path="res://ResourcesALL/CylinderShape.gd" type="Script" id=255]
-[ext_resource path="res://ResourcesALL/SphereShape.gd" type="Script" id=256]
-[ext_resource path="res://ResourcesALL/HeightMapShape.gd" type="Script" id=257]
-[ext_resource path="res://ResourcesALL/RayShape.gd" type="Script" id=258]
-[ext_resource path="res://ResourcesALL/PlaneShape.gd" type="Script" id=259]
-[ext_resource path="res://ResourcesALL/ConvexPolygonShape.gd" type="Script" id=260]
-[ext_resource path="res://ResourcesALL/SegmentShape2D.gd" type="Script" id=261]
-[ext_resource path="res://ResourcesALL/CubeMap.gd" type="Script" id=262]
-[ext_resource path="res://ResourcesALL/Curve.gd" type="Script" id=263]
-[ext_resource path="res://ResourcesALL/RayShape2D.gd" type="Script" id=264]
-[ext_resource path="res://ResourcesALL/RectangleShape2D.gd" type="Script" id=265]
-[ext_resource path="res://ResourcesALL/LineShape2D.gd" type="Script" id=266]
-[ext_resource path="res://ResourcesALL/CapsuleShape2D.gd" type="Script" id=267]
-[ext_resource path="res://ResourcesALL/CircleShape2D.gd" type="Script" id=268]
-[ext_resource path="res://ResourcesALL/ConcavePolygonShape2D.gd" type="Script" id=269]
-[ext_resource path="res://ResourcesALL/ConvexPolygonShape2D.gd" type="Script" id=270]
-[ext_resource path="res://ResourcesALL/EditorSpatialGizmoPlugin.gd" type="Script" id=271]
-[ext_resource path="res://ResourcesALL/GDNativeLibrary.gd" type="Script" id=272]
-[ext_resource path="res://ResourcesALL/Script.gd" type="Script" id=273]
-[ext_resource path="res://ResourcesALL/DynamicFontData.gd" type="Script" id=274]
-[ext_resource path="res://ResourcesALL/VisualScript.gd" type="Script" id=275]
-[ext_resource path="res://ResourcesALL/InputEvent.gd" type="Script" id=276]
-[ext_resource path="res://ResourcesALL/EditorSettings.gd" type="Script" id=277]
-[ext_resource path="res://ResourcesALL/Curve2D.gd" type="Script" id=278]
-[ext_resource path="res://ResourcesALL/Curve3D.gd" type="Script" id=279]
-[ext_resource path="res://ResourcesALL/InputEventAction.gd" type="Script" id=280]
-[ext_resource path="res://ResourcesALL/InputEventPanGesture.gd" type="Script" id=281]
-[ext_resource path="res://ResourcesALL/InputEventKey.gd" type="Script" id=282]
-[ext_resource path="res://ResourcesALL/InputEventMIDI.gd" type="Script" id=283]
-[ext_resource path="res://ResourcesALL/InputEventMouse.gd" type="Script" id=284]
-[ext_resource path="res://ResourcesALL/InputEventJoypadButton.gd" type="Script" id=285]
-[ext_resource path="res://ResourcesALL/InputEventMouseMotion.gd" type="Script" id=286]
-[ext_resource path="res://ResourcesALL/InputEventMouseButton.gd" type="Script" id=287]
-[ext_resource path="res://ResourcesALL/NativeScript.gd" type="Script" id=288]
-[ext_resource path="res://ResourcesALL/Environment.gd" type="Script" id=289]
-[ext_resource path="res://ResourcesALL/InputEventScreenTouch.gd" type="Script" id=290]
-[ext_resource path="res://ResourcesALL/InputEventJoypadMotion.gd" type="Script" id=291]
-[ext_resource path="res://ResourcesALL/PluginScript.gd" type="Script" id=292]
-[ext_resource path="res://ResourcesALL/Image.gd" type="Script" id=293]
-[ext_resource path="res://ResourcesALL/InputEventWithModifiers.gd" type="Script" id=294]
-[ext_resource path="res://ResourcesALL/GIProbeData.gd" type="Script" id=295]
-[ext_resource path="res://ResourcesALL/Gradient.gd" type="Script" id=296]
-[ext_resource path="res://ResourcesALL/EditorExportPlugin.gd" type="Script" id=297]
-[ext_resource path="res://ResourcesALL/InputEventScreenDrag.gd" type="Script" id=298]
-[ext_resource path="res://ResourcesALL/InputEventGesture.gd" type="Script" id=299]
-[ext_resource path="res://ResourcesALL/InputEventMagnifyGesture.gd" type="Script" id=300]
-[ext_resource path="res://ResourcesALL/IP_Unix.gd" type="Script" id=301]
-[ext_resource path="res://ResourcesALL/EditorFileSystemDirectory.gd" type="Script" id=302]
-[ext_resource path="res://ResourcesALL/ResourceLoader.gd" type="Script" id=303]
-[ext_resource path="res://ResourcesALL/EditorResourceConversionPlugin.gd" type="Script" id=304]
-[ext_resource path="res://ResourcesALL/InputDefault.gd" type="Script" id=305]
-[ext_resource path="res://ResourcesALL/RegEx.gd" type="Script" id=306]
-[ext_resource path="res://ResourcesALL/Physics2DShapeQueryResult.gd" type="Script" id=307]
-[ext_resource path="res://ResourcesALL/TCP_Server.gd" type="Script" id=308]
-[ext_resource path="res://ResourcesALL/VisualScriptEditor.gd" type="Script" id=309]
-[ext_resource path="res://ResourcesALL/ARVRPositionalTracker.gd" type="Script" id=310]
-[ext_resource path="res://ResourcesALL/PanoramaSky.gd" type="Script" id=311]
-[ext_resource path="res://ResourcesALL/PackedDataContainer.gd" type="Script" id=312]
-[ext_resource path="res://ResourcesALL/SpatialGizmo.gd" type="Script" id=313]
-[ext_resource path="res://ResourcesALL/SpriteFrames.gd" type="Script" id=314]
-[ext_resource path="res://ResourcesALL/Physics2DDirectSpaceStateSW.gd" type="Script" id=315]
-[ext_resource path="res://ResourcesALL/JSONParseResult.gd" type="Script" id=316]
-[ext_resource path="res://ResourcesALL/Physics2DServerSW.gd" type="Script" id=317]
-[ext_resource path="res://ResourcesALL/JSON.gd" type="Script" id=318]
-[ext_resource path="res://ResourcesALL/bool.gd" type="Script" id=319]
-[ext_resource path="res://ResourcesALL/PoolRealArray.gd" type="Script" id=320]
-[ext_resource path="res://ResourcesALL/Dictionary.gd" type="Script" id=321]
-[ext_resource path="res://ResourcesALL/Nil.gd" type="Script" id=322]
-[ext_resource path="res://ResourcesALL/PhysicsDirectSpaceState.gd" type="Script" id=323]
-[ext_resource path="res://ResourcesALL/OpenSimplexNoise.gd" type="Script" id=324]
-[ext_resource path="res://ResourcesALL/AudioEffectSpectrumAnalyzerInstance.gd" type="Script" id=325]
-[ext_resource path="res://ResourcesALL/RandomNumberGenerator.gd" type="Script" id=326]
-[ext_resource path="res://ResourcesALL/PacketPeerStream.gd" type="Script" id=327]
-[ext_resource path="res://ResourcesALL/StreamPeerBuffer.gd" type="Script" id=328]
-[ext_resource path="res://ResourcesALL/Physics2DDirectBodyStateSW.gd" type="Script" id=329]
-[ext_resource path="res://ResourcesALL/PolygonPathFinder.gd" type="Script" id=330]
-[ext_resource path="res://ResourcesALL/World2D.gd" type="Script" id=331]
-[ext_resource path="res://ResourcesALL/PhysicsMaterial.gd" type="Script" id=332]
-[ext_resource path="res://ResourcesALL/Sky.gd" type="Script" id=333]
-[ext_resource path="res://ResourcesALL/ResourceFormatLoader.gd" type="Script" id=334]
-[ext_resource path="res://ResourcesALL/PacketPeerGDNative.gd" type="Script" id=335]
-[ext_resource path="res://ResourcesALL/ResourceSaver.gd" type="Script" id=336]
-[ext_resource path="res://ResourcesALL/Transform.gd" type="Script" id=337]
-[ext_resource path="res://ResourcesALL/Theme.gd" type="Script" id=338]
-[ext_resource path="res://ResourcesALL/NetworkedMultiplayerPeer.gd" type="Script" id=339]
-[ext_resource path="res://ResourcesALL/BulletPhysicsDirectBodyState.gd" type="Script" id=340]
-[ext_resource path="res://ResourcesALL/KinematicCollision.gd" type="Script" id=341]
-[ext_resource path="res://ResourcesALL/CameraServer.gd" type="Script" id=342]
-[ext_resource path="res://ResourcesALL/PHashTranslation.gd" type="Script" id=343]
-[ext_resource path="res://ResourcesALL/StreamPeerSSL.gd" type="Script" id=344]
-[ext_resource path="res://ResourcesALL/ARVRServer.gd" type="Script" id=345]
-[ext_resource path="res://ResourcesALL/Geometry.gd" type="Script" id=346]
-[ext_resource path="res://ResourcesALL/PoolColorArray.gd" type="Script" id=347]
-[ext_resource path="res://ResourcesALL/int.gd" type="Script" id=348]
-[ext_resource path="res://ResourcesALL/PoolIntArray.gd" type="Script" id=349]
-[ext_resource path="res://ResourcesALL/JavaScript.gd" type="Script" id=350]
-[ext_resource path="res://ResourcesALL/MainLoop.gd" type="Script" id=351]
-[ext_resource path="res://ResourcesALL/StreamPeerTCP.gd" type="Script" id=352]
-[ext_resource path="res://ResourcesALL/PoolByteArray.gd" type="Script" id=353]
-[ext_resource path="res://ResourcesALL/Quat.gd" type="Script" id=354]
-[ext_resource path="res://ResourcesALL/VideoStreamGDNative.gd" type="Script" id=355]
-[ext_resource path="res://ResourcesALL/Thread.gd" type="Script" id=356]
-[ext_resource path="res://ResourcesALL/ShortCut.gd" type="Script" id=357]
-[ext_resource path="res://ResourcesALL/VideoStreamTheora.gd" type="Script" id=358]
-[ext_resource path="res://ResourcesALL/VideoStream.gd" type="Script" id=359]
-[ext_resource path="res://ResourcesALL/PackerDatacontainerRef.gd" type="Script" id=360]
-[ext_resource path="res://ResourcesALL/StyleBoxEmpty.gd" type="Script" id=361]
-[ext_resource path="res://ResourcesALL/GDScriptNativeClass.gd" type="Script" id=362]
-[ext_resource path="res://ResourcesALL/PoolStringArray.gd" type="Script" id=363]
-[ext_resource path="res://ResourcesALL/BulletPhysicsDirectSpaceState.gd" type="Script" id=364]
-[ext_resource path="res://ResourcesALL/Color.gd" type="Script" id=365]
-[ext_resource path="res://ResourcesALL/TreeItem.gd" type="Script" id=366]
-[ext_resource path="res://ResourcesALL/StyleBoxFlat.gd" type="Script" id=367]
-[ext_resource path="res://ResourcesALL/Basis.gd" type="Script" id=368]
-[ext_resource path="res://ResourcesALL/Engine.gd" type="Script" id=369]
-[ext_resource path="res://ResourcesALL/TextFile.gd" type="Script" id=370]
-[ext_resource path="res://ResourcesALL/SurfaceTool.gd" type="Script" id=371]
-[ext_resource path="res://ResourcesALL/VideoStreamWebm.gd" type="Script" id=372]
-[ext_resource path="res://ResourcesALL/TranslationServer.gd" type="Script" id=373]
-[ext_resource path="res://ResourcesALL/UPNP.gd" type="Script" id=374]
-[ext_resource path="res://ResourcesALL/Translation.gd" type="Script" id=375]
-[ext_resource path="res://ResourcesALL/Shader.gd" type="Script" id=376]
-[ext_resource path="res://ResourcesALL/EditorSceneImporter.gd" type="Script" id=377]
-[ext_resource path="res://ResourcesALL/StyleBox.gd" type="Script" id=378]
-[ext_resource path="res://ResourcesALL/PhysicsDirectBodyState.gd" type="Script" id=379]
-[ext_resource path="res://ResourcesALL/Texture3D.gd" type="Script" id=380]
-[ext_resource path="res://ResourcesALL/VisualShader.gd" type="Script" id=381]
-[ext_resource path="res://ResourcesALL/TileSet.gd" type="Script" id=382]
-[ext_resource path="res://ResourcesALL/float.gd" type="Script" id=383]
-[ext_resource path="res://ResourcesALL/Physics2DDirectBodyState.gd" type="Script" id=384]
-[ext_resource path="res://ResourcesALL/Performance.gd" type="Script" id=385]
-[ext_resource path="res://ResourcesALL/StyleBoxTexture.gd" type="Script" id=386]
-[ext_resource path="res://ResourcesALL/TextureArray.gd" type="Script" id=387]
-[ext_resource path="res://ResourcesALL/EditorNavigationMeshGenerator.gd" type="Script" id=388]
-[ext_resource path="res://ResourcesALL/BulletPhysicsServer.gd" type="Script" id=389]
-[ext_resource path="res://ResourcesALL/EncodedObjectAsID.gd" type="Script" id=390]
-[ext_resource path="res://ResourcesALL/TextureLayered.gd" type="Script" id=391]
-[ext_resource path="res://ResourcesALL/NavigationPolygon.gd" type="Script" id=392]
-[ext_resource path="res://ResourcesALL/WeakRef.gd" type="Script" id=393]
-[ext_resource path="res://ResourcesALL/OccluderPolygon2D.gd" type="Script" id=394]
-[ext_resource path="res://ResourcesALL/PackedScene.gd" type="Script" id=395]
-[ext_resource path="res://ResourcesALL/OS.gd" type="Script" id=396]
-[ext_resource path="res://ResourcesALL/SceneTree.gd" type="Script" id=397]
-[ext_resource path="res://ResourcesALL/WebSocketPeer.gd" type="Script" id=398]
-[ext_resource path="res://ResourcesALL/ProceduralSky.gd" type="Script" id=399]
-[ext_resource path="res://ResourcesALL/IP.gd" type="Script" id=400]
-[ext_resource path="res://ResourcesALL/Physics2DTestMotionResult.gd" type="Script" id=401]
-[ext_resource path="res://ResourcesALL/Physics2DShapeQueryParameters.gd" type="Script" id=402]
-[ext_resource path="res://ResourcesALL/UPNPDevice.gd" type="Script" id=403]
-[ext_resource path="res://ResourcesALL/EditorResourcePreviewGenerator.gd" type="Script" id=404]
-[ext_resource path="res://ResourcesALL/PhysicsServer.gd" type="Script" id=405]
-[ext_resource path="res://ResourcesALL/ProjectSettings.gd" type="Script" id=406]
-[ext_resource path="res://ResourcesALL/KinematicCollision2D.gd" type="Script" id=407]
-[ext_resource path="res://ResourcesALL/TriangleMesh.gd" type="Script" id=408]
-[ext_resource path="res://ResourcesALL/PacketPeer.gd" type="Script" id=409]
-[ext_resource path="res://ResourcesALL/WebRTCDataChannel.gd" type="Script" id=410]
-[ext_resource path="res://ResourcesALL/StreamPeer.gd" type="Script" id=411]
-[ext_resource path="res://ResourcesALL/WebRTCPeerConnectionGDNative.gd" type="Script" id=412]
-[ext_resource path="res://ResourcesALL/MultiMesh.gd" type="Script" id=413]
-[ext_resource path="res://ResourcesALL/RID.gd" type="Script" id=414]
-[ext_resource path="res://ResourcesALL/StyleBoxLine.gd" type="Script" id=415]
-[ext_resource path="res://ResourcesALL/NodePath.gd" type="Script" id=416]
-[ext_resource path="res://ResourcesALL/Plane.gd" type="Script" id=417]
-[ext_resource path="res://ResourcesALL/PoolVector2Array.gd" type="Script" id=418]
-[ext_resource path="res://ResourcesALL/PoolVector3Array.gd" type="Script" id=419]
-[ext_resource path="res://ResourcesALL/AudioServer.gd" type="Script" id=420]
-[ext_resource path="res://ResourcesALL/Physics2DServer.gd" type="Script" id=421]
-[ext_resource path="res://ResourcesALL/UndoRedo.gd" type="Script" id=422]
-[ext_resource path="res://ResourcesALL/Array.gd" type="Script" id=423]
-[ext_resource path="res://ResourcesALL/VisualServer.gd" type="Script" id=424]
-[ext_resource path="res://ResourcesALL/Variant.gd" type="Script" id=425]
-[ext_resource path="res://ResourcesALL/MultiplayerAPI.gd" type="Script" id=426]
-[ext_resource path="res://ResourcesALL/NavigationMesh.gd" type="Script" id=427]
-[ext_resource path="res://ResourcesALL/AStar2D.gd" type="Script" id=428]
-[ext_resource path="res://ResourcesALL/PointMesh.gd" type="Script" id=429]
-[ext_resource path="res://ResourcesALL/RichTextEffects.gd" type="Script" id=430]
-[ext_resource path="res://ResourcesALL/Skin.gd" type="Script" id=431]
-[ext_resource path="res://ResourcesALL/VisualScriptLists.gd" type="Script" id=432]
-[ext_resource path="res://ResourcesALL/VisualScriptComposeArray.gd" type="Script" id=433]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeTextureUniformTriplanar.gd" type="Script" id=434]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeCompare.gd" type="Script" id=435]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeCustom.gd" type="Script" id=436]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeGlobalExpression.gd" type="Script" id=437]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeIs.gd" type="Script" id=438]
-[ext_resource path="res://ResourcesALL/VisualShaderNodeVectorScalarMix.gd" type="Script" id=439]
-[ext_resource path="res://ResourcesALL/X509Certificate.gd" type="Script" id=440]
-[ext_resource path="res://ResourcesALL/AudioEffectAmplifyInstance.gd" type="Script" id=441]
-[ext_resource path="res://ResourcesALL/AudioEffectEQInstance.gd" type="Script" id=442]
-[ext_resource path="res://ResourcesALL/AudioEffectPannerInstance.gd" type="Script" id=443]
-[ext_resource path="res://ResourcesALL/CharFXTransform.gd" type="Script" id=444]
-[ext_resource path="res://ResourcesALL/Crypto.gd" type="Script" id=445]
-[ext_resource path="res://ResourcesALL/ResourceImporter.gd" type="Script" id=446]
-[ext_resource path="res://ResourcesALL/HashingContext.gd" type="Script" id=447]
-[ext_resource path="res://ResourcesALL/ResourceFormatLoaderCrypto.gd" type="Script" id=448]
-[ext_resource path="res://ResourcesALL/ResourceFormatSaverCrypto.gd" type="Script" id=449]
-[ext_resource path="res://ResourcesALL/SkinReference.gd" type="Script" id=450]
-[ext_resource path="res://ResourcesALL/EditorVCSInterface.gd" type="Script" id=451]
-[ext_resource path="res://ResourcesALL/JSONRPC.gd" type="Script" id=452]
-[ext_resource path="res://ResourcesALL/AABB.gd" type="Script" id=453]
+[gd_scene format=2]
 
 [node name="Resources" type="Node2D"]
-script = ExtResource( 2 )
 
 [node name="Reference_LEAK" type="Node2D" parent="."]
-script = ExtResource( 5 )
 
 [node name="ARVRInterface_CHILD" type="Node2D" parent="."]
-script = ExtResource( 4 )
 
 [node name="ARVRInterfaceGDNative" type="Node2D" parent="."]
-script = ExtResource( 6 )
 
 [node name="MobileVRInterface" type="Node2D" parent="."]
-script = ExtResource( 9 )
 
 [node name="AStar" type="Node2D" parent="."]
-script = ExtResource( 8 )
 
 [node name="AStar2D" type="Node2D" parent="."]
-script = ExtResource( 428 )
 
 [node name="Resource" type="Node2D" parent="."]
-script = ExtResource( 7 )
 
 [node name="Texture_CHILD" type="Node2D" parent="."]
-script = ExtResource( 33 )
 
 [node name="AnimatedTexture" type="Node2D" parent="."]
-script = ExtResource( 38 )
 
 [node name="AtlasTexture" type="Node2D" parent="."]
-script = ExtResource( 30 )
 
 [node name="CameraTexture" type="Node2D" parent="."]
-script = ExtResource( 43 )
 
 [node name="CurveTexture" type="Node2D" parent="."]
-script = ExtResource( 32 )
 
 [node name="GradientTexture" type="Node2D" parent="."]
-script = ExtResource( 34 )
 
 [node name="ImageTexture" type="Node2D" parent="."]
-script = ExtResource( 15 )
 
 [node name="LargeTexture" type="Node2D" parent="."]
-script = ExtResource( 16 )
 
 [node name="MeshTexture" type="Node2D" parent="."]
-script = ExtResource( 18 )
 
 [node name="NoiseTexture" type="Node2D" parent="."]
-script = ExtResource( 22 )
 
 [node name="ProxyTexture" type="Node2D" parent="."]
-script = ExtResource( 23 )
 
 [node name="StreamTexture" type="Node2D" parent="."]
-script = ExtResource( 11 )
 
 [node name="ViewportTexture" type="Node2D" parent="."]
-script = ExtResource( 13 )
 
 [node name="Animation" type="Node2D" parent="."]
-script = ExtResource( 14 )
 
 [node name="AnimationNode" type="Node2D" parent="."]
-script = ExtResource( 36 )
 
 [node name="AnimationNodeAdd2" type="Node2D" parent="."]
-script = ExtResource( 25 )
 
 [node name="AnimationNodeAdd3" type="Node2D" parent="."]
-script = ExtResource( 37 )
 
 [node name="AnimationRootNode" type="Node2D" parent="."]
-script = ExtResource( 24 )
 
 [node name="AnimationNodeAnimation" type="Node2D" parent="."]
-script = ExtResource( 42 )
 
 [node name="AnimationNodeBlendSpace1D" type="Node2D" parent="."]
-script = ExtResource( 21 )
 
 [node name="AnimationNodeBlendSpace2D" type="Node2D" parent="."]
-script = ExtResource( 35 )
 
 [node name="AnimationNodeBlendTree" type="Node2D" parent="."]
-script = ExtResource( 20 )
 
 [node name="AnimationNodeBlendMachine" type="Node2D" parent="."]
-script = ExtResource( 12 )
 
 [node name="AnimationNodeBlendBlend2" type="Node2D" parent="."]
-script = ExtResource( 41 )
 
 [node name="AnimationNodeBlendBlend3" type="Node2D" parent="."]
-script = ExtResource( 29 )
 
 [node name="AnimationNodeOneShot" type="Node2D" parent="."]
-script = ExtResource( 39 )
 
 [node name="AnimationNodeOutput" type="Node2D" parent="."]
-script = ExtResource( 10 )
 
 [node name="AnimationNodeTimeScale" type="Node2D" parent="."]
-script = ExtResource( 28 )
 
 [node name="AnimationNodeTimeSeek" type="Node2D" parent="."]
-script = ExtResource( 40 )
 
 [node name="AnimationNodeTransition" type="Node2D" parent="."]
-script = ExtResource( 19 )
 
 [node name="AnimationNodeBlendStateMachinePlayback" type="Node2D" parent="."]
-script = ExtResource( 17 )
 
 [node name="AnimationNodeBlendStateMachineTransition" type="Node2D" parent="."]
-script = ExtResource( 27 )
 
 [node name="Mesh" type="Node2D" parent="."]
-script = ExtResource( 26 )
 
 [node name="ArrayMesh" type="Node2D" parent="."]
-script = ExtResource( 31 )
 
 [node name="PrimitiveMesh_CHILD" type="Node2D" parent="."]
-script = ExtResource( 200 )
 
 [node name="CapsuleMesh" type="Node2D" parent="."]
-script = ExtResource( 199 )
 
 [node name="CubeMesh" type="Node2D" parent="."]
-script = ExtResource( 216 )
 
 [node name="CylinderMesh" type="Node2D" parent="."]
-script = ExtResource( 217 )
 
 [node name="PlaneMesh" type="Node2D" parent="."]
-script = ExtResource( 204 )
 
 [node name="PointMesh" type="Node2D" parent="."]
-script = ExtResource( 429 )
 
 [node name="PrismMesh" type="Node2D" parent="."]
-script = ExtResource( 203 )
 
 [node name="QuadMesh" type="Node2D" parent="."]
-script = ExtResource( 202 )
 
 [node name="SphereMesh" type="Node2D" parent="."]
-script = ExtResource( 201 )
 
 [node name="AudioBusLayout" type="Node2D" parent="."]
-script = ExtResource( 219 )
 
 [node name="AudioEffect_CHILD" type="Node2D" parent="."]
-script = ExtResource( 218 )
 
 [node name="AudioEffectAmplify" type="Node2D" parent="."]
-script = ExtResource( 220 )
 
 [node name="AudioEffectFilter" type="Node2D" parent="."]
-script = ExtResource( 221 )
 
 [node name="AudioEffectBandLimitFilter" type="Node2D" parent="."]
-script = ExtResource( 213 )
 
 [node name="AudioEffectBandPassFilter" type="Node2D" parent="."]
-script = ExtResource( 212 )
 
 [node name="AudioEffectHighPassFilter" type="Node2D" parent="."]
-script = ExtResource( 215 )
 
 [node name="AudioEffectHighShelfFilter" type="Node2D" parent="."]
-script = ExtResource( 198 )
 
 [node name="AudioEffectLowPassFilter" type="Node2D" parent="."]
-script = ExtResource( 214 )
 
 [node name="AudioEffectLowShelfFilter" type="Node2D" parent="."]
-script = ExtResource( 209 )
 
 [node name="AudioEffectNotchFilter" type="Node2D" parent="."]
-script = ExtResource( 210 )
 
 [node name="AudioEffectChorus" type="Node2D" parent="."]
-script = ExtResource( 211 )
 
 [node name="AudioEffectCompressor" type="Node2D" parent="."]
-script = ExtResource( 205 )
 
 [node name="AudioEffectDelay" type="Node2D" parent="."]
-script = ExtResource( 206 )
 
 [node name="AudioEffectDistortion" type="Node2D" parent="."]
-script = ExtResource( 208 )
 
 [node name="AudioEffectEQ" type="Node2D" parent="."]
-script = ExtResource( 232 )
 
 [node name="AudioEffectEQ10" type="Node2D" parent="."]
-script = ExtResource( 233 )
 
 [node name="AudioEffectEQ21" type="Node2D" parent="."]
-script = ExtResource( 229 )
 
 [node name="AudioEffectEQ6" type="Node2D" parent="."]
-script = ExtResource( 227 )
 
 [node name="AudioEffectLimiter" type="Node2D" parent="."]
-script = ExtResource( 228 )
 
 [node name="AudioEffectPanner" type="Node2D" parent="."]
-script = ExtResource( 230 )
 
 [node name="AudioEffectPhaser" type="Node2D" parent="."]
-script = ExtResource( 237 )
 
 [node name="AudioEffectPitchShift" type="Node2D" parent="."]
-script = ExtResource( 226 )
 
 [node name="AudioEffectRecord" type="Node2D" parent="."]
-script = ExtResource( 238 )
 
 [node name="AudioEffectReverb" type="Node2D" parent="."]
-script = ExtResource( 236 )
 
 [node name="AudioEffectSpectrumAnalyzer" type="Node2D" parent="."]
-script = ExtResource( 225 )
 
 [node name="AudioEffectStereoEnhance" type="Node2D" parent="."]
-script = ExtResource( 222 )
 
 [node name="AudioStream_CHILD" type="Node2D" parent="."]
-script = ExtResource( 234 )
 
 [node name="AudioStreamGenerator" type="Node2D" parent="."]
-script = ExtResource( 223 )
 
 [node name="AudioStreamMicrophone" type="Node2D" parent="."]
-script = ExtResource( 224 )
 
 [node name="AudioStreamOGGVorbis" type="Node2D" parent="."]
-script = ExtResource( 231 )
 
 [node name="AudioStreamRandomPitch" type="Node2D" parent="."]
-script = ExtResource( 250 )
 
 [node name="AudioStreamSample" type="Node2D" parent="."]
-script = ExtResource( 207 )
 
 [node name="BakedLightmapData" type="Node2D" parent="."]
-script = ExtResource( 235 )
 
 [node name="BitMap" type="Node2D" parent="."]
-script = ExtResource( 245 )
 
 [node name="Font_CHILD" type="Node2D" parent="."]
-script = ExtResource( 247 )
 
 [node name="BitmapFont" type="Node2D" parent="."]
-script = ExtResource( 248 )
 
 [node name="DynamicFont" type="Node2D" parent="."]
-script = ExtResource( 246 )
 
 [node name="Shape_CHILD" type="Node2D" parent="."]
-script = ExtResource( 242 )
 
 [node name="BoxShape" type="Node2D" parent="."]
-script = ExtResource( 244 )
 
 [node name="CapsuleShape" type="Node2D" parent="."]
-script = ExtResource( 243 )
 
 [node name="ConcavePolygonShape" type="Node2D" parent="."]
-script = ExtResource( 249 )
 
 [node name="ConvexPolygonShape" type="Node2D" parent="."]
-script = ExtResource( 260 )
 
 [node name="CylinderShape" type="Node2D" parent="."]
-script = ExtResource( 255 )
 
 [node name="HeightMapShape" type="Node2D" parent="."]
-script = ExtResource( 257 )
 
 [node name="PlaneShape" type="Node2D" parent="."]
-script = ExtResource( 259 )
 
 [node name="RayShape" type="Node2D" parent="."]
-script = ExtResource( 258 )
 
 [node name="SphereShape" type="Node2D" parent="."]
-script = ExtResource( 256 )
 
 [node name="ButtonGroup" type="Node2D" parent="."]
-script = ExtResource( 239 )
 
 [node name="Material_CHILD" type="Node2D" parent="."]
-script = ExtResource( 240 )
 
 [node name="CanvasItemMaterial" type="Node2D" parent="."]
-script = ExtResource( 251 )
 
 [node name="ParticlesMaterial" type="Node2D" parent="."]
-script = ExtResource( 241 )
 
 [node name="ShaderMaterial" type="Node2D" parent="."]
-script = ExtResource( 254 )
 
 [node name="SpatialMaterial" type="Node2D" parent="."]
-script = ExtResource( 252 )
 
 [node name="Shape2D_CHILD" type="Node2D" parent="."]
-script = ExtResource( 253 )
 
 [node name="CapsuleShape2D" type="Node2D" parent="."]
-script = ExtResource( 267 )
 
 [node name="CircleShape2D" type="Node2D" parent="."]
-script = ExtResource( 268 )
 
 [node name="ConcavePolygonShape2D" type="Node2D" parent="."]
-script = ExtResource( 269 )
 
 [node name="ConvexPolygonShape2D" type="Node2D" parent="."]
-script = ExtResource( 270 )
 
 [node name="LineShape2D" type="Node2D" parent="."]
-script = ExtResource( 266 )
 
 [node name="RayShape2D" type="Node2D" parent="."]
-script = ExtResource( 264 )
 
 [node name="RectangleShape2D" type="Node2D" parent="."]
-script = ExtResource( 265 )
 
 [node name="SegmentShape2D" type="Node2D" parent="."]
-script = ExtResource( 261 )
 
 [node name="CryptoKey" type="Node2D" parent="."]
-script = ExtResource( 196 )
 
 [node name="CubeMap" type="Node2D" parent="."]
-script = ExtResource( 262 )
 
 [node name="Curve" type="Node2D" parent="."]
-script = ExtResource( 263 )
 
 [node name="Curve2D" type="Node2D" parent="."]
-script = ExtResource( 278 )
 
 [node name="Curve3D" type="Node2D" parent="."]
-script = ExtResource( 279 )
 
 [node name="DynamicFontData" type="Node2D" parent="."]
-script = ExtResource( 274 )
 
 [node name="EditorSettings_JUST_DONT" type="Node2D" parent="."]
-script = ExtResource( 277 )
 
 [node name="EditorSpatialGizmoPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 271 )
 
 [node name="Environment" type="Node2D" parent="."]
-script = ExtResource( 289 )
 
 [node name="GDNativeLibrary" type="Node2D" parent="."]
-script = ExtResource( 272 )
 
 [node name="Script_CHILD" type="Node2D" parent="."]
-script = ExtResource( 273 )
 
 [node name="GDScript_WORKAROUND" type="Node2D" parent="."]
-script = ExtResource( 1 )
 
 [node name="NativeScript_CANT" type="Node2D" parent="."]
-script = ExtResource( 288 )
 
 [node name="PluginScript_CANT" type="Node2D" parent="."]
-script = ExtResource( 292 )
 
 [node name="VisualScript" type="Node2D" parent="."]
-script = ExtResource( 275 )
 
 [node name="GIProbeData" type="Node2D" parent="."]
-script = ExtResource( 295 )
 
 [node name="Gradient" type="Node2D" parent="."]
-script = ExtResource( 296 )
 
 [node name="Image" type="Node2D" parent="."]
-script = ExtResource( 293 )
 
 [node name="InputEvent_CHILD" type="Node2D" parent="."]
-script = ExtResource( 276 )
 
 [node name="InputEventAction" type="Node2D" parent="."]
-script = ExtResource( 280 )
 
 [node name="InputEventWithModifiers_CHILD" type="Node2D" parent="."]
-script = ExtResource( 294 )
 
 [node name="InputEventGesture_CHILD" type="Node2D" parent="."]
-script = ExtResource( 299 )
 
 [node name="InputEventMagnifyGesture" type="Node2D" parent="."]
-script = ExtResource( 300 )
 
 [node name="InputEventPanGesture" type="Node2D" parent="."]
-script = ExtResource( 281 )
 
 [node name="InputEventKey" type="Node2D" parent="."]
-script = ExtResource( 282 )
 
 [node name="InputEventMouse_CHILD" type="Node2D" parent="."]
-script = ExtResource( 284 )
 
 [node name="InputEventMouseButton" type="Node2D" parent="."]
-script = ExtResource( 287 )
 
 [node name="InputEventMouseMotion" type="Node2D" parent="."]
-script = ExtResource( 286 )
 
 [node name="InputEventJoypadButton" type="Node2D" parent="."]
-script = ExtResource( 285 )
 
 [node name="InputEventJoypadMotion" type="Node2D" parent="."]
-script = ExtResource( 291 )
 
 [node name="InputEventMIDI" type="Node2D" parent="."]
-script = ExtResource( 283 )
 
 [node name="InputEventScreenDrag" type="Node2D" parent="."]
-script = ExtResource( 298 )
 
 [node name="InputEventScreenTouch" type="Node2D" parent="."]
-script = ExtResource( 290 )
 
 [node name="MeshLibrary" type="Node2D" parent="."]
-script = ExtResource( 44 )
 
 [node name="MultiMesh" type="Node2D" parent="."]
-script = ExtResource( 413 )
 
 [node name="NavigationMesh" type="Node2D" parent="."]
-script = ExtResource( 427 )
 
 [node name="NavigationPolygon" type="Node2D" parent="."]
-script = ExtResource( 392 )
 
 [node name="OccluderPolygon2D" type="Node2D" parent="."]
-script = ExtResource( 394 )
 
 [node name="OpenSimplexNoise" type="Node2D" parent="."]
-script = ExtResource( 324 )
 
 [node name="Translation" type="Node2D" parent="."]
-script = ExtResource( 375 )
 
 [node name="PHashTranslation" type="Node2D" parent="."]
-script = ExtResource( 343 )
 
 [node name="PackedDataContainer" type="Node2D" parent="."]
-script = ExtResource( 312 )
 
 [node name="PackedScene" type="Node2D" parent="."]
-script = ExtResource( 395 )
 
 [node name="Sky_CHILD" type="Node2D" parent="."]
-script = ExtResource( 333 )
 
 [node name="PanoramaSky" type="Node2D" parent="."]
-script = ExtResource( 311 )
 
 [node name="ProceduralSky" type="Node2D" parent="."]
-script = ExtResource( 399 )
 
 [node name="PhysicsMaterial" type="Node2D" parent="."]
-script = ExtResource( 332 )
 
 [node name="PolygonPathFinder" type="Node2D" parent="."]
-script = ExtResource( 330 )
 
 [node name="RichTextEffect" type="Node2D" parent="."]
-script = ExtResource( 430 )
 
 [node name="Shader" type="Node2D" parent="."]
-script = ExtResource( 376 )
 
 [node name="VisualShader" type="Node2D" parent="."]
-script = ExtResource( 381 )
 
 [node name="ShortCut" type="Node2D" parent="."]
-script = ExtResource( 357 )
 
 [node name="Skin" type="Node2D" parent="."]
-script = ExtResource( 431 )
 
 [node name="SpriteFrames" type="Node2D" parent="."]
-script = ExtResource( 314 )
 
 [node name="StyleBox_CHILD" type="Node2D" parent="."]
-script = ExtResource( 378 )
 
 [node name="StyleBoxEmpty_CANT" type="Node2D" parent="."]
-script = ExtResource( 361 )
 
 [node name="StyleBoxFlat" type="Node2D" parent="."]
-script = ExtResource( 367 )
 
 [node name="StyleBoxLine" type="Node2D" parent="."]
-script = ExtResource( 415 )
 
 [node name="StyleBoxTexture" type="Node2D" parent="."]
-script = ExtResource( 386 )
 
 [node name="TextFile_CANT" type="Node2D" parent="."]
-script = ExtResource( 370 )
 
 [node name="TextureLayered_CANT" type="Node2D" parent="."]
-script = ExtResource( 391 )
 
 [node name="Texture3D_CANT" type="Node2D" parent="."]
-script = ExtResource( 380 )
 
 [node name="TextureArray_CANT" type="Node2D" parent="."]
-script = ExtResource( 387 )
 
 [node name="Theme" type="Node2D" parent="."]
-script = ExtResource( 338 )
 
 [node name="TileSet" type="Node2D" parent="."]
-script = ExtResource( 382 )
 
 [node name="VideoStream_CHILD" type="Node2D" parent="."]
-script = ExtResource( 359 )
 
 [node name="VideoStreamGDNative" type="Node2D" parent="."]
-script = ExtResource( 355 )
 
 [node name="VideoStreamTheora" type="Node2D" parent="."]
-script = ExtResource( 358 )
 
 [node name="VideoStreamWebm" type="Node2D" parent="."]
-script = ExtResource( 372 )
 
 [node name="VisualScriptNode_CHILD" type="Node2D" parent="."]
-script = ExtResource( 86 )
 
 [node name="VisualScriptBasicTypeConstant" type="Node2D" parent="."]
-script = ExtResource( 80 )
 
 [node name="VisualScriptBuiltinFunc" type="Node2D" parent="."]
-script = ExtResource( 79 )
 
 [node name="VisualScriptClassConstant" type="Node2D" parent="."]
-script = ExtResource( 78 )
 
 [node name="VisualScriptComment" type="Node2D" parent="."]
-script = ExtResource( 81 )
 
 [node name="VisualScriptLists_CANT" type="Node2D" parent="."]
-script = ExtResource( 432 )
 
 [node name="VisualScriptComposeArray_CANT" type="Node2D" parent="."]
-script = ExtResource( 433 )
 
 [node name="VisualScriptCondition_CANT" type="Node2D" parent="."]
-script = ExtResource( 82 )
 
 [node name="VisualScriptConstant" type="Node2D" parent="."]
-script = ExtResource( 83 )
 
 [node name="VisualScriptConstructor" type="Node2D" parent="."]
-script = ExtResource( 84 )
 
 [node name="VisualScriptCustomNode_CANT" type="Node2D" parent="."]
-script = ExtResource( 85 )
 
 [node name="VisualScriptDeconstruct" type="Node2D" parent="."]
-script = ExtResource( 50 )
 
 [node name="VisualScriptEmitSignal" type="Node2D" parent="."]
-script = ExtResource( 73 )
 
 [node name="VisualScriptEngineSingleton" type="Node2D" parent="."]
-script = ExtResource( 51 )
 
 [node name="VisualScriptExpression_CANT" type="Node2D" parent="."]
-script = ExtResource( 94 )
 
 [node name="VisualScriptFunction_CANT" type="Node2D" parent="."]
-script = ExtResource( 66 )
 
 [node name="VisualScriptFunctionCall" type="Node2D" parent="."]
-script = ExtResource( 102 )
 
 [node name="VisualScriptGlobalConstant" type="Node2D" parent="."]
-script = ExtResource( 92 )
 
 [node name="VisualScriptIndexGet_CANT" type="Node2D" parent="."]
-script = ExtResource( 123 )
 
 [node name="VisualScriptIndexSet_CANT" type="Node2D" parent="."]
-script = ExtResource( 70 )
 
 [node name="VisualScriptInputAction" type="Node2D" parent="."]
-script = ExtResource( 65 )
 
 [node name="VisualScriptIterator_CANT" type="Node2D" parent="."]
-script = ExtResource( 76 )
 
 [node name="VisualScriptLocalVar" type="Node2D" parent="."]
-script = ExtResource( 125 )
 
 [node name="VisualScriptLocalVarSet" type="Node2D" parent="."]
-script = ExtResource( 56 )
 
 [node name="VisualScriptMathConstant" type="Node2D" parent="."]
-script = ExtResource( 74 )
 
 [node name="VisualScriptOperator" type="Node2D" parent="."]
-script = ExtResource( 71 )
 
 [node name="VisualScriptPreload" type="Node2D" parent="."]
-script = ExtResource( 97 )
 
 [node name="VisualScriptPropertyGet" type="Node2D" parent="."]
-script = ExtResource( 133 )
 
 [node name="VisualScriptPropertySet" type="Node2D" parent="."]
-script = ExtResource( 112 )
 
 [node name="VisualScriptResourcePath" type="Node2D" parent="."]
-script = ExtResource( 107 )
 
 [node name="VisualScriptReturn" type="Node2D" parent="."]
-script = ExtResource( 64 )
 
 [node name="VisualScriptSceneNode" type="Node2D" parent="."]
-script = ExtResource( 127 )
 
 [node name="VisualScriptSceneTree_CANT" type="Node2D" parent="."]
-script = ExtResource( 89 )
 
 [node name="VisualScriptSelect" type="Node2D" parent="."]
-script = ExtResource( 134 )
 
 [node name="VisualScriptSelf_CANT" type="Node2D" parent="."]
-script = ExtResource( 48 )
 
 [node name="VisualScriptSequence" type="Node2D" parent="."]
-script = ExtResource( 63 )
 
 [node name="VisualScriptSubCall_CANT" type="Node2D" parent="."]
-script = ExtResource( 69 )
 
 [node name="VisualScriptSwitch_CANT" type="Node2D" parent="."]
-script = ExtResource( 93 )
 
 [node name="VisualScriptTypeCast" type="Node2D" parent="."]
-script = ExtResource( 95 )
 
 [node name="VisualScriptVariableGet" type="Node2D" parent="."]
-script = ExtResource( 126 )
 
 [node name="VisualScriptWhile_CANT" type="Node2D" parent="."]
-script = ExtResource( 128 )
 
 [node name="VisualScriptYield" type="Node2D" parent="."]
-script = ExtResource( 116 )
 
 [node name="VisualScriptYieldSignal" type="Node2D" parent="."]
-script = ExtResource( 3 )
 
 [node name="VisualShaderNode_CHILD" type="Node2D" parent="."]
-script = ExtResource( 124 )
 
 [node name="VisualShaderNodeBooleanConstant" type="Node2D" parent="."]
-script = ExtResource( 119 )
 
 [node name="VisualShaderNodeUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 90 )
 
 [node name="VisualShaderNodeBooleanUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 101 )
 
 [node name="VisualShaderNodeColorUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 135 )
 
 [node name="VisualShaderNodeScalarUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 130 )
 
 [node name="VisualShaderNodeTextureUniform" type="Node2D" parent="."]
-script = ExtResource( 121 )
 
 [node name="VisualShaderNodeTextureUniformTriplanar_CANT" type="Node2D" parent="."]
-script = ExtResource( 434 )
 
 [node name="VisualShaderNodeTransformUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 100 )
 
 [node name="VisualShaderNodeVec3Uniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 67 )
 
 [node name="VisualShaderNodeColorConstant" type="Node2D" parent="."]
-script = ExtResource( 49 )
 
 [node name="VisualShaderNodeColorFunc" type="Node2D" parent="."]
-script = ExtResource( 59 )
 
 [node name="VisualShaderNodeColorOp" type="Node2D" parent="."]
-script = ExtResource( 87 )
 
 [node name="VisualShaderNodeCompare" type="Node2D" parent="."]
-script = ExtResource( 435 )
 
 [node name="VisualScriptVariableSet" type="Node2D" parent="."]
-script = ExtResource( 54 )
 
 [node name="VisualShaderNodeCubeMap" type="Node2D" parent="."]
-script = ExtResource( 46 )
 
 [node name="VisualShaderNodeCubeMapUniform_CANT" type="Node2D" parent="."]
-script = ExtResource( 137 )
 
 [node name="VisualShaderNodeCustom_CANT" type="Node2D" parent="."]
-script = ExtResource( 436 )
 
 [node name="VisualShaderNodeDeterminant_CANT" type="Node2D" parent="."]
-script = ExtResource( 122 )
 
 [node name="VisualShaderNodeDotProduct_CANT" type="Node2D" parent="."]
-script = ExtResource( 138 )
 
 [node name="VisualShaderNodeGroupBase" type="Node2D" parent="."]
-script = ExtResource( 96 )
 
 [node name="VisualShaderNodeExpression" type="Node2D" parent="."]
-script = ExtResource( 75 )
 
 [node name="VisualShaderNodeGlobalExpression" type="Node2D" parent="."]
-script = ExtResource( 437 )
 
 [node name="VisualShaderNodeFaceForward_CANT" type="Node2D" parent="."]
-script = ExtResource( 62 )
 
 [node name="VisualShaderNodeFresnel_CANT" type="Node2D" parent="."]
-script = ExtResource( 104 )
 
 [node name="VisualShaderNodeIf_CANT" type="Node2D" parent="."]
-script = ExtResource( 110 )
 
 [node name="VisualShaderNodeInput" type="Node2D" parent="."]
-script = ExtResource( 120 )
 
 [node name="VisualShaderNodeIs" type="Node2D" parent="."]
-script = ExtResource( 438 )
 
 [node name="VisualShaderNodeOuterProduct_CANT" type="Node2D" parent="."]
-script = ExtResource( 131 )
 
 [node name="VisualShaderNodeOutput_CANT" type="Node2D" parent="."]
-script = ExtResource( 55 )
 
 [node name="VisualShaderNodeScalarClamp_CANT" type="Node2D" parent="."]
-script = ExtResource( 60 )
 
 [node name="VisualShaderNodeScalarConstant" type="Node2D" parent="."]
-script = ExtResource( 114 )
 
 [node name="VisualShaderNodeScalarDerivativeFunc" type="Node2D" parent="."]
-script = ExtResource( 108 )
 
 [node name="VisualShaderNodeScalarFunc" type="Node2D" parent="."]
-script = ExtResource( 105 )
 
 [node name="VisualShaderNodeScalarInterp_CANT" type="Node2D" parent="."]
-script = ExtResource( 88 )
 
 [node name="VisualShaderNodeScalarOp" type="Node2D" parent="."]
-script = ExtResource( 52 )
 
 [node name="VisualShaderNodeScalarSmoothStep_CANT" type="Node2D" parent="."]
-script = ExtResource( 118 )
 
 [node name="VisualShaderNodeSwitch_CANT" type="Node2D" parent="."]
-script = ExtResource( 111 )
 
 [node name="VisualShaderNodeScalarSwitch_CANT" type="Node2D" parent="."]
-script = ExtResource( 111 )
 
 [node name="VisualShaderNodeTexture" type="Node2D" parent="."]
-script = ExtResource( 99 )
 
 [node name="VisualShaderNodeTransformCompose_CANT" type="Node2D" parent="."]
-script = ExtResource( 45 )
 
 [node name="VisualShaderNodeTransformConstant" type="Node2D" parent="."]
-script = ExtResource( 117 )
 
 [node name="VisualShaderNodeDecompose_CANT" type="Node2D" parent="."]
-script = ExtResource( 61 )
 
 [node name="VisualShaderNodeTransformFunc" type="Node2D" parent="."]
-script = ExtResource( 68 )
 
 [node name="VisualShaderNodeTransformMult" type="Node2D" parent="."]
-script = ExtResource( 53 )
 
 [node name="VisualShaderNodeTransformVecMult" type="Node2D" parent="."]
-script = ExtResource( 91 )
 
 [node name="VisualShaderNodeVec3Constant" type="Node2D" parent="."]
-script = ExtResource( 103 )
 
 [node name="VisualShaderNodeVectorClamp_CANT" type="Node2D" parent="."]
-script = ExtResource( 77 )
 
 [node name="VisualShaderNodeVectorCompose_CANT" type="Node2D" parent="."]
-script = ExtResource( 129 )
 
 [node name="VisualShaderNodeVectorDecompose_CANT" type="Node2D" parent="."]
-script = ExtResource( 72 )
 
 [node name="VisualShaderNodeVectorDerivativeFunc" type="Node2D" parent="."]
-script = ExtResource( 109 )
 
 [node name="VisualShaderNodeVectorDistance_CANT" type="Node2D" parent="."]
-script = ExtResource( 57 )
 
 [node name="VisualShaderNodeVectorFunc" type="Node2D" parent="."]
-script = ExtResource( 58 )
 
 [node name="VisualShaderNodeVectorInterp_CANT" type="Node2D" parent="."]
-script = ExtResource( 115 )
 
 [node name="VisualShaderNodeVectorLen_CANT" type="Node2D" parent="."]
-script = ExtResource( 132 )
 
 [node name="VisualShaderNodeVectorOp" type="Node2D" parent="."]
-script = ExtResource( 136 )
 
 [node name="VisualShaderNodeVectorRefract_CANT" type="Node2D" parent="."]
-script = ExtResource( 106 )
 
 [node name="VisualShaderNodeVectorScalarMix_CANT" type="Node2D" parent="."]
-script = ExtResource( 439 )
 
 [node name="VisualShaderNodeVectorScalarSmoothStep_CANT" type="Node2D" parent="."]
-script = ExtResource( 113 )
 
 [node name="VisualShaderNodeVectorScalarStep_CANT" type="Node2D" parent="."]
-script = ExtResource( 98 )
 
 [node name="VisualShaderNodeVectorSmoothStep_CANT" type="Node2D" parent="."]
-script = ExtResource( 47 )
 
 [node name="World" type="Node2D" parent="."]
-script = ExtResource( 157 )
 
 [node name="World2D" type="Node2D" parent="."]
-script = ExtResource( 331 )
 
 [node name="X509Certificate" type="Node2D" parent="."]
-script = ExtResource( 440 )
 
 [node name="AnimationTrackEditPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 148 )
 
 [node name="AudioEffectInstance_CANT" type="Node2D" parent="."]
-script = ExtResource( 150 )
 
 [node name="AudioEffectAmplifyInstance_CANT" type="Node2D" parent="."]
-script = ExtResource( 441 )
 
 [node name="AudioEffectEQInstance_CANT" type="Node2D" parent="."]
-script = ExtResource( 442 )
 
 [node name="AudioEffectPannerInstance_CANT" type="Node2D" parent="."]
-script = ExtResource( 443 )
 
 [node name="AudioEffectSpectrumAnalyzerInstance_CANT" type="Node2D" parent="."]
-script = ExtResource( 325 )
 
 [node name="AudioStreamPlayback_CANT" type="Node2D" parent="."]
-script = ExtResource( 142 )
 
 [node name="AudioStreamPlaybackResampled_CANT" type="Node2D" parent="."]
-script = ExtResource( 139 )
 
 [node name="AudioStreamGeneratorPlayback_CANT" type="Node2D" parent="."]
-script = ExtResource( 161 )
 
 [node name="CameraFeed" type="Node2D" parent="."]
-script = ExtResource( 174 )
 
 [node name="CharFXTransform" type="Node2D" parent="."]
-script = ExtResource( 444 )
 
 [node name="ConfigFile" type="Node2D" parent="."]
-script = ExtResource( 143 )
 
 [node name="Crypto" type="Node2D" parent="."]
-script = ExtResource( 445 )
 
 [node name="Directory" type="Node2D" parent="."]
-script = ExtResource( 194 )
 
 [node name="EditorExportPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 297 )
 
 [node name="EditorFeatureProfile_CANT" type="Node2D" parent="."]
-script = ExtResource( 149 )
 
 [node name="ResourceImporter_CANT2" type="Node2D" parent="."]
-script = ExtResource( 446 )
 
 [node name="EditorImportPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 151 )
 
 [node name="ResourceImporterOGGVorbis_CANT" type="Node2D" parent="."]
-script = ExtResource( 183 )
 
 [node name="EditorInspectorPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 197 )
 
 [node name="EditorResourceConversionPlugin_CANT" type="Node2D" parent="."]
-script = ExtResource( 304 )
 
 [node name="EditorResourcePreviewGenerator_CANT" type="Node2D" parent="."]
-script = ExtResource( 404 )
 
 [node name="EditorSceneImporter_CANT" type="Node2D" parent="."]
-script = ExtResource( 377 )
 
 [node name="EditorSceneImporterAssimp_CANT" type="Node2D" parent="."]
-script = ExtResource( 163 )
 
 [node name="EditorScenePostImport_CANT" type="Node2D" parent="."]
-script = ExtResource( 153 )
 
 [node name="EditorScript_CANT" type="Node2D" parent="."]
-script = ExtResource( 147 )
 
 [node name="SpatialGizmo_CANT" type="Node2D" parent="."]
-script = ExtResource( 313 )
 
 [node name="EditorSpatialGizmo_CANT" type="Node2D" parent="."]
-script = ExtResource( 167 )
 
 [node name="EncodedObjectAsID" type="Node2D" parent="."]
-script = ExtResource( 390 )
 
 [node name="Expression" type="Node2D" parent="."]
-script = ExtResource( 190 )
 
 [node name="File" type="Node2D" parent="."]
-script = ExtResource( 165 )
 
 [node name="FuncRef_CANT" type="Node2D" parent="."]
-script = ExtResource( 189 )
 
 [node name="GDNative" type="Node2D" parent="."]
-script = ExtResource( 164 )
 
 [node name="GDScriptFunctionState_CANT" type="Node2D" parent="."]
-script = ExtResource( 168 )
 
 [node name="GDScriptNativeClass_CANT" type="Node2D" parent="."]
-script = ExtResource( 362 )
 
 [node name="HTTPClient" type="Node2D" parent="."]
-script = ExtResource( 155 )
 
 [node name="HashingContext" type="Node2D" parent="."]
-script = ExtResource( 447 )
 
 [node name="JSONParseResult" type="Node2D" parent="."]
-script = ExtResource( 316 )
 
 [node name="KinematicCollision" type="Node2D" parent="."]
-script = ExtResource( 341 )
 
 [node name="KinematicCollision2D" type="Node2D" parent="."]
-script = ExtResource( 407 )
 
 [node name="Marshalls_CANT" type="Node2D" parent="."]
-script = ExtResource( 184 )
 
 [node name="MeshDataTool" type="Node2D" parent="."]
-script = ExtResource( 191 )
 
 [node name="MultiplayerAPI" type="Node2D" parent="."]
-script = ExtResource( 426 )
 
 [node name="PacketPeer_CHILD" type="Node2D" parent="."]
-script = ExtResource( 409 )
 
 [node name="NetworkedMultiplayerPeer_CHILD" type="Node2D" parent="."]
-script = ExtResource( 339 )
 
 [node name="MultiplayerPeerGDNative_CANT" type="Node2D" parent="."]
-script = ExtResource( 170 )
 
 [node name="NetworkedMultiplayerENet" type="Node2D" parent="."]
-script = ExtResource( 154 )
 
 [node name="WebRTCMultiplayer" type="Node2D" parent="."]
-script = ExtResource( 152 )
 
 [node name="WebSocketMultiplayerPeer_CHILD" type="Node2D" parent="."]
-script = ExtResource( 160 )
 
 [node name="WebSocketClient" type="Node2D" parent="."]
-script = ExtResource( 175 )
 
 [node name="WebSocketServer_SPAM" type="Node2D" parent="."]
-script = ExtResource( 166 )
 
 [node name="PacketPeerGDNative_CANT" type="Node2D" parent="."]
-script = ExtResource( 335 )
 
 [node name="PacketPeerStream" type="Node2D" parent="."]
-script = ExtResource( 327 )
 
 [node name="PacketPeerUDP" type="Node2D" parent="."]
-script = ExtResource( 176 )
 
 [node name="WebRTCDataChannel_CANT" type="Node2D" parent="."]
-script = ExtResource( 410 )
 
 [node name="WebRTCDataChannelGDNative_CANT" type="Node2D" parent="."]
-script = ExtResource( 182 )
 
 [node name="WebSocketPeer" type="Node2D" parent="."]
-script = ExtResource( 398 )
 
 [node name="Mutex" type="Node2D" parent="."]
-script = ExtResource( 158 )
 
 [node name="PCKPacker" type="Node2D" parent="."]
-script = ExtResource( 192 )
 
 [node name="PackerDatacontainerRef_CANT" type="Node2D" parent="."]
-script = ExtResource( 360 )
 
 [node name="Physics2DShapeQueryParameters" type="Node2D" parent="."]
-script = ExtResource( 402 )
 
 [node name="Physics2DShapeQueryResult_CANT" type="Node2D" parent="."]
-script = ExtResource( 307 )
 
 [node name="Physics2DTestMotionResult" type="Node2D" parent="."]
-script = ExtResource( 401 )
 
 [node name="PhysicsShapeQueryParameters" type="Node2D" parent="."]
-script = ExtResource( 178 )
 
 [node name="PhysicsShapeQueryResult_CANT" type="Node2D" parent="."]
-script = ExtResource( 173 )
 
 [node name="RandomNumberGenerator" type="Node2D" parent="."]
-script = ExtResource( 326 )
 
 [node name="RegEx" type="Node2D" parent="."]
-script = ExtResource( 306 )
 
 [node name="RegExMatch" type="Node2D" parent="."]
-script = ExtResource( 186 )
 
 [node name="ResourceFormatLoader_CANT" type="Node2D" parent="."]
-script = ExtResource( 334 )
 
 [node name="ResourceFormatLoaderCrypto_CANT" type="Node2D" parent="."]
-script = ExtResource( 448 )
 
 [node name="ResourceFormatSaver_CANT" type="Node2D" parent="."]
-script = ExtResource( 146 )
 
 [node name="ResourceFormatSaverCrypto_CANT" type="Node2D" parent="."]
-script = ExtResource( 449 )
 
 [node name="ResourceImporter_CANT" type="Node2D" parent="."]
-script = ExtResource( 446 )
 
 [node name="ResourveInteractiveLoader_CANT" type="Node2D" parent="."]
-script = ExtResource( 159 )
 
 [node name="SceneState_CANT" type="Node2D" parent="."]
-script = ExtResource( 169 )
 
 [node name="SceneTreeTimer_CANT" type="Node2D" parent="."]
-script = ExtResource( 145 )
 
 [node name="Semaphore_DONT_USE" type="Node2D" parent="."]
-script = ExtResource( 144 )
 
 [node name="SkinReference_CANT" type="Node2D" parent="."]
-script = ExtResource( 450 )
 
 [node name="SpatialVelocityTracker" type="Node2D" parent="."]
-script = ExtResource( 141 )
 
 [node name="StreamPeer_CHILD" type="Node2D" parent="."]
-script = ExtResource( 411 )
 
 [node name="StreamPeerBuffer" type="Node2D" parent="."]
-script = ExtResource( 328 )
 
 [node name="StreamPeerGDNative_CANT" type="Node2D" parent="."]
-script = ExtResource( 193 )
 
 [node name="StreamPeerSSL" type="Node2D" parent="."]
-script = ExtResource( 344 )
 
 [node name="StreamPeerTCP" type="Node2D" parent="."]
-script = ExtResource( 352 )
 
 [node name="SurfaceTool" type="Node2D" parent="."]
-script = ExtResource( 371 )
 
 [node name="TCP_Server" type="Node2D" parent="."]
-script = ExtResource( 308 )
 
 [node name="Thread" type="Node2D" parent="."]
-script = ExtResource( 356 )
 
 [node name="TriangleMesh_CANT" type="Node2D" parent="."]
-script = ExtResource( 408 )
 
 [node name="UPNP" type="Node2D" parent="."]
-script = ExtResource( 374 )
 
 [node name="UPNPDevice" type="Node2D" parent="."]
-script = ExtResource( 403 )
 
 [node name="VisualScriptFunctionState" type="Node2D" parent="."]
-script = ExtResource( 188 )
 
 [node name="WeakRef" type="Node2D" parent="."]
-script = ExtResource( 393 )
 
 [node name="WebRTCPeerConnection" type="Node2D" parent="."]
-script = ExtResource( 162 )
 
 [node name="WebRTCPeerConnectionGDNative_CANT" type="Node2D" parent="."]
-script = ExtResource( 412 )
 
 [node name="XMLParser" type="Node2D" parent="."]
-script = ExtResource( 140 )
 
 [node name="ARVRPositionalTracker_LEAK" type="Node2D" parent="."]
-script = ExtResource( 310 )
 
 [node name="ARVRServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 345 )
 
 [node name="AudioServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 420 )
 
 [node name="PhysicsDirectBodyState_CANT" type="Node2D" parent="."]
-script = ExtResource( 379 )
 
 [node name="BulletPhysicsDirectBodyState_CANT" type="Node2D" parent="."]
-script = ExtResource( 340 )
 
 [node name="PhysicsDirectSpaceState_CANT" type="Node2D" parent="."]
-script = ExtResource( 323 )
 
 [node name="BulletPhysicsDirectSpaceState_CANT" type="Node2D" parent="."]
-script = ExtResource( 364 )
 
 [node name="PhysicsServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 405 )
 
 [node name="BulletPhysicsServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 389 )
 
 [node name="CameraServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 342 )
 
 [node name="ClassDB_CANT" type="Node2D" parent="."]
-script = ExtResource( 172 )
 
 [node name="EditorFileSystemDirectory_CANT" type="Node2D" parent="."]
-script = ExtResource( 302 )
 
 [node name="EditorNavigationMeshGenerator_LEAK" type="Node2D" parent="."]
-script = ExtResource( 388 )
 
 [node name="EditorSelection_CANT" type="Node2D" parent="."]
-script = ExtResource( 187 )
 
 [node name="EditorVCSInterface_CANT" type="Node2D" parent="."]
-script = ExtResource( 451 )
 
 [node name="Engine_CANT" type="Node2D" parent="."]
-script = ExtResource( 369 )
 
 [node name="Geometry_CANT" type="Node2D" parent="."]
-script = ExtResource( 346 )
 
 [node name="IP_CANT" type="Node2D" parent="."]
-script = ExtResource( 400 )
 
 [node name="IP_Unix_CANT" type="Node2D" parent="."]
-script = ExtResource( 301 )
 
 [node name="Input_CANT" type="Node2D" parent="."]
-script = ExtResource( 177 )
 
 [node name="InputDefault_CANT" type="Node2D" parent="."]
-script = ExtResource( 305 )
 
 [node name="InputMap_CANT" type="Node2D" parent="."]
-script = ExtResource( 195 )
 
 [node name="JSON_CANT" type="Node2D" parent="."]
-script = ExtResource( 318 )
 
 [node name="JSONRPC_LEAK" type="Node2D" parent="."]
-script = ExtResource( 452 )
 
 [node name="JavaScript_CANT" type="Node2D" parent="."]
-script = ExtResource( 350 )
 
 [node name="MainLoop_LEAK" type="Node2D" parent="."]
-script = ExtResource( 351 )
 
 [node name="SceneTree\?" type="Node2D" parent="."]
-script = ExtResource( 397 )
 
 [node name="OS_CANT" type="Node2D" parent="."]
-script = ExtResource( 396 )
 
 [node name="Performance_CANT" type="Node2D" parent="."]
-script = ExtResource( 385 )
 
 [node name="Physics2DDirectBodyState_CANT" type="Node2D" parent="."]
-script = ExtResource( 384 )
 
 [node name="Physics2DDirectBodyStateSW_CANT" type="Node2D" parent="."]
-script = ExtResource( 329 )
 
 [node name="Physics2DDirectSpaceState_CANT" type="Node2D" parent="."]
-script = ExtResource( 156 )
 
 [node name="Physics2DDirectSpaceStateSW_CANT" type="Node2D" parent="."]
-script = ExtResource( 315 )
 
 [node name="Physics2DServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 421 )
 
 [node name="Physics2DServerSW_CANT" type="Node2D" parent="."]
-script = ExtResource( 317 )
 
 [node name="ProjectSettings_JUST_DONT" type="Node2D" parent="."]
-script = ExtResource( 406 )
 
 [node name="ResourceLoader_CANT" type="Node2D" parent="."]
-script = ExtResource( 303 )
 
 [node name="ResourceSaver_CANT" type="Node2D" parent="."]
-script = ExtResource( 336 )
 
 [node name="TranslationServer_SERVER" type="Node2D" parent="."]
-script = ExtResource( 373 )
 
 [node name="TreeItem_CANT" type="Node2D" parent="."]
-script = ExtResource( 366 )
 
 [node name="UndoRedo_LEAK" type="Node2D" parent="."]
-script = ExtResource( 422 )
 
 [node name="VisualScriptEditor_CANT" type="Node2D" parent="."]
-script = ExtResource( 309 )
 
 [node name="VisualServer_CANT" type="Node2D" parent="."]
-script = ExtResource( 424 )
 
 [node name="AABB_MOVED" type="Node2D" parent="."]
-script = ExtResource( 453 )
 
 [node name="Array" type="Node2D" parent="."]
-script = ExtResource( 423 )
 
 [node name="Basis" type="Node2D" parent="."]
-script = ExtResource( 368 )
 
 [node name="Color" type="Node2D" parent="."]
-script = ExtResource( 365 )
 
 [node name="Dictionary" type="Node2D" parent="."]
-script = ExtResource( 321 )
 
 [node name="Nil_CANT" type="Node2D" parent="."]
-script = ExtResource( 322 )
 
 [node name="NodePath" type="Node2D" parent="."]
-script = ExtResource( 416 )
 
 [node name="Plane" type="Node2D" parent="."]
-script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 347 )
 
 [node name="PoolIntArray" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 349 )
 
 [node name="PoolRealArray" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 320 )
 
 [node name="PoolStringArray" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 363 )
 
 [node name="PoolVector2Array" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 418 )
 
 [node name="PoolVector3Array" type="Node2D" parent="."]
 visible = false
-script = ExtResource( 419 )
 
 [node name="Quat" type="Node2D" parent="."]
-script = ExtResource( 354 )
 
 [node name="RID" type="Node2D" parent="."]
-script = ExtResource( 414 )
 
 [node name="Rect2" type="Node2D" parent="."]
-script = ExtResource( 185 )
 
 [node name="String" type="Node2D" parent="."]
-script = ExtResource( 181 )
 
 [node name="Transform" type="Node2D" parent="."]
-script = ExtResource( 337 )
 
 [node name="Transform2D" type="Node2D" parent="."]
-script = ExtResource( 179 )
 
 [node name="Variant_CANT" type="Node2D" parent="."]
-script = ExtResource( 425 )
 
 [node name="Vector2" type="Node2D" parent="."]
-script = ExtResource( 180 )
 
 [node name="Vector3" type="Node2D" parent="."]
-script = ExtResource( 171 )
 
 [node name="bool" type="Node2D" parent="."]
-script = ExtResource( 319 )
 
 [node name="float" type="Node2D" parent="."]
-script = ExtResource( 383 )
 
 [node name="int" type="Node2D" parent="."]
-script = ExtResource( 348 )

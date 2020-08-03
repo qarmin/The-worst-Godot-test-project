@@ -1,67 +1,7 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://3DALL/3DALL.gd" type="Script" id=1]
-[ext_resource path="res://3DALL/ARVROrigin.gd" type="Script" id=2]
-[ext_resource path="res://3DALL/ARVRController.gd" type="Script" id=3]
-[ext_resource path="res://3DALL/ARVRCamera.gd" type="Script" id=4]
-[ext_resource path="res://3DALL/ARVRAnchor.gd" type="Script" id=5]
-[ext_resource path="res://3DALL/Camera.gd" type="Script" id=6]
-[ext_resource path="res://3DALL/ClippedCamera.gd" type="Script" id=7]
-[ext_resource path="res://3DALL/InterpolatedCamera.gd" type="Script" id=8]
-[ext_resource path="res://3DALL/Generic6DOFJoint.gd" type="Script" id=9]
-[ext_resource path="res://3DALL/ConeTwistJoint.gd" type="Script" id=10]
-[ext_resource path="res://3DALL/OmniLight.gd" type="Script" id=11]
 [ext_resource path="res://RES/Sprite.png" type="Texture" id=12]
-[ext_resource path="res://3DALL/AnimatedSprite3D.gd" type="Script" id=13]
-[ext_resource path="res://3DALL/Sprite3D.gd" type="Script" id=14]
-[ext_resource path="res://3DALL/CPUParticles.gd" type="Script" id=15]
-[ext_resource path="res://3DALL/AAAAAAAAAAAAA.gd" type="Script" id=16]
-[ext_resource path="res://3DALL/CSGCombiner.gd" type="Script" id=17]
-[ext_resource path="res://3DALL/CSGSphere.gd" type="Script" id=18]
-[ext_resource path="res://3DALL/CSGPolygon.gd" type="Script" id=19]
-[ext_resource path="res://3DALL/CSGBox_CSGS_CSGP.gd" type="Script" id=20]
-[ext_resource path="res://3DALL/CSGMesh.gd" type="Script" id=21]
-[ext_resource path="res://3DALL/CSGCylinder.gd" type="Script" id=22]
-[ext_resource path="res://3DALL/CSGTorus.gd" type="Script" id=23]
-[ext_resource path="res://3DALL/ImmediateGeometry.gd" type="Script" id=24]
-[ext_resource path="res://3DALL/Particles.gd" type="Script" id=25]
-[ext_resource path="res://3DALL/MeshInstance.gd" type="Script" id=26]
-[ext_resource path="res://3DALL/MultiMeshInstance.gd" type="Script" id=27]
-[ext_resource path="res://3DALL/SliderJoint.gd" type="Script" id=28]
-[ext_resource path="res://3DALL/BakedLightmap.gd" type="Script" id=29]
-[ext_resource path="res://3DALL/DirectionalLight.gd" type="Script" id=30]
-[ext_resource path="res://3DALL/HingeJoint.gd" type="Script" id=31]
-[ext_resource path="res://3DALL/SpotLight.gd" type="Script" id=32]
-[ext_resource path="res://3DALL/GIProbe.gd" type="Script" id=33]
-[ext_resource path="res://3DALL/RootMotionView.gd" type="Script" id=34]
-[ext_resource path="res://3DALL/ReflectionProbe.gd" type="Script" id=35]
-[ext_resource path="res://3DALL/GridMap.gd" type="Script" id=36]
-[ext_resource path="res://3DALL/Area.gd" type="Script" id=37]
-[ext_resource path="res://3DALL/PhysicalBone.gd" type="Script" id=38]
-[ext_resource path="res://3DALL/RigidBody.gd" type="Script" id=39]
-[ext_resource path="res://3DALL/KinematicBody.gd" type="Script" id=40]
-[ext_resource path="res://3DALL/VehicleBody.gd" type="Script" id=41]
-[ext_resource path="res://3DALL/StaticBody.gd" type="Script" id=42]
-[ext_resource path="res://3DALL/AudioStreamPlayer3D.gd" type="Script" id=43]
-[ext_resource path="res://3DALL/PinJoint.gd" type="Script" id=44]
-[ext_resource path="res://3DALL/CollisionPolygon.gd" type="Script" id=45]
-[ext_resource path="res://3DALL/CollisionShape.gd" type="Script" id=46]
-[ext_resource path="res://3DALL/NavigationMeshInstance.gd" type="Script" id=47]
-[ext_resource path="res://3DALL/PathFollow.gd" type="Script" id=48]
-[ext_resource path="res://3DALL/VehicleWheel.gd" type="Script" id=49]
 [ext_resource path="res://icon.png" type="Texture" id=50]
-[ext_resource path="res://3DALL/Listener.gd" type="Script" id=51]
-[ext_resource path="res://3DALL/Path.gd" type="Script" id=52]
-[ext_resource path="res://3DALL/Navigation.gd" type="Script" id=53]
-[ext_resource path="res://3DALL/Position3D.gd" type="Script" id=54]
-[ext_resource path="res://3DALL/RemoteTransform.gd" type="Script" id=55]
-[ext_resource path="res://3DALL/Skeleton.gd" type="Script" id=56]
-[ext_resource path="res://3DALL/RayCast.gd" type="Script" id=57]
-[ext_resource path="res://3DALL/VisibilityNotifier.gd" type="Script" id=58]
-[ext_resource path="res://3DALL/ProximityGroup.gd" type="Script" id=59]
-[ext_resource path="res://3DALL/VisibilityEnabler.gd" type="Script" id=60]
-[ext_resource path="res://3DALL/SpringArm.gd" type="Script" id=61]
-[ext_resource path="res://3DALL/BoneAttachment.gd" type="Script" id=62]
 
 [sub_resource type="StreamTexture" id=1]
 flags = 23
@@ -189,51 +129,39 @@ margin = 1.21
 extents = Vector3( 1, 1.77, 1.71 )
 
 [node name="3DALL" type="Spatial"]
-script = ExtResource( 1 )
 
 [node name="ARVROrigin" type="ARVROrigin" parent="."]
-script = ExtResource( 2 )
 
 [node name="ARVRAnchor" type="ARVRAnchor" parent="ARVROrigin"]
-script = ExtResource( 5 )
 
 [node name="ARVRCamera_NOTHING" type="ARVRCamera" parent="ARVROrigin"]
 size = 16004.7
-script = ExtResource( 4 )
 
 [node name="ARVRController" type="ARVRController" parent="ARVROrigin"]
-script = ExtResource( 3 )
 
 [node name="Camera" type="Camera" parent="."]
-script = ExtResource( 6 )
 
 [node name="ClippedCamera" type="ClippedCamera" parent="."]
 size = 15954.2
-script = ExtResource( 7 )
 
 [node name="InterpolatedCamera" type="InterpolatedCamera" parent="."]
 size = 16384.0
 target = NodePath("../ARVROrigin/ARVRController")
-script = ExtResource( 8 )
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="."]
 frames = SubResource( 4 )
-script = ExtResource( 13 )
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 texture = ExtResource( 50 )
-script = ExtResource( 14 )
 
 [node name="CPUParticles" type="CPUParticles" parent="."]
 mesh = SubResource( 5 )
-script = ExtResource( 15 )
 
 [node name="CSGBox" type="CSGBox" parent="."]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="CSGCylinder" type="CSGCylinder" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.745602, 0, 0, 0, 1, 0, 0, 0 )
@@ -243,19 +171,16 @@ height = 45.8309
 sides = 3
 cone = true
 material = SubResource( 7 )
-script = ExtResource( 22 )
 
 [node name="CSGMesh" type="CSGMesh" parent="."]
 transform = Transform( 1, 0, 0, 0, 3.78, 0, 0, 0, 7.64, 5.27772, 5.196, 0 )
 invert_faces = true
 mesh = SubResource( 9 )
 material = SubResource( 11 )
-script = ExtResource( 21 )
 
 [node name="CSGPolygon" type="CSGPolygon" parent="."]
 polygon = PoolVector2Array( 1.3, 0.59, 1, 0.06, 1, -6.56, 0, 0, 0, 0, 0, 0 )
 material = SubResource( 12 )
-script = ExtResource( 19 )
 
 [node name="CSGSphere" type="CSGSphere" parent="."]
 invert_faces = true
@@ -264,7 +189,6 @@ radial_segments = 4
 rings = 4
 smooth_faces = false
 material = SubResource( 13 )
-script = ExtResource( 18 )
 
 [node name="CSGTorus" type="CSGTorus" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.71423, -3.42086 )
@@ -272,230 +196,175 @@ invert_faces = true
 inner_radius = 0.001
 sides = 5
 material = SubResource( 14 )
-script = ExtResource( 23 )
 
 [node name="CSGCombiner_NOTHING" type="CSGCombiner" parent="."]
 operation = 1
-script = ExtResource( 17 )
 
 [node name="CSGBox" type="CSGBox" parent="CSGCombiner_NOTHING"]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="CSGBox2" type="CSGBox" parent="CSGCombiner_NOTHING"]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="CSGBox3" type="CSGBox" parent="CSGCombiner_NOTHING"]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="CSGBox4" type="CSGBox" parent="CSGCombiner_NOTHING"]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="CSGBox5" type="CSGBox" parent="CSGCombiner_NOTHING"]
 invert_faces = true
 width = 44.173
 height = 19.604
 material = SubResource( 6 )
-script = ExtResource( 20 )
 
 [node name="ImmediateGeometry" type="ImmediateGeometry" parent="."]
 material_override = SubResource( 15 )
-script = ExtResource( 24 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 mesh = SubResource( 17 )
 material/0 = null
-script = ExtResource( 26 )
 
 [node name="MultiMeshInstance" type="MultiMeshInstance" parent="."]
 multimesh = SubResource( 19 )
-script = ExtResource( 27 )
 
 [node name="Particles" type="Particles" parent="."]
 process_material = SubResource( 20 )
-script = ExtResource( 25 )
 
 [node name="BakedLightmap" type="BakedLightmap" parent="."]
 image_path = "res://file.jpg"
 light_data = SubResource( 21 )
-script = ExtResource( 29 )
 
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 visible = false
-script = ExtResource( 30 )
 
 [node name="SpotLight" type="SpotLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -16.2155 )
 visible = false
-script = ExtResource( 32 )
 
 [node name="GIProbe" type="GIProbe" parent="."]
 extents = Vector3( 10, 10, 22.3077 )
 data = SubResource( 22 )
-script = ExtResource( 33 )
 
 [node name="ReflectionProbe" type="ReflectionProbe" parent="."]
-script = ExtResource( 35 )
 
 [node name="RootMotionView" type="RootMotionView" parent="."]
-script = ExtResource( 34 )
 
 [node name="Area" type="Area" parent="."]
-script = ExtResource( 37 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Area"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Area"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Area"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="KinematicBody" type="KinematicBody" parent="."]
-script = ExtResource( 40 )
 
 [node name="CollisionShape" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="KinematicBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="."]
-script = ExtResource( 38 )
 
 [node name="CollisionShape" type="CollisionShape" parent="PhysicalBone"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="PhysicalBone"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="PhysicalBone"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="PhysicalBone"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="RigidBody" type="RigidBody" parent="."]
-script = ExtResource( 39 )
 
 [node name="CollisionShape" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="RigidBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="VehicleBody" type="VehicleBody" parent="."]
-script = ExtResource( 41 )
 
 [node name="CollisionShape" type="CollisionShape" parent="VehicleBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="VehicleBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="VehicleBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="VehicleBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="VehicleBody"]
 engine_force = 5.60519e-45
-script = ExtResource( 49 )
 
 [node name="VehicleWheel2" type="VehicleWheel" parent="VehicleBody"]
 engine_force = 5.60519e-45
-script = ExtResource( 49 )
 
 [node name="VehicleWheel3" type="VehicleWheel" parent="VehicleBody"]
 engine_force = 5.60519e-45
-script = ExtResource( 49 )
 
 [node name="VehicleWheel4" type="VehicleWheel" parent="VehicleBody"]
 engine_force = 5.60519e-45
-script = ExtResource( 49 )
 
 [node name="StaticBody" type="StaticBody" parent="."]
-script = ExtResource( 42 )
 
 [node name="CollisionShape" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="StaticBody"]
 shape = SubResource( 23 )
-script = ExtResource( 46 )
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-script = ExtResource( 43 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="."]
-script = ExtResource( 62 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="."]
-script = ExtResource( 45 )
 
 [node name="CollisionShape" type="CollisionShape" parent="."]
-script = ExtResource( 46 )
 
 [node name="GridMap" type="GridMap" parent="."]
 mesh_library = SubResource( 24 )
@@ -503,142 +372,104 @@ cell_size = Vector3( 2, 1.14, 3.08 )
 data = {
 "cells": PoolIntArray(  )
 }
-script = ExtResource( 36 )
 __meta__ = {
 "_editor_clip_": 0
 }
 
 [node name="Listener" type="Listener" parent="."]
-script = ExtResource( 51 )
 
 [node name="Navigation_LEAK" type="Navigation" parent="."]
-script = ExtResource( 53 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 navmesh = SubResource( 25 )
-script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance2" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 navmesh = SubResource( 25 )
-script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance3" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 navmesh = SubResource( 25 )
-script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance4" type="NavigationMeshInstance" parent="Navigation_LEAK"]
 navmesh = SubResource( 25 )
-script = ExtResource( 47 )
 
 [node name="NavigationMeshInstance" type="NavigationMeshInstance" parent="."]
 navmesh = SubResource( 25 )
-script = ExtResource( 47 )
 
 [node name="Path" type="Path" parent="."]
 curve = SubResource( 26 )
-script = ExtResource( 52 )
 
 [node name="PathFollow" type="PathFollow" parent="Path"]
-script = ExtResource( 48 )
 
 [node name="PathFollow2" type="PathFollow" parent="Path"]
-script = ExtResource( 48 )
 
 [node name="PathFollow3" type="PathFollow" parent="Path"]
-script = ExtResource( 48 )
 
 [node name="PathFollow4" type="PathFollow" parent="Path"]
-script = ExtResource( 48 )
 
 [node name="PathFollow" type="PathFollow" parent="."]
-script = ExtResource( 48 )
 
 [node name="Position3D_NOTHING" type="Position3D" parent="."]
-script = ExtResource( 54 )
 
 [node name="Camera_DEFAULT_CAMERA" type="Camera" parent="."]
 current = true
-script = ExtResource( 16 )
 
 [node name="ProximityGroup" type="ProximityGroup" parent="."]
-script = ExtResource( 59 )
 
 [node name="RayCast" type="RayCast" parent="."]
-script = ExtResource( 57 )
 
 [node name="RemoteTransform" type="RemoteTransform" parent="."]
 remote_path = NodePath("../Camera")
-script = ExtResource( 55 )
 
 [node name="Skeleton" type="Skeleton" parent="."]
-script = ExtResource( 56 )
 
 [node name="PhysicalBone" type="PhysicalBone" parent="Skeleton"]
-script = ExtResource( 38 )
 
 [node name="BoneAttachment" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
 transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
-script = ExtResource( 62 )
 
 [node name="BoneAttachment2" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
 transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
-script = ExtResource( 62 )
 
 [node name="BoneAttachment3" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
 transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
-script = ExtResource( 62 )
 
 [node name="BoneAttachment4" type="BoneAttachment" parent="Skeleton/PhysicalBone"]
 transform = Transform( 1, -1.78814e-07, -1.78814e-07, -9.68575e-08, 1, -5.96046e-08, 0, 0, 1, 0, 0, 0 )
-script = ExtResource( 62 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="PhysicalBone 3" type="PhysicalBone" parent="Skeleton"]
-script = ExtResource( 38 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape2" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape3" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="CollisionShape4" type="CollisionShape" parent="Skeleton/PhysicalBone 3"]
 shape = SubResource( 27 )
-script = ExtResource( 46 )
 
 [node name="SpringArm" type="SpringArm" parent="."]
-script = ExtResource( 61 )
 
 [node name="VehicleWheel" type="VehicleWheel" parent="."]
 engine_force = 1.37327e-43
-script = ExtResource( 49 )
 
 [node name="VisibilityNotifier" type="VisibilityNotifier" parent="."]
-script = ExtResource( 58 )
 
 [node name="VisibilityEnabler" type="VisibilityEnabler" parent="."]
-script = ExtResource( 60 )
 
 [node name="Generic6DOFJoint" type="Generic6DOFJoint" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.63619, -0.392871, 2.48948 )
@@ -653,7 +484,6 @@ angular_spring_z/enabled = true
 angular_spring_z/stiffness = 0.5
 angular_spring_z/damping = 0.64
 angular_spring_z/equilibrium_point = -0.9
-script = ExtResource( 9 )
 
 [node name="HingeJoint" type="HingeJoint" parent="."]
 nodes/node_a = NodePath("../StaticBody")
@@ -668,13 +498,11 @@ angular_limit/relaxation = 3.6
 motor/enable = true
 motor/target_velocity = -1.3
 motor/max_impulse = 30.2
-script = ExtResource( 31 )
 
 [node name="SliderJoint" type="SliderJoint" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17785, 0.25203, 4.6063 )
 nodes/node_a = NodePath("../VehicleBody")
 nodes/node_b = NodePath("../StaticBody")
-script = ExtResource( 28 )
 
 [node name="PinJoint" type="PinJoint" parent="."]
 nodes/node_a = NodePath("../Area")
@@ -682,14 +510,10 @@ nodes/node_b = NodePath("../StaticBody")
 params/bias = 0.99
 params/damping = 7.3
 params/impulse_clamp = 7.2
-script = ExtResource( 44 )
 
 [node name="ConeTwistJoint" type="ConeTwistJoint" parent="."]
 nodes/node_a = NodePath("../PhysicalBone")
 nodes/node_b = NodePath("../RigidBody")
 solver/priority = 8
-script = ExtResource( 10 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
-visible = false
-script = ExtResource( 11 )

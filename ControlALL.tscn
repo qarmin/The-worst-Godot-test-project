@@ -1,61 +1,6 @@
-[gd_scene load_steps=58 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://RES/DynamicFont.tres" type="DynamicFont" id=1]
-[ext_resource path="res://ControlALL/PopupMenu.gd" type="Script" id=2]
-[ext_resource path="res://ControlALL/Popup.gd" type="Script" id=6]
-[ext_resource path="res://ControlALL/ControlALL.gd" type="Script" id=7]
-[ext_resource path="res://ControlALL/WindowDialog.gd" type="Script" id=8]
-[ext_resource path="res://ControlALL/FileDialog.gd" type="Script" id=9]
-[ext_resource path="res://ControlALL/PopupPanel.gd" type="Script" id=10]
-[ext_resource path="res://ControlALL/ConfirmationDialog.gd" type="Script" id=11]
-[ext_resource path="res://ControlALL/LinkButton.gd" type="Script" id=12]
-[ext_resource path="res://ControlALL/Container.gd" type="Script" id=13]
-[ext_resource path="res://ControlALL/MenuButton.gd" type="Script" id=14]
-[ext_resource path="res://ControlALL/OptionButton.gd" type="Script" id=15]
-[ext_resource path="res://ControlALL/TextureButton.gd" type="Script" id=16]
-[ext_resource path="res://ControlALL/ToolButton.gd" type="Script" id=17]
-[ext_resource path="res://ControlALL/CheckBox.gd" type="Script" id=18]
-[ext_resource path="res://ControlALL/PopupDialog.gd" type="Script" id=19]
-[ext_resource path="res://ControlALL/ColorPickerButton.gd" type="Script" id=20]
-[ext_resource path="res://ControlALL/CheckButton.gd" type="Script" id=21]
-[ext_resource path="res://ControlALL/Button.gd" type="Script" id=22]
-[ext_resource path="res://ControlALL/AcceptDialog.gd" type="Script" id=23]
-[ext_resource path="res://ControlALL/ColorPicker.gd" type="Script" id=24]
-[ext_resource path="res://ControlALL/CenterContainer.gd" type="Script" id=25]
-[ext_resource path="res://ControlALL/HBoxContainer.gd" type="Script" id=26]
-[ext_resource path="res://ControlALL/VBoxContainer.gd" type="Script" id=27]
-[ext_resource path="res://ControlALL/GridContainer.gd" type="Script" id=28]
-[ext_resource path="res://ControlALL/GraphNode.gd" type="Script" id=29]
-[ext_resource path="res://ControlALL/HSplitContainer.gd" type="Script" id=30]
-[ext_resource path="res://ControlALL/VSplitContainer.gd" type="Script" id=31]
-[ext_resource path="res://ControlALL/PanelContainer.gd" type="Script" id=32]
-[ext_resource path="res://ControlALL/MarginContainer.gd" type="Script" id=33]
-[ext_resource path="res://ControlALL/ScrollContainer.gd" type="Script" id=34]
-[ext_resource path="res://ControlALL/TabContainer.gd" type="Script" id=35]
-[ext_resource path="res://ControlALL/ViewportContainer.gd" type="Script" id=36]
-[ext_resource path="res://ControlALL/ColorRect.gd" type="Script" id=37]
-[ext_resource path="res://ControlALL/GraphEdit.gd" type="Script" id=38]
-[ext_resource path="res://ControlALL/HScrollBar.gd" type="Script" id=39]
-[ext_resource path="res://ControlALL/VScrollBar.gd" type="Script" id=40]
-[ext_resource path="res://ControlALL/TextureProgress.gd" type="Script" id=41]
-[ext_resource path="res://ControlALL/HSlider.gd" type="Script" id=42]
-[ext_resource path="res://ControlALL/SpinBox.gd" type="Script" id=43]
-[ext_resource path="res://ControlALL/ProgressBar.gd" type="Script" id=44]
-[ext_resource path="res://ControlALL/VSlider.gd" type="Script" id=45]
-[ext_resource path="res://ControlALL/ItemList.gd" type="Script" id=46]
-[ext_resource path="res://ControlALL/Label.gd" type="Script" id=47]
-[ext_resource path="res://ControlALL/HSeparator.gd" type="Script" id=48]
-[ext_resource path="res://ControlALL/VSeparator.gd" type="Script" id=49]
-[ext_resource path="res://ControlALL/LineEdit.gd" type="Script" id=50]
-[ext_resource path="res://ControlALL/NinePatchRect.gd" type="Script" id=51]
-[ext_resource path="res://ControlALL/Panel.gd" type="Script" id=52]
-[ext_resource path="res://ControlALL/ReferenceRect.gd" type="Script" id=53]
-[ext_resource path="res://ControlALL/RichTextLabel.gd" type="Script" id=54]
-[ext_resource path="res://ControlALL/Tabs.gd" type="Script" id=55]
-[ext_resource path="res://ControlALL/TextEdit.gd" type="Script" id=56]
-[ext_resource path="res://ControlALL/TextureRect.gd" type="Script" id=57]
-[ext_resource path="res://ControlALL/VideoPlayer.gd" type="Script" id=58]
-[ext_resource path="res://ControlALL/Tree.gd" type="Script" id=59]
 
 [sub_resource type="Theme" id=1]
 default_font = ExtResource( 1 )
@@ -64,7 +9,6 @@ default_font = ExtResource( 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 columns = 9
-script = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -75,9 +19,9 @@ modulate = Color( 0.607843, 0.4, 0.4, 1 )
 self_modulate = Color( 0.835294, 0.717647, 0.717647, 1 )
 show_behind_parent = true
 light_mask = 16387
-margin_left = 308.0
-margin_right = 308.0
-margin_bottom = 13.0
+margin_left = 509.0
+margin_right = 509.0
+margin_bottom = 164.0
 grow_horizontal = 0
 grow_vertical = 2
 hint_tooltip = "dfadfasf"
@@ -95,49 +39,44 @@ size_flags_vertical = 15
 size_flags_stretch_ratio = 121.49
 theme = SubResource( 1 )
 popup_exclusive = true
-script = ExtResource( 6 )
 
 [node name="WindowDialog" type="WindowDialog" parent="."]
 visible = true
-margin_left = 312.0
-margin_right = 518.0
-margin_bottom = 13.0
+margin_left = 513.0
+margin_right = 596.0
+margin_bottom = 164.0
 popup_exclusive = true
 window_title = "wfaas"
 resizable = true
-script = ExtResource( 8 )
 
 [node name="AcceptDialog" type="AcceptDialog" parent="."]
 visible = true
-margin_top = 17.0
-margin_right = 308.0
-margin_bottom = 87.0
+margin_left = 600.0
+margin_right = 680.0
+margin_bottom = 164.0
 window_title = "asfas"
 resizable = true
 dialog_text = "fqwfqwfqwf"
 dialog_hide_on_ok = false
 dialog_autowrap = true
-script = ExtResource( 23 )
 
 [node name="ConfirmationDialog" type="ConfirmationDialog" parent="."]
 visible = true
-margin_left = 312.0
-margin_top = 17.0
-margin_right = 518.0
-margin_bottom = 87.0
+margin_left = 684.0
+margin_right = 890.0
+margin_bottom = 164.0
 rect_min_size = Vector2( 138, 48.3 )
 window_title = "Please Confirm...asfasfas"
 resizable = true
 dialog_text = "fas"
 dialog_hide_on_ok = false
 dialog_autowrap = true
-script = ExtResource( 11 )
 
 [node name="FileDialog" type="FileDialog" parent="."]
 visible = true
-margin_top = 91.0
-margin_right = 308.0
-margin_bottom = 221.0
+margin_left = 894.0
+margin_right = 1110.0
+margin_bottom = 164.0
 rect_min_size = Vector2( 138, 48.3 )
 window_title = "Open File(s)"
 dialog_text = "sffasfasf"
@@ -148,136 +87,125 @@ mode = 1
 access = 1
 filters = PoolStringArray( "", "as", "", "fasf", "", "s", "", "asfasfa", "sf", "", "" )
 show_hidden_files = true
-current_dir = "user://home/rafal/Projekty/The-worst-Godot-test-project"
+current_dir = "user://home/rafal/Projekty/Godot/TheWorstGodotTestProject"
 current_file = "asf"
-current_path = "user://home/rafal/Projekty/The-worst-Godot-test-project/asf"
-script = ExtResource( 9 )
+current_path = "user://home/rafal/Projekty/Godot/TheWorstGodotTestProject/asf"
 
 [node name="PopupDialog_NOTHING" type="PopupDialog" parent="."]
 visible = true
-margin_left = 312.0
-margin_top = 91.0
-margin_right = 518.0
-margin_bottom = 221.0
+margin_left = 1114.0
+margin_right = 1146.0
+margin_bottom = 164.0
 popup_exclusive = true
-script = ExtResource( 19 )
 
 [node name="PopupMenu" type="PopupMenu" parent="."]
-margin_top = 923.0
-margin_right = 308.0
-margin_bottom = 943.0
+visible = true
+margin_left = 1150.0
+margin_right = 1202.0
+margin_bottom = 164.0
 hide_on_item_selection = false
 hide_on_checkable_item_selection = false
 hide_on_state_item_selection = true
 submenu_popup_delay = 5.32352e+07
 allow_search = true
-script = ExtResource( 2 )
 
 [node name="PopupPanel_NOTHING" type="PopupPanel" parent="."]
 visible = true
-margin_top = 225.0
-margin_right = 308.0
-margin_bottom = 245.0
+margin_left = 1206.0
+margin_right = 1218.0
+margin_bottom = 164.0
 popup_exclusive = true
-script = ExtResource( 10 )
 
 [node name="Button" type="Button" parent="."]
-margin_left = 312.0
-margin_top = 225.0
-margin_right = 518.0
-margin_bottom = 245.0
+margin_left = 1222.0
+margin_right = 1280.0
+margin_bottom = 164.0
 text = "asfasf"
 flat = true
 clip_text = true
 align = 0
-script = ExtResource( 22 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CheckBox_NOTHING" type="CheckBox" parent="."]
-margin_top = 249.0
-margin_right = 308.0
-margin_bottom = 289.0
+margin_top = 168.0
+margin_right = 509.0
+margin_bottom = 208.0
 text = "safasf"
 flat = true
 clip_text = true
 align = 2
-script = ExtResource( 18 )
 
 [node name="CheckButton_NOTHING" type="CheckButton" parent="."]
-margin_left = 312.0
-margin_top = 249.0
-margin_right = 518.0
-margin_bottom = 289.0
+margin_left = 513.0
+margin_top = 168.0
+margin_right = 596.0
+margin_bottom = 208.0
 text = "asfq"
 flat = true
 clip_text = true
 align = 1
-script = ExtResource( 21 )
 
 [node name="ColorPickerButton" type="ColorPickerButton" parent="."]
-margin_top = 293.0
-margin_right = 308.0
-margin_bottom = 313.0
+margin_left = 600.0
+margin_top = 168.0
+margin_right = 680.0
+margin_bottom = 208.0
 text = "asfasf"
 flat = true
 clip_text = true
 align = 2
 color = Color( 0.639216, 0.576471, 0.576471, 1 )
 edit_alpha = false
-script = ExtResource( 20 )
 
 [node name="MenuButton" type="MenuButton" parent="."]
-margin_left = 312.0
-margin_top = 293.0
-margin_right = 518.0
-margin_bottom = 313.0
+margin_left = 684.0
+margin_top = 168.0
+margin_right = 890.0
+margin_bottom = 208.0
 switch_on_hover = true
-script = ExtResource( 14 )
 
 [node name="OptionButton" type="OptionButton" parent="."]
-margin_top = 317.0
-margin_right = 308.0
-margin_bottom = 339.0
-script = ExtResource( 15 )
+margin_left = 894.0
+margin_top = 168.0
+margin_right = 1110.0
+margin_bottom = 208.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ToolButton_NOTHING" type="ToolButton" parent="."]
-margin_left = 312.0
-margin_top = 317.0
-margin_right = 518.0
-margin_bottom = 339.0
+margin_left = 1114.0
+margin_top = 168.0
+margin_right = 1146.0
+margin_bottom = 208.0
 text = "asfasf"
 flat = false
 clip_text = true
 align = 2
-script = ExtResource( 17 )
 
 [node name="LinkButton" type="LinkButton" parent="."]
-margin_top = 343.0
-margin_right = 308.0
-margin_bottom = 357.0
+margin_left = 1150.0
+margin_top = 168.0
+margin_right = 1202.0
+margin_bottom = 208.0
 text = "asfqfqwf"
 underline = 2
-script = ExtResource( 12 )
 
 [node name="TextureButton" type="TextureButton" parent="."]
-margin_left = 312.0
-margin_top = 343.0
-margin_right = 518.0
-margin_bottom = 357.0
+margin_left = 1206.0
+margin_top = 168.0
+margin_right = 1218.0
+margin_bottom = 208.0
 expand = true
 stretch_mode = 5
-script = ExtResource( 16 )
 
 [node name="Container" type="Container" parent="."]
-margin_top = 361.0
-margin_right = 308.0
-margin_bottom = 361.0
-script = ExtResource( 13 )
+margin_left = 1222.0
+margin_top = 168.0
+margin_right = 1280.0
+margin_bottom = 208.0
 
 [node name="Control" type="Control" parent="Container"]
 margin_right = 40.0
@@ -308,263 +236,240 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="ColorPicker" type="ColorPicker" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 4.0
-margin_bottom = 4.0
+margin_top = 212.0
+margin_right = 509.0
+margin_bottom = 624.0
 alignment = 1
 edit_alpha = false
 raw_mode = true
 deferred_mode = true
 presets_enabled = false
 presets_visible = false
-script = ExtResource( 24 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="HBoxContainer_NOTHING" type="HBoxContainer" parent="."]
-margin_left = 312.0
-margin_top = 365.0
-margin_right = 518.0
-margin_bottom = 799.0
-script = ExtResource( 26 )
+margin_left = 513.0
+margin_top = 212.0
+margin_right = 596.0
+margin_bottom = 624.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VBoxContainer_NOTHING" type="VBoxContainer" parent="."]
-margin_top = 803.0
-margin_right = 308.0
-margin_bottom = 833.0
-script = ExtResource( 27 )
+margin_left = 600.0
+margin_top = 212.0
+margin_right = 680.0
+margin_bottom = 624.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
-margin_left = 312.0
-margin_top = 361.0
-margin_right = 518.0
-margin_bottom = 361.0
+margin_left = 684.0
+margin_top = 212.0
+margin_right = 890.0
+margin_bottom = 624.0
 use_top_left = true
-script = ExtResource( 25 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 312.0
-margin_top = 845.0
-margin_right = 518.0
-margin_bottom = 859.0
-script = ExtResource( 34 )
+margin_left = 894.0
+margin_top = 212.0
+margin_right = 1110.0
+margin_bottom = 624.0
 
 [node name="GraphNode" type="GraphNode" parent="."]
-margin_left = 312.0
-margin_top = 803.0
-margin_right = 518.0
-margin_bottom = 833.0
-script = ExtResource( 29 )
+margin_left = 1114.0
+margin_top = 212.0
+margin_right = 1146.0
+margin_bottom = 624.0
 
 [node name="GridContainer" type="GridContainer" parent="."]
-margin_top = 837.0
-margin_right = 308.0
-margin_bottom = 837.0
-script = ExtResource( 28 )
+margin_left = 1150.0
+margin_top = 212.0
+margin_right = 1202.0
+margin_bottom = 624.0
 
 [node name="HSplitContainer_NOTHING" type="HSplitContainer" parent="."]
-margin_left = 312.0
-margin_top = 837.0
-margin_right = 518.0
-margin_bottom = 837.0
-script = ExtResource( 30 )
+margin_left = 1206.0
+margin_top = 212.0
+margin_right = 1218.0
+margin_bottom = 624.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="VSplitContainer_NOTHING" type="VSplitContainer" parent="."]
-margin_top = 841.0
-margin_right = 308.0
-margin_bottom = 841.0
-script = ExtResource( 31 )
+margin_left = 1222.0
+margin_top = 212.0
+margin_right = 1280.0
+margin_bottom = 624.0
 
 [node name="MarginContainer_NOTHING" type="MarginContainer" parent="."]
-margin_left = 312.0
-margin_top = 841.0
-margin_right = 518.0
-margin_bottom = 841.0
-script = ExtResource( 33 )
+margin_top = 628.0
+margin_right = 509.0
+margin_bottom = 664.0
 
 [node name="PanelContainer_NOTHING" type="PanelContainer" parent="."]
-margin_top = 845.0
-margin_right = 308.0
-margin_bottom = 859.0
-script = ExtResource( 32 )
+margin_left = 513.0
+margin_top = 628.0
+margin_right = 596.0
+margin_bottom = 664.0
 
 [node name="TabContainer" type="TabContainer" parent="."]
-margin_top = 863.0
-margin_right = 308.0
-margin_bottom = 899.0
-script = ExtResource( 35 )
+margin_left = 600.0
+margin_top = 628.0
+margin_right = 680.0
+margin_bottom = 664.0
 
 [node name="ViewportContainer" type="ViewportContainer" parent="."]
-margin_left = 312.0
-margin_top = 863.0
-margin_right = 518.0
-margin_bottom = 899.0
-script = ExtResource( 36 )
+margin_left = 684.0
+margin_top = 628.0
+margin_right = 890.0
+margin_bottom = 664.0
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_top = 903.0
-margin_right = 308.0
-margin_bottom = 903.0
-script = ExtResource( 37 )
+margin_left = 894.0
+margin_top = 628.0
+margin_right = 1110.0
+margin_bottom = 664.0
 
 [node name="GraphEdit" type="GraphEdit" parent="."]
-margin_left = 312.0
-margin_top = 903.0
-margin_right = 518.0
-margin_bottom = 903.0
-scroll_offset = Vector2( -102, 0 )
-script = ExtResource( 38 )
+margin_left = 1114.0
+margin_top = 628.0
+margin_right = 1146.0
+margin_bottom = 664.0
+scroll_offset = Vector2( -32, 0 )
 
 [node name="HScrollBar_NOTHING" type="HScrollBar" parent="."]
-margin_top = 907.0
-margin_right = 308.0
-margin_bottom = 919.0
-script = ExtResource( 39 )
+margin_left = 1150.0
+margin_top = 628.0
+margin_right = 1202.0
+margin_bottom = 640.0
 
 [node name="VScrollBar_NOTHING" type="VScrollBar" parent="."]
-margin_left = 312.0
-margin_top = 907.0
-margin_right = 324.0
-margin_bottom = 919.0
-script = ExtResource( 40 )
+margin_left = 1206.0
+margin_top = 628.0
+margin_right = 1218.0
+margin_bottom = 664.0
 
 [node name="HSlider_NOTHING" type="HSlider" parent="."]
-margin_top = 923.0
-margin_right = 308.0
-margin_bottom = 939.0
-script = ExtResource( 42 )
+margin_left = 1222.0
+margin_top = 628.0
+margin_right = 1280.0
+margin_bottom = 644.0
 
 [node name="VSlider_NOTHING" type="VSlider" parent="."]
-margin_left = 312.0
-margin_top = 923.0
-margin_right = 328.0
-margin_bottom = 939.0
-script = ExtResource( 45 )
+margin_top = 668.0
+margin_right = 16.0
+margin_bottom = 692.0
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
-margin_top = 943.0
-margin_right = 308.0
-margin_bottom = 957.0
-script = ExtResource( 44 )
+margin_left = 513.0
+margin_top = 668.0
+margin_right = 596.0
+margin_bottom = 682.0
 
 [node name="SpinBox" type="SpinBox" parent="."]
-margin_left = 312.0
-margin_top = 943.0
-margin_right = 518.0
-margin_bottom = 967.0
-script = ExtResource( 43 )
+margin_left = 600.0
+margin_top = 668.0
+margin_right = 680.0
+margin_bottom = 692.0
 
 [node name="TextureProgress" type="TextureProgress" parent="."]
-margin_top = 971.0
-margin_right = 308.0
-margin_bottom = 975.0
-script = ExtResource( 41 )
+margin_left = 684.0
+margin_top = 668.0
+margin_right = 890.0
+margin_bottom = 692.0
 
 [node name="HSeparator" type="HSeparator" parent="."]
-margin_left = 312.0
-margin_top = 971.0
-margin_right = 518.0
-margin_bottom = 975.0
-script = ExtResource( 48 )
+margin_left = 894.0
+margin_top = 668.0
+margin_right = 1110.0
+margin_bottom = 692.0
 
 [node name="VSeparator" type="VSeparator" parent="."]
-margin_top = 979.0
-margin_right = 308.0
-margin_bottom = 982.0
-script = ExtResource( 49 )
+margin_left = 1114.0
+margin_top = 668.0
+margin_right = 1146.0
+margin_bottom = 692.0
 
 [node name="ItemList" type="ItemList" parent="."]
-margin_left = 312.0
-margin_top = 979.0
-margin_right = 518.0
-margin_bottom = 982.0
-script = ExtResource( 46 )
+margin_left = 1150.0
+margin_top = 668.0
+margin_right = 1202.0
+margin_bottom = 692.0
 
 [node name="Label" type="Label" parent="."]
-margin_top = 991.0
-margin_right = 308.0
-margin_bottom = 1005.0
-script = ExtResource( 47 )
+margin_left = 1206.0
+margin_top = 673.0
+margin_right = 1218.0
+margin_bottom = 687.0
 
 [node name="LineEdit" type="LineEdit" parent="."]
-margin_left = 312.0
-margin_top = 986.0
-margin_right = 518.0
-margin_bottom = 1010.0
+margin_left = 1222.0
+margin_top = 668.0
+margin_right = 1280.0
+margin_bottom = 692.0
 caret_blink = true
-script = ExtResource( 50 )
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
-margin_top = 1014.0
-margin_right = 308.0
-margin_bottom = 1014.0
-script = ExtResource( 51 )
+margin_top = 696.0
+margin_right = 509.0
+margin_bottom = 720.0
 
 [node name="Panel_NOTHING" type="Panel" parent="."]
-margin_left = 312.0
-margin_top = 1014.0
-margin_right = 518.0
-margin_bottom = 1014.0
-script = ExtResource( 52 )
+margin_left = 513.0
+margin_top = 696.0
+margin_right = 596.0
+margin_bottom = 720.0
 
 [node name="ReferenceRect" type="ReferenceRect" parent="."]
-margin_top = 1018.0
-margin_right = 308.0
-margin_bottom = 1018.0
-script = ExtResource( 53 )
+margin_left = 600.0
+margin_top = 696.0
+margin_right = 680.0
+margin_bottom = 720.0
 
 [node name="RichTextLabel" type="RichTextLabel" parent="."]
-margin_left = 312.0
-margin_top = 1018.0
-margin_right = 518.0
-margin_bottom = 1018.0
-script = ExtResource( 54 )
+margin_left = 684.0
+margin_top = 696.0
+margin_right = 890.0
+margin_bottom = 720.0
 
 [node name="Tabs" type="Tabs" parent="."]
-margin_top = 1022.0
-margin_right = 308.0
-margin_bottom = 1046.0
-script = ExtResource( 55 )
+margin_left = 894.0
+margin_top = 696.0
+margin_right = 1110.0
+margin_bottom = 720.0
 
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 312.0
-margin_top = 1022.0
-margin_right = 518.0
-margin_bottom = 1046.0
-script = ExtResource( 56 )
+margin_left = 1114.0
+margin_top = 696.0
+margin_right = 1146.0
+margin_bottom = 720.0
 
 [node name="TextureRect" type="TextureRect" parent="."]
-margin_top = 1050.0
-margin_right = 308.0
-margin_bottom = 1051.0
-script = ExtResource( 57 )
+margin_left = 1150.0
+margin_top = 696.0
+margin_right = 1202.0
+margin_bottom = 720.0
 
 [node name="Tree" type="Tree" parent="."]
-margin_left = 312.0
-margin_top = 1050.0
-margin_right = 518.0
-margin_bottom = 1051.0
-script = ExtResource( 59 )
+margin_left = 1206.0
+margin_top = 696.0
+margin_right = 1218.0
+margin_bottom = 720.0
 
 [node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_top = 1055.0
-margin_right = 308.0
-margin_bottom = 1055.0
-script = ExtResource( 58 )
+margin_left = 1222.0
+margin_top = 696.0
+margin_right = 1280.0
+margin_bottom = 720.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
