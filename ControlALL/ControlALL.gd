@@ -1,6 +1,6 @@
 extends Control
 
-func _ready() -> void:
+func _init() -> void:
 	if !is_visible():
 		queue_free()
 

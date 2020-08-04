@@ -8,7 +8,7 @@ onready var sew : int = 0
 
 onready var counter : float = Autoload.get_rand_time()
 
-func _ready() -> void:
+func _init() -> void:
 	if !is_visible():
 		queue_free()
 	func_ready()

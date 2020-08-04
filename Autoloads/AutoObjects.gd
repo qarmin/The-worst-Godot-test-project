@@ -27,7 +27,7 @@ var use_PhysicsBody : bool = true
 var use_Joint : bool = true
 		
 		
-func _ready() ->  void:
+func _init() ->  void:
 #	use_Object = false
 #	use_Node = false
 #	use_Node2D = false

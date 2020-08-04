@@ -1,6 +1,6 @@
 extends Camera
 
-func _ready():
+func _init():
 	set_current(true)
 	
 func alt_process(delta : float) -> void:

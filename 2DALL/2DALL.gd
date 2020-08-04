@@ -1,6 +1,6 @@
 extends Node2D
 
-func _ready() -> void:
+func _init() -> void:
 	if !is_visible():
 		queue_free()
 
