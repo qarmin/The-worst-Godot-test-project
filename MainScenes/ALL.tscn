@@ -15,6 +15,10 @@ script = null
 [node name="3DALL" parent="." instance=ExtResource( 5 )]
 
 [node name="ControlALL" parent="." instance=ExtResource( 4 )]
+margin_left = 125.017
+margin_top = -69.9246
+margin_right = 125.017
+margin_bottom = -69.9246
 
 [node name="OtherALL" parent="." instance=ExtResource( 1 )]
 

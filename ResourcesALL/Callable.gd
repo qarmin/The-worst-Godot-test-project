@@ -10,8 +10,8 @@ func alt_process(delta) -> void:
 
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Callable, true)
+#
+#		nodeFunction(q_Callable, true)
 
 
 func nodeFunction(q_Callable: Callable, can_reset: bool = false) -> void:

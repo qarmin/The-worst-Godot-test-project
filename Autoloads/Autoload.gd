@@ -3,7 +3,7 @@ extends Node
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, but shows too much spam in console
 
-const RANGE : int = 100
+const RANGE : int = 1
 
 var frames_to_show = -1
 

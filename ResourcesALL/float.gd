@@ -1,7 +1,7 @@
 extends Node2D
 
 # warning-ignore:unused_variable
-var q_float: float
+var q_float: float = 0.0
 
 @onready var counter: float = Autoload.get_rand_time()
 
