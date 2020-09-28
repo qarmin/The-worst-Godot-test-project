@@ -42,6 +42,6 @@ func nodeFunction(q_InputEvent: InputEvent, can_reset: bool = false) -> void:
 		q_InputEvent.is_pressed()
 
 	if randi() % 2 == 1:
-		q_InputEvent.shortcut_match(Autoload.loadA("InputEventAction.tres"))
+		q_InputEvent.Shortcut_match(Autoload.loadA("InputEventAction.tres"))
 	if randi() % 2 == 1:
 		q_InputEvent.xformed_by(Autoload.get_transform2d(), Autoload.get_vector2())

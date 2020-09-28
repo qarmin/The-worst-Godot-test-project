@@ -20,8 +20,8 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 
-	var temp_ShortCut: ShortCut = ShortCut.new()
-#?#	AutoResourcesShortCut.nodeFunction(temp_ShortCut)
+	var temp_Shortcut: Shortcut = Shortcut.new()
+#?#	AutoResourcesShortcut.nodeFunction(temp_Shortcut)
 
 ### END TEMP
 
@@ -40,19 +40,19 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_check_shortcut(temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
+#		q_PopupMenu.add_check_Shortcut(temp_Shortcut, Autoload.get_int(), Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_icon_check_item(temp_ImageTexture, Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_icon_check_shortcut(temp_ImageTexture, temp_ShortCut, Autoload.get_int(), Autoload.get_int())
+#		q_PopupMenu.add_icon_check_Shortcut(temp_ImageTexture, temp_Shortcut, Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_icon_item(temp_ImageTexture, Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_icon_radio_check_item(temp_ImageTexture, Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_icon_radio_check_shortcut(temp_ImageTexture,temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
+#		q_PopupMenu.add_icon_radio_check_Shortcut(temp_ImageTexture,temp_Shortcut, Autoload.get_int(), Autoload.get_bool())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_icon_shortcut(temp_ImageTexture, temp_ShortCut, Autoload.get_int(), Autoload.get_int())
+#		q_PopupMenu.add_icon_Shortcut(temp_ImageTexture, temp_Shortcut, Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
@@ -60,11 +60,11 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_radio_check_item(Autoload.get_string(), Autoload.get_int(), Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_radio_check_shortcut(temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
+#		q_PopupMenu.add_radio_check_Shortcut(temp_Shortcut, Autoload.get_int(), Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_separator(Autoload.get_string())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.add_shortcut(temp_ShortCut, Autoload.get_int(), Autoload.get_bool())
+#		q_PopupMenu.add_Shortcut(temp_Shortcut, Autoload.get_int(), Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.add_submenu_item(Autoload.get_string(),Autoload.get_string())
 #
@@ -84,7 +84,7 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_PopupMenu.get_item_metadata(Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.get_item_shortcut(Autoload.get_int())
+#		q_PopupMenu.get_item_Shortcut(Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.get_item_submenu(Autoload.get_int())
 #	if randi() % 2 == 1:
@@ -105,7 +105,7 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_PopupMenu.is_item_separator(Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.is_item_shortcut_disabled(Autoload.get_int())
+#		q_PopupMenu.is_item_Shortcut_disabled(Autoload.get_int())
 #
 #	if randi() % 2 == 1:
 #		q_PopupMenu.remove_item(Autoload.get_int())
@@ -133,9 +133,9 @@ func nodeFunction(q_PopupMenu: PopupMenu, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_PopupMenu.set_item_multistate(Autoload.get_int(),Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.set_item_shortcut(Autoload.get_int(), temp_ShortCut, Autoload.get_bool())
+#		q_PopupMenu.set_item_Shortcut(Autoload.get_int(), temp_Shortcut, Autoload.get_bool())
 #	if randi() % 2 == 1:
-#		q_PopupMenu.set_item_shortcut_disabled(Autoload.get_int(),Autoload.get_bool())
+#		q_PopupMenu.set_item_Shortcut_disabled(Autoload.get_int(),Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_PopupMenu.set_item_submenu(Autoload.get_int(),Autoload.get_string())
 #	if randi() % 2 == 1:

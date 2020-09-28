@@ -774,7 +774,7 @@ func A_BaseButton(q_BaseButton: BaseButton) -> void:
 	if randi() % 2 == 1:
 		q_BaseButton.set_toggle_mode(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_BaseButton.set_shortcut_in_tooltip(Autoload.get_bool())
+		q_BaseButton.set_Shortcut_in_tooltip(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_BaseButton.set_pressed(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -786,7 +786,7 @@ func A_BaseButton(q_BaseButton: BaseButton) -> void:
 	if randi() % 2 == 1:
 		q_BaseButton.set_keep_pressed_outside(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_BaseButton.set_shortcut(ShortCut.new())
+		q_BaseButton.set_Shortcut(Shortcut.new())
 	if randi() % 2 == 1:
 		q_BaseButton.set_button_group(ButtonGroup.new())
 

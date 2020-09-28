@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_ShortCut: ShortCut = ShortCut.new()
+var q_Shortcut: Shortcut = Shortcut.new()
 
 @onready var counter: float = Autoload.get_rand_time()
 
@@ -11,15 +11,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_ShortCut, true)
+		nodeFunction(q_Shortcut, true)
 
 
-func nodeFunction(q_ShortCut: ShortCut, can_reset: bool = false) -> void:
+func nodeFunction(q_Shortcut: Shortcut, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
-			q_ShortCut = ShortCut.new()
+			q_Shortcut = Shortcut.new()
 	if randi() % 2 == 1:
-		AutoResourcesResource.nodeFunction(q_ShortCut)
+		AutoResourcesResource.nodeFunction(q_Shortcut)
 
 	### START TEMP
 
@@ -29,12 +29,12 @@ func nodeFunction(q_ShortCut: ShortCut, can_reset: bool = false) -> void:
 	### END TEMP
 
 	if randi() % 2 == 1:
-		q_ShortCut.set_shortcut(temp_InputEventAction)
+		q_Shortcut.set_Shortcut(temp_InputEventAction)
 
 	if randi() % 2 == 1:
-		q_ShortCut.get_as_text()
+		q_Shortcut.get_as_text()
 
 	if randi() % 2 == 1:
-		q_ShortCut.is_shortcut(temp_InputEventAction)
+		q_Shortcut.is_Shortcut(temp_InputEventAction)
 	if randi() % 2 == 1:
-		q_ShortCut.is_valid()
+		q_Shortcut.is_valid()
