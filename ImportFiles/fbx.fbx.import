@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/fbx.fbx-2c295e71a7a84d3fa16c034462a2a87b.scn"
+path="res://.godot/imported/fbx.fbx-2c295e71a7a84d3fa16c034462a2a87b.scn"
 
 [deps]
 
 source_file="res://ImportFiles/fbx.fbx"
-dest_files=[ "res://.import/fbx.fbx-2c295e71a7a84d3fa16c034462a2a87b.scn" ]
+dest_files=[ "res://.godot/imported/fbx.fbx-2c295e71a7a84d3fa16c034462a2a87b.scn" ]
 
 [params]
 

@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/dae.dae-ef9bea5c9a0817fa289257048dea074f.scn"
+path="res://.godot/imported/dae.dae-ef9bea5c9a0817fa289257048dea074f.scn"
 
 [deps]
 
 source_file="res://ImportFiles/dae.dae"
-dest_files=[ "res://.import/dae.dae-ef9bea5c9a0817fa289257048dea074f.scn" ]
+dest_files=[ "res://.godot/imported/dae.dae-ef9bea5c9a0817fa289257048dea074f.scn" ]
 
 [params]
 

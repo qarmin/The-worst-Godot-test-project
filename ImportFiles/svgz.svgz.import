@@ -2,7 +2,7 @@
 
 importer="texture"
 type="StreamTexture2D"
-path="res://.import/svgz.svgz-064653e7afbf0aea7768939f2df9a133.stex"
+path="res://.godot/imported/svgz.svgz-064653e7afbf0aea7768939f2df9a133.stex"
 metadata={
 "vram_texture": false
 }
@@ -10,7 +10,7 @@ metadata={
 [deps]
 
 source_file="res://ImportFiles/svgz.svgz"
-dest_files=[ "res://.import/svgz.svgz-064653e7afbf0aea7768939f2df9a133.stex" ]
+dest_files=[ "res://.godot/imported/svgz.svgz-064653e7afbf0aea7768939f2df9a133.stex" ]
 
 [params]
 

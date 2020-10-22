@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/glb.glb-55fdee4ac67e302d25430a499865de10.scn"
+path="res://.godot/imported/glb.glb-55fdee4ac67e302d25430a499865de10.scn"
 
 [deps]
 
 source_file="res://ImportFiles/glb.glb"
-dest_files=[ "res://.import/glb.glb-55fdee4ac67e302d25430a499865de10.scn" ]
+dest_files=[ "res://.godot/imported/glb.glb-55fdee4ac67e302d25430a499865de10.scn" ]
 
 [params]
 
