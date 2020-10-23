@@ -45,10 +45,10 @@ func nodeFunction(q_Quat: Quat, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Quat.normalized()
 
-	if randi() % 2 == 1:
-		q_Quat.set_axis_angle(Autoload.get_vector3(), Autoload.get_float())
-	if randi() % 2 == 1:
-		q_Quat.set_euler(Autoload.get_vector3())
+#	if randi() % 2 == 1:
+#		q_Quat.set_axis_angle(Autoload.get_vector3(), Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Quat.set_euler(Autoload.get_vector3())
 
 	if randi() % 2 == 1:
 		q_Quat.slerp(Autoload.get_quat(), Autoload.get_float())

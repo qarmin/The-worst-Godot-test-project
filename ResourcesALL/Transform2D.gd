@@ -52,7 +52,7 @@ func nodeFunction(q_Transform2D: Transform2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Transform2D.translated(Autoload.get_vector2())
 
-	if randi() % 2 == 1:
-		q_Transform2D.xform(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Transform2D.xform_inv(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Transform2D.xform(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Transform2D.xform_inv(Autoload.get_vector2())

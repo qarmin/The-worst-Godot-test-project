@@ -459,8 +459,8 @@ func A_CanvasItem(q_CanvasItem: CanvasItem) -> void:
 
 	if randi() % 2 == 1:
 		q_CanvasItem.is_local_transform_notification_enabled()
-	if randi() % 2 == 1:
-		q_CanvasItem.is_set_as_toplevel()
+#	if randi() % 2 == 1:
+#		q_CanvasItem.is_set_as_toplevel()
 	if randi() % 2 == 1:
 		q_CanvasItem.is_transform_notification_enabled()
 	if randi() % 2 == 1:
@@ -471,8 +471,8 @@ func A_CanvasItem(q_CanvasItem: CanvasItem) -> void:
 	if randi() % 2 == 1:
 		q_CanvasItem.make_input_local(Autoload.loadA("InputEventAction.tres"))
 
-	if randi() % 2 == 1:
-		q_CanvasItem.set_as_toplevel(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_CanvasItem.set_as_toplevel(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_CanvasItem.set_notify_local_transform(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -543,8 +543,8 @@ func A_PhysicsBody2D(q_PhysicsBody2D: PhysicsBody2D) -> void:
 	if ! use_PhysicsBody2D:
 		return
 
-	if randi() % 2 == 1:
-		q_PhysicsBody2D._set_layers(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_PhysicsBody2D._set_layers(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_PhysicsBody2D.set_collision_layer(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -922,8 +922,8 @@ func A_Node3D(q_Node3D: Node3D) -> void:
 		q_Node3D.is_local_transform_notification_enabled()
 	if randi() % 2 == 1:
 		q_Node3D.is_scale_disabled()
-	if randi() % 2 == 1:
-		q_Node3D.is_set_as_toplevel()
+#	if randi() % 2 == 1:
+#		q_Node3D.is_set_as_toplevel()
 	if randi() % 2 == 1:
 		q_Node3D.is_transform_notification_enabled()
 	if randi() % 2 == 1:
@@ -957,8 +957,8 @@ func A_Node3D(q_Node3D: Node3D) -> void:
 	if randi() % 2 == 1:
 		q_Node3D.scale_object_local(Autoload.get_vector3())
 
-	if randi() % 2 == 1:
-		q_Node3D.set_as_toplevel(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_Node3D.set_as_toplevel(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Node3D.set_disable_scale(Autoload.get_bool())
 	if randi() % 2 == 1:

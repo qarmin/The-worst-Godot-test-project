@@ -84,8 +84,8 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 		q_String.empty()
 	if randi() % 2 == 1:
 		q_String.ends_with(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_String.erase(Autoload.get_int(), Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_String.erase(Autoload.get_int(), Autoload.get_int())
 
 	if randi() % 2 == 1:
 		q_String.find(Autoload.get_string(), Autoload.get_int())
@@ -215,8 +215,8 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_String.substr(Autoload.get_int(), Autoload.get_int())
 
-	if randi() % 2 == 1:
-		q_String.to_ascii()
+#	if randi() % 2 == 1:
+#		q_String.to_ascii()
 	if randi() % 2 == 1:
 		q_String.to_float()
 	if randi() % 2 == 1:
@@ -225,8 +225,8 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 		q_String.to_lower()
 	if randi() % 2 == 1:
 		q_String.to_upper()
-	if randi() % 2 == 1:
-		q_String.to_utf8()
+#	if randi() % 2 == 1:
+#		q_String.to_utf8()
 
 	if randi() % 2 == 1:
 		q_String.trim_prefix(Autoload.get_string())

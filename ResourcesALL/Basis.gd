@@ -39,8 +39,8 @@ func nodeFunction(q_Basis: Basis, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Basis.inverse()
-	if randi() % 2 == 1:
-		q_Basis.is_equal_approx(Autoload.get_basis(), Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Basis.is_equal_approx(Autoload.get_basis(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Basis.orthonormalized()
 	if randi() % 2 == 1:
@@ -60,7 +60,7 @@ func nodeFunction(q_Basis: Basis, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Basis.transposed()
 
-	if randi() % 2 == 1:
-		q_Basis.xform(Autoload.get_vector3())
-	if randi() % 2 == 1:
-		q_Basis.xform_inv(Autoload.get_vector3())
+#	if randi() % 2 == 1:
+#		q_Basis.xform(Autoload.get_vector3())
+#	if randi() % 2 == 1:
+#		q_Basis.xform_inv(Autoload.get_vector3())
