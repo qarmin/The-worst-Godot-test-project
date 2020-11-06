@@ -25,16 +25,16 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 		q_TextEdit.set_readonly(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_highlight_current_line(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_TextEdit.set_show_line_numbers(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_TextEdit.set_show_line_numbers(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_draw_tabs(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_draw_spaces(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_breakpoint_gutter_enabled(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_TextEdit.set_draw_fold_gutter(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_TextEdit.set_draw_fold_gutter(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_highlight_all_occurrences(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -88,8 +88,8 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_TextEdit.fold_line(Autoload.get_int())
 
-	if randi() % 2 == 1:
-		q_TextEdit.get_breakpoints()
+#	if randi() % 2 == 1:
+#		q_TextEdit.get_breakpoints()
 	if randi() % 2 == 1:
 		q_TextEdit.get_line(Autoload.get_int())
 	if randi() % 2 == 1:

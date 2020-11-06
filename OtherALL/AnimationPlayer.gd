@@ -19,7 +19,7 @@ func nodeFunction(q_AnimationPlayer: AnimationPlayer, can_reset: bool = false) -
 
 	### START TEMP
 	var temp_Animation: Animation = Animation.new()
-	AutoResourcesAnimation.nodeFunction(temp_Animation)
+	#?# AutoResourcesAnimation.nodeFunction(temp_Animation)
 
 	### END TEMP
 

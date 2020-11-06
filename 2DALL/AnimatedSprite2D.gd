@@ -35,10 +35,10 @@ func nodeFunction(q_AnimatedSprite2D: AnimatedSprite2D, can_reset: bool = false)
 		q_AnimatedSprite2D.set_speed_scale(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_AnimatedSprite2D._set_playing(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_AnimatedSprite2D.set_specular_color(Autoload.get_color())
-	if randi() % 2 == 1:
-		q_AnimatedSprite2D.set_shininess(Autoload.get_float())
+#	if randi() % 2 == 1: #NOT AVA
+#		q_AnimatedSprite2D.set_specular_color(Autoload.get_color())
+#	if randi() % 2 == 1: #NOT AVA
+#		q_AnimatedSprite2D.set_shininess(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_AnimatedSprite2D.set_centered(Autoload.get_bool())
 	if randi() % 2 == 1:

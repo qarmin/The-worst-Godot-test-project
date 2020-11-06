@@ -27,8 +27,8 @@ func nodeFunction(q_Sprite2D: Sprite2D, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Sprite2D.set_texture(temp_ImageTexture)
-	if randi() % 2 == 1:
-		q_Sprite2D.set_normal_map(temp_ImageTexture)
+#	if randi() % 2 == 1:
+#		q_Sprite2D.set_normal_map(temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_Sprite2D.set_centered(Autoload.get_bool())
 	if randi() % 2 == 1:

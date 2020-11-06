@@ -1,4 +1,4 @@
-extends Light2D
+extends Node2D
 
 @onready var counter: float = Autoload.get_rand_time()
 
@@ -9,7 +9,7 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(self, true)
+		#nodeFunction(self, true)
 
 
 func nodeFunction(q_Light2D: Light2D, can_reset: bool = false) -> void:
