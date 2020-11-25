@@ -35,7 +35,7 @@ func _process(delta) -> void:
 			dict[strin]
 		self.counter = self.counter
 		number is Node2D
-		~Autoload.get_int()
+#		~Autoload.get_int()
 		-Autoload.get_int()
 		Autoload.get_int() * Autoload.get_int()
 		Autoload.get_int() / (Autoload.get_not_zero())
@@ -89,8 +89,6 @@ func _process(delta) -> void:
 		qq()
 		qqr("WRT")
 		call("qqr","QWT")
-		var func_ref = funcref(self,"qqr")
-		func_ref.call_func("QWQW")
 		
 		if Autoload.get_int():
 			pass

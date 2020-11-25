@@ -44,14 +44,14 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 5 ) ],
-"loop": true,
-"name": @"0",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 5 ), ExtResource( 5 ), ExtResource( 5 ) ],
 "loop": true,
 "name": @"New Anim",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": @"0",
 "speed": 5.0
 } ]
 
@@ -95,6 +95,8 @@ polygons = [ PackedInt32Array( 0, 1, 2 ), PackedInt32Array( 3, 4, 5 ), PackedInt
 outlines = [ PackedVector2Array( 231.183, -16.7214, 177.06, 604.885, 541.159, 668.352, 1130.73, 337.656, 541.159, 404.463, 357.439, 401.123 ) ]
 
 [sub_resource type="NavigationPolygon" id=11]
+polygons = [  ]
+outlines = [  ]
 
 [sub_resource type="Curve2D" id=12]
 _data = {
@@ -398,7 +400,7 @@ skew = 4.37114e-08
 process_material = SubResource( 5 )
 script = ExtResource( 26 )
 
-[node name="Light2D" type="Light2D" parent="."]
+[node name="Light2D" type="PointLight2D" parent="."]
 position = Vector2( 716.189, 403.435 )
 texture = ExtResource( 5 )
 script = ExtResource( 20 )
@@ -481,6 +483,8 @@ script = ExtResource( 45 )
 [node name="Polygon2D" type="Polygon2D" parent="."]
 position = Vector2( 595.701, 594.269 )
 skeleton = NodePath("../Skeleton2D")
+polygons = [  ]
+bones = [  ]
 script = ExtResource( 28 )
 
 [node name="Position2D_NOTHING" type="Position2D" parent="."]

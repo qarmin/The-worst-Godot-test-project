@@ -28,31 +28,31 @@ var use_Joint: bool = true
 
 
 func _ready() -> void:
-#	use_Object = false
-#	use_Node = false
-#	use_Node2D = false
-#	use_CanvasItem = false
-#	use_CollisionObject2D = false
-#	use_PhysicsBody2D = false
-#	use_Joint2D = false
-#	use_Control = false
-#	use_BaseButton = false
-#	use_BoxContainer = false
-#	use_SplitContainer = false
-#	use_ScrollBar = false
-#	use_Range = false
-#	use_Slider = false
-#	use_Separator = false
-#	use_Spatial = false
-#	use_VisualInstance3D = false
-#	use_GeometryInstance3D = false
-#	use_SpriteBase3D = false
-#	use_CSGShape = false
-#	use_CSGPrimitive = false
-#	use_Light = false
-#	use_CollisionObject = false
-#	use_PhysicsBody = false
-#	use_Joint = false
+	use_Object = false
+	use_Node = false
+	use_Node2D = false
+	use_CanvasItem = false
+	use_CollisionObject2D = false
+	use_PhysicsBody2D = false
+	use_Joint2D = false
+	use_Control = false
+	use_BaseButton = false
+	use_BoxContainer = false
+	use_SplitContainer = false
+	use_ScrollBar = false
+	use_Range = false
+	use_Slider = false
+	use_Separator = false
+	use_Spatial = false
+	use_VisualInstance3D = false
+	use_GeometryInstance3D = false
+	use_SpriteBase3D = false
+	use_CSGShape = false
+	use_CSGPrimitive = false
+	use_Light = false
+	use_CollisionObject = false
+	use_PhysicsBody = false
+	use_Joint = false
 	return
 
 

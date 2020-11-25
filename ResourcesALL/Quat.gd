@@ -54,6 +54,3 @@ func nodeFunction(q_Quat: Quat, can_reset: bool = false) -> void:
 		q_Quat.slerp(Autoload.get_quat(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Quat.slerpni(Autoload.get_quat(), Autoload.get_float())
-
-	if randi() % 2 == 1:
-		q_Quat.xform(Autoload.get_vector3())

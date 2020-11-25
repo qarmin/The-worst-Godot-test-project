@@ -66,8 +66,6 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			fposmod(Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
-			funcref(self, Autoload.get_string())
-		if randi() % 2 == 1:
 			get_stack()
 		if randi() % 2 == 1:
 			hash(Autoload.get_string())
@@ -139,8 +137,6 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			rad2deg(Autoload.get_float())
 
-		if randi() % 2 == 1:
-			rand_range(Autoload.get_int(), Autoload.get_int())
 		if randi() % 2 == 1:
 			rand_seed(Autoload.get_int())
 		if randi() % 2 == 1:

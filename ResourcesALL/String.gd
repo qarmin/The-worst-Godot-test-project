@@ -18,53 +18,7 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
-				q_String = String(Autoload.get_bool())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_int())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_float())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_vector2())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_rect2())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_vector3())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_transform2d())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_plane())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_quat())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_aabb())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_basis())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_transform())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_color())
-			if randi() % 2 == 1:
 				q_String = String(Autoload.get_nodepath(self))
-			if randi() % 2 == 1:
-				q_String = String(RID())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_dictionary())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_array())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedbytearray())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedint64array())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedfloat32array())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedstringarray())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedvector2array())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedvector3array())
-			if randi() % 2 == 1:
-				q_String = String(Autoload.get_packedcolorarray())
 
 	if randi() % 2 == 1:
 		q_String.begins_with(Autoload.get_string())

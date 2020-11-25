@@ -28,8 +28,6 @@ func nodeFunction(q_Color: Color, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Color.blend(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_Color.contrasted()
-	if randi() % 2 == 1:
 		q_Color.darkened(Autoload.get_float())
 #	if randi() % 2 == 1:
 #		q_Color.from_hsv(Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())

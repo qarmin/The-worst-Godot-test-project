@@ -22,5 +22,3 @@ func nodeFunction(q_bool: bool, can_reset: bool = false) -> void:
 # warning-ignore:narrowing_conversion
 		if randi() % 2 == 1:
 			q_bool = bool(Autoload.get_float())
-		if randi() % 2 == 1:
-			q_bool = bool(Autoload.get_string())

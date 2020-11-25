@@ -21,5 +21,3 @@ func nodeFunction(q_float: float, can_reset: bool = false) -> void:
 			q_float = float(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_float = float(Autoload.get_int())
-		if randi() % 2 == 1:
-			q_float = float(Autoload.get_string())
