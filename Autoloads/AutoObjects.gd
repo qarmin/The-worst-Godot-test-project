@@ -468,8 +468,8 @@ func A_CanvasItem(q_CanvasItem: CanvasItem) -> void:
 
 	if randi() % 2 == 1:
 		q_CanvasItem.make_canvas_position_local(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_CanvasItem.make_input_local(Autoload.loadA("InputEventAction.tres"))
+#	if randi() % 2 == 1:
+#		q_CanvasItem.make_input_local(Autoload.loadA("InputEventAction.tres"))
 
 #	if randi() % 2 == 1:
 #		q_CanvasItem.set_as_toplevel(Autoload.get_bool())

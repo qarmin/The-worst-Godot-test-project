@@ -16,7 +16,7 @@ func _process(delta):
 
 
 func get_rand_time():
-	return randf() * 1.001  + 3.001
+	return randf() * 5.001  + 10.001
 
 const MAX_NUMBER : int = 15
 const MAX_NEWLINE : int = 0
@@ -206,46 +206,46 @@ func get_aabbf(max_value : float) -> AABB:
 	return AABB(get_vector3f(max_value),get_vector3f(max_value))
 ################ LOADING RESOURCES
 	
-func loadA(name : String):
-	if randi() % 2 == 1: # 50% szans
-		return load("res://RES/" + names.keys()[randi()%names.size()])
-		#names[randi() % names.size()])
-	else:
-		if randi() % 2 == 1:
-			return load("res://RES/" + name)
-		else: 
-			return names[name]
-
-var names : Dictionary = {"ArrayMesh.tres" : ArrayMesh.new(),
-"AudioStreamGenerator.tres": AudioStreamGenerator.new(),
-"Bitmap.tres":BitMap.new(),
-"CircleShape2D.tres":CircleShape2D.new(),
-"CryptoKey.tres":CryptoKey.new(),
-"CubeMesh.tres":CubeMesh.new(),
-"Curve.tres":Curve.new(),
-"Curve2D.tres":Curve2D.new(),
-"Curve3D.tres":Curve3D.new(),
-"DefaultEnv.tres":Environment.new(),
-"DynamicFont.tres":DynamicFont.new(),
-"FreeMono.otf":DynamicFontData.new(),
-"GDNativeLibrary.tres":GDNativeLibrary.new(),
-"Gradient.tres":Gradient.new(),
-"InputEventAction.tres":InputEventAction.new(),
-"Multimesh.tres" : MultiMesh.new(),
-"NavigationMesh.tres":NavigationMesh.new(),
-#"Node.tscn":Node.new(), # This will leak
-"PhysicsMaterial.tres":PhysicsMaterial.new(),
-"StandardMaterial3D.tres":StandardMaterial3D.new(),
-"Sprite.png":ImageTexture.new(),
-"SpriteFrames.tres":SpriteFrames.new(),
-"StyleBoxTexture.tres":StyleBoxTexture.new(),
-"Theme.tres":Theme.new(),
-"Tileset.tres":TileSet.new(),
-"Translation.tres":Translation.new(),
-"VideoStreamWebm.tres":VideoStreamWebm.new(),
-"VisualShader.tres":VisualShader.new(),
-
-"CapsuleShape.tres":CapsuleShape2D.new(),
-"RayShape.tres":RayShape2D.new(),
-"RayShape2D.tres":RayShape2D.new(),
-}
+#func loadA(name : String):
+#	if randi() % 2 == 1: # 50% szans
+#		return load("res://RES/" + names.keys()[randi()%names.size()])
+#		#names[randi() % names.size()])
+#	else:
+#		if randi() % 2 == 1:
+#			return load("res://RES/" + name)
+#		else: 
+#			return names[name]
+#
+#var names : Dictionary = {"ArrayMesh.tres" : ArrayMesh.new(),
+#"AudioStreamGenerator.tres": AudioStreamGenerator.new(),
+#"Bitmap.tres":BitMap.new(),
+#"CircleShape2D.tres":CircleShape2D.new(),
+#"CryptoKey.tres":CryptoKey.new(),
+#"CubeMesh.tres":CubeMesh.new(),
+#"Curve.tres":Curve.new(),
+#"Curve2D.tres":Curve2D.new(),
+#"Curve3D.tres":Curve3D.new(),
+#"DefaultEnv.tres":Environment.new(),
+#"DynamicFont.tres":DynamicFont.new(),
+#"FreeMono.otf":DynamicFontData.new(),
+#"GDNativeLibrary.tres":GDNativeLibrary.new(),
+#"Gradient.tres":Gradient.new(),
+#"InputEventAction.tres":InputEventAction.new(),
+#"Multimesh.tres" : MultiMesh.new(),
+#"NavigationMesh.tres":NavigationMesh.new(),
+##"Node.tscn":Node.new(), # This will leak
+#"PhysicsMaterial.tres":PhysicsMaterial.new(),
+#"StandardMaterial3D.tres":StandardMaterial3D.new(),
+#"Sprite.png":ImageTexture.new(),
+#"SpriteFrames.tres":SpriteFrames.new(),
+#"StyleBoxTexture.tres":StyleBoxTexture.new(),
+#"Theme.tres":Theme.new(),
+#"Tileset.tres":TileSet.new(),
+#"Translation.tres":Translation.new(),
+#"VideoStreamWebm.tres":VideoStreamWebm.new(),
+#"VisualShader.tres":VisualShader.new(),
+#
+#"CapsuleShape.tres":CapsuleShape2D.new(),
+#"RayShape.tres":RayShape2D.new(),
+#"RayShape2D.tres":RayShape2D.new(),
+#}
