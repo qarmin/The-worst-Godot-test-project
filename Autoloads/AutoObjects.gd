@@ -651,7 +651,7 @@ func A_Control(q_Control: Control) -> void:
 #	if randi() % 2 == 1:
 #		q_Control.add_constant_override(Autoload.get_string(), Autoload.get_int())
 #	if randi() % 2 == 1: #TODO CHECK
-#		q_Control.add_font_override(Autoload.get_string(), Autoload.loadA("DynamicFont.tres"))
+#		q_Control.add_font_override(Autoload.get_string(), Autoload.loadA("Font.tres"))
 #	if randi() % 2 == 1:
 #		q_Control.add_icon_override(Autoload.get_string(), ImageTexture.new())
 #	if randi() % 2 == 1:

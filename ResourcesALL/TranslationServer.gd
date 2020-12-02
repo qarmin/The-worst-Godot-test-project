@@ -9,8 +9,8 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		if randi() % 2 == 1:
-			TranslationServer.add_translation(Autoload.loadA("Translation.tres"))
+#		if randi() % 2 == 1:
+#			TranslationServer.add_translation(Autoload.loadA("Translation.tres"))
 		if randi() % 2 == 1:
 			TranslationServer.clear()
 
@@ -21,8 +21,8 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			TranslationServer.get_locale_name(Autoload.get_string())
 
-		if randi() % 2 == 1:
-			TranslationServer.remove_translation(Autoload.loadA("Translation.tres"))
+#		if randi() % 2 == 1:
+#			TranslationServer.remove_translation(Autoload.loadA("Translation.tres"))
 		if randi() % 2 == 1:
 			TranslationServer.set_locale(Autoload.get_string())
 		if randi() % 2 == 1:

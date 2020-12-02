@@ -1,6 +1,6 @@
 extends Node2D
 
-var q_BitmapFont: BitmapFont = BitmapFont.new()
+var q_Font: Font = Font.new()
 
 @onready var counter: float = Autoload.get_rand_time()
 
@@ -11,15 +11,15 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_BitmapFont, true)
+		nodeFunction(q_Font, true)
 
 
-func nodeFunction(q_BitmapFont: BitmapFont, can_reset: bool = false) -> void:
+func nodeFunction(q_Font: Font, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
-			q_BitmapFont = BitmapFont.new()
+			q_Font = Font.new()
 	if randi() % 2 == 1:
-		AutoResourcesFont.nodeFunction(q_BitmapFont)
+		AutoResourcesFont.nodeFunction(q_Font)
 
 	### START TEMP
 	var temp_ImageTexture: ImageTexture = ImageTexture.new()
@@ -27,33 +27,33 @@ func nodeFunction(q_BitmapFont: BitmapFont, can_reset: bool = false) -> void:
 
 	### END TEMP
 
-	if randi() % 2 == 1:
-		q_BitmapFont.set_height(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BitmapFont.set_ascent(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BitmapFont.set_distance_field_hint(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_BitmapFont.set_fallback(q_BitmapFont)
+#	if randi() % 2 == 1:
+#		q_Font.set_height(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Font.set_ascent(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Font.set_distance_field_hint(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_Font.set_fallback(q_Font)
+#
+#	if randi() % 2 == 1:
+#		q_Font.add_char(Autoload.get_int(), Autoload.get_int(), Autoload.get_rect2(), Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_Font.add_kerning_pair(Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_Font.add_texture(temp_ImageTexture)
+#
+#	if randi() % 2 == 1:
+#		q_Font.clear()
+#	if randi() % 2 == 1:
+#		if Autoload.SLOW_FUNCTIONS:
+#			q_Font.create_from_fnt("res://RES/FreeMono.otf")
 
 	if randi() % 2 == 1:
-		q_BitmapFont.add_char(Autoload.get_int(), Autoload.get_int(), Autoload.get_rect2(), Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_BitmapFont.add_kerning_pair(Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
-	if randi() % 2 == 1:
-		q_BitmapFont.add_texture(temp_ImageTexture)
-
-	if randi() % 2 == 1:
-		q_BitmapFont.clear()
-	if randi() % 2 == 1:
-		if Autoload.SLOW_FUNCTIONS:
-			q_BitmapFont.create_from_fnt("res://RES/FreeMono.otf")
-
-	if randi() % 2 == 1:
-		q_BitmapFont.get_char_size(Autoload.get_int(), Autoload.get_int())
-	if randi() % 2 == 1:
-		q_BitmapFont.get_kerning_pair(Autoload.get_int(), Autoload.get_int())
-	if randi() % 2 == 1:
-		q_BitmapFont.get_texture(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_BitmapFont.get_texture_count()
+		q_Font.get_char_size(Autoload.get_int(), Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_Font.get_kerning_pair(Autoload.get_int(), Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_Font.get_texture(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_Font.get_texture_count()

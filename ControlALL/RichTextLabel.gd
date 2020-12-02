@@ -23,8 +23,8 @@ func nodeFunction(q_RichTextLabel: RichTextLabel, can_reset: bool = false) -> vo
 	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 #?#	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 
-	var temp_DynamicFont: DynamicFont = DynamicFont.new()
-#?#	AutoResourcesDynamicFont.nodeFunction(temp_DynamicFont)
+	var temp_Font: Font = Font.new()
+#?#	AutoResourcesFont.nodeFunction(temp_Font)
 
 	### END TEMP
 
@@ -81,7 +81,7 @@ func nodeFunction(q_RichTextLabel: RichTextLabel, can_reset: bool = false) -> vo
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_color(Autoload.get_color())
 	if randi() % 2 == 1:
-		q_RichTextLabel.push_font(temp_DynamicFont)
+		q_RichTextLabel.push_font(temp_Font)
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_indent(Autoload.get_int())
 	if randi() % 2 == 1:

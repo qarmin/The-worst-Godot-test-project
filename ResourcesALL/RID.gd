@@ -1,7 +1,7 @@
 extends Node2D
 
 # warning-ignore:unassigned_variable
-var q_RID: RID
+var q_RID: RID = RID()
 
 @onready var counter: float = Autoload.get_rand_time()
 

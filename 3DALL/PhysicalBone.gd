@@ -28,8 +28,8 @@ func nodeFunction(q_PhysicalBone3D: PhysicalBone3D, can_reset: bool = false) -> 
 		q_PhysicalBone3D.set_body_offset(Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_PhysicalBone3D.set_mass(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_PhysicalBone3D.set_weight(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_PhysicalBone3D.set_weight(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_PhysicalBone3D.set_friction(Autoload.get_float())
 	if randi() % 2 == 1:

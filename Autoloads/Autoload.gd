@@ -16,7 +16,7 @@ func _process(delta):
 
 
 func get_rand_time():
-	return randf() * 5.001  + 10.001
+	return randf() * 0.001  + 1.001
 
 const MAX_NUMBER : int = 15
 const MAX_NEWLINE : int = 0

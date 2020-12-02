@@ -31,8 +31,8 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 		q_TextEdit.set_draw_tabs(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_TextEdit.set_draw_spaces(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_TextEdit.set_breakpoint_gutter_enabled(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_TextEdit.set_breakpoint_gutter_enabled(Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_TextEdit.set_draw_fold_gutter(Autoload.get_bool())
 	if randi() % 2 == 1:
@@ -125,8 +125,8 @@ func nodeFunction(q_TextEdit: TextEdit, can_reset: bool = false) -> void:
 		q_TextEdit.paste()
 	if randi() % 2 == 1:
 		q_TextEdit.redo()
-	if randi() % 2 == 1:
-		q_TextEdit.remove_breakpoints()
+#	if randi() % 2 == 1:
+#		q_TextEdit.remove_breakpoints()
 	if randi() % 2 == 1:
 		q_TextEdit.search(Autoload.get_string(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
 

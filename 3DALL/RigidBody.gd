@@ -30,8 +30,8 @@ func nodeFunction(q_RigidBody3D: RigidBody3D, can_reset: bool = false) -> void:
 		q_RigidBody3D.set_mode(Autoload.get_int())  # Mode
 	if randi() % 2 == 1:
 		q_RigidBody3D.set_mass(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_RigidBody3D.set_weight(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_RigidBody3D.set_weight(Autoload.get_float())
 		#Deprecated q_RigidBody3D.set_friction(Autoload.get_float())
 		#Deprecated q_RigidBody3D.set_bounce(Autoload.get_float())
 	if randi() % 2 == 1:

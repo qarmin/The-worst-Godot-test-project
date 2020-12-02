@@ -25,7 +25,7 @@ func nodeFunction(q_Theme: Theme, can_reset: bool = false) -> void:
 	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 
-	var temp_Font: Font = DynamicFont.new()
+	var temp_Font: Font = Font.new()
 	AutoResourcesFont.nodeFunction(temp_Font)
 
 	var temp_StyleBoxFlat: StyleBoxFlat = StyleBoxFlat.new()

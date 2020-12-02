@@ -111,8 +111,8 @@ func nodeFunction(q_TileSet: TileSet, can_reset: bool = false) -> void:
 		q_TileSet.tile_get_navigation_polygon(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TileSet.tile_get_navigation_polygon_offset(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_TileSet.tile_get_normal_map(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_TileSet.tile_get_normal_map(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_TileSet.tile_get_occluder_offset(Autoload.get_int())
 	if randi() % 2 == 1:
@@ -151,8 +151,8 @@ func nodeFunction(q_TileSet: TileSet, can_reset: bool = false) -> void:
 		q_TileSet.tile_set_navigation_polygon(Autoload.get_int(), temp_NavigationPolygon)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_navigation_polygon_offset(Autoload.get_int(), Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_TileSet.tile_set_normal_map(Autoload.get_int(), temp_ImageTexture)
+#	if randi() % 2 == 1:
+#		q_TileSet.tile_set_normal_map(Autoload.get_int(), temp_ImageTexture)
 	if randi() % 2 == 1:
 		q_TileSet.tile_set_occluder_offset(Autoload.get_int(), Autoload.get_vector2())
 	if randi() % 2 == 1:

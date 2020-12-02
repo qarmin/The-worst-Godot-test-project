@@ -28,13 +28,13 @@ func nodeFunction(q_Shortcut: Shortcut, can_reset: bool = false) -> void:
 
 	### END TEMP
 
-	if randi() % 2 == 1:
-		q_Shortcut.set_Shortcut(temp_InputEventAction)
+#	if randi() % 2 == 1:
+#		q_Shortcut.set_Shortcut(temp_InputEventAction)
 
 	if randi() % 2 == 1:
 		q_Shortcut.get_as_text()
 
-	if randi() % 2 == 1:
-		q_Shortcut.is_Shortcut(temp_InputEventAction)
+#	if randi() % 2 == 1:
+#		q_Shortcut.is_Shortcut(temp_InputEventAction)
 	if randi() % 2 == 1:
 		q_Shortcut.is_valid()

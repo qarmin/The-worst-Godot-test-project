@@ -36,12 +36,12 @@ func nodeFunction(q_ParticlesMaterial: ParticlesMaterial, can_reset: bool = fals
 		q_ParticlesMaterial.set_render_priority(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_ParticlesMaterial.set_next_pass(ParticlesMaterial.new())  # LOOP DON'T CHANGE
-	if randi() % 2 == 1:
-		q_ParticlesMaterial.set_trail_divisor(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_ParticlesMaterial.set_trail_size_modifier(temp_CurveTexture)
-	if randi() % 2 == 1:
-		q_ParticlesMaterial.set_trail_color_modifier(temp_GradientTexture)
+#	if randi() % 2 == 1:
+#		q_ParticlesMaterial.set_trail_divisor(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_ParticlesMaterial.set_trail_size_modifier(temp_CurveTexture)
+#	if randi() % 2 == 1:
+#		q_ParticlesMaterial.set_trail_color_modifier(temp_GradientTexture)
 	if randi() % 2 == 1:
 		q_ParticlesMaterial.set_emission_shape(Autoload.get_int())
 	if randi() % 2 == 1:

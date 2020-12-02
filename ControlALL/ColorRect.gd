@@ -19,5 +19,5 @@ func nodeFunction(q_ColorRect: ColorRect, can_reset: bool = false) -> void:
 		AutoObjects.A_CanvasItem(q_ColorRect)
 		AutoObjects.A_Control(q_ColorRect)
 
-	if randi() % 2 == 1:
-		q_ColorRect.set_frame_color(Autoload.get_color())
+#	if randi() % 2 == 1:
+#		q_ColorRect.set_frame_color(Autoload.get_color())

@@ -33,8 +33,8 @@ func nodeFunction(q_RigidBody2D: RigidBody2D, can_reset: bool = false) -> void:
 		q_RigidBody2D.set_mass(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_inertia(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_RigidBody2D.set_weight(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_RigidBody2D.set_weight(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_RigidBody2D.set_physics_material_override(temp_PhysicsMaterial)
 	if randi() % 2 == 1:
