@@ -1,4 +1,4 @@
-name: 🐧 Linux Builds 1h
+name: 🐧 Linux Builds 1 1h
 on: [push, pull_request]
 
 jobs:
