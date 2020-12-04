@@ -5,8 +5,16 @@ const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, b
 
 const RANGE : int = 1000
 
+
+### TIME TO SHOW
+
+var start_time : int
+
+const PRINT_TIME_EVERY_MILISECONDS : int = 5000
+var time_to_print_next_time : int = PRINT_TIME_EVERY_MILISECONDS
+
 var frames_to_show : int = -1
-var time_to_show : float = -1000.0
+var time_to_show : int = 3600 * 24 *24 * 1000
 
 ############### FUNCTIONS
 func _init() -> void:
@@ -17,14 +25,24 @@ func _init() -> void:
 		time_to_show = argument.to_float()
 		print("Time set to: " + str(time_to_show))
 		break
+		
+	start_time = OS.get_system_time_msecs()
+	for argument in OS.get_cmdline_args():
+		var rr: String = argument
+		if rr.ends_with("tscn"):  # Ignore all tscn scenes/names
+			continue
+		time_to_show = int(argument.to_float() * 1000)
+		print("Time set to: " + str(time_to_show / 1000.0) + " seconds.")
 
-func _process(delta : float) -> void:
-	time_to_show -= delta
-	if time_to_show < 0 && time_to_show > -500:
-		get_tree().quit()
+func _process(_delta : float) -> void:
+	var current_run_time : int = OS.get_system_time_msecs() - start_time
 	
-	frames_to_show -= 1
-	if frames_to_show == 0:
+	if current_run_time > time_to_print_next_time:
+		print("Test is running now " + str(int(time_to_print_next_time / 1000)) + " seconds")
+		time_to_print_next_time += PRINT_TIME_EVERY_MILISECONDS
+	
+	if current_run_time > time_to_show:
+		print("Ending test")
 		get_tree().quit()
 
 
