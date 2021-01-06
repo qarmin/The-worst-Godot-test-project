@@ -24,8 +24,8 @@ func nodeFunction(q_GraphNode: GraphNode, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_GraphNode.set_title(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_GraphNode.set_offset(Autoload.get_vector2())
+#	if randi() % 2 == 1:
+#		q_GraphNode.set_offset(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_GraphNode.set_show_close_button(Autoload.get_bool())
 	if randi() % 2 == 1:

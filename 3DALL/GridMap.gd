@@ -22,8 +22,8 @@ func nodeFunction(q_GridMap: GridMap, can_reset: bool = false) -> void:
 	var temp_MeshLibrary: MeshLibrary = MeshLibrary.new()
 #?#	AutoResourcesMeshLibrary.nodeFunction(temp_MeshLibrary)
 
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 ### END TEMP
 
@@ -75,7 +75,7 @@ func nodeFunction(q_GridMap: GridMap, can_reset: bool = false) -> void:
 #	if randi() % 2 == 1:
 #		q_GridMap.map_to_world(Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 #	if randi() % 2 == 1:
-#		q_GridMap.resource_changed(temp_CubeMesh)
+#		q_GridMap.resource_changed(temp_BoxMesh)
 #
 #	if randi() % 2 == 1:
 #		q_GridMap.set_cell_item(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())

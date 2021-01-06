@@ -28,8 +28,8 @@ func nodeFunction(q_SurfaceTool: SurfaceTool, can_reset: bool = false) -> void:
 #	var temp_StandardMaterial3D : StandardMaterial3D = StandardMaterial3D.new() #MISSING
 #	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
 
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 	### END TEMP
 
@@ -64,7 +64,7 @@ func nodeFunction(q_SurfaceTool: SurfaceTool, can_reset: bool = false) -> void:
 #		q_SurfaceTool.add_weights(Autoload.get_packedfloat32array())
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.append_from(temp_CubeMesh, Autoload.get_int(), Autoload.get_transform())
+		q_SurfaceTool.append_from(temp_BoxMesh, Autoload.get_int(), Autoload.get_transform())
 	if randi() % 2 == 1:
 		q_SurfaceTool.begin(Autoload.get_int())  #PrimitiveType
 	if randi() % 2 == 1:
@@ -76,9 +76,9 @@ func nodeFunction(q_SurfaceTool: SurfaceTool, can_reset: bool = false) -> void:
 		q_SurfaceTool.commit_to_arrays()
 
 	if randi() % 2 == 1:
-		q_SurfaceTool.create_from(temp_CubeMesh, Autoload.get_int())
+		q_SurfaceTool.create_from(temp_BoxMesh, Autoload.get_int())
 	if randi() % 2 == 1:
-		q_SurfaceTool.create_from_blend_shape(temp_CubeMesh, Autoload.get_int(), Autoload.get_string())
+		q_SurfaceTool.create_from_blend_shape(temp_BoxMesh, Autoload.get_int(), Autoload.get_string())
 
 	if randi() % 2 == 1:
 		q_SurfaceTool.deindex()

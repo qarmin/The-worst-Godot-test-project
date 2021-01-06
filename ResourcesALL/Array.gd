@@ -55,7 +55,7 @@ func nodeFunction(q_Array: Array, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Array.duplicate(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Array.empty()
+		q_Array.is_empty()
 	if randi() % 2 == 1:
 		q_Array.erase(Autoload.get_string())
 

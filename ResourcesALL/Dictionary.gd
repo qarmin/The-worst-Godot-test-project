@@ -24,7 +24,7 @@ func nodeFunction(q_Dictionary: Dictionary, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Dictionary.duplicate(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Dictionary.empty()
+		q_Dictionary.is_empty()
 	if randi() % 2 == 1:
 		q_Dictionary.erase(Autoload.get_string())
 	if randi() % 2 == 1:

@@ -27,8 +27,8 @@ func nodeFunction(q_CPUParticles3D: CPUParticles3D, can_reset: bool = false) -> 
 	var temp_GPUParticles3D: GPUParticles3D = GPUParticles3D.new()
 	Auto3DParticles.nodeFunction(temp_GPUParticles3D)
 
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 	var temp_Gradient: Gradient = Gradient.new()
 #?#	AutoResourcesGradient.nodeFunction(temp_Gradient)
@@ -61,7 +61,7 @@ func nodeFunction(q_CPUParticles3D: CPUParticles3D, can_reset: bool = false) -> 
 	if randi() % 2 == 1:
 		q_CPUParticles3D.set_draw_order(Autoload.get_int())  #DrawOrder
 	if randi() % 2 == 1:
-		q_CPUParticles3D.set_mesh(temp_CubeMesh)
+		q_CPUParticles3D.set_mesh(temp_BoxMesh)
 	if randi() % 2 == 1:
 		q_CPUParticles3D.set_emission_shape(Autoload.get_int())  #EmissionShape
 	if randi() % 2 == 1:

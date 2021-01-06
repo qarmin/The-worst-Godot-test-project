@@ -65,7 +65,7 @@ func nodeFunction(q_NavigationMesh: NavigationMesh, can_reset: bool = false) -> 
 	if randi() % 2 == 1:
 		q_NavigationMesh.clear_polygons()
 #	BUG	if randi() % 2 == 1:
-#			q_NavigationMesh.create_from_mesh(temp_CubeMesh)
+#			q_NavigationMesh.create_from_mesh(temp_BoxMesh)
 
 	if randi() % 2 == 1:
 		q_NavigationMesh.get_collision_mask_bit(Autoload.get_int())

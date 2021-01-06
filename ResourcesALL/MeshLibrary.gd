@@ -25,8 +25,8 @@ func nodeFunction(q_MeshLibrary: MeshLibrary, can_reset: bool = false) -> void:
 	var temp_ImageTexture: ImageTexture = ImageTexture.new()
 	AutoResourcesImageTexture.nodeFunction(temp_ImageTexture)
 
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 	var temp_NavigationMesh: NavigationMesh = NavigationMesh.new()
 	AutoResourcesNavigationMesh.nodeFunction(temp_NavigationMesh)
@@ -61,7 +61,7 @@ func nodeFunction(q_MeshLibrary: MeshLibrary, can_reset: bool = false) -> void:
 		q_MeshLibrary.remove_item(Autoload.get_int())
 
 	if randi() % 2 == 1:
-		q_MeshLibrary.set_item_mesh(Autoload.get_int(), temp_CubeMesh)
+		q_MeshLibrary.set_item_mesh(Autoload.get_int(), temp_BoxMesh)
 	if randi() % 2 == 1:
 		q_MeshLibrary.set_item_name(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:

@@ -144,17 +144,17 @@ func A_Object(q_Object: Object) -> void:
 		q_Object.remove_meta(Autoload.get_string())
 
 	if randi() % 2 == 1:
-		q_Object.set(Autoload.get_string(), CubeMesh.new())
+		q_Object.set(Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
 		q_Object.set_block_signals(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Object.set_deferred(Autoload.get_string(), CubeMesh.new())
+		q_Object.set_deferred(Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
-		q_Object.set_indexed(Autoload.get_string(), CubeMesh.new())
+		q_Object.set_indexed(Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
 		q_Object.set_message_translation(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Object.set_meta(Autoload.get_string(), CubeMesh.new())
+		q_Object.set_meta(Autoload.get_string(), BoxMesh.new())
 #	if randi()%2 == 1: #BUG GH#33780
 #		q_Object.set_script(Reference.new())
 
@@ -316,15 +316,15 @@ func A_Node(q_Node: Node) -> void:
 		q_Node.rpc_unreliable_id(Autoload.get_int(), Autoload.get_string())
 
 	if randi() % 2 == 1:
-		q_Node.rset(Autoload.get_string(), CubeMesh.new())
+		q_Node.rset(Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
 		q_Node.rset_config(Autoload.get_string(), Autoload.get_int())
 	if randi() % 2 == 1:
-		q_Node.rset_id(Autoload.get_int(), Autoload.get_string(), CubeMesh.new())
+		q_Node.rset_id(Autoload.get_int(), Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
-		q_Node.rset_unreliable(Autoload.get_string(), CubeMesh.new())
+		q_Node.rset_unreliable(Autoload.get_string(), BoxMesh.new())
 	if randi() % 2 == 1:
-		q_Node.rset_unreliable_id(Autoload.get_int(), Autoload.get_string(), CubeMesh.new())
+		q_Node.rset_unreliable_id(Autoload.get_int(), Autoload.get_string(), BoxMesh.new())
 
 	if randi() % 2 == 1:
 		q_Node.set_display_folded(Autoload.get_bool())

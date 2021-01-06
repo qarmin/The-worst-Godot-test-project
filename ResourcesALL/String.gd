@@ -35,7 +35,7 @@ func nodeFunction(q_String: String, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_String.dedent()
 	if randi() % 2 == 1:
-		q_String.empty()
+		q_String.is_empty()
 	if randi() % 2 == 1:
 		q_String.ends_with(Autoload.get_string())
 #	if randi() % 2 == 1:

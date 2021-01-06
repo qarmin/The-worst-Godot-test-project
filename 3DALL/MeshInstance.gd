@@ -21,8 +21,8 @@ func nodeFunction(q_MeshInstance3D: MeshInstance3D, can_reset: bool = false) -> 
 		AutoObjects.A_GeometryInstance3D(q_MeshInstance3D)
 
 	### START TEMP
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 	var temp_StandardMaterial3D: StandardMaterial3D = StandardMaterial3D.new()
 ##?#	AutoResourcesStandardMaterial3D.nodeFunction(temp_StandardMaterial3D)
@@ -30,7 +30,7 @@ func nodeFunction(q_MeshInstance3D: MeshInstance3D, can_reset: bool = false) -> 
 	### END TEMP
 
 	if randi() % 2 == 1:
-		q_MeshInstance3D.set_mesh(temp_CubeMesh)
+		q_MeshInstance3D.set_mesh(temp_BoxMesh)
 	if randi() % 2 == 1:
 		q_MeshInstance3D.set_skeleton_path(Autoload.get_nodepath(q_MeshInstance3D))
 

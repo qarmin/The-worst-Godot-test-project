@@ -84,8 +84,8 @@ func nodeFunction(q_RichTextLabel: RichTextLabel, can_reset: bool = false) -> vo
 		q_RichTextLabel.push_font(temp_Font)
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_indent(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_RichTextLabel.push_list(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_RichTextLabel.push_list(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_RichTextLabel.push_meta(get_parent())
 	if randi() % 2 == 1:

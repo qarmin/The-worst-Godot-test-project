@@ -24,8 +24,8 @@ func nodeFunction(q_GPUParticles3D: GPUParticles3D, can_reset: bool = false) -> 
 	var temp_ParticlesMaterial: ParticlesMaterial = ParticlesMaterial.new()
 #?#	AutoResourcesGPUParticles3DMaterial.nodeFunction(temp_GPUParticles3DMaterial)
 
-	var temp_CubeMesh: CubeMesh = CubeMesh.new()
-#?#	AutoResourcesCubeMesh.nodeFunction(temp_CubeMesh)
+	var temp_BoxMesh: BoxMesh = BoxMesh.new()
+#?#	AutoResourcesCubeMesh.nodeFunction(temp_BoxMesh)
 
 	### END TEMP
 
@@ -60,7 +60,7 @@ func nodeFunction(q_GPUParticles3D: GPUParticles3D, can_reset: bool = false) -> 
 	if randi() % 2 == 1:
 		q_GPUParticles3D.set_draw_passes(Autoload.get_int())
 	if randi() % 2 == 1:
-		q_GPUParticles3D.set_draw_pass_mesh(Autoload.get_int(), temp_CubeMesh)
+		q_GPUParticles3D.set_draw_pass_mesh(Autoload.get_int(), temp_BoxMesh)
 
 	if randi() % 2 == 1:
 		q_GPUParticles3D.capture_aabb()

@@ -24,8 +24,8 @@ func nodeFunction(q_Rect2: Rect2, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Rect2.abs()
-	if randi() % 2 == 1:
-		q_Rect2.clip(Autoload.get_rect2())
+#	if randi() % 2 == 1:
+#		q_Rect2.clip(Autoload.get_rect2())
 	if randi() % 2 == 1:
 		q_Rect2.encloses(Autoload.get_rect2())
 	if randi() % 2 == 1:

@@ -13,8 +13,8 @@ func alt_process(delta) -> void:
 			print(Autoload.get_string())
 		if randi() % 2 == 1:
 			Color8(Autoload.get_int(), Autoload.get_int(), Autoload.get_int(), Autoload.get_int())
-		if randi() % 2 == 1:
-			ColorN(Autoload.get_string(), Autoload.get_float())
+#		if randi() % 2 == 1:
+#			ColorN(Autoload.get_string(), Autoload.get_float())
 
 		if randi() % 2 == 1:
 			abs(Autoload.get_float())
