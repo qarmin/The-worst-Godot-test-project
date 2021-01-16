@@ -1317,7 +1317,7 @@ script = ExtResource( 98 )
 [node name="VisualShaderNodeVectorSmoothStep_CANT" type="Node2D" parent="."]
 script = ExtResource( 47 )
 
-[node name="World" type="Node2D" parent="."]
+[node name="World3D" type="Node2D" parent="."]
 script = ExtResource( 157 )
 
 [node name="World2D" type="Node2D" parent="."]

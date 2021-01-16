@@ -37,8 +37,8 @@ func nodeFunction(q_ArrayMesh: ArrayMesh, can_reset: bool = false) -> void:
 		q_ArrayMesh.get_blend_shape_name(Autoload.get_int())
 #SPAM		if randi() % 2 == 1:
 #			q_ArrayMesh.lightmap_unwrap( Autoload.get_transform(),Autoload.get_float())
-	if randi() % 2 == 1:
-		q_ArrayMesh.regen_normalmaps()
+#	if randi() % 2 == 1:
+#		q_ArrayMesh.regen_normalmaps()
 	if randi() % 2 == 1:
 		q_ArrayMesh.surface_find_by_name(Autoload.get_string())
 	if randi() % 2 == 1:

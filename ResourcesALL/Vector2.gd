@@ -78,5 +78,5 @@ func nodeFunction(q_Vector2: Vector2, can_reset: bool = false) -> void:
 		q_Vector2.slide(Autoload.get_vector2())
 #	if randi() % 2 == 1:
 #		q_Vector2.snapped(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Vector2.tangent()
+#	if randi() % 2 == 1:
+#		q_Vector2.tangent()

@@ -123,10 +123,10 @@ func nodeFunction(q_ItemList: ItemList, can_reset: bool = false) -> void:
 		q_ItemList.set_item_tooltip_enabled(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_ItemList.sort_items_by_text()
-	if randi() % 2 == 1:
-		q_ItemList.unselect(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_ItemList.unselect_all()
+#	if randi() % 2 == 1:
+#		q_ItemList.unselect(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_ItemList.unselect_all()
 	if randi() % 2 == 1:
 		q_ItemList.clear()
 

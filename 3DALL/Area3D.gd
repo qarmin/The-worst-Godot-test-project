@@ -45,8 +45,8 @@ func nodeFunction(q_Area3D: Area3D, can_reset: bool = false) -> void:
 		q_Area3D.set_collision_mask(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Area3D.set_audio_bus_override(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_Area3D.set_audio_bus(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Area3D.set_audio_bus(Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Area3D.set_use_reverb_bus(Autoload.get_bool())
 	if randi() % 2 == 1:

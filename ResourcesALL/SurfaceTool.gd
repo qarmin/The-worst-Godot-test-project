@@ -41,8 +41,8 @@ func nodeFunction(q_SurfaceTool: SurfaceTool, can_reset: bool = false) -> void:
 		q_SurfaceTool.add_index(Autoload.get_int())
 #	if randi() % 2 == 1:
 #		q_SurfaceTool.add_normal(Autoload.get_vector3())
-	if randi() % 2 == 1:
-		q_SurfaceTool.add_smooth_group(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_SurfaceTool.add_smooth_group(Autoload.get_bool())
 #	if randi() % 2 == 1:
 #		q_SurfaceTool.add_tangent(Autoload.get_plane())
 	if randi() % 2 == 1:

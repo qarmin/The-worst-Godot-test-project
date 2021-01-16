@@ -45,17 +45,17 @@ func nodeFunction(q_Camera2D: Camera2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Camera2D.set_limit_smoothing_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Camera2D.set_h_drag_enabled(Autoload.get_bool())
+		q_Camera2D.set_drag_horizontal_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Camera2D.set_v_drag_enabled(Autoload.get_bool())
+		q_Camera2D.set_drag_vertical_enabled(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Camera2D.set_enable_follow_smoothing(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_Camera2D.set_follow_smoothing(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Camera2D.set_v_offset(Autoload.get_float())
+		q_Camera2D.set_drag_vertical_offset(Autoload.get_float())
 	if randi() % 2 == 1:
-		q_Camera2D.set_h_offset(Autoload.get_float())
+		q_Camera2D.set_drag_horizontal_offset(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Camera2D.set_drag_margin(Autoload.get_float(), Autoload.get_int())
 	if randi() % 2 == 1:

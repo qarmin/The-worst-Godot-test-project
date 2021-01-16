@@ -27,8 +27,8 @@ func nodeFunction(q_PathFollow2D: PathFollow2D, can_reset: bool = false) -> void
 		q_PathFollow2D.set_h_offset(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_PathFollow2D.set_v_offset(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_PathFollow2D.set_rotate(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_PathFollow2D.set_rotate(Autoload.get_bool())
 	if randi() % 2 == 1:
 		q_PathFollow2D.set_cubic_interpolation(Autoload.get_bool())
 	if randi() % 2 == 1:

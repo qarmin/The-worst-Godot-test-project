@@ -67,8 +67,8 @@ func nodeFunction(q_ParticlesMaterial: ParticlesMaterial, can_reset: bool = fals
 	if randi() % 2 == 1:
 		q_ParticlesMaterial.set_color_ramp(temp_GradientTexture)
 
-	if randi() % 2 == 1:
-		q_ParticlesMaterial.set_flag(Autoload.get_int(), Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_ParticlesMaterial.set_flag(Autoload.get_int(), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_ParticlesMaterial.set_param(Autoload.get_int(), Autoload.get_float())

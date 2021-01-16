@@ -28,11 +28,11 @@ func nodeFunction(q_CSGBox3D: CSGBox3D, can_reset: bool = false) -> void:
 
 	### END TEMP
 
-	if randi() % 2 == 1:
-		q_CSGBox3D.set_width(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_CSGBox3D.set_height(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_CSGBox3D.set_depth(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_CSGBox3D.set_width(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_CSGBox3D.set_height(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_CSGBox3D.set_depth(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_CSGBox3D.set_material(temp_StandardMaterial3D)

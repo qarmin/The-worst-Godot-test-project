@@ -37,8 +37,8 @@ func nodeFunction(q_Rect2: Rect2, can_reset: bool = false) -> void:
 		q_Rect2.grow(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Rect2.grow_individual(Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
-	if randi() % 2 == 1:
-		q_Rect2.grow_margin(Autoload.get_int(), Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Rect2.grow_margin(Autoload.get_int(), Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_Rect2.has_no_area()

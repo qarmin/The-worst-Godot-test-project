@@ -131,8 +131,8 @@ func nodeFunction(q_Animation: Animation, can_reset: bool = false) -> void:
 		q_Animation.track_move_up(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_Animation.track_remove_key(Autoload.get_int(), Autoload.get_int())
-	if randi() % 2 == 1:
-		q_Animation.track_remove_key_at_position(Autoload.get_int(), Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Animation.track_remove_key_at_position(Autoload.get_int(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Animation.track_set_enabled(Autoload.get_int(), Autoload.get_bool())
 	if randi() % 2 == 1:

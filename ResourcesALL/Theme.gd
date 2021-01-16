@@ -78,10 +78,10 @@ func nodeFunction(q_Theme: Theme, can_reset: bool = false) -> void:
 		q_Theme.get_stylebox(Autoload.get_string(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Theme.get_stylebox_list(Autoload.get_string())
-	if randi() % 2 == 1:
-		q_Theme.get_stylebox_types()
-	if randi() % 2 == 1:
-		q_Theme.get_type_list(Autoload.get_string())
+#	if randi() % 2 == 1:
+#		q_Theme.get_stylebox_types()
+#	if randi() % 2 == 1:
+#		q_Theme.get_type_list(Autoload.get_string())
 
 	if randi() % 2 == 1:
 		q_Theme.has_color(Autoload.get_string(), Autoload.get_string())

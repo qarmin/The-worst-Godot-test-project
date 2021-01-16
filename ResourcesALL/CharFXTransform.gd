@@ -21,10 +21,10 @@ func nodeFunction(q_CharFXTransform: CharFXTransform, can_reset: bool = false) -
 	if randi() % 2 == 1:
 		AutoResourcesReference.nodeFunction(q_CharFXTransform)
 
-	if randi() % 2 == 1:
-		q_CharFXTransform.set_relative_index(Autoload.get_int())
-	if randi() % 2 == 1:
-		q_CharFXTransform.set_absolute_index(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_CharFXTransform.set_relative_index(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_CharFXTransform.set_absolute_index(Autoload.get_int())
 	if randi() % 2 == 1:
 		q_CharFXTransform.set_elapsed_time(Autoload.get_float())
 	if randi() % 2 == 1:
@@ -35,5 +35,5 @@ func nodeFunction(q_CharFXTransform: CharFXTransform, can_reset: bool = false) -
 		q_CharFXTransform.set_color(Autoload.get_color())
 	if randi() % 2 == 1:
 		q_CharFXTransform.set_environment(Autoload.get_dictionary())
-	if randi() % 2 == 1:
-		q_CharFXTransform.set_character(Autoload.get_int())
+#	if randi() % 2 == 1:
+#		q_CharFXTransform.set_character(Autoload.get_int())

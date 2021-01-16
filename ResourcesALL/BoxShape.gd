@@ -21,5 +21,5 @@ func nodeFunction(q_BoxShape3D: BoxShape3D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		AutoResourcesShape.nodeFunction(q_BoxShape3D)
 
-	if randi() % 2 == 1:
-		q_BoxShape3D.set_extents(Autoload.get_vector3())
+#	if randi() % 2 == 1:
+#		q_BoxShape3D.set_extents(Autoload.get_vector3())

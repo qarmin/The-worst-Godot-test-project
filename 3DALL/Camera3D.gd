@@ -46,10 +46,10 @@ func nodeFunction(q_Camera3D: Camera3D, can_reset: bool = false) -> void:
 		q_Camera3D.set_size(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Camera3D.set_frustum_offset(Autoload.get_vector2())
-	if randi() % 2 == 1:
-		q_Camera3D.set_znear(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_Camera3D.set_zfar(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Camera3D.set_znear(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_Camera3D.set_zfar(Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_Camera3D.clear_current(Autoload.get_bool())

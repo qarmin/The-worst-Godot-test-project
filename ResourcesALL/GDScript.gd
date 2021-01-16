@@ -104,8 +104,8 @@ func alt_process(delta) -> void:
 			move_toward(Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
 			nearest_po2(Autoload.get_int())
-		if randi() % 2 == 1:
-			parse_json(Autoload.get_string())
+#		if randi() % 2 == 1:
+#			parse_json(Autoload.get_string())
 		if randi() % 2 == 1:
 			polar2cartesian(Autoload.get_float(), Autoload.get_float())
 		if randi() % 2 == 1:
@@ -137,8 +137,8 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			rad2deg(Autoload.get_float())
 
-		if randi() % 2 == 1:
-			rand_seed(Autoload.get_int())
+#		if randi() % 2 == 1:
+#			rand_seed(Autoload.get_int())
 		if randi() % 2 == 1:
 			randf()
 		if randi() % 2 == 1:
@@ -170,8 +170,8 @@ func alt_process(delta) -> void:
 
 		if randi() % 2 == 1:
 			step_decimals(Autoload.get_float())
-		if randi() % 2 == 1:
-			stepify(Autoload.get_float(), Autoload.get_float())
+#		if randi() % 2 == 1:
+#			stepify(Autoload.get_float(), Autoload.get_float())
 
 		if randi() % 2 == 1:
 			pass
@@ -183,16 +183,16 @@ func alt_process(delta) -> void:
 		if randi() % 2 == 1:
 			tanh(Autoload.get_float())
 
-		if randi() % 2 == 1:
-			to_json(Autoload.get_string())
+#		if randi() % 2 == 1:
+#			to_json(Autoload.get_string())
 
 		if randi() % 2 == 1:
 			type_exists(Autoload.get_string())
 		if randi() % 2 == 1:
 			typeof(Autoload.get_string())
-
-		if randi() % 2 == 1:
-			validate_json(Autoload.get_string())
+#
+#		if randi() % 2 == 1:
+#			validate_json(Autoload.get_string())
 
 		if randi() % 2 == 1:
 			var2bytes(Autoload.get_bool())
