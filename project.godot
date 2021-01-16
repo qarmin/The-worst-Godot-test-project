@@ -21,7 +21,7 @@ _global_script_class_icons={
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://ALL.tscn"
+run/main_scene="res://AllXtreme.tscn"
 run/disable_stderr=true
 config/icon="res://icon.png"
 
