@@ -3,7 +3,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron: '* */2 * * *'
+    - cron: '0 * * * *'
 
 jobs:
   linux-sanitizer:
