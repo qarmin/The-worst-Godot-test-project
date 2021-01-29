@@ -25,28 +25,28 @@ func nodeFunction(q_BakedLightmap : BakedLightmap, can_reset : bool = false) -> 
 	### END TEMP
 	
 		
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_bake_quality(Autoload.get_int()) #BakeQuality
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_bake_mode(Autoload.get_int()) #BakeMode
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_propagation(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_energy(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_hdr(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_extents(Autoload.get_vector3())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_bake_default_texels_per_unit(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_capture_cell_size(Autoload.get_float())
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_image_path("res://TEMP/Autoload.qqq")
-	if randi() % 2 == 1:
-		q_BakedLightmap.set_light_data(temp_BakedLightmapData) 
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_bake_cell_size(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_bake_quality(Autoload.get_int()) #BakeQuality
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_bake_mode(Autoload.get_int()) #BakeMode
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_propagation(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_energy(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_hdr(Autoload.get_bool())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_extents(Autoload.get_vector3())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_bake_default_texels_per_unit(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_capture_cell_size(Autoload.get_float())
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_image_path("res://TEMP/Autoload.qqq")
+#	if randi() % 2 == 1:
+#		q_BakedLightmap.set_light_data(temp_BakedLightmapData) 
 
 		###q_BakedLightmap.bake(q_BakedLightmap,Autoload.get_bool()))
 		###q_BakedLightmap.debug_bake()
