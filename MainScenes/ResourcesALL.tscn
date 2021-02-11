@@ -1318,6 +1318,7 @@ script = ExtResource( 98 )
 script = ExtResource( 47 )
 
 [node name="World3D" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 157 )
 
 [node name="World2D" type="Node2D" parent="."]

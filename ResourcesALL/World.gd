@@ -11,7 +11,7 @@ func alt_process(delta) -> void:
 	if counter <= 0:
 		counter = Autoload.get_rand_time()
 
-		nodeFunction(q_World3D, true)
+#		nodeFunction(q_World3D, true) # Crash fix it
 
 
 func nodeFunction(q_World3D: World3D, can_reset: bool = false) -> void:
