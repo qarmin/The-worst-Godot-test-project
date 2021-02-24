@@ -18,6 +18,10 @@ func alt_process(delta) -> void:
 func nodeFunction(q_bool: bool, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
+			q_bool = bool()
+		if randi() % 2 == 1:
+			q_bool = bool(Autoload.get_bool())
+		if randi() % 2 == 1:
 			q_bool = bool(Autoload.get_int())
 # warning-ignore:narrowing_conversion
 		if randi() % 2 == 1:

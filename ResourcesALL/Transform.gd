@@ -35,7 +35,10 @@ func nodeFunction(q_Transform: Transform, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Transform.inverse()
 	if randi() % 2 == 1:
+		q_Transform.is_equal_approx(Autoload.get_transform())
+	if randi() % 2 == 1:
 		q_Transform.looking_at(Autoload.get_vector3(), Autoload.get_vector3())
+		
 	if randi() % 2 == 1:
 		q_Transform.orthonormalized()
 	if randi() % 2 == 1:
@@ -44,8 +47,3 @@ func nodeFunction(q_Transform: Transform, can_reset: bool = false) -> void:
 		q_Transform.scaled(Autoload.get_vector3())
 	if randi() % 2 == 1:
 		q_Transform.translated(Autoload.get_vector3())
-
-#	if randi() % 2 == 1:
-#		q_Transform.xform(Autoload.get_float())
-#	if randi() % 2 == 1:
-#		q_Transform.xform_inv(Autoload.get_float())

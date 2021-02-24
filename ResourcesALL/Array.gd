@@ -18,6 +18,8 @@ func nodeFunction(q_Array: Array, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
+				q_Array = Array(Autoload.get_array())
+			if randi() % 2 == 1:
 				q_Array = Array(Autoload.get_packedcolorarray())
 			if randi() % 2 == 1:
 				q_Array = Array(Autoload.get_packedvector3array())
@@ -41,12 +43,14 @@ func nodeFunction(q_Array: Array, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Array.append(Autoload.get_string())
 	if randi() % 2 == 1:
+		q_Array.append_array(Autoload.get_array())
+	if randi() % 2 == 1:
 		q_Array.back()
 
 	if randi() % 2 == 1:
 		q_Array.bsearch(Autoload.get_string(), Autoload.get_bool())
 	if randi() % 2 == 1:
-		q_Array.bsearch_custom(Autoload.get_string(), temp_Node, Autoload.get_string(), Autoload.get_bool())
+		q_Array.bsearch_custom(Autoload.get_string(), Callable(self,"ssfowo"), Autoload.get_bool())
 
 	if randi() % 2 == 1:
 		q_Array.clear()
@@ -76,6 +80,8 @@ func nodeFunction(q_Array: Array, can_reset: bool = false) -> void:
 		q_Array.insert(Autoload.get_int(), Autoload.get_string())
 	if randi() % 2 == 1:
 		q_Array.invert()
+	if randi() % 2 == 1:
+		q_Array.is_empty()
 	if randi() % 2 == 1:
 		q_Array.max()
 	if randi() % 2 == 1:
@@ -107,7 +113,7 @@ func nodeFunction(q_Array: Array, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Array.sort()
 	if randi() % 2 == 1:
-		q_Array.sort_custom(temp_Node, Autoload.get_string())
+		q_Array.sort_custom(Callable(temp_Node, "Fowe"))
 
 	### CLEANING
 	temp_Node.queue_free()

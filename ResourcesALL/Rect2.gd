@@ -24,8 +24,6 @@ func nodeFunction(q_Rect2: Rect2, can_reset: bool = false) -> void:
 
 	if randi() % 2 == 1:
 		q_Rect2.abs()
-#	if randi() % 2 == 1:
-#		q_Rect2.clip(Autoload.get_rect2())
 	if randi() % 2 == 1:
 		q_Rect2.encloses(Autoload.get_rect2())
 	if randi() % 2 == 1:
@@ -37,8 +35,8 @@ func nodeFunction(q_Rect2: Rect2, can_reset: bool = false) -> void:
 		q_Rect2.grow(Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Rect2.grow_individual(Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
-#	if randi() % 2 == 1:
-#		q_Rect2.grow_margin(Autoload.get_int(), Autoload.get_float())
+	if randi() % 2 == 1:
+		q_Rect2.grow_side(Autoload.get_int(),Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_Rect2.has_no_area()
@@ -46,6 +44,11 @@ func nodeFunction(q_Rect2: Rect2, can_reset: bool = false) -> void:
 		q_Rect2.has_point(Autoload.get_vector2())
 
 	if randi() % 2 == 1:
-		q_Rect2.intersects(Autoload.get_rect2())
+		q_Rect2.intersection(Autoload.get_rect2())
+	if randi() % 2 == 1:
+		q_Rect2.intersects(Autoload.get_rect2(), Autoload.get_bool())
+		
+	if randi() % 2 == 1:
+		q_Rect2.is_equal_approx(Autoload.get_rect2())
 	if randi() % 2 == 1:
 		q_Rect2.merge(Autoload.get_rect2())

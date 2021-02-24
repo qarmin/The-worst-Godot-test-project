@@ -29,10 +29,10 @@ func nodeFunction(q_Color: Color, can_reset: bool = false) -> void:
 		q_Color.blend(Autoload.get_color())
 	if randi() % 2 == 1:
 		q_Color.darkened(Autoload.get_float())
-#	if randi() % 2 == 1:
-#		q_Color.from_hsv(Autoload.get_float(), Autoload.get_float(), Autoload.get_float(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Color.inverted()
+	if randi() % 2 == 1:
+		q_Color.is_equal_approx(Autoload.get_color())
 	if randi() % 2 == 1:
 		q_Color.lightened(Autoload.get_float())
 

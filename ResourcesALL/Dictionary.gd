@@ -17,14 +17,14 @@ func alt_process(delta) -> void:
 func nodeFunction(q_Dictionary: Dictionary, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
+			q_Dictionary = {}
+		if randi() % 2 == 1:
 			q_Dictionary = Autoload.get_dictionary()
 
 	if randi() % 2 == 1:
 		q_Dictionary.clear()
 	if randi() % 2 == 1:
 		q_Dictionary.duplicate(Autoload.get_bool())
-	if randi() % 2 == 1:
-		q_Dictionary.is_empty()
 	if randi() % 2 == 1:
 		q_Dictionary.erase(Autoload.get_string())
 	if randi() % 2 == 1:
@@ -38,7 +38,10 @@ func nodeFunction(q_Dictionary: Dictionary, can_reset: bool = false) -> void:
 		q_Dictionary.hash()
 
 	if randi() % 2 == 1:
+		q_Dictionary.is_empty()
+	if randi() % 2 == 1:
 		q_Dictionary.keys()
+		
 	if randi() % 2 == 1:
 		q_Dictionary.size()
 	if randi() % 2 == 1:

@@ -8,20 +8,10 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Node2D",
-"class": @"Operators",
-"language": @"GDScript",
-"path": "res://MainScenes/Operators.gd"
-} ]
-_global_script_class_icons={
-@"Operators": ""
-}
-
 [application]
 
 config/name="The worst Godot test project"
-run/main_scene="res://MainScenes/ALL.tscn"
+run/main_scene="res://MainScenes/ResourcesALL.tscn"
 run/disable_stdout=true
 run/disable_stderr=true
 config/icon="res://icon.png"
@@ -356,8 +346,8 @@ AutoResourcesPointMesh="*res://ResourcesALL/PointMesh.gd"
 AutoResourcesPolygonPathFinder="*res://ResourcesALL/PolygonPathFinder.gd"
 AutoResourcesPoolByteArray="*res://ResourcesALL/PoolByteArray.gd"
 AutoResourcesPoolColorArray="*res://ResourcesALL/PoolColorArray.gd"
-AutoResourcesPoolIntArray="*res://ResourcesALL/PoolIntArray.gd"
-AutoResourcesPoolRealArray="*res://ResourcesALL/PoolRealArray.gd"
+AutoResourcesPoolIntArray="*res://ResourcesALL/PoolInt32Array.gd"
+AutoResourcesPoolRealArray="*res://ResourcesALL/PoolFloat32Array.gd"
 AutoResourcesPoolStringArray="*res://ResourcesALL/PoolStringArray.gd"
 AutoResourcesPoolVector2Array="*res://ResourcesALL/PoolVector2Array.gd"
 AutoResourcesPoolVector3Array="*res://ResourcesALL/PoolVector3Array.gd"

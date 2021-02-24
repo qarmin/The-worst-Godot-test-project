@@ -17,8 +17,10 @@ func alt_process(delta) -> void:
 func nodeFunction(q_Transform2D: Transform2D, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
-#	BUG		if randi() % 2 == 1:
-#				q_Transform2D = Transform2D(Transform( Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))
+			if randi() % 2 == 1:
+				q_Transform2D = Autoload.get_transform2d()
+			if randi() % 2 == 1:
+				q_Transform2D = Transform2D(Autoload.get_transform())
 			if randi() % 2 == 1:
 				q_Transform2D = Transform2D(Autoload.get_vector2(), Autoload.get_vector2(), Autoload.get_vector2())
 			if randi() % 2 == 1:
@@ -44,6 +46,9 @@ func nodeFunction(q_Transform2D: Transform2D, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Transform2D.inverse()
 	if randi() % 2 == 1:
+		q_Transform2D.is_equal_approx(Autoload.get_transform2d())
+		
+	if randi() % 2 == 1:
 		q_Transform2D.orthonormalized()
 	if randi() % 2 == 1:
 		q_Transform2D.rotated(Autoload.get_float())
@@ -51,8 +56,3 @@ func nodeFunction(q_Transform2D: Transform2D, can_reset: bool = false) -> void:
 		q_Transform2D.scaled(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Transform2D.translated(Autoload.get_vector2())
-
-#	if randi() % 2 == 1:
-#		q_Transform2D.xform(Autoload.get_vector2())
-#	if randi() % 2 == 1:
-#		q_Transform2D.xform_inv(Autoload.get_vector2())

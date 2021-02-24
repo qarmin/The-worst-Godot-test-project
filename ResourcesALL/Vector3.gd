@@ -18,6 +18,8 @@ func nodeFunction(q_Vector3: Vector3, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Vector3 = Autoload.get_vector3()
+		if randi() % 2 == 1:
+			q_Vector3 = Autoload.get_vector3i()
 
 	if randi() % 2 == 1:
 		q_Vector3.abs()
@@ -45,6 +47,9 @@ func nodeFunction(q_Vector3: Vector3, can_reset: bool = false) -> void:
 		q_Vector3.floor()
 	if randi() % 2 == 1:
 		q_Vector3.inverse()
+		
+	if randi() % 2 == 1:
+		q_Vector3.is_equal_approx(Autoload.get_vector3())
 	if randi() % 2 == 1:
 		q_Vector3.is_normalized()
 
@@ -63,8 +68,16 @@ func nodeFunction(q_Vector3: Vector3, can_reset: bool = false) -> void:
 		q_Vector3.move_toward(Autoload.get_vector3(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector3.normalized()
+		
 	if randi() % 2 == 1:
 		q_Vector3.outer(Autoload.get_vector3())
+		
+	if randi() % 2 == 1:
+		q_Vector3.posmod(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_Vector3.posmodv(Autoload.get_vector3())
+		
+		
 	if randi() % 2 == 1:
 		q_Vector3.project(Autoload.get_vector3())
 	if randi() % 2 == 1:
@@ -73,6 +86,7 @@ func nodeFunction(q_Vector3: Vector3, can_reset: bool = false) -> void:
 		q_Vector3.rotated(Autoload.get_vector3(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector3.round()
+		
 	if randi() % 2 == 1:
 		q_Vector3.slerp(Autoload.get_vector3(), Autoload.get_float())
 	if randi() % 2 == 1:

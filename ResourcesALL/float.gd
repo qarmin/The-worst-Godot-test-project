@@ -18,6 +18,10 @@ func alt_process(delta) -> void:
 func nodeFunction(q_float: float, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
+			q_float = float()
+		if randi() % 2 == 1:
 			q_float = float(Autoload.get_bool())
 		if randi() % 2 == 1:
 			q_float = float(Autoload.get_int())
+		if randi() % 2 == 1:
+			q_float = float(Autoload.get_float())

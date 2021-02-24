@@ -18,6 +18,13 @@ func nodeFunction(q_Vector2: Vector2, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			q_Vector2 = Autoload.get_vector2()
+		if randi() % 2 == 1:
+			q_Vector2 = Vector2(Autoload.get_vector2())
+		if randi() % 2 == 1:
+			q_Vector2 = Vector2i(Autoload.get_vector2())
+			
+	if randi() % 2 == 1:
+		q_Vector2.abs()
 
 	if randi() % 2 == 1:
 		q_Vector2.angle()
@@ -50,6 +57,9 @@ func nodeFunction(q_Vector2: Vector2, can_reset: bool = false) -> void:
 		q_Vector2.dot(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Vector2.floor()
+		
+	if randi() % 2 == 1:
+		q_Vector2.is_equal_approx(Autoload.get_vector2())
 	if randi() % 2 == 1:
 		q_Vector2.is_normalized()
 
@@ -64,6 +74,15 @@ func nodeFunction(q_Vector2: Vector2, can_reset: bool = false) -> void:
 		q_Vector2.move_toward(Autoload.get_vector2(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector2.normalized()
+		
+	if randi() % 2 == 1:
+		q_Vector2.orthogonal()
+		
+	if randi() % 2 == 1:
+		q_Vector2.posmod(Autoload.get_float())
+	if randi() % 2 == 1:
+		q_Vector2.posmodv(Autoload.get_vector2())
+
 	if randi() % 2 == 1:
 		q_Vector2.project(Autoload.get_vector2())
 	if randi() % 2 == 1:
@@ -73,10 +92,10 @@ func nodeFunction(q_Vector2: Vector2, can_reset: bool = false) -> void:
 	if randi() % 2 == 1:
 		q_Vector2.round()
 	if randi() % 2 == 1:
+		q_Vector2.sign()
+	if randi() % 2 == 1:
 		q_Vector2.slerp(Autoload.get_vector2(), Autoload.get_float())
 	if randi() % 2 == 1:
 		q_Vector2.slide(Autoload.get_vector2())
-#	if randi() % 2 == 1:
-#		q_Vector2.snapped(Autoload.get_vector2())
-#	if randi() % 2 == 1:
-#		q_Vector2.tangent()
+	if randi() % 2 == 1:
+		q_Vector2.snapped(Autoload.get_vector2())

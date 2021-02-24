@@ -25,9 +25,16 @@ func nodeFunction(q_PackedColorArray: PackedColorArray, can_reset: bool = false)
 		q_PackedColorArray.append_array(Autoload.get_packedcolorarray())
 
 	if randi() % 2 == 1:
+		q_PackedColorArray.duplicate()
+	if randi() % 2 == 1:
+		q_PackedColorArray.has(Autoload.get_color())
+	if randi() % 2 == 1:
 		q_PackedColorArray.insert(Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
 		q_PackedColorArray.invert()
+	if randi() % 2 == 1:
+		q_PackedColorArray.is_empty()
+		
 	if randi() % 2 == 1:
 		q_PackedColorArray.push_back(Autoload.get_color())
 	if randi() % 2 == 1:
@@ -38,3 +45,7 @@ func nodeFunction(q_PackedColorArray: PackedColorArray, can_reset: bool = false)
 		q_PackedColorArray.set(Autoload.get_int(), Autoload.get_color())
 	if randi() % 2 == 1:
 		q_PackedColorArray.size()
+	if randi() % 2 == 1:
+		q_PackedColorArray.sort()
+	if randi() % 2 == 1:
+		q_PackedColorArray.to_byte_array()

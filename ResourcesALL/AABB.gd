@@ -18,8 +18,14 @@ func nodeFunction(q_AABB: AABB, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
 			if randi() % 2 == 1:
+				q_AABB = AABB()
+			if randi() % 2 == 1:
 				q_AABB = Autoload.get_aabb()
+			if randi() % 2 == 1:
+				q_AABB = AABB(Autoload.get_vector3(),Autoload.get_vector3())
 
+	if randi() % 2 == 1:
+		q_AABB.abs()
 	if randi() % 2 == 1:
 		q_AABB.encloses(Autoload.get_aabb())
 	if randi() % 2 == 1:
@@ -64,4 +70,7 @@ func nodeFunction(q_AABB: AABB, can_reset: bool = false) -> void:
 		q_AABB.intersects_segment(Autoload.get_vector3(), Autoload.get_vector3())
 
 	if randi() % 2 == 1:
+		q_AABB.is_equal_approx(Autoload.get_aabb())
+	if randi() % 2 == 1:
 		q_AABB.merge(Autoload.get_aabb())
+		

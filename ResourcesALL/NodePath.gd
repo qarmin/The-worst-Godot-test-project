@@ -20,6 +20,8 @@ func alt_process(delta) -> void:
 func nodeFunction(q_NodePath: NodePath, can_reset: bool = false) -> void:
 	if can_reset:
 		if randi() % 2 == 1:
+			q_NodePath = NodePath()
+		if randi() % 2 == 1:
 			q_NodePath = Autoload.get_nodepath(self)
 
 	if randi() % 2 == 1:

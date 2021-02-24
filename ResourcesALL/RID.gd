@@ -16,9 +16,9 @@ func alt_process(delta) -> void:
 
 
 func nodeFunction(q_RID: RID, can_reset: bool = false) -> void:
-#	if can_reset:
-#		if randi() % 2 == 1:
-#			#q_RID = RID()
+	if can_reset:
+		if randi() % 2 == 1:
+			q_RID = RID()
 
 	if randi() % 2 == 1:
 		q_RID.get_id()
