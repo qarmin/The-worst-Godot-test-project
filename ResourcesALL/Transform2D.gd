@@ -2,19 +2,9 @@ extends Node2D
 
 var q_Transform2D : Transform2D = Autoload.get_transform2d()
 
-onready var counter : float = Autoload.get_rand_time()
+func _process(delta) -> void:
 
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Transform2D,true)
-
-func nodeFunction(q_Transform2D : Transform2D, can_reset : bool = false) -> void:
-	
-	if can_reset:
+	if randi() % 20:
 		if randi() % 2 == 1:
 #	BUG		if randi() % 2 == 1:
 #				q_Transform2D = Transform2D(Transform( Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3(),Autoload.get_vector3()))

@@ -2,19 +2,9 @@ extends Node2D
 
 var q_PoolColorArray : PoolColorArray = Autoload.get_poolcolorarray()
 
-onready var counter : float = Autoload.get_rand_time()
 
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_PoolColorArray,true)
-
-func nodeFunction(q_PoolColorArray : PoolColorArray, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20:
 		if randi() % 2 == 1:
 			q_PoolColorArray = Autoload.get_poolcolorarray()
 

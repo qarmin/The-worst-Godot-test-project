@@ -2,19 +2,8 @@ extends Node2D
 
 var q_PoolVector3Array : PoolVector3Array = Autoload.get_poolvector3array()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_PoolVector3Array,true)
-
-func nodeFunction(q_PoolVector3Array : PoolVector3Array, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20:
 		if randi() % 2 == 1:
 			q_PoolVector3Array = Autoload.get_poolvector3array()
 

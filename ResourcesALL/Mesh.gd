@@ -4,7 +4,7 @@ var q_Mesh : Mesh = Mesh.new()
 
 onready var counter : float = Autoload.get_rand_time()
 
-func alt_process(delta) -> void:
+func _process(delta) -> void:
 	counter -= delta
 
 	if counter <= 0:
@@ -12,9 +12,9 @@ func alt_process(delta) -> void:
 
 		nodeFunction(q_Mesh,true)
 
-func nodeFunction(q_Mesh : Mesh, can_reset : bool = false) -> void:
+func nodeFunction(q_Mesh : Mesh, randi() % 20 : bool = false) -> void:
 	
-	if can_reset:
+	if randi() % 20:
 		if randi() % 2 == 1:
 			q_Mesh = Mesh.new()
 	if randi() % 2 == 1:

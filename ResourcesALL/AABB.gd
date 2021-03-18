@@ -2,22 +2,10 @@ extends Node2D
 
 var q_AABB : AABB = Autoload.get_aabb()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_AABB,true)
-
-func nodeFunction(q_AABB : AABB, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20 == 1:
 		if randi() % 2 == 1:
-			if randi() % 2 == 1:
-				q_AABB = Autoload.get_aabb()
+			q_AABB = Autoload.get_aabb()
 
 	if randi() % 2 == 1:
 		q_AABB.encloses(Autoload.get_aabb())

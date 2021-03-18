@@ -1,7 +1,0 @@
-[gd_resource type="InputEventAction" format=2]
-
-[resource]
-device = 2470
-action = "gasf"
-pressed = true
-strength = 0.0

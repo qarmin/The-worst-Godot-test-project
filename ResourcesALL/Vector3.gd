@@ -2,19 +2,9 @@ extends Node2D
 
 var q_Vector3 : Vector3 = Autoload.get_vector3()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Vector3,true)
-
-func nodeFunction(q_Vector3 : Vector3, can_reset : bool = false) -> void:
+func _process(delta) -> void:
 	
-	if can_reset:
+	if randi() % 20:
 		if randi() % 2 == 1:
 			q_Vector3 = Autoload.get_vector3()
 

@@ -2,68 +2,57 @@ extends Node2D
 
 var q_String : String = ""
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_String,true)
-
-func nodeFunction(q_String : String, can_reset : bool = false) -> void:
+func _process(delta) -> void:
 	
-	if can_reset:
+	if randi() % 20:
 		if randi() % 2 == 1:
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_bool())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_int())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_float())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_vector2())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_rect2())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_vector3())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_transform2d())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_plane())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_quat())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_aabb())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_basis())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_transform())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_color())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_nodepath(self))
-			if randi() % 2 == 1:
-				q_String = String( RID())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_dictionary())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_array())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolbytearray())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolintarray())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolrealarray())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolstringarray())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolvector2array())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolvector3array())
-			if randi() % 2 == 1:
-				q_String = String( Autoload.get_poolcolorarray())
+			q_String = String( Autoload.get_bool())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_int())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_float())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_vector2())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_rect2())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_vector3())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_transform2d())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_plane())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_quat())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_aabb())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_basis())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_transform())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_color())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_nodepath(self))
+		if randi() % 2 == 1:
+			q_String = String( RID())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_dictionary())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_array())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolbytearray())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolintarray())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolrealarray())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolstringarray())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolvector2array())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolvector3array())
+		if randi() % 2 == 1:
+			q_String = String( Autoload.get_poolcolorarray())
 
 	if randi() % 2 == 1:
 		q_String.begins_with( Autoload.get_string())

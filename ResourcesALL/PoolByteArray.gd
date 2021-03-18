@@ -2,19 +2,9 @@ extends Node2D
 
 var q_PoolByteArray : PoolByteArray = Autoload.get_poolbytearray()
 
-onready var counter : float = Autoload.get_rand_time()
 
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_PoolByteArray,true)
-
-func nodeFunction(q_PoolByteArray : PoolByteArray, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20:
 		if randi() % 2 == 1:
 			q_PoolByteArray = Autoload.get_poolbytearray()
 

@@ -2,28 +2,16 @@ extends Node2D
 
 var q_Quat : Quat = Autoload.get_quat()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Quat,true)
-
-func nodeFunction(q_Quat : Quat, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20:
 		if randi() % 2 == 1:
-			if randi() % 2 == 1:
-				q_Quat = Quat(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
-#			if randi() % 2 == 1:
-#				q_Quat = Quat(Autoload.get_vector3())
-			if randi() % 2 == 1:
-				q_Quat = Autoload.get_quat()
-			if randi() % 2 == 1:
-				q_Quat = Quat(Autoload.get_basis())
+			q_Quat = Quat(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
+#		if randi() % 2 == 1:
+#			q_Quat = Quat(Autoload.get_vector3())
+		if randi() % 2 == 1:
+			q_Quat = Autoload.get_quat()
+		if randi() % 2 == 1:
+			q_Quat = Quat(Autoload.get_basis())
 
 	if randi() % 2 == 1:
 		q_Quat.cubic_slerp( Autoload.get_quat(), Autoload.get_quat(), Autoload.get_quat(), Autoload.get_float())

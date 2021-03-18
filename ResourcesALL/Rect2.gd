@@ -2,24 +2,12 @@ extends Node2D
 
 var q_Rect2 : Rect2 = Autoload.get_rect2()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Rect2,true)
-
-func nodeFunction(q_Rect2 : Rect2, can_reset : bool = false) -> void:
-	
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20:
 		if randi() % 2 == 1:
-			if randi() % 2 == 1:
-				q_Rect2 = Autoload.get_rect2()
-			if randi() % 2 == 1:
-				q_Rect2 = Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
+			q_Rect2 = Autoload.get_rect2()
+		if randi() % 2 == 1:
+			q_Rect2 = Rect2(Autoload.get_float(),Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
 
 	if randi() % 2 == 1:
 		q_Rect2.abs()

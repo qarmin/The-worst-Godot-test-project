@@ -5,7 +5,7 @@ onready var counter : float = Autoload.get_rand_time()
 #
 #
 #
-func alt_process(delta) -> void:
+func _process(delta) -> void:
 	pass
 #	counter -= delta
 #

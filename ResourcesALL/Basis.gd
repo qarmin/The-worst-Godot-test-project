@@ -2,19 +2,9 @@ extends Node2D
 
 var q_Basis : Basis = Autoload.get_basis()
 
-onready var counter : float = Autoload.get_rand_time()
-
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Basis,true)
-
-func nodeFunction(q_Basis : Basis, can_reset : bool = false) -> void:
+func _process(delta) -> void:
 	
-	if can_reset:
+	if randi() % 20 == 1:
 		if randi() % 2 == 1:
 			q_Basis = Basis( Autoload.get_quat())
 		if randi() % 2 == 1:

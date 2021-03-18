@@ -2,34 +2,23 @@ extends Node2D
 
 var q_Array : Array = []
 
-onready var counter : float = Autoload.get_rand_time()
 
-func alt_process(delta) -> void:
-	counter -= delta
-
-	if counter <= 0:
-		counter = Autoload.get_rand_time()
-
-		nodeFunction(q_Array,true)
-
-func nodeFunction(q_Array : Array, can_reset : bool = false) -> void:
-		
-	if can_reset:
+func _process(delta) -> void:
+	if randi() % 20 == 1:
 		if randi() % 2 == 1:
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolcolorarray())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolvector3array())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolvector2array())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolstringarray())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolrealarray())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolintarray())
-			if randi() % 2 == 1:
-				q_Array = Array(Autoload.get_poolbytearray())
+			q_Array = Array(Autoload.get_poolcolorarray())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolvector3array())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolvector2array())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolstringarray())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolrealarray())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolintarray())
+		if randi() % 2 == 1:
+			q_Array = Array(Autoload.get_poolbytearray())
 		
 	### START TEMP
 	var temp_Node : Node = Node.new()
