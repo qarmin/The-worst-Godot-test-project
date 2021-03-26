@@ -2,6 +2,10 @@ extends Node2D
 
 var q_Vector2 : Vector2 = Autoload.get_vector2()
 
+func _ready():
+	if !is_visible():
+		queue_free()
+
 func _process(delta) -> void:
 	if randi() % 20:
 		if randi() % 2 == 1:

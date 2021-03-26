@@ -34,48 +34,63 @@
 script = ExtResource( 2 )
 
 [node name="AABB_MOVED" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 453 )
 
 [node name="Array" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 423 )
 
 [node name="Basis" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 368 )
 
 [node name="Color" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 365 )
 
 [node name="Dictionary" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 321 )
 
 [node name="Nil_CANT" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 322 )
 
 [node name="NodePath" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 416 )
 
 [node name="Plane" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 417 )
 
 [node name="PoolByteArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 353 )
 
 [node name="PoolColorArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 347 )
 
 [node name="PoolIntArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 349 )
 
 [node name="PoolRealArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 320 )
 
 [node name="PoolStringArray" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 363 )
 
 [node name="PoolVector2Array" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 418 )
 
 [node name="PoolVector3Array" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 419 )
 
 [node name="Quat" type="Node2D" parent="."]
@@ -115,4 +130,5 @@ script = ExtResource( 383 )
 script = ExtResource( 348 )
 
 [node name="GDScript" type="Node2D" parent="."]
+visible = false
 script = ExtResource( 1 )

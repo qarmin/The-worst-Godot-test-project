@@ -3,7 +3,7 @@ extends Node
 const SLOW_FUNCTIONS : bool = false # execute slow functions, for performance reasons should be used rarely
 const NOT_A_BUG : bool = false #execute functions which doesn't contains bugs, but shows too much spam in console
 
-const RANGE : int = 10000
+const RANGE : int = 100000
 
 
 ### TIME TO SHOW
@@ -90,54 +90,61 @@ func get_nodes(var node : Node) -> Node:
 		else:
 			return self
 
+
+
+
 func get_color() -> Color:
 	return Color(get_float(),get_float(),get_float(),get_float())
 
 func get_vector2() -> Vector2:
+	if randi() % 2:
+		return Vector2(get_float(),get_float()).normalized()
 	return Vector2(get_float(),get_float())
 
 func get_vector3() -> Vector3:
+	if randi() % 2:
+		return  Vector3(get_float(),get_float(),get_float()).normalized()
 	return Vector3(get_float(),get_float(),get_float())
 ### Arrays
 func get_poolvector2array() -> PoolVector2Array:
 	var pv2a : PoolVector2Array = PoolVector2Array([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pv2a.append(get_vector2())
 	return pv2a
 
 func get_poolvector3array() -> PoolVector3Array:
 	var pv3a : PoolVector3Array = PoolVector3Array([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pv3a.append(get_vector3())
 	return pv3a
 
 func get_poolbytearray() -> PoolByteArray:
 	var pba : PoolByteArray = PoolByteArray([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pba.append(get_int())
 	return pba
 
 func get_poolcolorarray() -> PoolColorArray:
 	var pca : PoolColorArray = PoolColorArray([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pca.append(get_color())
 	return pca
 
 func get_poolintarray() -> PoolIntArray:
 	var pia : PoolIntArray = PoolIntArray([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pia.append(get_int())
 	return pia
 
 func get_poolrealarray() -> PoolRealArray:
 	var pra : PoolRealArray = PoolRealArray([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		pra.append(get_float())
 	return pra
 
 func get_poolstringarray() -> PoolStringArray:
 	var psa : PoolStringArray = PoolStringArray([])
-	for i in range(randi() % 10):
+	for i in range(max(1, min(200, RANGE))):
 		psa.append(get_string())
 	return psa
 
@@ -177,10 +184,13 @@ func get_array() -> Array:
 	return arr
 
 func get_dictionary() -> Dictionary: # Probably there is better solution
-	#var dict : Dictionary = {}
+	if randi() % 2:
+		return {}
 	return {"asfa" : ImageTexture.new(), 242 : 51}
 
 func get_nodepath(var node : Node) -> NodePath:
+	if randi() % 2:
+		return NodePath("../")
 	return NodePath(".")
 
 ######################OVERLOADED FUNCTIONS

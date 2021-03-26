@@ -4,7 +4,7 @@ extends Node2D
 func _process(delta) -> void:
 
 	if randi() % 2 == 1:
-		print(Autoload.get_string())
+		Autoload.get_string()
 	if randi() % 2 == 1:
 		Color8(Autoload.get_int(),Autoload.get_int(),Autoload.get_int(),Autoload.get_int())
 	if randi() % 2 == 1:
@@ -16,14 +16,16 @@ func _process(delta) -> void:
 		acos(Autoload.get_float())
 	if randi() % 2 == 1:
 		asin(Autoload.get_float())
-		#assert(Autoload.get_bool())
+	if randi() % 2 == 1:
+		assert(true)
 
 	if randi() % 2 == 1:
 		atan(Autoload.get_float())
 	if randi() % 2 == 1:
 		atan2(Autoload.get_float(),Autoload.get_float())
 
-		#bytes2var(Autoload.get_poolbytearray,Autoload.get_bool())
+#	if randi() % 2 == 1: # Strange that this show editor error
+#		bytes2var(Autoload.get_poolbytearray(),Autoload.get_bool())
 	if randi() % 2 == 1:
 		cartesian2polar(Autoload.get_float(),Autoload.get_float())
 	if randi() % 2 == 1:
@@ -32,7 +34,8 @@ func _process(delta) -> void:
 		char(Autoload.get_int())
 	if randi() % 2 == 1:
 		clamp(Autoload.get_float(),Autoload.get_float(),Autoload.get_float())
-		#convert(Texture.new(), 12)
+#	if randi() % 2 == 1:
+#		convert(Vector2(), 12)
 
 	if randi() % 2 == 1:
 		cos(Autoload.get_float())
@@ -49,7 +52,8 @@ func _process(delta) -> void:
 
 	if randi() % 2 == 1:
 		deg2rad(Autoload.get_float())
-		#dict2inst(Autoload.get_dictionary())
+#	if randi() % 2 == 1:
+#		dict2inst(Autoload.get_dictionary())
 	if randi() % 2 == 1:
 		ease(Autoload.get_float(),Autoload.get_float())
 	if randi() % 2 == 1:
@@ -108,7 +112,7 @@ func _process(delta) -> void:
 	if randi() % 2 == 1:
 		pow(Autoload.get_float(),Autoload.get_float())
 	if randi() % 2 == 1:
-		preload("res://icon.png")
+		preload("res://ResourcesALL/AABB.gd")
 	
 	# Print spam
 	if false:

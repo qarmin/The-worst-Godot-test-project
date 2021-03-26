@@ -22,7 +22,6 @@ func _process(delta) -> void:
 		
 	### START TEMP
 	var temp_Node : Node = Node.new()
-	AutoObjects.A_Node(temp_Node)
 	
 	### END TEMP
 

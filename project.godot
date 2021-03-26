@@ -13,12 +13,10 @@ config_version=4
 config/name="The worst Godot test project"
 run/main_scene="res://ResourcesALL.tscn"
 run/disable_stderr=true
-config/icon="res://icon.png"
 
 [autoload]
 
 Autoload="*res://Autoloads/Autoload.gd"
-AutoObjects="*res://Autoloads/AutoObjects.gd"
 
 [debug]
 
@@ -67,4 +65,3 @@ limits/debugger_stdout/max_warnings_per_second=5
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
 vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
